@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Essential Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Primary Meta Tags -->
+    <title>60 on Kosmos - Ensuite Rooms in Bellville South | Affordable Guesthouse Cape Town</title>
+    <meta name="title" content="60 on Kosmos - Ensuite Rooms in Bellville South | Affordable Guesthouse Cape Town">
+    <meta name="description" content="Comfortable, secure ensuite rooms in Bellville South. Perfect for contractors, students, and families visiting UWC. 24/7 CCTV security, free WiFi & parking. Book direct for best rates!">
+    <meta name="keywords" content="Bellville South accommodation, contractor accommodation Cape Town, UWC accommodation, guesthouse Bellville, ensuite rooms Cape Town, affordable accommodation Bellville South">
+    <meta name="author" content="60 on Kosmos Guesthouse">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://60onkosmos.vercel.app/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://60onkosmos.vercel.app/">
+    <meta property="og:title" content="60 on Kosmos - Ensuite Rooms in Bellville South | Affordable Guesthouse">
+    <meta property="og:description" content="Comfortable, secure ensuite rooms in Bellville South. Perfect for contractors, students, and families visiting UWC. 24/7 CCTV security, free WiFi & parking.">
+    <meta property="og:image" content="https://60onkosmos.vercel.app/images/sage-double-room.png">
+    <meta property="og:locale" content="en_ZA">
+    <meta property="og:site_name" content="60 on Kosmos Guesthouse">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://60onkosmos.vercel.app/">
+    <meta name="twitter:title" content="60 on Kosmos - Ensuite Rooms in Bellville South">
+    <meta name="twitter:description" content="Comfortable, secure ensuite rooms in Bellville South. Perfect for contractors, students, and families visiting UWC.">
+    <meta name="twitter:image" content="https://60onkosmos.vercel.app/images/sage-double-room.png">
+    
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="ZA-WC">
+    <meta name="geo.placename" content="Bellville South, Cape Town">
+    <meta name="geo.position" content="-33.9333;18.6333">
+    <meta name="ICBM" content="-33.9333, 18.6333">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://wa.me">
+    
+    <!-- Structured Data - LocalBusiness Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LodgingBusiness",
+      "name": "60 on Kosmos Guesthouse",
+      "alternateName": "60 on Kosmos - Bellville South Accommodation",
+      "description": "Comfortable, secure ensuite rooms in Bellville South. Perfect for contractors, students, and families visiting UWC.",
+      "image": [
+        "https://60onkosmos.vercel.app/images/sage-double-room.png",
+        "https://60onkosmos.vercel.app/images/main-entrance.png",
+        "https://60onkosmos.vercel.app/images/exterior-building.png"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "60 Kosmos Street",
+        "addressLocality": "Bellville South",
+        "addressRegion": "Western Cape",
+        "postalCode": "7530",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-33.9333",
+        "longitude": "18.6333"
+      },
+      "url": "https://60onkosmos.vercel.app",
+      "telephone": "+27745245703",
+      "priceRange": "$$",
+      "amenityFeature": [
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Free WiFi",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Free Parking",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "24/7 Security",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "CCTV Surveillance",
+          "value": true
+        }
+      ],
+      "checkinTime": "14:00",
+      "checkoutTime": "10:00",
+      "petsAllowed": false,
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "reviewCount": "3"
+      }
+    }
+    </script>
+    
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What time is check-in?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Check-in is from 2:00 PM and check-out is by 10:00 AM. We can arrange early or late check-in on request."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there parking available?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we provide secure on-site parking behind locked gates with CCTV monitoring for all guests."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you allow contractors?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We welcome contractors and provide long-term rates. Our location is perfect for workers in the Cape Town area."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How close are you to UWC?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We're just 5km from the University of the Western Cape (UWC) campus, making us ideal for visiting students and families."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's included in the room rate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "All rooms include free WiFi, ensuite bathroom, bar fridge, clean linen, welcome refreshments (tea, coffee, rusks), and secure parking."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://60onkosmos.vercel.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Bellville South Accommodation",
+          "item": "https://60onkosmos.vercel.app/"
+        }
+      ]
+    }
+    </script>
+    
+    <style>
+        /* Add your existing CSS here */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Add lazy loading blur effect */
+        img[loading="lazy"] {
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        img[loading="lazy"].loaded {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link" style="position: absolute; left: -9999px;">Skip to main content</a>
+    
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section aria-label="Hero section">
+            <h1>Your Ensuite Stay in Bellville South Starts Here</h1>
+            <p>Comfortable, secure ensuite rooms in Bellville South. Perfect for contractors, students, and families visiting UWC. Safe, clean, and affordable accommodation with CCTV security and free parking.</p>
+            <img src="/images/sage-double-room.png" 
+                 alt="Green ensuite double room at 60 on Kosmos guesthouse in Bellville South with modern furnishings, comfortable bed, and private bathroom - ideal contractor accommodation near UWC Cape Town" 
+                 width="800" 
+                 height="600"
+                 loading="eager">
+        </section>
+        
+        <!-- Reviews Section -->
+        <section aria-labelledby="reviews-heading">
+            <h2 id="reviews-heading">What Our Guests Say</h2>
+            <p>Real reviews from contractors, students, and families who stayed with us</p>
+            
+            <article itemscope itemtype="https://schema.org/Review">
+                <blockquote itemprop="reviewBody">"Clean, secure, and perfect for contractors."</blockquote>
+                <footer>
+                    – <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+                        <span itemprop="name">William</span>
+                    </span>
+                    <br><span itemprop="locationCreated">Cape Town</span>
+                </footer>
+                <meta itemprop="itemReviewed" content="60 on Kosmos Guesthouse">
+                <meta itemprop="reviewRating" content="5">
+            </article>
+            
+            <article itemscope itemtype="https://schema.org/Review">
+                <blockquote itemprop="reviewBody">"Affordable and quiet. Will book again!"</blockquote>
+                <footer>
+                    – <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+                        <span itemprop="name">Zanele</span>
+                    </span>
+                    <br><span itemprop="locationCreated">East London</span>
+                </footer>
+                <meta itemprop="itemReviewed" content="60 on Kosmos Guesthouse">
+                <meta itemprop="reviewRating" content="5">
+            </article>
+            
+            <article itemscope itemtype="https://schema.org/Review">
+                <blockquote itemprop="reviewBody">"Very close to UWC, great for parents visiting."</blockquote>
+                <footer>
+                    – <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+                        <span itemprop="name">Lerato</span>
+                    </span>
+                    <br><span itemprop="locationCreated">Johannesburg</span>
+                </footer>
+                <meta itemprop="itemReviewed" content="60 on Kosmos Guesthouse">
+                <meta itemprop="reviewRating" content="4">
+            </article>
+        </section>
+        
+        <!-- Property Section -->
+        <section aria-labelledby="property-heading">
+            <h2 id="property-heading">Secure Bellville South Property</h2>
+            <p>Safe, well-maintained guesthouse with relaxing outdoor spaces</p>
+            
+            <img src="/images/main-entrance.png" 
+                 alt="Main entrance of 60 on Kosmos guesthouse in Bellville South featuring secure wooden door, welcoming porch, and safe accommodation near UWC Cape Town" 
+                 width="800" 
+                 height="600"
+                 loading="lazy">
+            
+            <img src="/images/outdoor-seating.png" 
+                 alt="Outdoor seating area at 60 on Kosmos guesthouse Bellville South with comfortable furniture - perfect relaxing space for contractors and students at affordable Cape Town accommodation" 
+                 width="800" 
+                 height="600"
+                 loading="lazy">
+            
+            <img src="/images/exterior-courtyard.png" 
+                 alt="Secure courtyard at 60 on Kosmos guesthouse Bellville South with CCTV cameras, locked gates, and safe parking for contractor accommodation in Cape Town" 
+                 width="800" 
+                 height="600"
+                 loading="lazy">
+            
+            <h3>Why Choose Our Bellville South Location</h3>
+            <ul>
+                <li>Fully enclosed, secure property with high walls and CCTV</li>
+                <li>Paved parking areas for contractor vehicles and personal cars</li>
+                <li>Outdoor seating areas perfect for relaxation after work</li>
+                <li>Well-maintained gardens in quiet Bellville South neighborhood</li>
+            </ul>
+            
+            <img src="/images/exterior-building.png" 
+                 alt="Exterior view of 60 on Kosmos guesthouse in Bellville South showing clean, well-maintained contractor accommodation near UWC and Tygerberg Hospital Cape Town" 
+                 width="800" 
+                 height="600"
+                 loading="lazy">
+        </section>
+        
+        <!-- Amenities Section -->
+        <section aria-labelledby="amenities-heading">
+            <h2 id="amenities-heading">Everything You Need in Bellville South</h2>
+            
+            <div>
+                <h3>24/7 Security</h3>
+                <p>CCTV & secure gate</p>
+            </div>
+            
+            <div>
+                <h3>Free WiFi</h3>
+                <p>High-speed internet</p>
+            </div>
+            
+            <div>
+                <h3>Safe Parking</h3>
+                <p>On-site parking</p>
+            </div>
+            
+            <div>
+                <h3>Welcome Kit</h3>
+                <p>Tea, coffee & rusks</p>
+            </div>
+        </section>
+        
+        <!-- Rooms Section -->
+        <section aria-labelledby="rooms-heading">
+            <h2 id="rooms-heading">Affordable Bellville South Rooms</h2>
+            <p>Clean, comfortable ensuite accommodation for contractors and students</p>
+            
+            <article itemscope itemtype="https://schema.org/HotelRoom">
+                <img src="/images/twin-room-yellow.png" 
+                     alt="Standard twin room at 60 on Kosmos guesthouse Bellville South with two single beds, ensuite bathroom, and bar fridge - affordable contractor accommodation near UWC Cape Town" 
+                     width="800" 
+                     height="600"
+                     loading="lazy"
+                     itemprop="image">
+                <h3 itemprop="name">Standard Twin Room</h3>
+                <p itemprop="description">Perfect for contractors - two single beds, ensuite bathroom, bar fridge</p>
+                <meta itemprop="bed" content="2 single beds">
+            </article>
+            
+            <article itemscope itemtype="https://schema.org/HotelRoom">
+                <img src="/images/sage-double-room.png" 
+                     alt="Private double room near UWC at 60 on Kosmos with comfortable double bed, ensuite bathroom - ideal for couples, students, and families visiting Bellville South Cape Town" 
+                     width="800" 
+                     height="600"
+                     loading="lazy"
+                     itemprop="image">
+                <h3 itemprop="name">Double Room</h3>
+                <p itemprop="description">Ideal for couples or solo travelers - double bed, ensuite bathroom</p>
+                <meta itemprop="bed" content="1 double bed">
+            </article>
+            
+            <article itemscope itemtype="https://schema.org/HotelRoom">
+                <img src="/images/twin-room-black.png" 
+                     alt="Deluxe twin room at 60 on Kosmos guesthouse Bellville South with premium finishes, modern decor, and two beds - superior contractor accommodation near Tygerberg Hospital Cape Town" 
+                     width="800" 
+                     height="600"
+                     loading="lazy"
+                     itemprop="image">
+                <h3 itemprop="name">Deluxe Twin Room</h3>
+                <p itemprop="description">Premium room for business travelers - upgraded finishes, modern decor</p>
+                <meta itemprop="bed" content="2 single beds">
+            </article>
+        </section>
+        
+        <!-- FAQ Section -->
+        <section aria-labelledby="faq-heading">
+            <h2 id="faq-heading">Frequently Asked Questions</h2>
+            <p>Everything you need to know about staying at our Bellville South guesthouse</p>
+            
+            <article itemscope itemtype="https://schema.org/Question">
+                <h3 itemprop="name">What time is check-in?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <p itemprop="text">Check-in is from 2:00 PM and check-out is by 10:00 AM. We can arrange early or late check-in on request.</p>
+                </div>
+            </article>
+            
+            <article itemscope itemtype="https://schema.org/Question">
+                <h3 itemprop="name">Is there parking available?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <p itemprop="text">Yes, we provide secure on-site parking behind locked gates with CCTV monitoring for all guests.</p>
+                </div>
+            </article>
+            
+            <article itemscope itemtype="https://schema.org/Question">
+                <h3 itemprop="name">Do you allow contractors?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <p itemprop="text">We welcome contractors and provide long-term rates. Our location is perfect for workers in the Cape Town area.</p>
+                </div>
+            </article>
+            
+            <article itemscope itemtype="https://schema.org/Question">
+                <h3 itemprop="name">How close are you to UWC?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <p itemprop="text">We're just 5km from the University of the Western Cape (UWC) campus, making us ideal for visiting students and families.</p>
+                </div>
+            </article>
+            
+            <article itemscope itemtype="https://schema.org/Question">
+                <h3 itemprop="name">What's included in the room rate?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <p itemprop="text">All rooms include free WiFi, ensuite bathroom, bar fridge, clean linen, welcome refreshments (tea, coffee, rusks), and secure parking.</p>
+                </div>
+            </article>
+            
+            <p><strong>Have more questions?</strong></p>
+            <a href="https://wa.me/27745245703" rel="noopener noreferrer" target="_blank" aria-label="Contact us on WhatsApp">WhatsApp Us Now</a>
+        </section>
+        
+        <!-- CTA Section -->
+        <section aria-labelledby="booking-heading">
+            <h2 id="booking-heading">Book Your Bellville South Stay</h2>
+            <p>Direct booking gets you the best rates and personal service</p>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 60 on Kosmos Guesthouse. All rights reserved.</p>
+        <p>60 Kosmos Street, Bellville South, Cape Town, Western Cape 7530, South Africa</p>
+        <p>Phone: <a href="tel:+27745245703">+27 74 524 5703</a></p>
+        <p>
+            <a href="/privacy-policy.html">Privacy Policy</a> | 
+            <a href="/terms-conditions.html">Terms & Conditions</a> | 
+            <a href="/sitemap.xml">Sitemap</a>
+        </p>
+    </footer>
+    
+    <!-- Lazy Loading Script -->
+    <script>
+        // Lazy loading fallback for browsers that don't support native lazy loading
+        if ('loading' in HTMLImageElement.prototype) {
+            const images = document.querySelectorAll('img[loading="lazy"]');
+            images.forEach(img => {
+                img.addEventListener('load', function() {
+                    this.classList.add('loaded');
+                });
+            });
+        } else {
+            // Fallback for older browsers
+            const script = document.createElement('script');
+            script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js';
+            document.body.appendChild(script);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    
+    <!-- Homepage -->
+    <url>
+        <loc>https://60onkosmos.vercel.app/</loc>
+        <lastmod>2024-10-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        
+        <!-- Image sitemap entries -->
+        <image:image>
+            <image:loc>https://60onkosmos.vercel.app/images/sage-double-room.png</image:loc>
+            <image:title>Double Room - 60 on Kosmos Guesthouse</image:title>
+            <image:caption>Comfortable double room with ensuite bathroom</image:caption>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://60onkosmos.vercel.app/images/main-entrance.png</image:loc>
+            <image:title>Main Entrance - 60 on Kosmos</image:title>
+            <image:caption>Secure main entrance with welcoming porch</image:caption>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://60onkosmos.vercel.app/images/outdoor-seating.png</image:loc>
+            <image:title>Outdoor Seating Area</image:title>
+            <image:caption>Relaxing outdoor seating for guests</image:caption>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://60onkosmos.vercel.app/images/exterior-courtyard.png</image:loc>
+            <image:title>Secure Courtyard</image:title>
+            <image:caption>CCTV monitored courtyard with secure parking</image:caption>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://60onkosmos.vercel.app/images/exterior-building.png</image:loc>
+            <image:title>Exterior Building View</image:title>
+            <image:caption>Well-maintained guesthouse exterior</image:caption>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://60onkosmos.vercel.app/images/twin-room-yellow.png</image:loc>
+            <image:title>Standard Twin Room</image:title>
+            <image:caption>Twin room with two single beds and ensuite</image:caption>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://60onkosmos.vercel.app/images/twin-room-black.png</image:loc>
+            <image:title>Deluxe Twin Room</image:title>
+            <image:caption>Premium twin room with modern finishes</image:caption>
+        </image:image>
+    </url>
+    
+    <!-- Add other pages as they are created -->
+    <!--
+    <url>
+        <loc>https://60onkosmos.vercel.app/rooms</loc>
+        <lastmod>2024-10-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://60onkosmos.vercel.app/contact</loc>
+        <lastmod>2024-10-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://60onkosmos.vercel.app/about</loc>
+        <lastmod>2024-10-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    -->
+    
+    <url>
+        <loc>https://60onkosmos.vercel.app/privacy-policy.html</loc>
+        <lastmod>2024-10-09</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <url>
+        <loc>https://60onkosmos.vercel.app/terms-conditions.html</loc>
+        <lastmod>2024-10-09</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+</urlset>
