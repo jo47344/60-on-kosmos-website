@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://60onkosmos.vercel.app/sitemap.xml
