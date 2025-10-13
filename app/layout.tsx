@@ -6,6 +6,8 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { StickyMobileCTA } from "@/components/sticky-mobile-cta"
 import { LocalBusinessSchema } from "@/components/local-business-schema"
+import { GoogleAnalytics } from "@/components/google-analytics"
+import { Suspense } from "react"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -18,28 +20,21 @@ export const metadata: Metadata = {
   description:
     "★★★★★ Secure guesthouse Bellville South Cape Town with 24/7 CCTV, free parking, WiFi. 5km from UWC, 8km Tygerberg Hospital. From R530/night. Book direct 074 524 5703",
   keywords: [
-    // Primary local keywords
     "guesthouse Bellville South",
     "accommodation Bellville South Cape Town",
     "rooms near UWC",
     "accommodation near UWC Bellville",
     "Tygerberg Hospital accommodation",
-
-    // Secondary local keywords
     "Bellville South ensuite rooms",
     "contractor accommodation Bellville South",
     "student accommodation UWC",
     "affordable guesthouse Cape Town",
     "budget accommodation Bellville",
-
-    // Long-tail local keywords
     "guesthouse near University Western Cape",
     "cheap rooms Bellville South",
     "secure parking accommodation Cape Town",
     "monthly accommodation Bellville South",
     "backpackers Bellville South",
-
-    // Location-specific
     "60 Kosmos Street Bellville South",
     "accommodation Kasselsvlei Centre",
     "guesthouse near Bellville station",
@@ -255,7 +250,6 @@ export default function RootLayout({
   return (
     <html lang="en-ZA">
       <head>
-        {/* Google Search Console Verification */}
         <meta name="google-site-verification" content="MsEabfPydfBX62TF26f4hnMZZxJGscle_LRouKVSMYI" />
 
         <LocalBusinessSchema />
@@ -263,55 +257,52 @@ export default function RootLayout({
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
 
-        {/* Geo tags for local SEO */}
         <meta name="geo.region" content="ZA-WC" />
         <meta name="geo.placename" content="Bellville South, Cape Town" />
         <meta name="geo.position" content="-33.9347;18.6489" />
         <meta name="ICBM" content="-33.9347, 18.6489" />
 
-        {/* Local business markup */}
         <meta property="business:contact_data:street_address" content="60 Kosmos Street" />
         <meta property="business:contact_data:locality" content="Bellville South" />
         <meta property="business:contact_data:region" content="Western Cape" />
         <meta property="business:contact_data:postal_code" content="7530" />
         <meta property="business:contact_data:country_name" content="South Africa" />
 
-        {/* Performance and DNS optimization */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="//wa.me" />
         <link rel="dns-prefetch" href="//maps.google.com" />
         <link rel="dns-prefetch" href="//www.google-analytics.com" />
 
-        {/* Mobile optimization */}
         <meta name="theme-color" content="#7c9885" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="60 on Kosmos" />
 
-        {/* Additional meta tags */}
         <meta name="rating" content="General" />
         <meta name="distribution" content="Global" />
         <meta name="revisit-after" content="7 days" />
 
-        {/* Canonical URL - Forces HTTPS */}
         <link rel="canonical" href="https://60onkosmos.co.za" />
       </head>
       <body className={inter.className}>
-        <Navigation />
-        <main id="main-content">{children}</main>
-        <Footer />
-        <a
-          href="https://wa.me/27745245703?text=Hi%2C%20I%20want%20to%20book%20a%20room%20at%2060%20on%20Kosmos%20from%20[insert%20dates]"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="fixed bottom-6 right-6 w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 z-40"
-          title="WhatsApp Book Now - 60 on Kosmos Bellville South"
-          aria-label="Contact us on WhatsApp to book accommodation at 60 on Kosmos Bellville South"
-        >
-          💬
-        </a>
-        <StickyMobileCTA />
+        <Suspense>
+          <GoogleAnalytics />
+          <Navigation />
+          <main id="main-content">{children}</main>
+          <Footer />
+          <a
+            href="https://wa.me/27745245703?text=Hi%2C%20I%20want%20to%20book%20a%20room%20at%2060%20on%20Kosmos%20from%20[insert%20dates]"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="fixed bottom-6 right-6 w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 z-40"
+            title="WhatsApp Book Now - 60 on Kosmos Bellville South"
+            aria-label="Contact us on WhatsApp to book accommodation at 60 on Kosmos Bellville South"
+          >
+            💬
+          </a>
+          <StickyMobileCTA />
+        </Suspense>
       </body>
     </html>
   )
