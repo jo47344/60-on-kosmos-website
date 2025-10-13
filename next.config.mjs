@@ -15,18 +15,20 @@ const nextConfig = {
   },
   compress: true,
   poweredByHeader: false,
+  
   async headers() {
     return [
       {
         source: '/:path*',
         headers: [
+          // Security Headers
           {
             key: 'X-DNS-Prefetch-Control',
             value: 'on'
           },
           {
             key: 'Strict-Transport-Security',
-            value: 'max-age=31536000; includeSubDomains'
+            value: 'max-age=63072000; includeSubDomains; preload'
           },
           {
             key: 'X-Frame-Options',
@@ -37,9 +39,22 @@ const nextConfig = {
             value: 'nosniff'
           },
           {
+            key: 'X-XSS-Protection',
+            value: '1; mode=block'
+          },
+          {
             key: 'Referrer-Policy',
             value: 'origin-when-cross-origin'
-          }
+          },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=()'
+          },
+          // SEO Headers - NO noindex, ensure indexing is allowed
+          {
+            key: 'X-Robots-Tag',
+            value: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+          },
         ],
       },
       {
@@ -50,6 +65,24 @@ const nextConfig = {
             value: 'public, max-age=31536000, immutable',
           },
         ],
+      },
+    ]
+  },
+
+  async redirects() {
+    return [
+      // Force HTTPS redirect (Vercel handles this automatically, but this is explicit)
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'header',
+            key: 'x-forwarded-proto',
+            value: 'http',
+          },
+        ],
+        destination: 'https://60onkosmos.co.za/:path*',
+        permanent: true,
       },
     ]
   },
