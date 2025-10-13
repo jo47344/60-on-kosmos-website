@@ -7,8 +7,11 @@ export async function GET() {
   const routes = [
     { url: "", priority: "1.0", changefreq: "daily" },
     { url: "/rooms", priority: "0.9", changefreq: "weekly" },
+    { url: "/special-offers", priority: "0.9", changefreq: "daily" },
     { url: "/amenities", priority: "0.8", changefreq: "monthly" },
     { url: "/local-info", priority: "0.8", changefreq: "monthly" },
+    { url: "/things-to-do-bellville-south", priority: "0.8", changefreq: "monthly" },
+    { url: "/testimonials", priority: "0.8", changefreq: "weekly" },
     { url: "/contact", priority: "0.9", changefreq: "monthly" },
     { url: "/book-now", priority: "0.9", changefreq: "daily" },
 

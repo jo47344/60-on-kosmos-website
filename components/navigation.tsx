@@ -17,7 +17,7 @@ export function Navigation() {
           <Link href="/" className="flex items-center">
             <Image
               src="/images/60-kosmos-elegant-logo.jpg"
-              alt="60 on Kosmos Guesthouse"
+              alt="60 on Kosmos Guesthouse Bellville South"
               width={220}
               height={60}
               className="block"
@@ -33,8 +33,8 @@ export function Navigation() {
             <Link href="/rooms" className="text-gray-700 hover:text-sage-600 transition-colors font-medium">
               Rooms
             </Link>
-            <Link href="/amenities" className="text-gray-700 hover:text-sage-600 transition-colors font-medium">
-              Amenities
+            <Link href="/special-offers" className="text-gray-700 hover:text-sage-600 transition-colors font-medium">
+              Special Offers
             </Link>
             <Link href="/local-info" className="text-gray-700 hover:text-sage-600 transition-colors font-medium">
               Location
@@ -53,7 +53,7 @@ export function Navigation() {
 
               {/* Dropdown Menu */}
               <div
-                className={`absolute left-0 top-full mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 transition-all duration-200 ${
+                className={`absolute left-0 top-full mt-2 w-72 bg-white rounded-lg shadow-xl border border-gray-200 py-2 transition-all duration-200 ${
                   resourcesOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-2"
                 }`}
                 style={{ zIndex: 9999 }}
@@ -65,6 +65,18 @@ export function Navigation() {
                   className="block px-4 py-3 text-gray-700 hover:bg-sage-50 hover:text-sage-600 transition-colors"
                 >
                   <span className="font-medium">📚 Accommodation Blog</span>
+                </Link>
+                <Link
+                  href="/things-to-do-bellville-south"
+                  className="block px-4 py-3 text-gray-700 hover:bg-sage-50 hover:text-sage-600 transition-colors"
+                >
+                  <span className="font-medium">🗺️ Things to Do</span>
+                </Link>
+                <Link
+                  href="/testimonials"
+                  className="block px-4 py-3 text-gray-700 hover:bg-sage-50 hover:text-sage-600 transition-colors"
+                >
+                  <span className="font-medium">⭐ Guest Reviews</span>
                 </Link>
                 <div className="border-t border-gray-100 my-1"></div>
                 <Link
@@ -138,11 +150,11 @@ export function Navigation() {
                 Rooms
               </Link>
               <Link
-                href="/amenities"
+                href="/special-offers"
                 className="block px-3 py-2 text-gray-700 hover:text-sage-600 font-medium"
                 onClick={() => setIsOpen(false)}
               >
-                Amenities
+                Special Offers
               </Link>
               <Link
                 href="/local-info"
@@ -150,6 +162,20 @@ export function Navigation() {
                 onClick={() => setIsOpen(false)}
               >
                 Location
+              </Link>
+              <Link
+                href="/things-to-do-bellville-south"
+                className="block px-3 py-2 text-gray-700 hover:text-sage-600 font-medium"
+                onClick={() => setIsOpen(false)}
+              >
+                🗺️ Things to Do
+              </Link>
+              <Link
+                href="/testimonials"
+                className="block px-3 py-2 text-gray-700 hover:text-sage-600 font-medium"
+                onClick={() => setIsOpen(false)}
+              >
+                ⭐ Guest Reviews
               </Link>
               <Link
                 href="/blog"

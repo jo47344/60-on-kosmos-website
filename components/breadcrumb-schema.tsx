@@ -15,7 +15,7 @@ export function BreadcrumbSchema({ items }: BreadcrumbSchemaProps) {
       "@type": "ListItem",
       position: index + 1,
       name: item.name,
-      item: `https://60onkosmos.co.za${item.url}`,
+      item: item.url ? `https://60onkosmos.co.za${item.url}` : undefined,
     })),
   }
 
