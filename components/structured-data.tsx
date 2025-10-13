@@ -2,10 +2,16 @@ export function StructuredData() {
   const lodgingBusinessData = {
     "@context": "https://schema.org",
     "@type": "LodgingBusiness",
-    name: "60 on Kosmos – Ensuite Accommodation Bellville South",
-    url: "https://60onkosmos.co.za/",
-    telephone: "+27 74 524 5703",
-    priceRange: "R500–R800",
+    name: "60 on Kosmos",
+    alternateName: "60 on Kosmos Guesthouse Bellville South",
+    description:
+      "Affordable ensuite accommodation in Bellville South, Cape Town. Close to UWC, Tygerberg Hospital, and CPUT. Secure parking, free WiFi, and contractor-friendly.",
+    url: "https://60onkosmos.co.za",
+    telephone: "+27745245703",
+    email: "info@60onkosmos.co.za",
+    priceRange: "ZAR 530-750",
+    currenciesAccepted: "ZAR",
+    paymentAccepted: "Cash, Credit Card, Bank Transfer",
     address: {
       "@type": "PostalAddress",
       streetAddress: "60 Kosmos Street",
@@ -16,71 +22,45 @@ export function StructuredData() {
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: "-33.9123456",
-      longitude: "18.6234567",
+      latitude: -33.9123456,
+      longitude: 18.6234567,
     },
+    image: [
+      "https://60onkosmos.co.za/images/exterior-building.png",
+      "https://60onkosmos.co.za/images/double-room.png",
+      "https://60onkosmos.co.za/images/twin-room-yellow.png",
+    ],
     sameAs: [
       "https://www.facebook.com/60-On-Kosmos-61571946294679/",
       "https://www.airbnb.com/rooms/1332667439996159511",
       "https://www.booking.com/hotel/za/60-on-kosmos-cape-town.html",
     ],
+    openingHoursSpecification: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      opens: "00:00",
+      closes: "23:59",
+    },
     amenityFeature: [
-      { "@type": "LocationFeatureSpecification", name: "Secure parking", value: true },
-      { "@type": "LocationFeatureSpecification", name: "CCTV", value: true },
-      { "@type": "LocationFeatureSpecification", name: "Free WiFi", value: true },
-      { "@type": "LocationFeatureSpecification", name: "Ensuite bathrooms", value: true },
-      { "@type": "LocationFeatureSpecification", name: "Bar fridge in rooms", value: true },
-      { "@type": "LocationFeatureSpecification", name: "Welcome refreshments", value: true },
+      {
+        "@type": "LocationFeatureSpecification",
+        name: "Free parking",
+        value: true,
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        name: "Free WiFi",
+        value: true,
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        name: "Air conditioning",
+        value: true,
+      },
     ],
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: "Room Types",
-      itemListElement: [
-        {
-          "@type": "Offer",
-          name: "Standard Twin Room",
-          priceSpecification: { "@type": "UnitPriceSpecification", priceCurrency: "ZAR", price: "530" },
-          itemOffered: {
-            "@type": "HotelRoom",
-            name: "Standard Twin",
-            bed: "2 single beds",
-            occupancy: { "@type": "QuantitativeValue", maxValue: 2 },
-          },
-        },
-        {
-          "@type": "Offer",
-          name: "Deluxe Twin Room",
-          priceSpecification: { "@type": "UnitPriceSpecification", priceCurrency: "ZAR", price: "580" },
-          itemOffered: {
-            "@type": "HotelRoom",
-            name: "Deluxe Twin",
-            bed: "2 single beds",
-            occupancy: { "@type": "QuantitativeValue", maxValue: 2 },
-          },
-        },
-        {
-          "@type": "Offer",
-          name: "Double Room",
-          priceSpecification: { "@type": "UnitPriceSpecification", priceCurrency: "ZAR", price: "620" },
-          itemOffered: {
-            "@type": "HotelRoom",
-            name: "Double",
-            bed: "1 double bed",
-            occupancy: { "@type": "QuantitativeValue", maxValue: 2 },
-          },
-        },
-        {
-          "@type": "Offer",
-          name: "Triple Room",
-          priceSpecification: { "@type": "UnitPriceSpecification", priceCurrency: "ZAR", price: "720" },
-          itemOffered: {
-            "@type": "HotelRoom",
-            name: "Triple",
-            bed: "3 single beds",
-            occupancy: { "@type": "QuantitativeValue", maxValue: 3 },
-          },
-        },
-      ],
+    starRating: {
+      "@type": "Rating",
+      ratingValue: "4",
     },
     aggregateRating: {
       "@type": "AggregateRating",
@@ -91,62 +71,47 @@ export function StructuredData() {
     },
   }
 
-  const faqData = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "Is there parking?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Yes, secure on-site parking behind locked gates with CCTV.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Do you allow contractors?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Yes. We welcome contractors and offer weekly/monthly rates on request.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "How close are you to UWC/CPUT?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "We're within a short drive of UWC and CPUT Bellville campuses.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "What's included in the room?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Private ensuite bathroom, WiFi, bar fridge, clean linen, and welcome refreshments.",
-        },
-      },
-    ],
-  }
-
   const websiteData = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    url: "https://60onkosmos.co.za/",
+    url: "https://60onkosmos.co.za",
     name: "60 on Kosmos Bellville South",
+    description: "Affordable guesthouse accommodation in Bellville South, Cape Town",
     potentialAction: {
       "@type": "SearchAction",
-      target: "https://60onkosmos.co.za/search?q={search_term_string}",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: "https://60onkosmos.co.za/search?q={search_term_string}",
+      },
       "query-input": "required name=search_term_string",
     },
+  }
+
+  const organizationData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "60 on Kosmos",
+    url: "https://60onkosmos.co.za",
+    logo: "https://60onkosmos.co.za/images/60-on-kosmos-logo.png",
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+27745245703",
+      contactType: "Customer Service",
+      areaServed: "ZA",
+      availableLanguage: ["English", "Afrikaans"],
+    },
+    sameAs: [
+      "https://www.facebook.com/60-On-Kosmos-61571946294679/",
+      "https://www.airbnb.com/rooms/1332667439996159511",
+      "https://www.booking.com/hotel/za/60-on-kosmos-cape-town.html",
+    ],
   }
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(lodgingBusinessData) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteData) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationData) }} />
     </>
   )
 }

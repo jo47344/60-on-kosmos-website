@@ -257,10 +257,11 @@ export default function FAQPage() {
   ]
 
   const breadcrumbItems = [
-    { name: "Home", url: "" },
-    { name: "FAQ", url: "/faq" },
+    { name: "Home", url: "https://60onkosmos.co.za" },
+    { name: "FAQ", url: "https://60onkosmos.co.za/faq" },
   ]
 
+  // Create properly formatted FAQ schema - all questions in ONE FAQPage
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
