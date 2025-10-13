@@ -81,14 +81,14 @@ export function StructuredData() {
     ],
     starRating: {
       "@type": "Rating",
-      ratingValue: 4,
+      ratingValue: "4",
     },
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: 4.8,
-      reviewCount: 25,
-      bestRating: 5,
-      worstRating: 1,
+      ratingValue: "4.8",
+      reviewCount: "25",
+      bestRating: "5",
+      worstRating: "1",
     },
     audience: {
       "@type": "PeopleAudience",
