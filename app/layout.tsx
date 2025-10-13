@@ -1,13 +1,13 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
-import { Suspense } from "react"
 import "./globals.css"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { StickyMobileCTA } from "@/components/sticky-mobile-cta"
 import { LocalBusinessSchema } from "@/components/local-business-schema"
 import { GoogleAnalytics } from "@/components/google-analytics"
+import { Suspense } from "react"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -93,7 +93,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "MsEabfPydfBX62TF26f4hnMZZxJGscle_LRouKVSMYI",
+    google: "5vqXUTGkpekxzUZ2SZ9t_sP4o2BVGccbqEQF-dYn9IQ",
     yandex: "your-yandex-verification-code",
   },
   alternates: {
@@ -250,7 +250,7 @@ export default function RootLayout({
   return (
     <html lang="en-ZA">
       <head>
-        <meta name="google-site-verification" content="MsEabfPydfBX62TF26f4hnMZZxJGscle_LRouKVSMYI" />
+        <meta name="google-site-verification" content="5vqXUTGkpekxzUZ2SZ9t_sP4o2BVGccbqEQF-dYn9IQ" />
 
         <LocalBusinessSchema />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
@@ -284,36 +284,25 @@ export default function RootLayout({
         <meta name="revisit-after" content="7 days" />
 
         <link rel="canonical" href="https://60onkosmos.co.za" />
-
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-            `,
-          }}
-        />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX" />
       </head>
       <body className={inter.className}>
-        <Suspense fallback={null}>
+        <Suspense fallback={<div>Loading...</div>}>
           <GoogleAnalytics />
+          <Navigation />
+          <main id="main-content">{children}</main>
+          <Footer />
+          <a
+            href="https://wa.me/27745245703?text=Hi%2C%20I%20want%20to%20book%20a%20room%20at%2060%20on%20Kosmos%20from%20[insert%20dates]"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="fixed bottom-6 right-6 w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 z-40"
+            title="WhatsApp Book Now - 60 on Kosmos Bellville South"
+            aria-label="Contact us on WhatsApp to book accommodation at 60 on Kosmos Bellville South"
+          >
+            💬
+          </a>
+          <StickyMobileCTA />
         </Suspense>
-        <Navigation />
-        <main id="main-content">{children}</main>
-        <Footer />
-        <a
-          href="https://wa.me/27745245703?text=Hi%2C%20I%20want%20to%20book%20a%20room%20at%2060%20on%20Kosmos%20from%20[insert%20dates]"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="fixed bottom-6 right-6 w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 z-40"
-          title="WhatsApp Book Now - 60 on Kosmos Bellville South"
-          aria-label="Contact us on WhatsApp to book accommodation at 60 on Kosmos Bellville South"
-        >
-          💬
-        </a>
-        <StickyMobileCTA />
       </body>
     </html>
   )
