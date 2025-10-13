@@ -6,13 +6,13 @@ export function StructuredData() {
     name: "60 on Kosmos",
     alternateName: "60 on Kosmos Guesthouse Bellville South",
     description:
-      "Self-catering ensuite accommodation in Bellville South, Cape Town. Perfect for contractors, young professionals, and students. Close to UWC and Tygerberg Hospital. Secure parking, free WiFi, weekly cleaning included.",
+      "Self-catering ensuite accommodation in Bellville South, Cape Town. Perfect for contractors, young professionals, and students. Close to UWC and Tygerberg Hospital. Secure parking, free WiFi, weekly cleaning, and communal kitchenette included.",
     url: "https://60onkosmos.co.za",
     telephone: "+27745245703",
     email: "info@60onkosmos.co.za",
     priceRange: "ZAR 530-750",
     currenciesAccepted: "ZAR",
-    paymentAccepted: "Cash, Credit Card, Bank Transfer",
+    paymentAccepted: "Bank Transfer, EFT",
     address: {
       "@type": "PostalAddress",
       streetAddress: "60 Kosmos Street",
@@ -78,18 +78,12 @@ export function StructuredData() {
         name: "Self-catering",
         value: true,
       },
+      {
+        "@type": "LocationFeatureSpecification",
+        name: "Communal kitchenette",
+        value: true,
+      },
     ],
-    starRating: {
-      "@type": "Rating",
-      ratingValue: "4",
-    },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.8",
-      reviewCount: "25",
-      bestRating: "5",
-      worstRating: "1",
-    },
     audience: {
       "@type": "PeopleAudience",
       suggestedMinAge: 18,

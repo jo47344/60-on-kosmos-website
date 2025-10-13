@@ -7,7 +7,7 @@ import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
 export const metadata: Metadata = {
   title: "FAQ - Frequently Asked Questions | 60 on Kosmos Bellville South",
   description:
-    "Get answers to common questions about 60 on Kosmos guesthouse in Bellville South. Parking, rates, amenities, location near UWC and Tygerberg Hospital.",
+    "Get answers to common questions about 60 on Kosmos guesthouse in Bellville South. Parking, rates, amenities, communal kitchen, location near UWC and Tygerberg Hospital.",
   openGraph: {
     title: "FAQ - 60 on Kosmos Guesthouse Bellville South",
     description: "Frequently asked questions about our Bellville South accommodation",
@@ -40,7 +40,7 @@ export default function FAQPage() {
         name: "Do you allow contractors and offer monthly rates?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "We welcome contractors and offer discounted weekly and monthly rates. Contact us directly for a personalized quote based on your length of stay.",
+          text: "We welcome contractors and offer discounted weekly and monthly rates. We provide detailed invoices for all bookings, perfect for contractors needing receipts for company expenses. Contact us directly for a personalized quote.",
         },
       },
       {
@@ -56,7 +56,15 @@ export default function FAQPage() {
         name: "What's included in the room rate?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Each room includes a private ensuite bathroom, free WiFi, bar fridge, clean linen and towels, weekly cleaning service, and welcome refreshments. All rooms are self-catering.",
+          text: "Each room includes a private ensuite bathroom, free WiFi, bar fridge, clean linen and towels, weekly cleaning service, and welcome refreshments. You also have access to our communal kitchenette with gas stove, microwave, and air fryer for light meal preparation.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is there a kitchen I can use?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes! We have a communal kitchenette area equipped with a gas stove, microwave, air fryer, and basic cooking utensils. This is perfect for preparing light meals. Each room also has a bar fridge. There's a SPAR supermarket 2km away for groceries.",
         },
       },
       {
@@ -64,7 +72,23 @@ export default function FAQPage() {
         name: "Is breakfast included?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "No, we are self-catering accommodation. Each room has a bar fridge for your convenience. There's a SPAR supermarket 2km away where you can purchase groceries. Many guests prefer this flexibility to eat according to their own schedule and dietary preferences.",
+          text: "No, we are self-catering accommodation and do not provide meals. However, you have access to our communal kitchenette with a gas stove, microwave, and air fryer to prepare your own meals. Each room also has a bar fridge.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What payment methods do you accept?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "We accept EFT (Electronic Fund Transfer) bank payments only. We provide banking details upon booking confirmation and issue detailed invoices for all payments. This is perfect for contractors and companies requiring proper documentation for expenses.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Do you provide invoices?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes! We provide detailed invoices for all bookings. This is especially useful for contractors, companies, and anyone needing receipts for tax or expense purposes. Invoices are emailed immediately after payment confirmation.",
         },
       },
       {
@@ -101,10 +125,10 @@ export default function FAQPage() {
       },
       {
         "@type": "Question",
-        name: "Is there a kitchen for guest use?",
+        name: "What cooking facilities are available?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "We are self-catering, and each room has a bar fridge. There are many restaurants and takeaway options within a 2-5km radius, and a SPAR supermarket 2km away for groceries.",
+          text: "We have a communal kitchenette with a gas stove, microwave, air fryer, kettle, and basic cooking utensils. This is shared by all guests and is perfect for preparing light meals. Each room also has its own bar fridge.",
         },
       },
       {
@@ -113,14 +137,6 @@ export default function FAQPage() {
         acceptedAnswer: {
           "@type": "Answer",
           text: "Our cancellation policy varies depending on how you book. Please contact us directly or check your booking confirmation for specific cancellation terms. We try to be as flexible as possible with our guests.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Do you accept credit cards?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Yes, we accept cash, credit cards, and bank transfers. Payment details will be provided upon booking confirmation.",
         },
       },
       {
@@ -137,6 +153,22 @@ export default function FAQPage() {
         acceptedAnswer: {
           "@type": "Answer",
           text: "No, unfortunately we do not allow pets on the property to ensure a comfortable environment for all guests, particularly those with allergies.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is smoking allowed?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "No, smoking is not permitted inside the rooms or buildings. This is a non-smoking property. Designated outdoor smoking areas may be available.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Do you provide cleaning services?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, we provide weekly cleaning service which includes changing linen, towels, and cleaning your room. This helps keep our rates affordable while maintaining cleanliness. If you need additional cleaning, please let us know.",
         },
       },
     ],
@@ -156,7 +188,7 @@ export default function FAQPage() {
     {
       question: "Do you allow contractors and offer monthly rates?",
       answer:
-        "We welcome contractors and offer discounted weekly and monthly rates. Contact us directly for a personalized quote based on your length of stay.",
+        "We welcome contractors and offer discounted weekly and monthly rates. We provide detailed invoices for all bookings, perfect for contractors needing receipts for company expenses. Contact us directly for a personalized quote.",
     },
     {
       question: "How far are you from Tygerberg Hospital?",
@@ -166,12 +198,27 @@ export default function FAQPage() {
     {
       question: "What's included in the room rate?",
       answer:
-        "Each room includes a private ensuite bathroom, free WiFi, bar fridge, clean linen and towels, weekly cleaning service, and welcome refreshments. All rooms are self-catering.",
+        "Each room includes a private ensuite bathroom, free WiFi, bar fridge, clean linen and towels, weekly cleaning service, and welcome refreshments. You also have access to our communal kitchenette with gas stove, microwave, and air fryer for light meal preparation.",
+    },
+    {
+      question: "Is there a kitchen I can use?",
+      answer:
+        "Yes! We have a communal kitchenette area equipped with a gas stove, microwave, air fryer, and basic cooking utensils. This is perfect for preparing light meals. Each room also has a bar fridge. There's a SPAR supermarket 2km away for groceries.",
     },
     {
       question: "Is breakfast included?",
       answer:
-        "No, we are self-catering accommodation. Each room has a bar fridge for your convenience. There's a SPAR supermarket 2km away where you can purchase groceries. Many guests prefer this flexibility to eat according to their own schedule and dietary preferences.",
+        "No, we are self-catering accommodation and do not provide meals. However, you have access to our communal kitchenette with a gas stove, microwave, and air fryer to prepare your own meals. Each room also has a bar fridge.",
+    },
+    {
+      question: "What payment methods do you accept?",
+      answer:
+        "We accept EFT (Electronic Fund Transfer) bank payments only. We provide banking details upon booking confirmation and issue detailed invoices for all payments. This is perfect for contractors and companies requiring proper documentation for expenses.",
+    },
+    {
+      question: "Do you provide invoices?",
+      answer:
+        "Yes! We provide detailed invoices for all bookings. This is especially useful for contractors, companies, and anyone needing receipts for tax or expense purposes. Invoices are emailed immediately after payment confirmation.",
     },
     {
       question: "What are your check-in and check-out times?",
@@ -194,19 +241,14 @@ export default function FAQPage() {
         "We are approximately 25km from Cape Town International Airport, about a 25-30 minute drive. We don't offer airport transfers, but you can use Uber, Bolt, or arrange a private taxi. Many guests find ride-sharing apps to be the most convenient and affordable option.",
     },
     {
-      question: "Is there a kitchen for guest use?",
+      question: "What cooking facilities are available?",
       answer:
-        "We are self-catering, and each room has a bar fridge. There are many restaurants and takeaway options within a 2-5km radius, and a SPAR supermarket 2km away for groceries.",
+        "We have a communal kitchenette with a gas stove, microwave, air fryer, kettle, and basic cooking utensils. This is shared by all guests and is perfect for preparing light meals. Each room also has its own bar fridge.",
     },
     {
       question: "What is your cancellation policy?",
       answer:
         "Our cancellation policy varies depending on how you book. Please contact us directly or check your booking confirmation for specific cancellation terms. We try to be as flexible as possible with our guests.",
-    },
-    {
-      question: "Do you accept credit cards?",
-      answer:
-        "Yes, we accept cash, credit cards, and bank transfers. Payment details will be provided upon booking confirmation.",
     },
     {
       question: "How far is Bellville Station from the property?",
@@ -217,6 +259,16 @@ export default function FAQPage() {
       question: "Are pets allowed?",
       answer:
         "No, unfortunately we do not allow pets on the property to ensure a comfortable environment for all guests, particularly those with allergies.",
+    },
+    {
+      question: "Is smoking allowed?",
+      answer:
+        "No, smoking is not permitted inside the rooms or buildings. This is a non-smoking property. Designated outdoor smoking areas may be available.",
+    },
+    {
+      question: "Do you provide cleaning services?",
+      answer:
+        "Yes, we provide weekly cleaning service which includes changing linen, towels, and cleaning your room. This helps keep our rates affordable while maintaining cleanliness. If you need additional cleaning, please let us know.",
     },
   ]
 
