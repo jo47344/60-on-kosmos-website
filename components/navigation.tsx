@@ -36,9 +36,6 @@ export function Navigation() {
             <Link href="/special-offers" className="text-gray-700 hover:text-sage-600 transition-colors font-medium">
               Special Offers
             </Link>
-            <Link href="/local-info" className="text-gray-700 hover:text-sage-600 transition-colors font-medium">
-              Location
-            </Link>
 
             {/* Resources Dropdown */}
             <div className="relative group">
@@ -61,16 +58,10 @@ export function Navigation() {
                 onMouseLeave={() => setResourcesOpen(false)}
               >
                 <Link
-                  href="/blog"
+                  href="/virtual-tour"
                   className="block px-4 py-3 text-gray-700 hover:bg-sage-50 hover:text-sage-600 transition-colors"
                 >
-                  <span className="font-medium">📚 Accommodation Blog</span>
-                </Link>
-                <Link
-                  href="/things-to-do-bellville-south"
-                  className="block px-4 py-3 text-gray-700 hover:bg-sage-50 hover:text-sage-600 transition-colors"
-                >
-                  <span className="font-medium">🗺️ Things to Do</span>
+                  <span className="font-medium">📸 Virtual Tour</span>
                 </Link>
                 <Link
                   href="/testimonials"
@@ -78,31 +69,24 @@ export function Navigation() {
                 >
                   <span className="font-medium">⭐ Guest Reviews</span>
                 </Link>
-                <div className="border-t border-gray-100 my-1"></div>
                 <Link
-                  href="/blog/medical-staff-guide-tygerberg-hospital"
-                  className="block px-4 py-2 text-sm text-gray-600 hover:bg-sage-50 hover:text-sage-600 transition-colors"
+                  href="/faq"
+                  className="block px-4 py-3 text-gray-700 hover:bg-sage-50 hover:text-sage-600 transition-colors"
                 >
-                  Medical Staff Guide
-                </Link>
-                <Link
-                  href="/blog/international-student-housing-uwc"
-                  className="block px-4 py-2 text-sm text-gray-600 hover:bg-sage-50 hover:text-sage-600 transition-colors"
-                >
-                  International Students Guide
+                  <span className="font-medium">❓ FAQ</span>
                 </Link>
                 <div className="border-t border-gray-100 my-1"></div>
                 <Link
-                  href="/contractor-accommodation-bellville-south"
-                  className="block px-4 py-2 text-sm text-gray-600 hover:bg-sage-50 hover:text-sage-600 transition-colors"
+                  href="/things-to-do-bellville-south"
+                  className="block px-4 py-3 text-gray-700 hover:bg-sage-50 hover:text-sage-600 transition-colors"
                 >
-                  For Contractors
+                  <span className="font-medium">🗺️ Things to Do</span>
                 </Link>
                 <Link
-                  href="/cheap-accommodation-bellville-south"
-                  className="block px-4 py-2 text-sm text-gray-600 hover:bg-sage-50 hover:text-sage-600 transition-colors"
+                  href="/blog"
+                  className="block px-4 py-3 text-gray-700 hover:bg-sage-50 hover:text-sage-600 transition-colors"
                 >
-                  Budget Accommodation
+                  <span className="font-medium">📚 Blog & Guides</span>
                 </Link>
               </div>
             </div>
@@ -157,18 +141,11 @@ export function Navigation() {
                 Special Offers
               </Link>
               <Link
-                href="/local-info"
+                href="/virtual-tour"
                 className="block px-3 py-2 text-gray-700 hover:text-sage-600 font-medium"
                 onClick={() => setIsOpen(false)}
               >
-                Location
-              </Link>
-              <Link
-                href="/things-to-do-bellville-south"
-                className="block px-3 py-2 text-gray-700 hover:text-sage-600 font-medium"
-                onClick={() => setIsOpen(false)}
-              >
-                🗺️ Things to Do
+                📸 Virtual Tour
               </Link>
               <Link
                 href="/testimonials"
@@ -178,11 +155,25 @@ export function Navigation() {
                 ⭐ Guest Reviews
               </Link>
               <Link
+                href="/faq"
+                className="block px-3 py-2 text-gray-700 hover:text-sage-600 font-medium"
+                onClick={() => setIsOpen(false)}
+              >
+                ❓ FAQ
+              </Link>
+              <Link
+                href="/things-to-do-bellville-south"
+                className="block px-3 py-2 text-gray-700 hover:text-sage-600 font-medium"
+                onClick={() => setIsOpen(false)}
+              >
+                🗺️ Things to Do
+              </Link>
+              <Link
                 href="/blog"
                 className="block px-3 py-2 text-gray-700 hover:text-sage-600 font-medium"
                 onClick={() => setIsOpen(false)}
               >
-                📚 Blog & Guides
+                📚 Blog
               </Link>
               <Link
                 href="/contact"

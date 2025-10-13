@@ -21,6 +21,7 @@ import {
 } from "lucide-react"
 import { LatestBlogPosts } from "@/components/latest-blog-posts"
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
+import { TrustBadges } from "@/components/trust-badges"
 
 export default function HomePage() {
   const [activeNav, setActiveNav] = useState("home")
@@ -298,6 +299,9 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* Trust Badges */}
+        <TrustBadges />
 
         {/* Trust Signals */}
         <section className="py-8 bg-white border-y">

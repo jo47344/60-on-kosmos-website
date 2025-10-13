@@ -8,10 +8,12 @@ export async function GET() {
     { url: "", priority: "1.0", changefreq: "daily" },
     { url: "/rooms", priority: "0.9", changefreq: "weekly" },
     { url: "/special-offers", priority: "0.9", changefreq: "daily" },
+    { url: "/testimonials", priority: "0.8", changefreq: "weekly" },
+    { url: "/virtual-tour", priority: "0.8", changefreq: "monthly" },
+    { url: "/faq", priority: "0.8", changefreq: "monthly" },
     { url: "/amenities", priority: "0.8", changefreq: "monthly" },
     { url: "/local-info", priority: "0.8", changefreq: "monthly" },
     { url: "/things-to-do-bellville-south", priority: "0.8", changefreq: "monthly" },
-    { url: "/testimonials", priority: "0.8", changefreq: "weekly" },
     { url: "/contact", priority: "0.9", changefreq: "monthly" },
     { url: "/book-now", priority: "0.9", changefreq: "daily" },
 
@@ -45,16 +47,6 @@ export async function GET() {
     <lastmod>${currentDate}</lastmod>
     <changefreq>${route.changefreq}</changefreq>
     <priority>${route.priority}</priority>
-    ${
-      route.url === ""
-        ? `
-    <image:image>
-      <image:loc>${baseUrl}/images/exterior-building.png</image:loc>
-      <image:title>60 on Kosmos Guesthouse Bellville South</image:title>
-      <image:caption>Affordable ensuite accommodation in Bellville South near UWC</image:caption>
-    </image:image>`
-        : ""
-    }
   </url>`,
     )
     .join("")}
