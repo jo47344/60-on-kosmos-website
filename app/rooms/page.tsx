@@ -168,7 +168,7 @@ export default function RoomsPage() {
                 </li>
                 <li className="flex items-center">
                   <span className="w-1.5 h-1.5 bg-green-600 rounded-full mr-2"></span>
-                  Weekly cleaning service
+                  Daily cleaning service
                 </li>
               </ul>
             </div>

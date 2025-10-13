@@ -41,48 +41,58 @@ export function Navigation() {
             </Link>
 
             {/* Resources Dropdown */}
-            <div
-              className="relative"
-              onMouseEnter={() => setResourcesOpen(true)}
-              onMouseLeave={() => setResourcesOpen(false)}
-            >
-              <button className="text-gray-700 hover:text-sage-600 transition-colors font-medium flex items-center">
+            <div className="relative group">
+              <button
+                className="text-gray-700 hover:text-sage-600 transition-colors font-medium flex items-center gap-1"
+                onMouseEnter={() => setResourcesOpen(true)}
+                onFocus={() => setResourcesOpen(true)}
+              >
                 Resources
-                <ChevronDown className="w-4 h-4 ml-1" />
+                <ChevronDown className="w-4 h-4" />
               </button>
 
-              {resourcesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border py-2 z-50">
-                  <Link href="/blog" className="block px-4 py-2 text-gray-700 hover:bg-sage-50 hover:text-sage-600">
-                    📚 Accommodation Blog
-                  </Link>
-                  <Link
-                    href="/blog/medical-staff-guide-tygerberg-hospital"
-                    className="block px-4 py-2 text-gray-700 hover:bg-sage-50 hover:text-sage-600 text-sm"
-                  >
-                    Medical Staff Guide
-                  </Link>
-                  <Link
-                    href="/blog/international-student-housing-uwc"
-                    className="block px-4 py-2 text-gray-700 hover:bg-sage-50 hover:text-sage-600 text-sm"
-                  >
-                    International Students Guide
-                  </Link>
-                  <div className="border-t my-2"></div>
-                  <Link
-                    href="/contractor-accommodation-bellville-south"
-                    className="block px-4 py-2 text-gray-700 hover:bg-sage-50 hover:text-sage-600 text-sm"
-                  >
-                    For Contractors
-                  </Link>
-                  <Link
-                    href="/cheap-accommodation-bellville-south"
-                    className="block px-4 py-2 text-gray-700 hover:bg-sage-50 hover:text-sage-600 text-sm"
-                  >
-                    Budget Accommodation
-                  </Link>
-                </div>
-              )}
+              {/* Dropdown Menu */}
+              <div
+                className={`absolute left-0 top-full mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 transition-all duration-200 ${
+                  resourcesOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-2"
+                }`}
+                style={{ zIndex: 9999 }}
+                onMouseEnter={() => setResourcesOpen(true)}
+                onMouseLeave={() => setResourcesOpen(false)}
+              >
+                <Link
+                  href="/blog"
+                  className="block px-4 py-3 text-gray-700 hover:bg-sage-50 hover:text-sage-600 transition-colors"
+                >
+                  <span className="font-medium">📚 Accommodation Blog</span>
+                </Link>
+                <div className="border-t border-gray-100 my-1"></div>
+                <Link
+                  href="/blog/medical-staff-guide-tygerberg-hospital"
+                  className="block px-4 py-2 text-sm text-gray-600 hover:bg-sage-50 hover:text-sage-600 transition-colors"
+                >
+                  Medical Staff Guide
+                </Link>
+                <Link
+                  href="/blog/international-student-housing-uwc"
+                  className="block px-4 py-2 text-sm text-gray-600 hover:bg-sage-50 hover:text-sage-600 transition-colors"
+                >
+                  International Students Guide
+                </Link>
+                <div className="border-t border-gray-100 my-1"></div>
+                <Link
+                  href="/contractor-accommodation-bellville-south"
+                  className="block px-4 py-2 text-sm text-gray-600 hover:bg-sage-50 hover:text-sage-600 transition-colors"
+                >
+                  For Contractors
+                </Link>
+                <Link
+                  href="/cheap-accommodation-bellville-south"
+                  className="block px-4 py-2 text-sm text-gray-600 hover:bg-sage-50 hover:text-sage-600 transition-colors"
+                >
+                  Budget Accommodation
+                </Link>
+              </div>
             </div>
 
             <Link href="/contact" className="text-gray-700 hover:text-sage-600 transition-colors font-medium">

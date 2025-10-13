@@ -3,13 +3,13 @@
 import { useState, useEffect } from "react"
 import { Phone, MessageCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { trackWhatsAppClick, trackPhoneClick } from "@/lib/analytics"
 
 export function StickyMobileCTA() {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
+      // Show CTA after scrolling 200px
       setIsVisible(window.scrollY > 200)
     }
 
@@ -27,7 +27,6 @@ export function StickyMobileCTA() {
             asChild
             size="sm"
             className="flex-1 bg-white text-green-600 hover:bg-gray-100 font-semibold rounded-full shadow-md"
-            onClick={() => trackWhatsAppClick("sticky_mobile_cta")}
           >
             <a
               href="https://wa.me/27745245703?text=Hi%2C%20I%20want%20to%20book%20a%20room%20at%2060%20on%20Kosmos%20from%20[insert%20dates]"
@@ -41,7 +40,6 @@ export function StickyMobileCTA() {
             asChild
             size="sm"
             className="flex-1 bg-white text-green-600 hover:bg-gray-100 font-semibold rounded-full shadow-md"
-            onClick={() => trackPhoneClick("sticky_mobile_cta")}
           >
             <a href="tel:0745245703">
               <Phone className="w-4 h-4 mr-2" />📞 Call Now

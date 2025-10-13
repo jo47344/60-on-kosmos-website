@@ -9,7 +9,6 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Calendar, Phone, User, MessageCircle, CheckCircle, Loader2 } from "lucide-react"
-import { trackBookingSubmission, trackWhatsAppClick } from "@/lib/analytics"
 
 export function OptimizedBookingForm() {
   const [formData, setFormData] = useState({
@@ -29,7 +28,7 @@ export function OptimizedBookingForm() {
       ...formData,
       [e.target.name]: e.target.value,
     })
-    setError("")
+    setError("") // Clear error on input change
   }
 
   const handleSelectChange = (value: string) => {
@@ -37,16 +36,17 @@ export function OptimizedBookingForm() {
       ...formData,
       roomType: value,
     })
-    setError("")
+    setError("") // Clear error on select change
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    setError("")
+    setError("") // Clear previous errors
 
     try {
       const response = await fetch("https://formspree.io/f/mblkjbkg", {
+        // Replace 'mblkjbkg' with your actual Formspree form ID
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -57,7 +57,7 @@ export function OptimizedBookingForm() {
 
       if (response.ok) {
         setIsSubmitted(true)
-        trackBookingSubmission(formData.roomType)
+        // Reset form
         setFormData({
           name: "",
           phone: "",
@@ -94,11 +94,7 @@ export function OptimizedBookingForm() {
           <h3 className="text-xl font-semibold text-gray-900 mb-2">Booking Request Sent!</h3>
           <p className="text-gray-600 mb-6">Thanks! We'll confirm your booking via WhatsApp.</p>
           <div className="space-y-3">
-            <Button
-              asChild
-              className="w-full bg-green-600 hover:bg-green-700 text-white"
-              onClick={() => trackWhatsAppClick("booking_success_page")}
-            >
+            <Button asChild className="w-full bg-green-600 hover:bg-green-700 text-white">
               <a
                 href="https://wa.me/27745245703?text=Hi%2C%20I%20just%20submitted%20a%20booking%20request%20for%2060%20on%20Kosmos"
                 target="_blank"
