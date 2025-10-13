@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
-    type: "business.business",
+    type: "website",
     locale: "en_ZA",
     url: "https://60onkosmos.co.za",
     siteName: "60 on Kosmos Guesthouse Bellville South Cape Town",
@@ -148,7 +148,7 @@ export default function RootLayout({
         name: "How much does accommodation cost at 60 on Kosmos Bellville South?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Room rates at 60 on Kosmos start from R530 per night for standard twin rooms, R580 for deluxe twin, R620 for double rooms, and R750 for triple rooms. All rooms include free WiFi, secure parking, and ensuite bathrooms.",
+          text: "Room rates at 60 on Kosmos start from R530 per night for standard twin rooms, R620/night for double rooms, and R750/night for triple rooms. All rooms include free WiFi, secure parking, and ensuite bathrooms.",
         },
       },
       {

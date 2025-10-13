@@ -2,51 +2,54 @@ import { NextResponse } from "next/server"
 
 export async function GET() {
   const baseUrl = "https://60onkosmos.co.za"
-  const currentDate = new Date().toISOString()
 
-  const routes = [
-    { url: "", priority: "1.0", changefreq: "daily" },
-    { url: "/rooms", priority: "0.9", changefreq: "weekly" },
-    { url: "/special-offers", priority: "0.9", changefreq: "daily" },
-    { url: "/testimonials", priority: "0.8", changefreq: "weekly" },
-    { url: "/virtual-tour", priority: "0.8", changefreq: "monthly" },
-    { url: "/faq", priority: "0.8", changefreq: "monthly" },
-    { url: "/amenities", priority: "0.8", changefreq: "monthly" },
-    { url: "/local-info", priority: "0.8", changefreq: "monthly" },
-    { url: "/things-to-do-bellville-south", priority: "0.8", changefreq: "monthly" },
-    { url: "/contact", priority: "0.9", changefreq: "monthly" },
-    { url: "/book-now", priority: "0.9", changefreq: "daily" },
+  const urls = [
+    // Main pages
+    { loc: "", priority: 1.0, changefreq: "daily" },
+    { loc: "/rooms", priority: 0.9, changefreq: "weekly" },
+    { loc: "/amenities", priority: 0.8, changefreq: "monthly" },
+    { loc: "/local-info", priority: 0.8, changefreq: "monthly" },
+    { loc: "/contact", priority: 0.8, changefreq: "monthly" },
+    { loc: "/book-now", priority: 0.9, changefreq: "weekly" },
 
-    // SEO landing pages - high priority
-    { url: "/contractor-accommodation-bellville-south", priority: "0.9", changefreq: "weekly" },
-    { url: "/near-uwc-bellville", priority: "0.9", changefreq: "weekly" },
-    { url: "/accommodation-near-tygerberg-hospital", priority: "0.9", changefreq: "weekly" },
-    { url: "/cheap-accommodation-bellville-south", priority: "0.8", changefreq: "weekly" },
-    { url: "/monthly-accommodation-bellville-south", priority: "0.8", changefreq: "weekly" },
-    { url: "/backpackers-bellville-south", priority: "0.8", changefreq: "weekly" },
-    { url: "/accommodation-near-bellville-station", priority: "0.8", changefreq: "weekly" },
+    // Landing pages
+    { loc: "/contractor-accommodation-bellville-south", priority: 0.9, changefreq: "weekly" },
+    { loc: "/near-uwc-bellville", priority: 0.9, changefreq: "weekly" },
+    { loc: "/accommodation-near-tygerberg-hospital", priority: 0.9, changefreq: "weekly" },
+    { loc: "/cheap-accommodation-bellville-south", priority: 0.9, changefreq: "weekly" },
+    { loc: "/monthly-accommodation-bellville-south", priority: 0.9, changefreq: "weekly" },
+    { loc: "/backpackers-bellville-south", priority: 0.8, changefreq: "weekly" },
+    { loc: "/accommodation-near-bellville-station", priority: 0.8, changefreq: "weekly" },
 
-    // Blog pages
-    { url: "/blog", priority: "0.7", changefreq: "weekly" },
-    { url: "/blog/medical-staff-guide-tygerberg-hospital", priority: "0.7", changefreq: "monthly" },
-    { url: "/blog/international-student-housing-uwc", priority: "0.7", changefreq: "monthly" },
-    { url: "/blog/corporate-relocation-cape-town", priority: "0.7", changefreq: "monthly" },
-    { url: "/blog/digital-nomad-guide-bellville-south", priority: "0.7", changefreq: "monthly" },
-    { url: "/blog/nursing-student-accommodation-tygerberg", priority: "0.7", changefreq: "monthly" },
+    // New pages
+    { loc: "/special-offers", priority: 0.9, changefreq: "weekly" },
+    { loc: "/testimonials", priority: 0.7, changefreq: "monthly" },
+    { loc: "/things-to-do-bellville-south", priority: 0.7, changefreq: "monthly" },
+    { loc: "/faq", priority: 0.8, changefreq: "monthly" },
+    { loc: "/virtual-tour", priority: 0.8, changefreq: "monthly" },
+
+    // Blog
+    { loc: "/blog", priority: 0.8, changefreq: "weekly" },
+    { loc: "/blog/medical-staff-guide-tygerberg-hospital", priority: 0.7, changefreq: "monthly" },
+    { loc: "/blog/international-student-housing-uwc", priority: 0.7, changefreq: "monthly" },
+    { loc: "/blog/corporate-relocation-cape-town", priority: 0.7, changefreq: "monthly" },
+    { loc: "/blog/digital-nomad-guide-bellville-south", priority: 0.7, changefreq: "monthly" },
+    { loc: "/blog/nursing-student-accommodation-tygerberg", priority: 0.7, changefreq: "monthly" },
+
+    // Thank you page
+    { loc: "/thank-you", priority: 0.3, changefreq: "yearly" },
   ]
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
-  ${routes
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  ${urls
     .map(
-      (route) => `
+      (url) => `
   <url>
-    <loc>${baseUrl}${route.url}</loc>
-    <lastmod>${currentDate}</lastmod>
-    <changefreq>${route.changefreq}</changefreq>
-    <priority>${route.priority}</priority>
+    <loc>${baseUrl}${url.loc}</loc>
+    <changefreq>${url.changefreq}</changefreq>
+    <priority>${url.priority}</priority>
+    <lastmod>${new Date().toISOString()}</lastmod>
   </url>`,
     )
     .join("")}
