@@ -6,14 +6,15 @@ import { Badge } from "@/components/ui/badge"
 import { Wifi, Coffee, Car, Shield, Phone } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Rooms & Rates - 60 on Kosmos Guesthouse Bellville South | Affordable Accommodation Cape Town",
+  title: "Rooms & Rates - 60 on Kosmos Guesthouse Bellville South | Self-Catering Accommodation Cape Town",
   description:
-    "View our comfortable ensuite rooms from R530/night. Standard twin, double & deluxe rooms near UWC, Tygerberg Hospital. Free WiFi, CCTV security, parking included. Book 074 524 5703",
+    "Self-catering ensuite rooms from R530/night. Standard twin, double & deluxe rooms near UWC, Tygerberg Hospital. Free WiFi, CCTV security, parking, weekly cleaning. For young professionals & contractors. Book 074 524 5703",
   keywords:
-    "Guesthouse rooms Bellville South, affordable accommodation Cape Town, rooms near UWC, ensuite accommodation Bellville, contractor rooms Cape Town, student accommodation near UWC",
+    "Self-catering rooms Bellville South, professional accommodation Cape Town, rooms near UWC, ensuite accommodation Bellville, contractor rooms Cape Town, monthly accommodation Bellville",
   openGraph: {
-    title: "Rooms & Rates - 60 on Kosmos Guesthouse Bellville South",
-    description: "Comfortable ensuite rooms from R530/night near UWC and Tygerberg Hospital",
+    title: "Self-Catering Rooms & Rates - 60 on Kosmos Guesthouse Bellville South",
+    description:
+      "Self-catering ensuite rooms from R530/night near UWC and Tygerberg Hospital. Perfect for professionals.",
   },
 }
 
@@ -24,40 +25,54 @@ export default function RoomsPage() {
       name: "Standard Twin Room",
       price: "From R530",
       image: "/images/twin-room-yellow.png",
-      alt: "Standard twin room guesthouse Bellville South - affordable accommodation Cape Town near UWC with ensuite bathroom and bar fridge",
-      features: ["Two single beds", "Ensuite bathroom", "Bar fridge", "Free WiFi", "Clean linen"],
+      alt: "Standard twin room guesthouse Bellville South - self-catering accommodation Cape Town near UWC with ensuite bathroom and bar fridge",
+      features: ["Two single beds", "Ensuite bathroom", "Bar fridge", "Free WiFi", "Clean linen", "Weekly cleaning"],
       description:
-        "Perfect for contractors or friends travelling together. Clean, comfortable twin beds with modern ensuite bathroom.",
+        "Perfect for contractors or young professionals. Clean, comfortable twin beds with modern ensuite bathroom. Self-catering with bar fridge.",
     },
     {
       id: 2,
       name: "Double Room",
       price: "From R620",
       image: "/images/sage-double-room.png",
-      alt: "Double room guesthouse Bellville South - budget accommodation Cape Town near UWC and Tygerberg Hospital with ensuite bathroom",
-      features: ["Double bed", "Ensuite bathroom", "Bar fridge", "Free WiFi", "Premium bedding"],
+      alt: "Double room guesthouse Bellville South - self-catering accommodation Cape Town near UWC and Tygerberg Hospital with ensuite bathroom",
+      features: ["Double bed", "Ensuite bathroom", "Bar fridge", "Free WiFi", "Premium bedding", "Weekly cleaning"],
       description:
-        "Ideal for couples or solo travellers wanting extra space. Comfortable double bed with sage green accents.",
+        "Ideal for professionals wanting extra space. Comfortable double bed with sage green accents and modern ensuite facilities.",
     },
     {
       id: 3,
       name: "Deluxe Twin Room",
       price: "From R580",
       image: "/images/deluxe-twin-navy.jpg",
-      alt: "Deluxe twin room guesthouse Bellville South - premium contractor accommodation Cape Town with navy blue headboards and modern decor",
-      features: ["Two single beds", "Navy blue headboards", "Ensuite bathroom", "Premium bedding", "Modern decor"],
+      alt: "Deluxe twin room guesthouse Bellville South - premium contractor self-catering accommodation Cape Town with navy blue headboards",
+      features: [
+        "Two single beds",
+        "Navy blue headboards",
+        "Ensuite bathroom",
+        "Premium bedding",
+        "Modern decor",
+        "Weekly cleaning",
+      ],
       description:
-        "Our premium twin room with elegant navy blue headboards, quality bedding, and stylish palm tree artwork. Perfect for business travellers and contractors.",
+        "Our premium twin room with elegant navy blue headboards and quality bedding. Perfect for business travelers and contractors.",
     },
     {
       id: 4,
       name: "Triple Room",
       price: "From R750",
       image: "/images/triple-room-full.jpg",
-      alt: "Triple room guesthouse Bellville South - affordable accommodation Cape Town near UWC with three single beds, workspace, kettle and ensuite bathroom",
-      features: ["Three single beds", "Ensuite bathroom", "Kettle & cups", "Free WiFi", "Workspace area"],
+      alt: "Triple room guesthouse Bellville South - self-catering accommodation Cape Town near UWC with three single beds and workspace",
+      features: [
+        "Three single beds",
+        "Ensuite bathroom",
+        "Kettle & cups",
+        "Free WiFi",
+        "Workspace area",
+        "Weekly cleaning",
+      ],
       description:
-        "Spacious room perfect for families, friends, or small groups. Three comfortable single beds with modern ensuite bathroom, kettle with cups, and workspace area with grey tile flooring.",
+        "Spacious room perfect for professionals sharing. Three comfortable single beds with modern ensuite bathroom, kettle, and workspace area.",
     },
   ]
 
@@ -79,15 +94,16 @@ export default function RoomsPage() {
               rel="noopener noreferrer"
             >
               WhatsApp Now
-            </a>
+            </a>{" "}
+            | Ask About Monthly Rates
           </p>
         </div>
 
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Rooms & Rates</h1>
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">Self-Catering Rooms & Rates</h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             All rooms feature ensuite bathrooms, bar fridges, and free WiFi. Clean linen and welcome refreshments
-            included. Check-in from 2:00 PM.
+            included. Weekly cleaning service. Check-in from 2:00 PM. Perfect for professionals 18+.
           </p>
         </div>
 
@@ -144,14 +160,33 @@ export default function RoomsPage() {
           ))}
         </div>
 
+        {/* Monthly Rates CTA */}
+        <div className="bg-sage-50 rounded-lg p-8 mb-12 text-center">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Looking for Monthly Accommodation?</h2>
+          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+            We offer competitive monthly rates for contractors, young professionals, and long-term guests. Self-catering
+            accommodation with weekly cleaning, WiFi, and secure parking included.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button asChild size="lg" className="bg-sage-600 hover:bg-sage-700">
+              <a href="tel:0745245703">Call for Monthly Rates</a>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="border-sage-600 text-sage-600 bg-transparent">
+              <a href="https://wa.me/27745245703" target="_blank" rel="noopener noreferrer">
+                WhatsApp for Quote
+              </a>
+            </Button>
+          </div>
+        </div>
+
         {/* Bathroom Showcase */}
         <div className="bg-gray-50 rounded-lg p-8 mb-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div>
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Modern Ensuite Bathrooms</h2>
               <p className="text-gray-600 mb-6">
-                Every room features a private, modern bathroom with hot water, quality fixtures, and clean towels. We
-                maintain high standards of cleanliness and hygiene.
+                Every room features a private, modern bathroom with hot water, quality fixtures, and clean towels.
+                Weekly cleaning service maintains high standards of cleanliness.
               </p>
               <ul className="space-y-2 text-gray-600">
                 <li className="flex items-center">
@@ -168,14 +203,14 @@ export default function RoomsPage() {
                 </li>
                 <li className="flex items-center">
                   <span className="w-1.5 h-1.5 bg-green-600 rounded-full mr-2"></span>
-                  Daily cleaning service
+                  Weekly cleaning service
                 </li>
               </ul>
             </div>
             <div className="relative h-64 lg:h-80">
               <Image
                 src="/images/bathroom.png"
-                alt="Modern ensuite bathroom guesthouse Bellville South - clean accommodation Cape Town with hot water 24/7 and quality fixtures"
+                alt="Modern ensuite bathroom guesthouse Bellville South - clean self-catering accommodation Cape Town with hot water 24/7"
                 fill
                 className="object-cover rounded-lg professional-image"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -205,6 +240,33 @@ export default function RoomsPage() {
               <h3 className="font-semibold">24/7 Security</h3>
             </div>
           </div>
+        </div>
+
+        {/* Self-Catering Info */}
+        <div className="mt-12 bg-blue-50 border border-blue-200 rounded-lg p-6">
+          <h3 className="text-lg font-bold text-gray-900 mb-3">ℹ️ Self-Catering Accommodation</h3>
+          <p className="text-gray-700 mb-4">
+            60 on Kosmos is a self-catering guesthouse. We do not provide meals or daily cleaning. Each room has a bar
+            fridge for your convenience.
+          </p>
+          <ul className="space-y-2 text-sm text-gray-600">
+            <li className="flex items-center">
+              <span className="w-1.5 h-1.5 bg-blue-600 rounded-full mr-2"></span>
+              Weekly cleaning service included
+            </li>
+            <li className="flex items-center">
+              <span className="w-1.5 h-1.5 bg-blue-600 rounded-full mr-2"></span>
+              SPAR Kasselsvlei Centre 2km away for groceries
+            </li>
+            <li className="flex items-center">
+              <span className="w-1.5 h-1.5 bg-blue-600 rounded-full mr-2"></span>
+              Multiple restaurants and takeaways nearby
+            </li>
+            <li className="flex items-center">
+              <span className="w-1.5 h-1.5 bg-blue-600 rounded-full mr-2"></span>
+              Perfect for young professionals and contractors (18+)
+            </li>
+          </ul>
         </div>
       </div>
     </div>

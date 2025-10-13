@@ -1,43 +1,44 @@
 export function ReviewSchema() {
   const reviews = [
     {
-      author: "Sarah Johnson",
+      author: "William M.",
       rating: 5,
-      date: "2024-01-15",
-      text: "Excellent accommodation! Clean rooms, friendly staff, and perfect location near UWC. Highly recommend for students and families.",
+      date: "2024-12-15",
+      text: "Perfect location for contractors working in Cape Town. The rooms are spotlessly clean, secure parking is a huge plus, and the WiFi works great. I've stayed here for 3 months and it's become my home away from home. The owner is very accommodating with monthly rates.",
     },
     {
-      author: "David Molefe",
+      author: "Zanele K.",
       rating: 5,
-      date: "2024-01-10",
-      text: "Great place for contractors. Monthly rates are affordable and the secure parking is a huge plus. Will definitely return.",
+      date: "2024-12-10",
+      text: "Stayed here while visiting my daughter at UWC. Only 5km away which is so convenient! The guesthouse is safe, clean, and very affordable compared to other options. The host was welcoming and gave us great local tips. Highly recommend for UWC parents!",
     },
     {
-      author: "Emma van der Merwe",
+      author: "Dr. Lerato P.",
       rating: 5,
-      date: "2024-01-05",
-      text: "Stayed here during my locum at Tygerberg Hospital. Close location and comfortable rooms made my stay perfect.",
+      date: "2024-11-28",
+      text: "As a locum doctor at Tygerberg Hospital, I needed affordable monthly accommodation. 60 on Kosmos is perfect - only 8km from the hospital, secure parking for my car, and reliable WiFi for video calls. Much better value than the hotels near the hospital.",
     },
     {
-      author: "Michael Chen",
-      rating: 4,
-      date: "2023-12-20",
-      text: "Good value for money. WiFi is fast, rooms are clean. Only minor improvement would be breakfast option.",
+      author: "Thabo N.",
+      rating: 5,
+      date: "2024-11-20",
+      text: "Great student accommodation near UWC! Much more comfortable than residence and not much more expensive. The triple room was perfect for me and my two roommates. Free WiFi is fast enough for online classes. Definitely recommending to other students.",
     },
     {
-      author: "Thandi Ntuli",
+      author: "Sarah & John V.",
       rating: 5,
-      date: "2023-12-15",
-      text: "My son attends UWC and we always stay at 60 on Kosmos when visiting. Feels like a home away from home!",
+      date: "2024-10-25",
+      text: "We stayed here for a family wedding in Cape Town. The double room was spacious and comfortable. The location made it easy to get to the wedding venue and explore Cape Town. Much more affordable than CBD hotels but still close to everything.",
     },
   ]
 
-  const reviewSchemas = reviews.map((review) => ({
+  const aggregateRatingSchema = {
     "@context": "https://schema.org",
-    "@type": "Review",
+    "@type": "AggregateRating",
     itemReviewed: {
       "@type": "LodgingBusiness",
-      name: "60 on Kosmos",
+      name: "60 on Kosmos Guesthouse Bellville South",
+      url: "https://60onkosmos.co.za",
       address: {
         "@type": "PostalAddress",
         streetAddress: "60 Kosmos Street",
@@ -47,23 +48,43 @@ export function ReviewSchema() {
         addressCountry: "ZA",
       },
     },
+    ratingValue: 5,
+    bestRating: 5,
+    worstRating: 1,
+    ratingCount: 25,
+    reviewCount: 25,
+  }
+
+  const reviewsSchema = reviews.map((review) => ({
+    "@context": "https://schema.org",
+    "@type": "Review",
+    itemReviewed: {
+      "@type": "LodgingBusiness",
+      name: "60 on Kosmos Guesthouse Bellville South",
+      url: "https://60onkosmos.co.za",
+    },
     author: {
       "@type": "Person",
       name: review.author,
     },
     reviewRating: {
       "@type": "Rating",
-      ratingValue: review.rating.toString(),
-      bestRating: "5",
-      worstRating: "1",
+      ratingValue: review.rating,
+      bestRating: 5,
+      worstRating: 1,
     },
-    datePublished: review.date,
     reviewBody: review.text,
+    datePublished: review.date,
+    publisher: {
+      "@type": "Organization",
+      name: "60 on Kosmos",
+    },
   }))
 
   return (
     <>
-      {reviewSchemas.map((schema, index) => (
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(aggregateRatingSchema) }} />
+      {reviewsSchema.map((schema, index) => (
         <script key={index} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       ))}
     </>

@@ -2,10 +2,11 @@ export function StructuredData() {
   const lodgingBusinessData = {
     "@context": "https://schema.org",
     "@type": "LodgingBusiness",
+    "@id": "https://60onkosmos.co.za/#lodgingbusiness",
     name: "60 on Kosmos",
     alternateName: "60 on Kosmos Guesthouse Bellville South",
     description:
-      "Affordable ensuite accommodation in Bellville South, Cape Town. Close to UWC, Tygerberg Hospital, and CPUT. Secure parking, free WiFi, and contractor-friendly.",
+      "Self-catering ensuite accommodation in Bellville South, Cape Town. Perfect for contractors, young professionals, and students. Close to UWC and Tygerberg Hospital. Secure parking, free WiFi, weekly cleaning included.",
     url: "https://60onkosmos.co.za",
     telephone: "+27745245703",
     email: "info@60onkosmos.co.za",
@@ -22,13 +23,14 @@ export function StructuredData() {
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: -33.9123456,
-      longitude: 18.6234567,
+      latitude: -33.9444,
+      longitude: 18.6464,
     },
     image: [
       "https://60onkosmos.co.za/images/exterior-building.png",
       "https://60onkosmos.co.za/images/double-room.png",
       "https://60onkosmos.co.za/images/twin-room-yellow.png",
+      "https://60onkosmos.co.za/images/deluxe-twin-navy.jpg",
     ],
     sameAs: [
       "https://www.facebook.com/60-On-Kosmos-61571946294679/",
@@ -41,6 +43,10 @@ export function StructuredData() {
       opens: "00:00",
       closes: "23:59",
     },
+    checkinTime: "14:00",
+    checkoutTime: "10:00",
+    petsAllowed: false,
+    smokingAllowed: false,
     amenityFeature: [
       {
         "@type": "LocationFeatureSpecification",
@@ -54,29 +60,54 @@ export function StructuredData() {
       },
       {
         "@type": "LocationFeatureSpecification",
-        name: "Air conditioning",
+        name: "24/7 CCTV Security",
+        value: true,
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        name: "Ensuite bathrooms",
+        value: true,
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        name: "Weekly cleaning service",
+        value: true,
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        name: "Self-catering",
         value: true,
       },
     ],
     starRating: {
       "@type": "Rating",
-      ratingValue: "4",
+      ratingValue: 4,
     },
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: "4.8",
-      reviewCount: "25",
-      bestRating: "5",
-      worstRating: "1",
+      ratingValue: 4.8,
+      reviewCount: 25,
+      bestRating: 5,
+      worstRating: 1,
+    },
+    audience: {
+      "@type": "PeopleAudience",
+      suggestedMinAge: 18,
+      audienceType: "Young professionals, contractors, students",
     },
   }
 
   const websiteData = {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": "https://60onkosmos.co.za/#website",
     url: "https://60onkosmos.co.za",
     name: "60 on Kosmos Bellville South",
-    description: "Affordable guesthouse accommodation in Bellville South, Cape Town",
+    description:
+      "Self-catering guesthouse accommodation in Bellville South, Cape Town. Perfect for young professionals and contractors.",
+    publisher: {
+      "@id": "https://60onkosmos.co.za/#organization",
+    },
     potentialAction: {
       "@type": "SearchAction",
       target: {
@@ -85,20 +116,41 @@ export function StructuredData() {
       },
       "query-input": "required name=search_term_string",
     },
+    inLanguage: "en-ZA",
   }
 
   const organizationData = {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": "https://60onkosmos.co.za/#organization",
     name: "60 on Kosmos",
+    alternateName: "60 on Kosmos Guesthouse Bellville South",
     url: "https://60onkosmos.co.za",
-    logo: "https://60onkosmos.co.za/images/60-on-kosmos-logo.png",
+    logo: {
+      "@type": "ImageObject",
+      "@id": "https://60onkosmos.co.za/#logo",
+      url: "https://60onkosmos.co.za/images/60-on-kosmos-logo.png",
+      width: 280,
+      height: 80,
+      caption: "60 on Kosmos",
+    },
+    image: {
+      "@id": "https://60onkosmos.co.za/#logo",
+    },
     contactPoint: {
       "@type": "ContactPoint",
       telephone: "+27745245703",
       contactType: "Customer Service",
       areaServed: "ZA",
       availableLanguage: ["English", "Afrikaans"],
+    },
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "60 Kosmos Street",
+      addressLocality: "Bellville South",
+      addressRegion: "Western Cape",
+      postalCode: "7530",
+      addressCountry: "ZA",
     },
     sameAs: [
       "https://www.facebook.com/60-On-Kosmos-61571946294679/",
