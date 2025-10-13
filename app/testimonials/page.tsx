@@ -4,7 +4,6 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Star, Quote } from "lucide-react"
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
-import { ReviewSchema } from "@/components/review-schema"
 
 export const metadata: Metadata = {
   title: "Guest Reviews & Testimonials - 60 on Kosmos Bellville South",
@@ -100,7 +99,6 @@ export default function TestimonialsPage() {
   return (
     <>
       <BreadcrumbSchema items={breadcrumbItems} />
-      <ReviewSchema />
 
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
@@ -118,7 +116,7 @@ export default function TestimonialsPage() {
                   <Star key={i} className="w-6 h-6 text-yellow-500 fill-current" />
                 ))}
               </div>
-              <span className="text-2xl font-bold text-gray-900">5.0/5</span>
+              <span className="text-2xl font-bold text-gray-900">4.8/5</span>
               <span className="text-gray-600">• Based on 25+ verified reviews</span>
             </div>
             <Button asChild size="lg" className="bg-sage-600 hover:bg-sage-700 text-white px-8 py-6 text-lg">

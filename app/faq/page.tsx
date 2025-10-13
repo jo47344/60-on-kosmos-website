@@ -1,16 +1,16 @@
 import type { Metadata } from "next"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Phone, Mail, MessageCircle } from "lucide-react"
+import { ChevronDown, Phone, Mail } from "lucide-react"
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
 
 export const metadata: Metadata = {
-  title: "Frequently Asked Questions - 60 on Kosmos Bellville South",
+  title: "FAQ - Frequently Asked Questions | 60 on Kosmos Bellville South",
   description:
-    "Common questions about our Bellville South guesthouse. Learn about parking, rates, location, amenities, and booking policies.",
+    "Get answers to common questions about 60 on Kosmos guesthouse in Bellville South. Parking, rates, amenities, location near UWC and Tygerberg Hospital.",
   openGraph: {
     title: "FAQ - 60 on Kosmos Guesthouse Bellville South",
-    description: "Get answers to frequently asked questions about our accommodation",
+    description: "Frequently asked questions about our Bellville South accommodation",
   },
 }
 
@@ -24,31 +24,31 @@ export default function FAQPage() {
         name: "How far is 60 on Kosmos from UWC?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "We are approximately 5km from the University of the Western Cape (UWC) campus, which is about a 10-minute drive. Many UWC students and visiting parents choose our accommodation for its convenient location and affordable rates.",
+          text: "We are approximately 5km from the University of the Western Cape (UWC) campus in Bellville. It's about a 10-minute drive, making us ideal accommodation for UWC students, parents visiting students, and staff.",
         },
       },
       {
         "@type": "Question",
-        name: "Is there parking available?",
+        name: "Is there secure parking available?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes, we provide secure on-site parking behind locked gates with 24/7 CCTV surveillance. Parking is completely free for all guests and there is ample space for multiple vehicles.",
+          text: "Yes, we offer free secure on-site parking behind locked gates with 24/7 CCTV surveillance. Your vehicle will be safe throughout your stay.",
         },
       },
       {
         "@type": "Question",
-        name: "Do you welcome contractors and offer monthly rates?",
+        name: "Do you allow contractors and offer monthly rates?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes, we are very contractor-friendly and offer competitive monthly rates for long-term stays. Many contractors working in Cape Town choose 60 on Kosmos as their home base. Contact us directly for a personalized monthly rate quote.",
+          text: "We welcome contractors and offer discounted weekly and monthly rates. Contact us directly for a personalized quote based on your length of stay.",
         },
       },
       {
         "@type": "Question",
-        name: "How far is Tygerberg Hospital from your guesthouse?",
+        name: "How far are you from Tygerberg Hospital?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Tygerberg Hospital is approximately 8km away, about a 12-15 minute drive. We regularly host medical professionals, locum doctors, and nursing students doing placements at Tygerberg Hospital.",
+          text: "Tygerberg Hospital is approximately 8km away, roughly a 12-15 minute drive. We're a popular choice for locum doctors, nursing students, and medical staff needing affordable accommodation near the hospital.",
         },
       },
       {
@@ -56,7 +56,7 @@ export default function FAQPage() {
         name: "What's included in the room rate?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Each room includes: private ensuite bathroom, free high-speed WiFi, bar fridge, weekly cleaning service, fresh linen and towels, secure parking, and 24/7 CCTV security. Our accommodation is self-catering with no meals provided.",
+          text: "Each room includes a private ensuite bathroom, free WiFi, bar fridge, clean linen and towels, weekly cleaning service, and welcome refreshments. All rooms are self-catering.",
         },
       },
       {
@@ -64,23 +64,7 @@ export default function FAQPage() {
         name: "Is breakfast included?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "No, we are a self-catering establishment and do not provide meals or breakfast. Each room has a bar fridge for your convenience. There is a SPAR supermarket 2km away, and many restaurants and takeaways nearby in Bellville South.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Do you allow children or families?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Our accommodation is designed for young professionals, contractors, and students (18+). We do not accommodate children to maintain a quiet, professional environment suitable for working adults.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "How do I get from Cape Town Airport to your guesthouse?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "We are approximately 20km from Cape Town International Airport, about a 20-25 minute drive. We recommend using Uber, Bolt, or booking a private taxi service. We do not currently offer airport transfer services, but can recommend reliable transport providers.",
+          text: "No, we are self-catering accommodation. Each room has a bar fridge for your convenience. There's a SPAR supermarket 2km away where you can purchase groceries. Many guests prefer this flexibility to eat according to their own schedule and dietary preferences.",
         },
       },
       {
@@ -88,23 +72,63 @@ export default function FAQPage() {
         name: "What are your check-in and check-out times?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Standard check-in time is from 14:00 (2pm) and check-out is by 10:00 (10am). If you need early check-in or late check-out, please contact us in advance and we'll do our best to accommodate you based on availability.",
+          text: "Check-in time is from 14:00 (2 PM) and check-out is by 10:00 AM. If you need different times, please contact us in advance and we'll try to accommodate you.",
         },
       },
       {
         "@type": "Question",
-        name: "Is WiFi included and is it fast enough for work?",
+        name: "Is WiFi available and reliable?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes, free high-speed WiFi is included in all rooms. Our internet is reliable and fast enough for video calls, online work, streaming, and online classes. Many remote workers and students stay with us long-term.",
+          text: "Yes, we provide free high-speed WiFi throughout the property. It's reliable enough for video calls, online classes, and remote work - perfect for students and professionals.",
         },
       },
       {
         "@type": "Question",
-        name: "Do you provide daily cleaning service?",
+        name: "Are children allowed?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "We provide weekly cleaning service which includes changing linen, towels, and cleaning your room. This helps us keep rates affordable while maintaining high cleanliness standards. If you need additional cleaning during your stay, please let us know.",
+          text: "No, 60 on Kosmos is adults-only accommodation (18+). We cater primarily to young professionals, contractors, and students seeking a quiet environment.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How do I get to the property from Cape Town International Airport?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "We are approximately 25km from Cape Town International Airport, about a 25-30 minute drive. We don't offer airport transfers, but you can use Uber, Bolt, or arrange a private taxi. Many guests find ride-sharing apps to be the most convenient and affordable option.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is there a kitchen for guest use?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "We are self-catering, and each room has a bar fridge. There are many restaurants and takeaway options within a 2-5km radius, and a SPAR supermarket 2km away for groceries.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is your cancellation policy?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Our cancellation policy varies depending on how you book. Please contact us directly or check your booking confirmation for specific cancellation terms. We try to be as flexible as possible with our guests.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Do you accept credit cards?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, we accept cash, credit cards, and bank transfers. Payment details will be provided upon booking confirmation.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How far is Bellville Station from the property?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Bellville Train Station is approximately 4km away, about an 8-minute drive. This makes us convenient for guests using public transport to commute to Cape Town CBD or other areas.",
         },
       },
       {
@@ -112,31 +136,7 @@ export default function FAQPage() {
         name: "Are pets allowed?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "No, we do not allow pets on the property to maintain a clean, allergen-free environment for all guests and to comply with health and safety regulations.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Is smoking allowed?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "No, smoking is not permitted inside the rooms or buildings. This is a non-smoking property to ensure fresh, clean air for all guests. Designated outdoor smoking areas may be available.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "What payment methods do you accept?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "We accept cash, credit cards, debit cards, and bank transfers (EFT). Payment is required at check-in or in advance for longer stays. We can provide banking details for EFT payments.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "How do I make a booking?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "You can book directly by calling us at 074 524 5703, sending a WhatsApp message, or emailing info@60onkosmos.co.za. We also accept bookings through Airbnb and Booking.com. Direct bookings often get the best rates.",
+          text: "No, unfortunately we do not allow pets on the property to ensure a comfortable environment for all guests, particularly those with allergies.",
         },
       },
     ],
@@ -146,77 +146,77 @@ export default function FAQPage() {
     {
       question: "How far is 60 on Kosmos from UWC?",
       answer:
-        "We are approximately 5km from the University of the Western Cape (UWC) campus, which is about a 10-minute drive. Many UWC students and visiting parents choose our accommodation for its convenient location and affordable rates.",
+        "We are approximately 5km from the University of the Western Cape (UWC) campus in Bellville. It's about a 10-minute drive, making us ideal accommodation for UWC students, parents visiting students, and staff.",
     },
     {
-      question: "Is there parking available?",
+      question: "Is there secure parking available?",
       answer:
-        "Yes, we provide secure on-site parking behind locked gates with 24/7 CCTV surveillance. Parking is completely free for all guests and there is ample space for multiple vehicles.",
+        "Yes, we offer free secure on-site parking behind locked gates with 24/7 CCTV surveillance. Your vehicle will be safe throughout your stay.",
     },
     {
-      question: "Do you welcome contractors and offer monthly rates?",
+      question: "Do you allow contractors and offer monthly rates?",
       answer:
-        "Yes, we are very contractor-friendly and offer competitive monthly rates for long-term stays. Many contractors working in Cape Town choose 60 on Kosmos as their home base. Contact us directly for a personalized monthly rate quote.",
+        "We welcome contractors and offer discounted weekly and monthly rates. Contact us directly for a personalized quote based on your length of stay.",
     },
     {
-      question: "How far is Tygerberg Hospital from your guesthouse?",
+      question: "How far are you from Tygerberg Hospital?",
       answer:
-        "Tygerberg Hospital is approximately 8km away, about a 12-15 minute drive. We regularly host medical professionals, locum doctors, and nursing students doing placements at Tygerberg Hospital.",
+        "Tygerberg Hospital is approximately 8km away, roughly a 12-15 minute drive. We're a popular choice for locum doctors, nursing students, and medical staff needing affordable accommodation near the hospital.",
     },
     {
       question: "What's included in the room rate?",
       answer:
-        "Each room includes: private ensuite bathroom, free high-speed WiFi, bar fridge, weekly cleaning service, fresh linen and towels, secure parking, and 24/7 CCTV security. Our accommodation is self-catering with no meals provided.",
+        "Each room includes a private ensuite bathroom, free WiFi, bar fridge, clean linen and towels, weekly cleaning service, and welcome refreshments. All rooms are self-catering.",
     },
     {
       question: "Is breakfast included?",
       answer:
-        "No, we are a self-catering establishment and do not provide meals or breakfast. Each room has a bar fridge for your convenience. There is a SPAR supermarket 2km away, and many restaurants and takeaways nearby in Bellville South.",
-    },
-    {
-      question: "Do you allow children or families?",
-      answer:
-        "Our accommodation is designed for young professionals, contractors, and students (18+). We do not accommodate children to maintain a quiet, professional environment suitable for working adults.",
-    },
-    {
-      question: "How do I get from Cape Town Airport to your guesthouse?",
-      answer:
-        "We are approximately 20km from Cape Town International Airport, about a 20-25 minute drive. We recommend using Uber, Bolt, or booking a private taxi service. We do not currently offer airport transfer services, but can recommend reliable transport providers.",
+        "No, we are self-catering accommodation. Each room has a bar fridge for your convenience. There's a SPAR supermarket 2km away where you can purchase groceries. Many guests prefer this flexibility to eat according to their own schedule and dietary preferences.",
     },
     {
       question: "What are your check-in and check-out times?",
       answer:
-        "Standard check-in time is from 14:00 (2pm) and check-out is by 10:00 (10am). If you need early check-in or late check-out, please contact us in advance and we'll do our best to accommodate you based on availability.",
+        "Check-in time is from 14:00 (2 PM) and check-out is by 10:00 AM. If you need different times, please contact us in advance and we'll try to accommodate you.",
     },
     {
-      question: "Is WiFi included and is it fast enough for work?",
+      question: "Is WiFi available and reliable?",
       answer:
-        "Yes, free high-speed WiFi is included in all rooms. Our internet is reliable and fast enough for video calls, online work, streaming, and online classes. Many remote workers and students stay with us long-term.",
+        "Yes, we provide free high-speed WiFi throughout the property. It's reliable enough for video calls, online classes, and remote work - perfect for students and professionals.",
     },
     {
-      question: "Do you provide daily cleaning service?",
+      question: "Are children allowed?",
       answer:
-        "We provide weekly cleaning service which includes changing linen, towels, and cleaning your room. This helps us keep rates affordable while maintaining high cleanliness standards. If you need additional cleaning during your stay, please let us know.",
+        "No, 60 on Kosmos is adults-only accommodation (18+). We cater primarily to young professionals, contractors, and students seeking a quiet environment.",
+    },
+    {
+      question: "How do I get to the property from Cape Town International Airport?",
+      answer:
+        "We are approximately 25km from Cape Town International Airport, about a 25-30 minute drive. We don't offer airport transfers, but you can use Uber, Bolt, or arrange a private taxi. Many guests find ride-sharing apps to be the most convenient and affordable option.",
+    },
+    {
+      question: "Is there a kitchen for guest use?",
+      answer:
+        "We are self-catering, and each room has a bar fridge. There are many restaurants and takeaway options within a 2-5km radius, and a SPAR supermarket 2km away for groceries.",
+    },
+    {
+      question: "What is your cancellation policy?",
+      answer:
+        "Our cancellation policy varies depending on how you book. Please contact us directly or check your booking confirmation for specific cancellation terms. We try to be as flexible as possible with our guests.",
+    },
+    {
+      question: "Do you accept credit cards?",
+      answer:
+        "Yes, we accept cash, credit cards, and bank transfers. Payment details will be provided upon booking confirmation.",
+    },
+    {
+      question: "How far is Bellville Station from the property?",
+      answer:
+        "Bellville Train Station is approximately 4km away, about an 8-minute drive. This makes us convenient for guests using public transport to commute to Cape Town CBD or other areas.",
     },
     {
       question: "Are pets allowed?",
       answer:
-        "No, we do not allow pets on the property to maintain a clean, allergen-free environment for all guests and to comply with health and safety regulations.",
-    },
-    {
-      question: "Is smoking allowed?",
-      answer:
-        "No, smoking is not permitted inside the rooms or buildings. This is a non-smoking property to ensure fresh, clean air for all guests. Designated outdoor smoking areas may be available.",
-    },
-    {
-      question: "What payment methods do you accept?",
-      answer:
-        "We accept cash, credit cards, debit cards, and bank transfers (EFT). Payment is required at check-in or in advance for longer stays. We can provide banking details for EFT payments.",
-    },
-    {
-      question: "How do I make a booking?",
-      answer:
-        "You can book directly by calling us at 074 524 5703, sending a WhatsApp message, or emailing info@60onkosmos.co.za. We also accept bookings through Airbnb and Booking.com. Direct bookings often get the best rates.",
+        "No, unfortunately we do not allow pets on the property to ensure a comfortable environment for all guests, particularly those with allergies.",
     },
   ]
 
@@ -236,22 +236,25 @@ export default function FAQPage() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h1>
             <p className="text-xl text-gray-600 mb-8">
-              Everything you need to know about staying at 60 on Kosmos Bellville South
+              Everything you need to know about staying at 60 on Kosmos Guesthouse Bellville South
             </p>
           </div>
         </section>
 
-        {/* FAQ Content */}
-        <section className="py-16">
+        {/* FAQ Items */}
+        <section className="py-16 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="space-y-6">
+            <div className="space-y-4">
               {faqs.map((faq, index) => (
                 <Card key={index}>
-                  <CardHeader>
-                    <CardTitle className="text-xl text-sage-700">{faq.question}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                  <CardContent className="p-6">
+                    <details className="group">
+                      <summary className="flex items-start justify-between cursor-pointer list-none">
+                        <h3 className="text-lg font-semibold text-gray-900 pr-8">{faq.question}</h3>
+                        <ChevronDown className="w-5 h-5 text-sage-600 flex-shrink-0 transition-transform group-open:rotate-180" />
+                      </summary>
+                      <p className="mt-4 text-gray-700 leading-relaxed">{faq.answer}</p>
+                    </details>
                   </CardContent>
                 </Card>
               ))}
@@ -259,15 +262,15 @@ export default function FAQPage() {
           </div>
         </section>
 
-        {/* Still Have Questions Section */}
+        {/* Still Have Questions CTA */}
         <section className="py-16 bg-gray-50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Still Have Questions?</h2>
             <p className="text-lg text-gray-600 mb-8">
-              We're here to help! Contact us directly for personalized answers.
+              We're here to help! Contact us directly and we'll get back to you as soon as possible.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-sage-600 hover:bg-sage-700 text-white">
+              <Button asChild size="lg" className="bg-sage-600 hover:bg-sage-700 text-white px-8 py-6 text-lg">
                 <a href="tel:+27745245703">
                   <Phone className="w-5 h-5 mr-2" />
                   Call 074 524 5703
@@ -277,33 +280,22 @@ export default function FAQPage() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="border-sage-600 text-sage-600 hover:bg-sage-50 bg-transparent"
+                className="border-sage-600 text-sage-600 hover:bg-sage-50 px-8 py-6 text-lg bg-transparent"
               >
-                <a href="https://wa.me/27745245703" target="_blank" rel="noopener noreferrer">
-                  <MessageCircle className="w-5 h-5 mr-2" />
-                  WhatsApp Us
-                </a>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="border-sage-600 text-sage-600 hover:bg-sage-50 bg-transparent"
-              >
-                <a href="mailto:info@60onkosmos.co.za">
+                <a href="/contact">
                   <Mail className="w-5 h-5 mr-2" />
-                  Email Us
+                  Send a Message
                 </a>
               </Button>
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/* Quick Booking CTA */}
         <section className="py-16 bg-sage-600 text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold mb-4">Ready to Book Your Stay?</h2>
-            <p className="text-lg mb-8 opacity-90">Secure, affordable accommodation in Bellville South awaits you</p>
+            <p className="text-lg mb-8 opacity-90">Secure your room at 60 on Kosmos today</p>
             <Button
               asChild
               size="lg"
