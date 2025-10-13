@@ -98,7 +98,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "your-google-verification-code",
+    google: "MsEabfPydfBX62TF26f4hnMZZxJGscle_LRouKVSMYI",
     yandex: "your-yandex-verification-code",
   },
   alternates: {
@@ -255,6 +255,9 @@ export default function RootLayout({
   return (
     <html lang="en-ZA">
       <head>
+        {/* Google Search Console Verification */}
+        <meta name="google-site-verification" content="MsEabfPydfBX62TF26f4hnMZZxJGscle_LRouKVSMYI" />
+
         <LocalBusinessSchema />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
