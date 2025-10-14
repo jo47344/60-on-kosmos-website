@@ -6,9 +6,15 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/api/", "/thank-you"],
+        disallow: [],
+      },
+      {
+        userAgent: "Googlebot",
+        allow: "/",
+        crawlDelay: 0,
       },
     ],
     sitemap: "https://60onkosmos.co.za/sitemap.xml",
+    host: "https://60onkosmos.co.za",
   }
 }

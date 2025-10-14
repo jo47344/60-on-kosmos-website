@@ -21,7 +21,6 @@ const nextConfig = {
       {
         source: '/:path*',
         headers: [
-          // Security Headers
           {
             key: 'X-DNS-Prefetch-Control',
             value: 'on'
@@ -50,11 +49,6 @@ const nextConfig = {
             key: 'Permissions-Policy',
             value: 'camera=(), microphone=(), geolocation=()'
           },
-          // SEO Headers - NO noindex, ensure indexing is allowed
-          {
-            key: 'X-Robots-Tag',
-            value: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
-          },
         ],
       },
       {
@@ -71,7 +65,6 @@ const nextConfig = {
 
   async redirects() {
     return [
-      // Force HTTPS redirect (Vercel handles this automatically, but this is explicit)
       {
         source: '/:path*',
         has: [
