@@ -26,7 +26,14 @@ export default function RoomsPage() {
       price: "From R530",
       image: "/images/twin-room-yellow.png",
       alt: "Standard twin room guesthouse Bellville South - self-catering accommodation Cape Town near UWC with ensuite bathroom and bar fridge",
-      features: ["Two single beds", "Ensuite bathroom", "Bar fridge", "Free WiFi", "Clean linen", "Weekly cleaning"],
+      features: [
+        "Two single beds",
+        "Ensuite bathroom",
+        "Bar fridge",
+        "Free WiFi",
+        "Clean linen and weekly cleaning",
+        "Weekly cleaning service",
+      ],
       description:
         "Perfect for contractors or young professionals. Clean, comfortable twin beds with modern ensuite bathroom. Self-catering with bar fridge.",
     },
@@ -36,7 +43,14 @@ export default function RoomsPage() {
       price: "From R620",
       image: "/images/sage-double-room.png",
       alt: "Double room guesthouse Bellville South - self-catering accommodation Cape Town near UWC and Tygerberg Hospital with ensuite bathroom",
-      features: ["Double bed", "Ensuite bathroom", "Bar fridge", "Free WiFi", "Premium bedding", "Weekly cleaning"],
+      features: [
+        "Double bed",
+        "Ensuite bathroom",
+        "Bar fridge",
+        "Free WiFi",
+        "Premium bedding",
+        "Weekly cleaning service",
+      ],
       description:
         "Ideal for professionals wanting extra space. Comfortable double bed with sage green accents and modern ensuite facilities.",
     },
@@ -52,7 +66,7 @@ export default function RoomsPage() {
         "Ensuite bathroom",
         "Premium bedding",
         "Modern decor",
-        "Weekly cleaning",
+        "Weekly cleaning service",
       ],
       description:
         "Our premium twin room with elegant navy blue headboards and quality bedding. Perfect for business travelers and contractors.",
@@ -69,7 +83,7 @@ export default function RoomsPage() {
         "Kettle & cups",
         "Free WiFi",
         "Workspace area",
-        "Weekly cleaning",
+        "Weekly cleaning service",
       ],
       description:
         "Spacious room perfect for professionals sharing. Three comfortable single beds with modern ensuite bathroom, kettle, and workspace area.",

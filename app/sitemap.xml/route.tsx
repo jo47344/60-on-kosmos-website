@@ -9,15 +9,20 @@ export async function GET() {
     { loc: "/rooms", priority: 0.9, changefreq: "weekly" },
     { loc: "/amenities", priority: 0.8, changefreq: "monthly" },
     { loc: "/local-info", priority: 0.8, changefreq: "monthly" },
-    { loc: "/contact", priority: 0.8, changefreq: "monthly" },
+    { loc: "/contact", priority: 0.9, changefreq: "monthly" },
     { loc: "/book-now", priority: 0.9, changefreq: "weekly" },
 
-    // Landing pages
-    { loc: "/contractor-accommodation-bellville-south", priority: 0.9, changefreq: "weekly" },
+    // Core Local SEO pages
+    { loc: "/serviced-accommodation-bellville", priority: 0.9, changefreq: "weekly" },
+    { loc: "/self-catering-accommodation-bellville", priority: 0.9, changefreq: "weekly" },
+    { loc: "/extended-stay-hotel-bellville", priority: 0.9, changefreq: "weekly" },
+    { loc: "/contractor-accommodation-bellville", priority: 0.9, changefreq: "weekly" },
+    { loc: "/monthly-accommodation-bellville", priority: 0.9, changefreq: "weekly" },
+
+    // Existing landing pages
     { loc: "/near-uwc-bellville", priority: 0.9, changefreq: "weekly" },
     { loc: "/accommodation-near-tygerberg-hospital", priority: 0.9, changefreq: "weekly" },
     { loc: "/cheap-accommodation-bellville-south", priority: 0.9, changefreq: "weekly" },
-    { loc: "/monthly-accommodation-bellville-south", priority: 0.9, changefreq: "weekly" },
     { loc: "/backpackers-bellville-south", priority: 0.8, changefreq: "weekly" },
     { loc: "/accommodation-near-bellville-station", priority: 0.8, changefreq: "weekly" },
 

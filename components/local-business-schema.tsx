@@ -6,13 +6,13 @@ export function LocalBusinessSchema() {
     name: "60 on Kosmos Ensuite Accommodation",
     alternateName: "60 on Kosmos Guesthouse Bellville South",
     description:
-      "Affordable ensuite accommodation in Bellville South, Cape Town. Secure parking, free WiFi, 24/7 CCTV. Perfect for contractors, students, and families visiting UWC and Tygerberg Hospital.",
+      "Affordable ensuite accommodation in Bellville South, Cape Town. Secure parking, free WiFi, 24/7 CCTV. Weekly cleaning service. Perfect for contractors, students, and families visiting UWC and Tygerberg Hospital.",
     url: "https://60onkosmos.co.za",
     telephone: "+27745245703",
     email: "info@60onkosmos.co.za",
     priceRange: "R530-R750",
     currenciesAccepted: "ZAR",
-    paymentAccepted: "Cash, Bank Transfer, Card",
+    paymentAccepted: "EFT, Bank Transfer",
     address: {
       "@type": "PostalAddress",
       streetAddress: "60 Kosmos Street",
@@ -54,6 +54,8 @@ export function LocalBusinessSchema() {
       { "@type": "LocationFeatureSpecification", name: "Bar Fridge", value: true },
       { "@type": "LocationFeatureSpecification", name: "Welcome Refreshments", value: true },
       { "@type": "LocationFeatureSpecification", name: "Clean Linen", value: true },
+      { "@type": "LocationFeatureSpecification", name: "Weekly Cleaning Service", value: true },
+      { "@type": "LocationFeatureSpecification", name: "Communal Kitchenette", value: true },
       { "@type": "LocationFeatureSpecification", name: "Outdoor Seating Area", value: true },
     ],
     checkinTime: "14:00:00",
@@ -80,7 +82,8 @@ export function LocalBusinessSchema() {
           itemOffered: {
             "@type": "HotelRoom",
             name: "Standard Twin Room",
-            description: "Comfortable twin room with ensuite bathroom, free WiFi, and bar fridge",
+            description:
+              "Comfortable twin room with ensuite bathroom, free WiFi, bar fridge, and weekly cleaning service",
             bed: {
               "@type": "BedDetails",
               numberOfBeds: 2,
@@ -104,7 +107,7 @@ export function LocalBusinessSchema() {
           itemOffered: {
             "@type": "HotelRoom",
             name: "Deluxe Twin Room",
-            description: "Upgraded twin room with premium bedding and modern navy blue decor",
+            description: "Upgraded twin room with premium bedding, modern navy blue decor, and weekly cleaning service",
             bed: {
               "@type": "BedDetails",
               numberOfBeds: 2,
@@ -128,7 +131,8 @@ export function LocalBusinessSchema() {
           itemOffered: {
             "@type": "HotelRoom",
             name: "Double Room",
-            description: "Spacious double room with ensuite bathroom and modern sage green decor",
+            description:
+              "Spacious double room with ensuite bathroom, modern sage green decor, and weekly cleaning service",
             bed: {
               "@type": "BedDetails",
               numberOfBeds: 1,
@@ -152,7 +156,7 @@ export function LocalBusinessSchema() {
           itemOffered: {
             "@type": "HotelRoom",
             name: "Triple Room",
-            description: "Large family room with three single beds, workspace, and kettle",
+            description: "Large family room with three single beds, workspace, kettle, and weekly cleaning service",
             bed: {
               "@type": "BedDetails",
               numberOfBeds: 3,

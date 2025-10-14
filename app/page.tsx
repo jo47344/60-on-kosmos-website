@@ -94,7 +94,7 @@ export default function HomePage() {
                   <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                 ))}
               </div>
-              <span className="text-lg font-semibold">5.0 Stars • 25+ Reviews</span>
+              <span className="text-lg font-semibold">4.8 Stars • 25+ Reviews</span>
             </div>
           </div>
         </section>
