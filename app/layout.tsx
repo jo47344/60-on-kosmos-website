@@ -11,6 +11,7 @@ import { Suspense } from "react"
 import { PerformanceOptimizations } from "@/components/performance-optimizations"
 import { StructuredData } from "@/components/structured-data"
 import { Toaster } from "@/components/ui/toaster"
+import { WhatsAppChatWidget } from "@/components/whatsapp-chat-widget"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -83,7 +84,7 @@ export const metadata: Metadata = {
     "geo.position": "-33.9347;18.6489",
     ICBM: "-33.9347, 18.6489",
   },
-    generator: 'v0.app'
+  generator: "v0.app",
 }
 
 export default function RootLayout({
@@ -109,6 +110,7 @@ export default function RootLayout({
           <StickyMobileCTA />
           <PerformanceOptimizations />
           <Toaster />
+          <WhatsAppChatWidget />
         </Suspense>
       </body>
     </html>

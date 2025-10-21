@@ -8,6 +8,8 @@ import { Menu, X, ChevronDown } from "lucide-react"
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [resourcesOpen, setResourcesOpen] = useState(false)
+  const [whyUsOpen, setWhyUsOpen] = useState(false)
+  const [locationsOpen, setLocationsOpen] = useState(false)
 
   return (
     <nav className="bg-[#7c9885] text-white sticky top-0 z-50 shadow-lg">
@@ -49,6 +51,102 @@ export function Navigation() {
             >
               Amenities
             </Link>
+
+            {/* Why Us Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => setWhyUsOpen(!whyUsOpen)}
+                className="px-4 py-2 rounded-lg hover:bg-white/10 transition-colors duration-200 font-medium flex items-center gap-1"
+              >
+                Why Us
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${whyUsOpen ? "rotate-180" : ""}`} />
+              </button>
+
+              {whyUsOpen && (
+                <>
+                  <div className="fixed inset-0 z-10" onClick={() => setWhyUsOpen(false)} />
+                  <div className="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-xl py-2 z-20 animate-in fade-in slide-in-from-top-2 duration-200">
+                    <Link
+                      href="/why-choose-60-on-kosmos"
+                      className="block px-4 py-3 text-gray-700 hover:bg-[#7c9885]/10 transition-colors"
+                      onClick={() => setWhyUsOpen(false)}
+                    >
+                      <span className="font-medium">Why Choose Us</span>
+                    </Link>
+                    <Link
+                      href="/guesthouse-vs-hotel-bellville"
+                      className="block px-4 py-3 text-gray-700 hover:bg-[#7c9885]/10 transition-colors"
+                      onClick={() => setWhyUsOpen(false)}
+                    >
+                      <span className="font-medium">vs Hotels</span>
+                    </Link>
+                    <Link
+                      href="/guesthouse-vs-airbnb-bellville"
+                      className="block px-4 py-3 text-gray-700 hover:bg-[#7c9885]/10 transition-colors"
+                      onClick={() => setWhyUsOpen(false)}
+                    >
+                      <span className="font-medium">vs Airbnb</span>
+                    </Link>
+                  </div>
+                </>
+              )}
+            </div>
+
+            {/* Locations Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => setLocationsOpen(!locationsOpen)}
+                className="px-4 py-2 rounded-lg hover:bg-white/10 transition-colors duration-200 font-medium flex items-center gap-1"
+              >
+                Locations
+                <ChevronDown
+                  className={`w-4 h-4 transition-transform duration-200 ${locationsOpen ? "rotate-180" : ""}`}
+                />
+              </button>
+
+              {locationsOpen && (
+                <>
+                  <div className="fixed inset-0 z-10" onClick={() => setLocationsOpen(false)} />
+                  <div className="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-xl py-2 z-20 animate-in fade-in slide-in-from-top-2 duration-200">
+                    <Link
+                      href="/northern-suburbs-accommodation-cape-town"
+                      className="block px-4 py-3 text-gray-700 hover:bg-[#7c9885]/10 transition-colors"
+                      onClick={() => setLocationsOpen(false)}
+                    >
+                      <span className="font-medium">Northern Suburbs</span>
+                    </Link>
+                    <Link
+                      href="/near-uwc-bellville"
+                      className="block px-4 py-3 text-gray-700 hover:bg-[#7c9885]/10 transition-colors"
+                      onClick={() => setLocationsOpen(false)}
+                    >
+                      <span className="font-medium">Near UWC</span>
+                    </Link>
+                    <Link
+                      href="/accommodation-parow"
+                      className="block px-4 py-3 text-gray-700 hover:bg-[#7c9885]/10 transition-colors"
+                      onClick={() => setLocationsOpen(false)}
+                    >
+                      <span className="font-medium">Near Parow</span>
+                    </Link>
+                    <Link
+                      href="/accommodation-durbanville"
+                      className="block px-4 py-3 text-gray-700 hover:bg-[#7c9885]/10 transition-colors"
+                      onClick={() => setLocationsOpen(false)}
+                    >
+                      <span className="font-medium">Near Durbanville</span>
+                    </Link>
+                    <Link
+                      href="/accommodation-goodwood"
+                      className="block px-4 py-3 text-gray-700 hover:bg-[#7c9885]/10 transition-colors"
+                      onClick={() => setLocationsOpen(false)}
+                    >
+                      <span className="font-medium">Near Goodwood</span>
+                    </Link>
+                  </div>
+                </>
+              )}
+            </div>
 
             {/* Resources Dropdown */}
             <div className="relative">
@@ -173,6 +271,72 @@ export function Navigation() {
             >
               ⭐ Amenities
             </Link>
+
+            {/* Mobile Why Us Section */}
+            <div className="border-t border-white/10 mt-2 pt-2">
+              <div className="px-4 py-2 text-sm font-semibold opacity-75">Why Us</div>
+              <Link
+                href="/why-choose-60-on-kosmos"
+                className="block px-6 py-3 rounded-lg hover:bg-white/10 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                ⭐ Why Choose Us
+              </Link>
+              <Link
+                href="/guesthouse-vs-hotel-bellville"
+                className="block px-6 py-3 rounded-lg hover:bg-white/10 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                🏨 vs Hotels
+              </Link>
+              <Link
+                href="/guesthouse-vs-airbnb-bellville"
+                className="block px-6 py-3 rounded-lg hover:bg-white/10 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                🏡 vs Airbnb
+              </Link>
+            </div>
+
+            {/* Mobile Locations Section */}
+            <div className="border-t border-white/10 mt-2 pt-2">
+              <div className="px-4 py-2 text-sm font-semibold opacity-75">Locations</div>
+              <Link
+                href="/northern-suburbs-accommodation-cape-town"
+                className="block px-6 py-3 rounded-lg hover:bg-white/10 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                📍 Northern Suburbs
+              </Link>
+              <Link
+                href="/near-uwc-bellville"
+                className="block px-6 py-3 rounded-lg hover:bg-white/10 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                🎓 Near UWC
+              </Link>
+              <Link
+                href="/accommodation-parow"
+                className="block px-6 py-3 rounded-lg hover:bg-white/10 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                📍 Near Parow
+              </Link>
+              <Link
+                href="/accommodation-durbanville"
+                className="block px-6 py-3 rounded-lg hover:bg-white/10 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                📍 Near Durbanville
+              </Link>
+              <Link
+                href="/accommodation-goodwood"
+                className="block px-6 py-3 rounded-lg hover:bg-white/10 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                📍 Near Goodwood
+              </Link>
+            </div>
 
             {/* Mobile Resources Section */}
             <div className="border-t border-white/10 mt-2 pt-2">
