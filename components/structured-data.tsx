@@ -31,14 +31,7 @@ export function StructuredData() {
       "https://60onkosmos.co.za/images/double-room.png",
       "https://60onkosmos.co.za/images/twin-room-yellow.png",
       "https://60onkosmos.co.za/images/deluxe-twin-navy.jpg",
-      "https://60onkosmos.co.za/images/triple-room.jpg",
     ],
-    logo: {
-      "@type": "ImageObject",
-      url: "https://60onkosmos.co.za/images/60-on-kosmos-logo.png",
-      width: 280,
-      height: 80,
-    },
     sameAs: [
       "https://www.facebook.com/60-On-Kosmos-61571946294679/",
       "https://www.airbnb.com/rooms/1332667439996159511",
@@ -54,17 +47,6 @@ export function StructuredData() {
     checkoutTime: "10:00",
     petsAllowed: false,
     smokingAllowed: false,
-    starRating: {
-      "@type": "Rating",
-      ratingValue: "4",
-    },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.8",
-      reviewCount: "25",
-      bestRating: "5",
-      worstRating: "1",
-    },
     amenityFeature: [
       {
         "@type": "LocationFeatureSpecification",
