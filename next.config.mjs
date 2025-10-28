@@ -25,18 +25,23 @@ const nextConfig = {
             key: "Cache-Control",
             value: "public, max-age=3600, must-revalidate",
           },
+        ],
+      },
+      {
+        source: "/sitemap.xml",
+        headers: [
           {
-            key: "Access-Control-Allow-Origin",
-            value: "*",
+            key: "Content-Type",
+            value: "application/xml; charset=utf-8",
           },
           {
-            key: "Access-Control-Allow-Methods",
-            value: "GET, HEAD, OPTIONS",
+            key: "Cache-Control",
+            value: "public, max-age=3600, must-revalidate",
           },
         ],
       },
       {
-        source: "/:path((?!robots.txt).*)*",
+        source: "/:path((?!robots.txt|sitemap.xml).*)*",
         headers: [
           {
             key: "X-DNS-Prefetch-Control",
