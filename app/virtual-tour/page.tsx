@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Camera, MapPin, Bed, Bath, Wifi, Car, Shield, Coffee, Eye } from "lucide-react"
+import { Camera, MapPin, Bed, Bath, Wifi, Car, Shield, Coffee, Eye, Play } from "lucide-react"
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
 
 export const metadata: Metadata = {
@@ -14,6 +14,20 @@ export const metadata: Metadata = {
 
 export default function VirtualTourPage() {
   const tourSections = [
+    {
+      title: "Welcome Video Tour",
+      description: "Watch a guided tour of our guesthouse facilities and rooms",
+      features: ["Full Property Tour", "Room Walkthroughs", "Amenities Showcase", "Neighbourhood Overview"],
+      videos: [
+        {
+          type: "youtube",
+          embedId: "YOUR_YOUTUBE_VIDEO_ID", // Replace with your actual YouTube video ID
+          thumbnail: "/images/exterior-building.png",
+          caption: "Complete property walkthrough",
+        },
+      ],
+      images: [],
+    },
     {
       title: "Standard Twin Room",
       description: "Comfortable twin beds with ensuite bathroom. Perfect for contractors and budget travelers.",
@@ -147,8 +161,8 @@ export default function VirtualTourPage() {
               Explore our Bellville South guesthouse from the comfort of your home
             </p>
             <p className="text-lg opacity-80 max-w-3xl mx-auto">
-              See our comfortable rooms, secure facilities, and outdoor spaces. Book with confidence knowing exactly
-              what to expect when you arrive.
+              Watch our video tour and browse photos of our comfortable rooms, secure facilities, and outdoor spaces.
+              Book with confidence knowing exactly what to expect when you arrive.
             </p>
           </div>
         </section>
@@ -160,7 +174,7 @@ export default function VirtualTourPage() {
             <h2 className="text-2xl font-bold text-gray-900 mb-4">See Before You Book</h2>
             <p className="text-gray-600 mb-6">
               We believe in transparency. Our virtual tour shows you exactly what our rooms and facilities look like. No
-              surprises, just honest photos of our clean, comfortable accommodation in Bellville South.
+              surprises, just honest photos and videos of our clean, comfortable accommodation in Bellville South.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
               <div className="bg-white rounded-lg p-4 shadow-sm">
@@ -204,18 +218,57 @@ export default function VirtualTourPage() {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {section.images.map((image, imageIndex) => (
-                      <Card key={imageIndex} className="overflow-hidden hover:shadow-xl transition-shadow">
-                        <div className="relative h-64">
-                          <Image src={image.src || "/placeholder.svg"} alt={image.alt} fill className="object-cover" />
-                        </div>
-                        <CardContent className="p-4">
-                          <p className="text-sm text-gray-600 text-center">{image.caption}</p>
-                        </CardContent>
-                      </Card>
-                    ))}
-                  </div>
+                  {/* Video Section */}
+                  {section.videos && section.videos.length > 0 && (
+                    <div className="grid grid-cols-1 gap-6 mb-8">
+                      {section.videos.map((video, videoIndex) => (
+                        <Card key={videoIndex} className="overflow-hidden hover:shadow-xl transition-shadow">
+                          <div className="relative aspect-video bg-gray-900">
+                            {video.type === "youtube" ? (
+                              <iframe
+                                className="w-full h-full"
+                                src={`https://www.youtube.com/embed/${video.embedId}`}
+                                title={video.caption}
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                              />
+                            ) : (
+                              <div className="flex items-center justify-center h-full">
+                                <div className="text-center text-white">
+                                  <Play className="w-16 h-16 mx-auto mb-4 opacity-80" />
+                                  <p className="text-lg">Video coming soon</p>
+                                </div>
+                              </div>
+                            )}
+                          </div>
+                          <CardContent className="p-4">
+                            <p className="text-sm text-gray-600 text-center">{video.caption}</p>
+                          </CardContent>
+                        </Card>
+                      ))}
+                    </div>
+                  )}
+
+                  {/* Images Section */}
+                  {section.images && section.images.length > 0 && (
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                      {section.images.map((image, imageIndex) => (
+                        <Card key={imageIndex} className="overflow-hidden hover:shadow-xl transition-shadow">
+                          <div className="relative h-64">
+                            <Image
+                              src={image.src || "/placeholder.svg"}
+                              alt={image.alt}
+                              fill
+                              className="object-cover"
+                            />
+                          </div>
+                          <CardContent className="p-4">
+                            <p className="text-sm text-gray-600 text-center">{image.caption}</p>
+                          </CardContent>
+                        </Card>
+                      ))}
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
