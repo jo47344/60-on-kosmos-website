@@ -12,6 +12,50 @@ const nextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     unoptimized: true,
   },
+  async redirects() {
+    return [
+      {
+        source: '/near-uwc-bellville',
+        destination: '/uwc-student-accommodation',
+        permanent: true,
+      },
+      {
+        source: '/near-cput-bellville',
+        destination: '/cput-accommodation',
+        permanent: true,
+      },
+      {
+        source: '/accommodation-near-tygerberg-hospital',
+        destination: '/tygerberg-hospital-accommodation',
+        permanent: true,
+      },
+      {
+        source: '/monthly-accommodation-bellville',
+        destination: '/monthly-accommodation',
+        permanent: true,
+      },
+      {
+        source: '/monthly-accommodation-bellville-south',
+        destination: '/monthly-accommodation',
+        permanent: true,
+      },
+      {
+        source: '/self-catering-accommodation-bellville',
+        destination: '/self-catering-rooms',
+        permanent: true,
+      },
+      {
+        source: '/contractor-accommodation-bellville',
+        destination: '/contractor-accommodation',
+        permanent: true,
+      },
+      {
+        source: '/contractor-accommodation-bellville-south',
+        destination: '/contractor-accommodation',
+        permanent: true,
+      },
+    ]
+  },
   async headers() {
     return [
       {

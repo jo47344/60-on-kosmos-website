@@ -7,8 +7,8 @@ export function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Column 1: Business Info with NAP */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {/* Column 1: Business Info */}
           <div>
             <h3 className="text-xl font-bold mb-4">60 on Kosmos</h3>
             <div className="space-y-2 text-gray-300">
@@ -41,26 +41,6 @@ export function Footer() {
               </div>
             </div>
 
-            {/* Google Maps Integration */}
-            <div className="mt-6 space-y-3">
-              <a
-                href="https://maps.google.com/?q=60+Kosmos+Street+Bellville+South+7530"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition w-full text-center"
-              >
-                📍 View on Google Maps
-              </a>
-              <a
-                href="https://www.google.com/search?q=60+on+Kosmos+Bellville+South"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg transition w-full text-center"
-              >
-                ⭐ Leave us a Google Review
-              </a>
-            </div>
-
             {/* Social Media */}
             <div className="flex space-x-4 mt-6">
               <a
@@ -84,7 +64,44 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Column 2: Quick Links */}
+          {/* Column 2: Priority Pages */}
+          <div>
+            <h3 className="text-xl font-bold mb-4">Accommodation</h3>
+            <ul className="space-y-2 text-gray-300">
+              <li>
+                <Link href="/uwc-student-accommodation" className="hover:text-white transition-colors">
+                  UWC Student Accommodation
+                </Link>
+              </li>
+              <li>
+                <Link href="/cput-accommodation" className="hover:text-white transition-colors">
+                  CPUT Accommodation
+                </Link>
+              </li>
+              <li>
+                <Link href="/tygerberg-hospital-accommodation" className="hover:text-white transition-colors">
+                  Tygerberg Hospital Accommodation
+                </Link>
+              </li>
+              <li>
+                <Link href="/monthly-accommodation" className="hover:text-white transition-colors">
+                  Monthly Accommodation
+                </Link>
+              </li>
+              <li>
+                <Link href="/self-catering-rooms" className="hover:text-white transition-colors">
+                  Self-Catering Rooms
+                </Link>
+              </li>
+              <li>
+                <Link href="/contractor-accommodation" className="hover:text-white transition-colors">
+                  Contractor Accommodation
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 3: Quick Links */}
           <div>
             <h3 className="text-xl font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-gray-300">
@@ -94,38 +111,18 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/contractor-accommodation-bellville" className="hover:text-white transition-colors">
-                  Contractor Rates
-                </Link>
-              </li>
-              <li>
-                <Link href="/near-uwc-bellville" className="hover:text-white transition-colors">
-                  UWC Accommodation
-                </Link>
-              </li>
-              <li>
-                <Link href="/accommodation-near-tygerberg-hospital" className="hover:text-white transition-colors">
-                  Hospital Accommodation
-                </Link>
-              </li>
-              <li>
-                <Link href="/monthly-accommodation-bellville" className="hover:text-white transition-colors">
-                  Monthly Accommodation
-                </Link>
-              </li>
-              <li>
-                <Link href="/self-catering-accommodation-bellville" className="hover:text-white transition-colors">
-                  Self-Catering Rooms
-                </Link>
-              </li>
-              <li>
                 <Link href="/amenities" className="hover:text-white transition-colors">
                   Amenities
                 </Link>
               </li>
               <li>
-                <Link href="/local-info" className="hover:text-white transition-colors">
-                  Local Info
+                <Link href="/special-offers" className="hover:text-white transition-colors">
+                  Special Offers
+                </Link>
+              </li>
+              <li>
+                <Link href="/virtual-tour" className="hover:text-white transition-colors">
+                  Virtual Tour
                 </Link>
               </li>
               <li>
@@ -135,13 +132,13 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/contact" className="hover:text-white transition-colors">
-                  Contact & Directions
+                  Contact Us
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Column 3: Hours & Policies */}
+          {/* Column 4: Guest Information */}
           <div>
             <h3 className="text-xl font-bold mb-4">Guest Information</h3>
             <div className="space-y-2 text-gray-300">
@@ -159,9 +156,6 @@ export function Footer() {
               </p>
               <p>
                 <strong className="text-white">Cleaning:</strong> Weekly service included
-              </p>
-              <p className="text-sm mt-4 text-gray-400">
-                Adults only accommodation. Damage deposit: R500 (cash, refundable)
               </p>
             </div>
 
@@ -181,8 +175,7 @@ export function Footer() {
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 text-sm">
           <p>&copy; {currentYear} 60 on Kosmos Guesthouse. All rights reserved.</p>
           <p className="mt-2">
-            Self-catering accommodation in Bellville South, Cape Town | Near UWC & Tygerberg Hospital | Contractor
-            Housing
+            Self-catering accommodation in Bellville South, Cape Town | Near UWC, CPUT & Tygerberg Hospital
           </p>
         </div>
       </div>
