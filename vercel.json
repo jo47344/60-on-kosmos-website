@@ -18,14 +18,14 @@
       ]
     }
   ],
-  {  "redirects": [
+  "redirects": [
     {
       "source": "https://www.60onkosmos.co.za/:path*",
       "destination": "https://60onkosmos.co.za/:path*",
       "permanent": true
     }
-  ]
-}  "rewrites": [
+  ],
+  "rewrites": [
     {
       "source": "/robots.txt",
       "destination": "/api/robots"
