@@ -65,7 +65,7 @@ export default function AmenitiesPage() {
     "Hot water 24/7",
     "Ensuite bathrooms",
     "Modern furnishings",
-    "Daily cleaning service",
+    "Weekly cleaning service",
     "Quiet environment",
     "Air circulation",
   ]

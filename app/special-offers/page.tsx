@@ -2,85 +2,19 @@ import type { Metadata } from "next"
 import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import {
-  Star,
-  Clock,
-  Users,
-  Briefcase,
-  Calendar,
-  Gift,
-  Phone,
-  CheckCircle2,
-  TrendingDown,
-  GraduationCap,
-  Heart,
-} from "lucide-react"
+import { Star, Clock, Users, Briefcase, Calendar, Gift, Phone, CheckCircle2, TrendingDown, Heart } from "lucide-react"
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
 
 export const metadata: Metadata = {
   title: "Special Offers & Packages - 60 on Kosmos Bellville South | Save Up To 20%",
   description:
-    "Book direct and save at 60 on Kosmos Bellville South. Special rates for contractors, students, medical professionals. Monthly rates from R12,720. Free WiFi & parking.",
+    "Book direct and save at 60 on Kosmos Bellville South. Special rates for contractors, medical professionals. Monthly rates from R12,720. Free WiFi & parking.",
   keywords:
-    "special offers Bellville South, contractor rates Cape Town, monthly accommodation deals, student discounts UWC, guesthouse packages Bellville, book direct save, UWC graduation accommodation, CPUT student rates",
+    "special offers Bellville South, contractor rates Cape Town, monthly accommodation deals, guesthouse packages Bellville, book direct save",
 }
 
 export default function SpecialOffersPage() {
   const offers = [
-    {
-      title: "UWC Graduation Weekend Package",
-      description: "Special rates for parents attending UWC graduation ceremonies",
-      discount: "15% OFF",
-      icon: GraduationCap,
-      color: "bg-blue-100 text-blue-600",
-      regularPrice: "R1,590",
-      specialPrice: "R1,352",
-      savingsAmount: "R238",
-      perNight: "R450/night",
-      features: [
-        "3 nights from R1,352 (save R238)",
-        "R450 per night graduation rate",
-        "Free campus directions & map",
-        "Restaurant recommendations included",
-        "Late checkout on departure day",
-        "Complimentary tea & coffee",
-        "Secure parking for your stay",
-        "Photo ceremony location tips",
-      ],
-      terms:
-        "Valid during UWC graduation season (April & December). Must book at least 2 weeks in advance. Proof of UWC graduation invitation required.",
-      cta: "Book Graduation Package",
-      image: "/images/sage-double-room.png",
-      seasonal: true,
-      season: "April & December",
-    },
-    {
-      title: "CPUT Exam Week Special",
-      description: "Affordable weekly rates for students during exam period",
-      discount: "20% OFF",
-      icon: Star,
-      color: "bg-purple-100 text-purple-600",
-      regularPrice: "R3,710",
-      specialPrice: "R2,968",
-      savingsAmount: "R742",
-      perNight: "R424/night",
-      features: [
-        "7 nights from R2,968 (save R742)",
-        "R424 per night student rate",
-        "Quiet study-friendly environment",
-        "Free high-speed WiFi for research",
-        "Weekly cleaning & fresh linen",
-        "Access to kitchenette",
-        "Flexible check-in times",
-        "Valid student ID required",
-      ],
-      terms:
-        "Valid during CPUT exam periods (May-June & Oct-Nov). Student ID must be presented. Minimum 7-night booking required.",
-      cta: "Book Exam Week",
-      image: "/images/twin-room-yellow.png",
-      seasonal: true,
-      season: "May-June & Oct-Nov",
-    },
     {
       title: "Contractor Monthly Rate",
       description: "Extended stay discount for contractors working in Cape Town",
@@ -94,7 +28,7 @@ export default function SpecialOffersPage() {
       features: [
         "R12,720 per month (save R3,180)",
         "R424 per night rate",
-        "Daily room cleaning included",
+        "Weekly cleaning service included",
         "Free high-speed WiFi",
         "Secure parking bay",
         "Flexible check-out times",
@@ -104,33 +38,6 @@ export default function SpecialOffersPage() {
       terms: "Minimum 30-day stay required. Valid contractor ID or company letter needed. Payment upfront or weekly.",
       cta: "Get Contractor Rate",
       image: "/images/twin-room-yellow.png",
-    },
-    {
-      title: "International Student Semester Rate",
-      description: "Long-term accommodation for international students at UWC & CPUT",
-      discount: "18% OFF",
-      icon: Users,
-      color: "bg-green-100 text-green-600",
-      regularPrice: "R15,900",
-      specialPrice: "R13,038",
-      savingsAmount: "R2,862",
-      perNight: "R435/night",
-      features: [
-        "From R13,038 per month (save R2,862)",
-        "R435 per night semester rate",
-        "3-6 month contracts available",
-        "Self-catering kitchen access",
-        "International student support",
-        "Close to UWC (5.5km) & CPUT (4.5km)",
-        "Airport pickup assistance available",
-        "Help with local registration",
-      ],
-      terms:
-        "Valid international student ID required. Minimum 3-month commitment. Academic year only (Feb-Nov). Payment monthly in advance. Passport copy required.",
-      cta: "Apply for Student Rate",
-      image: "/images/triple-room-full.jpg",
-      seasonal: true,
-      season: "Feb-Nov (Academic Year)",
     },
     {
       title: "Medical Professional Rate",
@@ -157,47 +64,44 @@ export default function SpecialOffersPage() {
       image: "/images/twin-room-yellow.png",
     },
     {
-      title: "UWC Orientation Weekend",
-      description: "Welcome package for parents bringing students for orientation",
-      discount: "12% OFF",
-      icon: Gift,
-      color: "bg-yellow-100 text-yellow-600",
-      regularPrice: "R1,590",
-      specialPrice: "R1,399",
-      savingsAmount: "R191",
-      perNight: "R466/night",
+      title: "Monthly Stay Discount",
+      description: "Monthly accommodation with extended stay savings for 14+ nights",
+      discount: "Up to 12% OFF",
+      icon: Calendar,
+      color: "bg-blue-100 text-blue-600",
+      regularPrice: "R530",
+      specialPrice: "R500",
+      savingsAmount: "R420/week",
+      perNight: "R500/night",
       features: [
-        "3 nights from R1,399 (save R191)",
-        "R466 per night orientation rate",
-        "Welcome pack with campus info",
-        "Bellville shopping guide included",
-        "Local transport tips & routes",
-        "Nearby restaurants recommended",
-        "Student essentials shopping list",
-        "Free WiFi & secure parking",
+        "14+ nights qualify for monthly rate",
+        "R500 per night for extended stays",
+        "Free WiFi throughout stay",
+        "Weekly cleaning service",
+        "Secure parking included",
+        "All standard amenities",
+        "Flexible payment options",
       ],
       terms:
-        "Valid during UWC orientation weeks (January & February). Proof of student registration required. Book 2+ weeks in advance.",
-      cta: "Book Orientation Stay",
-      image: "/images/double-room.png",
-      seasonal: true,
-      season: "January & February",
+        "Valid for stays of 14 nights or longer only. Subject to availability. Cannot be combined with other offers.",
+      cta: "Get Monthly Rate",
+      image: "/images/twin-room-yellow.png",
+      seasonal: false,
     },
     {
-      title: "Weekly Stay Discount",
-      description: "Save 10% when you stay 7 nights or more",
-      discount: "10% OFF",
+      title: "Weekly Stay Special",
+      description: "Book 7+ nights and save on weekly accommodation",
+      discount: "Save on Weekly Stays",
       icon: Calendar,
       color: "bg-green-100 text-green-600",
-      regularPrice: "R3,710",
-      specialPrice: "R3,339",
-      savingsAmount: "R371",
-      perNight: "R477/night",
+      regularPrice: "R530",
+      specialPrice: "R510",
+      savingsAmount: "R140/week",
+      perNight: "R510/night",
       features: [
-        "7 nights from R3,339 (save R371)",
-        "R477 per night rate",
+        "7+ nights from R510/night",
+        "Weekly cleaning service included",
         "Free WiFi throughout stay",
-        "Daily cleaning service",
         "Secure parking included",
         "All standard amenities",
         "Flexible payment options",
@@ -208,26 +112,25 @@ export default function SpecialOffersPage() {
     },
     {
       title: "Last-Minute Saver",
-      description: "Book within 48 hours and get instant 10% discount",
-      discount: "10% OFF",
+      description: "Book within 48 hours of arrival for same-week stays",
+      discount: "Limited Time",
       icon: Clock,
-      color: "bg-yellow-100 text-yellow-600",
+      color: "bg-orange-100 text-orange-600",
       regularPrice: "R530",
-      specialPrice: "R477",
-      savingsAmount: "R53",
-      perNight: "R477/night",
+      specialPrice: "R510",
+      savingsAmount: "R20",
+      perNight: "R510/night",
       features: [
-        "Standard Twin from R477/night (save R53)",
-        "Double Room from R558/night",
-        "Instant confirmation via WhatsApp",
-        "Same-day check-in available",
-        "All standard amenities",
-        "Free WiFi & parking",
-        "No booking fees",
+        "Weekly cleaning service",
+        "Subject to availability",
+        "Book within 48 hours",
+        "Free WiFi",
+        "Secure parking",
+        "All amenities included",
       ],
-      terms: "Subject to availability. Must book within 48 hours of arrival date. Check availability via WhatsApp.",
+      terms: "Must book within 48 hours of check-in date. Subject to room availability. Minimum 3-night stay.",
       cta: "Check Availability",
-      image: "/images/sage-double-room.png",
+      image: "/images/twin-room-black.png",
     },
   ]
 
@@ -245,43 +148,13 @@ export default function SpecialOffersPage() {
         <section className="bg-gradient-to-br from-sage-600 to-sage-700 text-white py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <Gift className="w-16 h-16 mx-auto mb-4" />
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Special Offers & Seasonal Packages</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">Special Offers & Packages</h1>
             <p className="text-xl mb-6 opacity-90">
               Save up to 20% when you book direct at 60 on Kosmos Bellville South
             </p>
             <p className="text-lg opacity-80 max-w-2xl mx-auto">
               No hidden fees. No booking commissions. Best rates guaranteed when you book directly with us.
             </p>
-          </div>
-        </section>
-
-        {/* Seasonal Offers Highlight */}
-        <section className="bg-gradient-to-r from-yellow-50 to-orange-50 border-y border-yellow-200 py-8">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-6">
-              <h2 className="text-2xl font-bold text-gray-900 mb-2">🎓 Current Seasonal Offers</h2>
-              <p className="text-gray-600">Special rates available for specific times of year</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-white rounded-lg p-6 text-center shadow-sm border-2 border-blue-200">
-                <GraduationCap className="w-10 h-10 text-blue-600 mx-auto mb-3" />
-                <h3 className="font-semibold text-gray-900 mb-2">Graduation Season</h3>
-                <p className="text-sm text-gray-600 mb-2">Special rates for UWC & CPUT graduation weekends</p>
-                <p className="text-xs text-blue-600 font-semibold">April & December</p>
-              </div>
-              <div className="bg-white rounded-lg p-6 text-center shadow-sm border-2 border-purple-200">
-                <Star className="w-10 h-10 text-purple-600 mx-auto mb-3" />
-                <h3 className="font-semibold text-gray-900 mb-2">Exam Period Specials</h3>
-                <p className="text-sm text-gray-600 mb-2">Student rates during exam weeks</p>
-                <p className="text-xs text-purple-600 font-semibold">May-June & Oct-Nov</p>
-              </div>
-              <div className="bg-white rounded-lg p-6 text-center shadow-sm border-2 border-yellow-200">
-                <Gift className="w-10 h-10 text-yellow-600 mx-auto mb-3" />
-                <h3 className="font-semibold text-gray-900 mb-2">Orientation Packages</h3>
-                <p className="text-sm text-gray-600 mb-2">Welcome packages for new student parents</p>
-                <p className="text-xs text-yellow-600 font-semibold">January & February</p>
-              </div>
-            </div>
           </div>
         </section>
 
@@ -351,16 +224,16 @@ export default function SpecialOffersPage() {
                     <td className="px-6 py-4 text-center font-bold text-green-600">No fees!</td>
                   </tr>
                   <tr className="bg-green-100 hover:bg-green-200">
-                    <td className="px-6 py-4 font-bold text-sage-800">Book Direct (Monthly)</td>
-                    <td className="px-6 py-4 text-center font-bold text-sage-800">R424</td>
-                    <td className="px-6 py-4 text-center font-bold text-sage-800">R12,720</td>
-                    <td className="px-6 py-4 text-center font-bold text-green-700">Save R6,330!</td>
+                    <td className="px-6 py-4 font-bold text-sage-800">Book Direct (Monthly 14+ nights)</td>
+                    <td className="px-6 py-4 text-center font-bold text-sage-800">R500</td>
+                    <td className="px-6 py-4 text-center font-bold text-sage-800">R15,000</td>
+                    <td className="px-6 py-4 text-center font-bold text-green-700">Save R4,050!</td>
                   </tr>
                 </tbody>
               </table>
             </div>
             <p className="text-center text-sm text-gray-600 mt-6">
-              💰 Book monthly and save <span className="font-bold text-sage-700">R6,330 compared to Booking.com</span>
+              💰 Book monthly and save <span className="font-bold text-sage-700">R4,050 compared to Booking.com</span>
             </p>
           </div>
         </section>
@@ -372,13 +245,6 @@ export default function SpecialOffersPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {offers.map((offer, index) => (
                 <Card key={index} className="hover:shadow-xl transition-all duration-300 relative overflow-hidden">
-                  {/* Seasonal Badge */}
-                  {offer.seasonal && (
-                    <div className="absolute top-16 left-0 bg-yellow-500 text-white px-4 py-1 text-xs font-bold z-10 shadow-lg">
-                      {offer.season}
-                    </div>
-                  )}
-
                   {/* Discount Badge */}
                   <div className="absolute top-4 right-4 bg-red-500 text-white px-4 py-2 rounded-full font-bold text-sm shadow-lg z-10">
                     {offer.discount}
@@ -448,7 +314,7 @@ export default function SpecialOffersPage() {
                         className="w-full border-sage-600 text-sage-600 hover:bg-sage-50 bg-transparent"
                       >
                         <a
-                          href={`https://wa.me/27745245703?text=Hi, I'm interested in the ${offer.title}`}
+                          href="https://wa.me/27823346075?text=Hi!%20I'm%20interested%20in%20your%20special%20offers"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -502,7 +368,7 @@ export default function SpecialOffersPage() {
               </div>
               <Button asChild size="lg" className="mt-8 bg-sage-600 hover:bg-sage-700 text-white px-8">
                 <a
-                  href="https://wa.me/27745245703?text=I want to refer a friend to 60 on Kosmos"
+                  href="https://wa.me/27823346075?text=I%20want%20to%20refer%20a%20friend%20to%2060%20on%20Kosmos"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -555,7 +421,7 @@ export default function SpecialOffersPage() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold mb-4">Ready to Save on Your Bellville South Accommodation?</h2>
             <p className="text-lg mb-8 opacity-90">
-              Book now to secure your discounted rate. Limited availability during graduation season and exam periods.
+              Book now to secure your discounted rate. Limited availability during peak seasons.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
@@ -571,9 +437,13 @@ export default function SpecialOffersPage() {
                 variant="outline"
                 className="border-2 border-white text-white hover:bg-sage-800 px-8 py-6 text-lg font-semibold bg-transparent"
               >
-                <a href="https://wa.me/27745245703?text=Hi, I want to book" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://wa.me/27823346075?text=Hi,%20I%20want%20to%20book"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Phone className="w-5 h-5 mr-2" />
-                  WhatsApp: 074 524 5703
+                  WhatsApp: 078 233 46075
                 </a>
               </Button>
             </div>
