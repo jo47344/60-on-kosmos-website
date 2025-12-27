@@ -31,7 +31,7 @@ export default function VirtualTourPage() {
     {
       title: "Standard Twin Room",
       description: "Comfortable twin beds with ensuite bathroom. Perfect for contractors and budget travelers.",
-      features: ["2 Single Beds", "Ensuite Bathroom", "Free WiFi", "Work Desk", "Clean Linen"],
+      features: ["2 Single Beds", "Ensuite Bathroom", "Bar Fridge", "Free WiFi", "Work Desk"],
       images: [
         {
           src: "/images/twin-room-yellow.png",
@@ -48,7 +48,7 @@ export default function VirtualTourPage() {
     {
       title: "Double Room",
       description: "Spacious double room with sage green decor. Ideal for couples and solo travelers.",
-      features: ["Double Bed", "Ensuite Bathroom", "Microwave", "Bar Fridge", "Free WiFi", "Wardrobe"],
+      features: ["Double Bed", "Ensuite Bathroom", "Bar Fridge", "Free WiFi", "Wardrobe"],
       images: [
         {
           src: "/images/sage-double-room.png",
@@ -65,7 +65,7 @@ export default function VirtualTourPage() {
     {
       title: "Deluxe Twin Room",
       description: "Premium twin room with navy blue headboards and upgraded furnishings.",
-      features: ["2 Single Beds", "Premium Bedding", "Ensuite Bathroom", "Bar Fridge", "Modern Decor", "Free WiFi"],
+      features: ["2 Single Beds", "Premium Bedding", "Ensuite Bathroom", "Modern Decor", "Free WiFi"],
       images: [
         {
           src: "/images/deluxe-twin-navy.jpg",
@@ -82,7 +82,7 @@ export default function VirtualTourPage() {
     {
       title: "Triple Family Room",
       description: "Perfect for families or groups. Three single beds with kettle and workspace.",
-      features: ["3 Single Beds", "Ensuite Bathroom", "Bar Fridge", "Kettle & Cups", "Work Desk", "Free WiFi"],
+      features: ["3 Single Beds", "Ensuite Bathroom", "Kettle & Cups", "Work Desk", "Free WiFi"],
       images: [
         {
           src: "/images/triple-room-full.jpg",

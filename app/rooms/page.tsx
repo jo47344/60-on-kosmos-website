@@ -29,12 +29,13 @@ export default function RoomsPage() {
       features: [
         "Two single beds",
         "Ensuite bathroom",
+        "Bar fridge",
         "Free WiFi",
         "Clean linen and weekly cleaning",
         "Weekly cleaning service",
       ],
       description:
-        "Perfect for contractors or young professionals. Clean, comfortable twin beds with modern ensuite bathroom.",
+        "Perfect for contractors or young professionals. Clean, comfortable twin beds with modern ensuite bathroom. Self-catering with bar fridge.",
     },
     {
       id: 2,
@@ -45,7 +46,6 @@ export default function RoomsPage() {
       features: [
         "Double bed",
         "Ensuite bathroom",
-        "Microwave",
         "Bar fridge",
         "Free WiFi",
         "Premium bedding",
@@ -65,7 +65,6 @@ export default function RoomsPage() {
         "Navy blue headboards",
         "Ensuite bathroom",
         "Premium bedding",
-        "Bar fridge",
         "Modern decor",
         "Weekly cleaning service",
       ],
@@ -81,7 +80,6 @@ export default function RoomsPage() {
       features: [
         "Three single beds",
         "Ensuite bathroom",
-        "Bar fridge",
         "Kettle & cups",
         "Free WiFi",
         "Workspace area",

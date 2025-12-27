@@ -51,6 +51,7 @@ export function LocalBusinessSchema() {
       { "@type": "LocationFeatureSpecification", name: "Secure Parking", value: true },
       { "@type": "LocationFeatureSpecification", name: "24/7 CCTV Security", value: true },
       { "@type": "LocationFeatureSpecification", name: "Ensuite Bathrooms", value: true },
+      { "@type": "LocationFeatureSpecification", name: "Bar Fridge", value: true },
       { "@type": "LocationFeatureSpecification", name: "Welcome Refreshments", value: true },
       { "@type": "LocationFeatureSpecification", name: "Clean Linen", value: true },
       { "@type": "LocationFeatureSpecification", name: "Weekly Cleaning Service", value: true },
@@ -82,7 +83,7 @@ export function LocalBusinessSchema() {
             "@type": "HotelRoom",
             name: "Standard Twin Room",
             description:
-              "Comfortable twin room with ensuite bathroom, free WiFi, clean linen, and weekly cleaning service",
+              "Comfortable twin room with ensuite bathroom, free WiFi, bar fridge, and weekly cleaning service",
             bed: {
               "@type": "BedDetails",
               numberOfBeds: 2,
@@ -106,8 +107,7 @@ export function LocalBusinessSchema() {
           itemOffered: {
             "@type": "HotelRoom",
             name: "Deluxe Twin Room",
-            description:
-              "Upgraded twin room with bar fridge, premium bedding, modern navy blue decor, and weekly cleaning service",
+            description: "Upgraded twin room with premium bedding, modern navy blue decor, and weekly cleaning service",
             bed: {
               "@type": "BedDetails",
               numberOfBeds: 2,
@@ -132,7 +132,7 @@ export function LocalBusinessSchema() {
             "@type": "HotelRoom",
             name: "Double Room",
             description:
-              "Spacious double room with microwave, bar fridge, ensuite bathroom, modern sage green decor, and weekly cleaning service",
+              "Spacious double room with ensuite bathroom, modern sage green decor, and weekly cleaning service",
             bed: {
               "@type": "BedDetails",
               numberOfBeds: 1,
@@ -156,8 +156,7 @@ export function LocalBusinessSchema() {
           itemOffered: {
             "@type": "HotelRoom",
             name: "Triple Room",
-            description:
-              "Large family room with three single beds, bar fridge, workspace, kettle, and weekly cleaning service",
+            description: "Large family room with three single beds, workspace, kettle, and weekly cleaning service",
             bed: {
               "@type": "BedDetails",
               numberOfBeds: 3,
