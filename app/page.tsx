@@ -25,13 +25,13 @@ export default function HomePage() {
       name: "Standard Twin Room",
       price: "From R530/night",
       image: "/images/twin-room-yellow.png",
-      features: ["2 single beds", "Ensuite bathroom", "Bar fridge", "Free WiFi"],
+      features: ["2 single beds", "Ensuite bathroom", "Free WiFi", "Clean linen"],
     },
     {
       name: "Double Room",
       price: "From R620/night",
       image: "/images/sage-double-room.png",
-      features: ["1 double bed", "Ensuite bathroom", "Bar fridge", "Free WiFi"],
+      features: ["1 double bed", "Ensuite bathroom", "Microwave", "Bar fridge", "Free WiFi"],
     },
     {
       name: "Deluxe Twin Room",
@@ -43,7 +43,7 @@ export default function HomePage() {
       name: "Triple Room",
       price: "From R750/night",
       image: "/images/triple-room-full.jpg",
-      features: ["3 single beds", "Ensuite bathroom", "Kettle & cups", "Workspace area"],
+      features: ["3 single beds", "Ensuite bathroom", "Bar fridge", "Kettle & cups", "Workspace area"],
     },
   ]
 

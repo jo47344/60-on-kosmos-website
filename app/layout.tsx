@@ -7,6 +7,7 @@ import { Footer } from "@/components/footer"
 import { StickyMobileCTA } from "@/components/sticky-mobile-cta"
 import { LocalBusinessSchema } from "@/components/local-business-schema"
 import { GoogleAnalytics } from "@/components/google-analytics"
+import { ConversionTracking } from "@/components/conversion-tracking"
 import { Suspense } from "react"
 import { PerformanceOptimizations } from "@/components/performance-optimizations"
 import { StructuredData } from "@/components/structured-data"
@@ -18,13 +19,20 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   metadataBase: new URL("https://60onkosmos.co.za"),
   title: {
-    default: "60 on Kosmos - Affordable Guesthouse Accommodation in Bellville South, Cape Town",
-    template: "%s | 60 on Kosmos Bellville South",
+    default: "60 on Kosmos | Contractor Accommodation Bellville South",
+    template: "%s | 60 on Kosmos",
   },
   description:
-    "Self-catering ensuite accommodation in Bellville South. Perfect for contractors, students & young professionals. Near UWC & Tygerberg Hospital. Secure parking, free WiFi, weekly cleaning. Book direct for best rates!",
-  keywords:
-    "60 on Kosmos, Bellville South accommodation, guesthouse Cape Town, UWC accommodation, Tygerberg Hospital lodging, contractor accommodation Bellville, student accommodation Cape Town, affordable guesthouse, ensuite rooms Bellville, monthly accommodation Cape Town",
+    "Contractor accommodation in Bellville South. Competitive monthly rates for construction professionals. Secure parking, kitchen facilities, WiFi, invoicing. 8km from Tygerberg Hospital.",
+  keywords: [
+    "contractor accommodation Bellville",
+    "monthly accommodation Cape Town",
+    "Tygerberg Hospital accommodation",
+    "self-catering rooms Bellville South",
+    "UWC student housing",
+    "CPUT accommodation",
+    "guesthouse Bellville",
+  ],
   authors: [{ name: "60 on Kosmos" }],
   creator: "60 on Kosmos",
   publisher: "60 on Kosmos",
@@ -37,10 +45,10 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_ZA",
     url: "https://60onkosmos.co.za",
-    siteName: "60 on Kosmos Guesthouse Bellville South",
-    title: "60 on Kosmos - Affordable Guesthouse Accommodation in Bellville South",
+    siteName: "60 on Kosmos",
+    title: "60 on Kosmos | Contractor Accommodation Bellville South",
     description:
-      "Self-catering ensuite rooms near UWC & Tygerberg Hospital. Perfect for contractors, students & professionals. Secure parking, free WiFi, weekly cleaning.",
+      "Contractor accommodation in Bellville South. Competitive monthly rates for construction professionals. Secure parking, kitchen facilities, WiFi, invoicing. 8km from Tygerberg Hospital.",
     images: [
       {
         url: "/images/exterior-building.png",
@@ -102,6 +110,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <Suspense fallback={<div>Loading...</div>}>
+          <ConversionTracking />
           <Navigation />
           <main id="main-content" className="min-h-screen">
             {children}
