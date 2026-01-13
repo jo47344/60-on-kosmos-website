@@ -19,16 +19,30 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 
 export const metadata: Metadata = {
-  title: "Contractor Accommodation Bellville | From R530/Night | 60 on Kosmos",
+  title: "Contractor Accommodation Bellville South | From R530/Night | Self-Catering with Parking",
   description:
-    "Purpose-built contractor accommodation in Bellville South near Sacks Circle & Mill Park. Standard R530, Plus R580, Double R620, Triple R750/night. Near John Thompson, Northlink College. Book direct.",
+    "Affordable contractor accommodation in Bellville South for long term stays. Weekly & monthly rates. Self-catering, secure parking for bakkies, WiFi. Near factories, TAC Business Park, Sacks Circle. Perfect for artisan trainees, welders, boilermakers & work crews.",
   alternates: {
     canonical: "https://60onkosmos.co.za/contractor-accommodation",
   },
+  keywords: [
+    "contractor accommodation bellville south",
+    "self catering contractor accommodation bellville",
+    "weekly contractor accommodation bellville south",
+    "affordable contractor accommodation bellville south long term",
+    "workers accommodation bellville south parking bakkies",
+    "contractor accommodation near tac business park",
+    "artisan trainee accommodation near northlink college",
+    "boilermaker accommodation near john thompson bellville",
+    "welding trainee accommodation bellville",
+    "monthly contractor accommodation bellville self catering",
+    "short term crew housing bellville south industria",
+    "contractor teams accommodation bellville",
+  ],
   openGraph: {
-    title: "Contractor Accommodation Bellville | From R530/Night",
+    title: "Contractor Accommodation Bellville South | Weekly & Monthly Rates",
     description:
-      "Purpose-built for construction crews, apprentices & technical teams. Near Sacks Circle, Mill Park, John Thompson & Northlink College.",
+      "Self-catering rooms for contractors, work crews & artisan trainees. Secure parking, weekly cleaning, WiFi. From R530/night.",
     url: "https://60onkosmos.co.za/contractor-accommodation",
     type: "website",
   },
@@ -38,9 +52,9 @@ export default function ContractorAccommodationPage() {
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "LodgingBusiness",
-    name: "60 on Kosmos - Contractor Accommodation",
+    name: "60 on Kosmos - Contractor Accommodation Bellville South",
     description:
-      "Purpose-built contractor accommodation in Bellville South for construction workers, apprentices and project teams",
+      "Affordable self-catering contractor accommodation in Bellville South. Weekly & monthly rates for construction workers, artisan trainees, welders, boilermakers. Secure parking for bakkies, WiFi included. Near Sacks Circle, Mill Park, TAC Business Park, John Thompson, Northlink College.",
     address: {
       "@type": "PostalAddress",
       streetAddress: "60 Kosmosdalweg",
@@ -49,15 +63,67 @@ export default function ContractorAccommodationPage() {
       postalCode: "7530",
       addressCountry: "ZA",
     },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: -33.9367,
+      longitude: 18.6403,
+    },
     telephone: "+27745245703",
     url: "https://60onkosmos.co.za/contractor-accommodation",
     priceRange: "R530 - R750",
+    currenciesAccepted: "ZAR",
+    paymentAccepted: "Cash, EFT, Bank Transfer",
+    areaServed: [
+      { "@type": "City", name: "Bellville South" },
+      { "@type": "City", name: "Bellville" },
+      { "@type": "City", name: "Stikland" },
+      { "@type": "City", name: "Parow" },
+      { "@type": "City", name: "Goodwood" },
+    ],
     amenityFeature: [
-      { "@type": "LocationFeatureSpecification", name: "Free WiFi" },
-      { "@type": "LocationFeatureSpecification", name: "Free Parking" },
-      { "@type": "LocationFeatureSpecification", name: "Self-Catering Kitchen" },
-      { "@type": "LocationFeatureSpecification", name: "Weekly Cleaning" },
-      { "@type": "LocationFeatureSpecification", name: "24/7 Security" },
+      { "@type": "LocationFeatureSpecification", name: "Free WiFi", value: true },
+      { "@type": "LocationFeatureSpecification", name: "Secure Parking for Bakkies", value: true },
+      { "@type": "LocationFeatureSpecification", name: "Self-Catering Kitchen", value: true },
+      { "@type": "LocationFeatureSpecification", name: "Weekly Cleaning", value: true },
+      { "@type": "LocationFeatureSpecification", name: "CCTV Security", value: true },
+    ],
+    nearbyPlaces: [
+      { "@type": "Place", name: "Sacks Circle Industrial", description: "Walking distance" },
+      { "@type": "Place", name: "Mill Park Industrial", description: "5 minutes" },
+      { "@type": "Place", name: "TAC Business Park", description: "5 minutes" },
+      { "@type": "Place", name: "John Thompson", description: "Boilermaker training" },
+      { "@type": "Place", name: "Northlink College Bellville", description: "Welding courses" },
+      { "@type": "Place", name: "Stikland Industrial", description: "10 minutes" },
+    ],
+    makesOffer: [
+      {
+        "@type": "Offer",
+        name: "Standard Room",
+        description: "Budget room for apprentices, no bar fridge, communal kitchen access",
+        price: "530",
+        priceCurrency: "ZAR",
+      },
+      {
+        "@type": "Offer",
+        name: "Standard Plus Room",
+        description: "Room with private bar fridge for skilled workers",
+        price: "580",
+        priceCurrency: "ZAR",
+      },
+      {
+        "@type": "Offer",
+        name: "Double Room",
+        description: "Manager room with bar fridge, microwave and workspace",
+        price: "620",
+        priceCurrency: "ZAR",
+      },
+      {
+        "@type": "Offer",
+        name: "Triple Suite",
+        description: "Team room for 3 workers, best value at R250 per person",
+        price: "750",
+        priceCurrency: "ZAR",
+      },
     ],
   }
 
@@ -158,7 +224,7 @@ export default function ContractorAccommodationPage() {
         <div className="absolute inset-0">
           <Image
             src="/images/exterior-building.png"
-            alt="60 on Kosmos Contractor Accommodation Bellville"
+            alt="60 on Kosmos Contractor Accommodation Bellville South"
             fill
             className="object-cover opacity-30"
             priority
@@ -174,11 +240,11 @@ export default function ContractorAccommodationPage() {
               Contractor Accommodation in Bellville South
             </h1>
             <p className="text-xl text-gray-300 mb-4">
-              Purpose-built for construction crews, apprentices & technical teams.
+              Affordable contractor accommodation for long term stays.
               <br className="hidden md:block" />
-              Near Sacks Circle, Mill Park & John Thompson. From R530/night.
+              Weekly & monthly rates. Self-catering, secure parking for bakkies, WiFi.
             </p>
-            <p className="text-base text-gray-400 mb-8">Weekly cleaning, secure parking, WiFi included.</p>
+            <p className="text-base text-gray-400 mb-8">Near factories, TAC Business Park, Sacks Circle & Mill Park.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-sage-600 hover:bg-sage-700 text-white px-8 py-6 text-lg">
                 <a href="https://wa.me/27745245703?text=Hi%2C%20I%27m%20interested%20in%20contractor%20accommodation%20rates">
@@ -245,7 +311,7 @@ export default function ContractorAccommodationPage() {
                 <div className="relative h-40">
                   <Image
                     src={room.image || "/placeholder.svg"}
-                    alt={`${room.name} - Contractor accommodation Bellville`}
+                    alt={`${room.name} - Contractor accommodation Bellville South`}
                     fill
                     className="object-cover"
                   />
@@ -485,8 +551,8 @@ export default function ContractorAccommodationPage() {
             </Card>
             <Card className="p-4">
               <MapPin className="w-6 h-6 mx-auto mb-2 text-sage-600" />
-              <h3 className="font-bold text-sm">N1 Highway</h3>
-              <p className="text-sage-600 text-sm">Easy access</p>
+              <h3 className="font-bold text-sm">TAC Business Park</h3>
+              <p className="text-sage-600 text-sm">5 min drive</p>
             </Card>
             <Card className="p-4">
               <MapPin className="w-6 h-6 mx-auto mb-2 text-sage-600" />

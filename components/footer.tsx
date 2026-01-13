@@ -76,23 +76,33 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/contractor-accommodation-parow" className="hover:text-white transition-colors">
+                  Parow Contractors
+                </Link>
+              </li>
+              <li>
+                <Link href="/contractor-accommodation-stikland" className="hover:text-white transition-colors">
+                  Stikland Contractors
+                </Link>
+              </li>
+              <li>
+                <Link href="/contractor-accommodation-goodwood" className="hover:text-white transition-colors">
+                  Goodwood Contractors
+                </Link>
+              </li>
+              <li>
+                <Link href="/contractor-accommodation-northern-suburbs" className="hover:text-white transition-colors">
+                  Northern Suburbs
+                </Link>
+              </li>
+              <li>
                 <Link href="/monthly-accommodation" className="hover:text-white transition-colors">
                   Monthly Accommodation
                 </Link>
               </li>
               <li>
-                <Link href="/weekly-accommodation" className="hover:text-white transition-colors">
-                  Weekly Accommodation
-                </Link>
-              </li>
-              <li>
                 <Link href="/n1-city-accommodation" className="hover:text-white transition-colors">
                   N1 City Accommodation
-                </Link>
-              </li>
-              <li>
-                <Link href="/self-catering-rooms" className="hover:text-white transition-colors">
-                  Self-Catering Rooms
                 </Link>
               </li>
             </ul>
@@ -173,7 +183,8 @@ export function Footer() {
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 text-sm">
           <p>&copy; {currentYear} 60 on Kosmos Guesthouse. All rights reserved.</p>
           <p className="mt-2">
-            Contractor accommodation in Bellville South, Cape Town | Near N1, UWC & Tygerberg Hospital
+            Contractor accommodation in Bellville, Parow, Goodwood, Stikland & Northern Suburbs | Near N1, Sacks Circle
+            & Mill Park
           </p>
           <p className="mt-2">
             <Link href="/terms" className="hover:text-white transition-colors">

@@ -7,9 +7,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Homepage
     { url: "", priority: 1.0, freq: "daily" as const },
 
+    // Primary contractor pages - MONEY PAGES
     { url: "contractor-accommodation", priority: 1.0, freq: "daily" as const },
     { url: "contractor-accommodation-bellville", priority: 0.95, freq: "daily" as const },
     { url: "contractor-accommodation-bellville-south", priority: 0.95, freq: "daily" as const },
+    { url: "contractor-accommodation-parow", priority: 0.95, freq: "daily" as const },
+    { url: "contractor-accommodation-stikland", priority: 0.95, freq: "daily" as const },
+    { url: "contractor-accommodation-goodwood", priority: 0.95, freq: "daily" as const },
+    { url: "contractor-accommodation-northern-suburbs", priority: 0.95, freq: "daily" as const },
 
     // Core pages
     { url: "rooms", priority: 0.9, freq: "weekly" as const },
