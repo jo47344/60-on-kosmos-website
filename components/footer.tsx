@@ -64,23 +64,15 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Column 2: Priority Pages */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Accommodation</h3>
+            <h3 className="text-xl font-bold mb-4">Contractors</h3>
             <ul className="space-y-2 text-gray-300">
               <li>
-                <Link href="/uwc-student-accommodation" className="hover:text-white transition-colors">
-                  UWC Student Accommodation
-                </Link>
-              </li>
-              <li>
-                <Link href="/cput-accommodation" className="hover:text-white transition-colors">
-                  CPUT Accommodation
-                </Link>
-              </li>
-              <li>
-                <Link href="/tygerberg-hospital-accommodation" className="hover:text-white transition-colors">
-                  Tygerberg Hospital Accommodation
+                <Link
+                  href="/contractor-accommodation"
+                  className="hover:text-white transition-colors font-semibold text-sage-400"
+                >
+                  Contractor Accommodation
                 </Link>
               </li>
               <li>
@@ -89,50 +81,50 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/self-catering-rooms" className="hover:text-white transition-colors">
-                  Self-Catering Rooms
+                <Link href="/weekly-accommodation" className="hover:text-white transition-colors">
+                  Weekly Accommodation
                 </Link>
               </li>
               <li>
-                <Link href="/contractor-accommodation" className="hover:text-white transition-colors">
-                  Contractor Accommodation
+                <Link href="/n1-city-accommodation" className="hover:text-white transition-colors">
+                  N1 City Accommodation
+                </Link>
+              </li>
+              <li>
+                <Link href="/self-catering-rooms" className="hover:text-white transition-colors">
+                  Self-Catering Rooms
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Column 3: Quick Links */}
+          {/* Column 3: Other Guests */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Quick Links</h3>
+            <h3 className="text-xl font-bold mb-4">Other Guests</h3>
             <ul className="space-y-2 text-gray-300">
               <li>
+                <Link href="/uwc-student-accommodation" className="hover:text-white transition-colors">
+                  UWC Students
+                </Link>
+              </li>
+              <li>
+                <Link href="/cput-accommodation" className="hover:text-white transition-colors">
+                  CPUT Students
+                </Link>
+              </li>
+              <li>
+                <Link href="/tygerberg-hospital-accommodation" className="hover:text-white transition-colors">
+                  Tygerberg Hospital
+                </Link>
+              </li>
+              <li>
+                <Link href="/airport-accommodation" className="hover:text-white transition-colors">
+                  Airport Accommodation
+                </Link>
+              </li>
+              <li>
                 <Link href="/rooms" className="hover:text-white transition-colors">
-                  Our Rooms
-                </Link>
-              </li>
-              <li>
-                <Link href="/amenities" className="hover:text-white transition-colors">
-                  Amenities
-                </Link>
-              </li>
-              <li>
-                <Link href="/special-offers" className="hover:text-white transition-colors">
-                  Special Offers
-                </Link>
-              </li>
-              <li>
-                <Link href="/virtual-tour" className="hover:text-white transition-colors">
-                  Virtual Tour
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog" className="hover:text-white transition-colors">
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="hover:text-white transition-colors">
-                  Contact Us
+                  All Rooms
                 </Link>
               </li>
             </ul>
@@ -162,10 +154,10 @@ export function Footer() {
             {/* Book Direct CTA */}
             <div className="mt-6">
               <Link
-                href="/book-now"
+                href="/contractor-accommodation"
                 className="inline-block bg-sage-600 hover:bg-sage-700 text-white px-6 py-3 rounded-lg transition w-full text-center font-semibold"
               >
-                Book Direct & Save
+                Contractor Rates
               </Link>
             </div>
           </div>
@@ -175,7 +167,7 @@ export function Footer() {
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 text-sm">
           <p>&copy; {currentYear} 60 on Kosmos Guesthouse. All rights reserved.</p>
           <p className="mt-2">
-            Self-catering accommodation in Bellville South, Cape Town | Near UWC, CPUT & Tygerberg Hospital
+            Contractor accommodation in Bellville South, Cape Town | Near N1, UWC & Tygerberg Hospital
           </p>
         </div>
       </div>

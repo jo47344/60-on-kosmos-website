@@ -45,6 +45,12 @@ export function Navigation() {
               Rooms
             </Link>
             <Link
+              href="/contractor-accommodation"
+              className="px-4 py-2 rounded-lg hover:bg-white/10 transition-colors duration-200 font-medium"
+            >
+              Contractors
+            </Link>
+            <Link
               href="/amenities"
               className="px-4 py-2 rounded-lg hover:bg-white/10 transition-colors duration-200 font-medium"
             >
@@ -90,14 +96,6 @@ export function Navigation() {
                       <div className="font-medium">Student FAQ</div>
                       <div className="text-xs text-gray-500">Common questions</div>
                     </Link>
-                    <Link
-                      href="/special-offers"
-                      className="block px-4 py-3 text-gray-700 hover:bg-[#7c9885]/10 transition-colors border-t border-gray-100"
-                      onClick={() => setStudentOpen(false)}
-                    >
-                      <div className="font-medium text-[#7c9885]">Student Specials</div>
-                      <div className="text-xs text-gray-500">Exam & graduation rates</div>
-                    </Link>
                   </div>
                 </>
               )}
@@ -117,59 +115,35 @@ export function Navigation() {
 
               {resourcesOpen && (
                 <>
-                  {/* Backdrop */}
                   <div className="fixed inset-0 z-10" onClick={() => setResourcesOpen(false)} />
-                  {/* Dropdown Menu */}
                   <div className="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-xl py-2 z-20 animate-in fade-in slide-in-from-top-2 duration-200">
                     <Link
                       href="/local-info"
                       className="block px-4 py-3 text-gray-700 hover:bg-[#7c9885]/10 transition-colors"
                       onClick={() => setResourcesOpen(false)}
                     >
-                      <div className="flex items-center gap-2">
-                        <span>📍</span>
-                        <span className="font-medium">Local Info</span>
-                      </div>
-                    </Link>
-                    <Link
-                      href="/things-to-do-bellville-south"
-                      className="block px-4 py-3 text-gray-700 hover:bg-[#7c9885]/10 transition-colors"
-                      onClick={() => setResourcesOpen(false)}
-                    >
-                      <div className="flex items-center gap-2">
-                        <span>🎯</span>
-                        <span className="font-medium">Things to Do</span>
-                      </div>
+                      <div className="font-medium">Local Info</div>
                     </Link>
                     <Link
                       href="/virtual-tour"
                       className="block px-4 py-3 text-gray-700 hover:bg-[#7c9885]/10 transition-colors"
                       onClick={() => setResourcesOpen(false)}
                     >
-                      <div className="flex items-center gap-2">
-                        <span>🏠</span>
-                        <span className="font-medium">Virtual Tour</span>
-                      </div>
+                      <div className="font-medium">Virtual Tour</div>
                     </Link>
                     <Link
                       href="/faq"
                       className="block px-4 py-3 text-gray-700 hover:bg-[#7c9885]/10 transition-colors"
                       onClick={() => setResourcesOpen(false)}
                     >
-                      <div className="flex items-center gap-2">
-                        <span>❓</span>
-                        <span className="font-medium">FAQ</span>
-                      </div>
+                      <div className="font-medium">FAQ</div>
                     </Link>
                     <Link
                       href="/blog"
                       className="block px-4 py-3 text-gray-700 hover:bg-[#7c9885]/10 transition-colors"
                       onClick={() => setResourcesOpen(false)}
                     >
-                      <div className="flex items-center gap-2">
-                        <span>📝</span>
-                        <span className="font-medium">Blog</span>
-                      </div>
+                      <div className="font-medium">Blog</div>
                     </Link>
                   </div>
                 </>
@@ -210,21 +184,28 @@ export function Navigation() {
               className="block px-4 py-3 rounded-lg hover:bg-white/10 transition-colors font-medium"
               onClick={() => setIsOpen(false)}
             >
-              🏠 Home
+              Home
             </Link>
             <Link
               href="/rooms"
               className="block px-4 py-3 rounded-lg hover:bg-white/10 transition-colors font-medium"
               onClick={() => setIsOpen(false)}
             >
-              🛏️ Rooms
+              Rooms
+            </Link>
+            <Link
+              href="/contractor-accommodation"
+              className="block px-4 py-3 rounded-lg bg-white/10 hover:bg-white/20 transition-colors font-bold"
+              onClick={() => setIsOpen(false)}
+            >
+              Contractors
             </Link>
             <Link
               href="/amenities"
               className="block px-4 py-3 rounded-lg hover:bg-white/10 transition-colors font-medium"
               onClick={() => setIsOpen(false)}
             >
-              ⭐ Amenities
+              Amenities
             </Link>
 
             <div className="border-t border-white/10 mt-2 pt-2">
@@ -234,32 +215,24 @@ export function Navigation() {
                 className="block px-6 py-3 rounded-lg hover:bg-white/10 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
-                🎓 UWC Accommodation
+                UWC Accommodation
               </Link>
               <Link
                 href="/near-cput-bellville"
                 className="block px-6 py-3 rounded-lg hover:bg-white/10 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
-                🎓 CPUT Accommodation
+                CPUT Accommodation
               </Link>
               <Link
                 href="/student-faq"
                 className="block px-6 py-3 rounded-lg hover:bg-white/10 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
-                ❓ Student FAQ
-              </Link>
-              <Link
-                href="/special-offers"
-                className="block px-6 py-3 rounded-lg hover:bg-white/10 transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                💰 Student Specials
+                Student FAQ
               </Link>
             </div>
 
-            {/* Mobile Resources Section */}
             <div className="border-t border-white/10 mt-2 pt-2">
               <div className="px-4 py-2 text-sm font-semibold opacity-75">Resources</div>
               <Link
@@ -267,35 +240,28 @@ export function Navigation() {
                 className="block px-6 py-3 rounded-lg hover:bg-white/10 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
-                📍 Local Info
-              </Link>
-              <Link
-                href="/things-to-do-bellville-south"
-                className="block px-6 py-3 rounded-lg hover:bg-white/10 transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                🎯 Things to Do
+                Local Info
               </Link>
               <Link
                 href="/virtual-tour"
                 className="block px-6 py-3 rounded-lg hover:bg-white/10 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
-                🏠 Virtual Tour
+                Virtual Tour
               </Link>
               <Link
                 href="/faq"
                 className="block px-6 py-3 rounded-lg hover:bg-white/10 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
-                ❓ FAQ
+                FAQ
               </Link>
               <Link
                 href="/blog"
                 className="block px-6 py-3 rounded-lg hover:bg-white/10 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
-                📝 Blog
+                Blog
               </Link>
             </div>
 
@@ -304,14 +270,14 @@ export function Navigation() {
               className="block px-4 py-3 rounded-lg hover:bg-white/10 transition-colors font-medium border-t border-white/10 mt-2 pt-4"
               onClick={() => setIsOpen(false)}
             >
-              📞 Contact
+              Contact
             </Link>
             <Link
               href="/book-now"
               className="block px-4 py-3 bg-white text-[#7c9885] rounded-lg hover:bg-gray-100 transition-colors font-bold text-center shadow-lg mt-2"
               onClick={() => setIsOpen(false)}
             >
-              📅 Book Now
+              Book Now
             </Link>
           </div>
         </div>
