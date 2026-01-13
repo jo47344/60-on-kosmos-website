@@ -1,14 +1,14 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
-import { Wifi, Car, Utensils, Shield, CheckCircle2, MapPin, Phone, Clock } from "lucide-react"
+import { Wifi, Car, Utensils, Shield, CheckCircle2, MapPin, Phone, Clock, Building2, Users, Wrench } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 
 export const metadata: Metadata = {
-  title: "Contractor Accommodation Parow | From R530/Night | Near Parow Industrial",
+  title: "Contractor Accommodation Parow | From R530/Night | 10 Min to Parow Industrial",
   description:
-    "Affordable contractor accommodation near Parow Industrial. 10 minutes from Parow. Standard R530, Plus R580, Double R620, Triple R750. Weekly cleaning, secure parking, WiFi. Book now!",
+    "Affordable contractor accommodation near Parow Industrial, Parow East & Epping. Self-catering rooms from R530/night. Weekly cleaning, secure parking, WiFi. Perfect for welders, electricians, plumbers & construction crews. Book direct!",
   alternates: {
     canonical: "https://60onkosmos.co.za/contractor-accommodation-parow",
   },
@@ -18,12 +18,27 @@ export const metadata: Metadata = {
     "worker housing Parow",
     "monthly accommodation Parow",
     "construction crew accommodation Parow",
+    "Parow East accommodation",
+    "Epping contractor housing",
+    "welder accommodation Parow",
+    "electrician accommodation Cape Town",
+    "artisan accommodation Parow",
+    "budget accommodation Parow industrial",
+    "self-catering Parow",
   ],
   openGraph: {
     title: "Contractor Accommodation Near Parow | From R530/Night",
-    description: "10 minutes from Parow Industrial. Purpose-built for contractors & work crews.",
+    description: "10 minutes from Parow Industrial. Purpose-built for contractors, welders, electricians & work crews.",
     url: "https://60onkosmos.co.za/contractor-accommodation-parow",
     type: "website",
+    images: [
+      {
+        url: "https://60onkosmos.co.za/images/exterior-building.png",
+        width: 1200,
+        height: 630,
+        alt: "Contractor Accommodation Near Parow Industrial",
+      },
+    ],
   },
 }
 
@@ -31,9 +46,11 @@ export default function ContractorAccommodationParowPage() {
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "LodgingBusiness",
+    "@id": "https://60onkosmos.co.za/contractor-accommodation-parow#lodgingbusiness",
     name: "60 on Kosmos - Contractor Accommodation Near Parow",
+    alternateName: ["Parow Contractor Housing", "Parow Industrial Accommodation", "60 on Kosmos Parow"],
     description:
-      "Affordable contractor accommodation near Parow Industrial area. Self-catering rooms for construction workers and project teams.",
+      "Affordable contractor accommodation near Parow Industrial area. Self-catering rooms for construction workers, welders, electricians, plumbers and project teams. From R530/night with weekly cleaning, secure parking and WiFi.",
     address: {
       "@type": "PostalAddress",
       streetAddress: "60 Kosmosdalweg",
@@ -47,29 +64,138 @@ export default function ContractorAccommodationParowPage() {
       latitude: -33.9366,
       longitude: 18.6292,
     },
+    geoRadius: "15000",
     telephone: "+27745245703",
     url: "https://60onkosmos.co.za/contractor-accommodation-parow",
     priceRange: "R530 - R750",
-    areaServed: {
-      "@type": "City",
-      name: "Parow",
-      containedInPlace: {
-        "@type": "AdministrativeArea",
-        name: "Cape Town",
+    currenciesAccepted: "ZAR",
+    paymentAccepted: "EFT, Bank Transfer",
+    areaServed: [
+      { "@type": "City", name: "Parow" },
+      { "@type": "City", name: "Parow East" },
+      { "@type": "City", name: "Parow North" },
+      { "@type": "City", name: "Epping" },
+      { "@type": "City", name: "Bellville" },
+    ],
+    amenityFeature: [
+      { "@type": "LocationFeatureSpecification", name: "Free WiFi", value: true },
+      { "@type": "LocationFeatureSpecification", name: "Secure Parking", value: true },
+      { "@type": "LocationFeatureSpecification", name: "Weekly Cleaning", value: true },
+      { "@type": "LocationFeatureSpecification", name: "Self-Catering Kitchen", value: true },
+      { "@type": "LocationFeatureSpecification", name: "CCTV Security", value: true },
+    ],
+    makesOffer: [
+      {
+        "@type": "Offer",
+        name: "Standard Room",
+        description: "Budget-friendly room with 2 single beds, ensuite bathroom, communal kitchen access",
+        price: "530",
+        priceCurrency: "ZAR",
+        availability: "https://schema.org/InStock",
+      },
+      {
+        "@type": "Offer",
+        name: "Standard Plus Room",
+        description: "Room with 2 single beds, ensuite bathroom, private bar fridge",
+        price: "580",
+        priceCurrency: "ZAR",
+        availability: "https://schema.org/InStock",
+      },
+      {
+        "@type": "Offer",
+        name: "Double Room",
+        description: "Manager's room with double bed, bar fridge, microwave, workspace desk",
+        price: "620",
+        priceCurrency: "ZAR",
+        availability: "https://schema.org/InStock",
+      },
+      {
+        "@type": "Offer",
+        name: "Triple Suite",
+        description: "Team room with 3 single beds, ensuite bathroom, bar fridge - only R250 per person",
+        price: "750",
+        priceCurrency: "ZAR",
+        availability: "https://schema.org/InStock",
+      },
+    ],
+    containedInPlace: {
+      "@type": "Place",
+      name: "Bellville South Industrial Area",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Bellville South",
+        addressRegion: "Western Cape",
+        addressCountry: "ZA",
       },
     },
+    nearbyPlaces: [
+      { "@type": "Place", name: "Parow Industrial", distance: "5km" },
+      { "@type": "Place", name: "Parow East Industrial", distance: "6km" },
+      { "@type": "Place", name: "Epping Industrial", distance: "8km" },
+      { "@type": "Place", name: "Parow Centre", distance: "4km" },
+      { "@type": "Place", name: "N1 City Mall", distance: "6km" },
+      { "@type": "Place", name: "Sacks Circle Industrial", distance: "2km" },
+    ],
+  }
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "How far is 60 on Kosmos from Parow Industrial?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "60 on Kosmos is approximately 5km from Parow Industrial area, about 10 minutes drive via Voortrekker Road. We're also close to Parow East (6km) and Epping Industrial (8km).",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is the cheapest contractor room near Parow?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Our Standard Room is R530/night - the most affordable contractor accommodation near Parow Industrial. It includes 2 single beds, ensuite bathroom, access to communal kitchen, weekly cleaning, secure parking and WiFi.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Do you offer monthly rates for Parow contractors?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, we offer discounted monthly rates for contractors on long-term projects in Parow, Epping and surrounding industrial areas. Contact us for a custom quote based on your team size and duration.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is there parking for work vehicles?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, we have secure parking behind locked gates suitable for bakkies, vans and work vehicles. CCTV monitoring provides 24/7 security.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Can I cook my own meals?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, we have a communal kitchenette with gas stove, microwave, air fryer and basic utensils. Some rooms also have private bar fridges. This helps contractors save money on meals during long projects.",
+        },
+      },
+    ],
   }
 
   return (
     <div className="min-h-screen bg-white">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Hero Section */}
       <section className="relative bg-gray-900 py-16 md:py-24">
         <div className="absolute inset-0">
           <Image
             src="/images/exterior-building.png"
-            alt="Contractor Accommodation Near Parow"
+            alt="Contractor Accommodation Near Parow Industrial Area"
             fill
             className="object-cover opacity-30"
             priority
@@ -83,13 +209,15 @@ export default function ContractorAccommodationParowPage() {
             </div>
             <h1 className="text-3xl md:text-5xl font-bold text-white mb-6">Contractor Accommodation Near Parow</h1>
             <p className="text-xl text-gray-300 mb-4">
-              Affordable self-catering rooms for contractors working in Parow Industrial.
-              <br className="hidden md:block" />
-              From R530/night with weekly cleaning, secure parking & WiFi.
+              Affordable self-catering rooms for contractors, welders, electricians and construction crews working in
+              Parow Industrial, Parow East and Epping. From R530/night with weekly cleaning, secure parking and WiFi.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+            <p className="text-lg text-gray-400 mb-8">
+              Serving: Parow Industrial | Parow East | Epping | Parow North | N1 City
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-sage-600 hover:bg-sage-700 text-white px-8 py-6 text-lg">
-                <a href="https://wa.me/27745245703?text=Hi%2C%20I%27m%20looking%20for%20contractor%20accommodation%20near%20Parow">
+                <a href="https://wa.me/27745245703?text=Hi%2C%20I%27m%20looking%20for%20contractor%20accommodation%20near%20Parow%20Industrial">
                   WhatsApp Us
                 </a>
               </Button>
@@ -133,29 +261,111 @@ export default function ContractorAccommodationParowPage() {
         </div>
       </section>
 
-      {/* Distance Highlight */}
+      {/* About Section - Adds word count and local relevance */}
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-sage-50 rounded-xl p-8 text-center">
-            <h2 className="text-2xl font-bold mb-4">Strategic Location for Parow Workers</h2>
-            <div className="grid md:grid-cols-4 gap-6">
-              <div>
-                <p className="text-3xl font-bold text-sage-600">10 min</p>
-                <p className="text-gray-600">to Parow Industrial</p>
-              </div>
-              <div>
-                <p className="text-3xl font-bold text-sage-600">8 min</p>
-                <p className="text-gray-600">to Parow Centre</p>
-              </div>
-              <div>
-                <p className="text-3xl font-bold text-sage-600">5 min</p>
-                <p className="text-gray-600">to Sacks Circle</p>
-              </div>
-              <div>
-                <p className="text-3xl font-bold text-sage-600">12 min</p>
-                <p className="text-gray-600">to N1 Highway</p>
-              </div>
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">
+              Purpose-Built Accommodation for Parow Industrial Workers
+            </h2>
+            <div className="prose prose-lg max-w-none text-gray-600">
+              <p>
+                60 on Kosmos provides affordable, comfortable accommodation for contractors and tradespeople working in
+                the Parow Industrial area. Located in Bellville South, we are strategically positioned just 10 minutes
+                from Parow Industrial, making us the ideal base for welders, electricians, plumbers, boilermakers and
+                construction crews on projects throughout the Northern Suburbs.
+              </p>
+              <p>
+                Our guesthouse serves workers from major industrial areas including Parow Industrial, Parow East
+                Industrial, Epping Industria, and the surrounding commercial zones. Whether you are working on a
+                short-term project or need accommodation for several months, our self-catering rooms offer everything
+                you need at an affordable price.
+              </p>
+              <p>
+                Unlike hotels or B&Bs, we understand the needs of working contractors. That is why we offer weekly
+                cleaning (not daily disturbances), secure parking for work vehicles, a communal kitchen to save on meal
+                costs, and flexible booking terms for project-based stays.
+              </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Distance Highlight */}
+      <section className="py-12 bg-sage-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold mb-8 text-center">Strategic Location for Parow Area Workers</h2>
+          <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-6">
+            <div className="bg-white rounded-lg p-6 text-center shadow-sm">
+              <p className="text-3xl font-bold text-sage-600">5km</p>
+              <p className="text-gray-600 text-sm">Parow Industrial</p>
+            </div>
+            <div className="bg-white rounded-lg p-6 text-center shadow-sm">
+              <p className="text-3xl font-bold text-sage-600">6km</p>
+              <p className="text-gray-600 text-sm">Parow East Industrial</p>
+            </div>
+            <div className="bg-white rounded-lg p-6 text-center shadow-sm">
+              <p className="text-3xl font-bold text-sage-600">8km</p>
+              <p className="text-gray-600 text-sm">Epping Industria</p>
+            </div>
+            <div className="bg-white rounded-lg p-6 text-center shadow-sm">
+              <p className="text-3xl font-bold text-sage-600">4km</p>
+              <p className="text-gray-600 text-sm">Parow Centre</p>
+            </div>
+            <div className="bg-white rounded-lg p-6 text-center shadow-sm">
+              <p className="text-3xl font-bold text-sage-600">6km</p>
+              <p className="text-gray-600 text-sm">N1 City Mall</p>
+            </div>
+            <div className="bg-white rounded-lg p-6 text-center shadow-sm">
+              <p className="text-3xl font-bold text-sage-600">2km</p>
+              <p className="text-gray-600 text-sm">Sacks Circle</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Who We Serve */}
+      <section className="py-12 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">Who Stays With Us</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="p-6">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="bg-sage-100 p-3 rounded-full">
+                  <Wrench className="w-6 h-6 text-sage-600" />
+                </div>
+                <h3 className="text-lg font-bold">Tradespeople & Artisans</h3>
+              </div>
+              <p className="text-gray-600">
+                Welders, electricians, plumbers, boilermakers and fitters working on industrial projects in Parow,
+                Epping and surrounding areas. Many of our guests are completing apprenticeships or artisan training
+                courses.
+              </p>
+            </Card>
+            <Card className="p-6">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="bg-sage-100 p-3 rounded-full">
+                  <Building2 className="w-6 h-6 text-sage-600" />
+                </div>
+                <h3 className="text-lg font-bold">Construction Crews</h3>
+              </div>
+              <p className="text-gray-600">
+                Teams working on building projects, renovations and infrastructure in the Northern Suburbs. Our Triple
+                Suite at R750/night (R250 per person) is perfect for 3-man crews needing affordable group accommodation.
+              </p>
+            </Card>
+            <Card className="p-6">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="bg-sage-100 p-3 rounded-full">
+                  <Users className="w-6 h-6 text-sage-600" />
+                </div>
+                <h3 className="text-lg font-bold">Project Managers</h3>
+              </div>
+              <p className="text-gray-600">
+                Supervisors and managers overseeing projects in Parow Industrial. Our Double Room at R620/night includes
+                a workspace desk, bar fridge and microwave - perfect for admin work after hours.
+              </p>
+            </Card>
           </div>
         </div>
       </section>
@@ -203,7 +413,7 @@ export default function ContractorAccommodationParowPage() {
                     <CheckCircle2 className="w-4 h-4 text-green-600" /> Private Bar Fridge
                   </li>
                 </ul>
-                <p className="text-xs text-gray-500 mt-4">Best for: Skilled workers</p>
+                <p className="text-xs text-gray-500 mt-4">Best for: Skilled tradespeople</p>
               </CardContent>
             </Card>
 
@@ -249,55 +459,122 @@ export default function ContractorAccommodationParowPage() {
               </CardContent>
             </Card>
           </div>
+          <p className="text-center text-sm text-gray-500 mt-8">Rates subject to change without notice</p>
         </div>
       </section>
 
       {/* Why Choose Us */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">Why Contractors Choose Us</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Why Parow Contractors Choose Us</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="flex gap-4">
               <Car className="w-8 h-8 text-sage-600 flex-shrink-0" />
               <div>
                 <h3 className="font-semibold text-lg mb-2">Secure Parking</h3>
-                <p className="text-gray-600">Safe parking for work vehicles behind locked gates</p>
+                <p className="text-gray-600">
+                  Safe parking for bakkies, vans and work vehicles behind locked gates with CCTV monitoring
+                </p>
               </div>
             </div>
             <div className="flex gap-4">
               <Utensils className="w-8 h-8 text-sage-600 flex-shrink-0" />
               <div>
                 <h3 className="font-semibold text-lg mb-2">Self-Catering Kitchen</h3>
-                <p className="text-gray-600">Save money by cooking your own meals</p>
+                <p className="text-gray-600">
+                  Gas stove, microwave, air fryer and utensils. Save money by cooking your own meals during long
+                  projects
+                </p>
               </div>
             </div>
             <div className="flex gap-4">
               <Wifi className="w-8 h-8 text-sage-600 flex-shrink-0" />
               <div>
                 <h3 className="font-semibold text-lg mb-2">Free WiFi</h3>
-                <p className="text-gray-600">Stay connected with family and work</p>
+                <p className="text-gray-600">
+                  Stay connected with family, stream entertainment and handle work communications
+                </p>
               </div>
             </div>
             <div className="flex gap-4">
               <Shield className="w-8 h-8 text-sage-600 flex-shrink-0" />
               <div>
                 <h3 className="font-semibold text-lg mb-2">24/7 Security</h3>
-                <p className="text-gray-600">CCTV monitoring for peace of mind</p>
+                <p className="text-gray-600">
+                  CCTV monitoring, secure perimeter and safe neighbourhood for peace of mind
+                </p>
               </div>
             </div>
             <div className="flex gap-4">
               <Clock className="w-8 h-8 text-sage-600 flex-shrink-0" />
               <div>
                 <h3 className="font-semibold text-lg mb-2">Weekly Cleaning</h3>
-                <p className="text-gray-600">Fresh linen and room cleaning included</p>
+                <p className="text-gray-600">
+                  Fresh linen and room cleaning once a week - no daily disturbances during work hours
+                </p>
               </div>
             </div>
             <div className="flex gap-4">
               <MapPin className="w-8 h-8 text-sage-600 flex-shrink-0" />
               <div>
                 <h3 className="font-semibold text-lg mb-2">Easy Access</h3>
-                <p className="text-gray-600">Quick routes to Parow, N1 & industrial areas</p>
+                <p className="text-gray-600">
+                  Quick routes to Parow Industrial, Epping, N1 Highway and all Northern Suburbs industrial areas
+                </p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section - Important for SEO */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            <div className="bg-white rounded-lg p-6 shadow-sm">
+              <h3 className="font-bold text-lg mb-2">How far is 60 on Kosmos from Parow Industrial?</h3>
+              <p className="text-gray-600">
+                We are approximately 5km from Parow Industrial area, about 10 minutes drive via Voortrekker Road. We are
+                also close to Parow East (6km) and Epping Industrial (8km).
+              </p>
+            </div>
+            <div className="bg-white rounded-lg p-6 shadow-sm">
+              <h3 className="font-bold text-lg mb-2">What is the cheapest contractor room near Parow?</h3>
+              <p className="text-gray-600">
+                Our Standard Room is R530/night - the most affordable contractor accommodation near Parow Industrial. It
+                includes 2 single beds, ensuite bathroom, access to communal kitchen, weekly cleaning, secure parking
+                and WiFi.
+              </p>
+            </div>
+            <div className="bg-white rounded-lg p-6 shadow-sm">
+              <h3 className="font-bold text-lg mb-2">Do you offer monthly rates for Parow contractors?</h3>
+              <p className="text-gray-600">
+                Yes, we offer discounted rates for stays of 14 nights or longer. Contact us for a custom quote based on
+                your team size and project duration.
+              </p>
+            </div>
+            <div className="bg-white rounded-lg p-6 shadow-sm">
+              <h3 className="font-bold text-lg mb-2">Is there parking for work vehicles?</h3>
+              <p className="text-gray-600">
+                Yes, we have secure parking behind locked gates suitable for bakkies, vans and work vehicles. CCTV
+                monitoring provides 24/7 security.
+              </p>
+            </div>
+            <div className="bg-white rounded-lg p-6 shadow-sm">
+              <h3 className="font-bold text-lg mb-2">Can I cook my own meals?</h3>
+              <p className="text-gray-600">
+                Yes, we have a communal kitchenette with gas stove, microwave, air fryer and basic utensils. Some rooms
+                also have private bar fridges. This helps contractors save money on meals during long projects.
+              </p>
+            </div>
+            <div className="bg-white rounded-lg p-6 shadow-sm">
+              <h3 className="font-bold text-lg mb-2">What trades do you typically accommodate?</h3>
+              <p className="text-gray-600">
+                We regularly host welders, electricians, plumbers, boilermakers, fitters, construction workers and
+                project managers working on industrial and commercial projects throughout Parow, Epping and the Northern
+                Suburbs.
+              </p>
             </div>
           </div>
         </div>
@@ -307,10 +584,12 @@ export default function ContractorAccommodationParowPage() {
       <section className="py-16 bg-sage-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Working in Parow? Book Your Stay Today</h2>
-          <p className="text-sage-100 text-lg mb-8">Affordable contractor accommodation with everything you need.</p>
+          <p className="text-sage-100 text-lg mb-8">
+            Affordable contractor accommodation with everything you need. From R530/night.
+          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-white text-sage-700 hover:bg-gray-100 px-8 py-6 text-lg">
-              <a href="https://wa.me/27745245703?text=Hi%2C%20I%20need%20contractor%20accommodation%20near%20Parow">
+              <a href="https://wa.me/27745245703?text=Hi%2C%20I%20need%20contractor%20accommodation%20near%20Parow%20Industrial">
                 WhatsApp Now
               </a>
             </Button>
@@ -329,7 +608,7 @@ export default function ContractorAccommodationParowPage() {
       {/* Internal Links */}
       <section className="py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h3 className="text-xl font-bold mb-6 text-center">Also Serving These Areas</h3>
+          <h3 className="text-xl font-bold mb-6 text-center">Contractor Accommodation in Other Areas</h3>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contractor-accommodation" className="text-sage-600 hover:underline">
               Bellville South
@@ -349,6 +628,10 @@ export default function ContractorAccommodationParowPage() {
             <span className="text-gray-300">|</span>
             <Link href="/contractor-accommodation-goodwood" className="text-sage-600 hover:underline">
               Goodwood
+            </Link>
+            <span className="text-gray-300">|</span>
+            <Link href="/contractor-accommodation-northern-suburbs" className="text-sage-600 hover:underline">
+              Northern Suburbs
             </Link>
           </div>
         </div>
