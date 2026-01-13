@@ -40,7 +40,7 @@ export default function HomePage() {
   const roomTypes = [
     {
       name: "Standard Twin Room",
-      price: "From R550/night",
+      price: "From R530/night",
       image: "/images/twin-room-yellow.png",
       features: ["2 single beds", "Ensuite bathroom", "Free WiFi", "Communal kitchen access"],
     },
@@ -81,7 +81,7 @@ export default function HomePage() {
               <span className="text-sage-300">Guesthouse Bellville South</span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8">
-              Affordable ensuite accommodation for contractors, students & professionals | From R550/night
+              Affordable ensuite accommodation for contractors, students & professionals | From R530/night
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
               <Button
@@ -126,7 +126,7 @@ export default function HomePage() {
                 </div>
                 <div>
                   <h2 className="text-xl sm:text-2xl font-bold">Contractor Accommodation</h2>
-                  <p className="text-gray-300">Standard R550 | Double R620 | Triple R750/night</p>
+                  <p className="text-gray-300">Standard R530 | Standard Plus R580 | Double R620 | Triple R750/night</p>
                 </div>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
@@ -352,7 +352,7 @@ export default function HomePage() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">Ready to Book?</h2>
             <p className="text-base sm:text-lg mb-6 sm:mb-8 opacity-90">
-              Contractors: Standard R550 | Double R620 | Triple R750/night
+              Contractors: Standard R530 | Standard Plus R580 | Double R620 | Triple R750/night
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <Button

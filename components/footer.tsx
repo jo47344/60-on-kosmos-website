@@ -151,8 +151,14 @@ export function Footer() {
               </p>
             </div>
 
+            <div className="mt-4">
+              <Link href="/terms" className="text-sage-400 hover:text-white transition-colors text-sm">
+                Terms & House Rules
+              </Link>
+            </div>
+
             {/* Book Direct CTA */}
-            <div className="mt-6">
+            <div className="mt-4">
               <Link
                 href="/contractor-accommodation"
                 className="inline-block bg-sage-600 hover:bg-sage-700 text-white px-6 py-3 rounded-lg transition w-full text-center font-semibold"
@@ -168,6 +174,13 @@ export function Footer() {
           <p>&copy; {currentYear} 60 on Kosmos Guesthouse. All rights reserved.</p>
           <p className="mt-2">
             Contractor accommodation in Bellville South, Cape Town | Near N1, UWC & Tygerberg Hospital
+          </p>
+          <p className="mt-2">
+            <Link href="/terms" className="hover:text-white transition-colors">
+              Terms & House Rules
+            </Link>
+            {" | "}
+            <span>Rates subject to change without notice</span>
           </p>
         </div>
       </div>
