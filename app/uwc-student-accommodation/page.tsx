@@ -22,7 +22,7 @@ export default function UWCStudentAccommodationPage() {
           <div className="text-center max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 bg-sage-100 text-sage-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <GraduationCap className="w-4 h-4" />
-              <span>Near UWC Campus</span>
+              <span>Official UWC Student Accommodation Partner</span>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Student Accommodation Near UWC Bellville
