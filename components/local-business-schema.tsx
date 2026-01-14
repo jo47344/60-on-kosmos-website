@@ -4,15 +4,21 @@ export function LocalBusinessSchema() {
     "@type": ["LodgingBusiness", "LocalBusiness"],
     "@id": "https://60onkosmos.co.za/#business",
     name: "60 on Kosmos Guesthouse",
-    alternateName: ["60 on Kosmos", "60 on Kosmos Contractor Accommodation", "60 on Kosmos Bellville South"],
+    alternateName: [
+      "60 on Kosmos",
+      "60 on Kosmos Contractor Accommodation",
+      "60 on Kosmos Bellville South",
+      "Contractor Accommodation Bellville",
+      "Contractor Lodging Cape Town",
+    ],
     description:
-      "Contractor accommodation in Bellville South, Cape Town. Near Sacks Circle, Mill Park industrial areas. Weekly cleaning, secure parking, free WiFi. Monthly rates from R530/night. Ideal for construction workers, apprentices at John Thompson and Northlink College.",
+      "Contractor accommodation in Bellville South, Cape Town. Near Sacks Circle, Mill Park, Stikland, Parow Industria. Weekly cleaning, secure parking, free WiFi. Monthly rates from R530/night. Ideal for construction workers, boilermakers, welders, electricians, apprentices at John Thompson and Northlink College.",
     url: "https://60onkosmos.co.za",
     telephone: "+27219485752",
     email: "info@60onkosmos.co.za",
     priceRange: "R530-R750",
     currenciesAccepted: "ZAR",
-    paymentAccepted: "EFT, Bank Transfer, Cash",
+    paymentAccepted: "EFT, Bank Transfer",
     address: {
       "@type": "PostalAddress",
       streetAddress: "60 Kosmos Street",
@@ -26,15 +32,42 @@ export function LocalBusinessSchema() {
       latitude: -33.9347,
       longitude: 18.6489,
     },
-    areaServed: {
-      "@type": "GeoCircle",
-      geoMidpoint: {
-        "@type": "GeoCoordinates",
-        latitude: -33.9347,
-        longitude: 18.6489,
+    areaServed: [
+      {
+        "@type": "GeoCircle",
+        geoMidpoint: {
+          "@type": "GeoCoordinates",
+          latitude: -33.9347,
+          longitude: 18.6489,
+        },
+        geoRadius: "20000",
       },
-      geoRadius: "15000",
-    },
+      {
+        "@type": "City",
+        name: "Bellville",
+        containedInPlace: { "@type": "State", name: "Western Cape" },
+      },
+      {
+        "@type": "City",
+        name: "Parow",
+        containedInPlace: { "@type": "State", name: "Western Cape" },
+      },
+      {
+        "@type": "City",
+        name: "Goodwood",
+        containedInPlace: { "@type": "State", name: "Western Cape" },
+      },
+      {
+        "@type": "City",
+        name: "Kuilsriver",
+        containedInPlace: { "@type": "State", name: "Western Cape" },
+      },
+      {
+        "@type": "City",
+        name: "Stikland",
+        containedInPlace: { "@type": "State", name: "Western Cape" },
+      },
+    ],
     containedInPlace: [
       {
         "@type": "Place",
@@ -42,6 +75,15 @@ export function LocalBusinessSchema() {
         address: {
           "@type": "PostalAddress",
           addressLocality: "Bellville South",
+          addressRegion: "Western Cape",
+          addressCountry: "ZA",
+        },
+      },
+      {
+        "@type": "Place",
+        name: "Cape Town Northern Suburbs",
+        address: {
+          "@type": "PostalAddress",
           addressRegion: "Western Cape",
           addressCountry: "ZA",
         },
@@ -66,7 +108,7 @@ export function LocalBusinessSchema() {
       "https://www.facebook.com/60onkosmos",
       "https://www.airbnb.com/rooms/1332667439996159511",
       "https://www.booking.com/hotel/za/60-on-kosmos-cape-town.html",
-      "https://g.page/60onkosmos",
+      "https://maps.google.com/?cid=60onkosmos",
     ],
     amenityFeature: [
       { "@type": "LocationFeatureSpecification", name: "Free WiFi", value: true },
@@ -92,7 +134,8 @@ export function LocalBusinessSchema() {
       {
         "@type": "Offer",
         name: "Contractor Monthly Accommodation",
-        description: "Monthly accommodation for construction workers and contractors near Sacks Circle and Mill Park",
+        description:
+          "Monthly accommodation for construction workers, contractors, boilermakers near Sacks Circle, Mill Park, Stikland",
         priceSpecification: {
           "@type": "UnitPriceSpecification",
           price: "530",
@@ -102,8 +145,9 @@ export function LocalBusinessSchema() {
       },
       {
         "@type": "Offer",
-        name: "Apprentice Accommodation",
-        description: "Accommodation for apprentices attending courses at John Thompson and Northlink College",
+        name: "Apprentice Training Accommodation",
+        description:
+          "Accommodation for apprentices attending boilermaker, welding, electrical courses at John Thompson and Northlink College",
         priceSpecification: {
           "@type": "UnitPriceSpecification",
           price: "530",
@@ -113,8 +157,20 @@ export function LocalBusinessSchema() {
       },
       {
         "@type": "Offer",
-        name: "Weekly Worker Accommodation",
-        description: "Weekly stays for industrial workers in Bellville South area",
+        name: "Construction Crew Housing",
+        description: "Housing for construction crews working in Bellville, Parow, Stikland, Goodwood, Kuilsriver",
+        priceSpecification: {
+          "@type": "UnitPriceSpecification",
+          price: "530",
+          priceCurrency: "ZAR",
+          unitText: "per night",
+        },
+      },
+      {
+        "@type": "Offer",
+        name: "Industrial Worker Accommodation",
+        description:
+          "Weekly and monthly stays for workers at Parow Industria, Stikland Industrial, Blackheath Industrial Park",
         priceSpecification: {
           "@type": "UnitPriceSpecification",
           price: "530",
@@ -203,16 +259,26 @@ export function LocalBusinessSchema() {
     },
     isAccessibleForFree: false,
     publicAccess: true,
-    slogan: "Your Home Away From Home in Bellville South",
+    slogan: "Contractor Accommodation in Bellville South - Your Home Away From Home",
     keywords: [
       "contractor accommodation Bellville",
-      "construction worker housing Cape Town",
+      "contractor accommodation Cape Town",
+      "construction worker housing",
       "monthly accommodation Bellville South",
       "apprentice accommodation near John Thompson",
+      "boilermaker accommodation Cape Town",
+      "welder accommodation Bellville",
+      "electrician accommodation Bellville",
       "Sacks Circle accommodation",
       "Mill Park guesthouse",
+      "Stikland industrial accommodation",
+      "Parow contractor lodging",
+      "Goodwood worker accommodation",
+      "Kuilsriver contractor housing",
       "industrial area accommodation Cape Town",
       "weekly accommodation Bellville",
+      "construction crew housing Northern Suburbs",
+      "budget accommodation for workers",
     ],
   }
 
@@ -244,13 +310,31 @@ export function LocalBusinessSchema() {
         position: 3,
         item: {
           "@type": "Place",
+          name: "Stikland Industrial Area",
+          description: "Major industrial zone - 5km from 60 on Kosmos",
+        },
+      },
+      {
+        "@type": "ListItem",
+        position: 4,
+        item: {
+          "@type": "Place",
+          name: "Parow Industria",
+          description: "Large industrial area with Coca-Cola, Parmalat - 6km from 60 on Kosmos",
+        },
+      },
+      {
+        "@type": "ListItem",
+        position: 5,
+        item: {
+          "@type": "Place",
           name: "John Thompson Training Centre",
           description: "Boilermaker and welding courses - 5km from 60 on Kosmos",
         },
       },
       {
         "@type": "ListItem",
-        position: 4,
+        position: 6,
         item: {
           "@type": "Place",
           name: "Northlink College Bellville",
@@ -259,7 +343,16 @@ export function LocalBusinessSchema() {
       },
       {
         "@type": "ListItem",
-        position: 5,
+        position: 7,
+        item: {
+          "@type": "Place",
+          name: "Blackheath Industrial Park (Kuilsriver)",
+          description: "Industrial park - 10km from 60 on Kosmos",
+        },
+      },
+      {
+        "@type": "ListItem",
+        position: 8,
         item: {
           "@type": "Place",
           name: "Tygerberg Hospital",
