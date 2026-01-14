@@ -31,7 +31,7 @@ export function Navigation() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden sm:flex items-center space-x-1">
+          <div className="hidden md:flex items-center space-x-1">
             <Link
               href="/"
               className="px-4 py-2 rounded-lg hover:bg-white/10 transition-colors duration-200 font-medium"
@@ -167,7 +167,7 @@ export function Navigation() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="sm:hidden p-2 rounded-lg hover:bg-white/10 transition-colors"
+            className="md:hidden p-2 rounded-lg hover:bg-white/10 transition-colors"
             aria-label="Toggle menu"
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -177,7 +177,7 @@ export function Navigation() {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="sm:hidden bg-[#6d8876] border-t border-white/10">
+        <div className="md:hidden bg-[#6d8876] border-t border-white/10">
           <div className="px-4 pt-2 pb-4 space-y-1">
             <Link
               href="/"

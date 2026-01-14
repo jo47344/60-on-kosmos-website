@@ -277,3 +277,24 @@ html {
 .performance-marker {
   display: none;
 }
+
+/* Add safe area padding for mobile devices with notches */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* Ensure footer content doesn't get hidden behind sticky CTA on mobile */
+@media (max-width: 1023px) {
+  footer {
+    padding-bottom: 80px !important;
+  }
+}
+
+/* Fix mobile viewport height issues */
+@supports (height: 100dvh) {
+  .hero-section {
+    min-height: 100dvh;
+  }
+}

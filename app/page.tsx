@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     canonical: "https://60onkosmos.co.za",
   },
   openGraph: {
-    title: "60 on Kosmos Guesthouse Bellville | Affordable Accommodation from R530",
+    title: "60 on Kosmos Guesthouse Bellville South | Affordable Accommodation from R530",
     description: "Affordable guesthouse in Bellville South near UWC, CPUT, Tygerberg Hospital. From R530/night.",
     url: "https://60onkosmos.co.za",
     type: "website",
@@ -64,7 +64,7 @@ export default function HomePage() {
 
       <div className="flex flex-col">
         {/* Hero Section */}
-        <section className="relative h-[500px] sm:h-[600px] lg:h-[700px] flex items-center justify-center">
+        <section className="relative h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] flex items-center justify-center">
           <Image
             src="/images/exterior-building.png"
             alt="60 on Kosmos Guesthouse Bellville South - Affordable accommodation near UWC and Tygerberg Hospital Cape Town"
@@ -75,19 +75,19 @@ export default function HomePage() {
             quality={85}
           />
           <div className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 leading-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-2 sm:mb-4 leading-tight">
               Welcome to 60 on Kosmos
               <br />
               <span className="text-sage-300">Guesthouse Bellville South</span>
             </h1>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-4 sm:mb-6 md:mb-8 px-2">
               Affordable ensuite accommodation for contractors, students & professionals | From R530/night
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
+            <div className="flex flex-col gap-2 sm:gap-3 md:flex-row md:gap-4 justify-center items-center px-4 sm:px-0">
               <Button
                 asChild
                 size="lg"
-                className="bg-sage-600 hover:bg-sage-700 text-white w-full sm:w-auto px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg"
+                className="bg-sage-600 hover:bg-sage-700 text-white w-full sm:w-auto px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 text-sm sm:text-base md:text-lg"
               >
                 <a href="/book-now">Book Now</a>
               </Button>
@@ -95,7 +95,7 @@ export default function HomePage() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="bg-white text-sage-600 hover:bg-sage-50 w-full sm:w-auto px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg"
+                className="bg-white text-sage-600 hover:bg-sage-50 w-full sm:w-auto px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 text-sm sm:text-base md:text-lg"
               >
                 <a href="tel:+27745245703">
                   <Phone className="mr-2 h-5 w-5" />

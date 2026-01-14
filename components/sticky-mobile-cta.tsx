@@ -20,9 +20,9 @@ export function StickyMobileCTA() {
   if (!isVisible) return null
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden">
+    <div className="fixed bottom-0 left-0 right-0 z-50 lg:hidden">
       <div className="bg-green-600 shadow-lg border-t border-green-700">
-        <div className="flex items-center justify-center gap-3 p-3">
+        <div className="flex items-center justify-center gap-3 p-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))]">
           <Button
             asChild
             size="sm"
