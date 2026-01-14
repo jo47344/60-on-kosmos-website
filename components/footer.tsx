@@ -91,11 +91,6 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/contractor-accommodation-kuilsriver" className="hover:text-white transition-colors">
-                  Kuilsriver Contractors
-                </Link>
-              </li>
-              <li>
                 <Link href="/contractor-accommodation-northern-suburbs" className="hover:text-white transition-colors">
                   Northern Suburbs
                 </Link>
@@ -188,8 +183,8 @@ export function Footer() {
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 text-sm">
           <p>&copy; {currentYear} 60 on Kosmos Guesthouse. All rights reserved.</p>
           <p className="mt-2">
-            Contractor accommodation in Bellville, Parow, Goodwood, Stikland, Kuilsriver & Northern Suburbs | Near N1,
-            Sacks Circle & Mill Park
+            Contractor accommodation in Bellville, Parow, Goodwood, Stikland & Northern Suburbs | Near N1, Sacks Circle
+            & Mill Park
           </p>
           <p className="mt-2">
             <Link href="/terms" className="hover:text-white transition-colors">

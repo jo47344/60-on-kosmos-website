@@ -6,9 +6,9 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 
 export const metadata: Metadata = {
-  title: "Contractor Accommodation Parow | From R530/Night | Near Coca-Cola, Parmalat, B Braun",
+  title: "Contractor Accommodation Parow | From R530/Night | 10 Min to Parow Industrial",
   description:
-    "Affordable contractor accommodation near Parow Industria. Close to Coca-Cola Peninsula Beverages, Parmalat, B Braun, Avery Dennison. Self-catering rooms from R530/night. Weekly & monthly rates.",
+    "Affordable contractor accommodation near Parow Industrial, Parow East & Epping. Self-catering rooms from R530/night. Weekly cleaning, secure parking, WiFi. Perfect for welders, electricians, plumbers & construction crews. Book direct!",
   alternates: {
     canonical: "https://60onkosmos.co.za/contractor-accommodation-parow",
   },
@@ -25,15 +25,10 @@ export const metadata: Metadata = {
     "artisan accommodation Parow",
     "budget accommodation Parow industrial",
     "self-catering Parow",
-    "Coca-Cola accommodation",
-    "Parmalat accommodation",
-    "B Braun accommodation",
-    "Avery Dennison accommodation",
-    "Allcast Foundry accommodation",
   ],
   openGraph: {
-    title: "Contractor Accommodation Near Parow Industria | From R530/Night",
-    description: "Affordable contractor accommodation near major Parow Industria employers. From R530/night.",
+    title: "Contractor Accommodation Near Parow | From R530/Night",
+    description: "10 minutes from Parow Industrial. Purpose-built for contractors, welders, electricians & work crews.",
     url: "https://60onkosmos.co.za/contractor-accommodation-parow",
     type: "website",
     images: [
@@ -41,7 +36,7 @@ export const metadata: Metadata = {
         url: "https://60onkosmos.co.za/images/exterior-building.png",
         width: 1200,
         height: 630,
-        alt: "Contractor Accommodation Near Parow Industria",
+        alt: "Contractor Accommodation Near Parow Industrial",
       },
     ],
   },
@@ -52,10 +47,10 @@ export default function ContractorAccommodationParowPage() {
     "@context": "https://schema.org",
     "@type": "LodgingBusiness",
     "@id": "https://60onkosmos.co.za/contractor-accommodation-parow#lodgingbusiness",
-    name: "60 on Kosmos - Contractor Accommodation Near Parow Industria",
+    name: "60 on Kosmos - Contractor Accommodation Near Parow",
     alternateName: ["Parow Contractor Housing", "Parow Industrial Accommodation", "60 on Kosmos Parow"],
     description:
-      "Affordable contractor accommodation near Parow Industria. Close to Coca-Cola Peninsula Beverages, Parmalat, B Braun, Avery Dennison, Allcast Foundry. Self-catering rooms from R530/night with weekly cleaning, secure parking and WiFi.",
+      "Affordable contractor accommodation near Parow Industrial area. Self-catering rooms for construction workers, welders, electricians, plumbers and project teams. From R530/night with weekly cleaning, secure parking and WiFi.",
     address: {
       "@type": "PostalAddress",
       streetAddress: "60 Kosmosdalweg",
@@ -134,11 +129,11 @@ export default function ContractorAccommodationParowPage() {
       },
     },
     nearbyPlaces: [
-      { "@type": "Place", name: "Coca-Cola Peninsula Beverages", distance: "5km" },
-      { "@type": "Place", name: "Parmalat", distance: "5km" },
-      { "@type": "Place", name: "B Braun", distance: "6km" },
-      { "@type": "Place", name: "Avery Dennison", distance: "5km" },
-      { "@type": "Place", name: "Allcast Foundry", distance: "6km" },
+      { "@type": "Place", name: "Parow Industrial", distance: "5km" },
+      { "@type": "Place", name: "Parow East Industrial", distance: "6km" },
+      { "@type": "Place", name: "Epping Industrial", distance: "8km" },
+      { "@type": "Place", name: "Parow Centre", distance: "4km" },
+      { "@type": "Place", name: "N1 City Mall", distance: "6km" },
       { "@type": "Place", name: "Sacks Circle Industrial", distance: "2km" },
     ],
   }
@@ -149,18 +144,18 @@ export default function ContractorAccommodationParowPage() {
     mainEntity: [
       {
         "@type": "Question",
-        name: "How far is 60 on Kosmos from Parow Industria?",
+        name: "How far is 60 on Kosmos from Parow Industrial?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "60 on Kosmos is approximately 5km from Parow Industria area, about 10-15 minutes drive via Voortrekker Road. We are also close to Coca-Cola Peninsula Beverages, Parmalat, B Braun, Avery Dennison, and Allcast Foundry.",
+          text: "60 on Kosmos is approximately 5km from Parow Industrial area, about 10 minutes drive via Voortrekker Road. We're also close to Parow East (6km) and Epping Industrial (8km).",
         },
       },
       {
         "@type": "Question",
-        name: "What is the cheapest contractor room near Parow Industria?",
+        name: "What is the cheapest contractor room near Parow?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Our Standard Room is R530/night - the most affordable contractor accommodation near Parow Industria. It includes 2 single beds, ensuite bathroom, access to communal kitchen, weekly cleaning, secure parking and WiFi.",
+          text: "Our Standard Room is R530/night - the most affordable contractor accommodation near Parow Industrial. It includes 2 single beds, ensuite bathroom, access to communal kitchen, weekly cleaning, secure parking and WiFi.",
         },
       },
       {
@@ -200,7 +195,7 @@ export default function ContractorAccommodationParowPage() {
         <div className="absolute inset-0">
           <Image
             src="/images/exterior-building.png"
-            alt="Contractor Accommodation Near Parow Industria Area"
+            alt="Contractor Accommodation Near Parow Industrial Area"
             fill
             className="object-cover opacity-30"
             priority
@@ -210,17 +205,15 @@ export default function ContractorAccommodationParowPage() {
           <div className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 bg-sage-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
               <MapPin className="w-4 h-4" />
-              <span>10-15 Minutes from Parow Industria</span>
+              <span>10 Minutes from Parow Industrial</span>
             </div>
-            <h1 className="text-3xl md:text-5xl font-bold text-white mb-6">
-              Contractor Accommodation Near Parow Industria
-            </h1>
+            <h1 className="text-3xl md:text-5xl font-bold text-white mb-6">Contractor Accommodation Near Parow</h1>
             <p className="text-xl text-gray-300 mb-4">
-              Affordable self-catering rooms for contractors working at Coca-Cola, Parmalat, B Braun, Avery Dennison and
-              Parow Industria businesses. From R530/night with weekly cleaning, secure parking and WiFi.
+              Affordable self-catering rooms for contractors, welders, electricians and construction crews working in
+              Parow Industrial, Parow East and Epping. From R530/night with weekly cleaning, secure parking and WiFi.
             </p>
             <p className="text-lg text-gray-400 mb-8">
-              Near: Coca-Cola Peninsula Beverages | Parmalat | B Braun | Avery Dennison | Allcast Foundry
+              Serving: Parow Industrial | Parow East | Epping | Parow North | N1 City
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-sage-600 hover:bg-sage-700 text-white px-8 py-6 text-lg">
@@ -273,25 +266,25 @@ export default function ContractorAccommodationParowPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">
-              Accommodation for Parow Industria Workers
+              Purpose-Built Accommodation for Parow Industrial Workers
             </h2>
             <div className="prose prose-lg max-w-none text-gray-600">
               <p>
-                60 on Kosmos provides affordable accommodation for contractors and workers employed at businesses in
-                Parow Industria. Located in Bellville South, we are approximately 10-15 minutes from major employers
-                including Coca-Cola Peninsula Beverages, Parmalat, B Braun medical supplies, Avery Dennison, and Allcast
-                Foundry.
+                60 on Kosmos provides affordable, comfortable accommodation for contractors and tradespeople working in
+                the Parow Industrial area. Located in Bellville South, we are strategically positioned just 10 minutes
+                from Parow Industrial, making us the ideal base for welders, electricians, plumbers, boilermakers and
+                construction crews on projects throughout the Northern Suburbs.
               </p>
               <p>
-                Parow Industria is one of Cape Town&apos;s largest industrial areas, home to food and beverage
-                manufacturers, medical equipment companies, engineering firms, and logistics operations. Whether
-                you&apos;re a maintenance contractor, installation technician, or part of a construction crew on a Parow
-                project, our self-catering rooms offer comfortable, affordable accommodation.
+                Our guesthouse serves workers from major industrial areas including Parow Industrial, Parow East
+                Industrial, Epping Industria, and the surrounding commercial zones. Whether you are working on a
+                short-term project or need accommodation for several months, our self-catering rooms offer everything
+                you need at an affordable price.
               </p>
               <p>
-                Our guesthouse provides weekly cleaning, secure parking for work vehicles, a communal kitchen with gas
-                stove, microwave and air fryer, and free WiFi. For stays of 14+ nights, we offer discounted monthly
-                rates.
+                Unlike hotels or B&Bs, we understand the needs of working contractors. That is why we offer weekly
+                cleaning (not daily disturbances), secure parking for work vehicles, a communal kitchen to save on meal
+                costs, and flexible booking terms for project-based stays.
               </p>
             </div>
           </div>
@@ -301,37 +294,31 @@ export default function ContractorAccommodationParowPage() {
       {/* Distance Highlight */}
       <section className="py-12 bg-sage-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold mb-8 text-center">Close to Major Parow Industria Employers</h2>
+          <h2 className="text-2xl font-bold mb-8 text-center">Strategic Location for Parow Area Workers</h2>
           <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-6">
             <div className="bg-white rounded-lg p-6 text-center shadow-sm">
-              <p className="text-3xl font-bold text-sage-600">10-15</p>
-              <p className="text-xs text-gray-500">min drive</p>
-              <p className="text-gray-600 text-sm font-medium mt-1">Coca-Cola Peninsula</p>
+              <p className="text-3xl font-bold text-sage-600">5km</p>
+              <p className="text-gray-600 text-sm">Parow Industrial</p>
             </div>
             <div className="bg-white rounded-lg p-6 text-center shadow-sm">
-              <p className="text-3xl font-bold text-sage-600">10-15</p>
-              <p className="text-xs text-gray-500">min drive</p>
-              <p className="text-gray-600 text-sm font-medium mt-1">Parmalat</p>
+              <p className="text-3xl font-bold text-sage-600">6km</p>
+              <p className="text-gray-600 text-sm">Parow East Industrial</p>
             </div>
             <div className="bg-white rounded-lg p-6 text-center shadow-sm">
-              <p className="text-3xl font-bold text-sage-600">10-15</p>
-              <p className="text-xs text-gray-500">min drive</p>
-              <p className="text-gray-600 text-sm font-medium mt-1">B Braun Medical</p>
+              <p className="text-3xl font-bold text-sage-600">8km</p>
+              <p className="text-gray-600 text-sm">Epping Industria</p>
             </div>
             <div className="bg-white rounded-lg p-6 text-center shadow-sm">
-              <p className="text-3xl font-bold text-sage-600">10-15</p>
-              <p className="text-xs text-gray-500">min drive</p>
-              <p className="text-gray-600 text-sm font-medium mt-1">Avery Dennison</p>
+              <p className="text-3xl font-bold text-sage-600">4km</p>
+              <p className="text-gray-600 text-sm">Parow Centre</p>
             </div>
             <div className="bg-white rounded-lg p-6 text-center shadow-sm">
-              <p className="text-3xl font-bold text-sage-600">10-15</p>
-              <p className="text-xs text-gray-500">min drive</p>
-              <p className="text-gray-600 text-sm font-medium mt-1">Allcast Foundry</p>
+              <p className="text-3xl font-bold text-sage-600">6km</p>
+              <p className="text-gray-600 text-sm">N1 City Mall</p>
             </div>
             <div className="bg-white rounded-lg p-6 text-center shadow-sm">
-              <p className="text-3xl font-bold text-sage-600">3</p>
-              <p className="text-xs text-gray-500">min drive</p>
-              <p className="text-gray-600 text-sm font-medium mt-1">Sacks Circle</p>
+              <p className="text-3xl font-bold text-sage-600">2km</p>
+              <p className="text-gray-600 text-sm">Sacks Circle</p>
             </div>
           </div>
         </div>
@@ -375,7 +362,7 @@ export default function ContractorAccommodationParowPage() {
                 <h3 className="text-lg font-bold">Project Managers</h3>
               </div>
               <p className="text-gray-600">
-                Supervisors and managers overseeing projects in Parow Industria. Our Double Room at R620/night includes
+                Supervisors and managers overseeing projects in Parow Industrial. Our Double Room at R620/night includes
                 a workspace desk, bar fridge and microwave - perfect for admin work after hours.
               </p>
             </Card>
@@ -546,16 +533,16 @@ export default function ContractorAccommodationParowPage() {
           <h2 className="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
           <div className="space-y-6">
             <div className="bg-white rounded-lg p-6 shadow-sm">
-              <h3 className="font-bold text-lg mb-2">How far is 60 on Kosmos from Parow Industria?</h3>
+              <h3 className="font-bold text-lg mb-2">How far is 60 on Kosmos from Parow Industrial?</h3>
               <p className="text-gray-600">
-                We are approximately 5km from Parow Industria area, about 10-15 minutes drive via Voortrekker Road. We
-                are also close to Coca-Cola Peninsula Beverages, Parmalat, B Braun, Avery Dennison, and Allcast Foundry.
+                We are approximately 5km from Parow Industrial area, about 10 minutes drive via Voortrekker Road. We are
+                also close to Parow East (6km) and Epping Industrial (8km).
               </p>
             </div>
             <div className="bg-white rounded-lg p-6 shadow-sm">
-              <h3 className="font-bold text-lg mb-2">What is the cheapest contractor room near Parow Industria?</h3>
+              <h3 className="font-bold text-lg mb-2">What is the cheapest contractor room near Parow?</h3>
               <p className="text-gray-600">
-                Our Standard Room is R530/night - the most affordable contractor accommodation near Parow Industria. It
+                Our Standard Room is R530/night - the most affordable contractor accommodation near Parow Industrial. It
                 includes 2 single beds, ensuite bathroom, access to communal kitchen, weekly cleaning, secure parking
                 and WiFi.
               </p>
@@ -596,7 +583,7 @@ export default function ContractorAccommodationParowPage() {
       {/* CTA Section */}
       <section className="py-16 bg-sage-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Working in Parow Industria? Book Your Stay Today</h2>
+          <h2 className="text-3xl font-bold text-white mb-4">Working in Parow? Book Your Stay Today</h2>
           <p className="text-sage-100 text-lg mb-8">
             Affordable contractor accommodation with everything you need. From R530/night.
           </p>

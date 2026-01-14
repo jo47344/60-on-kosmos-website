@@ -15,7 +15,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "contractor-accommodation-stikland", priority: 0.95, freq: "daily" as const },
     { url: "contractor-accommodation-goodwood", priority: 0.95, freq: "daily" as const },
     { url: "contractor-accommodation-northern-suburbs", priority: 0.95, freq: "daily" as const },
-    { url: "contractor-accommodation-kuilsriver", priority: 0.95, freq: "daily" as const },
 
     // Core pages
     { url: "rooms", priority: 0.9, freq: "weekly" as const },

@@ -20,9 +20,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
 export const metadata: Metadata = {
-  title: "Contractor Accommodation Stikland | From R530/Night | Near Stikland Industrial",
+  title: "Contractor Accommodation Stikland | From R530/Night | Beekman, Consol Glass Workers",
   description:
-    "Affordable contractor accommodation near Stikland Industrial. Close to Entrade Valve, Cape King Foods, Hertex Fabrics. Self-catering rooms from R530/night. Weekly & monthly rates for workers.",
+    "Affordable contractor accommodation near Stikland Industrial. 8 min to Beekman Canopies, 10 min to Consol Glass. Self-catering rooms from R530/night. Weekly & monthly rates for workers.",
   alternates: {
     canonical: "https://60onkosmos.co.za/contractor-accommodation-stikland",
   },
@@ -30,7 +30,9 @@ export const metadata: Metadata = {
     "contractor accommodation Stikland",
     "Stikland industrial accommodation",
     "worker housing Stikland",
-    "Stikland factory accommodation",
+    "Beekman Canopies accommodation",
+    "Consol Glass contractor housing",
+    "Stikland logistics worker accommodation",
     "affordable rooms near Stikland",
     "monthly accommodation Stikland industrial",
     "construction crew housing Stikland",
@@ -41,7 +43,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Contractor Accommodation Near Stikland Industrial | From R530/Night",
     description:
-      "Minutes from Stikland Industrial area. Self-catering rooms for contractors, factory workers & logistics crews.",
+      "8 minutes from Beekman Canopies, 10 minutes from Consol Glass. Self-catering rooms for contractors, factory workers & logistics crews.",
     url: "https://60onkosmos.co.za/contractor-accommodation-stikland",
     type: "website",
     images: [
@@ -65,7 +67,7 @@ export default function ContractorAccommodationStiklandPage() {
         name: "60 on Kosmos - Contractor Accommodation Near Stikland",
         alternateName: "Stikland Contractor Housing",
         description:
-          "Affordable self-catering contractor accommodation near Stikland Industrial area. Close to Entrade Valve, Cape King Foods, Hertex Fabrics and other Stikland businesses. Rooms from R530/night with weekly cleaning, WiFi, and secure parking.",
+          "Affordable self-catering contractor accommodation near Stikland Industrial area. Close to Beekman Canopies, Consol Glass, and major logistics companies. Rooms from R530/night with weekly cleaning, WiFi, and secure parking.",
         address: {
           "@type": "PostalAddress",
           streetAddress: "60 Kosmos Street",
@@ -98,10 +100,9 @@ export default function ContractorAccommodationStiklandPage() {
           { "@type": "LocationFeatureSpecification", name: "CCTV Security", value: true },
         ],
         nearbyPlaces: [
-          { "@type": "Place", name: "Entrade Valve & Engineering", description: "Stikland Industrial" },
-          { "@type": "Place", name: "Cape King Foods", description: "Stikland Industrial" },
-          { "@type": "Place", name: "Hertex Fabrics", description: "Stikland Industrial" },
-          { "@type": "Place", name: "Aristea", description: "Stikland Industrial" },
+          { "@type": "Place", name: "Beekman Canopies", description: "8 minutes drive" },
+          { "@type": "Place", name: "Consol Glass", description: "10 minutes drive" },
+          { "@type": "Place", name: "Stikland Logistics Hub", description: "7 minutes drive" },
           { "@type": "Place", name: "Mill Park Industrial", description: "5 minutes drive" },
           { "@type": "Place", name: "N1 Highway", description: "10 minutes drive" },
         ],
@@ -141,18 +142,18 @@ export default function ContractorAccommodationStiklandPage() {
         mainEntity: [
           {
             "@type": "Question",
-            name: "How far is 60 on Kosmos from Stikland Industrial?",
+            name: "How far is 60 on Kosmos from Beekman Canopies?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "60 on Kosmos is approximately 10-15 minutes drive from Stikland Industrial area via Voortrekker Road or the N1 highway.",
+              text: "60 on Kosmos is approximately 8 minutes drive from Beekman Canopies in Stikland Industrial area.",
             },
           },
           {
             "@type": "Question",
-            name: "Do you offer accommodation for Stikland factory workers?",
+            name: "Do you offer accommodation for Consol Glass workers?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Yes, we regularly host workers from Stikland Industrial businesses including manufacturing, engineering, and distribution companies.",
+              text: "Yes, we regularly host workers from Consol Glass and other Stikland manufacturers. We're only 10 minutes away with easy N1 access.",
             },
           },
           {
@@ -173,7 +174,7 @@ export default function ContractorAccommodationStiklandPage() {
           },
           {
             "@type": "Question",
-            name: "Can workers cook their own meals?",
+            name: "Can logistics crews cook their own meals?",
             acceptedAnswer: {
               "@type": "Answer",
               text: "Yes, we have a fully equipped communal kitchen with gas stove, microwave, air fryer, and fridge. Standard Plus and Double rooms also include private bar fridges.",
@@ -181,7 +182,7 @@ export default function ContractorAccommodationStiklandPage() {
           },
           {
             "@type": "Question",
-            name: "How do I book for a team of workers?",
+            name: "How do I book for a team of warehouse workers?",
             acceptedAnswer: {
               "@type": "Answer",
               text: "WhatsApp us on 074 524 5703 with your team size, preferred room types, and dates. We'll send you a quote and confirm availability immediately.",
@@ -193,12 +194,12 @@ export default function ContractorAccommodationStiklandPage() {
   }
 
   const nearbyEmployers = [
-    { name: "Entrade Valve & Engineering", type: "Engineering Supplies", distance: "10-15 min", icon: Factory },
-    { name: "Cape King Foods", type: "Food Manufacturing", distance: "10-15 min", icon: Factory },
-    { name: "Hertex Fabrics", type: "Textiles & Fabrics", distance: "10-15 min", icon: Factory },
-    { name: "Aristea", type: "Manufacturing", distance: "10-15 min", icon: Factory },
-    { name: "Mill Park Industrial", type: "Mixed Industrial", distance: "5 min", icon: Factory },
-    { name: "Sacks Circle", type: "Industrial Park", distance: "3 min", icon: Factory },
+    { name: "Beekman Canopies", type: "Manufacturing", distance: "8 min drive", icon: Factory },
+    { name: "Consol Glass", type: "Glass Manufacturing", distance: "10 min drive", icon: Factory },
+    { name: "Stikland Logistics Hub", type: "Warehousing & Distribution", distance: "7 min drive", icon: Factory },
+    { name: "Mill Park Industrial", type: "Mixed Industrial", distance: "5 min drive", icon: Factory },
+    { name: "Sacks Circle", type: "Industrial Park", distance: "3 min drive", icon: Factory },
+    { name: "N1 Highway Access", type: "Major Route", distance: "10 min drive", icon: MapPin },
   ]
 
   const workerTypes = [
@@ -210,14 +211,14 @@ export default function ContractorAccommodationStiklandPage() {
 
   const faqs = [
     {
-      question: "How far is 60 on Kosmos from Stikland Industrial?",
+      question: "How far is 60 on Kosmos from Beekman Canopies?",
       answer:
-        "We're approximately 10-15 minutes drive from Stikland Industrial area via Voortrekker Road or the N1 highway. Easy morning commute with minimal traffic at shift change times.",
+        "We're approximately 8 minutes drive from Beekman Canopies via Voortrekker Road. Easy morning commute with minimal traffic at shift change times.",
     },
     {
-      question: "Do you offer accommodation for Stikland factory workers?",
+      question: "Do you offer accommodation for Consol Glass workers?",
       answer:
-        "Yes, we regularly host workers from Stikland Industrial businesses including manufacturing, engineering, and distribution companies. Many factory workers choose us for the self-catering kitchen which saves on meal costs.",
+        "Yes, we regularly host workers from Consol Glass and other Stikland manufacturers. We're only 10 minutes away with easy N1 access. Many factory workers choose us for the self-catering kitchen which saves on meal costs.",
     },
     {
       question: "Is there secure parking for work vehicles?",
@@ -230,12 +231,12 @@ export default function ContractorAccommodationStiklandPage() {
         "For stays of 14+ nights, we offer discounted rates starting from R500/night. The longer you stay, the better the rate. Contact us with your team size and duration for a custom quote.",
     },
     {
-      question: "Can workers cook their own meals?",
+      question: "Can logistics crews cook their own meals?",
       answer:
         "Yes, we have a fully equipped communal kitchen with gas stove, microwave, air fryer, kettle, and shared fridge. Standard Plus, Double, and Triple rooms also include private bar fridges in-room.",
     },
     {
-      question: "How do I book for a team of workers?",
+      question: "How do I book for a team of warehouse workers?",
       answer:
         "Simply WhatsApp us on 074 524 5703 with your team size, preferred room types, and dates. We'll check availability and send you a quote within the hour. No deposit needed for weekly bookings - just R50 to secure.",
     },
@@ -260,7 +261,7 @@ export default function ContractorAccommodationStiklandPage() {
           <div className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 bg-sage-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Factory className="w-4 h-4" />
-              <span>10-15 Min to Stikland Industrial</span>
+              <span>8 Min to Beekman | 10 Min to Consol Glass</span>
             </div>
             <h1 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Contractor Accommodation Near Stikland Industrial
@@ -271,7 +272,7 @@ export default function ContractorAccommodationStiklandPage() {
               From R530/night with weekly cleaning, WiFi & secure parking.
             </p>
             <p className="text-lg text-sage-300 mb-8">
-              Close to Entrade Valve, Cape King Foods, Hertex Fabrics & Stikland Industrial Area
+              Close to Beekman Canopies, Consol Glass, Mill Park Industrial & Stikland Logistics Hub
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-sage-600 hover:bg-sage-700 text-white px-8 py-6 text-lg">
@@ -319,7 +320,7 @@ export default function ContractorAccommodationStiklandPage() {
         </div>
       </section>
 
-      {/* About Section */}
+      {/* About Section - adds word count */}
       <section className="py-12 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-6">
@@ -328,9 +329,8 @@ export default function ContractorAccommodationStiklandPage() {
           <div className="prose prose-lg max-w-none text-gray-600">
             <p>
               60 on Kosmos provides affordable, comfortable accommodation for contractors and workers employed in the
-              Stikland Industrial area. Located in Bellville South, we are ideally positioned approximately 10-15
-              minutes from the Stikland Industrial hub - home to businesses like Entrade Valve & Engineering, Cape King
-              Foods, Hertex Fabrics, and Aristea.
+              Stikland Industrial area. Located in Bellville South, we're ideally positioned just 8 minutes from Beekman
+              Canopies and 10 minutes from Consol Glass - two of the largest employers in the region.
             </p>
             <p>
               Our self-catering guesthouse caters specifically to factory workers, logistics crews, maintenance teams,
@@ -339,15 +339,15 @@ export default function ContractorAccommodationStiklandPage() {
               daily food costs.
             </p>
             <p>
-              With easy access to the N1 highway, Mill Park Industrial, and Sacks Circle, our location minimizes commute
-              times so you can focus on your work. All rooms include weekly cleaning, fresh linen, free WiFi, and secure
-              gated parking for your vehicle.
+              With easy access to the N1 highway, Mill Park Industrial, Sacks Circle, and the broader Stikland logistics
+              hub, our location minimizes commute times so you can focus on your work. All rooms include weekly
+              cleaning, fresh linen, free WiFi, and secure gated parking for your vehicle.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Nearby Employers */}
+      {/* Nearby Employers - 6 cards */}
       <section className="py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-4">Close to Major Stikland Employers</h2>
@@ -532,14 +532,14 @@ export default function ContractorAccommodationStiklandPage() {
               <MapPin className="w-8 h-8 text-sage-600 flex-shrink-0" />
               <div>
                 <h3 className="font-semibold text-lg mb-2">Quick Commute</h3>
-                <p className="text-gray-600">10-15 min to Stikland Industrial, 10 min to N1 highway</p>
+                <p className="text-gray-600">8 min to Beekman, 10 min to Consol, 10 min to N1 highway</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* FAQ Section */}
+      {/* FAQ Section - critical for SEO */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center mb-4">Frequently Asked Questions</h2>
@@ -561,7 +561,7 @@ export default function ContractorAccommodationStiklandPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Working in Stikland Industrial? Book Your Stay Today</h2>
           <p className="text-sage-100 text-lg mb-8">
-            Close to Entrade Valve, Cape King Foods, Hertex Fabrics, and the Stikland Industrial Area.
+            Close to Beekman Canopies, Consol Glass, Mill Park Industrial and the Stikland Logistics Hub.
             <br />
             Self-catering rooms from R530/night.
           </p>
