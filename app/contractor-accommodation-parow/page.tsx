@@ -163,7 +163,7 @@ export default function ContractorAccommodationParowPage() {
         name: "Do you offer monthly rates for Parow contractors?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes, we offer discounted monthly rates for contractors on long-term projects in Parow, Epping and surrounding industrial areas. Contact us for a custom quote based on your team size and duration.",
+          text: "Yes, we offer discounted weekly and monthly rates for contractors on projects in Parow, Epping and surrounding industrial areas. Contact us for a custom quote based on your team size and project duration.",
         },
       },
       {

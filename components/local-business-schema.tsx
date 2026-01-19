@@ -14,7 +14,7 @@ export function LocalBusinessSchema() {
     description:
       "Contractor accommodation in Bellville South, Cape Town. Near Sacks Circle, Mill Park, Stikland, Parow Industria. Weekly cleaning, secure parking, free WiFi. Monthly rates from R530/night. Ideal for construction workers, boilermakers, welders, electricians, apprentices at John Thompson and Northlink College.",
     url: "https://60onkosmos.co.za",
-    telephone: "+27219485752",
+    telephone: "+27745245703",
     email: "info@60onkosmos.co.za",
     priceRange: "R530-R750",
     currenciesAccepted: "ZAR",

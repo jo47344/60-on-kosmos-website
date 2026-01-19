@@ -261,9 +261,9 @@ export default function ContractorAccommodationPage() {
 
             <div className="mt-12 text-center p-6 bg-sage-50 rounded-lg">
               <Calculator className="w-12 h-12 text-sage-600 mx-auto mb-4" />
-              <h3 className="text-xl font-bold mb-2">Monthly Contractor Rates Available</h3>
+              <h3 className="text-xl font-bold mb-2">Weekly & Monthly Contractor Rates</h3>
               <p className="text-gray-600 mb-4">
-                Save with our discounted monthly rates for long-term contractor projects in Bellville
+                Save with our discounted weekly and monthly rates for contractor projects in Bellville
               </p>
               <Button asChild size="lg" className="bg-sage-600 hover:bg-sage-700">
                 <Link href="/monthly-accommodation-bellville">View Monthly Rates</Link>

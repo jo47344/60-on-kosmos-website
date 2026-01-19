@@ -41,13 +41,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "backpackers-bellville-south", priority: 0.65, freq: "monthly" as const },
     { url: "cheap-accommodation-bellville-south", priority: 0.65, freq: "monthly" as const },
 
-    // Secondary market - Students/Medical
-    { url: "uwc-student-accommodation", priority: 0.75, freq: "weekly" as const },
-    { url: "cput-accommodation", priority: 0.75, freq: "weekly" as const },
+    // Secondary market - Medical staff
     { url: "tygerberg-hospital-accommodation", priority: 0.75, freq: "weekly" as const },
-    { url: "near-uwc-bellville", priority: 0.7, freq: "weekly" as const },
-    { url: "near-cput-bellville", priority: 0.7, freq: "weekly" as const },
     { url: "accommodation-near-tygerberg-hospital", priority: 0.7, freq: "weekly" as const },
+
+    // Short-term university visitors (graduations, block week, visiting professors)
+    { url: "uwc-student-accommodation", priority: 0.65, freq: "weekly" as const },
+    { url: "cput-accommodation", priority: 0.65, freq: "weekly" as const },
+    { url: "near-uwc-bellville", priority: 0.6, freq: "weekly" as const },
+    { url: "near-cput-bellville", priority: 0.6, freq: "weekly" as const },
+    { url: "student-faq", priority: 0.5, freq: "monthly" as const },
 
     // Support pages
     { url: "contact", priority: 0.8, freq: "monthly" as const },
@@ -55,18 +58,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "virtual-tour", priority: 0.7, freq: "monthly" as const },
     { url: "faq", priority: 0.7, freq: "monthly" as const },
     { url: "testimonials", priority: 0.65, freq: "weekly" as const },
-    { url: "student-faq", priority: 0.6, freq: "monthly" as const },
     { url: "local-info", priority: 0.6, freq: "monthly" as const },
     { url: "things-to-do-bellville-south", priority: 0.55, freq: "monthly" as const },
     { url: "terms", priority: 0.5, freq: "yearly" as const },
 
     // Blog - content marketing
     { url: "blog", priority: 0.7, freq: "weekly" as const },
-    { url: "blog/international-student-housing-uwc", priority: 0.6, freq: "monthly" as const },
     { url: "blog/corporate-relocation-cape-town", priority: 0.6, freq: "monthly" as const },
     { url: "blog/digital-nomad-guide-bellville-south", priority: 0.6, freq: "monthly" as const },
-    { url: "blog/nursing-student-accommodation-tygerberg", priority: 0.6, freq: "monthly" as const },
     { url: "blog/medical-staff-guide-tygerberg-hospital", priority: 0.6, freq: "monthly" as const },
+    { url: "blog/international-student-housing-uwc", priority: 0.5, freq: "monthly" as const },
+    { url: "blog/nursing-student-accommodation-tygerberg", priority: 0.5, freq: "monthly" as const },
 
     // Low priority utility
     { url: "thank-you", priority: 0.3, freq: "yearly" as const },
@@ -75,7 +77,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date().toISOString()
 
   return routes.map((route) => ({
-    url: `${base}/${route.url}`.replace(/\/$/, "") || base,
+    url: route.url ? `${base}/${route.url}` : base,
     lastModified: now,
     changeFrequency: route.freq,
     priority: route.priority,

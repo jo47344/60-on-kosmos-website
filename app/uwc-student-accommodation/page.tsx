@@ -5,9 +5,9 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 
 export const metadata: Metadata = {
-  title: "UWC Student Accommodation Bellville | Self-Catering Rooms Near University",
+  title: "UWC Graduation Accommodation | Parents & Visiting Professors Bellville",
   description:
-    "Affordable student accommodation near UWC Bellville. Self-catering rooms, free WiFi, secure parking. Perfect for UWC students, parents visiting, and academic staff. Book direct.",
+    "Short-term accommodation near UWC for graduations, block week, visiting professors and parents. Self-catering rooms, free WiFi, secure parking. No long-term leases - nightly and weekly rates.",
   alternates: {
     canonical: "https://60onkosmos.co.za/uwc-student-accommodation",
   },
@@ -25,11 +25,11 @@ export default function UWCStudentAccommodationPage() {
               <span>Near UWC Campus</span>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Student Accommodation Near UWC Bellville
+              UWC Graduation & Short-Stay Accommodation
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              Comfortable, affordable self-catering rooms just 5.5km from UWC campus. Perfect for students, parents, and
-              academic visitors.
+              Short-term accommodation near UWC for graduations, block week exams, visiting professors, and parents. 
+              No long-term leases - book nightly or weekly.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-sage-600 hover:bg-sage-700">
@@ -83,7 +83,7 @@ export default function UWCStudentAccommodationPage() {
       {/* Why Choose Us */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">Why UWC Students Choose 60 on Kosmos</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Perfect for Short-Term UWC Visitors</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="flex gap-4">
               <Utensils className="w-8 h-8 text-sage-600 flex-shrink-0" />
@@ -111,22 +111,22 @@ export default function UWCStudentAccommodationPage() {
             <div className="flex gap-4">
               <Users className="w-8 h-8 text-sage-600 flex-shrink-0" />
               <div>
-                <h3 className="font-semibold text-lg mb-2">Quiet Study Environment</h3>
-                <p className="text-gray-600">Perfect for focused studying during exam periods.</p>
+                <h3 className="font-semibold text-lg mb-2">Graduation Week</h3>
+                <p className="text-gray-600">Perfect for parents and family attending UWC graduations.</p>
               </div>
             </div>
             <div className="flex gap-4">
               <Home className="w-8 h-8 text-sage-600 flex-shrink-0" />
               <div>
-                <h3 className="font-semibold text-lg mb-2">Private Rooms</h3>
-                <p className="text-gray-600">Your own space with comfortable beds and storage.</p>
+                <h3 className="font-semibold text-lg mb-2">Visiting Professors</h3>
+                <p className="text-gray-600">Quiet, professional accommodation for academic visitors.</p>
               </div>
             </div>
             <div className="flex gap-4">
               <Clock className="w-8 h-8 text-sage-600 flex-shrink-0" />
               <div>
-                <h3 className="font-semibold text-lg mb-2">Flexible Booking</h3>
-                <p className="text-gray-600">Book for exam week, semester, or full academic year.</p>
+                <h3 className="font-semibold text-lg mb-2">Block Week Only</h3>
+                <p className="text-gray-600">Short-term stays for exam blocks - no long-term leases.</p>
               </div>
             </div>
           </div>

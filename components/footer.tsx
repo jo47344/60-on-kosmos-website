@@ -108,20 +108,10 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Column 3: Other Guests */}
+          {/* Column 3: Location Pages */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Other Guests</h3>
+            <h3 className="text-xl font-bold mb-4">Nearby Areas</h3>
             <ul className="space-y-2 text-gray-300">
-              <li>
-                <Link href="/uwc-student-accommodation" className="hover:text-white transition-colors">
-                  UWC Students
-                </Link>
-              </li>
-              <li>
-                <Link href="/cput-accommodation" className="hover:text-white transition-colors">
-                  CPUT Students
-                </Link>
-              </li>
               <li>
                 <Link href="/tygerberg-hospital-accommodation" className="hover:text-white transition-colors">
                   Tygerberg Hospital
@@ -130,6 +120,16 @@ export function Footer() {
               <li>
                 <Link href="/airport-accommodation" className="hover:text-white transition-colors">
                   Airport Accommodation
+                </Link>
+              </li>
+              <li>
+                <Link href="/contractor-accommodation-kuilsriver" className="hover:text-white transition-colors">
+                  Kuilsriver Contractors
+                </Link>
+              </li>
+              <li>
+                <Link href="/contractor-accommodation-bellville" className="hover:text-white transition-colors">
+                  Bellville Contractors
                 </Link>
               </li>
               <li>

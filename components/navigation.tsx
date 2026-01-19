@@ -8,7 +8,7 @@ import { Menu, X, ChevronDown } from "lucide-react"
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [resourcesOpen, setResourcesOpen] = useState(false)
-  const [studentOpen, setStudentOpen] = useState(false)
+  const [visitorsOpen, setVisitorsOpen] = useState(false)
 
   return (
     <nav className="bg-[#7c9885] text-white sticky top-0 z-50 shadow-lg">
@@ -57,43 +57,44 @@ export function Navigation() {
               Amenities
             </Link>
 
+            {/* Visitors Dropdown */}
             <div className="relative">
               <button
-                onClick={() => setStudentOpen(!studentOpen)}
+                onClick={() => setVisitorsOpen(!visitorsOpen)}
                 className="px-4 py-2 rounded-lg hover:bg-white/10 transition-colors duration-200 font-medium flex items-center gap-1"
               >
-                Students
+                Visitors
                 <ChevronDown
-                  className={`w-4 h-4 transition-transform duration-200 ${studentOpen ? "rotate-180" : ""}`}
+                  className={`w-4 h-4 transition-transform duration-200 ${visitorsOpen ? "rotate-180" : ""}`}
                 />
               </button>
 
-              {studentOpen && (
+              {visitorsOpen && (
                 <>
-                  <div className="fixed inset-0 z-10" onClick={() => setStudentOpen(false)} />
-                  <div className="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-xl py-2 z-20 animate-in fade-in slide-in-from-top-2 duration-200">
+                  <div className="fixed inset-0 z-10" onClick={() => setVisitorsOpen(false)} />
+                  <div className="absolute right-0 mt-2 w-64 bg-white rounded-lg shadow-xl py-2 z-20 animate-in fade-in slide-in-from-top-2 duration-200">
                     <Link
                       href="/near-uwc-bellville"
                       className="block px-4 py-3 text-gray-700 hover:bg-[#7c9885]/10 transition-colors"
-                      onClick={() => setStudentOpen(false)}
+                      onClick={() => setVisitorsOpen(false)}
                     >
-                      <div className="font-medium">UWC Accommodation</div>
-                      <div className="text-xs text-gray-500">5.5km from campus</div>
+                      <div className="font-medium">UWC Graduations & Block Week</div>
+                      <div className="text-xs text-gray-500">Parents, professors, short stays</div>
                     </Link>
                     <Link
                       href="/near-cput-bellville"
                       className="block px-4 py-3 text-gray-700 hover:bg-[#7c9885]/10 transition-colors"
-                      onClick={() => setStudentOpen(false)}
+                      onClick={() => setVisitorsOpen(false)}
                     >
-                      <div className="font-medium">CPUT Accommodation</div>
-                      <div className="text-xs text-gray-500">4.5km from campus</div>
+                      <div className="font-medium">CPUT Graduations & Block Week</div>
+                      <div className="text-xs text-gray-500">Parents, professors, short stays</div>
                     </Link>
                     <Link
                       href="/student-faq"
                       className="block px-4 py-3 text-gray-700 hover:bg-[#7c9885]/10 transition-colors"
-                      onClick={() => setStudentOpen(false)}
+                      onClick={() => setVisitorsOpen(false)}
                     >
-                      <div className="font-medium">Student FAQ</div>
+                      <div className="font-medium">Visitor FAQ</div>
                       <div className="text-xs text-gray-500">Common questions</div>
                     </Link>
                   </div>
@@ -209,27 +210,27 @@ export function Navigation() {
             </Link>
 
             <div className="border-t border-white/10 mt-2 pt-2">
-              <div className="px-4 py-2 text-sm font-semibold opacity-75">Students</div>
+              <div className="px-4 py-2 text-sm font-semibold opacity-75">University Visitors</div>
               <Link
                 href="/near-uwc-bellville"
                 className="block px-6 py-3 rounded-lg hover:bg-white/10 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
-                UWC Accommodation
+                UWC Graduations & Block Week
               </Link>
               <Link
                 href="/near-cput-bellville"
                 className="block px-6 py-3 rounded-lg hover:bg-white/10 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
-                CPUT Accommodation
+                CPUT Graduations & Block Week
               </Link>
               <Link
                 href="/student-faq"
                 className="block px-6 py-3 rounded-lg hover:bg-white/10 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
-                Student FAQ
+                Visitor FAQ
               </Link>
             </div>
 

@@ -6,23 +6,11 @@ import { Card, CardContent } from "@/components/ui/card"
 import { MapPin, Phone, Wifi, Shield, Clock, GraduationCap, Utensils, Car, ArrowRight } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "UWC & CPUT Accommodation Bellville | Guesthouse Near UWC 5km Away - 60 on Kosmos",
+  title: "UWC Graduation Accommodation | Parents & Visiting Professors Near UWC",
   description:
-    "Affordable accommodation near UWC and CPUT Bellville. Self-catering ensuite rooms 5km from UWC, 4.5km from CPUT with WiFi, secure parking. Perfect for students, parents, medical staff near Tygerberg Hospital.",
-  keywords:
-    "UWC accommodation, CPUT accommodation, guesthouse near UWC, student accommodation Bellville, self-catering rooms near Tygerberg Hospital, UWC parent accommodation, CPUT visitor lodging, student housing Bellville South",
-  openGraph: {
-    title: "UWC & CPUT Accommodation Bellville | 60 on Kosmos",
-    description:
-      "Stay near UWC and CPUT campuses. Comfortable rooms with WiFi, parking, and weekly cleaning. Perfect for students and parents.",
-    images: [
-      {
-        url: "/images/sage-double-room.png",
-        width: 1200,
-        height: 630,
-        alt: "Comfortable student accommodation near UWC at 60 on Kosmos Bellville",
-      },
-    ],
+    "Short-term accommodation near UWC for graduations, block week, visiting professors and parents. No long-term student leases - nightly and weekly rates only.",
+  alternates: {
+    canonical: "https://60onkosmos.co.za/near-uwc-bellville",
   },
 }
 
@@ -60,12 +48,11 @@ export default function NearUWCPage() {
                 <span className="font-semibold">University Accommodation</span>
               </div>
               <h1 className="text-4xl font-bold text-gray-900 mb-4">
-                Accommodation Near UWC & CPUT Bellville — Student & Parent Friendly
+                UWC Graduation & Short-Stay Accommodation
               </h1>
               <p className="text-xl text-gray-600 mb-6">
-                Comfortable, affordable rooms just 5km from UWC and 4.5km from CPUT with free WiFi, secure parking, and
-                self-catering facilities. Perfect for students, parents visiting for graduation, and academic staff near
-                Tygerberg Hospital.
+                Short-term accommodation near UWC for graduations, block week exams, visiting professors, and parents. 
+                No long-term student leases - nightly and weekly bookings only. Self-catering rooms with WiFi and secure parking.
               </p>
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
                 <p className="text-blue-800 font-semibold">

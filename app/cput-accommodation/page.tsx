@@ -5,9 +5,9 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 
 export const metadata: Metadata = {
-  title: "CPUT Accommodation Bellville | Student Rooms Near CPUT Campus",
+  title: "CPUT Graduation Accommodation | Parents & Visiting Professors Bellville",
   description:
-    "Affordable accommodation near CPUT Bellville campus. Self-catering rooms, free WiFi, secure parking. Perfect for CPUT students and visiting parents. Book direct and save.",
+    "Short-term accommodation near CPUT for graduations, block week, visiting professors and parents. No long-term leases - nightly and weekly rates only. Self-catering rooms with WiFi.",
   alternates: {
     canonical: "https://60onkosmos.co.za/cput-accommodation",
   },
@@ -25,11 +25,11 @@ export default function CPUTAccommodationPage() {
               <span>CPUT Student Accommodation</span>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Accommodation Near CPUT Bellville Campus
+              CPUT Graduation & Short-Stay Accommodation
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              Comfortable self-catering rooms just 4.5km from CPUT Bellville. Ideal for students, parents, and academic
-              staff.
+              Short-term accommodation near CPUT for graduations, block week exams, visiting professors, and parents. 
+              No long-term leases - book nightly or weekly only.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-sage-600 hover:bg-sage-700">
@@ -83,7 +83,7 @@ export default function CPUTAccommodationPage() {
       {/* Why Choose Us */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">Why CPUT Students Choose 60 on Kosmos</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Perfect for Short-Term CPUT Visitors</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="flex gap-4">
               <Utensils className="w-8 h-8 text-sage-600 flex-shrink-0" />

@@ -17,11 +17,12 @@ import {
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import { FAQSchema } from "@/components/faq-schema"
 
 export const metadata: Metadata = {
   title: "Contractor Accommodation Bellville South | From R530/Night | Self-Catering with Parking",
   description:
-    "Affordable contractor accommodation in Bellville South for long term stays. Weekly & monthly rates. Self-catering, secure parking for bakkies, WiFi. Near factories, TAC Business Park, Sacks Circle. Perfect for artisan trainees, welders, boilermakers & work crews.",
+    "Affordable contractor accommodation in Bellville South. Nightly, weekly & monthly rates for project-based stays. Self-catering, secure parking for bakkies, WiFi. Near factories, TAC Business Park, Sacks Circle. Perfect for artisan trainees, welders, boilermakers & work crews.",
   alternates: {
     canonical: "https://60onkosmos.co.za/contractor-accommodation",
   },
@@ -29,14 +30,14 @@ export const metadata: Metadata = {
     "contractor accommodation bellville south",
     "self catering contractor accommodation bellville",
     "weekly contractor accommodation bellville south",
-    "affordable contractor accommodation bellville south long term",
+    "project accommodation bellville south",
     "workers accommodation bellville south parking bakkies",
     "contractor accommodation near tac business park",
     "artisan trainee accommodation near northlink college",
     "boilermaker accommodation near john thompson bellville",
     "welding trainee accommodation bellville",
     "monthly contractor accommodation bellville self catering",
-    "short term crew housing bellville south industria",
+    "shutdown accommodation bellville south",
     "contractor teams accommodation bellville",
   ],
   openGraph: {
@@ -215,9 +216,45 @@ export default function ContractorAccommodationPage() {
     },
   ]
 
+  const contractorFAQs = [
+    {
+      question: "How much does contractor accommodation cost in Bellville South?",
+      answer: "Contractor accommodation at 60 on Kosmos starts from R530/night for a Standard Room (2 single beds), R580/night for Standard Plus with private fridge, R620/night for a Double Room with workspace, or R750/night for a Triple Suite (only R250 per person). Weekly and monthly discounts available.",
+    },
+    {
+      question: "Is there secure parking for work vehicles and bakkies?",
+      answer: "Yes, we have secure parking behind locked gates with 24/7 CCTV surveillance. Bakkies, work vehicles, and trailers are welcome. The parking area is well-lit and monitored.",
+    },
+    {
+      question: "Do you accommodate apprentices and trainees on courses?",
+      answer: "Yes, we regularly host apprentices from John Thompson boilermaker courses, Northlink College welding programmes, and other training facilities. Our Standard Room at R530/night is ideal for trainees on a budget.",
+    },
+    {
+      question: "Can contractors cook their own meals?",
+      answer: "Absolutely. All guests have access to self-catering facilities including a communal kitchen with stove, microwave, and large shared refrigerator. Standard Plus, Double, and Triple rooms include private bar fridges. Double rooms also have a microwave.",
+    },
+    {
+      question: "How close is 60 on Kosmos to industrial areas?",
+      answer: "We are walking distance from Sacks Circle Industrial, 5 minutes from Mill Park Industrial and TAC Business Park, and 10 minutes from Stikland Industrial. Major employers like Beekman Canopies and Consol Glass are nearby.",
+    },
+    {
+      question: "What amenities are included in the room rate?",
+      answer: "All rooms include free WiFi, weekly cleaning with fresh linen, secure parking, CCTV security, ensuite bathroom, and access to self-catering facilities. Electricity and water are included in the rate.",
+    },
+    {
+      question: "Do you offer weekly or monthly rates for project stays?",
+      answer: "Yes, we offer discounted rates for weekly and monthly project bookings. Contact us on WhatsApp at 074 524 5703 for a custom quote based on your project duration and team size.",
+    },
+    {
+      question: "Can you accommodate work crews or teams?",
+      answer: "Yes, our Triple Suite accommodates 3 people at only R250 per person per night - the best value for crews. We can also arrange multiple rooms for larger teams. Many contractors book several rooms for their crews on project assignments.",
+    },
+  ]
+
   return (
     <div className="min-h-screen bg-white">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
+      <FAQSchema faqs={contractorFAQs} />
 
       {/* Hero Section */}
       <section className="relative bg-gray-900 py-16 md:py-24">
@@ -240,9 +277,9 @@ export default function ContractorAccommodationPage() {
               Contractor Accommodation in Bellville South
             </h1>
             <p className="text-xl text-gray-300 mb-4">
-              Affordable contractor accommodation for long term stays.
+              Affordable contractor accommodation for project-based stays.
               <br className="hidden md:block" />
-              Weekly & monthly rates. Self-catering, secure parking for bakkies, WiFi.
+              Nightly, weekly & monthly rates. Self-catering, secure parking for bakkies, WiFi.
             </p>
             <p className="text-base text-gray-400 mb-8">Near factories, TAC Business Park, Sacks Circle & Mill Park.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -566,41 +603,15 @@ export default function ContractorAccommodationPage() {
       {/* FAQ Section */}
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">Contractor FAQ</h2>
-          <div className="space-y-6">
-            <Card className="p-6">
-              <h3 className="font-bold text-lg mb-2">Do you accommodate apprentices on training courses?</h3>
-              <p className="text-gray-600">
-                Yes! We regularly host apprentices from John Thompson, Northlink College, and other training facilities.
-                Our Standard Room at R530/night is perfect for trainees.
-              </p>
-            </Card>
-            <Card className="p-6">
-              <h3 className="font-bold text-lg mb-2">Is there parking for work vehicles?</h3>
-              <p className="text-gray-600">
-                Yes, we have secure parking behind locked gates with 24/7 CCTV. Bakkies and work vehicles are welcome.
-              </p>
-            </Card>
-            <Card className="p-6">
-              <h3 className="font-bold text-lg mb-2">What's the difference between Standard and Standard Plus?</h3>
-              <p className="text-gray-600">
-                Both have 2 single beds and ensuite bathroom. Standard Plus (R580) includes a private bar fridge in the
-                room. Standard (R530) has full access to the communal kitchen with large shared refrigerator.
-              </p>
-            </Card>
-            <Card className="p-6">
-              <h3 className="font-bold text-lg mb-2">Can we cook our own meals?</h3>
-              <p className="text-gray-600">
-                Absolutely. All rooms have access to self-catering facilities. Double and Triple rooms have private
-                fridges. Standard rooms have full access to the communal kitchenette.
-              </p>
-            </Card>
-            <Card className="p-6">
-              <h3 className="font-bold text-lg mb-2">How often is cleaning done?</h3>
-              <p className="text-gray-600">
-                Weekly cleaning service is included in all room rates, with fresh linen provided.
-              </p>
-            </Card>
+          <h2 className="text-3xl font-bold text-center mb-4">Contractor Accommodation FAQ</h2>
+          <p className="text-gray-600 text-center mb-12">Common questions about staying at 60 on Kosmos</p>
+          <div className="space-y-4">
+            {contractorFAQs.map((faq, index) => (
+              <Card key={index} className="p-6">
+                <h3 className="font-bold text-lg mb-2">{faq.question}</h3>
+                <p className="text-gray-600">{faq.answer}</p>
+              </Card>
+            ))}
           </div>
         </div>
       </section>

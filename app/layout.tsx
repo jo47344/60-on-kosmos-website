@@ -15,6 +15,13 @@ import { WhatsAppWidget } from "@/components/whatsapp-widget"
 
 const inter = Inter({ subsets: ["latin"] })
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: "#7c9885",
+}
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://60onkosmos.co.za"),
   title: {
@@ -95,7 +102,6 @@ export default function RootLayout({
   return (
     <html lang="en-ZA">
       <head>
-        <meta name="google-site-verification" content="5vqXUTGkpekxzUZ2SZ9t_sP4o2BVGccbqEQF-dYn9IQ" />
         <LocalBusinessSchema />
         <StructuredData />
         <GoogleAnalytics />

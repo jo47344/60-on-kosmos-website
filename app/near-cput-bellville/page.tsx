@@ -6,23 +6,11 @@ import { Card, CardContent } from "@/components/ui/card"
 import { MapPin, Phone, Wifi, Shield, Clock, GraduationCap, Utensils, Car } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "CPUT Accommodation Bellville | Student Rooms Near CPUT Campus - 60 on Kosmos",
+  title: "CPUT Short-Stay Accommodation | Block Week, Graduations & Visiting Professors",
   description:
-    "Affordable student accommodation near CPUT Bellville campus. Self-catering ensuite rooms just 4.5km away with WiFi, secure parking, and weekly cleaning. Perfect for CPUT students, parents, and academic visitors.",
-  keywords:
-    "CPUT accommodation Bellville, student housing near CPUT, rooms near CPUT campus, affordable student accommodation Cape Town, CPUT visitor lodging, self-catering accommodation CPUT, engineering student housing Bellville, CPUT parent accommodation",
-  openGraph: {
-    title: "CPUT Accommodation Bellville | 60 on Kosmos Guesthouse",
-    description:
-      "Comfortable ensuite rooms just 4.5km from CPUT Bellville campus. Perfect for students, parents, and visitors. Secure parking, free WiFi, weekly cleaning.",
-    images: [
-      {
-        url: "/images/twin-room-yellow.png",
-        width: 1200,
-        height: 630,
-        alt: "Clean student room near CPUT Bellville at 60 on Kosmos",
-      },
-    ],
+    "Short-term accommodation near CPUT for block week exams, graduations, visiting professors and parents. No long-term student leases - nightly and weekly rates only.",
+  alternates: {
+    canonical: "https://60onkosmos.co.za/near-cput-bellville",
   },
 }
 
@@ -60,12 +48,11 @@ export default function NearCPUTPage() {
                 <span className="font-semibold">CPUT Student Accommodation</span>
               </div>
               <h1 className="text-4xl font-bold text-gray-900 mb-4">
-                Accommodation Near CPUT Bellville — Affordable Student Rooms
+                CPUT Short-Stay Accommodation — Block Week & Graduations
               </h1>
               <p className="text-xl text-gray-600 mb-6">
-                Engineering students, parents & visitors: comfortable, affordable rooms just 4.5km from CPUT Bellville
-                campus with WiFi, parking & kitchen access. Perfect for exam weeks, project deadlines, or semester
-                accommodation.
+                Parents, visiting professors & short-stay visitors: comfortable rooms just 4.5km from CPUT Bellville
+                campus with WiFi and parking. Perfect for block week exams, graduations, and academic conferences. No long-term leases.
               </p>
               <div className="bg-purple-50 border border-purple-200 rounded-lg p-4 mb-6">
                 <p className="text-purple-800 font-semibold">📍 Just 4.5km from CPUT campus — 8-minute drive or taxi</p>

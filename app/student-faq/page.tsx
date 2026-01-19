@@ -6,11 +6,12 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Phone, GraduationCap } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Student FAQ | UWC & CPUT Accommodation Questions - 60 on Kosmos",
+  title: "Visitor FAQ | Graduations, Block Week & Short-Stay Near UWC & CPUT",
   description:
-    "Frequently asked questions about student accommodation near UWC and CPUT Bellville. Booking, pricing, amenities, and transport info for students and parents.",
-  keywords:
-    "student accommodation FAQ, UWC accommodation questions, CPUT housing questions, student booking info Bellville",
+    "FAQ for parents, visiting professors and short-term visitors near UWC and CPUT. Block week, graduation accommodation, and campus visitor info. No long-term student housing.",
+  alternates: {
+    canonical: "https://60onkosmos.co.za/student-faq",
+  },
 }
 
 export default function StudentFAQPage() {
@@ -39,9 +40,9 @@ export default function StudentFAQPage() {
           <div className="flex items-center justify-center gap-2 text-purple-600 mb-4">
             <GraduationCap className="w-8 h-8" />
           </div>
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Student FAQ</h1>
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">Short-Stay Visitor FAQ</h1>
           <p className="text-xl text-gray-600">
-            Everything UWC & CPUT students need to know about staying at 60 on Kosmos
+            Info for parents, visiting professors, and short-term visitors near UWC & CPUT
           </p>
         </div>
       </section>
