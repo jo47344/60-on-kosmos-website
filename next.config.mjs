@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  trailingSlash: false,
+  skipTrailingSlashRedirect: false,
   eslint: {
     ignoreDuringBuilds: true,
   },
