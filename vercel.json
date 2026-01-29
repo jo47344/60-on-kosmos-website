@@ -1,4 +1,13 @@
 {
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/:path((?!api|_next|static|.*\\..*).*)",
+      "has": [{ "type": "host", "value": "www.60onkosmos.co.za" }],
+      "destination": "https://60onkosmos.co.za/:path",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/robots.txt",
