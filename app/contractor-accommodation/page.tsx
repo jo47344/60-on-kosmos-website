@@ -328,6 +328,46 @@ export default function ContractorAccommodationPage() {
         </div>
       </section>
 
+      {/* Trusted By Industry Section */}
+      <section className="py-10 bg-white border-b">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-center text-sm text-gray-500 uppercase tracking-wider mb-6">Trusted by contractors from</p>
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-6 items-center justify-items-center">
+            <div className="flex flex-col items-center text-center">
+              <div className="w-14 h-14 bg-gray-100 rounded-full flex items-center justify-center mb-2">
+                <Wrench className="w-7 h-7 text-gray-600" />
+              </div>
+              <span className="text-sm font-medium text-gray-700">Plumbing Contractors</span>
+            </div>
+            <div className="flex flex-col items-center text-center">
+              <div className="w-14 h-14 bg-gray-100 rounded-full flex items-center justify-center mb-2">
+                <Shield className="w-7 h-7 text-gray-600" />
+              </div>
+              <span className="text-sm font-medium text-gray-700">Sheetmetal Fabricators</span>
+            </div>
+            <div className="flex flex-col items-center text-center">
+              <div className="w-14 h-14 bg-gray-100 rounded-full flex items-center justify-center mb-2">
+                <Briefcase className="w-7 h-7 text-gray-600" />
+              </div>
+              <span className="text-sm font-medium text-gray-700">Consulting Firms</span>
+            </div>
+            <div className="flex flex-col items-center text-center">
+              <div className="w-14 h-14 bg-gray-100 rounded-full flex items-center justify-center mb-2">
+                <Car className="w-7 h-7 text-gray-600" />
+              </div>
+              <span className="text-sm font-medium text-gray-700">Logistics Teams</span>
+            </div>
+            <div className="flex flex-col items-center text-center col-span-2 md:col-span-1">
+              <div className="w-14 h-14 bg-gray-100 rounded-full flex items-center justify-center mb-2">
+                <Users className="w-7 h-7 text-gray-600" />
+              </div>
+              <span className="text-sm font-medium text-gray-700">Industrial Cleaning Crews</span>
+            </div>
+          </div>
+          <p className="text-center text-gray-500 text-sm mt-6">50+ contractor teams hosted from across South Africa</p>
+        </div>
+      </section>
+
       {/* Room Pricing Cards - Now shows 4 room types */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
