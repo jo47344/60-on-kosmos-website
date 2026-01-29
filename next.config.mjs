@@ -1,7 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // SEO: Consistent URL structure - no trailing slashes
   trailingSlash: false,
-  skipTrailingSlashRedirect: false,
+  // Let middleware handle redirects to avoid double redirects
+  skipTrailingSlashRedirect: true,
   eslint: {
     ignoreDuringBuilds: true,
   },
