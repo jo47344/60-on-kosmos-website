@@ -104,20 +104,18 @@ export default function RootLayout({
       <head>
         <LocalBusinessSchema />
         <StructuredData />
-        <GoogleAnalytics />
       </head>
       <body className={inter.className}>
-        <Suspense fallback={<div>Loading...</div>}>
-          <Navigation />
-          <main id="main-content" className="min-h-screen">
-            {children}
-          </main>
-          <Footer />
-          <StickyMobileCTA />
-          <WhatsAppWidget />
-          <PerformanceOptimizations />
-          <Toaster />
-        </Suspense>
+        <GoogleAnalytics />
+        <Navigation />
+        <main id="main-content" className="min-h-screen">
+          {children}
+        </main>
+        <Footer />
+        <StickyMobileCTA />
+        <WhatsAppWidget />
+        <PerformanceOptimizations />
+        <Toaster />
       </body>
     </html>
   )
