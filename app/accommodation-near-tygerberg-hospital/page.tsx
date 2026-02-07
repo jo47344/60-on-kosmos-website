@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "Clean, affordable rooms 8km from Tygerberg Hospital. Perfect for medical staff, patients' families, and locum doctors. Monthly rates available. WiFi, parking, 24/7 access.",
   keywords:
     "accommodation near tygerberg hospital, rooms near tygerberg, medical staff accommodation bellville, tygerberg hospital guest house, locum doctor accommodation cape town",
+  alternates: { canonical: "https://60onkosmos.co.za/accommodation-near-tygerberg-hospital" },
 }
 
 export default function TygerbergHospitalPage() {

@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     "24/7 CCTV security, free WiFi, safe parking, outdoor seating areas. Guesthouse Bellville South near UWC with all amenities included. On-site caretaker, welcome refreshments. Book 074 524 5703",
   keywords:
     "Guesthouse amenities Bellville South, secure accommodation Cape Town, CCTV security guesthouse, free WiFi accommodation Bellville, safe parking Cape Town, outdoor seating guesthouse",
+  alternates: { canonical: "https://60onkosmos.co.za/amenities" },
   openGraph: {
     title: "Amenities & Services - 60 on Kosmos Guesthouse",
     description: "24/7 security, free WiFi, safe parking and outdoor areas at our Bellville South guesthouse",

@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     "Ensuite rooms with shared kitchenette (bar fridge, kettle, two-plate stove, air fryer). Ideal for independent guests and families in Bellville South.",
   keywords:
     "self-catering accommodation Bellville, kitchenette accommodation Bellville South, self-catering guesthouse Cape Town, cook your own meals Bellville",
+  alternates: { canonical: "https://60onkosmos.co.za/self-catering-accommodation-bellville" },
   openGraph: {
     title: "Self-Catering Accommodation Bellville | Kitchenette Access",
     description: "Ensuite rooms with shared kitchenette access for cooking your own meals in Bellville South.",

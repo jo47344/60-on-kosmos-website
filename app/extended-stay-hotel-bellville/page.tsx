@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     "Affordable long-term rooms for students and professionals. Free Wi-Fi, parking, and flexible check-ins near Tygerberg Hospital and UWC.",
   keywords:
     "extended stay hotel Bellville, long-term accommodation Bellville South, student accommodation Bellville, professional lodging Cape Town",
+  alternates: { canonical: "https://60onkosmos.co.za/extended-stay-hotel-bellville" },
   openGraph: {
     title: "Extended Stay Hotel in Bellville | Long-Term Rooms",
     description: "Affordable long-term rooms near UWC and Tygerberg Hospital with free WiFi and parking.",

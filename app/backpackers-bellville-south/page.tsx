@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "Affordable backpacker accommodation Bellville South from R530/night. Private ensuite rooms, free WiFi, safe area. Close to Cape Town CBD & Table Mountain. Solo travelers welcome.",
   keywords:
     "backpackers bellville south, budget hostel bellville, cheap backpacker cape town, solo traveler accommodation bellville south, backpacker rooms cape town",
+  alternates: { canonical: "https://60onkosmos.co.za/backpackers-bellville-south" },
 }
 
 export default function BackpackersPage() {

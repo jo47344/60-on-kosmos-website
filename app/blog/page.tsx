@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "Expert accommodation guides for Bellville South. Tips for medical staff, students, contractors, and visitors staying near UWC, Tygerberg Hospital, and Cape Town.",
   keywords:
     "bellville south accommodation blog, cape town visitor guide, tygerberg hospital tips, uwc student housing guide, bellville south living",
+  alternates: { canonical: "https://60onkosmos.co.za/blog" },
 }
 
 export default function BlogPage() {
