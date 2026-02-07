@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "Affordable budget accommodation Bellville South from R530/night. Clean ensuite rooms, free WiFi, secure parking. Best cheap guesthouse near UWC & Tygerberg Hospital. Book direct.",
   keywords:
     "cheap accommodation bellville south, budget rooms bellville south, affordable guesthouse cape town, cheap rooms near uwc, budget accommodation tygerberg, backpacker bellville",
+  alternates: { canonical: "https://60onkosmos.co.za/cheap-accommodation-bellville-south" },
 }
 
 export default function CheapAccommodationPage() {

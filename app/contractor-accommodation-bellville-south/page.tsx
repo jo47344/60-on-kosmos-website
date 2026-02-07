@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "Crew-friendly ensuite rooms minutes from Sacks Circle. Secure yard, WiFi, bar fridges. Weekly/monthly rates on request — WhatsApp now.",
   keywords:
     "contractor accommodation bellville south, accommodation near sacks circle, workers accommodation bellville, crew rooms bellville south, contractor rates weekly bellville",
+  alternates: { canonical: "https://60onkosmos.co.za/contractor-accommodation-bellville-south" },
   openGraph: {
     title: "Contractor Accommodation Bellville South | 60 on Kosmos",
     description: "Secure, affordable ensuite rooms for contractors near Sacks Circle with parking & WiFi",

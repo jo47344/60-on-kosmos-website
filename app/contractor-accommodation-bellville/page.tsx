@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     "Secure ensuite rooms with parking and Wi-Fi for contractors working in Bellville Industrial Area. Close to major routes. Monthly rates and invoices provided.",
   keywords:
     "contractor accommodation Bellville, workers accommodation Bellville South, monthly contractor rates, accommodation near Bellville Industrial, crew accommodation Cape Town",
+  alternates: { canonical: "https://60onkosmos.co.za/contractor-accommodation-bellville" },
   openGraph: {
     title: "Contractor Accommodation Bellville South | Secure & Affordable",
     description: "Secure ensuite rooms with parking and WiFi for contractors. Monthly rates and invoices provided.",

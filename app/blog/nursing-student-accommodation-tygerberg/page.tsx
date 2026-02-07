@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "Starting practical training at Tygerberg Hospital? Find safe, affordable accommodation for nursing students in Bellville South. 3-6 month stays, WiFi, parking, quiet study environment.",
   keywords:
     "nursing student accommodation tygerberg, student nurse housing bellville, tygerberg hospital student accommodation, practical training housing cape town, nursing college accommodation",
+  alternates: { canonical: "https://60onkosmos.co.za/blog/nursing-student-accommodation-tygerberg" },
 }
 
 export default function NursingStudentPage() {

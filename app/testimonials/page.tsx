@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "Guest Reviews & Testimonials - 60 on Kosmos Bellville South",
   description:
     "Read real reviews from contractors, students, and families who stayed at 60 on Kosmos guesthouse Bellville South. See why we're rated 4.8/5 stars.",
+  alternates: { canonical: "https://60onkosmos.co.za/testimonials" },
   openGraph: {
     title: "Guest Testimonials - 60 on Kosmos Guesthouse Bellville South",
     description: "See what our guests say about their stay at our Bellville South guesthouse",

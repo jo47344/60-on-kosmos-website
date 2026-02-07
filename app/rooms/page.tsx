@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "Self-catering ensuite rooms from R530/night. Standard twin, double & deluxe rooms near UWC, Tygerberg Hospital. Free WiFi, CCTV security, parking, weekly cleaning. For young professionals & contractors. Book 074 524 5703",
   keywords:
     "Self-catering rooms Bellville South, professional accommodation Cape Town, rooms near UWC, ensuite accommodation Bellville, contractor rooms Cape Town, monthly accommodation Bellville",
+  alternates: { canonical: "https://60onkosmos.co.za/rooms" },
   openGraph: {
     title: "Self-Catering Rooms & Rates - 60 on Kosmos Guesthouse Bellville South",
     description:

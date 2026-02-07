@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     "Perfect location near UWC (5km), Tygerberg Hospital (8km), SPAR Kasselsvlei Centre (2km). Easy transport to Cape Town CBD. Guesthouse Bellville South with local knowledge. Call 074 524 5703",
   keywords:
     "Bellville South location, near UWC accommodation, Tygerberg Hospital guesthouse, SPAR Kasselsvlei Centre, transport Cape Town CBD, local attractions Bellville South",
+  alternates: { canonical: "https://60onkosmos.co.za/local-info" },
   openGraph: {
     title: "Local Area & Attractions - 60 on Kosmos Bellville South",
     description: "Perfectly located near UWC, Tygerberg Hospital and major Cape Town attractions",

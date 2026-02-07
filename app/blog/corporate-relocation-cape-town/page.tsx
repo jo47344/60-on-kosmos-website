@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "Relocating employees to Cape Town? Find cost-effective corporate accommodation in Bellville South. Flexible terms, monthly billing, easy logistics. Perfect for 1-6 month relocations.",
   keywords:
     "corporate relocation cape town, employee accommodation bellville, business relocation housing, temporary corporate housing cape town, HR accommodation solutions",
+  alternates: { canonical: "https://60onkosmos.co.za/blog/corporate-relocation-cape-town" },
 }
 
 export default function CorporateRelocationPage() {

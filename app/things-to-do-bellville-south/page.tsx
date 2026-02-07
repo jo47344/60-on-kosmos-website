@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "Discover the best restaurants, shopping, attractions and activities near 60 on Kosmos Bellville South. Complete guide to exploring the area around UWC and Tygerberg Hospital.",
   keywords:
     "things to do Bellville South, restaurants near Bellville South, shopping Bellville Cape Town, attractions near UWC, Bellville South guide, what to do Bellville",
+  alternates: { canonical: "https://60onkosmos.co.za/things-to-do-bellville-south" },
 }
 
 export default function ThingsToDoPage() {

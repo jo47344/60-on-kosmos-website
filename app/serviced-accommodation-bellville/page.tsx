@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     "Weekly serviced rooms with fresh linen and flexible check-ins. Ideal for business or short stays near Tygerberg Hospital and Bellville Industrial.",
   keywords:
     "serviced accommodation Bellville, weekly rooms Bellville, business accommodation Bellville South, serviced guesthouse Cape Town, weekly cleaning service",
+  alternates: { canonical: "https://60onkosmos.co.za/serviced-accommodation-bellville" },
   openGraph: {
     title: "Serviced Accommodation in Bellville | 60 on Kosmos",
     description: "Weekly serviced rooms with fresh linen and flexible check-ins near Tygerberg Hospital.",

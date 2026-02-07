@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "Just accepted to UWC? Find temporary accommodation near University of the Western Cape. Pre-arrival housing guide, costs, safety tips, and campus res application timeline.",
   keywords:
     "uwc international student housing, accommodation near uwc, student housing bellville, uwc campus residence, pre-arrival accommodation cape town, uwc temporary housing",
+  alternates: { canonical: "https://60onkosmos.co.za/blog/international-student-housing-uwc" },
 }
 
 export default function InternationalStudentHousingPage() {

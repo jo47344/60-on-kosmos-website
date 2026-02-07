@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "FAQ - Frequently Asked Questions | 60 on Kosmos Bellville South",
   description:
     "Get answers to common questions about 60 on Kosmos guesthouse in Bellville South. Parking, rates, amenities, communal kitchen, location near UWC and Tygerberg Hospital.",
+  alternates: { canonical: "https://60onkosmos.co.za/faq" },
   openGraph: {
     title: "FAQ - 60 on Kosmos Guesthouse Bellville South",
     description: "Frequently asked questions about our Bellville South accommodation",

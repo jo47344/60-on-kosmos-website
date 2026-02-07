@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "Affordable monthly accommodation Bellville South from R15,900/month. Perfect for contractors, locum doctors, long-term workers. Ensuite rooms, WiFi, parking, CCTV. Flexible lease terms.",
   keywords:
     "monthly accommodation bellville south, long term rooms bellville south, extended stay bellville, monthly rental bellville south, contractor monthly rates cape town, long term guesthouse bellville",
+  alternates: { canonical: "https://60onkosmos.co.za/monthly-accommodation-bellville-south" },
 }
 
 export default function MonthlyAccommodationPage() {

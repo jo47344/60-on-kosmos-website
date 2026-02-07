@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "Why Bellville South is Cape Town's best-kept secret for digital nomads. Fast WiFi, low cost, great community. Complete guide to remote work accommodation, coworking, and costs.",
   keywords:
     "digital nomad cape town, remote work accommodation bellville, cheap coworking cape town, digital nomad bellville south, remote worker housing cape town",
+  alternates: { canonical: "https://60onkosmos.co.za/blog/digital-nomad-guide-bellville-south" },
 }
 
 export default function DigitalNomadGuidePage() {

@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     "Moving to Tygerberg Hospital for locum work or permanent position? Everything you need to know about accommodation, transport, living costs, and settling in Bellville.",
   keywords:
     "tygerberg hospital accommodation, locum doctor housing cape town, medical staff accommodation bellville, tygerberg hospital relocation guide, nursing accommodation tygerberg",
+  alternates: { canonical: "https://60onkosmos.co.za/blog/medical-staff-guide-tygerberg-hospital" },
 }
 
 export default function MedicalStaffGuidePage() {

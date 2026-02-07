@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     "Discounted monthly rates for long stays. Ideal for contractors, students, or families relocating to Bellville South. Invoices provided.",
   keywords:
     "monthly accommodation Bellville, long-term stay Bellville South, monthly rates Cape Town, contractor monthly rates, student accommodation monthly",
+  alternates: { canonical: "https://60onkosmos.co.za/monthly-accommodation-bellville" },
   openGraph: {
     title: "Monthly Accommodation Bellville South | Long-Term Discounts",
     description: "Discounted monthly rates for contractors, students, and families in Bellville South.",

@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   description:
     "Take a virtual tour of 60 on Kosmos guesthouse in Bellville South. View our ensuite rooms, parking, outdoor areas, and facilities. See why guests love staying with us.",
   keywords: "virtual tour Bellville South, 60 on Kosmos photos, guesthouse tour, accommodation near UWC photos",
+  alternates: { canonical: "https://60onkosmos.co.za/virtual-tour" },
 }
 
 export default function VirtualTourPage() {
