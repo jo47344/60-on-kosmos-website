@@ -208,19 +208,19 @@ Events sent to Google Analytics 4 for conversion optimization.
 
 1. Clone the repository
 2. Install dependencies:
-```bash
+\`\`\`bash
 npm install
-```
+\`\`\`
 
 3. Create environment variables (if needed):
-```env
+\`\`\`env
 NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
-```
+\`\`\`
 
 4. Run development server:
-```bash
+\`\`\`bash
 npm run dev
-```
+\`\`\`
 
 5. Open http://localhost:3000
 
