@@ -100,7 +100,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en-ZA">
+    <html lang="en-ZA" className="bg-background">
       <head>
         <LocalBusinessSchema />
         <StructuredData />

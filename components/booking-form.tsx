@@ -24,9 +24,21 @@ export function BookingForm() {
   const [isSubmitted, setIsSubmitted] = useState(false)
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target
+    
+    // If check-in date changes and it's after the current check-out date, reset check-out
+    if (name === "checkinDate" && formData.checkoutDate && value > formData.checkoutDate) {
+      setFormData({
+        ...formData,
+        checkinDate: value,
+        checkoutDate: "", // Reset checkout date
+      })
+      return
+    }
+    
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [name]: value,
     })
   }
 
@@ -194,8 +206,9 @@ export function BookingForm() {
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="standard-twin">Standard Twin Room (R530/night)</SelectItem>
+                <SelectItem value="standard-plus">Standard Plus Room (R580/night)</SelectItem>
                 <SelectItem value="double-room">Double Room (R620/night)</SelectItem>
-                <SelectItem value="deluxe-twin">Deluxe Twin Room (R580/night)</SelectItem>
+                <SelectItem value="triple-room">Triple Room (R750/night)</SelectItem>
               </SelectContent>
             </Select>
           </div>

@@ -76,16 +76,7 @@ export function WhatsAppWidget() {
           className="bg-green-600 hover:bg-green-700 text-white rounded-full p-4 shadow-2xl transition-all duration-300 hover:scale-110 flex items-center justify-center group"
           aria-label="Open WhatsApp chat"
         >
-          {isOpen ? (
-            <X className="w-6 h-6" />
-          ) : (
-            <>
-              <MessageCircle className="w-6 h-6" />
-              <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center animate-pulse">
-                1
-              </span>
-            </>
-          )}
+          {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
         </button>
       </div>
 
@@ -97,9 +88,6 @@ export function WhatsAppWidget() {
           aria-label="Chat on WhatsApp"
         >
           <MessageCircle className="w-6 h-6" />
-          <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center animate-pulse">
-            1
-          </span>
         </button>
       </div>
     </>

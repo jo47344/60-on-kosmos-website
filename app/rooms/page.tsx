@@ -98,7 +98,7 @@ export default function RoomsPage() {
         <div className="bg-green-600 text-white rounded-lg p-4 mb-8 text-center">
           <p className="text-lg font-semibold">
             📞 Book Direct:{" "}
-            <a href="tel:0745245703" className="underline hover:no-underline">
+            <a href="tel:+27745245703" className="underline hover:no-underline">
               074 524 5703
             </a>{" "}
             |
@@ -167,7 +167,7 @@ export default function RoomsPage() {
                     </a>
                   </Button>
                   <Button asChild variant="outline" className="w-full bg-transparent">
-                    <a href="tel:0745245703">📞 Call 074 524 5703</a>
+                    <a href="tel:+27745245703">📞 Call 074 524 5703</a>
                   </Button>
                 </div>
               </CardContent>
@@ -184,7 +184,7 @@ export default function RoomsPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-sage-600 hover:bg-sage-700">
-              <a href="tel:0745245703">Call for Monthly Rates</a>
+              <a href="tel:+27745245703">Call for Monthly Rates</a>
             </Button>
             <Button asChild size="lg" variant="outline" className="border-sage-600 text-sage-600 bg-transparent">
               <a href="https://wa.me/27745245703" target="_blank" rel="noopener noreferrer">
