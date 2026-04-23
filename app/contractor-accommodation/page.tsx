@@ -354,7 +354,7 @@ export default function ContractorAccommodationPage() {
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-5 h-5 text-sage-400" />
-                  <span className="text-sm">Tax-compliant invoices</span>
+                  <span className="text-sm">Professional invoices</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-5 h-5 text-sage-400" />
@@ -382,7 +382,7 @@ export default function ContractorAccommodationPage() {
                   <CheckCircle2 className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
                   <div>
                     <span className="font-medium">Professional invoices</span>
-                    <p className="text-gray-400 text-sm">VAT-compliant for company expense claims</p>
+                    <p className="text-gray-400 text-sm">For company expense claims</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
@@ -892,7 +892,7 @@ export default function ContractorAccommodationPage() {
             </div>
             <div className="flex items-center gap-3 bg-white p-4 rounded-lg">
               <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0" />
-              <span>Tax-compliant invoices for company claims</span>
+              <span>Professional invoices for company claims</span>
             </div>
             <div className="flex items-center gap-3 bg-white p-4 rounded-lg">
               <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0" />
