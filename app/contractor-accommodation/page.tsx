@@ -14,6 +14,11 @@ import {
   Phone,
   GraduationCap,
   Wrench,
+  FileText,
+  Calculator,
+  Star,
+  Quote,
+  Building2,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -328,6 +333,85 @@ export default function ContractorAccommodationPage() {
         </div>
       </section>
 
+      {/* Group Booking CTA */}
+      <section className="py-12 bg-gray-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <div className="inline-flex items-center gap-2 bg-sage-600 px-3 py-1 rounded-full text-sm font-medium mb-4">
+                <Users className="w-4 h-4" />
+                <span>For Project Managers</span>
+              </div>
+              <h2 className="text-3xl font-bold mb-4">Booking for a Crew or Team?</h2>
+              <p className="text-gray-300 mb-6">
+                Get a custom quote for your entire team. We offer discounted rates for multiple rooms and extended stays. 
+                Company invoices provided for all bookings.
+              </p>
+              <div className="grid grid-cols-2 gap-4 mb-6">
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-sage-400" />
+                  <span className="text-sm">Multiple room discounts</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-sage-400" />
+                  <span className="text-sm">Tax-compliant invoices</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-sage-400" />
+                  <span className="text-sm">Weekly/monthly rates</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-sage-400" />
+                  <span className="text-sm">One contact for all rooms</span>
+                </div>
+              </div>
+              <Button asChild size="lg" className="bg-sage-600 hover:bg-sage-700">
+                <a href="https://wa.me/27745245703?text=Hi%2C%20I%27m%20a%20project%20manager%20and%20need%20to%20book%20accommodation%20for%20my%20team.%20Please%20send%20me%20a%20quote.">
+                  <Building2 className="mr-2 h-5 w-5" />
+                  Get Company Quote
+                </a>
+              </Button>
+            </div>
+            <div className="bg-gray-800 rounded-xl p-6">
+              <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                <FileText className="w-5 h-5 text-sage-400" />
+                Invoice & Payment Options
+              </h3>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <span className="font-medium">Professional invoices</span>
+                    <p className="text-gray-400 text-sm">VAT-compliant for company expense claims</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <span className="font-medium">EFT payments accepted</span>
+                    <p className="text-gray-400 text-sm">Direct bank transfer for corporate bookings</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <span className="font-medium">Flexible payment terms</span>
+                    <p className="text-gray-400 text-sm">Weekly or monthly billing available</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <span className="font-medium">Receipts on request</span>
+                    <p className="text-gray-400 text-sm">Digital or printed receipts for per diem claims</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Trusted By Industry Section */}
       <section className="py-10 bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -550,6 +634,107 @@ export default function ContractorAccommodationPage() {
         </div>
       </section>
 
+      {/* Contractor Testimonials */}
+      <section className="py-16 bg-sage-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">What Contractors Say About Us</h2>
+            <p className="text-gray-600">Real feedback from workers and project managers</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            <Card className="p-6">
+              <div className="flex mb-3">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 text-yellow-500 fill-current" />
+                ))}
+              </div>
+              <Quote className="w-8 h-8 text-sage-200 mb-2" />
+              <p className="text-gray-700 mb-4">
+                &quot;Been staying here for 3 months while working at Sacks Circle. Clean rooms, secure parking for my bakkie, and the owner is very accommodating. Best contractor accommodation I&apos;ve found in the area.&quot;
+              </p>
+              <div className="border-t pt-4">
+                <p className="font-semibold">William M.</p>
+                <p className="text-sm text-gray-500">Plumbing Contractor, 3 months</p>
+              </div>
+            </Card>
+            <Card className="p-6">
+              <div className="flex mb-3">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 text-yellow-500 fill-current" />
+                ))}
+              </div>
+              <Quote className="w-8 h-8 text-sage-200 mb-2" />
+              <p className="text-gray-700 mb-4">
+                &quot;Our company sends apprentices here for John Thompson courses. The invoicing is professional, the location is perfect, and our guys always report back happy. Highly recommend for training programmes.&quot;
+              </p>
+              <div className="border-t pt-4">
+                <p className="font-semibold">Jacques V.</p>
+                <p className="text-sm text-gray-500">Training Manager, Metalworks SA</p>
+              </div>
+            </Card>
+            <Card className="p-6">
+              <div className="flex mb-3">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 text-yellow-500 fill-current" />
+                ))}
+              </div>
+              <Quote className="w-8 h-8 text-sage-200 mb-2" />
+              <p className="text-gray-700 mb-4">
+                &quot;Booked 4 rooms for my team during a factory shutdown project. The Triple Room saved us money, and having all my guys in one place made coordination easy. Will definitely use again.&quot;
+              </p>
+              <div className="border-t pt-4">
+                <p className="font-semibold">Sipho N.</p>
+                <p className="text-sm text-gray-500">Site Foreman, 6-week project</p>
+              </div>
+            </Card>
+          </div>
+          <div className="text-center mt-8">
+            <Button asChild variant="outline" className="border-sage-600 text-sage-600 bg-transparent">
+              <Link href="/testimonials">Read More Reviews</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Weekly/Monthly Savings */}
+      <section className="py-16 bg-white border-b">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <Calculator className="w-12 h-12 text-sage-600 mx-auto mb-4" />
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Save More on Longer Stays</h2>
+            <p className="text-gray-600">The longer your project, the more you save</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            <Card className="p-6 text-center">
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Weekly Stay (7 nights)</h3>
+              <p className="text-3xl font-bold text-sage-600 mb-2">Save 10%</p>
+              <p className="text-gray-600 text-sm mb-4">Standard Room from R3,339/week</p>
+              <p className="text-xs text-gray-500">(Instead of R3,710)</p>
+            </Card>
+            <Card className="p-6 text-center ring-2 ring-sage-600">
+              <div className="bg-sage-600 text-white text-xs font-bold px-3 py-1 rounded-full inline-block mb-2">BEST VALUE</div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Monthly Stay (30 nights)</h3>
+              <p className="text-3xl font-bold text-sage-600 mb-2">Save 20%</p>
+              <p className="text-gray-600 text-sm mb-4">Standard Room from R12,720/month</p>
+              <p className="text-xs text-gray-500">(Instead of R15,900)</p>
+            </Card>
+            <Card className="p-6 text-center">
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Team Booking (3+ rooms)</h3>
+              <p className="text-3xl font-bold text-sage-600 mb-2">Custom Rate</p>
+              <p className="text-gray-600 text-sm mb-4">Additional discounts for crews</p>
+              <p className="text-xs text-gray-500">Contact us for a quote</p>
+            </Card>
+          </div>
+          <div className="text-center mt-8">
+            <Button asChild size="lg" className="bg-sage-600 hover:bg-sage-700">
+              <a href="https://wa.me/27745245703?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20a%20weekly%2Fmonthly%20contractor%20stay">
+                Get Your Discounted Rate
+              </a>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Why Choose Us */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -684,10 +869,73 @@ export default function ContractorAccommodationPage() {
         </div>
       </section>
 
+      {/* Contractor Checklist */}
+      <section className="py-12 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h3 className="text-2xl font-bold text-center mb-8">What Contractors Get at 60 on Kosmos</h3>
+          <div className="grid md:grid-cols-2 gap-4">
+            <div className="flex items-center gap-3 bg-white p-4 rounded-lg">
+              <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0" />
+              <span>Secure parking for bakkies and work vehicles</span>
+            </div>
+            <div className="flex items-center gap-3 bg-white p-4 rounded-lg">
+              <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0" />
+              <span>Self-catering kitchen to cook your own meals</span>
+            </div>
+            <div className="flex items-center gap-3 bg-white p-4 rounded-lg">
+              <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0" />
+              <span>Free WiFi for video calls and online access</span>
+            </div>
+            <div className="flex items-center gap-3 bg-white p-4 rounded-lg">
+              <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0" />
+              <span>Weekly cleaning with fresh linen included</span>
+            </div>
+            <div className="flex items-center gap-3 bg-white p-4 rounded-lg">
+              <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0" />
+              <span>Tax-compliant invoices for company claims</span>
+            </div>
+            <div className="flex items-center gap-3 bg-white p-4 rounded-lg">
+              <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0" />
+              <span>24/7 CCTV security and locked gates</span>
+            </div>
+            <div className="flex items-center gap-3 bg-white p-4 rounded-lg">
+              <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0" />
+              <span>Flexible weekly and monthly rates</span>
+            </div>
+            <div className="flex items-center gap-3 bg-white p-4 rounded-lg">
+              <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0" />
+              <span>Close to industrial areas and training centres</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Internal Links */}
       <section className="py-12 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h3 className="text-xl font-bold text-center mb-6">More Accommodation Options</h3>
+          <h3 className="text-xl font-bold text-center mb-6">Contractor Accommodation by Area</h3>
+          <div className="flex flex-wrap justify-center gap-4 mb-8">
+            <Link href="/contractor-accommodation-bellville" className="text-sage-600 hover:underline">
+              Bellville
+            </Link>
+            <span className="text-gray-400">|</span>
+            <Link href="/contractor-accommodation-bellville-south" className="text-sage-600 hover:underline">
+              Bellville South
+            </Link>
+            <span className="text-gray-400">|</span>
+            <Link href="/contractor-accommodation-goodwood" className="text-sage-600 hover:underline">
+              Goodwood
+            </Link>
+            <span className="text-gray-400">|</span>
+            <Link href="/contractor-accommodation-kuilsriver" className="text-sage-600 hover:underline">
+              Kuilsriver
+            </Link>
+            <span className="text-gray-400">|</span>
+            <Link href="/contractor-accommodation-northern-suburbs" className="text-sage-600 hover:underline">
+              Northern Suburbs
+            </Link>
+          </div>
+          <h3 className="text-xl font-bold text-center mb-6">More Options</h3>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/monthly-accommodation" className="text-sage-600 hover:underline">
               Monthly Stays
