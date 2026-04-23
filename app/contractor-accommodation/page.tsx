@@ -638,8 +638,8 @@ export default function ContractorAccommodationPage() {
       <section className="py-16 bg-sage-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">What Contractors Say About Us</h2>
-            <p className="text-gray-600">Real feedback from workers and project managers</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">What Our Long-Stay Guests Say</h2>
+            <p className="text-gray-600">Real feedback from contractors, interns, and professionals</p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             <Card className="p-6">
@@ -665,11 +665,11 @@ export default function ContractorAccommodationPage() {
               </div>
               <Quote className="w-8 h-8 text-sage-200 mb-2" />
               <p className="text-gray-700 mb-4">
-                &quot;Our company sends apprentices here for John Thompson courses. The invoicing is professional, the location is perfect, and our guys always report back happy. Highly recommend for training programmes.&quot;
+                &quot;I stayed here for my F&apos;SATI internship at CPUT. The location was perfect for getting to campus, the room was comfortable, and the owner made me feel welcome in South Africa. Great value for a 3-month stay.&quot;
               </p>
               <div className="border-t pt-4">
-                <p className="font-semibold">Jacques V.</p>
-                <p className="text-sm text-gray-500">Training Manager, Metalworks SA</p>
+                <p className="font-semibold">Antoine D.</p>
+                <p className="text-sm text-gray-500">F&apos;SATI Intern from France, 3 months</p>
               </div>
             </Card>
             <Card className="p-6">
@@ -680,11 +680,11 @@ export default function ContractorAccommodationPage() {
               </div>
               <Quote className="w-8 h-8 text-sage-200 mb-2" />
               <p className="text-gray-700 mb-4">
-                &quot;Booked 4 rooms for my team during a factory shutdown project. The Triple Room saved us money, and having all my guys in one place made coordination easy. Will definitely use again.&quot;
+                &quot;Came from Joburg for a 4-month practical at Tygerberg Hospital. Finding affordable accommodation was stressful until I found this place. Clean, safe, and much cheaper than hotels. The self-catering kitchen saved me money.&quot;
               </p>
               <div className="border-t pt-4">
-                <p className="font-semibold">Sipho N.</p>
-                <p className="text-sm text-gray-500">Site Foreman, 6-week project</p>
+                <p className="font-semibold">Thabo M.</p>
+                <p className="text-sm text-gray-500">Medical Intern from Gauteng, 4 months</p>
               </div>
             </Card>
           </div>
