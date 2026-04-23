@@ -78,7 +78,7 @@ export default function AmenitiesPage() {
         <div className="bg-green-600 text-white rounded-lg p-4 mb-8 text-center">
           <p className="text-lg font-semibold">
             📞 Questions? Call:{" "}
-            <a href="tel:0745245703" className="underline hover:no-underline">
+            <a href="tel:+27745245703" className="underline hover:no-underline">
               074 524 5703
             </a>
           </p>

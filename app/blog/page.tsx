@@ -93,7 +93,7 @@ export default function BlogPage() {
         <div className="bg-green-600 text-white rounded-lg p-6 mb-12 text-center">
           <p className="text-lg font-semibold mb-4">
             📞 Need accommodation advice? Call us:{" "}
-            <a href="tel:0745245703" className="underline hover:no-underline">
+            <a href="tel:+27745245703" className="underline hover:no-underline">
               074 524 5703
             </a>
           </p>

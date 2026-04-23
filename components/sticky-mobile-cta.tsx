@@ -41,7 +41,7 @@ export function StickyMobileCTA() {
             size="sm"
             className="flex-1 bg-white text-green-600 hover:bg-gray-100 font-semibold rounded-full shadow-md"
           >
-            <a href="tel:0745245703">
+            <a href="tel:+27745245703">
               <Phone className="w-4 h-4 mr-2" />📞 Call Now
             </a>
           </Button>

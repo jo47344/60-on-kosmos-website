@@ -7,7 +7,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
-import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react"
+import { Phone, Mail, MapPin, Clock, MessageCircle, CheckCircle2 } from "lucide-react"
 
 export default function ContactPageClient() {
   const [formData, setFormData] = useState({
@@ -16,11 +16,33 @@ export default function ContactPageClient() {
     phone: "",
     message: "",
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitted, setIsSubmitted] = useState(false)
+  const [error, setError] = useState("")
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission here
-    console.log("Form submitted:", formData)
+    setIsSubmitting(true)
+    setError("")
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      })
+
+      if (response.ok) {
+        setIsSubmitted(true)
+        setFormData({ name: "", email: "", phone: "", message: "" })
+      } else {
+        throw new Error("Failed to send message")
+      }
+    } catch {
+      setError("Sorry, there was an error sending your message. Please try calling us directly at 074 524 5703.")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -41,7 +63,7 @@ export default function ContactPageClient() {
           <div className="mt-6 p-4 bg-green-100 rounded-lg inline-block">
             <p className="text-2xl font-bold text-green-800">
               📞{" "}
-              <a href="tel:0745245703" className="hover:underline">
+              <a href="tel:+27745245703" className="hover:underline">
                 074 524 5703
               </a>
             </p>
@@ -74,7 +96,7 @@ export default function ContactPageClient() {
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
                   <p className="text-gray-600 text-lg font-semibold">
-                    <a href="tel:0745245703" className="hover:text-green-600">
+                    <a href="tel:+27745245703" className="hover:text-green-600">
                       074 524 5703
                     </a>
                   </p>
@@ -115,7 +137,7 @@ export default function ContactPageClient() {
                   </a>
                 </Button>
                 <Button asChild variant="outline" className="flex-1 bg-transparent">
-                  <a href="tel:0745245703">
+                  <a href="tel:+27745245703">
                     <Phone className="w-4 h-4 mr-2" />
                     Call Direct
                   </a>
@@ -139,40 +161,60 @@ export default function ContactPageClient() {
           {/* Contact Form */}
           <Card>
             <CardContent className="p-6">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h2>
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div>
-                  <Label htmlFor="name">Name</Label>
-                  <Input id="name" name="name" value={formData.name} onChange={handleChange} required />
+              {isSubmitted ? (
+                <div className="text-center py-8">
+                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <CheckCircle2 className="w-8 h-8 text-green-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Message Sent!</h3>
+                  <p className="text-gray-600 mb-6">Thanks for reaching out. We&apos;ll get back to you shortly.</p>
+                  <Button onClick={() => setIsSubmitted(false)} variant="outline" className="bg-transparent">
+                    Send Another Message
+                  </Button>
                 </div>
+              ) : (
+                <>
+                  <h2 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h2>
+                  {error && (
+                    <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
+                      {error}
+                    </div>
+                  )}
+                  <form onSubmit={handleSubmit} className="space-y-4">
+                    <div>
+                      <Label htmlFor="name">Name</Label>
+                      <Input id="name" name="name" value={formData.name} onChange={handleChange} required />
+                    </div>
 
-                <div>
-                  <Label htmlFor="email">Email</Label>
-                  <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} required />
-                </div>
+                    <div>
+                      <Label htmlFor="email">Email</Label>
+                      <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} required />
+                    </div>
 
-                <div>
-                  <Label htmlFor="phone">Phone (optional)</Label>
-                  <Input id="phone" name="phone" type="tel" value={formData.phone} onChange={handleChange} />
-                </div>
+                    <div>
+                      <Label htmlFor="phone">Phone (optional)</Label>
+                      <Input id="phone" name="phone" type="tel" value={formData.phone} onChange={handleChange} />
+                    </div>
 
-                <div>
-                  <Label htmlFor="message">Message</Label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    rows={4}
-                    value={formData.message}
-                    onChange={handleChange}
-                    placeholder="Tell us about your stay requirements, dates, or any questions..."
-                    required
-                  />
-                </div>
+                    <div>
+                      <Label htmlFor="message">Message</Label>
+                      <Textarea
+                        id="message"
+                        name="message"
+                        rows={4}
+                        value={formData.message}
+                        onChange={handleChange}
+                        placeholder="Tell us about your stay requirements, dates, or any questions..."
+                        required
+                      />
+                    </div>
 
-                <Button type="submit" className="w-full bg-green-600 hover:bg-green-700">
-                  Send Message
-                </Button>
-              </form>
+                    <Button type="submit" disabled={isSubmitting} className="w-full bg-green-600 hover:bg-green-700">
+                      {isSubmitting ? "Sending..." : "Send Message"}
+                    </Button>
+                  </form>
+                </>
+              )}
             </CardContent>
           </Card>
         </div>
