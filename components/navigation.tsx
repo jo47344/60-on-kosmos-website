@@ -54,7 +54,7 @@ export function Navigation() {
             />
             <div className="flex flex-col">
               <span className="text-xl font-bold leading-tight">60 on Kosmos</span>
-              <span className="text-xs opacity-90">Bellville South</span>
+              <span className="text-xs opacity-90">Quality Stays for Teams & Professionals</span>
             </div>
           </Link>
 

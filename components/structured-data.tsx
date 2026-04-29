@@ -4,13 +4,13 @@ export function StructuredData() {
     "@type": "LodgingBusiness",
     "@id": "https://60onkosmos.co.za/#lodgingbusiness",
     name: "60 on Kosmos",
-    alternateName: "60 on Kosmos Guesthouse Bellville South",
+    alternateName: "60 on Kosmos - Quality Stays for Teams and Professionals",
     description:
-      "Self-catering ensuite accommodation in Bellville South, Cape Town. Perfect for contractors, young professionals, and students. Close to UWC and Tygerberg Hospital. Secure parking, free WiFi, weekly cleaning, and communal kitchenette included.",
+      "Self-catering accommodation with private ensuite rooms in Bellville South, Cape Town. Quality stays for contractor teams and working professionals. Monthly rates from R464/night. Secure parking, free WiFi, and weekly cleaning included.",
     url: "https://60onkosmos.co.za",
     telephone: "+27745245703",
     email: "info@60onkosmos.co.za",
-    priceRange: "ZAR 530-750",
+    priceRange: "ZAR 464-840",
     currenciesAccepted: "ZAR",
     paymentAccepted: "Bank Transfer, EFT",
     address: {
