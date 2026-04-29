@@ -279,10 +279,12 @@ export default function ContractorAccommodationPage() {
               <span>Contractor & Apprentice Accommodation</span>
             </div>
             <h1 className="text-3xl md:text-5xl font-bold text-white mb-6">
-              Contractor Accommodation in Bellville South
+              Bellville South Contractor Accommodation
+              <br className="hidden md:block" />
+              <span className="text-sage-400">with Private Ensuite Rooms</span>
             </h1>
             <p className="text-xl text-gray-300 mb-4">
-              Affordable contractor accommodation for project-based stays.
+              Every room has its own private bathroom. No shared facilities.
               <br className="hidden md:block" />
               Nightly, weekly & monthly rates. Self-catering, secure parking for bakkies, WiFi.
             </p>
