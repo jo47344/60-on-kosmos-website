@@ -25,9 +25,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { FAQSchema } from "@/components/faq-schema"
 
 export const metadata: Metadata = {
-  title: "Contractor Accommodation Bellville South | From R530/Night | Self-Catering with Parking",
+  title: "Contractor Accommodation Bellville South | Monthly from R464/Night | Private Ensuite Rooms",
   description:
-    "Affordable contractor accommodation in Bellville South. Nightly, weekly & monthly rates for project-based stays. Self-catering, secure parking for bakkies, WiFi. Near factories, TAC Business Park, Sacks Circle. Perfect for artisan trainees, welders, boilermakers & work crews.",
+    "Affordable contractor accommodation in Bellville South with private ensuite rooms. Monthly rates from R464/night. Self-catering, secure parking for bakkies, WiFi, weekly cleaning. Near factories, TAC Business Park, Sacks Circle. Perfect for contractor crews, project teams & working professionals.",
   alternates: {
     canonical: "https://60onkosmos.co.za/contractor-accommodation",
   },
@@ -46,9 +46,9 @@ export const metadata: Metadata = {
     "contractor teams accommodation bellville",
   ],
   openGraph: {
-    title: "Contractor Accommodation Bellville South | Weekly & Monthly Rates",
+    title: "Contractor Accommodation Bellville South | Monthly from R464/Night",
     description:
-      "Self-catering rooms for contractors, work crews & artisan trainees. Secure parking, weekly cleaning, WiFi. From R530/night.",
+      "Private ensuite rooms for contractors & project teams. Monthly rates from R464/night. Secure parking, weekly cleaning, WiFi included.",
     url: "https://60onkosmos.co.za/contractor-accommodation",
     type: "website",
   },
@@ -76,7 +76,7 @@ export default function ContractorAccommodationPage() {
     },
     telephone: "+27745245703",
     url: "https://60onkosmos.co.za/contractor-accommodation",
-    priceRange: "R530 - R750",
+    priceRange: "R464 - R840",
     currenciesAccepted: "ZAR",
     paymentAccepted: "Cash, EFT, Bank Transfer",
     areaServed: [
@@ -104,30 +104,30 @@ export default function ContractorAccommodationPage() {
     makesOffer: [
       {
         "@type": "Offer",
-        name: "Standard Room",
-        description: "Budget room for apprentices, no bar fridge, communal kitchen access",
-        price: "530",
-        priceCurrency: "ZAR",
-      },
-      {
-        "@type": "Offer",
-        name: "Standard Plus Room",
-        description: "Room with private bar fridge for skilled workers",
+        name: "Standard Twin Room",
+        description: "Best for 2 contractors sharing. From R464/night on monthly stays.",
         price: "580",
         priceCurrency: "ZAR",
       },
       {
         "@type": "Offer",
-        name: "Double Room",
-        description: "Manager room with bar fridge, microwave and workspace",
-        price: "620",
+        name: "Deluxe Twin Room",
+        description: "Best for 2 professionals wanting extra comfort. From R520/night on monthly stays.",
+        price: "650",
         priceCurrency: "ZAR",
       },
       {
         "@type": "Offer",
-        name: "Triple Suite",
-        description: "Team room for 3 workers, best value at R250 per person",
-        price: "750",
+        name: "Double Room",
+        description: "Best for solo professionals, couples, or site supervisors. From R544/night on monthly stays.",
+        price: "680",
+        priceCurrency: "ZAR",
+      },
+      {
+        "@type": "Offer",
+        name: "Triple Room",
+        description: "Best value for 3-person crews. From R224 per person on monthly stays.",
+        price: "840",
         priceCurrency: "ZAR",
       },
     ],
@@ -135,88 +135,95 @@ export default function ContractorAccommodationPage() {
 
   const roomTypes = [
     {
-      name: "Standard Room",
-      tagline: "The Budget Essential",
-      price: "R530",
+      name: "Standard Twin Room",
+      tagline: "The Contractor Essential",
+      price: "R580",
+      weeklyPrice: "R522",
+      monthlyPrice: "R464",
       perPerson: null,
       capacity: "1-2 People",
       layout: "2 Single Beds",
-      bestFor: "Apprentices / Junior Staff",
+      bestFor: "2 contractors or professionals sharing",
       image: "/images/twin-room-yellow.png",
       features: [
         "2 comfortable single beds",
-        "Ensuite bathroom",
+        "Private ensuite bathroom",
+        "Bar fridge",
         "Free WiFi",
-        "Access to communal kitchenette",
-        "Large shared refrigerator",
         "Weekly cleaning included",
         "Secure parking",
       ],
-      pitch: "Our most affordable option. Clean, secure, and functional with full kitchen access.",
+      pitch: "Clean, secure, and functional. Our most popular room for contractor teams.",
       highlight: false,
     },
     {
-      name: "Standard Plus",
+      name: "Deluxe Twin Room",
       tagline: "The Comfort Upgrade",
-      price: "R580",
+      price: "R650",
+      weeklyPrice: "R585",
+      monthlyPrice: "R520",
       perPerson: null,
       capacity: "1-2 People",
       layout: "2 Single Beds",
-      bestFor: "Skilled Workers / Colleagues",
-      image: "/images/twin-room-black.png",
+      bestFor: "2 professionals wanting extra comfort",
+      image: "/images/deluxe-twin-navy.jpg",
       features: [
         "2 comfortable single beds",
-        "Ensuite bathroom",
-        "Private bar fridge",
+        "Private ensuite bathroom",
+        "Premium bedding",
+        "Modern decor",
         "Free WiFi",
         "Weekly cleaning included",
         "Secure parking",
       ],
-      pitch: "All the essentials plus your own bar fridge for convenience.",
+      pitch: "Premium comfort with quality bedding and modern finishes.",
       highlight: false,
     },
     {
       name: "Double Room",
       tagline: "The Manager's Choice",
-      price: "R620",
+      price: "R680",
+      weeklyPrice: "R612",
+      monthlyPrice: "R544",
       perPerson: null,
       capacity: "1-2 People",
       layout: "1 Double Bed",
-      bestFor: "Managers / Supervisors",
+      bestFor: "Solo professionals, couples, or site supervisors",
       image: "/images/sage-double-room.png",
       features: [
         "Spacious double bed",
-        "Ensuite bathroom",
-        "Private bar fridge",
-        "Microwave in room",
-        "Workspace desk",
+        "Private ensuite bathroom",
+        "Bar fridge",
         "Free WiFi",
+        "Premium bedding",
         "Weekly cleaning included",
         "Secure parking",
       ],
-      pitch: "Designed for project leads who need extra space, privacy, and in-room convenience.",
+      pitch: "Extra space and privacy for project leads and supervisors.",
       highlight: true,
     },
     {
-      name: "Triple Suite",
-      tagline: "The Team Hub",
-      price: "R750",
-      perPerson: "R250",
+      name: "Triple Room",
+      tagline: "Best Value for Crews",
+      price: "R840",
+      weeklyPrice: "R756",
+      monthlyPrice: "R672",
+      perPerson: "R224/person monthly",
       capacity: "3 People",
       layout: "3 Single Beds",
-      bestFor: "Technical Teams / Crews",
+      bestFor: "3-person contractor crews",
       image: "/images/triple-room-full.jpg",
       features: [
         "3 comfortable single beds",
-        "Ensuite bathroom",
-        "Private bar fridge",
+        "Private ensuite bathroom",
         "Kettle & cups",
+        "Workspace area",
         "Free WiFi",
         "Weekly cleaning included",
         "Secure parking",
         "Best value per person",
       ],
-      pitch: "Maximum savings for 3-man crews without compromising on individual comfort.",
+      pitch: "Maximum savings for 3-person crews without compromising on comfort.",
       highlight: false,
     },
   ]
@@ -535,62 +542,86 @@ export default function ContractorAccommodationPage() {
       <section className="py-16 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <h2 className="text-3xl font-bold text-gray-900 mb-3">Simple, Transparent Pricing</h2>
-            <p className="text-gray-600">Stay longer, save more. All rooms include private ensuite bathroom.</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-3">Contractor Rates</h2>
+            <p className="text-gray-600">All rooms include private ensuite bathroom, secure parking, WiFi, and weekly cleaning.</p>
           </div>
 
-          {/* Rate Tiers */}
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
-            <Card className="p-6 text-center">
-              <h3 className="text-lg font-bold text-gray-900 mb-1">Standard Rate</h3>
-              <p className="text-sm text-gray-500 mb-3">1-6 Nights</p>
-              <p className="text-gray-600 text-sm">Full nightly rate applies</p>
-            </Card>
-            <Card className="p-6 text-center ring-2 ring-sage-600">
-              <div className="bg-sage-600 text-white text-xs font-bold px-3 py-1 rounded-full inline-block mb-2">SAVE 10%</div>
-              <h3 className="text-lg font-bold text-gray-900 mb-1">Weekly Rate</h3>
-              <p className="text-sm text-gray-500 mb-3">7-27 Nights</p>
-              <p className="text-gray-600 text-sm">10% off nightly rate</p>
-            </Card>
-            <Card className="p-6 text-center">
-              <div className="bg-gray-900 text-white text-xs font-bold px-3 py-1 rounded-full inline-block mb-2">SAVE 20%</div>
-              <h3 className="text-lg font-bold text-gray-900 mb-1">Monthly Rate</h3>
-              <p className="text-sm text-gray-500 mb-3">28+ Nights</p>
-              <p className="text-gray-600 text-sm">20% off nightly rate</p>
-            </Card>
+          {/* Full Pricing Table */}
+          <div className="overflow-x-auto mb-10">
+            <table className="w-full text-sm border border-gray-200 rounded-lg overflow-hidden">
+              <thead className="bg-gray-900 text-white">
+                <tr>
+                  <th className="text-left py-4 px-4">Room</th>
+                  <th className="text-center py-4 px-4">Standard<br/><span className="text-xs text-gray-400 font-normal">1-6 nights</span></th>
+                  <th className="text-center py-4 px-4">Weekly<br/><span className="text-xs text-gray-400 font-normal">7-27 nights</span></th>
+                  <th className="text-center py-4 px-4 bg-green-800">Monthly<br/><span className="text-xs text-green-300 font-normal">28+ nights</span></th>
+                </tr>
+              </thead>
+              <tbody className="bg-white">
+                <tr className="border-b border-gray-200">
+                  <td className="py-4 px-4">
+                    <span className="font-semibold">Standard Twin Room</span>
+                    <p className="text-xs text-gray-500">Best for 2 contractors sharing</p>
+                  </td>
+                  <td className="text-center py-4 px-4 font-medium">R580</td>
+                  <td className="text-center py-4 px-4 font-medium text-sage-600">R522</td>
+                  <td className="text-center py-4 px-4 font-bold text-green-600 bg-green-50">R464</td>
+                </tr>
+                <tr className="border-b border-gray-200">
+                  <td className="py-4 px-4">
+                    <span className="font-semibold">Deluxe Twin Room</span>
+                    <p className="text-xs text-gray-500">Best for 2 professionals wanting comfort</p>
+                  </td>
+                  <td className="text-center py-4 px-4 font-medium">R650</td>
+                  <td className="text-center py-4 px-4 font-medium text-sage-600">R585</td>
+                  <td className="text-center py-4 px-4 font-bold text-green-600 bg-green-50">R520</td>
+                </tr>
+                <tr className="border-b border-gray-200">
+                  <td className="py-4 px-4">
+                    <span className="font-semibold">Double Room</span>
+                    <p className="text-xs text-gray-500">Best for solo professionals or site supervisors</p>
+                  </td>
+                  <td className="text-center py-4 px-4 font-medium">R680</td>
+                  <td className="text-center py-4 px-4 font-medium text-sage-600">R612</td>
+                  <td className="text-center py-4 px-4 font-bold text-green-600 bg-green-50">R544</td>
+                </tr>
+                <tr>
+                  <td className="py-4 px-4">
+                    <span className="font-semibold">Triple Room</span>
+                    <p className="text-xs text-gray-500">Best value for 3-person crews</p>
+                    <p className="text-xs text-green-600 font-medium">From R224/person on monthly</p>
+                  </td>
+                  <td className="text-center py-4 px-4 font-medium">R840</td>
+                  <td className="text-center py-4 px-4 font-medium text-sage-600">R756</td>
+                  <td className="text-center py-4 px-4 font-bold text-green-600 bg-green-50">R672</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
 
-          {/* Room Quick Guide */}
+          {/* Crew Booking Options */}
           <div className="bg-gray-50 rounded-xl p-6 mb-8">
-            <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Which Room is Right for You?</h3>
-            <div className="grid md:grid-cols-2 gap-4">
-              <div className="flex items-start gap-3 bg-white p-4 rounded-lg">
-                <div className="bg-sage-100 text-sage-700 font-bold text-sm px-2 py-1 rounded">R530</div>
-                <div>
-                  <p className="font-semibold text-gray-900">Standard Twin A</p>
-                  <p className="text-sm text-gray-600">Best for 2 workers sharing</p>
-                </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Crew Booking Options</h3>
+            <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="bg-white p-4 rounded-lg text-center">
+                <p className="text-2xl font-bold text-sage-600">2</p>
+                <p className="text-sm text-gray-600">workers</p>
+                <p className="text-xs text-gray-500 mt-1">Standard or Deluxe Twin</p>
               </div>
-              <div className="flex items-start gap-3 bg-white p-4 rounded-lg">
-                <div className="bg-sage-100 text-sage-700 font-bold text-sm px-2 py-1 rounded">R580</div>
-                <div>
-                  <p className="font-semibold text-gray-900">Standard Twin B</p>
-                  <p className="text-sm text-gray-600">Best for 2 professionals wanting more comfort</p>
-                </div>
+              <div className="bg-white p-4 rounded-lg text-center">
+                <p className="text-2xl font-bold text-sage-600">3</p>
+                <p className="text-sm text-gray-600">workers</p>
+                <p className="text-xs text-gray-500 mt-1">Triple Room</p>
               </div>
-              <div className="flex items-start gap-3 bg-white p-4 rounded-lg">
-                <div className="bg-sage-100 text-sage-700 font-bold text-sm px-2 py-1 rounded">R620</div>
-                <div>
-                  <p className="font-semibold text-gray-900">Double Room</p>
-                  <p className="text-sm text-gray-600">Best for solo professionals or couples</p>
-                </div>
+              <div className="bg-white p-4 rounded-lg text-center">
+                <p className="text-2xl font-bold text-sage-600">5</p>
+                <p className="text-sm text-gray-600">workers</p>
+                <p className="text-xs text-gray-500 mt-1">Triple + Double Room</p>
               </div>
-              <div className="flex items-start gap-3 bg-white p-4 rounded-lg">
-                <div className="bg-sage-100 text-sage-700 font-bold text-sm px-2 py-1 rounded">R750</div>
-                <div>
-                  <p className="font-semibold text-gray-900">Triple Room</p>
-                  <p className="text-sm text-gray-600">Best for 3-person crews</p>
-                </div>
+              <div className="bg-white p-4 rounded-lg text-center">
+                <p className="text-2xl font-bold text-sage-600">7+</p>
+                <p className="text-sm text-gray-600">workers</p>
+                <p className="text-xs text-gray-500 mt-1">Multi-room crew quote</p>
               </div>
             </div>
           </div>
