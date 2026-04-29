@@ -531,7 +531,87 @@ export default function ContractorAccommodationPage() {
         </div>
       </section>
 
+      {/* Rate Card Section */}
       <section className="py-16 bg-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold text-gray-900 mb-3">Simple, Transparent Pricing</h2>
+            <p className="text-gray-600">Stay longer, save more. All rooms include private ensuite bathroom.</p>
+          </div>
+
+          {/* Rate Tiers */}
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            <Card className="p-6 text-center">
+              <h3 className="text-lg font-bold text-gray-900 mb-1">Standard Rate</h3>
+              <p className="text-sm text-gray-500 mb-3">1-6 Nights</p>
+              <p className="text-gray-600 text-sm">Full nightly rate applies</p>
+            </Card>
+            <Card className="p-6 text-center ring-2 ring-sage-600">
+              <div className="bg-sage-600 text-white text-xs font-bold px-3 py-1 rounded-full inline-block mb-2">SAVE 10%</div>
+              <h3 className="text-lg font-bold text-gray-900 mb-1">Weekly Rate</h3>
+              <p className="text-sm text-gray-500 mb-3">7-27 Nights</p>
+              <p className="text-gray-600 text-sm">10% off nightly rate</p>
+            </Card>
+            <Card className="p-6 text-center">
+              <div className="bg-gray-900 text-white text-xs font-bold px-3 py-1 rounded-full inline-block mb-2">SAVE 20%</div>
+              <h3 className="text-lg font-bold text-gray-900 mb-1">Monthly Rate</h3>
+              <p className="text-sm text-gray-500 mb-3">28+ Nights</p>
+              <p className="text-gray-600 text-sm">20% off nightly rate</p>
+            </Card>
+          </div>
+
+          {/* Room Quick Guide */}
+          <div className="bg-gray-50 rounded-xl p-6 mb-8">
+            <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Which Room is Right for You?</h3>
+            <div className="grid md:grid-cols-2 gap-4">
+              <div className="flex items-start gap-3 bg-white p-4 rounded-lg">
+                <div className="bg-sage-100 text-sage-700 font-bold text-sm px-2 py-1 rounded">R530</div>
+                <div>
+                  <p className="font-semibold text-gray-900">Standard Twin A</p>
+                  <p className="text-sm text-gray-600">Best for 2 workers sharing</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3 bg-white p-4 rounded-lg">
+                <div className="bg-sage-100 text-sage-700 font-bold text-sm px-2 py-1 rounded">R580</div>
+                <div>
+                  <p className="font-semibold text-gray-900">Standard Twin B</p>
+                  <p className="text-sm text-gray-600">Best for 2 professionals wanting more comfort</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3 bg-white p-4 rounded-lg">
+                <div className="bg-sage-100 text-sage-700 font-bold text-sm px-2 py-1 rounded">R620</div>
+                <div>
+                  <p className="font-semibold text-gray-900">Double Room</p>
+                  <p className="text-sm text-gray-600">Best for solo professionals or couples</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3 bg-white p-4 rounded-lg">
+                <div className="bg-sage-100 text-sage-700 font-bold text-sm px-2 py-1 rounded">R750</div>
+                <div>
+                  <p className="font-semibold text-gray-900">Triple Room</p>
+                  <p className="text-sm text-gray-600">Best for 3-person crews</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Crew Discount */}
+          <div className="bg-gray-900 text-white rounded-xl p-6 text-center">
+            <div className="flex items-center justify-center gap-2 mb-2">
+              <Users className="w-5 h-5" />
+              <h3 className="text-lg font-bold">Crew Discounts Available</h3>
+            </div>
+            <p className="text-gray-300 mb-4">Booking 2+ rooms? Get a custom quote for your team.</p>
+            <Button asChild className="bg-sage-600 hover:bg-sage-700">
+              <a href="https://wa.me/27745245703?text=Hi%2C%20I%20need%20a%20quote%20for%20multiple%20rooms%20for%20my%20crew">
+                Request Crew Quote
+              </a>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center mb-4">Perfectly Located for Training & Work</h2>
           <p className="text-lg text-gray-600 text-center mb-12">
