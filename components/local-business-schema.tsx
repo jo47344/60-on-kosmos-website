@@ -3,7 +3,7 @@ export function LocalBusinessSchema() {
     "@context": "https://schema.org",
     "@type": ["LodgingBusiness", "LocalBusiness"],
     "@id": "https://60onkosmos.co.za/#business",
-    name: "60 on Kosmos Guesthouse",
+    name: "60 on Kosmos - Quality Stays for Teams and Professionals",
     alternateName: [
       "60 on Kosmos",
       "60 on Kosmos Contractor Accommodation",
@@ -12,11 +12,11 @@ export function LocalBusinessSchema() {
       "Contractor Lodging Cape Town",
     ],
     description:
-      "Contractor accommodation in Bellville South, Cape Town. Near Sacks Circle, Mill Park, Stikland, Parow Industria. Weekly cleaning, secure parking, free WiFi. Monthly rates from R530/night. Ideal for construction workers, boilermakers, welders, electricians, apprentices at John Thompson and Northlink College.",
+      "Contractor accommodation with private ensuite rooms in Bellville South, Cape Town. Near Sacks Circle, Mill Park, Stikland, Parow Industria. Weekly cleaning, secure parking, free WiFi. Monthly rates from R464/night. Ideal for contractor crews, project teams, and working professionals.",
     url: "https://60onkosmos.co.za",
     telephone: "+27745245703",
     email: "info@60onkosmos.co.za",
-    priceRange: "R530-R750",
+    priceRange: "R464-R840",
     currenciesAccepted: "ZAR",
     paymentAccepted: "EFT, Bank Transfer",
     address: {

@@ -66,7 +66,7 @@ export default function VirtualTourPage() {
     {
       title: "Deluxe Twin Room",
       description: "Premium twin room with navy blue headboards and upgraded furnishings.",
-      features: ["2 Single Beds", "Premium Bedding", "Ensuite Bathroom", "Modern Decor", "Free WiFi"],
+      features: ["2 Single Beds", "Bar Fridge", "Premium Bedding", "Ensuite Bathroom", "Free WiFi"],
       images: [
         {
           src: "/images/deluxe-twin-navy.jpg",

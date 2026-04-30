@@ -2,8 +2,8 @@
 
 import type React from "react"
 import { useState } from "react"
-import Image from "next/image"
 import { Button } from "@/components/ui/button"
+import { Logo } from "@/components/logo"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
@@ -99,13 +99,7 @@ export default function BookNowClientPage() {
       <div className="min-h-screen flex items-center justify-center bg-sage-50 p-4">
         <div className="max-w-md w-full mx-auto p-6 bg-white rounded-lg border shadow-sm">
           <div className="flex justify-center mb-4">
-            <Image
-              src="/images/60-kosmos-elegant-logo.jpg"
-              alt="60 on Kosmos Guesthouse"
-              width={200}
-              height={55}
-              className="block"
-            />
+            <Logo size="sm" showTagline={true} />
           </div>
           <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
             <CheckCircle className="w-8 h-8 text-green-600" />
@@ -129,13 +123,7 @@ export default function BookNowClientPage() {
     <div className="min-h-screen flex items-center justify-center bg-sage-50 p-4">
       <div className="max-w-md w-full mx-auto p-6 bg-white rounded-lg border shadow-sm">
         <div className="flex justify-center mb-4">
-          <Image
-            src="/images/60-kosmos-elegant-logo.jpg"
-            alt="60 on Kosmos Guesthouse"
-            width={200}
-            height={55}
-            className="block"
-          />
+          <Logo size="sm" showTagline={true} />
         </div>
         <h1 className="text-center text-2xl font-bold mb-6 text-gray-900">Book Your Stay</h1>
         <form onSubmit={handleSubmit} className="space-y-4">

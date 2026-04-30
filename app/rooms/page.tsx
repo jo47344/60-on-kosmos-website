@@ -6,16 +6,16 @@ import { Badge } from "@/components/ui/badge"
 import { Wifi, Coffee, Car, Shield, Phone } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Rooms & Rates - 60 on Kosmos Guesthouse Bellville South | Self-Catering Accommodation Cape Town",
+  title: "Rooms & Rates - 60 on Kosmos Guesthouse Bellville South | Monthly from R464/night",
   description:
-    "Self-catering ensuite rooms from R530/night. Standard twin, double & deluxe rooms near UWC, Tygerberg Hospital. Free WiFi, CCTV security, parking, weekly cleaning. For young professionals & contractors. Book 074 524 5703",
+    "Self-catering rooms with private ensuite bathrooms. Standard Twin from R580/night, monthly from R464/night. Free WiFi, secure parking, weekly cleaning. Perfect for contractors & professionals. Book 074 524 5703",
   keywords:
-    "Self-catering rooms Bellville South, professional accommodation Cape Town, rooms near UWC, ensuite accommodation Bellville, contractor rooms Cape Town, monthly accommodation Bellville",
+    "Self-catering rooms Bellville South, contractor accommodation Cape Town, rooms with ensuite Bellville, monthly accommodation Bellville, private bathroom accommodation Cape Town",
   alternates: { canonical: "https://60onkosmos.co.za/rooms" },
   openGraph: {
-    title: "Self-Catering Rooms & Rates - 60 on Kosmos Guesthouse Bellville South",
+    title: "Rooms & Rates - 60 on Kosmos | Private Ensuite Rooms from R464/night",
     description:
-      "Self-catering ensuite rooms from R530/night near UWC and Tygerberg Hospital. Perfect for professionals.",
+      "Self-catering rooms with private ensuite bathrooms. Monthly rates from R464/night. Perfect for contractors and professionals.",
   },
 }
 
@@ -24,70 +24,79 @@ export default function RoomsPage() {
     {
       id: 1,
       name: "Standard Twin Room",
-      price: "From R530",
+      price: "R580/night",
+      weeklyPrice: "R522/night",
+      monthlyPrice: "R464/night",
       image: "/images/twin-room-yellow.png",
-      alt: "Standard twin room guesthouse Bellville South - self-catering accommodation Cape Town near UWC with ensuite bathroom and bar fridge",
+      alt: "Standard twin room guesthouse Bellville South - self-catering accommodation Cape Town near UWC with ensuite bathroom",
+      bestFor: "Best for 2 contractors or 2 professionals sharing.",
       features: [
-        "Two single beds",
-        "Ensuite bathroom",
-        "Bar fridge",
+        "2 single beds",
+        "Private ensuite bathroom",
         "Free WiFi",
-        "Clean linen and weekly cleaning",
-        "Weekly cleaning service",
+        "Weekly cleaning",
       ],
       description:
-        "Perfect for contractors or young professionals. Clean, comfortable twin beds with modern ensuite bathroom. Self-catering with bar fridge.",
+        "Clean, comfortable twin beds with modern ensuite bathroom. Access to communal kitchen.",
     },
     {
       id: 2,
-      name: "Double Room",
-      price: "From R620",
-      image: "/images/sage-double-room.png",
-      alt: "Double room guesthouse Bellville South - self-catering accommodation Cape Town near UWC and Tygerberg Hospital with ensuite bathroom",
+      name: "Deluxe Twin Room",
+      price: "R650/night",
+      weeklyPrice: "R585/night",
+      monthlyPrice: "R520/night",
+      image: "/images/deluxe-twin-navy.jpg",
+      alt: "Deluxe twin room guesthouse Bellville South - premium contractor self-catering accommodation Cape Town with navy blue headboards",
+      bestFor: "Best for 2 professionals wanting extra comfort.",
       features: [
-        "Double bed",
-        "Ensuite bathroom",
+        "2 single beds",
+        "Private ensuite bathroom",
         "Bar fridge",
-        "Free WiFi",
         "Premium bedding",
-        "Weekly cleaning service",
+        "Weekly cleaning",
       ],
       description:
-        "Ideal for professionals wanting extra space. Comfortable double bed with sage green accents and modern ensuite facilities.",
+        "Our premium twin room with bar fridge, elegant navy blue headboards and quality bedding. Perfect for business travelers.",
     },
     {
       id: 3,
-      name: "Deluxe Twin Room",
-      price: "From R580",
-      image: "/images/deluxe-twin-navy.jpg",
-      alt: "Deluxe twin room guesthouse Bellville South - premium contractor self-catering accommodation Cape Town with navy blue headboards",
+      name: "Double Room",
+      price: "R680/night",
+      weeklyPrice: "R612/night",
+      monthlyPrice: "R544/night",
+      image: "/images/sage-double-room.png",
+      alt: "Double room guesthouse Bellville South - self-catering accommodation Cape Town near UWC and Tygerberg Hospital with ensuite bathroom",
+      bestFor: "Best for solo professionals, couples, or site supervisors.",
       features: [
-        "Two single beds",
-        "Navy blue headboards",
-        "Ensuite bathroom",
+        "Double bed",
+        "Private ensuite bathroom",
+        "Bar fridge",
+        "Free WiFi",
         "Premium bedding",
-        "Modern decor",
-        "Weekly cleaning service",
+        "Weekly cleaning",
       ],
       description:
-        "Our premium twin room with elegant navy blue headboards and quality bedding. Perfect for business travelers and contractors.",
+        "Comfortable double bed with sage green accents and modern ensuite facilities. Extra space and privacy.",
     },
     {
       id: 4,
       name: "Triple Room",
-      price: "From R750",
+      price: "R840/night",
+      weeklyPrice: "R756/night",
+      monthlyPrice: "R672/night",
+      perPerson: "From R224/person/night on monthly stays",
       image: "/images/triple-room-full.jpg",
       alt: "Triple room guesthouse Bellville South - self-catering accommodation Cape Town near UWC with three single beds and workspace",
+      bestFor: "Best value for 3-person contractor crews.",
       features: [
-        "Three single beds",
-        "Ensuite bathroom",
-        "Kettle & cups",
-        "Free WiFi",
+        "3 single beds",
+        "Private ensuite bathroom",
+        "Kettle",
         "Workspace area",
-        "Weekly cleaning service",
+        "Weekly cleaning",
       ],
       description:
-        "Spacious room perfect for professionals sharing. Three comfortable single beds with modern ensuite bathroom, kettle, and workspace area.",
+        "Spacious room perfect for 3-person crews. Best value per person for contractor teams.",
     },
   ]
 
@@ -103,22 +112,27 @@ export default function RoomsPage() {
             </a>{" "}
             |
             <a
-              href="https://wa.me/27745245703"
+              href="https://wa.me/27745245703?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20your%20monthly%20rates"
               className="ml-2 underline hover:no-underline"
               target="_blank"
               rel="noopener noreferrer"
             >
-              WhatsApp Now
-            </a>{" "}
-            | Ask About Monthly Rates
+              WhatsApp for Monthly Rates
+            </a>
+          </p>
+        </div>
+
+        {/* Ensuite Highlight */}
+        <div className="bg-sage-50 border border-sage-200 rounded-lg p-4 mb-8 text-center">
+          <p className="text-sage-800 font-medium">
+            All rooms have private ensuite bathrooms - no shared facilities
           </p>
         </div>
 
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Self-Catering Rooms & Rates</h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            All rooms feature ensuite bathrooms, bar fridges, and free WiFi. Clean linen and welcome refreshments
-            included. Weekly cleaning service. Check-in from 2:00 PM. Perfect for professionals 18+.
+            All rooms include a private ensuite bathroom, bar fridge, free WiFi, clean linen, welcome refreshments, and weekly cleaning service.
           </p>
         </div>
 
@@ -137,15 +151,35 @@ export default function RoomsPage() {
                 <Badge className="absolute top-4 left-4 bg-green-600">Available</Badge>
               </div>
               <CardContent className="p-6">
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-xl font-semibold">{room.name}</h3>
-                  <div className="text-right">
-                    <div className="text-2xl font-bold text-green-600">{room.price}</div>
-                    <div className="text-sm text-gray-500">per night</div>
-                  </div>
+                <div className="mb-4">
+                  <h3 className="text-xl font-semibold mb-1">{room.name}</h3>
+                  <p className="text-sm text-sage-600 font-medium">{room.bestFor}</p>
                 </div>
 
-                <p className="text-gray-600 mb-4">{room.description}</p>
+                {/* Pricing Table */}
+                <div className="bg-gray-50 rounded-lg p-3 mb-4">
+                  <div className="grid grid-cols-3 gap-2 text-center text-sm">
+                    <div>
+                      <div className="text-xs text-gray-500">1-6 nights</div>
+                      <div className="font-bold text-gray-900">{room.price.replace('/night', '')}</div>
+                    </div>
+                    <div>
+                      <div className="text-xs text-gray-500">7-27 nights</div>
+                      <div className="font-bold text-sage-600">{room.weeklyPrice.replace('/night', '')}</div>
+                    </div>
+                    <div>
+                      <div className="text-xs text-gray-500">28+ nights</div>
+                      <div className="font-bold text-green-600">{room.monthlyPrice.replace('/night', '')}</div>
+                    </div>
+                  </div>
+                  {room.perPerson && (
+                    <div className="text-center mt-2 pt-2 border-t border-gray-200">
+                      <span className="text-xs text-green-600 font-medium">{room.perPerson}</span>
+                    </div>
+                  )}
+                </div>
+
+                <p className="text-gray-600 mb-4 text-sm">{room.description}</p>
 
                 <div className="space-y-2 mb-6">
                   <h4 className="font-semibold text-sm text-gray-900">Features:</h4>
@@ -175,20 +209,67 @@ export default function RoomsPage() {
           ))}
         </div>
 
-        {/* Monthly Rates CTA */}
-        <div className="bg-sage-50 rounded-lg p-8 mb-12 text-center">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Looking for Monthly Accommodation?</h2>
-          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-            We offer competitive monthly rates for contractors, young professionals, and long-term guests. Self-catering
-            accommodation with weekly cleaning, WiFi, and secure parking included.
+        {/* Monthly Rates Section */}
+        <div className="bg-gray-900 text-white rounded-lg p-8 mb-12">
+          <h2 className="text-2xl font-bold text-center mb-6">Monthly Contractor Stays (28+ nights)</h2>
+          <p className="text-gray-300 text-center mb-8 max-w-2xl mx-auto">
+            We offer discounted 28+ night rates for contractors, project teams, and long-stay professionals. 
+            Secure parking, self-catering facilities, WiFi, and weekly cleaning are included.
           </p>
+          
+          {/* Pricing Table */}
+          <div className="overflow-x-auto mb-8">
+            <table className="w-full max-w-3xl mx-auto text-sm">
+              <thead>
+                <tr className="border-b border-gray-700">
+                  <th className="text-left py-3 px-4">Room</th>
+                  <th className="text-center py-3 px-4">Standard<br/><span className="text-xs text-gray-400">1-6 nights</span></th>
+                  <th className="text-center py-3 px-4">Weekly<br/><span className="text-xs text-gray-400">7-27 nights</span></th>
+                  <th className="text-center py-3 px-4">Monthly<br/><span className="text-xs text-gray-400">28+ nights</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-gray-800">
+                  <td className="py-3 px-4">Standard Twin</td>
+                  <td className="text-center py-3 px-4">R580</td>
+                  <td className="text-center py-3 px-4 text-sage-400">R522</td>
+                  <td className="text-center py-3 px-4 text-green-400 font-bold">R464</td>
+                </tr>
+                <tr className="border-b border-gray-800">
+                  <td className="py-3 px-4">Deluxe Twin</td>
+                  <td className="text-center py-3 px-4">R650</td>
+                  <td className="text-center py-3 px-4 text-sage-400">R585</td>
+                  <td className="text-center py-3 px-4 text-green-400 font-bold">R520</td>
+                </tr>
+                <tr className="border-b border-gray-800">
+                  <td className="py-3 px-4">Double Room</td>
+                  <td className="text-center py-3 px-4">R680</td>
+                  <td className="text-center py-3 px-4 text-sage-400">R612</td>
+                  <td className="text-center py-3 px-4 text-green-400 font-bold">R544</td>
+                </tr>
+                <tr>
+                  <td className="py-3 px-4">Triple Room</td>
+                  <td className="text-center py-3 px-4">R840</td>
+                  <td className="text-center py-3 px-4 text-sage-400">R756</td>
+                  <td className="text-center py-3 px-4 text-green-400 font-bold">R672</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p className="text-center text-sage-400 text-sm mb-6">
+            Special crew pricing available for 2 or more rooms. Contact us for a quote.
+          </p>
+          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-sage-600 hover:bg-sage-700">
-              <a href="tel:+27745245703">Call for Monthly Rates</a>
+              <a href="https://wa.me/27745245703?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20your%20monthly%20rates" target="_blank" rel="noopener noreferrer">
+                WhatsApp for Monthly Rates
+              </a>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-sage-600 text-sage-600 bg-transparent">
-              <a href="https://wa.me/27745245703" target="_blank" rel="noopener noreferrer">
-                WhatsApp for Quote
+            <Button asChild size="lg" variant="outline" className="border-white text-white bg-transparent hover:bg-white/10">
+              <a href="tel:+27745245703">
+                Call 074 524 5703
               </a>
             </Button>
           </div>

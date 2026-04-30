@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import Image from "next/image"
 import { CheckCircle } from "lucide-react"
+import { Logo } from "@/components/logo"
 
 export const metadata: Metadata = {
   title: "Thank You for Your Booking! - 60 on Kosmos Guesthouse",
@@ -17,13 +17,7 @@ export default function ThankYouPage() {
     <div className="min-h-screen flex items-center justify-center bg-sage-50 p-4">
       <div className="max-w-md w-full mx-auto p-8 bg-white rounded-lg border shadow-lg text-center">
         <div className="flex justify-center mb-6">
-          <Image
-            src="/images/60-kosmos-elegant-logo.jpg"
-            alt="60 on Kosmos Guesthouse"
-            width={200}
-            height={55}
-            className="block"
-          />
+          <Logo size="sm" showTagline={true} />
         </div>
         <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
           <CheckCircle className="w-10 h-10 text-green-600" />

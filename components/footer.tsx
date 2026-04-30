@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { Facebook, Instagram, Mail, Phone, MapPin } from "lucide-react"
+import { Logo } from "./logo"
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -10,7 +11,9 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Column 1: Business Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4">60 on Kosmos</h3>
+            <div className="mb-4 bg-white rounded-lg p-2 inline-block">
+              <Logo size="sm" showTagline={true} />
+            </div>
             <div className="space-y-2 text-gray-300">
               <div className="flex items-start mb-3">
                 <MapPin className="w-5 h-5 mr-2 text-sage-400 flex-shrink-0 mt-0.5" />

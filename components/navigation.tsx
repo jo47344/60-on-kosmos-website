@@ -2,8 +2,8 @@
 
 import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
-import Image from "next/image"
 import { Menu, X, ChevronDown } from "lucide-react"
+import { Logo } from "./logo"
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -43,19 +43,8 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3 flex-shrink-0">
-            <Image
-              src="/images/60-on-kosmos-logo.png"
-              alt="60 on Kosmos Guesthouse Logo"
-              width={60}
-              height={60}
-              className="h-14 w-auto"
-              priority
-            />
-            <div className="flex flex-col">
-              <span className="text-xl font-bold leading-tight">60 on Kosmos</span>
-              <span className="text-xs opacity-90">Bellville South</span>
-            </div>
+          <Link href="/" className="flex-shrink-0">
+            <Logo size="sm" showTagline={false} className="h-14 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}

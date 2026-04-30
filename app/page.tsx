@@ -22,15 +22,15 @@ import { LatestBlogPosts } from "@/components/latest-blog-posts"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "60 on Kosmos Guesthouse Bellville | Affordable Accommodation from R530",
+  title: "60 on Kosmos Guesthouse Bellville | Contractor Accommodation from R464/night",
   description:
-    "Affordable guesthouse in Bellville South. Perfect for contractors, students, and professionals. Near UWC, CPUT, Tygerberg Hospital. Weekly cleaning, WiFi, secure parking. From R530/night.",
+    "Contractor accommodation in Bellville South with private ensuite rooms. Monthly rates from R464/night. Self-catering, secure parking, WiFi, weekly cleaning. Perfect for contractors, project teams, and working professionals.",
   alternates: {
     canonical: "https://60onkosmos.co.za",
   },
   openGraph: {
-    title: "60 on Kosmos Guesthouse Bellville South | Affordable Accommodation from R530",
-    description: "Affordable guesthouse in Bellville South near UWC, CPUT, Tygerberg Hospital. From R530/night.",
+    title: "60 on Kosmos | Bellville South Contractor Accommodation with Private Ensuite Rooms",
+    description: "Contractor accommodation with private ensuite rooms. Monthly rates from R464/night. Secure parking, WiFi, weekly cleaning.",
     url: "https://60onkosmos.co.za",
     type: "website",
   },
@@ -40,21 +40,27 @@ export default function HomePage() {
   const roomTypes = [
     {
       name: "Standard Twin Room",
-      price: "From R530/night",
+      price: "From R580/night",
+      monthlyPrice: "R464/night monthly",
       image: "/images/twin-room-yellow.png",
-      features: ["2 single beds", "Ensuite bathroom", "Free WiFi", "Communal kitchen access"],
+      bestFor: "Best for 2 contractors sharing",
+      features: ["2 single beds", "Private ensuite", "Free WiFi", "Kitchen access"],
     },
     {
       name: "Double Room",
-      price: "From R620/night",
+      price: "From R680/night",
+      monthlyPrice: "R544/night monthly",
       image: "/images/sage-double-room.png",
-      features: ["1 double bed", "Ensuite bathroom", "Bar fridge", "Microwave", "Free WiFi"],
+      bestFor: "Best for solo professionals or couples",
+      features: ["Double bed", "Private ensuite", "Bar fridge", "Premium bedding"],
     },
     {
       name: "Triple Room",
-      price: "From R750/night",
+      price: "From R840/night",
+      monthlyPrice: "R672/night monthly",
       image: "/images/triple-room-full.jpg",
-      features: ["3 single beds", "Ensuite bathroom", "Bar fridge", "R250 per person"],
+      bestFor: "Best for 3-person crews",
+      features: ["3 single beds", "Private ensuite", "From R224/person monthly", "Best value"],
     },
   ]
 
@@ -76,12 +82,14 @@ export default function HomePage() {
           />
           <div className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-2 sm:mb-4 leading-tight">
-              Welcome to 60 on Kosmos
+              Bellville South Contractor Accommodation
               <br />
-              <span className="text-sage-300">Guesthouse Bellville South</span>
+              <span className="text-sage-300">with Private Ensuite Rooms</span>
             </h1>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-4 sm:mb-6 md:mb-8 px-2">
-              Affordable ensuite accommodation for contractors, students & professionals | From R530/night
+              Affordable self-catering accommodation for contractors, project teams, and working professionals.
+              <br className="hidden md:block" />
+              Secure parking, free WiFi, weekly cleaning, and monthly rates available.
             </p>
             <div className="flex flex-col gap-2 sm:gap-3 md:flex-row md:gap-4 justify-center items-center px-4 sm:px-0">
               <Button
@@ -89,7 +97,7 @@ export default function HomePage() {
                 size="lg"
                 className="bg-sage-600 hover:bg-sage-700 text-white w-full sm:w-auto px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 text-sm sm:text-base md:text-lg"
               >
-                <a href="/book-now">Book Now</a>
+                <a href="/rooms">View Rooms & Rates</a>
               </Button>
               <Button
                 asChild
@@ -97,9 +105,8 @@ export default function HomePage() {
                 variant="outline"
                 className="bg-white text-sage-600 hover:bg-sage-50 w-full sm:w-auto px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 text-sm sm:text-base md:text-lg"
               >
-                <a href="tel:+27745245703">
-                  <Phone className="mr-2 h-5 w-5" />
-                  074 524 5703
+                <a href="https://wa.me/27745245703?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20your%20monthly%20rates">
+                  WhatsApp for Monthly Rates
                 </a>
               </Button>
             </div>
@@ -126,7 +133,7 @@ export default function HomePage() {
                 </div>
                 <div>
                   <h2 className="text-xl sm:text-2xl font-bold">Contractor Accommodation</h2>
-                  <p className="text-gray-300">Standard R530 | Standard Plus R580 | Double R620 | Triple R750/night</p>
+                  <p className="text-gray-300">Monthly rates from R464/night | All rooms have private ensuite bathrooms</p>
                 </div>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
@@ -142,8 +149,8 @@ export default function HomePage() {
                   variant="outline"
                   className="border-white text-white hover:bg-white/10 bg-transparent"
                 >
-                  <a href="https://wa.me/27745245703?text=Hi%2C%20I%27m%20interested%20in%20contractor%20accommodation">
-                    WhatsApp Quote
+                  <a href="https://wa.me/27745245703?text=Hi%2C%20I%27m%20interested%20in%20monthly%20contractor%20rates">
+                    WhatsApp for Monthly Rates
                   </a>
                 </Button>
               </div>
@@ -206,9 +213,13 @@ export default function HomePage() {
                   </div>
                   <CardHeader className="pb-3">
                     <CardTitle className="text-lg sm:text-xl">{room.name}</CardTitle>
-                    <CardDescription className="text-base sm:text-lg font-semibold text-sage-600">
-                      {room.price}
+                    <CardDescription className="text-sm text-sage-600 font-medium">
+                      {room.bestFor}
                     </CardDescription>
+                    <div className="mt-2">
+                      <span className="text-base font-semibold text-gray-900">{room.price}</span>
+                      <span className="text-sm text-green-600 ml-2">({room.monthlyPrice})</span>
+                    </div>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-2 mb-4">
@@ -352,7 +363,7 @@ export default function HomePage() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">Ready to Book?</h2>
             <p className="text-base sm:text-lg mb-6 sm:mb-8 opacity-90">
-              Contractors: Standard R530 | Standard Plus R580 | Double R620 | Triple R750/night
+              Monthly rates from R464/night | Special crew pricing for 2+ rooms
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <Button
@@ -360,7 +371,7 @@ export default function HomePage() {
                 size="lg"
                 className="bg-white text-sage-600 hover:bg-gray-100 w-full sm:w-auto px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg"
               >
-                <Link href="/contractor-accommodation">Contractor Rates</Link>
+                <Link href="/rooms">View Rooms & Rates</Link>
               </Button>
               <Button
                 asChild
@@ -368,7 +379,7 @@ export default function HomePage() {
                 variant="outline"
                 className="border-white text-white hover:bg-sage-700 w-full sm:w-auto px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg bg-transparent"
               >
-                <a href="tel:+27745245703">Call 074 524 5703</a>
+                <a href="https://wa.me/27745245703?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20your%20monthly%20rates">WhatsApp for Monthly Rates</a>
               </Button>
             </div>
           </div>
