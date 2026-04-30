@@ -284,19 +284,19 @@ export default function ContractorAccommodationPage() {
           <div className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 bg-sage-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Briefcase className="w-4 h-4" />
-              <span>Contractor & Apprentice Accommodation</span>
+              <span>For Contractors & Project Teams</span>
             </div>
-            <h1 className="text-3xl md:text-5xl font-bold text-white mb-6">
-              Bellville South Contractor Accommodation
-              <br className="hidden md:block" />
-              <span className="text-sage-400">with Private Ensuite Rooms</span>
+            <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 text-balance">
+              Accommodation for Contractors & Project Teams in Bellville South
             </h1>
             <p className="text-xl text-gray-300 mb-4">
-              Every room has its own private bathroom. No shared facilities.
-              <br className="hidden md:block" />
-              Nightly, weekly & monthly rates. Self-catering, secure parking for bakkies, WiFi.
+              Book by the week or month — no lease, no hassle.
             </p>
-            <p className="text-base text-gray-400 mb-8">Near factories, TAC Business Park, Sacks Circle & Mill Park.</p>
+            <p className="text-lg text-gray-400 mb-8">
+              Private ensuite rooms, secure parking, self-catering kitchen, and fast N1 access.
+              <br className="hidden md:block" />
+              Perfect for contractors, site crews, and project professionals.
+            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-sage-600 hover:bg-sage-700 text-white px-8 py-6 text-lg">
                 <a href="https://wa.me/27745245703?text=Hi%2C%20I%27m%20interested%20in%20contractor%20accommodation%20rates">
