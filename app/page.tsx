@@ -44,7 +44,7 @@ export default function HomePage() {
       monthlyPrice: "R464/night monthly",
       image: "/images/twin-room-yellow.png",
       bestFor: "Best for 2 contractors sharing",
-      features: ["2 single beds", "Private ensuite", "Free WiFi", "Bar fridge"],
+      features: ["2 single beds", "Private ensuite", "Free WiFi", "Kitchen access"],
     },
     {
       name: "Double Room",

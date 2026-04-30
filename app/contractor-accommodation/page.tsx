@@ -148,8 +148,8 @@ export default function ContractorAccommodationPage() {
       features: [
         "2 comfortable single beds",
         "Private ensuite bathroom",
-        "Bar fridge",
         "Free WiFi",
+        "Communal kitchen access",
         "Weekly cleaning included",
         "Secure parking",
       ],
@@ -170,8 +170,8 @@ export default function ContractorAccommodationPage() {
       features: [
         "2 comfortable single beds",
         "Private ensuite bathroom",
+        "Bar fridge",
         "Premium bedding",
-        "Modern decor",
         "Free WiFi",
         "Weekly cleaning included",
         "Secure parking",

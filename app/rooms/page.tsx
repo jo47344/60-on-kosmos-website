@@ -28,17 +28,16 @@ export default function RoomsPage() {
       weeklyPrice: "R522/night",
       monthlyPrice: "R464/night",
       image: "/images/twin-room-yellow.png",
-      alt: "Standard twin room guesthouse Bellville South - self-catering accommodation Cape Town near UWC with ensuite bathroom and bar fridge",
+      alt: "Standard twin room guesthouse Bellville South - self-catering accommodation Cape Town near UWC with ensuite bathroom",
       bestFor: "Best for 2 contractors or 2 professionals sharing.",
       features: [
         "2 single beds",
         "Private ensuite bathroom",
-        "Bar fridge",
         "Free WiFi",
         "Weekly cleaning",
       ],
       description:
-        "Clean, comfortable twin beds with modern ensuite bathroom. Self-catering with bar fridge included.",
+        "Clean, comfortable twin beds with modern ensuite bathroom. Access to communal kitchen.",
     },
     {
       id: 2,
@@ -52,12 +51,12 @@ export default function RoomsPage() {
       features: [
         "2 single beds",
         "Private ensuite bathroom",
+        "Bar fridge",
         "Premium bedding",
-        "Modern decor",
         "Weekly cleaning",
       ],
       description:
-        "Our premium twin room with elegant navy blue headboards and quality bedding. Perfect for business travelers.",
+        "Our premium twin room with bar fridge, elegant navy blue headboards and quality bedding. Perfect for business travelers.",
     },
     {
       id: 3,
