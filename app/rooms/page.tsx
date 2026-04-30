@@ -27,8 +27,8 @@ export default function RoomsPage() {
       price: "R580/night",
       weeklyPrice: "R522/night",
       monthlyPrice: "R464/night",
-      image: "/images/twin-room-yellow.png",
-      alt: "Standard twin room guesthouse Bellville South - self-catering accommodation Cape Town near UWC with ensuite bathroom",
+      image: "/images/standard-twin-room.jpg",
+      alt: "Standard twin room guesthouse Bellville South - clean twin beds with botanical pillows and modern ensuite bathroom",
       bestFor: "Best for 2 contractors or 2 professionals sharing.",
       features: [
         "2 single beds",
@@ -45,8 +45,8 @@ export default function RoomsPage() {
       price: "R650/night",
       weeklyPrice: "R585/night",
       monthlyPrice: "R520/night",
-      image: "/images/deluxe-twin-navy.jpg",
-      alt: "Deluxe twin room guesthouse Bellville South - premium contractor self-catering accommodation Cape Town with navy blue headboards",
+      image: "/images/deluxe-twin-room.jpg",
+      alt: "Deluxe twin room guesthouse Bellville South - premium navy blue headboards with quality bedding and palm artwork",
       bestFor: "Best for 2 professionals wanting extra comfort.",
       features: [
         "2 single beds",
@@ -85,8 +85,8 @@ export default function RoomsPage() {
       weeklyPrice: "R756/night",
       monthlyPrice: "R672/night",
       perPerson: "From R224/person/night on monthly stays",
-      image: "/images/triple-room-full.jpg",
-      alt: "Triple room guesthouse Bellville South - self-catering accommodation Cape Town near UWC with three single beds and workspace",
+      image: "/images/triple-room.jpg",
+      alt: "Triple room guesthouse Bellville South - spacious room with multiple beds, desk and tea station for contractor crews",
       bestFor: "Best value for 3-person contractor crews.",
       features: [
         "3 single beds",
@@ -305,8 +305,8 @@ export default function RoomsPage() {
             </div>
             <div className="relative h-64 lg:h-80">
               <Image
-                src="/images/bathroom.png"
-                alt="Modern ensuite bathroom guesthouse Bellville South - clean self-catering accommodation Cape Town with hot water 24/7"
+                src="/images/ensuite-bathroom.jpg"
+                alt="Modern ensuite bathroom guesthouse Bellville South - gray marble tiles, white fixtures and shower"
                 fill
                 className="object-cover rounded-lg professional-image"
                 sizes="(max-width: 768px) 100vw, 50vw"

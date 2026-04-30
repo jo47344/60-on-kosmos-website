@@ -145,7 +145,7 @@ export default function ContractorAccommodationPage() {
       capacity: "1-2 People",
       layout: "2 Single Beds",
       bestFor: "2 contractors or professionals sharing",
-      image: "/images/twin-room-yellow.png",
+      image: "/images/standard-twin-room.jpg",
       features: [
         "2 comfortable single beds",
         "Private ensuite bathroom",
@@ -167,7 +167,7 @@ export default function ContractorAccommodationPage() {
       capacity: "1-2 People",
       layout: "2 Single Beds",
       bestFor: "2 professionals wanting extra comfort",
-      image: "/images/deluxe-twin-navy.jpg",
+      image: "/images/deluxe-twin-room.jpg",
       features: [
         "2 comfortable single beds",
         "Private ensuite bathroom",
@@ -213,7 +213,7 @@ export default function ContractorAccommodationPage() {
       capacity: "3 People",
       layout: "3 Single Beds",
       bestFor: "3-person contractor crews",
-      image: "/images/triple-room-full.jpg",
+      image: "/images/triple-room.jpg",
       features: [
         "3 comfortable single beds",
         "Private ensuite bathroom",
