@@ -209,7 +209,7 @@ export default function ContractorAccommodationPage() {
       price: "R840",
       weeklyPrice: "R756",
       monthlyPrice: "R672",
-      perPerson: "R224/person monthly",
+      perPerson: "R224/person/night",
       capacity: "3 People",
       layout: "3 Single Beds",
       bestFor: "3-person contractor crews",
@@ -232,7 +232,7 @@ export default function ContractorAccommodationPage() {
   const contractorFAQs = [
     {
       question: "How much does contractor accommodation cost in Bellville South?",
-      answer: "Contractor accommodation at 60 on Kosmos starts from R530/night for a Standard Room (2 single beds), R580/night for Standard Plus with private fridge, R620/night for a Double Room with workspace, or R750/night for a Triple Suite (only R250 per person). Weekly and monthly discounts available.",
+      answer: "Contractor rates at 60 on Kosmos start from R580/night (Standard Twin, 1–6 nights). Weekly rates (7–27 nights) from R522/night. Monthly rates (28+ nights) from R464/night. Triple Room sleeps 3 from R840/night standard or R672/night monthly (R224/person/night). All rooms have private ensuite bathrooms.",
     },
     {
       question: "Is there secure parking for work vehicles and bakkies?",
@@ -240,7 +240,7 @@ export default function ContractorAccommodationPage() {
     },
     {
       question: "Do you accommodate apprentices and trainees on courses?",
-      answer: "Yes, we regularly host apprentices from John Thompson boilermaker courses, Northlink College welding programmes, and other training facilities. Our Standard Room at R530/night is ideal for trainees on a budget.",
+      answer: "Yes, we regularly host apprentices from John Thompson boilermaker courses, Northlink College welding programmes, and other training facilities. Our Standard Twin Room at R580/night (or R464/night monthly) is ideal for trainees on a budget.",
     },
     {
       question: "Can contractors cook their own meals?",
@@ -260,7 +260,7 @@ export default function ContractorAccommodationPage() {
     },
     {
       question: "Can you accommodate work crews or teams?",
-      answer: "Yes, our Triple Suite accommodates 3 people at only R250 per person per night - the best value for crews. We can also arrange multiple rooms for larger teams. Many contractors book several rooms for their crews on project assignments.",
+      answer: "Yes, our Triple Room accommodates 3 people at R840/night (R280/person), or R672/night on monthly rates (R224/person/night) - the best value for crews. We can also arrange multiple rooms for larger teams. Many contractors book several rooms for their crews on project assignments.",
     },
   ]
 
@@ -496,7 +496,7 @@ export default function ContractorAccommodationPage() {
                       <span className="text-gray-600 text-sm">/night</span>
                     </div>
                     {room.perPerson && (
-                      <p className="text-xs text-sage-700 font-semibold mt-1">Only {room.perPerson} per person!</p>
+                      <p className="text-xs text-sage-700 font-semibold mt-1">From {room.perPerson} on monthly rates</p>
                     )}
                   </div>
 
@@ -722,7 +722,7 @@ export default function ContractorAccommodationPage() {
               <p className="text-gray-600 text-sm mb-3">
                 Boilermaker, welder & engineering students on training courses
               </p>
-              <p className="text-sage-600 font-semibold">From R530/night</p>
+              <p className="text-sage-600 font-semibold">From R580/night</p>
             </Card>
             <Card className="text-center p-6">
               <Users className="w-10 h-10 mx-auto mb-3 text-sage-600" />
@@ -736,13 +736,13 @@ export default function ContractorAccommodationPage() {
               <Briefcase className="w-10 h-10 mx-auto mb-3 text-sage-600" />
               <h3 className="text-lg font-bold mb-2">Managers</h3>
               <p className="text-gray-600 text-sm mb-3">Project leads and supervisors who need workspace and privacy</p>
-              <p className="text-sage-600 font-semibold">From R620/night</p>
+              <p className="text-sage-600 font-semibold">From R680/night</p>
             </Card>
             <Card className="text-center p-6">
               <Users className="w-10 h-10 mx-auto mb-3 text-sage-600" />
               <h3 className="text-lg font-bold mb-2">Work Crews</h3>
-              <p className="text-gray-600 text-sm mb-3">3-man teams maximizing savings at R250 per person</p>
-              <p className="text-sage-600 font-semibold">R750/night total</p>
+              <p className="text-gray-600 text-sm mb-3">3-person teams, R224/person/night on monthly rates</p>
+              <p className="text-sage-600 font-semibold">R840/night (R672 monthly)</p>
             </Card>
           </div>
         </div>
@@ -822,15 +822,15 @@ export default function ContractorAccommodationPage() {
             <Card className="p-6 text-center">
               <h3 className="text-lg font-bold text-gray-900 mb-2">Weekly Stay (7 nights)</h3>
               <p className="text-3xl font-bold text-sage-600 mb-2">Save 10%</p>
-              <p className="text-gray-600 text-sm mb-4">Standard Room from R3,339/week</p>
-              <p className="text-xs text-gray-500">(Instead of R3,710)</p>
+              <p className="text-gray-600 text-sm mb-4">Standard Twin from R3,654/week</p>
+              <p className="text-xs text-gray-500">(Instead of R4,060)</p>
             </Card>
             <Card className="p-6 text-center ring-2 ring-sage-600">
               <div className="bg-sage-600 text-white text-xs font-bold px-3 py-1 rounded-full inline-block mb-2">BEST VALUE</div>
               <h3 className="text-lg font-bold text-gray-900 mb-2">Monthly Stay (30 nights)</h3>
               <p className="text-3xl font-bold text-sage-600 mb-2">Save 20%</p>
-              <p className="text-gray-600 text-sm mb-4">Standard Room from R12,720/month</p>
-              <p className="text-xs text-gray-500">(Instead of R15,900)</p>
+              <p className="text-gray-600 text-sm mb-4">Standard Twin from R13,920/month</p>
+              <p className="text-xs text-gray-500">(Instead of R17,400)</p>
             </Card>
             <Card className="p-6 text-center">
               <h3 className="text-lg font-bold text-gray-900 mb-2">Team Booking (3+ rooms)</h3>
@@ -999,7 +999,7 @@ export default function ContractorAccommodationPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Book Your Stay?</h2>
           <p className="text-xl mb-8 text-sage-50">
-            Standard R530 | Standard Plus R580 | Double R620 | Triple R750/night
+            Standard Twin R580 | Deluxe Twin R650 | Double R680 | Triple R840/night
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-white text-sage-600 hover:bg-gray-100 px-8 py-6 text-lg">
