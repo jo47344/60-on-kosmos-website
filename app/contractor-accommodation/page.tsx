@@ -18,6 +18,7 @@ import {
   Calculator,
   Star,
   Quote,
+  ShoppingCart,
   Building2,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -902,7 +903,38 @@ export default function ContractorAccommodationPage() {
       {/* Location Section - Updated with new locations */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">Strategic Location</h2>
+          <h2 className="text-3xl font-bold text-center mb-4">Strategic Location</h2>
+          <p className="text-gray-600 text-center mb-12">Near work sites, shopping, and with easy highway access</p>
+          
+          {/* Key Access Points */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+            <Card className="p-6 bg-sage-50 border-sage-200">
+              <div className="flex items-center gap-3 mb-2">
+                <ShoppingCart className="w-6 h-6 text-sage-600" />
+                <h3 className="font-bold">Kasselsvlei Shopping Centre</h3>
+              </div>
+              <p className="text-sage-600 font-medium">2-minute drive</p>
+              <p className="text-gray-600 text-sm mt-1">Spar supermarket, 24-hour laundromat, restaurants, pharmacy</p>
+            </Card>
+            <Card className="p-6 bg-sage-50 border-sage-200">
+              <div className="flex items-center gap-3 mb-2">
+                <Car className="w-6 h-6 text-sage-600" />
+                <h3 className="font-bold">N1 Highway Access</h3>
+              </div>
+              <p className="text-sage-600 font-medium">5 minutes</p>
+              <p className="text-gray-600 text-sm mt-1">Easy access to Cape Town CBD, universities, and work sites</p>
+            </Card>
+            <Card className="p-6 bg-sage-50 border-sage-200">
+              <div className="flex items-center gap-3 mb-2">
+                <Car className="w-6 h-6 text-sage-600" />
+                <h3 className="font-bold">Uber Available</h3>
+              </div>
+              <p className="text-sage-600 font-medium">On-demand</p>
+              <p className="text-gray-600 text-sm mt-1">Readily available and affordable for local trips</p>
+            </Card>
+          </div>
+
+          {/* Work Sites */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-center">
             <Card className="p-4">
               <MapPin className="w-6 h-6 mx-auto mb-2 text-sage-600" />
@@ -934,6 +966,14 @@ export default function ContractorAccommodationPage() {
               <h3 className="font-bold text-sm">Bellville CBD</h3>
               <p className="text-sage-600 text-sm">3km</p>
             </Card>
+          </div>
+
+          {/* Safety Note */}
+          <div className="mt-10 bg-amber-50 border border-amber-200 rounded-lg p-4">
+            <p className="text-amber-800 text-sm text-center">
+              <strong>Safety tip:</strong> We recommend using transport (car or Uber) for shopping and services rather than walking. 
+              Our property has 24/7 CCTV monitoring and secure parking inside the gates.
+            </p>
           </div>
         </div>
       </section>

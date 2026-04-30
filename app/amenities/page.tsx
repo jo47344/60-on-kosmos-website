@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Shield, Wifi, Car, Coffee, Camera, Clock, MapPin, Users } from "lucide-react"
+import { Shield, Wifi, Car, Coffee, Camera, Clock, MapPin, Users, ShoppingCart, Navigation, AlertTriangle } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import Image from "next/image"
 
@@ -165,6 +165,71 @@ export default function AmenitiesPage() {
                 <span className="text-gray-700">{feature}</span>
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* Location & Nearby Amenities Section */}
+        <div className="bg-sage-50 rounded-lg p-8 mb-16">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Location & Nearby Amenities</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                <ShoppingCart className="w-5 h-5 text-green-600 mr-2" />
+                Convenient Access to Shopping & Services
+              </h3>
+              <div className="space-y-3">
+                <div className="flex items-start">
+                  <MapPin className="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <p className="font-medium text-gray-900">Kasselsvlei Shopping Centre</p>
+                    <p className="text-gray-600 text-sm">2-minute drive - Spar supermarket, 24-hour laundromat, restaurants, pharmacy</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <Navigation className="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <p className="font-medium text-gray-900">N1 Highway Access</p>
+                    <p className="text-gray-600 text-sm">5 minutes - Easy access to Cape Town CBD, universities, and work sites</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <Car className="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <p className="font-medium text-gray-900">Uber Available</p>
+                    <p className="text-gray-600 text-sm">Readily available and affordable for local trips</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                <Shield className="w-5 h-5 text-green-600 mr-2" />
+                Safety Information
+              </h3>
+              <div className="space-y-3">
+                <div className="flex items-start">
+                  <Camera className="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <p className="font-medium text-gray-900">24/7 CCTV Monitoring</p>
+                    <p className="text-gray-600 text-sm">Comprehensive security camera coverage at the property</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <Car className="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <p className="font-medium text-gray-900">Secure Parking</p>
+                    <p className="text-gray-600 text-sm">Parking inside property gates for your vehicle safety</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <AlertTriangle className="w-5 h-5 text-amber-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <p className="font-medium text-gray-900">Transport Recommendation</p>
+                    <p className="text-gray-600 text-sm">We recommend using transport (car or Uber) for shopping and services rather than walking</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
