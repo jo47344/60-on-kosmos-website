@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { MapPin, Car, ShoppingBag, GraduationCap, Building, Wine } from "lucide-react"
+import { MapPin, Car, ShoppingBag, GraduationCap, Building, Wine, Shield, Camera, AlertTriangle, Navigation } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 
 export const metadata: Metadata = {
@@ -19,9 +19,9 @@ export default function LocalInfoPage() {
   const attractions = [
     {
       icon: ShoppingBag,
-      name: "SPAR Kasselsvlei Centre",
-      distance: "2km",
-      description: "Full-service supermarket and shopping centre with restaurants, pharmacy, and banking services.",
+      name: "Kasselsvlei Shopping Centre",
+      distance: "2-min drive",
+      description: "Spar supermarket, 24-hour laundromat, restaurants, pharmacy, and banking services.",
       type: "Shopping",
     },
     {
@@ -63,22 +63,22 @@ export default function LocalInfoPage() {
 
   const transportOptions = [
     {
+      type: "N1 Highway",
+      location: "N1 Access",
+      distance: "5 min",
+      description: "Easy access to Cape Town CBD, universities, and work sites across the city",
+    },
+    {
+      type: "Uber",
+      location: "On-demand",
+      distance: "Available",
+      description: "Readily available and affordable for local trips - recommended for shopping and services",
+    },
+    {
       type: "Taxi Rank",
       location: "Kasselsvlei Centre",
-      distance: "2km walk",
+      distance: "2-min drive",
       description: "Regular minibus taxis to Cape Town CBD, Bellville, and surrounding areas",
-    },
-    {
-      type: "Bus Route",
-      location: "Voortrekker Road",
-      distance: "3km",
-      description: "MyCiTi and Golden Arrow bus services to various Cape Town destinations",
-    },
-    {
-      type: "Train Station",
-      location: "Bellville Station",
-      distance: "6km",
-      description: "Metrorail services to Cape Town, Stellenbosch, and other destinations",
     },
   ]
 
@@ -215,11 +215,24 @@ export default function LocalInfoPage() {
               </p>
             </div>
             <div>
-              <h3 className="font-semibold text-gray-900 mb-3">Safety</h3>
-              <p className="text-gray-600 mb-4">
-                Bellville South is a well-established residential area. We recommend using registered transport services
-                and staying aware of your surroundings.
-              </p>
+              <h3 className="font-semibold text-gray-900 mb-3 flex items-center">
+                <Shield className="w-5 h-5 text-green-600 mr-2" />
+                Safety
+              </h3>
+              <ul className="text-gray-600 mb-4 space-y-2">
+                <li className="flex items-start">
+                  <Camera className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
+                  <span>24/7 CCTV monitoring at our property</span>
+                </li>
+                <li className="flex items-start">
+                  <Car className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
+                  <span>Secure parking inside property gates</span>
+                </li>
+                <li className="flex items-start">
+                  <AlertTriangle className="w-4 h-4 text-amber-500 mr-2 mt-1 flex-shrink-0" />
+                  <span>We recommend using transport (car or Uber) for shopping and services rather than walking</span>
+                </li>
+              </ul>
             </div>
             <div>
               <h3 className="font-semibold text-gray-900 mb-3">Local Knowledge</h3>

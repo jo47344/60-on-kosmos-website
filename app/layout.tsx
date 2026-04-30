@@ -1,19 +1,25 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
+import dynamic from "next/dynamic"
 import "./globals.css"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
-import { StickyMobileCTA } from "@/components/sticky-mobile-cta"
 import { LocalBusinessSchema } from "@/components/local-business-schema"
-import { GoogleAnalytics } from "@/components/google-analytics"
-import { Suspense } from "react"
-import { PerformanceOptimizations } from "@/components/performance-optimizations"
 import { StructuredData } from "@/components/structured-data"
-import { Toaster } from "@/components/ui/toaster"
-import { WhatsAppWidget } from "@/components/whatsapp-widget"
 
-const inter = Inter({ subsets: ["latin"] })
+// Dynamic imports for non-critical components
+const StickyMobileCTA = dynamic(() => import("@/components/sticky-mobile-cta").then(mod => ({ default: mod.StickyMobileCTA })), { ssr: false })
+const GoogleAnalytics = dynamic(() => import("@/components/google-analytics").then(mod => ({ default: mod.GoogleAnalytics })), { ssr: false })
+const PerformanceOptimizations = dynamic(() => import("@/components/performance-optimizations").then(mod => ({ default: mod.PerformanceOptimizations })), { ssr: false })
+const Toaster = dynamic(() => import("@/components/ui/toaster").then(mod => ({ default: mod.Toaster })), { ssr: false })
+const WhatsAppWidget = dynamic(() => import("@/components/whatsapp-widget").then(mod => ({ default: mod.WhatsAppWidget })), { ssr: false })
+
+const inter = Inter({ 
+  subsets: ["latin"],
+  display: "swap",
+  preload: true,
+})
 
 export const viewport = {
   width: "device-width",
@@ -102,6 +108,10 @@ export default function RootLayout({
   return (
     <html lang="en-ZA" className="bg-background">
       <head>
+        <link rel="preconnect" href="https://wa.me" />
+        <link rel="dns-prefetch" href="https://wa.me" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <LocalBusinessSchema />
         <StructuredData />
       </head>

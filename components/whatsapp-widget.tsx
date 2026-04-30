@@ -6,15 +6,24 @@ import { MessageCircle, X } from "lucide-react"
 export function WhatsAppWidget() {
   const [isOpen, setIsOpen] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
+  const [isMounted, setIsMounted] = useState(false)
+
+  // Delay mounting to improve initial page load
+  useEffect(() => {
+    const timer = setTimeout(() => setIsMounted(true), 2000)
+    return () => clearTimeout(timer)
+  }, [])
 
   useEffect(() => {
+    if (!isMounted) return
+    
     const handleScroll = () => {
       setIsVisible(window.scrollY > 300)
     }
 
-    window.addEventListener("scroll", handleScroll)
+    window.addEventListener("scroll", handleScroll, { passive: true })
     return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+  }, [isMounted])
 
   const whatsappNumber = "27745245703"
   const defaultMessage = "Hi, I'd like to book a room at 60 on Kosmos. Can you help me with availability and rates?"
@@ -24,7 +33,7 @@ export function WhatsAppWidget() {
     window.open(url, "_blank", "noopener,noreferrer")
   }
 
-  if (!isVisible) return null
+  if (!isMounted || !isVisible) return null
 
   return (
     <>

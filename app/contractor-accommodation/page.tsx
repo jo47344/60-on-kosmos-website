@@ -18,6 +18,7 @@ import {
   Calculator,
   Star,
   Quote,
+  ShoppingCart,
   Building2,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -208,7 +209,7 @@ export default function ContractorAccommodationPage() {
       price: "R840",
       weeklyPrice: "R756",
       monthlyPrice: "R672",
-      perPerson: "R224/person monthly",
+      perPerson: "R224/person/night",
       capacity: "3 People",
       layout: "3 Single Beds",
       bestFor: "3-person contractor crews",
@@ -231,7 +232,7 @@ export default function ContractorAccommodationPage() {
   const contractorFAQs = [
     {
       question: "How much does contractor accommodation cost in Bellville South?",
-      answer: "Contractor accommodation at 60 on Kosmos starts from R530/night for a Standard Room (2 single beds), R580/night for Standard Plus with private fridge, R620/night for a Double Room with workspace, or R750/night for a Triple Suite (only R250 per person). Weekly and monthly discounts available.",
+      answer: "Contractor rates at 60 on Kosmos start from R580/night (Standard Twin, 1–6 nights). Weekly rates (7–27 nights) from R522/night. Monthly rates (28+ nights) from R464/night. Triple Room sleeps 3 from R840/night standard or R672/night monthly (R224/person/night). All rooms have private ensuite bathrooms.",
     },
     {
       question: "Is there secure parking for work vehicles and bakkies?",
@@ -239,7 +240,7 @@ export default function ContractorAccommodationPage() {
     },
     {
       question: "Do you accommodate apprentices and trainees on courses?",
-      answer: "Yes, we regularly host apprentices from John Thompson boilermaker courses, Northlink College welding programmes, and other training facilities. Our Standard Room at R530/night is ideal for trainees on a budget.",
+      answer: "Yes, we regularly host apprentices from John Thompson boilermaker courses, Northlink College welding programmes, and other training facilities. Our Standard Twin Room at R580/night (or R464/night monthly) is ideal for trainees on a budget.",
     },
     {
       question: "Can contractors cook their own meals?",
@@ -259,7 +260,7 @@ export default function ContractorAccommodationPage() {
     },
     {
       question: "Can you accommodate work crews or teams?",
-      answer: "Yes, our Triple Suite accommodates 3 people at only R250 per person per night - the best value for crews. We can also arrange multiple rooms for larger teams. Many contractors book several rooms for their crews on project assignments.",
+      answer: "Yes, our Triple Room accommodates 3 people at R840/night (R280/person), or R672/night on monthly rates (R224/person/night) - the best value for crews. We can also arrange multiple rooms for larger teams. Many contractors book several rooms for their crews on project assignments.",
     },
   ]
 
@@ -283,19 +284,19 @@ export default function ContractorAccommodationPage() {
           <div className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 bg-sage-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Briefcase className="w-4 h-4" />
-              <span>Contractor & Apprentice Accommodation</span>
+              <span>For Contractors & Project Teams</span>
             </div>
-            <h1 className="text-3xl md:text-5xl font-bold text-white mb-6">
-              Bellville South Contractor Accommodation
-              <br className="hidden md:block" />
-              <span className="text-sage-400">with Private Ensuite Rooms</span>
+            <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 text-balance">
+              Accommodation for Contractors & Project Teams in Bellville South
             </h1>
             <p className="text-xl text-gray-300 mb-4">
-              Every room has its own private bathroom. No shared facilities.
-              <br className="hidden md:block" />
-              Nightly, weekly & monthly rates. Self-catering, secure parking for bakkies, WiFi.
+              Book by the week or month — no lease, no hassle.
             </p>
-            <p className="text-base text-gray-400 mb-8">Near factories, TAC Business Park, Sacks Circle & Mill Park.</p>
+            <p className="text-lg text-gray-400 mb-8">
+              Private ensuite rooms, secure parking, self-catering kitchen, and fast N1 access.
+              <br className="hidden md:block" />
+              Perfect for contractors, site crews, and project professionals.
+            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-sage-600 hover:bg-sage-700 text-white px-8 py-6 text-lg">
                 <a href="https://wa.me/27745245703?text=Hi%2C%20I%27m%20interested%20in%20contractor%20accommodation%20rates">
@@ -495,7 +496,7 @@ export default function ContractorAccommodationPage() {
                       <span className="text-gray-600 text-sm">/night</span>
                     </div>
                     {room.perPerson && (
-                      <p className="text-xs text-sage-700 font-semibold mt-1">Only {room.perPerson} per person!</p>
+                      <p className="text-xs text-sage-700 font-semibold mt-1">From {room.perPerson} on monthly rates</p>
                     )}
                   </div>
 
@@ -721,7 +722,7 @@ export default function ContractorAccommodationPage() {
               <p className="text-gray-600 text-sm mb-3">
                 Boilermaker, welder & engineering students on training courses
               </p>
-              <p className="text-sage-600 font-semibold">From R530/night</p>
+              <p className="text-sage-600 font-semibold">From R580/night</p>
             </Card>
             <Card className="text-center p-6">
               <Users className="w-10 h-10 mx-auto mb-3 text-sage-600" />
@@ -735,13 +736,13 @@ export default function ContractorAccommodationPage() {
               <Briefcase className="w-10 h-10 mx-auto mb-3 text-sage-600" />
               <h3 className="text-lg font-bold mb-2">Managers</h3>
               <p className="text-gray-600 text-sm mb-3">Project leads and supervisors who need workspace and privacy</p>
-              <p className="text-sage-600 font-semibold">From R620/night</p>
+              <p className="text-sage-600 font-semibold">From R680/night</p>
             </Card>
             <Card className="text-center p-6">
               <Users className="w-10 h-10 mx-auto mb-3 text-sage-600" />
               <h3 className="text-lg font-bold mb-2">Work Crews</h3>
-              <p className="text-gray-600 text-sm mb-3">3-man teams maximizing savings at R250 per person</p>
-              <p className="text-sage-600 font-semibold">R750/night total</p>
+              <p className="text-gray-600 text-sm mb-3">3-person teams, R224/person/night on monthly rates</p>
+              <p className="text-sage-600 font-semibold">R840/night (R672 monthly)</p>
             </Card>
           </div>
         </div>
@@ -821,15 +822,15 @@ export default function ContractorAccommodationPage() {
             <Card className="p-6 text-center">
               <h3 className="text-lg font-bold text-gray-900 mb-2">Weekly Stay (7 nights)</h3>
               <p className="text-3xl font-bold text-sage-600 mb-2">Save 10%</p>
-              <p className="text-gray-600 text-sm mb-4">Standard Room from R3,339/week</p>
-              <p className="text-xs text-gray-500">(Instead of R3,710)</p>
+              <p className="text-gray-600 text-sm mb-4">Standard Twin from R3,654/week</p>
+              <p className="text-xs text-gray-500">(Instead of R4,060)</p>
             </Card>
             <Card className="p-6 text-center ring-2 ring-sage-600">
               <div className="bg-sage-600 text-white text-xs font-bold px-3 py-1 rounded-full inline-block mb-2">BEST VALUE</div>
               <h3 className="text-lg font-bold text-gray-900 mb-2">Monthly Stay (30 nights)</h3>
               <p className="text-3xl font-bold text-sage-600 mb-2">Save 20%</p>
-              <p className="text-gray-600 text-sm mb-4">Standard Room from R12,720/month</p>
-              <p className="text-xs text-gray-500">(Instead of R15,900)</p>
+              <p className="text-gray-600 text-sm mb-4">Standard Twin from R13,920/month</p>
+              <p className="text-xs text-gray-500">(Instead of R17,400)</p>
             </Card>
             <Card className="p-6 text-center">
               <h3 className="text-lg font-bold text-gray-900 mb-2">Team Booking (3+ rooms)</h3>
@@ -902,7 +903,38 @@ export default function ContractorAccommodationPage() {
       {/* Location Section - Updated with new locations */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">Strategic Location</h2>
+          <h2 className="text-3xl font-bold text-center mb-4">Strategic Location</h2>
+          <p className="text-gray-600 text-center mb-12">Near work sites, shopping, and with easy highway access</p>
+          
+          {/* Key Access Points */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+            <Card className="p-6 bg-sage-50 border-sage-200">
+              <div className="flex items-center gap-3 mb-2">
+                <ShoppingCart className="w-6 h-6 text-sage-600" />
+                <h3 className="font-bold">Kasselsvlei Shopping Centre</h3>
+              </div>
+              <p className="text-sage-600 font-medium">2-minute drive</p>
+              <p className="text-gray-600 text-sm mt-1">Spar supermarket, 24-hour laundromat, restaurants, pharmacy</p>
+            </Card>
+            <Card className="p-6 bg-sage-50 border-sage-200">
+              <div className="flex items-center gap-3 mb-2">
+                <Car className="w-6 h-6 text-sage-600" />
+                <h3 className="font-bold">N1 Highway Access</h3>
+              </div>
+              <p className="text-sage-600 font-medium">5 minutes</p>
+              <p className="text-gray-600 text-sm mt-1">Easy access to Cape Town CBD, universities, and work sites</p>
+            </Card>
+            <Card className="p-6 bg-sage-50 border-sage-200">
+              <div className="flex items-center gap-3 mb-2">
+                <Car className="w-6 h-6 text-sage-600" />
+                <h3 className="font-bold">Uber Available</h3>
+              </div>
+              <p className="text-sage-600 font-medium">On-demand</p>
+              <p className="text-gray-600 text-sm mt-1">Readily available and affordable for local trips</p>
+            </Card>
+          </div>
+
+          {/* Work Sites */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-center">
             <Card className="p-4">
               <MapPin className="w-6 h-6 mx-auto mb-2 text-sage-600" />
@@ -935,6 +967,14 @@ export default function ContractorAccommodationPage() {
               <p className="text-sage-600 text-sm">3km</p>
             </Card>
           </div>
+
+          {/* Safety Note */}
+          <div className="mt-10 bg-amber-50 border border-amber-200 rounded-lg p-4">
+            <p className="text-amber-800 text-sm text-center">
+              <strong>Safety tip:</strong> We recommend using transport (car or Uber) for shopping and services rather than walking. 
+              Our property has 24/7 CCTV monitoring and secure parking inside the gates.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -959,7 +999,7 @@ export default function ContractorAccommodationPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Book Your Stay?</h2>
           <p className="text-xl mb-8 text-sage-50">
-            Standard R530 | Standard Plus R580 | Double R620 | Triple R750/night
+            Standard Twin R580 | Deluxe Twin R650 | Double R680 | Triple R840/night
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-white text-sage-600 hover:bg-gray-100 px-8 py-6 text-lg">

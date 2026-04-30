@@ -56,6 +56,8 @@ export function LatestBlogPosts() {
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                     sizes="(max-width: 768px) 100vw, 33vw"
+                    loading="lazy"
+                    quality={75}
                   />
                   <div className="absolute top-4 left-4 bg-sage-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
                     {post.category}
