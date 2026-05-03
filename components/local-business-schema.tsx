@@ -16,7 +16,7 @@ export function LocalBusinessSchema() {
     url: "https://60onkosmos.co.za",
     telephone: "+27745245703",
     email: "info@60onkosmos.co.za",
-    priceRange: "R464-R840",
+    priceRange: "R580-R840",
     currenciesAccepted: "ZAR",
     paymentAccepted: "EFT, Bank Transfer",
     address: {
@@ -138,9 +138,9 @@ export function LocalBusinessSchema() {
           "Monthly accommodation for construction workers, contractors, boilermakers near Sacks Circle, Mill Park, Stikland",
         priceSpecification: {
           "@type": "UnitPriceSpecification",
-          price: "530",
+          price: "464",
           priceCurrency: "ZAR",
-          unitText: "per night",
+          unitText: "per night (monthly rate)",
         },
       },
       {
@@ -150,7 +150,7 @@ export function LocalBusinessSchema() {
           "Accommodation for apprentices attending boilermaker, welding, electrical courses at John Thompson and Northlink College",
         priceSpecification: {
           "@type": "UnitPriceSpecification",
-          price: "530",
+          price: "580",
           priceCurrency: "ZAR",
           unitText: "per night",
         },
@@ -158,10 +158,10 @@ export function LocalBusinessSchema() {
       {
         "@type": "Offer",
         name: "Construction Crew Housing",
-        description: "Housing for construction crews working in Bellville, Parow, Stikland, Goodwood, Kuilsriver",
+        description: "Housing for construction crews working in Bellville, Parow, Stikland, Goodwood, Kuilsriver. Triple Room R224/person/night on monthly rates.",
         priceSpecification: {
           "@type": "UnitPriceSpecification",
-          price: "530",
+          price: "840",
           priceCurrency: "ZAR",
           unitText: "per night",
         },
@@ -173,7 +173,7 @@ export function LocalBusinessSchema() {
           "Weekly and monthly stays for workers at Parow Industria, Stikland Industrial, Blackheath Industrial Park",
         priceSpecification: {
           "@type": "UnitPriceSpecification",
-          price: "530",
+          price: "580",
           priceCurrency: "ZAR",
           unitText: "per night",
         },
@@ -187,27 +187,10 @@ export function LocalBusinessSchema() {
           "@type": "Offer",
           itemOffered: {
             "@type": "HotelRoom",
-            name: "Standard Room",
-            description: "Budget-friendly twin room with ensuite bathroom. Access to communal kitchenette.",
+            name: "Standard Twin Room",
+            description: "Twin room with ensuite bathroom. Access to communal kitchen.",
             bed: { "@type": "BedDetails", numberOfBeds: 2, typeOfBed: "Single" },
             occupancy: { "@type": "QuantitativeValue", minValue: 1, maxValue: 2 },
-          },
-          priceSpecification: {
-            "@type": "UnitPriceSpecification",
-            price: "530",
-            priceCurrency: "ZAR",
-            unitText: "per night",
-          },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "HotelRoom",
-            name: "Standard Plus Room",
-            description: "Twin room with private bar fridge and ensuite bathroom.",
-            bed: { "@type": "BedDetails", numberOfBeds: 2, typeOfBed: "Single" },
-            occupancy: { "@type": "QuantitativeValue", minValue: 1, maxValue: 2 },
-            amenityFeature: [{ "@type": "LocationFeatureSpecification", name: "Bar Fridge", value: true }],
           },
           priceSpecification: {
             "@type": "UnitPriceSpecification",
@@ -220,19 +203,15 @@ export function LocalBusinessSchema() {
           "@type": "Offer",
           itemOffered: {
             "@type": "HotelRoom",
-            name: "Double Room",
-            description:
-              "Spacious double room with bar fridge, microwave, and ensuite bathroom. Ideal for managers and supervisors.",
-            bed: { "@type": "BedDetails", numberOfBeds: 1, typeOfBed: "Double" },
+            name: "Deluxe Twin Room",
+            description: "Premium twin room with bar fridge, navy headboards, and ensuite bathroom.",
+            bed: { "@type": "BedDetails", numberOfBeds: 2, typeOfBed: "Single" },
             occupancy: { "@type": "QuantitativeValue", minValue: 1, maxValue: 2 },
-            amenityFeature: [
-              { "@type": "LocationFeatureSpecification", name: "Bar Fridge", value: true },
-              { "@type": "LocationFeatureSpecification", name: "Microwave", value: true },
-            ],
+            amenityFeature: [{ "@type": "LocationFeatureSpecification", name: "Bar Fridge", value: true }],
           },
           priceSpecification: {
             "@type": "UnitPriceSpecification",
-            price: "620",
+            price: "650",
             priceCurrency: "ZAR",
             unitText: "per night",
           },
@@ -241,16 +220,35 @@ export function LocalBusinessSchema() {
           "@type": "Offer",
           itemOffered: {
             "@type": "HotelRoom",
-            name: "Triple Suite",
+            name: "Double Room",
             description:
-              "Large room with three single beds and bar fridge. Best value for 3-person crews at R250 per person.",
-            bed: { "@type": "BedDetails", numberOfBeds: 3, typeOfBed: "Single" },
-            occupancy: { "@type": "QuantitativeValue", minValue: 1, maxValue: 3 },
-            amenityFeature: [{ "@type": "LocationFeatureSpecification", name: "Bar Fridge", value: true }],
+              "Spacious double room with bar fridge and ensuite bathroom. Ideal for managers and supervisors.",
+            bed: { "@type": "BedDetails", numberOfBeds: 1, typeOfBed: "Double" },
+            occupancy: { "@type": "QuantitativeValue", minValue: 1, maxValue: 2 },
+            amenityFeature: [
+              { "@type": "LocationFeatureSpecification", name: "Bar Fridge", value: true },
+            ],
           },
           priceSpecification: {
             "@type": "UnitPriceSpecification",
-            price: "750",
+            price: "680",
+            priceCurrency: "ZAR",
+            unitText: "per night",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "HotelRoom",
+            name: "Triple Room",
+            description:
+              "Large room with three single beds. Best value for 3-person crews at R224/person on monthly rates.",
+            bed: { "@type": "BedDetails", numberOfBeds: 3, typeOfBed: "Single" },
+            occupancy: { "@type": "QuantitativeValue", minValue: 1, maxValue: 3 },
+          },
+          priceSpecification: {
+            "@type": "UnitPriceSpecification",
+            price: "840",
             priceCurrency: "ZAR",
             unitText: "per night",
           },

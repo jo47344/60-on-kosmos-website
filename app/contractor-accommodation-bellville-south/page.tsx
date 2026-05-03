@@ -181,11 +181,11 @@ export default function ContractorAccommodationPage() {
               </div>
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold mb-2">Standard Twin</h3>
-                <p className="text-2xl font-bold text-green-600 mb-4">From R530/night</p>
+                <p className="text-2xl font-bold text-green-600 mb-4">From R580/night</p>
                 <ul className="text-sm text-gray-600 space-y-1 mb-4">
                   <li>✓ Two single beds</li>
                   <li>✓ Ensuite bathroom</li>
-                  <li>✓ Bar fridge</li>
+                  <li>✓ Kitchen access</li>
                   <li>✓ Free WiFi</li>
                 </ul>
                 <Button asChild className="w-full bg-sage-600 hover:bg-sage-700">
@@ -205,7 +205,7 @@ export default function ContractorAccommodationPage() {
               </div>
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold mb-2">Deluxe Twin</h3>
-                <p className="text-2xl font-bold text-green-600 mb-4">From R580/night</p>
+                <p className="text-2xl font-bold text-green-600 mb-4">From R650/night</p>
                 <ul className="text-sm text-gray-600 space-y-1 mb-4">
                   <li>✓ Two single beds</li>
                   <li>✓ Navy blue headboards</li>

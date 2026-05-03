@@ -218,10 +218,10 @@ export function OptimizedBookingForm() {
                 <SelectValue placeholder="Select room type" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="standard-twin">Standard Twin Room (R530/night)</SelectItem>
-                <SelectItem value="double-room">Double Room (R620/night)</SelectItem>
-                <SelectItem value="deluxe-twin">Deluxe Twin Room (R580/night)</SelectItem>
-                <SelectItem value="triple-room">Triple Room (R750/night)</SelectItem>
+                <SelectItem value="standard-twin">Standard Twin Room (R580/night)</SelectItem>
+                <SelectItem value="deluxe-twin">Deluxe Twin Room (R650/night)</SelectItem>
+                <SelectItem value="double-room">Double Room (R680/night)</SelectItem>
+                <SelectItem value="triple-room">Triple Room (R840/night)</SelectItem>
               </SelectContent>
             </Select>
           </div>
