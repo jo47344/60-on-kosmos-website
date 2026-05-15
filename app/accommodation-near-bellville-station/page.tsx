@@ -8,7 +8,7 @@ import { Train, MapPin, Phone, Clock } from "lucide-react"
 export const metadata: Metadata = {
   title: "Accommodation Near Bellville Station | 6km Away | Easy Train Access",
   description:
-    "Affordable rooms 6km from Bellville Train Station. Quick taxi/Uber to station. Perfect for commuters, rail travelers. Ensuite rooms from R530/night. Free WiFi & parking.",
+    "Affordable rooms 6km from Bellville Train Station. Quick taxi/Uber to station. Perfect for commuters, rail travelers. Ensuite rooms from R580/night. Free WiFi & parking.",
   keywords:
     "accommodation near bellville station, rooms near bellville train station, bellville station accommodation, commuter accommodation bellville, metrorail accommodation cape town",
   alternates: { canonical: "https://60onkosmos.co.za/accommodation-near-bellville-station" },
@@ -150,19 +150,19 @@ export default function BellvilleStationPage() {
             {[
               {
                 name: "Twin Room",
-                price: "R530",
+                price: "R580",
                 image: "/images/twin-room-yellow.png",
                 desc: "Budget option for daily commuters",
               },
               {
                 name: "Double Room",
-                price: "R620",
+                price: "R680",
                 image: "/images/sage-double-room.png",
                 desc: "Perfect for business travelers",
               },
               {
                 name: "Triple Room",
-                price: "R750",
+                price: "R840",
                 image: "/images/triple-room-full.jpg",
                 desc: "Great for families traveling by train",
               },

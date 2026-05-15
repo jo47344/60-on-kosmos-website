@@ -20,9 +20,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
 export const metadata: Metadata = {
-  title: "Contractor Accommodation Stikland | From R530/Night | Beekman, Consol Glass Workers",
+  title: "Contractor Accommodation Stikland | From R580/Night | Beekman, Consol Glass Workers",
   description:
-    "Affordable contractor accommodation near Stikland Industrial. 8 min to Beekman Canopies, 10 min to Consol Glass. Self-catering rooms from R530/night. Weekly & monthly rates for workers.",
+    "Affordable contractor accommodation near Stikland Industrial. 8 min to Beekman Canopies, 10 min to Consol Glass. Self-catering rooms from R580/night. Weekly & monthly rates for workers.",
   alternates: {
     canonical: "https://60onkosmos.co.za/contractor-accommodation-stikland",
   },
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     "Mill Park industrial accommodation",
   ],
   openGraph: {
-    title: "Contractor Accommodation Near Stikland Industrial | From R530/Night",
+    title: "Contractor Accommodation Near Stikland Industrial | From R580/Night",
     description:
       "8 minutes from Beekman Canopies, 10 minutes from Consol Glass. Self-catering rooms for contractors, factory workers & logistics crews.",
     url: "https://60onkosmos.co.za/contractor-accommodation-stikland",
@@ -67,7 +67,7 @@ export default function ContractorAccommodationStiklandPage() {
         name: "60 on Kosmos - Contractor Accommodation Near Stikland",
         alternateName: "Stikland Contractor Housing",
         description:
-          "Affordable self-catering contractor accommodation near Stikland Industrial area. Close to Beekman Canopies, Consol Glass, and major logistics companies. Rooms from R530/night with weekly cleaning, WiFi, and secure parking.",
+          "Affordable self-catering contractor accommodation near Stikland Industrial area. Close to Beekman Canopies, Consol Glass, and major logistics companies. Rooms from R580/night with weekly cleaning, WiFi, and secure parking.",
         address: {
           "@type": "PostalAddress",
           streetAddress: "60 Kosmos Street",
@@ -83,7 +83,7 @@ export default function ContractorAccommodationStiklandPage() {
         },
         telephone: "+27745245703",
         url: "https://60onkosmos.co.za/contractor-accommodation-stikland",
-        priceRange: "R530 - R750",
+        priceRange: "R580 - R840",
         currenciesAccepted: "ZAR",
         paymentAccepted: "EFT, Bank Transfer",
         areaServed: [
@@ -269,7 +269,7 @@ export default function ContractorAccommodationStiklandPage() {
             <p className="text-xl text-gray-300 mb-4">
               Affordable self-catering rooms for factory workers, logistics crews & maintenance teams.
               <br className="hidden md:block" />
-              From R530/night with weekly cleaning, WiFi & secure parking.
+              From R580/night with weekly cleaning, WiFi & secure parking.
             </p>
             <p className="text-lg text-sage-300 mb-8">
               Close to Beekman Canopies, Consol Glass, Mill Park Industrial & Stikland Logistics Hub
@@ -399,7 +399,7 @@ export default function ContractorAccommodationStiklandPage() {
             <Card className="overflow-hidden hover:shadow-lg transition-all">
               <CardContent className="p-6 text-center">
                 <h3 className="text-lg font-bold mb-2">Standard Room</h3>
-                <p className="text-3xl font-bold text-sage-600">R530</p>
+                <p className="text-3xl font-bold text-sage-600">R580</p>
                 <p className="text-gray-500 text-sm mb-4">/night</p>
                 <p className="text-xs text-gray-500 mb-4">Budget-friendly option</p>
                 <ul className="text-sm text-gray-600 space-y-2 text-left">
@@ -440,7 +440,7 @@ export default function ContractorAccommodationStiklandPage() {
               <div className="bg-sage-600 text-white text-center py-1 text-xs font-semibold">MOST POPULAR</div>
               <CardContent className="p-6 text-center">
                 <h3 className="text-lg font-bold mb-2">Double Room</h3>
-                <p className="text-3xl font-bold text-sage-600">R620</p>
+                <p className="text-3xl font-bold text-sage-600">R680</p>
                 <p className="text-gray-500 text-sm mb-4">/night</p>
                 <p className="text-xs text-gray-500 mb-4">Supervisor's choice</p>
                 <ul className="text-sm text-gray-600 space-y-2 text-left">
@@ -460,7 +460,7 @@ export default function ContractorAccommodationStiklandPage() {
             <Card className="overflow-hidden hover:shadow-lg transition-all">
               <CardContent className="p-6 text-center">
                 <h3 className="text-lg font-bold mb-2">Triple Suite</h3>
-                <p className="text-3xl font-bold text-sage-600">R750</p>
+                <p className="text-3xl font-bold text-sage-600">R840</p>
                 <p className="text-gray-500 text-sm mb-4">/night</p>
                 <p className="text-xs text-sage-700 font-semibold mb-4">Only R250 per person!</p>
                 <ul className="text-sm text-gray-600 space-y-2 text-left">
@@ -563,7 +563,7 @@ export default function ContractorAccommodationStiklandPage() {
           <p className="text-sage-100 text-lg mb-8">
             Close to Beekman Canopies, Consol Glass, Mill Park Industrial and the Stikland Logistics Hub.
             <br />
-            Self-catering rooms from R530/night.
+            Self-catering rooms from R580/night.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-white text-sage-700 hover:bg-gray-100 px-8 py-6 text-lg">

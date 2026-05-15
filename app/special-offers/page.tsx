@@ -46,7 +46,7 @@ export default function SpecialOffersPage() {
       discount: "15% OFF",
       icon: Heart,
       color: "bg-red-100 text-red-600",
-      regularPrice: "R530",
+      regularPrice: "R580",
       specialPrice: "R450.50",
       savingsAmount: "R79.50",
       perNight: "R450.50/night",
@@ -70,7 +70,7 @@ export default function SpecialOffersPage() {
       discount: "Up to 12% OFF",
       icon: Calendar,
       color: "bg-blue-100 text-blue-600",
-      regularPrice: "R530",
+      regularPrice: "R580",
       specialPrice: "R500",
       savingsAmount: "R420/week",
       perNight: "R500/night",
@@ -95,7 +95,7 @@ export default function SpecialOffersPage() {
       discount: "Save on Weekly Stays",
       icon: Calendar,
       color: "bg-green-100 text-green-600",
-      regularPrice: "R530",
+      regularPrice: "R580",
       specialPrice: "R510",
       savingsAmount: "R140/week",
       perNight: "R510/night",
@@ -117,7 +117,7 @@ export default function SpecialOffersPage() {
       discount: "Limited Time",
       icon: Clock,
       color: "bg-orange-100 text-orange-600",
-      regularPrice: "R530",
+      regularPrice: "R580",
       specialPrice: "R510",
       savingsAmount: "R20",
       perNight: "R510/night",
@@ -220,7 +220,7 @@ export default function SpecialOffersPage() {
                   </tr>
                   <tr className="bg-green-50 hover:bg-green-100">
                     <td className="px-6 py-4 font-bold text-sage-700">Book Direct (Standard)</td>
-                    <td className="px-6 py-4 text-center font-bold text-sage-700">R530</td>
+                    <td className="px-6 py-4 text-center font-bold text-sage-700">R580</td>
                     <td className="px-6 py-4 text-center font-bold text-sage-700">R15,900</td>
                     <td className="px-6 py-4 text-center font-bold text-green-600">No fees!</td>
                   </tr>
