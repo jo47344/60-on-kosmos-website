@@ -6,9 +6,9 @@ import { Card } from "@/components/ui/card"
 import { Shield, Wifi, DollarSign, Phone } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Cheap Accommodation Bellville South from R530/night | Budget Rooms Cape Town",
+  title: "Cheap Accommodation Bellville South from R580/night | Budget Rooms Cape Town",
   description:
-    "Affordable budget accommodation Bellville South from R530/night. Clean ensuite rooms, free WiFi, secure parking. Best cheap guesthouse near UWC & Tygerberg Hospital. Book direct.",
+    "Affordable budget accommodation Bellville South from R580/night. Clean ensuite rooms, free WiFi, secure parking. Best cheap guesthouse near UWC & Tygerberg Hospital. Book direct.",
   keywords:
     "cheap accommodation bellville south, budget rooms bellville south, affordable guesthouse cape town, cheap rooms near uwc, budget accommodation tygerberg, backpacker bellville",
   alternates: { canonical: "https://60onkosmos.co.za/cheap-accommodation-bellville-south" },
@@ -33,13 +33,13 @@ export default function CheapAccommodationPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <div className="inline-block bg-green-600 text-white px-6 py-2 rounded-full mb-4 font-bold">
-              FROM R530/NIGHT - BEST RATES IN BELLVILLE SOUTH
+              FROM R580/NIGHT - BEST RATES IN BELLVILLE SOUTH
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Cheap Accommodation Bellville South — Clean, Safe, Affordable
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Budget-friendly rooms from R530/night. Don't pay hotel prices! Get clean ensuite accommodation with WiFi,
+              Budget-friendly rooms from R580/night. Don't pay hotel prices! Get clean ensuite accommodation with WiFi,
               parking & security included.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -70,7 +70,7 @@ export default function CheapAccommodationPage() {
             <Card className="text-center p-6">
               <DollarSign className="w-12 h-12 text-green-600 mx-auto mb-4" />
               <h3 className="font-semibold mb-2">Cheapest Rates</h3>
-              <p className="text-sm text-gray-600">From R530/night. Weekly & monthly discounts available</p>
+              <p className="text-sm text-gray-600">From R580/night. Weekly & monthly discounts available</p>
             </Card>
             <Card className="text-center p-6">
               <Wifi className="w-12 h-12 text-blue-600 mx-auto mb-4" />
@@ -93,27 +93,27 @@ export default function CheapAccommodationPage() {
 
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">Budget Rooms from R530/Night</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">Budget Rooms from R580/Night</h2>
           <p className="text-center text-gray-600 mb-8">All rooms include ensuite bathroom, WiFi & parking</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
                 name: "Standard Twin",
-                price: "R530",
+                price: "R580",
                 image: "/images/twin-room-yellow.png",
                 desc: "Cheapest option - perfect for backpackers & budget travelers",
               },
               {
                 name: "Double Room",
-                price: "R620",
+                price: "R680",
                 image: "/images/sage-double-room.png",
                 desc: "Great value for couples or solo travelers wanting space",
               },
               {
                 name: "Triple Room",
-                price: "R750",
+                price: "R840",
                 image: "/images/triple-room-full.jpg",
-                desc: "Best deal for groups - only R250 per person!",
+                desc: "Best deal for groups - only R280 per person!",
               },
             ].map((room, i) => (
               <Card key={i} className="overflow-hidden">

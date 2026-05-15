@@ -168,7 +168,7 @@ export default function TygerbergHospitalPage() {
               </div>
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold mb-2">Double Room</h3>
-                <p className="text-2xl font-bold text-green-600 mb-4">From R620/night</p>
+                <p className="text-2xl font-bold text-green-600 mb-4">From R680/night</p>
                 <p className="text-sm text-gray-600 mb-4">Perfect for locum doctors on short-term contracts</p>
                 <Button asChild className="w-full bg-sage-600 hover:bg-sage-700">
                   <Link href="/rooms">View All Rooms</Link>
@@ -187,7 +187,7 @@ export default function TygerbergHospitalPage() {
               </div>
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold mb-2">Twin Room</h3>
-                <p className="text-2xl font-bold text-green-600 mb-4">From R530/night</p>
+                <p className="text-2xl font-bold text-green-600 mb-4">From R580/night</p>
                 <p className="text-sm text-gray-600 mb-4">Great for nursing staff sharing accommodation</p>
                 <Button asChild className="w-full bg-sage-600 hover:bg-sage-700">
                   <Link href="/rooms">View All Rooms</Link>
@@ -206,7 +206,7 @@ export default function TygerbergHospitalPage() {
               </div>
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold mb-2">Triple Room</h3>
-                <p className="text-2xl font-bold text-green-600 mb-4">From R750/night</p>
+                <p className="text-2xl font-bold text-green-600 mb-4">From R840/night</p>
                 <p className="text-sm text-gray-600 mb-4">Ideal for families visiting patients</p>
                 <Button asChild className="w-full bg-sage-600 hover:bg-sage-700">
                   <Link href="/rooms">View All Rooms</Link>
