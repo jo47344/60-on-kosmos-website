@@ -14,9 +14,79 @@ export const metadata: Metadata = {
   },
 }
 
+function FAQSchema() {
+  const faqItems = [
+    {
+      question: "Can I book for just one week during exam period?",
+      answer:
+        "Yes! We offer flexible booking periods. You can book for as little as 1 night or for several weeks/months. Exam week bookings are popular, so we recommend booking in advance.",
+    },
+    {
+      question: "How far in advance should I book?",
+      answer:
+        "We recommend booking at least 1-2 weeks in advance, especially for busy periods like exam weeks, orientation weekends, and graduation ceremonies.",
+    },
+    {
+      question: "What's the check-in/check-out time?",
+      answer: "Standard check-in is from 14:00 and check-out is by 10:00. Contact us via WhatsApp to arrange flexible times.",
+    },
+    {
+      question: "Do you offer student discounts?",
+      answer:
+        "We offer discounted rates for monthly bookings. For semester-long stays, WhatsApp us for a custom quote.",
+    },
+    {
+      question: "Is there WiFi for online assignments?",
+      answer:
+        "Yes! All rooms include free high-speed WiFi perfect for streaming lectures, doing research, and submitting assignments.",
+    },
+    {
+      question: "Do rooms have their own bathroom?",
+      answer:
+        "Yes! All our rooms have private ensuite bathrooms. No sharing with other students - you have complete privacy.",
+    },
+    {
+      question: "How do I get to CPUT/UWC campus?",
+      answer:
+        "We're just 4.5km from CPUT and 5.5km from UWC - about 8-10 minutes by car. Options include Uber, own vehicle with free secure parking, or Golden Arrow buses.",
+    },
+    {
+      question: "Is it safe for students?",
+      answer:
+        "Yes! We have 24/7 CCTV surveillance, secure entrance, enclosed parking, and are in a safe residential neighborhood.",
+    },
+    {
+      question: "Are utilities included in the price?",
+      answer:
+        "Yes! WiFi, water, and electricity are all included in your room rate. There are no hidden costs or extra bills.",
+    },
+  ]
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqItems.map((item) => ({
+            "@type": "Question",
+            name: item.question,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: item.answer,
+            },
+          })),
+        }),
+      }}
+    />
+  )
+}
+
 export default function StudentFAQPage() {
   return (
     <div className="min-h-screen">
+      <FAQSchema />
       {/* Breadcrumbs */}
       <div className="bg-gray-50 border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">

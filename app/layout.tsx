@@ -38,12 +38,17 @@ export const robots = {
     "max-image-preview": "large",
     "max-video-preview": -1,
   },
+  // Allow AI crawlers
+  "CCBot": "allow",
+  "anthropic-ai": "allow",
+  "GPTBot": "allow",
+  "PerplexityBot": "allow",
 }
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://60onkosmos.co.za"),
   title: {
-    default: "60 on Kosmos - Affordable Guesthouse Accommodation in Bellville South, Cape Town",
+    default: "60 on Kosmos - Affordable Contractor & Student Accommodation in Bellville South, Cape Town",
     template: "%s | 60 on Kosmos Bellville South",
   },
   description:
