@@ -99,28 +99,27 @@ Production-ready Next.js 14 website for 60 on Kosmos guesthouse in Bellville Sou
 
 **Standard Twin Room (Budget)**
 - 2 single beds
-- Shared bathroom
-- NO bar fridge
-- From R530/night
-
-**Double Room (Most Popular)**
-- 1 double bed
-- En-suite bathroom
-- Bar fridge
-- Microwave
-- From R650/night
+- Private ensuite bathroom
+- Kitchen access
+- From R580/night (R464 monthly)
 
 **Deluxe Twin Room (Premium)**
 - 2 single beds
-- En-suite bathroom
+- Private ensuite bathroom
 - Bar fridge
-- From R700/night
+- From R650/night (R520 monthly)
+
+**Double Room (Most Popular)**
+- 1 double bed
+- Private ensuite bathroom
+- Bar fridge
+- From R680/night (R544 monthly)
 
 **Triple Room (Family/Groups)**
 - 3 single beds
-- En-suite bathroom
+- Private ensuite bathroom
 - Bar fridge
-- From R850/night
+- From R840/night (R672 monthly, R224/person)
 
 ## Technical Stack
 
@@ -187,9 +186,9 @@ Events sent to Google Analytics 4 for conversion optimization.
 ## Pricing Strategy
 
 **Public Pricing:**
-- Shows "From R530" for transparency
+- Shows "From R580" for Standard Twin, R650 Deluxe Twin, R680 Double, R840 Triple for transparency
 - Clear amenity differences between room types
-- Weekly and monthly discounts mentioned (no percentages)
+- Weekly and monthly discounts highlighted (20% discount on monthly stays)
 
 **Contractor Pricing:**
 - Private quote system (not public)
@@ -272,7 +271,7 @@ npm run dev
 
 ## Key Features for Contractors
 
-1. **Clear Pricing:** No hidden costs, transparent "From R530" pricing
+1. **Clear Pricing:** No hidden costs, transparent pricing from R580/night (R464 monthly)
 2. **Private Quotes:** Dedicated form for bulk/long-term pricing
 3. **Location Benefits:** Near major construction areas in Bellville
 4. **Monthly Rates:** Significant discounts for 30+ day stays
