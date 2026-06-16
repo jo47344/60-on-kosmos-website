@@ -20,6 +20,37 @@ const nextConfig = {
   experimental: {
     optimizeCss: true,
   },
+  async redirects() {
+    return [
+      // Redirect deleted location pages to main contractor page
+      { source: '/contractor-accommodation-bellville', destination: '/contractor-accommodation', permanent: true },
+      { source: '/contractor-accommodation-bellville-south', destination: '/contractor-accommodation', permanent: true },
+      { source: '/contractor-accommodation-goodwood', destination: '/contractor-accommodation', permanent: true },
+      { source: '/contractor-accommodation-kuilsriver', destination: '/contractor-accommodation', permanent: true },
+      { source: '/contractor-accommodation-northern-suburbs', destination: '/contractor-accommodation', permanent: true },
+      { source: '/contractor-accommodation-parow', destination: '/contractor-accommodation', permanent: true },
+      { source: '/contractor-accommodation-stikland', destination: '/contractor-accommodation', permanent: true },
+      // Redirect accommodation variants
+      { source: '/accommodation-near-bellville-station', destination: '/rooms', permanent: true },
+      { source: '/accommodation-near-tygerberg-hospital', destination: '/rooms', permanent: true },
+      { source: '/bellville-south-guesthouse', destination: '/rooms', permanent: true },
+      { source: '/cheap-accommodation-bellville-south', destination: '/special-offers', permanent: true },
+      { source: '/monthly-accommodation-bellville', destination: '/monthly-accommodation', permanent: true },
+      { source: '/monthly-accommodation-bellville-south', destination: '/monthly-accommodation', permanent: true },
+      { source: '/self-catering-accommodation-bellville', destination: '/self-catering-rooms', permanent: true },
+      { source: '/serviced-accommodation-bellville', destination: '/rooms', permanent: true },
+      { source: '/n1-city-accommodation', destination: '/contractor-accommodation', permanent: true },
+      { source: '/backpackers-bellville-south', destination: '/rooms', permanent: true },
+      { source: '/airport-accommodation', destination: '/rooms', permanent: true },
+      { source: '/cput-accommodation', destination: '/rooms', permanent: true },
+      { source: '/extended-stay-hotel-bellville', destination: '/monthly-accommodation', permanent: true },
+      { source: '/near-cput-bellville', destination: '/rooms', permanent: true },
+      { source: '/near-uwc-bellville', destination: '/rooms', permanent: true },
+      { source: '/tygerberg-hospital-accommodation', destination: '/rooms', permanent: true },
+      { source: '/uwc-student-accommodation', destination: '/rooms', permanent: true },
+      { source: '/weekly-accommodation', destination: '/monthly-accommodation', permanent: true },
+    ]
+  },
   async headers() {
     return [
       {

@@ -5,11 +5,40 @@ Allow: /
 # Sitemap location for search engines
 Sitemap: https://60onkosmos.co.za/sitemap.xml
 
+# Allow AI crawlers explicitly
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OpenAI-SearchBot
+Allow: /
+
+User-agent: Perplexity
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
 # Specific rules for faster crawling
-Crawl-delay: 1
-Request-rate: 30/1m
+Crawl-delay: 0
+Request-rate: 60/1m
 
 # Allow Google specific features
 User-agent: Googlebot
 Allow: /
 Crawl-delay: 0
+Request-rate: 120/1m
