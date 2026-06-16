@@ -1,0 +1,15 @@
+# Allow all robots to crawl and index the site
+User-agent: *
+Allow: /
+
+# Sitemap location for search engines
+Sitemap: https://60onkosmos.co.za/sitemap.xml
+
+# Specific rules for faster crawling
+Crawl-delay: 1
+Request-rate: 30/1m
+
+# Allow Google specific features
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
