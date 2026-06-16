@@ -28,6 +28,18 @@ export const viewport = {
   themeColor: "#7c9885",
 }
 
+export const robots = {
+  index: true,
+  follow: true,
+  googleBot: {
+    index: true,
+    follow: true,
+    "max-snippet": -1,
+    "max-image-preview": "large",
+    "max-video-preview": -1,
+  },
+}
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://60onkosmos.co.za"),
   title: {
