@@ -5,9 +5,9 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 
 export const metadata: Metadata = {
-  title: "Monthly Accommodation Bellville | Long-Term Guesthouse Rentals Cape Town",
+  title: "Monthly Accommodation for Teams & Professionals | Bellville | From R464/Night",
   description:
-    "Affordable monthly accommodation in Bellville South. Self-catering rooms with discounted long-term rates. Perfect for contractors, students, and professionals. Book direct and save.",
+    "Flexible monthly accommodation in Bellville South for project teams, contractors, students, and professionals. Corporate rates, group discounts, invoice billing. Private ensuite rooms from R464/night.",
   alternates: {
     canonical: "https://60onkosmos.co.za/monthly-accommodation",
   },
@@ -24,10 +24,9 @@ export default function MonthlyAccommodationPage() {
               <Calendar className="w-4 h-4" />
               <span>Long-Term Accommodation Specialist</span>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Monthly Accommodation in Bellville</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Monthly Rates for Project Teams & Professionals</h1>
             <p className="text-xl text-gray-600 mb-8">
-              Affordable long-term accommodation with discounted monthly rates. Perfect for contractors, students,
-              professionals, and extended stays.
+              Flexible monthly accommodation in Bellville South. Corporate billing, group discounts, and team coordination available. From R464/night on long-term contracts.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-sage-600 hover:bg-sage-700">

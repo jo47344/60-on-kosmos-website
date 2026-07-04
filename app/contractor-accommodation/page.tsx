@@ -26,9 +26,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { FAQSchema } from "@/components/faq-schema"
 
 export const metadata: Metadata = {
-  title: "Contractor Accommodation Bellville South | Monthly from R464/Night | Private Ensuite Rooms",
+  title: "Accommodation for Project Teams & Contractors | Bellville South | From R580/Night",
   description:
-    "Affordable contractor accommodation in Bellville South with private ensuite rooms. Monthly rates from R464/night. Self-catering, secure parking for bakkies, WiFi, weekly cleaning. Near factories, TAC Business Park, Sacks Circle. Perfect for contractor crews, project teams & working professionals.",
+    "Flexible accommodation for project teams, contractors, and working professionals in Bellville South. Daily (R580), weekly (R522), and monthly (R464) rates. Private ensuite rooms, secure parking, WiFi, group discounts. Corporate billing available.",
   alternates: {
     canonical: "https://60onkosmos.co.za/contractor-accommodation",
   },

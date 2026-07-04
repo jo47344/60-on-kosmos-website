@@ -3,8 +3,6 @@ import { Facebook, Instagram, Mail, Phone, MapPin } from "lucide-react"
 import { Logo } from "./logo"
 
 export function Footer() {
-  const currentYear = new Date().getFullYear()
-
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -44,100 +42,116 @@ export function Footer() {
               </div>
             </div>
 
-            {/* Social Media */}
-            <div className="flex space-x-4 mt-6">
-              <a
-                href="https://www.facebook.com/60onKosmos"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
-                aria-label="Visit our Facebook page"
-              >
-                <Facebook className="w-6 h-6" />
-              </a>
-              <a
-                href="https://www.instagram.com/60onkosmos"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
-                aria-label="Visit our Instagram page"
-              >
-                <Instagram className="w-6 h-6" />
-              </a>
+            {/* Social Media & Booking Platforms */}
+            <div className="mt-6">
+              <p className="text-sm font-semibold text-white mb-2">Find us online:</p>
+              <div className="flex space-x-4 mb-4">
+                <a
+                  href="https://www.facebook.com/60onKosmos"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors"
+                  aria-label="Visit our Facebook page"
+                >
+                  <Facebook className="w-6 h-6" />
+                </a>
+                <a
+                  href="https://www.instagram.com/60onkosmos"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors"
+                  aria-label="Visit our Instagram page"
+                >
+                  <Instagram className="w-6 h-6" />
+                </a>
+              </div>
+              <div className="space-y-2 text-sm">
+                <a
+                  href="https://www.booking.com/hotel/za/60-on-kosmos-bellville-south.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sage-300 hover:text-sage-100 transition-colors block"
+                >
+                  View on Booking.com
+                </a>
+                <a
+                  href="https://maps.app.goo.gl/Gma3bd2Fv11w1PsBZ"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sage-300 hover:text-sage-100 transition-colors block"
+                >
+                  View on Google Maps
+                </a>
+              </div>
             </div>
           </div>
 
           <div>
-            <h3 className="text-xl font-bold mb-4">Contractors</h3>
+            <h3 className="text-xl font-bold mb-4">Accommodation</h3>
             <ul className="space-y-2 text-gray-300">
               <li>
                 <Link
                   href="/contractor-accommodation"
                   className="hover:text-white transition-colors font-semibold text-sage-400"
                 >
-                  Contractor Accommodation
+                  For Contractors & Teams
                 </Link>
               </li>
               <li>
-                <Link href="/contractor-accommodation-parow" className="hover:text-white transition-colors">
-                  Parow Contractors
-                </Link>
-              </li>
-              <li>
-                <Link href="/contractor-accommodation-stikland" className="hover:text-white transition-colors">
-                  Stikland Contractors
-                </Link>
-              </li>
-              <li>
-                <Link href="/contractor-accommodation-goodwood" className="hover:text-white transition-colors">
-                  Goodwood Contractors
-                </Link>
-              </li>
-              <li>
-                <Link href="/contractor-accommodation-northern-suburbs" className="hover:text-white transition-colors">
-                  Northern Suburbs
+                <Link href="/rooms" className="hover:text-white transition-colors">
+                  Room Types
                 </Link>
               </li>
               <li>
                 <Link href="/monthly-accommodation" className="hover:text-white transition-colors">
-                  Monthly Accommodation
+                  Monthly Rates
                 </Link>
               </li>
               <li>
-                <Link href="/n1-city-accommodation" className="hover:text-white transition-colors">
-                  N1 City Accommodation
+                <Link href="/special-offers" className="hover:text-white transition-colors">
+                  Special Offers
+                </Link>
+              </li>
+              <li>
+                <Link href="/book-now" className="hover:text-white transition-colors">
+                  Book Now
+                </Link>
+              </li>
+              <li>
+                <Link href="/amenities" className="hover:text-white transition-colors">
+                  Amenities
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Column 3: Location Pages */}
+          {/* Column 3: Information */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Nearby Areas</h3>
+            <h3 className="text-xl font-bold mb-4">Information</h3>
             <ul className="space-y-2 text-gray-300">
               <li>
-                <Link href="/tygerberg-hospital-accommodation" className="hover:text-white transition-colors">
-                  Tygerberg Hospital
+                <Link href="/amenities" className="hover:text-white transition-colors">
+                  Amenities & Facilities
                 </Link>
               </li>
               <li>
-                <Link href="/airport-accommodation" className="hover:text-white transition-colors">
-                  Airport Accommodation
+                <Link href="/local-info" className="hover:text-white transition-colors">
+                  Local Information
                 </Link>
               </li>
               <li>
-                <Link href="/contractor-accommodation-kuilsriver" className="hover:text-white transition-colors">
-                  Kuilsriver Contractors
+                <Link href="/student-faq" className="hover:text-white transition-colors">
+                  Student FAQ
                 </Link>
               </li>
               <li>
-                <Link href="/contractor-accommodation-bellville" className="hover:text-white transition-colors">
-                  Bellville Contractors
+                <Link href="/testimonials" className="hover:text-white transition-colors">
+                  Testimonials
                 </Link>
               </li>
               <li>
-                <Link href="/rooms" className="hover:text-white transition-colors">
-                  All Rooms
+                <Link href="/contact" className="hover:text-white transition-colors">
+                  Contact Us
                 </Link>
               </li>
             </ul>
@@ -184,7 +198,7 @@ export function Footer() {
 
         {/* Copyright */}
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 text-sm">
-          <p>&copy; {currentYear} 60 on Kosmos Guesthouse. All rights reserved.</p>
+          <p>&copy; 2026 60 on Kosmos Guesthouse. All rights reserved.</p>
           <p className="mt-2">
             Contractor accommodation in Bellville, Parow, Goodwood, Stikland & Northern Suburbs | Near N1, Sacks Circle
             & Mill Park
