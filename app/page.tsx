@@ -22,15 +22,15 @@ import { LatestBlogPosts } from "@/components/latest-blog-posts"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "60 on Kosmos Guesthouse Bellville | Contractor Accommodation from R464/night",
+  title: "60 on Kosmos | Accommodation for Project Teams & Working Professionals in Bellville",
   description:
-    "Contractor accommodation in Bellville South with private ensuite rooms. Monthly rates from R464/night. Self-catering, secure parking, WiFi, weekly cleaning. Perfect for contractors, project teams, and working professionals.",
+    "Flexible accommodation for project-based teams, contractors, and working professionals in Bellville South, Cape Town. Private ensuite rooms from R580/night. Daily, weekly, and monthly rates with free WiFi, secure parking, and flexible check-in.",
   alternates: {
     canonical: "https://60onkosmos.co.za",
   },
   openGraph: {
-    title: "60 on Kosmos | Bellville South Contractor Accommodation with Private Ensuite Rooms",
-    description: "Contractor accommodation with private ensuite rooms. Monthly rates from R464/night. Secure parking, WiFi, weekly cleaning.",
+    title: "60 on Kosmos - Accommodation for Project Teams & Working Professionals",
+    description: "Flexible accommodation for project teams, contractors, and professionals. Private rooms with WiFi, parking, and flexible terms.",
     url: "https://60onkosmos.co.za",
     type: "website",
   },
@@ -82,14 +82,14 @@ export default function HomePage() {
           />
           <div className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-2 sm:mb-4 leading-tight">
-              Bellville South Contractor Accommodation
+              Quality Accommodation for Project Teams
               <br />
-              <span className="text-sage-300">with Private Ensuite Rooms</span>
+              <span className="text-sage-300">Flexible Terms, Trusted by Professionals</span>
             </h1>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-4 sm:mb-6 md:mb-8 px-2">
-              Affordable self-catering accommodation for contractors, project teams, and working professionals.
+              Whether you need accommodation for a day, week, or month—we've got flexible options for contractors, construction crews, project teams, and working professionals.
               <br className="hidden md:block" />
-              Secure parking, free WiFi, weekly cleaning, and monthly rates available.
+              Private ensuite rooms, free WiFi, secure parking, and hassle-free check-in.
             </p>
             <div className="flex flex-col gap-2 sm:gap-3 md:flex-row md:gap-4 justify-center items-center px-4 sm:px-0">
               <Button
@@ -97,7 +97,7 @@ export default function HomePage() {
                 size="lg"
                 className="bg-sage-600 hover:bg-sage-700 text-white w-full sm:w-auto px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 text-sm sm:text-base md:text-lg"
               >
-                <a href="/rooms">View Rooms & Rates</a>
+                <a href="/book-now">Book Your Stay</a>
               </Button>
               <Button
                 asChild
@@ -129,17 +129,17 @@ export default function HomePage() {
             <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
               <div className="flex items-center gap-4">
                 <div className="bg-sage-600 p-3 rounded-full">
-                  <Briefcase className="w-8 h-8" />
+                  <Users className="w-8 h-8" />
                 </div>
                 <div>
-                  <h2 className="text-xl sm:text-2xl font-bold">Contractor Accommodation</h2>
-                  <p className="text-gray-300">Monthly rates from R464/night | All rooms have private ensuite bathrooms</p>
+                  <h2 className="text-xl sm:text-2xl font-bold">Perfect for Project Teams</h2>
+                  <p className="text-gray-300">Flexible terms, group discounts, and corporate billing available | Monthly rates from R464/night</p>
                 </div>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
                 <Button asChild size="lg" className="bg-sage-600 hover:bg-sage-700 text-white px-8">
                   <Link href="/contractor-accommodation">
-                    View Contractor Rates
+                    For Teams & Contractors
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
@@ -149,8 +149,8 @@ export default function HomePage() {
                   variant="outline"
                   className="border-white text-white hover:bg-white/10 bg-transparent"
                 >
-                  <a href="https://wa.me/27745245703?text=Hi%2C%20I%27m%20interested%20in%20monthly%20contractor%20rates">
-                    WhatsApp for Monthly Rates
+                  <a href="https://wa.me/27745245703?text=Hi%2C%20I%27m%20looking%20for%20accommodation%20for%20my%20team">
+                    WhatsApp Your Team
                   </a>
                 </Button>
               </div>
@@ -253,6 +253,9 @@ export default function HomePage() {
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
                 Who Stays With Us?
               </h2>
+              <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
+                From construction crews to international students—we welcome project-based teams and working professionals.
+              </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
@@ -262,12 +265,12 @@ export default function HomePage() {
                     MOST POPULAR
                   </div>
                   <Briefcase className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 text-sage-600" />
-                  <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Contractors & Workers</h3>
+                  <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Project Teams & Contractors</h3>
                   <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4">
-                    Purpose-built for construction crews. Secure parking, self-catering, weekly cleaning.
+                    Daily, weekly, and monthly rates. Group discounts, corporate billing, and flexible check-in.
                   </p>
                   <Button asChild className="bg-sage-600 hover:bg-sage-700 w-full">
-                    <Link href="/contractor-accommodation">Contractor Rates</Link>
+                    <Link href="/contractor-accommodation">Team Rates</Link>
                   </Button>
                 </CardContent>
               </Card>
@@ -275,12 +278,12 @@ export default function HomePage() {
               <Card className="text-center hover:shadow-lg transition-shadow">
                 <CardContent className="pt-6 sm:pt-8 pb-6 sm:pb-8 px-4">
                   <GraduationCap className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 text-sage-600" />
-                  <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Students</h3>
+                  <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">International Students</h3>
                   <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4">
-                    5km from UWC, 4.5km from CPUT. Perfect for visiting parents and short-term stays.
+                    5km from UWC, 4.5km from CPUT. Visa support, payment plans, and flexible arrival times.
                   </p>
                   <Button asChild variant="outline" className="border-sage-600 text-sage-600 bg-transparent w-full">
-                    <Link href="/near-uwc-bellville">Student Options</Link>
+                    <Link href="/rooms">Student Options</Link>
                   </Button>
                 </CardContent>
               </Card>
@@ -288,12 +291,12 @@ export default function HomePage() {
               <Card className="text-center hover:shadow-lg transition-shadow">
                 <CardContent className="pt-6 sm:pt-8 pb-6 sm:pb-8 px-4">
                   <Users className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 text-sage-600" />
-                  <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Medical Professionals</h3>
+                  <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Medical & Wellness Professionals</h3>
                   <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4">
-                    8km from Tygerberg Hospital. Ideal for locums, nursing students, and visitors.
+                    8km from Tygerberg Hospital. Ideal for locums, training, and healthcare professionals.
                   </p>
                   <Button asChild variant="outline" className="border-sage-600 text-sage-600 bg-transparent w-full">
-                    <Link href="/accommodation-near-tygerberg-hospital">Hospital Accommodation</Link>
+                    <Link href="/rooms">Healthcare Housing</Link>
                   </Button>
                 </CardContent>
               </Card>
@@ -361,9 +364,9 @@ export default function HomePage() {
         {/* CTA Section */}
         <section className="py-12 sm:py-16 bg-sage-600 text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">Ready to Book?</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">Ready for Your Next Accommodation?</h2>
             <p className="text-base sm:text-lg mb-6 sm:mb-8 opacity-90">
-              Monthly rates from R464/night | Special crew pricing for 2+ rooms
+              Daily rates from R580/night | Monthly rates from R464/night | Group discounts available
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <Button
@@ -371,7 +374,7 @@ export default function HomePage() {
                 size="lg"
                 className="bg-white text-sage-600 hover:bg-gray-100 w-full sm:w-auto px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg"
               >
-                <Link href="/rooms">View Rooms & Rates</Link>
+                <Link href="/book-now">Book Now</Link>
               </Button>
               <Button
                 asChild
@@ -379,7 +382,7 @@ export default function HomePage() {
                 variant="outline"
                 className="border-white text-white hover:bg-sage-700 w-full sm:w-auto px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg bg-transparent"
               >
-                <a href="https://wa.me/27745245703?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20your%20monthly%20rates">WhatsApp for Monthly Rates</a>
+                <a href="https://wa.me/27745245703?text=Hi%2C%20I%27m%20looking%20for%20accommodation%20for%20myself%20or%20my%20team">Get in Touch</a>
               </Button>
             </div>
           </div>
