@@ -3,8 +3,6 @@ import { Facebook, Instagram, Mail, Phone, MapPin } from "lucide-react"
 import { Logo } from "./logo"
 
 export function Footer() {
-  const currentYear = new Date().getFullYear()
-
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -200,7 +198,7 @@ export function Footer() {
 
         {/* Copyright */}
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 text-sm">
-          <p>&copy; {currentYear} 60 on Kosmos Guesthouse. All rights reserved.</p>
+          <p>&copy; 2026 60 on Kosmos Guesthouse. All rights reserved.</p>
           <p className="mt-2">
             Contractor accommodation in Bellville, Parow, Goodwood, Stikland & Northern Suburbs | Near N1, Sacks Circle
             & Mill Park
