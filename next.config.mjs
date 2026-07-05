@@ -22,14 +22,6 @@ const nextConfig = {
   },
   async redirects() {
     return [
-      // Redirect deleted location pages to main contractor page
-      { source: '/contractor-accommodation-bellville', destination: '/contractor-accommodation', permanent: true },
-      { source: '/contractor-accommodation-bellville-south', destination: '/contractor-accommodation', permanent: true },
-      { source: '/contractor-accommodation-goodwood', destination: '/contractor-accommodation', permanent: true },
-      { source: '/contractor-accommodation-kuilsriver', destination: '/contractor-accommodation', permanent: true },
-      { source: '/contractor-accommodation-northern-suburbs', destination: '/contractor-accommodation', permanent: true },
-      { source: '/contractor-accommodation-parow', destination: '/contractor-accommodation', permanent: true },
-      { source: '/contractor-accommodation-stikland', destination: '/contractor-accommodation', permanent: true },
       // Redirect accommodation variants
       { source: '/accommodation-near-bellville-station', destination: '/rooms', permanent: true },
       { source: '/accommodation-near-tygerberg-hospital', destination: '/rooms', permanent: true },

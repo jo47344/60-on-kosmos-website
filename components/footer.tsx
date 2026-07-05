@@ -94,32 +94,37 @@ export function Footer() {
                   href="/contractor-accommodation"
                   className="hover:text-white transition-colors font-semibold text-sage-400"
                 >
-                  For Contractors & Teams
+                  For Project Teams
                 </Link>
               </li>
               <li>
-                <Link href="/rooms" className="hover:text-white transition-colors">
-                  Room Types
+                <Link href="/contractor-accommodation-parow" className="hover:text-white transition-colors text-sm">
+                  Near Parow
                 </Link>
               </li>
               <li>
-                <Link href="/monthly-accommodation" className="hover:text-white transition-colors">
-                  Monthly Rates
+                <Link href="/contractor-accommodation-stikland" className="hover:text-white transition-colors text-sm">
+                  Near Stikland
                 </Link>
               </li>
               <li>
-                <Link href="/special-offers" className="hover:text-white transition-colors">
-                  Special Offers
+                <Link href="/contractor-accommodation-goodwood" className="hover:text-white transition-colors text-sm">
+                  Near Goodwood
                 </Link>
               </li>
               <li>
-                <Link href="/book-now" className="hover:text-white transition-colors">
-                  Book Now
+                <Link href="/contractor-accommodation-kuils-river" className="hover:text-white transition-colors text-sm">
+                  Near Kuils River
                 </Link>
               </li>
               <li>
-                <Link href="/amenities" className="hover:text-white transition-colors">
-                  Amenities
+                <Link href="/contractor-accommodation-bellville" className="hover:text-white transition-colors text-sm">
+                  In Bellville
+                </Link>
+              </li>
+              <li>
+                <Link href="/contractor-accommodation-northern-suburbs" className="hover:text-white transition-colors text-sm">
+                  Northern Suburbs
                 </Link>
               </li>
             </ul>

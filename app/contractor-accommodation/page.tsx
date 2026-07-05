@@ -26,9 +26,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { FAQSchema } from "@/components/faq-schema"
 
 export const metadata: Metadata = {
-  title: "Accommodation for Project Teams & Contractors | Bellville South | From R580/Night",
+  title: "Accommodation for Project Teams & Professionals | Bellville South | From R580/Night",
   description:
-    "Flexible accommodation for project teams, contractors, and working professionals in Bellville South. Daily (R580), weekly (R522), and monthly (R464) rates. Private ensuite rooms, secure parking, WiFi, group discounts. Corporate billing available.",
+    "Flexible accommodation for project teams, working professionals, and contractors in Bellville South. Daily (R580), weekly (R522), and monthly rates. Private ensuite rooms, secure parking, WiFi, corporate invoicing. Corporate billing available.",
   alternates: {
     canonical: "https://60onkosmos.co.za/contractor-accommodation",
   },
@@ -284,10 +284,10 @@ export default function ContractorAccommodationPage() {
           <div className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 bg-sage-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Briefcase className="w-4 h-4" />
-              <span>For Contractors & Project Teams</span>
+              <span>For Project Teams & Professionals</span>
             </div>
             <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 text-balance">
-              Accommodation for Contractors & Project Teams in Bellville South
+              Accommodation for Project Teams & Professionals in Bellville South
             </h1>
             <p className="text-xl text-gray-300 mb-4">
               Book by the week or month — no lease, no hassle.
@@ -295,7 +295,7 @@ export default function ContractorAccommodationPage() {
             <p className="text-lg text-gray-400 mb-8">
               Private ensuite rooms, secure parking, self-catering kitchen, and fast N1 access.
               <br className="hidden md:block" />
-              Perfect for contractors, site crews, and project professionals.
+              Perfect for project teams, site crews, and working professionals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-sage-600 hover:bg-sage-700 text-white px-8 py-6 text-lg">
