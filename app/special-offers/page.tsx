@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     "Book direct and save at 60 on Kosmos Bellville South. Special rates for contractors, medical professionals. Monthly rates from R12,720. Free WiFi & parking.",
   keywords:
     "special offers Bellville South, contractor rates Cape Town, monthly accommodation deals, guesthouse packages Bellville, book direct save",
-  alternates: { canonical: "https://60onkosmos.co.za/special-offers" },
+  alternates: { canonical: "https://www.60onkosmos.co.za/special-offers" },
 }
 
 export default function SpecialOffersPage() {

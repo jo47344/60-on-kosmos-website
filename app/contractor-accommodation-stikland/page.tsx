@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   description:
     "Stikland Industrial is minutes away. 60 on Kosmos offers private ensuite rooms, secure parking, and one invoice for project teams working in Stikland.",
   alternates: {
-    canonical: "https://60onkosmos.co.za/contractor-accommodation-stikland",
+    canonical: "https://www.60onkosmos.co.za/contractor-accommodation-stikland",
   },
   openGraph: {
     title: "Project Team Accommodation Near Stikland | 60 on Kosmos",

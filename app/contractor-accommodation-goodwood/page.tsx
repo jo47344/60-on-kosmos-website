@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   description:
     "Goodwood and surrounding areas are minutes away. 60 on Kosmos offers private ensuite rooms, secure parking, and flexible corporate terms for project teams.",
   alternates: {
-    canonical: "https://60onkosmos.co.za/contractor-accommodation-goodwood",
+    canonical: "https://www.60onkosmos.co.za/contractor-accommodation-goodwood",
   },
   openGraph: {
     title: "Project Team Accommodation Near Goodwood | 60 on Kosmos",

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   description:
     "Accommodation for project teams working in Parow. Based in Bellville South, 60 on Kosmos offers secure private ensuite rooms, parking, and corporate terms for site crews.",
   alternates: {
-    canonical: "https://60onkosmos.co.za/contractor-accommodation-parow",
+    canonical: "https://www.60onkosmos.co.za/contractor-accommodation-parow",
   },
   openGraph: {
     title: "Project Team Accommodation Near Parow | 60 on Kosmos",

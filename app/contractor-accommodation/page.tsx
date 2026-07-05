@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   description:
     "Flexible accommodation for project teams, working professionals, and contractors in Bellville South. Daily (R580), weekly (R522), and monthly rates. Private ensuite rooms, secure parking, WiFi, corporate invoicing. Corporate billing available.",
   alternates: {
-    canonical: "https://60onkosmos.co.za/contractor-accommodation",
+    canonical: "https://www.60onkosmos.co.za/contractor-accommodation",
   },
   keywords: [
     "contractor accommodation bellville south",
@@ -748,14 +748,40 @@ export default function ContractorAccommodationPage() {
         </div>
       </section>
 
-      {/* Contractor Testimonials */}
+      {/* Real Guest Reviews */}
       <section className="py-16 bg-sage-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">What Our Long-Stay Guests Say</h2>
-            <p className="text-gray-600">Real feedback from contractors, interns, and professionals</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Verified Guest Reviews</h2>
+            <p className="text-gray-600 mb-6">Real feedback from guests on trusted platforms</p>
+            
+            {/* Trust Badges */}
+            <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto mb-8">
+              <Card className="p-6 border-sage-200">
+                <div className="flex items-center justify-center mb-3 gap-1">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-500 fill-current" />
+                  ))}
+                </div>
+                <p className="text-lg font-bold text-gray-900">8.0/10 - Very Good</p>
+                <p className="text-sm text-gray-600 mt-1">46 reviews on Booking.com</p>
+                <p className="text-xs text-sage-600 mt-2 font-semibold">Staff score: 9.2</p>
+              </Card>
+              <Card className="p-6 border-sage-200">
+                <div className="flex items-center justify-center mb-3 gap-1">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-500 fill-current" />
+                  ))}
+                </div>
+                <p className="text-lg font-bold text-gray-900">4.65 Rating</p>
+                <p className="text-sm text-gray-600 mt-1">Superhost on Airbnb</p>
+                <p className="text-xs text-sage-600 mt-2 font-semibold">Highly rated host</p>
+              </Card>
+            </div>
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
+
+          {/* Real Testimonials */}
+          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <Card className="p-6">
               <div className="flex mb-3">
                 {[...Array(5)].map((_, i) => (
@@ -763,12 +789,12 @@ export default function ContractorAccommodationPage() {
                 ))}
               </div>
               <Quote className="w-8 h-8 text-sage-200 mb-2" />
-              <p className="text-gray-700 mb-4">
-                &quot;Been staying here for 3 months while working at Sacks Circle. Clean rooms, secure parking for my bakkie, and the owner is very accommodating. Best contractor accommodation I&apos;ve found in the area.&quot;
+              <p className="text-gray-700 mb-4 text-sm">
+                &quot;They are very welcoming and caring. Comfortable place and nice environment, it was very clean.&quot;
               </p>
               <div className="border-t pt-4">
-                <p className="font-semibold">William M.</p>
-                <p className="text-sm text-gray-500">Plumbing Contractor, 3 months</p>
+                <p className="font-semibold text-sm">Hlumisa</p>
+                <p className="text-xs text-gray-500">Booking.com - South Africa</p>
               </div>
             </Card>
             <Card className="p-6">
@@ -778,12 +804,12 @@ export default function ContractorAccommodationPage() {
                 ))}
               </div>
               <Quote className="w-8 h-8 text-sage-200 mb-2" />
-              <p className="text-gray-700 mb-4">
-                &quot;I stayed here for my F&apos;SATI internship at CPUT. The location was perfect for getting to campus, the room was comfortable, and the owner made me feel welcome in South Africa. Great value for a 3-month stay.&quot;
+              <p className="text-gray-700 mb-4 text-sm">
+                &quot;The welcoming note made me feel welcomed, the room was clean and Steve was super friendly.&quot;
               </p>
               <div className="border-t pt-4">
-                <p className="font-semibold">Antoine D.</p>
-                <p className="text-sm text-gray-500">F&apos;SATI Intern from France, 3 months</p>
+                <p className="font-semibold text-sm">Taukobong</p>
+                <p className="text-xs text-gray-500">Booking.com - South Africa</p>
               </div>
             </Card>
             <Card className="p-6">
@@ -793,18 +819,21 @@ export default function ContractorAccommodationPage() {
                 ))}
               </div>
               <Quote className="w-8 h-8 text-sage-200 mb-2" />
-              <p className="text-gray-700 mb-4">
-                &quot;Came from Joburg for a 4-month practical at Tygerberg Hospital. Finding affordable accommodation was stressful until I found this place. Clean, safe, and much cheaper than hotels. The self-catering kitchen saved me money.&quot;
+              <p className="text-gray-700 mb-4 text-sm">
+                &quot;Enjoyed my stay at 60 on Kosmos. Very convenient, safe, and friendly staff. The rooms are very neat and clean.&quot;
               </p>
               <div className="border-t pt-4">
-                <p className="font-semibold">Thabo M.</p>
-                <p className="text-sm text-gray-500">Medical Intern from Gauteng, 4 months</p>
+                <p className="font-semibold text-sm">Dineo Setati</p>
+                <p className="text-xs text-gray-500">Google - 5 stars</p>
               </div>
             </Card>
           </div>
-          <div className="text-center mt-8">
-            <Button asChild variant="outline" className="border-sage-600 text-sage-600 bg-transparent">
-              <Link href="/testimonials">Read More Reviews</Link>
+
+          <div className="text-center mt-10">
+            <Button asChild className="bg-sage-600 hover:bg-sage-700">
+              <a href="https://www.booking.com/hotel/za/60-on-kosmos.html" target="_blank" rel="noopener noreferrer">
+                See All Reviews on Booking.com
+              </a>
             </Button>
           </div>
         </div>

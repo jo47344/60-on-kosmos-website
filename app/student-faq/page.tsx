@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "FAQ for parents, visiting professors and short-term visitors near UWC and CPUT. Block week, graduation accommodation, and campus visitor info. No long-term student housing.",
   alternates: {
-    canonical: "https://60onkosmos.co.za/student-faq",
+    canonical: "https://www.60onkosmos.co.za/student-faq",
   },
 }
 

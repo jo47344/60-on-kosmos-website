@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     "Affordable self-catering rooms in Bellville South. Fully equipped kitchens, free WiFi, secure parking. Perfect for budget travelers, students, and long-term stays. Book direct.",
   alternates: {
-    canonical: "https://60onkosmos.co.za/self-catering-rooms",
+    canonical: "https://www.60onkosmos.co.za/self-catering-rooms",
   },
 }
 

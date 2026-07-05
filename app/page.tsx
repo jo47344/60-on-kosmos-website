@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   description:
     "Flexible accommodation for project-based teams, contractors, and working professionals in Bellville South, Cape Town. Private ensuite rooms from R580/night. Daily, weekly, and monthly rates with free WiFi, secure parking, and flexible check-in.",
   alternates: {
-    canonical: "https://60onkosmos.co.za",
+    canonical: "https://www.60onkosmos.co.za/",
   },
   openGraph: {
     title: "60 on Kosmos - Accommodation for Project Teams & Working Professionals",

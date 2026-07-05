@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   description:
     "Located in Bellville South, 60 on Kosmos is ideal for project teams working across the northern suburbs. Secure private ensuite rooms, parking, and corporate invoicing.",
   alternates: {
-    canonical: "https://60onkosmos.co.za/contractor-accommodation-northern-suburbs",
+    canonical: "https://www.60onkosmos.co.za/contractor-accommodation-northern-suburbs",
   },
   openGraph: {
     title: "Project Team Accommodation for Northern Suburbs | 60 on Kosmos",
