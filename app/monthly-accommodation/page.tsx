@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     "Flexible monthly accommodation in Bellville South for project teams, contractors, students, and professionals. Corporate rates, group discounts, invoice billing. Private ensuite rooms from R464/night.",
   alternates: {
-    canonical: "https://60onkosmos.co.za/monthly-accommodation",
+    canonical: "https://www.60onkosmos.co.za/monthly-accommodation",
   },
 }
 

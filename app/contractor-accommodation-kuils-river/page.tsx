@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   description:
     "Kuils River and surrounding industrial zones are close by. 60 on Kosmos offers private ensuite rooms, secure parking, and flexible corporate terms for project teams.",
   alternates: {
-    canonical: "https://60onkosmos.co.za/contractor-accommodation-kuils-river",
+    canonical: "https://www.60onkosmos.co.za/contractor-accommodation-kuils-river",
   },
   openGraph: {
     title: "Project Team Accommodation Near Kuils River | 60 on Kosmos",

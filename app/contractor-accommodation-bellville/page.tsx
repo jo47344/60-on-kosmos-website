@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   description:
     "Located in Bellville South, 60 on Kosmos offers private ensuite rooms for project teams, contractors, and professionals. Secure parking, corporate invoicing, and flexible terms.",
   alternates: {
-    canonical: "https://60onkosmos.co.za/contractor-accommodation-bellville",
+    canonical: "https://www.60onkosmos.co.za/contractor-accommodation-bellville",
   },
   openGraph: {
     title: "Project Team Accommodation in Bellville | 60 on Kosmos",

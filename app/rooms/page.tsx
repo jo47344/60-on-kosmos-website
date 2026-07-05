@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     "Self-catering rooms with private ensuite bathrooms. Standard Twin from R580/night, monthly from R464/night. Free WiFi, secure parking, weekly cleaning. Perfect for contractors & professionals. Book 074 524 5703",
   keywords:
     "Self-catering rooms Bellville South, contractor accommodation Cape Town, rooms with ensuite Bellville, monthly accommodation Bellville, private bathroom accommodation Cape Town",
-  alternates: { canonical: "https://60onkosmos.co.za/rooms" },
+  alternates: { canonical: "https://www.60onkosmos.co.za/rooms" },
   openGraph: {
     title: "Rooms & Rates - 60 on Kosmos | Private Ensuite Rooms from R464/night",
     description:

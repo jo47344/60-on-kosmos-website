@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Terms & House Rules | 60 on Kosmos Guest House",
   description: "Booking terms, cancellation policy, and house rules for 60 on Kosmos Guest House in Bellville South.",
   alternates: {
-    canonical: "https://60onkosmos.co.za/terms",
+    canonical: "https://www.60onkosmos.co.za/terms",
   },
 }
 
