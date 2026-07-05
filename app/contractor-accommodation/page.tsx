@@ -26,9 +26,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { FAQSchema } from "@/components/faq-schema"
 
 export const metadata: Metadata = {
-  title: "Accommodation for Project Teams & Professionals | Bellville South | From R600/Night",
+  title: "Accommodation for Project Teams & Professionals | Bellville South | From R580/Night",
   description:
-    "Flexible accommodation for project teams, working professionals, and contractors in Bellville South. Daily (R600), weekly (R540), and monthly rates. Private ensuite rooms, secure parking, WiFi, corporate invoicing. Corporate billing available.",
+    "Flexible accommodation for project teams, working professionals, and contractors in Bellville South. Daily (R580), weekly (R522), and monthly rates. Private ensuite rooms, secure parking, WiFi, corporate invoicing. Corporate billing available.",
   alternates: {
     canonical: "https://60onkosmos.co.za/contractor-accommodation",
   },
@@ -47,9 +47,9 @@ export const metadata: Metadata = {
     "contractor teams accommodation bellville",
   ],
   openGraph: {
-    title: "Project Team Accommodation Bellville South | From R600/Night",
+    title: "Contractor Accommodation Bellville South | Monthly from R464/Night",
     description:
-      "Private ensuite rooms for project teams & professionals. Daily rates from R600/night. Secure parking, weekly cleaning, WiFi included.",
+      "Private ensuite rooms for contractors & project teams. Monthly rates from R464/night. Secure parking, weekly cleaning, WiFi included.",
     url: "https://60onkosmos.co.za/contractor-accommodation",
     type: "website",
   },
@@ -106,8 +106,8 @@ export default function ContractorAccommodationPage() {
       {
         "@type": "Offer",
         name: "Standard Twin Room",
-        description: "Best for 2 professionals sharing. From R480/night on monthly stays.",
-        price: "600",
+        description: "Best for 2 contractors sharing. From R464/night on monthly stays.",
+        price: "580",
         priceCurrency: "ZAR",
       },
       {
@@ -138,9 +138,9 @@ export default function ContractorAccommodationPage() {
     {
       name: "Standard Twin Room",
       tagline: "The Contractor Essential",
-      price: "R600",
-      weeklyPrice: "R540",
-      monthlyPrice: "R480",
+      price: "R580",
+      weeklyPrice: "R522",
+      monthlyPrice: "R464",
       perPerson: null,
       capacity: "1-2 People",
       layout: "2 Single Beds",
@@ -231,8 +231,8 @@ export default function ContractorAccommodationPage() {
 
   const contractorFAQs = [
     {
-      question: "How much does accommodation cost in Bellville South?",
-      answer: "Project team rates at 60 on Kosmos start from R600/night (Standard Twin, 1–6 nights). Weekly rates (7–27 nights) from R540/night. Monthly rates (28+ nights) from R480/night. Triple Room sleeps 3 from R840/night standard or R672/night monthly (R224/person/night). All rooms have private ensuite bathrooms.",
+      question: "How much does contractor accommodation cost in Bellville South?",
+      answer: "Contractor rates at 60 on Kosmos start from R580/night (Standard Twin, 1–6 nights). Weekly rates (7–27 nights) from R522/night. Monthly rates (28+ nights) from R464/night. Triple Room sleeps 3 from R840/night standard or R672/night monthly (R224/person/night). All rooms have private ensuite bathrooms.",
     },
     {
       question: "Is there secure parking for work vehicles and bakkies?",
@@ -240,7 +240,7 @@ export default function ContractorAccommodationPage() {
     },
     {
       question: "Do you accommodate apprentices and trainees on courses?",
-      answer: "Yes, we regularly host apprentices from John Thompson boilermaker courses, Northlink College welding programmes, and other training facilities. Our Standard Twin Room at R600/night (or R480/night monthly) is ideal for trainees on a budget.",
+      answer: "Yes, we regularly host apprentices from John Thompson boilermaker courses, Northlink College welding programmes, and other training facilities. Our Standard Twin Room at R580/night (or R464/night monthly) is ideal for trainees on a budget.",
     },
     {
       question: "Can contractors cook their own meals?",
