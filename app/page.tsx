@@ -361,6 +361,48 @@ export default function HomePage() {
         {/* Latest Blog Posts */}
         <LatestBlogPosts />
 
+        {/* FAQ Section */}
+        <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-10 sm:mb-12 md:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">Frequently Asked Questions</h2>
+              <p className="text-base sm:text-lg text-gray-600">Quick answers to common questions about our accommodation</p>
+            </div>
+
+            <div className="space-y-4 sm:space-y-6">
+              <div className="bg-white rounded-lg border border-gray-200 p-4 sm:p-6">
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3">Can you take a crew of 8–10 workers for several months?</h3>
+                <p className="text-gray-700 text-sm sm:text-base">We&apos;re a four-room house designed for smaller skilled teams; long labour-crew deployments are usually better served by a rented house near site.</p>
+              </div>
+
+              <div className="bg-white rounded-lg border border-gray-200 p-4 sm:p-6">
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3">How does invoicing work?</h3>
+                <p className="text-gray-700 text-sm sm:text-base">One consolidated monthly invoice to your company, month-to-month corporate agreement, no lease or deposit.</p>
+              </div>
+
+              <div className="bg-white rounded-lg border border-gray-200 p-4 sm:p-6">
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3">Is there parking for work vehicles?</h3>
+                <p className="text-gray-700 text-sm sm:text-base">Yes, secure off-street parking with space for bakkies and trailers, plus CCTV and a live-in caretaker.</p>
+              </div>
+
+              <div className="bg-white rounded-lg border border-gray-200 p-4 sm:p-6">
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3">Can the team cook?</h3>
+                <p className="text-gray-700 text-sm sm:text-base">Yes, guests have kitchen access.</p>
+              </div>
+
+              <div className="bg-white rounded-lg border border-gray-200 p-4 sm:p-6">
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3">How fast can you confirm a booking?</h3>
+                <p className="text-gray-700 text-sm sm:text-base">WhatsApp 074 524 5703 with dates and team size; quotes usually go out the same day.</p>
+              </div>
+
+              <div className="bg-white rounded-lg border border-gray-200 p-4 sm:p-6">
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3">Do you have real guest reviews?</h3>
+                <p className="text-gray-700 text-sm sm:text-base">Yes — 46 verified reviews at 8.0/10 &quot;Very Good&quot; on <a href="https://www.booking.com/hotel/za/60-on-kosmos.html" target="_blank" rel="noopener noreferrer" className="text-sage-600 hover:text-sage-700 font-semibold underline">Booking.com</a>, and Superhost status with a 4.65 rating on <a href="https://www.airbnb.co.za/rooms/1055447623" target="_blank" rel="noopener noreferrer" className="text-sage-600 hover:text-sage-700 font-semibold underline">Airbnb</a>. Both link directly to the real listings.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-12 sm:py-16 bg-sage-600 text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -388,6 +430,67 @@ export default function HomePage() {
           </div>
         </section>
       </div>
+
+      {/* FAQPage Schema (JSON-LD) */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "Can you take a crew of 8–10 workers for several months?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "We're a four-room house designed for smaller skilled teams; long labour-crew deployments are usually better served by a rented house near site.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How does invoicing work?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "One consolidated monthly invoice to your company, month-to-month corporate agreement, no lease or deposit.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Is there parking for work vehicles?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, secure off-street parking with space for bakkies and trailers, plus CCTV and a live-in caretaker.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can the team cook?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, guests have kitchen access.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How fast can you confirm a booking?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "WhatsApp 074 524 5703 with dates and team size; quotes usually go out the same day.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Do you have real guest reviews?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes — 46 verified reviews at 8.0/10 \"Very Good\" on Booking.com, and Superhost status with a 4.65 rating on Airbnb. Both link directly to the real listings.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
     </>
   )
 }
