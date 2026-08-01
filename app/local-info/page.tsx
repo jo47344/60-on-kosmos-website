@@ -3,7 +3,7 @@ import { MapPin, Car, ShoppingBag, GraduationCap, Building, Wine, Shield, Camera
 import { Card, CardContent } from "@/components/ui/card"
 
 export const metadata: Metadata = {
-  title: "Local Area & Attractions - 60 on Kosmos Bellville South | Near UWC & Tygerberg Hospital",
+  title: "Local Area title: "Local Area & Attractions - 60 on Kosmos Bellville South | Near UWC & Tygerberg Hospital" Attractions,
   description:
     "Perfect location near UWC (5km), Tygerberg Hospital (8km), SPAR Kasselsvlei Centre (2km). Easy transport to Cape Town CBD. Guesthouse Bellville South with local knowledge. Call 074 524 5703",
   keywords:

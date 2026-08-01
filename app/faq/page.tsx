@@ -5,13 +5,22 @@ import { ChevronDown, Phone, Mail } from "lucide-react"
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
 
 export const metadata: Metadata = {
-  title: "FAQ - Frequently Asked Questions | 60 on Kosmos Bellville South",
-  description:
-    "Get answers to common questions about 60 on Kosmos guesthouse in Bellville South. Parking, rates, amenities, communal kitchen, location near UWC and Tygerberg Hospital.",
+  title: "FAQ | Accommodation Questions",
+  description: "Frequently asked questions about our Bellville South guesthouse. Learn about rates, parking, amenities, and booking.",
   alternates: { canonical: "https://www.60onkosmos.co.za/faq" },
   openGraph: {
-    title: "FAQ - 60 on Kosmos Guesthouse Bellville South",
-    description: "Frequently asked questions about our Bellville South accommodation",
+    title: "FAQ | Accommodation Questions",
+    description: "Frequently asked questions about our Bellville South guesthouse. Learn about rates, parking, amenities, and booking.",
+    url: "https://www.60onkosmos.co.za/faq",
+    type: "website",
+    images: [
+      {
+        url: "https://www.60onkosmos.co.za/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "60 on Kosmos FAQ",
+      },
+    ],
   },
 }
 

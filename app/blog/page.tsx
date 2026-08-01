@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Calendar, ArrowRight, Phone } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Accommodation Blog - Tips for Staying in Bellville South Cape Town | 60 on Kosmos",
+  title: "Accommodation Blog | 60 on Kosmos,
   description:
     "Expert accommodation guides for Bellville South. Tips for medical staff, students, contractors, and visitors staying near UWC, Tygerberg Hospital, and Cape Town.",
   keywords:

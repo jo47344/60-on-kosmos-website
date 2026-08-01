@@ -6,16 +6,24 @@ import { Badge } from "@/components/ui/badge"
 import { Wifi, Coffee, Car, Shield, Phone } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Rooms & Rates - 60 on Kosmos Guesthouse Bellville South | Monthly from R464/night",
-  description:
-    "Self-catering rooms with private ensuite bathrooms. Standard Twin from R580/night, monthly from R464/night. Free WiFi, secure parking, weekly cleaning. Perfect for contractors & professionals. Book 074 524 5703",
+  title: "Rooms & Rates | From R464/Month",
+  description: "Rooms and rates at 60 on Kosmos. Standard Twin R580/night, Deluxe R650, Double R680, Triple R840. Monthly rates available.",
   keywords:
     "Self-catering rooms Bellville South, contractor accommodation Cape Town, rooms with ensuite Bellville, monthly accommodation Bellville, private bathroom accommodation Cape Town",
   alternates: { canonical: "https://www.60onkosmos.co.za/rooms" },
   openGraph: {
-    title: "Rooms & Rates - 60 on Kosmos | Private Ensuite Rooms from R464/night",
-    description:
-      "Self-catering rooms with private ensuite bathrooms. Monthly rates from R464/night. Perfect for contractors and professionals.",
+    title: "Rooms & Rates | From R464/Month",
+    description: "Rooms and rates at 60 on Kosmos. Standard Twin R580/night, Deluxe R650, Double R680, Triple R840. Monthly rates available.",
+    url: "https://www.60onkosmos.co.za/rooms",
+    type: "website",
+    images: [
+      {
+        url: "https://www.60onkosmos.co.za/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "60 on Kosmos Rooms",
+      },
+    ],
   },
 }
 

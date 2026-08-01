@@ -6,7 +6,7 @@ import { Card } from "@/components/ui/card"
 import { Calendar, ArrowLeft, Phone, CheckCircle, Heart } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Nursing Student Accommodation Near Tygerberg Hospital: Complete Guide 2025",
+  title: "Nursing Student Guide | Tygerberg,
   description:
     "Starting practical training at Tygerberg Hospital? Find safe, affordable accommodation for nursing students in Bellville South. 3-6 month stays, WiFi, parking, quiet study environment.",
   keywords:

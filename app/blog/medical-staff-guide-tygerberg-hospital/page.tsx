@@ -7,7 +7,7 @@ import { Calendar, ArrowLeft, Phone, CheckCircle } from "lucide-react"
 import { BlogShareButtons } from "@/components/blog-share-buttons"
 
 export const metadata: Metadata = {
-  title: "Complete Guide for Medical Staff Relocating to Tygerberg Hospital 2025",
+  title: "Medical Staff Guide | Tygerberg,
   description:
     "Moving to Tygerberg Hospital for locum work or permanent position? Everything you need to know about accommodation, transport, living costs, and settling in Bellville.",
   keywords:

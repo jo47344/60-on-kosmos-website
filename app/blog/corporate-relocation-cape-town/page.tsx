@@ -6,7 +6,7 @@ import { Card } from "@/components/ui/card"
 import { Calendar, ArrowLeft, Phone, Building, CheckCircle } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Corporate Relocation to Cape Town: Accommodation Guide for HR Managers 2025",
+  title: "Corporate Relocation Guide | Cape Town,
   description:
     "Relocating employees to Cape Town? Find cost-effective corporate accommodation in Bellville South. Flexible terms, monthly billing, easy logistics. Perfect for 1-6 month relocations.",
   keywords:

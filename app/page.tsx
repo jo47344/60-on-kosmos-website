@@ -22,17 +22,24 @@ import { LatestBlogPosts } from "@/components/latest-blog-posts"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "60 on Kosmos | Accommodation for Project Teams & Working Professionals in Bellville",
-  description:
-    "Flexible accommodation for project-based teams, contractors, and working professionals in Bellville South, Cape Town. Private ensuite rooms from R580/night. Daily, weekly, and monthly rates with free WiFi, secure parking, and flexible check-in.",
+  title: "60 on Kosmos - Bellville Accommodation for Teams",
+  description: "Flexible accommodation for project teams from R580/night. Private rooms, secure parking, WiFi, flexible terms. Monthly rates from R464/night.",
   alternates: {
     canonical: "https://www.60onkosmos.co.za/",
   },
   openGraph: {
-    title: "60 on Kosmos - Accommodation for Project Teams & Working Professionals",
-    description: "Flexible accommodation for project teams, contractors, and professionals. Private rooms with WiFi, parking, and flexible terms.",
-    url: "https://60onkosmos.co.za",
+    title: "60 on Kosmos - Bellville Accommodation for Teams",
+    description: "Flexible accommodation for project teams from R580/night. Private rooms, secure parking, WiFi, flexible terms. Monthly rates from R464/night.",
+    url: "https://www.60onkosmos.co.za/",
     type: "website",
+    images: [
+      {
+        url: "https://www.60onkosmos.co.za/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "60 on Kosmos Guesthouse Bellville",
+      },
+    ],
   },
 }
 
