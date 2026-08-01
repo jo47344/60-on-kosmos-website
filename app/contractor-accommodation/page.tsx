@@ -824,7 +824,7 @@ export default function ContractorAccommodationPage() {
                 &quot;Enjoyed my stay at 60 on Kosmos. Very convenient, safe, and friendly staff. The rooms are very neat and clean.&quot;
               </p>
               <div className="border-t pt-4">
-                <p className="font-semibold text-sm">Dineo Setati</p>
+                <p className="font-semibold text-sm">Dineo S.</p>
                 <p className="text-xs text-gray-500">Google - 5 stars</p>
               </div>
             </Card>
@@ -1106,7 +1106,7 @@ export default function ContractorAccommodationPage() {
               Goodwood
             </Link>
             <span className="text-gray-400">|</span>
-            <Link href="/contractor-accommodation-kuilsriver" className="text-sage-600 hover:underline">
+            <Link href="/contractor-accommodation-kuils-river" className="text-sage-600 hover:underline">
               Kuilsriver
             </Link>
             <span className="text-gray-400">|</span>
