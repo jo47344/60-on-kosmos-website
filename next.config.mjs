@@ -22,6 +22,8 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // Kuils River location page - fix broken URL
+      { source: '/contractor-accommodation-kuilsriver', destination: '/contractor-accommodation-kuils-river', permanent: true },
       // Redirect accommodation variants
       { source: '/accommodation-near-bellville-station', destination: '/rooms', permanent: true },
       { source: '/accommodation-near-tygerberg-hospital', destination: '/rooms', permanent: true },

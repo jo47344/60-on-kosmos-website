@@ -126,12 +126,14 @@ export default function HomePage() {
               </Button>
             </div>
             <div className="mt-4 sm:mt-6 flex items-center justify-center gap-2">
-              <div className="flex">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400 fill-current" />
-                ))}
-              </div>
-              <span className="text-sm sm:text-base lg:text-lg font-semibold">4.8 Stars</span>
+              <a href="https://www.booking.com/hotel/za/60-on-kosmos.html" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-sage-600 transition">
+                <div className="flex">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <span className="text-sm sm:text-base lg:text-lg font-semibold">8.0/10 on Booking.com</span>
+              </a>
             </div>
           </div>
         </section>

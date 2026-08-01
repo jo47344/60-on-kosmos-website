@@ -147,11 +147,62 @@ export default function MonthlyAccommodationPage() {
         </div>
       </section>
 
-      {/* Ideal For */}
+      {/* Monthly Rates Table */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-center mb-12">Monthly Rates</h2>
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse">
+              <thead>
+                <tr className="bg-sage-50">
+                  <th className="border border-gray-200 px-4 py-3 text-left font-semibold">Room Type</th>
+                  <th className="border border-gray-200 px-4 py-3 text-right font-semibold">1–6 nights</th>
+                  <th className="border border-gray-200 px-4 py-3 text-right font-semibold">7–27 nights</th>
+                  <th className="border border-gray-200 px-4 py-3 text-right font-semibold">28+ nights</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="hover:bg-gray-50">
+                  <td className="border border-gray-200 px-4 py-3 font-medium">Standard Twin</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">R580</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">R522</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">R464</td>
+                </tr>
+                <tr className="hover:bg-gray-50">
+                  <td className="border border-gray-200 px-4 py-3 font-medium">Deluxe Twin</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">R620</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">R558</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">R496</td>
+                </tr>
+                <tr className="hover:bg-gray-50">
+                  <td className="border border-gray-200 px-4 py-3 font-medium">Double</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">R650</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">R585</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">R520</td>
+                </tr>
+                <tr className="hover:bg-gray-50">
+                  <td className="border border-gray-200 px-4 py-3 font-medium">Triple</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">R800</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">R720</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">R640</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="text-center text-gray-600 text-sm mt-4 italic">Prices per night</p>
+          <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg text-center">
+            <p className="text-blue-800 text-sm">
+              R1,500 refundable security deposit applies to stays of 7+ nights.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Ideal For */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center mb-12">Perfect For</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <Card>
               <CardContent className="pt-6 text-center">
                 <h3 className="font-semibold text-lg mb-2">Contractors</h3>
@@ -168,12 +219,6 @@ export default function MonthlyAccommodationPage() {
               <CardContent className="pt-6 text-center">
                 <h3 className="font-semibold text-lg mb-2">Professionals</h3>
                 <p className="text-gray-600">Temporary work assignments</p>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent className="pt-6 text-center">
-                <h3 className="font-semibold text-lg mb-2">Relocating Families</h3>
-                <p className="text-gray-600">While searching for permanent housing</p>
               </CardContent>
             </Card>
           </div>

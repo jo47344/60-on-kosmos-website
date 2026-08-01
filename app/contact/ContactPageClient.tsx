@@ -144,6 +144,21 @@ export default function ContactPageClient() {
                 </Button>
               </div>
 
+              <div className="pt-4 border-t">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">Also Listed On</h3>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <Button asChild variant="outline" className="flex-1 bg-transparent">
+                    <a href="https://www.booking.com/hotel/za/60-on-kosmos.html" target="_blank" rel="noopener noreferrer">
+                      Book on Booking.com
+                    </a>
+                  </Button>
+                  <Button asChild variant="outline" className="flex-1 bg-transparent">
+                    <a href="https://www.airbnb.co.za/rooms/1055447623" target="_blank" rel="noopener noreferrer">
+                      Book on Airbnb
+                    </a>
+                  </Button>
+                </div>
+              </div>
             </div>
           </div>
 

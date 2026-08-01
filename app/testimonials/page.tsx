@@ -35,7 +35,7 @@ export default function TestimonialsPage() {
       verified: true,
     },
     {
-      name: "Florentin Bonnasse",
+      name: "Florentin B.",
       source: "Google Reviews",
       rating: 5,
       country: "France",
@@ -108,22 +108,7 @@ export default function TestimonialsPage() {
                 </Button>
               </Card>
 
-              <Card className="p-6 border-sage-300 bg-white">
-                <div className="flex items-center justify-center mb-3 gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-500 fill-current" />
-                  ))}
-                </div>
-                <p className="text-2xl font-bold text-gray-900">4.9/5</p>
-                <p className="text-sm text-gray-600 mt-2">Google Reviews</p>
-                <p className="text-xs text-sage-600 font-semibold mt-2">Verified guests</p>
-                <p className="text-xs text-gray-500 mt-1">Consistently rated excellent</p>
-                <Button asChild size="sm" className="mt-4 w-full bg-sage-600 hover:bg-sage-700" variant="default">
-                  <a href="https://www.google.com/maps/place/60+on+Kosmos" target="_blank" rel="noopener noreferrer">
-                    View on Google
-                  </a>
-                </Button>
-              </Card>
+
             </div>
           </div>
         </section>
