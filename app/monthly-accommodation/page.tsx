@@ -118,7 +118,7 @@ export default function MonthlyAccommodationPage() {
             <div className="flex gap-4">
               <Utensils className="w-8 h-8 text-sage-600 flex-shrink-0" />
               <div>
-                <h3 className="font-semibold text-lg mb-2">Full Kitchen</h3>
+                <h3 className="font-semibold text-lg mb-2">Communal Self-Catering Kitchenette</h3>
                 <p className="text-gray-600">Stove, fridge, microwave, cookware, and utensils</p>
               </div>
             </div>

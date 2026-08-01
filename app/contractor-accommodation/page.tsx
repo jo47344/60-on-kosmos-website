@@ -39,7 +39,6 @@ export const metadata: Metadata = {
     "workers accommodation bellville south parking bakkies",
     "contractor accommodation near tac business park",
     "artisan trainee accommodation near northlink college",
-    "boilermaker accommodation near john thompson bellville",
     "welding trainee accommodation bellville",
     "monthly contractor accommodation bellville self catering",
     "shutdown accommodation bellville south",
@@ -67,7 +66,7 @@ export default function ContractorAccommodationPage() {
     "@type": "LodgingBusiness",
     name: "60 on Kosmos - Contractor Accommodation Bellville South",
     description:
-      "Affordable self-catering contractor accommodation in Bellville South. Weekly & monthly rates for construction workers, artisan trainees, welders, boilermakers. Secure parking for bakkies, WiFi included. Near Sacks Circle, Mill Park, TAC Business Park, John Thompson, Northlink College.",
+      "Affordable self-catering contractor accommodation in Bellville South. Weekly & monthly rates for construction workers, artisan trainees, welders, boilermakers. Secure parking for bakkies, WiFi included. Near Sacks Circle, Mill Park, TAC Business Park, Northlink College.",
     address: {
       "@type": "PostalAddress",
       streetAddress: "60 Kosmosdalweg",
@@ -104,7 +103,7 @@ export default function ContractorAccommodationPage() {
       { "@type": "Place", name: "Sacks Circle Industrial", description: "Walking distance" },
       { "@type": "Place", name: "Mill Park Industrial", description: "5 minutes" },
       { "@type": "Place", name: "TAC Business Park", description: "5 minutes" },
-      { "@type": "Place", name: "John Thompson", description: "Boilermaker training" },
+
       { "@type": "Place", name: "Northlink College Bellville", description: "Welding courses" },
       { "@type": "Place", name: "Stikland Industrial", description: "10 minutes" },
     ],
@@ -246,7 +245,7 @@ export default function ContractorAccommodationPage() {
     },
     {
       question: "Do you accommodate apprentices and trainees on courses?",
-      answer: "Yes, we regularly host apprentices from John Thompson boilermaker courses, Northlink College welding programmes, and other training facilities. Our Standard Twin Room at R580/night (or R464/night monthly) is ideal for trainees on a budget.",
+      answer: "Yes, we accommodate trainees from Northlink College welding programmes and other training facilities. Our Standard Twin Room is ideal for budget-conscious trainees.",
     },
     {
       question: "Can contractors cook their own meals?",
@@ -464,7 +463,6 @@ export default function ContractorAccommodationPage() {
               <span className="text-sm font-medium text-gray-700">Industrial Cleaning Crews</span>
             </div>
           </div>
-          <p className="text-center text-gray-500 text-sm mt-6">50+ contractor teams hosted from across South Africa</p>
         </div>
       </section>
 
@@ -474,6 +472,7 @@ export default function ContractorAccommodationPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Choose Your Room Type</h2>
             <p className="text-lg text-gray-600">Four options to fit your team structure and budget</p>
+            <p className="text-sm text-gray-600 mt-4">A refundable security deposit may apply to stays of seven nights or longer. Terms on quotation.</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -664,11 +663,7 @@ export default function ContractorAccommodationPage() {
                 <h3 className="text-2xl font-bold">Training Facilities</h3>
               </div>
               <div className="space-y-4">
-                <Card className="p-4">
-                  <h4 className="font-bold text-lg">John Thompson</h4>
-                  <p className="text-gray-600 text-sm">Boilermaker & welding courses, apprentice training</p>
-                  <p className="text-sage-600 font-medium text-sm mt-1">Currently hosting apprentices!</p>
-                </Card>
+
                 <Card className="p-4">
                   <h4 className="font-bold text-lg">Northlink College Bellville</h4>
                   <p className="text-gray-600 text-sm">Welding (CBMT Phase 1-4), Engineering Fabrication courses</p>
@@ -708,10 +703,10 @@ export default function ContractorAccommodationPage() {
 
           <div className="bg-sage-50 rounded-xl p-6 text-center">
             <p className="text-lg text-gray-700">
-              <span className="font-bold">Currently hosting:</span> Apprentices from John Thompson boilermaker courses
+              Perfect for project teams, site crews, and working professionals from various industries.
             </p>
             <p className="text-gray-600 mt-2">
-              We understand the needs of workers on training programmes and project assignments.
+              We understand the needs of workers on project assignments and training programmes.
             </p>
           </div>
         </div>
@@ -981,11 +976,7 @@ export default function ContractorAccommodationPage() {
               <h3 className="font-bold text-sm">Mill Park</h3>
               <p className="text-sage-600 text-sm">2 min drive</p>
             </Card>
-            <Card className="p-4">
-              <MapPin className="w-6 h-6 mx-auto mb-2 text-sage-600" />
-              <h3 className="font-bold text-sm">John Thompson</h3>
-              <p className="text-sage-600 text-sm">Nearby</p>
-            </Card>
+
             <Card className="p-4">
               <MapPin className="w-6 h-6 mx-auto mb-2 text-sage-600" />
               <h3 className="font-bold text-sm">Northlink College</h3>

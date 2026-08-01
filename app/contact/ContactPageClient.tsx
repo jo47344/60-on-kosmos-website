@@ -143,18 +143,7 @@ export default function ContactPageClient() {
                   </a>
                 </Button>
               </div>
-              <div className="flex flex-col sm:flex-row gap-3">
-                <Button asChild variant="outline" className="flex-1 bg-transparent">
-                  <a href="https://airbnb.com" target="_blank" rel="noopener noreferrer">
-                    Book on Airbnb
-                  </a>
-                </Button>
-                <Button asChild variant="outline" className="flex-1 bg-transparent">
-                  <a href="https://booking.com" target="_blank" rel="noopener noreferrer">
-                    Book on Booking.com
-                  </a>
-                </Button>
-              </div>
+
             </div>
           </div>
 

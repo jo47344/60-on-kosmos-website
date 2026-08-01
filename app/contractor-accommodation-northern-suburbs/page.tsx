@@ -137,7 +137,7 @@ export default function NorthernSuburbsAccommodationPage() {
                   <div>
                     <h3 className="font-bold mb-2">Secure, Professional Base</h3>
                     <p className="text-gray-600">
-                      24/7 CCTV, vehicle security, access control, and on-site management. Your team is protected and
+                      Gated parking and access control. Your team is protected and
                       supported.
                     </p>
                   </div>
@@ -159,7 +159,7 @@ export default function NorthernSuburbsAccommodationPage() {
               { icon: Users, label: "Private Ensuite" },
               { icon: Utensils, label: "Self-Catering Kitchen" },
               { icon: CheckCircle2, label: "Weekly Cleaning" },
-              { icon: Shield, label: "24/7 CCTV Security" },
+              { icon: Shield, label: "CCTV Surveillance" },
             ].map(({ icon: Icon, label }, index) => (
               <div key={index} className="flex items-center gap-3 bg-white p-4 rounded-lg border">
                 <Icon className="w-6 h-6 text-sage-600 flex-shrink-0" />
