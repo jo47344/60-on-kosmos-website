@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 
 export const metadata: Metadata = {
-  title: "Monthly Accommodation for Teams & Professionals | Bellville | From R464/Night",
+  title: "Monthly Accommodation | From R464/Night,
   description:
     "Flexible monthly accommodation in Bellville South for project teams, contractors, students, and professionals. Corporate rates, group discounts, invoice billing. Private ensuite rooms from R464/night.",
   alternates: {

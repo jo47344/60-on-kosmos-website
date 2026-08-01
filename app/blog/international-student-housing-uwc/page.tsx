@@ -423,7 +423,7 @@ export default function InternationalStudentHousingPage() {
               variant="outline"
               className="border-white text-white hover:bg-blue-700 bg-transparent"
             >
-              <Link href="/near-uwc-bellville">View Rooms & Prices</Link>
+              <Link href="/rooms">View Rooms & Prices</Link>
             </Button>
           </div>
         </div>
@@ -444,10 +444,10 @@ export default function InternationalStudentHousingPage() {
                 <p className="text-sm text-gray-600">Find the cheapest safe rooms in Bellville South</p>
               </Card>
             </Link>
-            <Link href="/near-uwc-bellville" className="block hover:opacity-80">
+            <Link href="/student-faq" className="block hover:opacity-80">
               <Card className="p-4">
-                <h4 className="font-bold mb-2">Our UWC Rooms</h4>
-                <p className="text-sm text-gray-600">View available student accommodation near UWC</p>
+                <h4 className="font-bold mb-2">Visitor FAQ</h4>
+                <p className="text-sm text-gray-600">Find answers to common questions about our accommodation</p>
               </Card>
             </Link>
           </div>

@@ -91,28 +91,12 @@ export function Navigation() {
                   <div className="fixed inset-0 z-10" onClick={() => setVisitorsOpen(false)} />
                   <div className="absolute right-0 mt-2 w-64 bg-white rounded-lg shadow-xl py-2 z-20 animate-in fade-in slide-in-from-top-2 duration-200">
                     <Link
-                      href="/near-uwc-bellville"
-                      className="block px-4 py-3 text-gray-700 hover:bg-[#7c9885]/10 transition-colors"
-                      onClick={() => setVisitorsOpen(false)}
-                    >
-                      <div className="font-medium">UWC Graduations & Block Week</div>
-                      <div className="text-xs text-gray-500">Parents, professors, short stays</div>
-                    </Link>
-                    <Link
-                      href="/near-cput-bellville"
-                      className="block px-4 py-3 text-gray-700 hover:bg-[#7c9885]/10 transition-colors"
-                      onClick={() => setVisitorsOpen(false)}
-                    >
-                      <div className="font-medium">CPUT Graduations & Block Week</div>
-                      <div className="text-xs text-gray-500">Parents, professors, short stays</div>
-                    </Link>
-                    <Link
                       href="/student-faq"
                       className="block px-4 py-3 text-gray-700 hover:bg-[#7c9885]/10 transition-colors"
                       onClick={() => setVisitorsOpen(false)}
                     >
                       <div className="font-medium">Visitor FAQ</div>
-                      <div className="text-xs text-gray-500">Common questions</div>
+                      <div className="text-xs text-gray-500">Graduations, block week, short stays</div>
                     </Link>
                   </div>
                 </>
@@ -228,20 +212,6 @@ export function Navigation() {
 
             <div className="border-t border-white/10 mt-2 pt-2">
               <div className="px-4 py-2 text-sm font-semibold opacity-75">University Visitors</div>
-              <Link
-                href="/near-uwc-bellville"
-                className="block px-6 py-3 rounded-lg hover:bg-white/10 transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                UWC Graduations & Block Week
-              </Link>
-              <Link
-                href="/near-cput-bellville"
-                className="block px-6 py-3 rounded-lg hover:bg-white/10 transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                CPUT Graduations & Block Week
-              </Link>
               <Link
                 href="/student-faq"
                 className="block px-6 py-3 rounded-lg hover:bg-white/10 transition-colors"

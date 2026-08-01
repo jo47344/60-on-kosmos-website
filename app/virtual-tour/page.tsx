@@ -6,7 +6,7 @@ import { Camera, MapPin, Bed, Bath, Wifi, Car, Shield, Coffee, Eye, Play } from 
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
 
 export const metadata: Metadata = {
-  title: "Virtual Tour - See 60 on Kosmos Bellville South Before You Book",
+  title: "Virtual Tour | 60 on Kosmos,
   description:
     "Take a virtual tour of 60 on Kosmos guesthouse in Bellville South. View our ensuite rooms, parking, outdoor areas, and facilities. See why guests love staying with us.",
   keywords: "virtual tour Bellville South, 60 on Kosmos photos, guesthouse tour, accommodation near UWC photos",

@@ -6,7 +6,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Phone, GraduationCap } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Visitor FAQ | Graduations, Block Week & Short-Stay Near UWC & CPUT",
+  title: "Visitor FAQ | Block Week,
   description:
     "FAQ for parents, visiting professors and short-term visitors near UWC and CPUT. Block week, graduation accommodation, and campus visitor info. No long-term student housing.",
   alternates: {

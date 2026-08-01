@@ -18,16 +18,15 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 
 export const metadata: Metadata = {
-  title: "Project Team Accommodation Near Parow | 60 on Kosmos, Bellville South",
-  description:
-    "Accommodation for project teams working in Parow. Based in Bellville South, 60 on Kosmos offers secure private ensuite rooms, parking, and corporate terms for site crews.",
+  title: "Team Accommodation Near Parow",
+  description: "Accommodation for teams near Parow. Private ensuite rooms, secure parking, WiFi, flexible rates from R580/night.",
   alternates: {
     canonical: "https://www.60onkosmos.co.za/contractor-accommodation-parow",
   },
   openGraph: {
-    title: "Project Team Accommodation Near Parow | 60 on Kosmos",
-    description: "Private ensuite rooms for project teams near Parow. Secure parking, weekly cleaning, WiFi included.",
-    url: "https://60onkosmos.co.za/contractor-accommodation-parow",
+    title: "Team Accommodation Near Parow",
+    description: "Accommodation for teams near Parow. Private ensuite rooms, secure parking, WiFi, flexible rates from R580/night.",
+    url: "https://www.60onkosmos.co.za/contractor-accommodation-parow",
     type: "website",
   },
 }

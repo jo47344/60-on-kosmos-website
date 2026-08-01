@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 
 export const metadata: Metadata = {
-  title: "Self-Catering Rooms Bellville | Budget Accommodation with Kitchen Facilities",
+  title: "Self-Catering Rooms | Budget,
   description:
     "Affordable self-catering rooms in Bellville South. Fully equipped kitchens, free WiFi, secure parking. Perfect for budget travelers, students, and long-term stays. Book direct.",
   alternates: {

@@ -26,9 +26,8 @@ import { Card, CardContent } from "@/components/ui/card"
 import { FAQSchema } from "@/components/faq-schema"
 
 export const metadata: Metadata = {
-  title: "Accommodation for Project Teams & Professionals | Bellville South | From R580/Night",
-  description:
-    "Flexible accommodation for project teams, working professionals, and contractors in Bellville South. Daily (R580), weekly (R522), and monthly rates. Private ensuite rooms, secure parking, WiFi, corporate invoicing. Corporate billing available.",
+  title: "Contractor Accommodation | From R580/Night",
+  description: "Flexible accommodation for project teams from R580/night daily, R522/week, R464/month. Secure parking, WiFi, corporate billing available.",
   alternates: {
     canonical: "https://www.60onkosmos.co.za/contractor-accommodation",
   },
@@ -47,11 +46,18 @@ export const metadata: Metadata = {
     "contractor teams accommodation bellville",
   ],
   openGraph: {
-    title: "Contractor Accommodation Bellville South | Monthly from R464/Night",
-    description:
-      "Private ensuite rooms for contractors & project teams. Monthly rates from R464/night. Secure parking, weekly cleaning, WiFi included.",
-    url: "https://60onkosmos.co.za/contractor-accommodation",
+    title: "Contractor Accommodation | From R580/Night",
+    description: "Flexible accommodation for project teams from R580/night daily, R522/week, R464/month. Secure parking, WiFi, corporate billing.",
+    url: "https://www.60onkosmos.co.za/contractor-accommodation",
     type: "website",
+    images: [
+      {
+        url: "https://www.60onkosmos.co.za/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Contractor Accommodation Bellville",
+      },
+    ],
   },
 }
 

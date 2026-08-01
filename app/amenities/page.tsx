@@ -4,15 +4,24 @@ import { Card, CardContent } from "@/components/ui/card"
 import Image from "next/image"
 
 export const metadata: Metadata = {
-  title: "Amenities & Services - 60 on Kosmos Guesthouse Bellville South | Secure Accommodation Cape Town",
-  description:
-    "24/7 CCTV security, free WiFi, safe parking, outdoor seating areas. Guesthouse Bellville South near UWC with all amenities included. On-site caretaker, welcome refreshments. Book 074 524 5703",
+  title: "Amenities & Services | 60 on Kosmos",
+  description: "24/7 security, free WiFi, safe parking, outdoor areas, self-catering kitchen at our Bellville South guesthouse accommodation.",
   keywords:
     "Guesthouse amenities Bellville South, secure accommodation Cape Town, CCTV security guesthouse, free WiFi accommodation Bellville, safe parking Cape Town, outdoor seating guesthouse",
   alternates: { canonical: "https://www.60onkosmos.co.za/amenities" },
   openGraph: {
-    title: "Amenities & Services - 60 on Kosmos Guesthouse",
-    description: "24/7 security, free WiFi, safe parking and outdoor areas at our Bellville South guesthouse",
+    title: "Amenities & Services | 60 on Kosmos",
+    description: "24/7 security, free WiFi, safe parking, outdoor areas, self-catering kitchen at our Bellville South guesthouse accommodation.",
+    url: "https://www.60onkosmos.co.za/amenities",
+    type: "website",
+    images: [
+      {
+        url: "https://www.60onkosmos.co.za/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "60 on Kosmos Amenities",
+      },
+    ],
   },
 }
 

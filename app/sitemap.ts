@@ -48,8 +48,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Short-term university visitors (graduations, block week, visiting professors)
     { url: "uwc-student-accommodation", priority: 0.65, freq: "weekly" as const },
     { url: "cput-accommodation", priority: 0.65, freq: "weekly" as const },
-    { url: "near-uwc-bellville", priority: 0.6, freq: "weekly" as const },
-    { url: "near-cput-bellville", priority: 0.6, freq: "weekly" as const },
     { url: "student-faq", priority: 0.5, freq: "monthly" as const },
 
     // Support pages
