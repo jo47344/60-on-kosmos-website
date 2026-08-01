@@ -70,10 +70,10 @@ export default function AmenitiesPage() {
   ]
 
   const roomFeatures = [
-    "Bar fridge in every room",
+    "Private ensuite bathrooms",
     "Clean linen and towels",
     "Hot water 24/7",
-    "Ensuite bathrooms",
+    "Free WiFi",
     "Modern furnishings",
     "Weekly cleaning service",
     "Quiet environment",
