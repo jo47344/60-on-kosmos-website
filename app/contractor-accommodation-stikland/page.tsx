@@ -20,14 +20,14 @@ import { Card, CardContent } from "@/components/ui/card"
 export const metadata: Metadata = {
   title: "Project Team Accommodation Near Stikland | 60 on Kosmos, Bellville South",
   description:
-    "Stikland Industrial is minutes away. 60 on Kosmos offers private ensuite rooms, secure parking, and one invoice for project teams working in Stikland.",
+    "Stikland Industrial is minutes away. 60 on Kosmos offers private ensuite rooms, secure parking, and flexible billing for project teams working in Stikland.",
   alternates: {
     canonical: "https://www.60onkosmos.co.za/contractor-accommodation-stikland",
   },
   openGraph: {
     title: "Project Team Accommodation Near Stikland | 60 on Kosmos",
     description: "Private ensuite rooms for project teams near Stikland. Secure parking, weekly cleaning, WiFi included.",
-    url: "https://60onkosmos.co.za/contractor-accommodation-stikland",
+    url: "https://www.60onkosmos.co.za/contractor-accommodation-stikland",
     type: "website",
   },
 }
@@ -136,7 +136,7 @@ export default function StiklandAccommodationPage() {
                   <div>
                     <h3 className="font-bold mb-2">Secure, Gated Community</h3>
                     <p className="text-gray-600">
-                      24/7 CCTV, vehicle parking for vans and bakkies, and access control. Peace of mind for your crew.
+                      Gated parking and access control. Peace of mind for your crew.
                     </p>
                   </div>
                 </div>
@@ -157,7 +157,7 @@ export default function StiklandAccommodationPage() {
               { icon: Users, label: "Private Ensuite" },
               { icon: Utensils, label: "Self-Catering Kitchen" },
               { icon: CheckCircle2, label: "Weekly Cleaning" },
-              { icon: Shield, label: "24/7 CCTV Security" },
+              { icon: Shield, label: "CCTV Surveillance" },
             ].map(({ icon: Icon, label }, index) => (
               <div key={index} className="flex items-center gap-3 bg-white p-4 rounded-lg border">
                 <Icon className="w-6 h-6 text-sage-600 flex-shrink-0" />

@@ -6,7 +6,7 @@ import { Star, Clock, Users, Briefcase, Calendar, Gift, Phone, CheckCircle2, Tre
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
 
 export const metadata: Metadata = {
-  title: "Special Offers title: "Special Offers & Packages - 60 on Kosmos Bellville South | Save Up To 20%" Packages,
+  title: "Special Offers & Packages",
   description:
     "Book direct and save at 60 on Kosmos Bellville South. Special rates for contractors, medical professionals. Monthly rates from R12,720. Free WiFi & parking.",
   keywords:
@@ -154,7 +154,7 @@ export default function SpecialOffersPage() {
               Save up to 20% when you book direct at 60 on Kosmos Bellville South
             </p>
             <p className="text-lg opacity-80 max-w-2xl mx-auto">
-              No hidden fees. No booking commissions. Best rates guaranteed when you book directly with us.
+              Book direct at 60 on Kosmos. No hidden fees. No booking commissions.
             </p>
           </div>
         </section>
@@ -174,8 +174,8 @@ export default function SpecialOffersPage() {
               </div>
               <div className="bg-white rounded-lg p-6 text-center shadow-sm">
                 <CheckCircle2 className="w-10 h-10 text-blue-600 mx-auto mb-3" />
-                <h3 className="font-semibold text-gray-900 mb-2">Instant Confirmation</h3>
-                <p className="text-sm text-gray-600">Book via WhatsApp or phone and get confirmed within 5 minutes</p>
+                <h3 className="font-semibold text-gray-900 mb-2">Quick Response</h3>
+                <p className="text-sm text-gray-600">WhatsApp or phone for availability and quotations</p>
               </div>
               <div className="bg-white rounded-lg p-6 text-center shadow-sm">
                 <Star className="w-10 h-10 text-yellow-600 mx-auto mb-3" />
@@ -403,8 +403,8 @@ export default function SpecialOffersPage() {
                 <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Clock className="w-8 h-8 text-purple-600" />
                 </div>
-                <h3 className="font-semibold text-gray-900 mb-2">Instant Confirmation</h3>
-                <p className="text-sm text-gray-600">Get your booking confirmed via WhatsApp within 5 minutes</p>
+                <h3 className="font-semibold text-gray-900 mb-2">Direct Contact</h3>
+                <p className="text-sm text-gray-600">Speak directly with the owner for flexible options</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">

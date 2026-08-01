@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 
 export const metadata: Metadata = {
-  title: "Self-Catering Rooms | Budget,
+  title: "Self-Catering Rooms | Budget",
   description:
     "Affordable self-catering rooms in Bellville South. Fully equipped kitchens, free WiFi, secure parking. Perfect for budget travelers, students, and long-term stays. Book direct.",
   alternates: {
@@ -60,9 +60,9 @@ export default function SelfCateringRoomsPage() {
               <CardContent className="pt-6">
                 <div className="flex items-center gap-3 mb-2">
                   <Utensils className="w-6 h-6 text-sage-600" />
-                  <h3 className="font-semibold text-lg">Full Kitchen</h3>
+                  <h3 className="font-semibold text-lg">Self-Catering Kitchenette</h3>
                 </div>
-                <p className="text-gray-600">Fully equipped cooking facilities</p>
+                <p className="text-gray-600">Communal cooking facilities included</p>
               </CardContent>
             </Card>
             <Card>

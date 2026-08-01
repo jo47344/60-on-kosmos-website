@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next"
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://60onkosmos.co.za"
+  const base = "https://www.60onkosmos.co.za"
 
   // All 47 pages organized by priority for contractor-focused ranking
   const routes = [

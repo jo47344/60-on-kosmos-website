@@ -43,7 +43,7 @@ export default function TestimonialsPage() {
       verified: true,
     },
     {
-      name: "Dineo Setati",
+      name: "Dineo",
       source: "Google Reviews",
       rating: 5,
       country: "South Africa",

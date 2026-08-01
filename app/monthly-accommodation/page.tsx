@@ -5,11 +5,25 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 
 export const metadata: Metadata = {
-  title: "Monthly Accommodation | From R464/Night,
+  title: "Monthly Accommodation in Bellville South | 60 on Kosmos",
   description:
-    "Flexible monthly accommodation in Bellville South for project teams, contractors, students, and professionals. Corporate rates, group discounts, invoice billing. Private ensuite rooms from R464/night.",
+    "Monthly accommodation in Bellville South for project teams. Furnished private-ensuite rooms with WiFi, secure gated parking, communal self-catering facilities and weekly housekeeping included. Company invoices available.",
   alternates: {
     canonical: "https://www.60onkosmos.co.za/monthly-accommodation",
+  },
+  openGraph: {
+    title: "Monthly Accommodation in Bellville South | 60 on Kosmos",
+    description: "Monthly accommodation in Bellville South for project teams. Furnished private-ensuite rooms with WiFi, secure gated parking, communal self-catering facilities and weekly housekeeping included. Company invoices available.",
+    url: "https://www.60onkosmos.co.za/monthly-accommodation",
+    type: "website",
+    images: [
+      {
+        url: "https://www.60onkosmos.co.za/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Monthly Accommodation Bellville",
+      },
+    ],
   },
 }
 
@@ -20,13 +34,9 @@ export default function MonthlyAccommodationPage() {
       <section className="relative bg-gradient-to-br from-sage-50 to-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 bg-sage-100 text-sage-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <Calendar className="w-4 h-4" />
-              <span>Long-Term Accommodation Specialist</span>
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Monthly Rates for Project Teams & Professionals</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Monthly Accommodation in Bellville South</h1>
             <p className="text-xl text-gray-600 mb-8">
-              Flexible monthly accommodation in Bellville South. Corporate billing, group discounts, and team coordination available. From R464/night on long-term contracts.
+              Need monthly accommodation in Bellville South for a project team or work assignment? We offer furnished private-ensuite rooms with WiFi, secure gated parking, communal self-catering facilities and weekly housekeeping included. Company invoices and multi-room quotations are available.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-sage-600 hover:bg-sage-700">
@@ -50,9 +60,9 @@ export default function MonthlyAccommodationPage() {
               <CardContent className="pt-6">
                 <div className="flex items-center gap-3 mb-2">
                   <DollarSign className="w-6 h-6 text-sage-600" />
-                  <h3 className="font-semibold text-lg">Save Money</h3>
+                  <h3 className="font-semibold text-lg">Discounted Rates</h3>
                 </div>
-                <p className="text-gray-600">Up to 30% off nightly rates</p>
+                <p className="text-gray-600">Discounted rates available for 28+ night stays</p>
               </CardContent>
             </Card>
             <Card>
@@ -70,16 +80,16 @@ export default function MonthlyAccommodationPage() {
                   <Utensils className="w-6 h-6 text-sage-600" />
                   <h3 className="font-semibold text-lg">Self-Catering</h3>
                 </div>
-                <p className="text-gray-600">Full kitchen facilities included</p>
+                <p className="text-gray-600">Communal self-catering kitchenette included</p>
               </CardContent>
             </Card>
             <Card>
               <CardContent className="pt-6">
                 <div className="flex items-center gap-3 mb-2">
                   <Clock className="w-6 h-6 text-sage-600" />
-                  <h3 className="font-semibold text-lg">Flexible Terms</h3>
+                  <h3 className="font-semibold text-lg">Flexible Booking</h3>
                 </div>
-                <p className="text-gray-600">1 month minimum, no long lease</p>
+                <p className="text-gray-600">Month-to-month flexible arrangement</p>
               </CardContent>
             </Card>
           </div>
@@ -108,7 +118,7 @@ export default function MonthlyAccommodationPage() {
             <div className="flex gap-4">
               <Utensils className="w-8 h-8 text-sage-600 flex-shrink-0" />
               <div>
-                <h3 className="font-semibold text-lg mb-2">Full Kitchen</h3>
+                <h3 className="font-semibold text-lg mb-2">Communal Self-Catering Kitchenette</h3>
                 <p className="text-gray-600">Stove, fridge, microwave, cookware, and utensils</p>
               </div>
             </div>

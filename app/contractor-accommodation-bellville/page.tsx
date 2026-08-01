@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Project Team Accommodation in Bellville | 60 on Kosmos",
     description: "Private ensuite rooms in Bellville South. Secure parking, weekly cleaning, WiFi included. Corporate terms available.",
-    url: "https://60onkosmos.co.za/contractor-accommodation-bellville",
+    url: "https://www.60onkosmos.co.za/contractor-accommodation-bellville",
     type: "website",
   },
 }
@@ -138,7 +138,7 @@ export default function BellvilleAccommodationPage() {
                   <div>
                     <h3 className="font-bold mb-2">Secure Gated Community</h3>
                     <p className="text-gray-600">
-                      24/7 CCTV, vehicle security, controlled access, and on-site management. Complete peace of mind.
+                      Gated parking, access control, and on-site management. Complete peace of mind.
                     </p>
                   </div>
                 </div>
@@ -159,7 +159,7 @@ export default function BellvilleAccommodationPage() {
               { icon: Users, label: "Private Ensuite" },
               { icon: Utensils, label: "Self-Catering Kitchen" },
               { icon: CheckCircle2, label: "Weekly Cleaning" },
-              { icon: Shield, label: "24/7 CCTV Security" },
+              { icon: Shield, label: "CCTV Surveillance" },
             ].map(({ icon: Icon, label }, index) => (
               <div key={index} className="flex items-center gap-3 bg-white p-4 rounded-lg border">
                 <Icon className="w-6 h-6 text-sage-600 flex-shrink-0" />

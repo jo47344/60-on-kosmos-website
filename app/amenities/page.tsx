@@ -70,10 +70,10 @@ export default function AmenitiesPage() {
   ]
 
   const roomFeatures = [
-    "Bar fridge in every room",
+    "Private ensuite bathrooms",
     "Clean linen and towels",
     "Hot water 24/7",
-    "Ensuite bathrooms",
+    "Free WiFi",
     "Modern furnishings",
     "Weekly cleaning service",
     "Quiet environment",
@@ -219,8 +219,8 @@ export default function AmenitiesPage() {
                 <div className="flex items-start">
                   <Camera className="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
                   <div>
-                    <p className="font-medium text-gray-900">24/7 CCTV Monitoring</p>
-                    <p className="text-gray-600 text-sm">Comprehensive security camera coverage at the property</p>
+                    <p className="font-medium text-gray-900">CCTV Surveillance</p>
+                    <p className="text-gray-600 text-sm">Security camera coverage at the property entrance and parking areas</p>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -257,8 +257,8 @@ export default function AmenitiesPage() {
               <div className="flex items-start">
                 <Camera className="w-6 h-6 text-green-600 mr-3 mt-1" />
                 <div>
-                  <h3 className="font-semibold text-gray-900">CCTV Coverage</h3>
-                  <p className="text-gray-600">24/7 monitoring of all common areas</p>
+                  <h3 className="font-semibold text-gray-900">CCTV Surveillance</h3>
+                  <p className="text-gray-600">Security cameras at entrance and parking areas</p>
                 </div>
               </div>
               <div className="flex items-start">

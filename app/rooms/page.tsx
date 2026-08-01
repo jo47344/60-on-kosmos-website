@@ -137,6 +137,13 @@ export default function RoomsPage() {
           </p>
         </div>
 
+        {/* Deposit Disclosure */}
+        <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-8 text-center">
+          <p className="text-blue-800 text-sm">
+            A refundable security deposit may apply to stays of seven nights or longer. Terms will be provided on your quotation.
+          </p>
+        </div>
+
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Self-Catering Rooms & Rates</h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
