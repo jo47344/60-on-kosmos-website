@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Project Team Accommodation Near Kuils River | 60 on Kosmos",
     description: "Private ensuite rooms for project teams near Kuils River. Secure parking, weekly cleaning, WiFi included.",
-    url: "https://60onkosmos.co.za/contractor-accommodation-kuils-river",
+    url: "https://www.60onkosmos.co.za/contractor-accommodation-kuils-river",
     type: "website",
   },
 }

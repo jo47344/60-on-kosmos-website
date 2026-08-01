@@ -20,14 +20,14 @@ import { Card, CardContent } from "@/components/ui/card"
 export const metadata: Metadata = {
   title: "Project Team Accommodation Near Stikland | 60 on Kosmos, Bellville South",
   description:
-    "Stikland Industrial is minutes away. 60 on Kosmos offers private ensuite rooms, secure parking, and one invoice for project teams working in Stikland.",
+    "Stikland Industrial is minutes away. 60 on Kosmos offers private ensuite rooms, secure parking, and flexible billing for project teams working in Stikland.",
   alternates: {
     canonical: "https://www.60onkosmos.co.za/contractor-accommodation-stikland",
   },
   openGraph: {
     title: "Project Team Accommodation Near Stikland | 60 on Kosmos",
     description: "Private ensuite rooms for project teams near Stikland. Secure parking, weekly cleaning, WiFi included.",
-    url: "https://60onkosmos.co.za/contractor-accommodation-stikland",
+    url: "https://www.60onkosmos.co.za/contractor-accommodation-stikland",
     type: "website",
   },
 }

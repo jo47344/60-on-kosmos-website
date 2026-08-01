@@ -26,7 +26,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { FAQSchema } from "@/components/faq-schema"
 
 export const metadata: Metadata = {
-  title: "Contractor Accommodation | From R580/Night",
+  title: "Project Team Accommodation | Bellville South",
   description: "Flexible accommodation for project teams from R580/night daily, R522/week, R464/month. Secure parking, WiFi, corporate billing available.",
   alternates: {
     canonical: "https://www.60onkosmos.co.za/contractor-accommodation",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     "contractor teams accommodation bellville",
   ],
   openGraph: {
-    title: "Contractor Accommodation | From R580/Night",
+    title: "Project Team Accommodation | Bellville South",
     description: "Flexible accommodation for project teams from R580/night daily, R522/week, R464/month. Secure parking, WiFi, corporate billing.",
     url: "https://www.60onkosmos.co.za/contractor-accommodation",
     type: "website",

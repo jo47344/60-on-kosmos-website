@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Project Team Accommodation in Bellville | 60 on Kosmos",
     description: "Private ensuite rooms in Bellville South. Secure parking, weekly cleaning, WiFi included. Corporate terms available.",
-    url: "https://60onkosmos.co.za/contractor-accommodation-bellville",
+    url: "https://www.60onkosmos.co.za/contractor-accommodation-bellville",
     type: "website",
   },
 }

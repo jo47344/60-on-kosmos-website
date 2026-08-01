@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Project Team Accommodation for Northern Suburbs | 60 on Kosmos",
     description: "Private ensuite rooms for project teams across the northern suburbs. Secure parking, weekly cleaning, WiFi included.",
-    url: "https://60onkosmos.co.za/contractor-accommodation-northern-suburbs",
+    url: "https://www.60onkosmos.co.za/contractor-accommodation-northern-suburbs",
     type: "website",
   },
 }

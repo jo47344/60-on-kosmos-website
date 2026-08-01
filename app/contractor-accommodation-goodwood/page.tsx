@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Project Team Accommodation Near Goodwood | 60 on Kosmos",
     description: "Private ensuite rooms for project teams near Goodwood. Secure parking, weekly cleaning, WiFi included.",
-    url: "https://60onkosmos.co.za/contractor-accommodation-goodwood",
+    url: "https://www.60onkosmos.co.za/contractor-accommodation-goodwood",
     type: "website",
   },
 }
