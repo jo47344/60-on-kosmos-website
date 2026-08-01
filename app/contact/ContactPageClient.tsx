@@ -67,7 +67,7 @@ export default function ContactPageClient() {
                 074 524 5703
               </a>
             </p>
-            <p className="text-green-700">Call or WhatsApp for instant booking</p>
+            <p className="text-green-700">Call or WhatsApp for availability and quotations</p>
           </div>
         </div>
 

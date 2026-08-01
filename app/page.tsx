@@ -54,6 +54,14 @@ export default function HomePage() {
       features: ["2 single beds", "Private ensuite", "Free WiFi", "Kitchen access"],
     },
     {
+      name: "Deluxe Twin Room",
+      price: "From R650/night",
+      monthlyPrice: "R520/night monthly",
+      image: "/images/deluxe-twin-room.jpg",
+      bestFor: "Best for professionals wanting extra comfort",
+      features: ["2 single beds", "Private ensuite", "Bar fridge", "Premium linens"],
+    },
+    {
       name: "Double Room",
       price: "From R680/night",
       monthlyPrice: "R544/night monthly",
@@ -89,14 +97,14 @@ export default function HomePage() {
           />
           <div className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-2 sm:mb-4 leading-tight">
-              Quality Accommodation for Project Teams
+              Private-Ensuite Accommodation for Project Teams
               <br />
-              <span className="text-sage-300">Flexible Terms, Trusted by Professionals</span>
+              <span className="text-sage-300">In Bellville South, Cape Town</span>
             </h1>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-4 sm:mb-6 md:mb-8 px-2">
-              Whether you need accommodation for a day, week, or month—we've got flexible options for contractors, construction crews, project teams, and working professionals.
+              Flexible weekly and monthly accommodation for contractors, project teams and working professionals. Four private-ensuite rooms accommodate teams of up to nine people.
               <br className="hidden md:block" />
-              Private ensuite rooms, free WiFi, secure parking, and hassle-free check-in.
+              WiFi, secure gated parking, weekly housekeeping, and company invoices included.
             </p>
             <div className="flex flex-col gap-2 sm:gap-3 md:flex-row md:gap-4 justify-center items-center px-4 sm:px-0">
               <Button
@@ -179,8 +187,8 @@ export default function HomePage() {
               <div className="flex items-center justify-center gap-2 sm:gap-3">
                 <Shield className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" />
                 <div className="text-left">
-                  <div className="font-semibold text-sm sm:text-base">24/7 CCTV Security</div>
-                  <div className="text-xs sm:text-sm opacity-90">Secure parking included</div>
+                  <div className="font-semibold text-sm sm:text-base">Secure Gated Parking</div>
+                  <div className="text-xs sm:text-sm opacity-90">CCTV surveillance included</div>
                 </div>
               </div>
               <div className="flex items-center justify-center gap-2 sm:gap-3">
@@ -378,13 +386,13 @@ export default function HomePage() {
 
             <div className="space-y-4 sm:space-y-6">
               <div className="bg-white rounded-lg border border-gray-200 p-4 sm:p-6">
-                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3">Can you take a crew of 8–10 workers for several months?</h3>
-                <p className="text-gray-700 text-sm sm:text-base">We&apos;re a four-room house designed for smaller skilled teams; long labour-crew deployments are usually better served by a rented house near site.</p>
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3">Can you accommodate teams of up to 9 people?</h3>
+                <p className="text-gray-700 text-sm sm:text-base">Yes. Our four private-ensuite guest rooms can accommodate teams of up to nine people, depending on the required room-sharing arrangement. Multi-room and full guest-accommodation bookings are subject to availability.</p>
               </div>
 
               <div className="bg-white rounded-lg border border-gray-200 p-4 sm:p-6">
                 <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3">How does invoicing work?</h3>
-                <p className="text-gray-700 text-sm sm:text-base">One consolidated monthly invoice to your company, month-to-month corporate agreement, no lease or deposit.</p>
+                <p className="text-gray-700 text-sm sm:text-base">One consolidated monthly invoice to your company, month-to-month flexible booking arrangement. A refundable security deposit may apply to extended stays.</p>
               </div>
 
               <div className="bg-white rounded-lg border border-gray-200 p-4 sm:p-6">
@@ -459,7 +467,7 @@ export default function HomePage() {
                 name: "How does invoicing work?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "One consolidated monthly invoice to your company, month-to-month corporate agreement, no lease or deposit.",
+                  text: "One consolidated monthly invoice to your company, month-to-month flexible booking arrangement. A refundable security deposit may apply to extended stays.",
                 },
               },
               {

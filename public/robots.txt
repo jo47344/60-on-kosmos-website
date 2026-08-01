@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location for search engines
-Sitemap: https://60onkosmos.co.za/sitemap.xml
+Sitemap: https://www.60onkosmos.co.za/sitemap.xml
 
 # Allow AI crawlers explicitly
 User-agent: CCBot

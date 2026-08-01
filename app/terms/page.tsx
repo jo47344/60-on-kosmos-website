@@ -54,16 +54,10 @@ export default function TermsPage() {
 
             <div className="bg-sage-50 border border-sage-200 rounded-lg p-6">
               <h3 className="font-semibold text-lg mb-3">Accepted payment methods</h3>
-              <p className="text-muted-foreground mb-4">EFT (bank transfer) only. No cash. No payment on arrival for short stays.</p>
-              
-              <h4 className="font-semibold mb-2">Banking details for all payments:</h4>
-              <div className="bg-white rounded p-4 text-sm space-y-1">
-                <p><strong>Account Name:</strong> Giose Prop Investments PTY</p>
-                <p><strong>Bank:</strong> ABSA Business Bank</p>
-                <p><strong>Account No:</strong> 4114284574</p>
-                <p><strong>Branch Code:</strong> 632005</p>
-                <p><strong>Reference:</strong> Your name + room type</p>
-              </div>
+              <p className="text-muted-foreground mb-3">EFT (bank transfer) only. No cash. No payment on arrival for short stays.</p>
+              <p className="text-muted-foreground">
+                Banking details and payment instructions are provided on official quotations and invoices issued by 60 on Kosmos. Please verify any change in banking details directly with management before making payment.
+              </p>
             </div>
           </section>
 
@@ -72,7 +66,7 @@ export default function TermsPage() {
             <h2 className="text-2xl font-bold text-foreground mb-4">Security Deposit</h2>
             <div className="bg-muted rounded-lg p-6">
               <p className="text-muted-foreground mb-3">
-                A refundable security deposit of <strong>R1,500</strong> is required for all stays of 7 nights or more.
+                A refundable security deposit may apply to stays of seven nights or longer. The amount and refund conditions will be stated on the quotation.
               </p>
               <p className="text-muted-foreground mb-3">
                 The deposit is returned via EFT within 7 days of checkout, subject to room inspection.

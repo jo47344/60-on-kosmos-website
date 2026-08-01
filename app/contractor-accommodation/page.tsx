@@ -296,7 +296,7 @@ export default function ContractorAccommodationPage() {
               Accommodation for Project Teams & Professionals in Bellville South
             </h1>
             <p className="text-xl text-gray-300 mb-4">
-              Book by the week or month — no lease, no hassle.
+              Book by the week or month with flexible terms and company invoicing.
             </p>
             <p className="text-lg text-gray-400 mb-8">
               Private ensuite rooms, secure parking, self-catering kitchen, and fast N1 access.
