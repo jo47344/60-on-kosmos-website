@@ -6,7 +6,7 @@ import { Card } from "@/components/ui/card"
 import { Calendar, ArrowLeft, Phone, Wifi, CheckCircle, Laptop } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Digital Nomad Guide | Cape Town,
+  title: "Digital Nomad Guide | Cape Town",
   description:
     "Why Bellville South is Cape Town's best-kept secret for digital nomads. Fast WiFi, low cost, great community. Complete guide to remote work accommodation, coworking, and costs.",
   keywords:

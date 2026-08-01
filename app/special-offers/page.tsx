@@ -6,7 +6,7 @@ import { Star, Clock, Users, Briefcase, Calendar, Gift, Phone, CheckCircle2, Tre
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
 
 export const metadata: Metadata = {
-  title: "Special Offers title: "Special Offers & Packages - 60 on Kosmos Bellville South | Save Up To 20%" Packages,
+  title: "Special Offers & Packages",
   description:
     "Book direct and save at 60 on Kosmos Bellville South. Special rates for contractors, medical professionals. Monthly rates from R12,720. Free WiFi & parking.",
   keywords:
