@@ -69,7 +69,7 @@ export default function ContractorAccommodationPage() {
       "Affordable self-catering contractor accommodation in Bellville South. Weekly & monthly rates for construction workers, artisan trainees, welders, boilermakers. Secure parking for bakkies, WiFi included. Near Sacks Circle, Mill Park, TAC Business Park, Northlink College.",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "60 Kosmosdalweg",
+      streetAddress: "60 Kosmos Street",
       addressLocality: "Bellville South",
       addressRegion: "Western Cape",
       postalCode: "7530",
@@ -84,7 +84,7 @@ export default function ContractorAccommodationPage() {
     url: "https://www.60onkosmos.co.za/contractor-accommodation",
     priceRange: "R464 - R840",
     currenciesAccepted: "ZAR",
-    paymentAccepted: "Cash, EFT, Bank Transfer",
+    paymentAccepted: "EFT",
     areaServed: [
       { "@type": "City", name: "Bellville South" },
       { "@type": "City", name: "Bellville" },
@@ -249,7 +249,7 @@ export default function ContractorAccommodationPage() {
     },
     {
       question: "Can contractors cook their own meals?",
-      answer: "Absolutely. All guests have access to self-catering facilities including a communal kitchen with stove, microwave, and large shared refrigerator. Standard Plus, Double, and Triple rooms include private bar fridges. Double rooms also have a microwave.",
+      answer: "Absolutely. All guests have access to self-catering facilities including a communal kitchen with stove, microwave, and refrigerator. Deluxe Twin, Double, and Triple rooms include private bar fridges; the Standard Twin does not.",
     },
     {
       question: "How close is 60 on Kosmos to industrial areas?",
@@ -295,7 +295,7 @@ export default function ContractorAccommodationPage() {
               Accommodation for Project Teams & Professionals in Bellville South
             </h1>
             <p className="text-xl text-gray-300 mb-4">
-              Book by the week or month with flexible terms and company invoicing.
+              Book by the week or month with flexible terms. Invoices are provided on request.
             </p>
             <p className="text-lg text-gray-400 mb-8">
               Private ensuite rooms, secure parking, self-catering kitchen, and fast N1 access.
@@ -360,7 +360,7 @@ export default function ContractorAccommodationPage() {
               <h2 className="text-3xl font-bold mb-4">Booking for a Crew or Team?</h2>
               <p className="text-gray-300 mb-6">
                 Get a custom quote for your entire team. We offer discounted rates for multiple rooms and extended stays. 
-                Company invoices provided for all bookings.
+                Invoices are provided on request.
               </p>
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <div className="flex items-center gap-2">

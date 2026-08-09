@@ -25,7 +25,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Conversion pages
     { url: "rooms", priority: 0.9, freq: "weekly" as const },
     { url: "book-now", priority: 0.9, freq: "daily" as const },
-    { url: "special-offers", priority: 0.85, freq: "weekly" as const },
 
     // Short-term university visitors (graduations, block week, visiting professors)
     { url: "student-faq", priority: 0.5, freq: "monthly" as const },

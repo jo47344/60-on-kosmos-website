@@ -66,7 +66,7 @@ export default function FAQPage() {
         name: "What's included in the room rate?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Each room includes a private ensuite bathroom, free WiFi, bar fridge, clean linen and towels, weekly cleaning service, and welcome refreshments. You also have access to our communal kitchenette with gas stove, microwave, and air fryer for light meal preparation.",
+          text: "Each room includes a private ensuite bathroom and free WiFi. Deluxe Twin, Double, and Triple rooms have a bar fridge; the Standard Twin does not. Clean linen and towels, weekly cleaning service, and welcome refreshments are included. You also have access to our communal kitchenette with gas stove, microwave, and air fryer for light meal preparation.",
         },
       },
       {
@@ -74,7 +74,7 @@ export default function FAQPage() {
         name: "Is there a kitchen I can use?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes! We have a communal kitchenette area equipped with a gas stove, microwave, air fryer, and basic cooking utensils. This is perfect for preparing light meals. Each room also has a bar fridge. There's a SPAR supermarket 2km away for groceries.",
+          text: "Yes! We have a communal kitchenette area equipped with a gas stove, microwave, air fryer, and basic cooking utensils. This is perfect for preparing light meals. Deluxe Twin, Double, and Triple rooms have a bar fridge; the Standard Twin does not. There's a SPAR supermarket 2km away for groceries.",
         },
       },
       {
@@ -82,7 +82,7 @@ export default function FAQPage() {
         name: "Is breakfast included?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "No, we are self-catering accommodation and do not provide meals. However, you have access to our communal kitchenette with a gas stove, microwave, and air fryer to prepare your own meals. Each room also has a bar fridge.",
+          text: "No, we are self-catering accommodation and do not provide meals. However, you have access to our communal kitchenette with a gas stove, microwave, and air fryer to prepare your own meals. Deluxe Twin, Double, and Triple rooms have a bar fridge; the Standard Twin does not.",
         },
       },
       {
@@ -90,7 +90,7 @@ export default function FAQPage() {
         name: "What payment methods do you accept?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "We accept EFT (Electronic Fund Transfer) bank payments only. We provide banking details upon booking confirmation and issue detailed invoices for all payments. This is perfect for contractors and companies requiring proper documentation for expenses.",
+          text: "We accept EFT (Electronic Fund Transfer) bank payments only. We provide banking details upon booking confirmation. Invoices are provided on request.",
         },
       },
       {
@@ -98,7 +98,7 @@ export default function FAQPage() {
         name: "Do you provide invoices?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes! We provide detailed invoices for all bookings. This is especially useful for contractors, companies, and anyone needing receipts for tax or expense purposes. Invoices are emailed immediately after payment confirmation.",
+          text: "Invoices are provided on request for guests, contractors, and companies that need booking documentation.",
         },
       },
       {
@@ -138,7 +138,7 @@ export default function FAQPage() {
         name: "What cooking facilities are available?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "We have a communal kitchenette with a gas stove, microwave, air fryer, kettle, and basic cooking utensils. This is shared by all guests and is perfect for preparing light meals. Each room also has its own bar fridge.",
+          text: "We have a communal kitchenette with a gas stove, microwave, air fryer, kettle, and basic cooking utensils. This is shared by all guests and is perfect for preparing light meals. Deluxe Twin, Double, and Triple rooms have a bar fridge; the Standard Twin does not.",
         },
       },
       {
@@ -208,27 +208,27 @@ export default function FAQPage() {
     {
       question: "What's included in the room rate?",
       answer:
-        "Each room includes a private ensuite bathroom, free WiFi, bar fridge, clean linen and towels, weekly cleaning service, and welcome refreshments. You also have access to our communal kitchenette with gas stove, microwave, and air fryer for light meal preparation.",
+        "Each room includes a private ensuite bathroom and free WiFi. Deluxe Twin, Double, and Triple rooms have a bar fridge; the Standard Twin does not. Clean linen and towels, weekly cleaning service, and welcome refreshments are included. You also have access to our communal kitchenette with gas stove, microwave, and air fryer for light meal preparation.",
     },
     {
       question: "Is there a kitchen I can use?",
       answer:
-        "Yes! We have a communal kitchenette area equipped with a gas stove, microwave, air fryer, and basic cooking utensils. This is perfect for preparing light meals. Each room also has a bar fridge. There's a SPAR supermarket 2km away for groceries.",
+        "Yes! We have a communal kitchenette area equipped with a gas stove, microwave, air fryer, and basic cooking utensils. This is perfect for preparing light meals. Deluxe Twin, Double, and Triple rooms have a bar fridge; the Standard Twin does not. There's a SPAR supermarket 2km away for groceries.",
     },
     {
       question: "Is breakfast included?",
       answer:
-        "No, we are self-catering accommodation and do not provide meals. However, you have access to our communal kitchenette with a gas stove, microwave, and air fryer to prepare your own meals. Each room also has a bar fridge.",
+        "No, we are self-catering accommodation and do not provide meals. However, you have access to our communal kitchenette with a gas stove, microwave, and air fryer to prepare your own meals. Deluxe Twin, Double, and Triple rooms have a bar fridge; the Standard Twin does not.",
     },
     {
       question: "What payment methods do you accept?",
       answer:
-        "We accept EFT (Electronic Fund Transfer) bank payments only. We provide banking details upon booking confirmation and issue detailed invoices for all payments. This is perfect for contractors and companies requiring proper documentation for expenses.",
+        "We accept EFT (Electronic Fund Transfer) bank payments only. We provide banking details upon booking confirmation. Invoices are provided on request.",
     },
     {
       question: "Do you provide invoices?",
       answer:
-        "Yes! We provide detailed invoices for all bookings. This is especially useful for contractors, companies, and anyone needing receipts for tax or expense purposes. Invoices are emailed immediately after payment confirmation.",
+        "Invoices are provided on request for guests, contractors, and companies that need booking documentation.",
     },
     {
       question: "What are your check-in and check-out times?",
@@ -253,7 +253,7 @@ export default function FAQPage() {
     {
       question: "What cooking facilities are available?",
       answer:
-        "We have a communal kitchenette with a gas stove, microwave, air fryer, kettle, and basic cooking utensils. This is shared by all guests and is perfect for preparing light meals. Each room also has its own bar fridge.",
+        "We have a communal kitchenette with a gas stove, microwave, air fryer, kettle, and basic cooking utensils. This is shared by all guests and is perfect for preparing light meals. Deluxe Twin, Double, and Triple rooms have a bar fridge; the Standard Twin does not.",
     },
     {
       question: "What is your cancellation policy?",

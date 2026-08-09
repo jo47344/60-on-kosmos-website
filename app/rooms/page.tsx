@@ -99,6 +99,7 @@ export default function RoomsPage() {
       features: [
         "3 single beds",
         "Private ensuite bathroom",
+        "Bar fridge",
         "Kettle",
         "Workspace area",
         "Weekly cleaning",
@@ -147,7 +148,7 @@ export default function RoomsPage() {
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Self-Catering Rooms & Rates</h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            All rooms include a private ensuite bathroom, bar fridge, free WiFi, clean linen, welcome refreshments, and weekly cleaning service.
+            All rooms include a private ensuite bathroom and free WiFi. Deluxe Twin, Double, and Triple rooms include a bar fridge; Standard Twin does not. Clean linen, welcome refreshments, and weekly cleaning service are included.
           </p>
         </div>
 

@@ -18,7 +18,7 @@ export function LocalBusinessSchema() {
     email: "info@60onkosmos.co.za",
     priceRange: "R580-R840",
     currenciesAccepted: "ZAR",
-    paymentAccepted: "EFT, Bank Transfer",
+    paymentAccepted: "EFT",
     address: {
       "@type": "PostalAddress",
       streetAddress: "60 Kosmos Street",
@@ -117,7 +117,7 @@ export function LocalBusinessSchema() {
       { "@type": "LocationFeatureSpecification", name: "Secure Parking", value: true },
       { "@type": "LocationFeatureSpecification", name: "24/7 CCTV Security", value: true },
       { "@type": "LocationFeatureSpecification", name: "Ensuite Bathrooms", value: true },
-      { "@type": "LocationFeatureSpecification", name: "Bar Fridge (select rooms)", value: true },
+      { "@type": "LocationFeatureSpecification", name: "Bar Fridge in Deluxe Twin, Double, and Triple rooms", value: true },
       { "@type": "LocationFeatureSpecification", name: "Weekly Cleaning Service", value: true },
       { "@type": "LocationFeatureSpecification", name: "Communal Kitchenette", value: true },
       { "@type": "LocationFeatureSpecification", name: "Outdoor Seating Area", value: true },

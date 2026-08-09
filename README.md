@@ -286,8 +286,8 @@ npm run dev
 60 Kosmos Street, Bellville South
 Cape Town, 7530, South Africa
 
-Phone: +27 21 948 8314
-WhatsApp: +27 21 948 8314
+Phone: +27 74 524 5703
+WhatsApp: +27 74 524 5703
 Email: info@60onkosmos.co.za
 
 ## Support

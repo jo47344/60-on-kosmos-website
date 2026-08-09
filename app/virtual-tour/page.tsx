@@ -32,7 +32,7 @@ export default function VirtualTourPage() {
     {
       title: "Standard Twin Room",
       description: "Comfortable twin beds with ensuite bathroom. Perfect for contractors and budget travelers.",
-      features: ["2 Single Beds", "Ensuite Bathroom", "Bar Fridge", "Free WiFi", "Work Desk"],
+      features: ["2 Single Beds", "Ensuite Bathroom", "No Bar Fridge", "Free WiFi", "Work Desk"],
       images: [
         {
           src: "/images/twin-room-yellow.png",

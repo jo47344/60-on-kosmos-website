@@ -110,7 +110,7 @@ export default function GoodwoodAccommodationPage() {
                   <div>
                     <h3 className="font-bold mb-2">Professional Corporate Service</h3>
                     <p className="text-gray-600">
-                      One invoice, net 30 terms, and dedicated account support for large teams and project companies.
+                      Invoices are provided on request, with dedicated account support for large teams and project companies.
                     </p>
                   </div>
                 </div>
