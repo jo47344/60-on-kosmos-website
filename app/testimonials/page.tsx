@@ -94,7 +94,7 @@ export default function TestimonialsPage() {
                 <p className="text-xs text-sage-600 font-semibold mt-2">46 verified reviews</p>
                 <p className="text-xs text-gray-500 mt-1">Staff score: 9.2</p>
                 <Button asChild size="sm" className="mt-4 w-full bg-sage-600 hover:bg-sage-700" variant="default">
-                  <a href="https://www.booking.com/hotel/za/60-on-kosmos.html" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.booking.com/hotel/za/60-on-kosmos-cape-town.html" target="_blank" rel="noopener noreferrer">
                     View on Booking.com
                   </a>
                 </Button>

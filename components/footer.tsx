@@ -67,7 +67,7 @@ export function Footer() {
               </div>
               <div className="space-y-2 text-sm">
                 <a
-                  href="https://www.booking.com/hotel/za/60-on-kosmos-bellville-south.html"
+                  href="https://www.booking.com/hotel/za/60-on-kosmos-cape-town.html"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sage-300 hover:text-sage-100 transition-colors block"
