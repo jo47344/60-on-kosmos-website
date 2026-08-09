@@ -832,8 +832,8 @@ export default function ContractorAccommodationPage() {
 
           <div className="text-center mt-10">
             <Button asChild className="bg-sage-600 hover:bg-sage-700">
-              <a href="https://www.booking.com/hotel/za/60-on-kosmos.html" target="_blank" rel="noopener noreferrer">
-                See All Reviews on Booking.com
+<a href="https://www.booking.com/hotel/za/60-on-kosmos-cape-town.html" target="_blank" rel="noopener noreferrer">
+                  See All Reviews on Booking.com
               </a>
             </Button>
           </div>
