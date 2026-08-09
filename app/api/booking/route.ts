@@ -3,7 +3,7 @@ import { type NextRequest, NextResponse } from "next/server"
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
-    const { name, phone, checkinDate, checkoutDate, roomType, notes } = body
+    const { name, phone, guestCount, companyName, checkinDate, checkoutDate, notes } = body
 
     // Format the email content
     const emailContent = `
@@ -14,7 +14,8 @@ Guest Details:
 - Phone: ${phone}
 - Check-in: ${checkinDate}
 - Check-out: ${checkoutDate}
-- Room Type: ${roomType}
+- Guests/team members: ${guestCount}
+- Company: ${companyName || "Not provided"}
 - Special Requests: ${notes || "None"}
 
 Please contact the guest to confirm availability and finalize the booking.
@@ -34,7 +35,8 @@ Sent from: 60onkosmos.co.za booking form
       phone,
       checkinDate,
       checkoutDate,
-      roomType,
+      guestCount,
+      companyName,
       notes,
     })
 

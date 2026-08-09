@@ -7,7 +7,6 @@ import { Logo } from "@/components/logo"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Calendar, Phone, User, CheckCircle, Loader2 } from "lucide-react"
 
 export default function BookNowClientPage() {
@@ -16,7 +15,8 @@ export default function BookNowClientPage() {
     phone: "",
     checkinDate: "",
     checkoutDate: "",
-    roomType: "",
+    guestCount: "",
+    companyName: "",
     notes: "",
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -31,20 +31,12 @@ export default function BookNowClientPage() {
     setError("")
   }
 
-  const handleSelectChange = (value: string) => {
-    setFormData({
-      ...formData,
-      roomType: value,
-    })
-    setError("")
-  }
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
     setError("")
 
-    if (!formData.name || !formData.phone || !formData.checkinDate || !formData.checkoutDate || !formData.roomType) {
+    if (!formData.name || !formData.phone || !formData.guestCount || !formData.checkinDate || !formData.checkoutDate) {
       setError("Please fill in all required fields.")
       setIsSubmitting(false)
       return
@@ -75,7 +67,8 @@ export default function BookNowClientPage() {
           phone: "",
           checkinDate: "",
           checkoutDate: "",
-          roomType: "",
+          guestCount: "",
+          companyName: "",
           notes: "",
         })
       } else {
@@ -216,20 +209,37 @@ export default function BookNowClientPage() {
           </div>
 
           <div>
-            <Label htmlFor="roomType" className="text-sm font-medium text-gray-700">
-              Room Type *
+            <Label htmlFor="guestCount" className="text-sm font-medium text-gray-700">
+              Number of guests or team members *
             </Label>
-            <Select onValueChange={handleSelectChange} required disabled={isSubmitting}>
-              <SelectTrigger className="mt-1 w-full border rounded p-3 text-gray-700 focus:ring-sage-500 focus:border-sage-500">
-                <SelectValue placeholder="Select room type" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="standard-twin">Standard Twin Room (R580/night)</SelectItem>
-                <SelectItem value="deluxe-twin">Deluxe Twin Room (R650/night)</SelectItem>
-                <SelectItem value="double-room">Double Room (R680/night)</SelectItem>
-                <SelectItem value="triple-room">Triple Room (R840/night)</SelectItem>
-              </SelectContent>
-            </Select>
+            <Input
+              id="guestCount"
+              name="guestCount"
+              type="number"
+              min="1"
+              required
+              value={formData.guestCount}
+              onChange={handleInputChange}
+              className="mt-1 w-full border rounded p-3 text-gray-700 focus:ring-sage-500 focus:border-sage-500"
+              placeholder="e.g., 4"
+              disabled={isSubmitting}
+            />
+          </div>
+
+          <div>
+            <Label htmlFor="companyName" className="text-sm font-medium text-gray-700">
+              Company name (optional)
+            </Label>
+            <Input
+              id="companyName"
+              name="companyName"
+              type="text"
+              value={formData.companyName}
+              onChange={handleInputChange}
+              className="mt-1 w-full border rounded p-3 text-gray-700 focus:ring-sage-500 focus:border-sage-500"
+              placeholder="Company or project name"
+              disabled={isSubmitting}
+            />
           </div>
 
           <div>
@@ -259,7 +269,7 @@ export default function BookNowClientPage() {
                 Sending Request...
               </>
             ) : (
-              "📧 Send Booking Request"
+              "Send Booking Request"
             )}
           </Button>
 
