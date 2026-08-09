@@ -339,8 +339,8 @@ export default function StudentFAQPage() {
                 </AccordionTrigger>
                 <AccordionContent className="text-gray-600">
                   We welcome international students from all countries. Many international UWC and CPUT students stay
-                  with us during semester breaks when campus residences are closed. We can provide any documentation you
-                  need for visa purposes.
+                  with us during semester breaks when campus residences are closed. Please confirm any visa documentation
+                  requirements with the relevant authorities before booking.
                 </AccordionContent>
               </AccordionItem>
 

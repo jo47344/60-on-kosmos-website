@@ -50,7 +50,7 @@ export default function FAQPage() {
         name: "Do you allow contractors and offer monthly rates?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "We welcome contractors and offer discounted weekly and monthly rates. We provide detailed invoices for all bookings, perfect for contractors needing receipts for company expenses. Contact us directly for a personalized quote.",
+          text: "We welcome contractors and offer discounted weekly and monthly rates. Invoices are provided on request. Contact us directly for a personalized quote.",
         },
       },
       {
@@ -198,7 +198,7 @@ export default function FAQPage() {
     {
       question: "Do you allow contractors and offer monthly rates?",
       answer:
-        "We welcome contractors and offer discounted weekly and monthly rates. We provide detailed invoices for all bookings, perfect for contractors needing receipts for company expenses. Contact us directly for a personalized quote.",
+        "We welcome contractors and offer discounted weekly and monthly rates. Invoices are provided on request. Contact us directly for a personalized quote.",
     },
     {
       question: "How far are you from Tygerberg Hospital?",
