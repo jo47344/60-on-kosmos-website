@@ -66,7 +66,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_ZA",
-    url: "https://60onkosmos.co.za",
+    url: "https://www.60onkosmos.co.za",
     siteName: "60 on Kosmos Guesthouse Bellville South",
     title: "60 on Kosmos - Affordable Guesthouse Accommodation in Bellville South",
     description:

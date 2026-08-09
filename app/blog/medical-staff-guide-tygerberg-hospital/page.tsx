@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 }
 
 export default function MedicalStaffGuidePage() {
-  const pageUrl = "https://60onkosmos.co.za/blog/medical-staff-guide-tygerberg-hospital"
+  const pageUrl = "https://www.60onkosmos.co.za/blog/medical-staff-guide-tygerberg-hospital"
   const pageTitle = "Complete Guide for Medical Staff Relocating to Tygerberg Hospital"
 
   return (
