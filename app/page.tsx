@@ -132,7 +132,7 @@ export default function HomePage() {
                     <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <span className="text-sm sm:text-base lg:text-lg font-semibold">8.0/10 on Booking.com</span>
+                <span className="text-sm sm:text-base lg:text-lg font-semibold">Verified guest reviews on Booking.com</span>
               </a>
             </div>
           </div>
@@ -190,7 +190,7 @@ export default function HomePage() {
                 <Shield className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" />
                 <div className="text-left">
                   <div className="font-semibold text-sm sm:text-base">Secure Gated Parking</div>
-                  <div className="text-xs sm:text-sm opacity-90">CCTV surveillance included</div>
+                  <div className="text-xs sm:text-sm opacity-90">CCTV · secure gated parking · ADT armed response</div>
                 </div>
               </div>
               <div className="flex items-center justify-center gap-2 sm:gap-3">
@@ -330,7 +330,7 @@ export default function HomePage() {
                   <GraduationCap className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 text-sage-600" />
                   <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">International Students</h3>
                   <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4">
-                    5km from UWC, 4.5km from CPUT. Visa support, payment plans, and flexible arrival times.
+                    5km from UWC and 4.5km from CPUT. Flexible arrival times for student stays.
                   </p>
                   <Button asChild variant="outline" className="border-sage-600 text-sage-600 bg-transparent w-full">
                     <Link href="/rooms">Student Options</Link>
@@ -375,7 +375,7 @@ export default function HomePage() {
                   <Car className="w-7 h-7 sm:w-8 sm:h-8 text-sage-600" />
                 </div>
                 <h3 className="font-semibold text-base sm:text-lg mb-1 sm:mb-2">Secure Parking</h3>
-                <p className="text-gray-600 text-xs sm:text-sm">Locked gates + CCTV</p>
+                <p className="text-gray-600 text-xs sm:text-sm">CCTV + ADT armed response</p>
               </div>
 
               <div className="text-center">

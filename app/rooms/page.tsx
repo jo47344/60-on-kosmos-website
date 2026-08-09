@@ -6,13 +6,13 @@ import { Badge } from "@/components/ui/badge"
 import { Wifi, Coffee, Car, Shield, Phone } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Rooms & Rates | From R464/Month",
+  title: "Rooms & Rates | From R580/Night | Monthly Discounts",
   description: "Rooms and rates at 60 on Kosmos. Standard Twin R580/night, Deluxe R650, Double R680, Triple R840. Monthly rates available.",
   keywords:
     "Self-catering rooms Bellville South, contractor accommodation Cape Town, rooms with ensuite Bellville, monthly accommodation Bellville, private bathroom accommodation Cape Town",
   alternates: { canonical: "https://www.60onkosmos.co.za/rooms" },
   openGraph: {
-    title: "Rooms & Rates | From R464/Month",
+    title: "Rooms & Rates | From R580/Night | Monthly Discounts",
     description: "Rooms and rates at 60 on Kosmos. Standard Twin R580/night, Deluxe R650, Double R680, Triple R840. Monthly rates available.",
     url: "https://www.60onkosmos.co.za/rooms",
     type: "website",
@@ -34,7 +34,7 @@ export default function RoomsPage() {
       name: "Standard Twin Room",
       price: "R580/night",
       weeklyPrice: "R522/night",
-      monthlyPrice: "R464/night",
+      monthlyPrice: "R464/night on 28+ night stays",
       image: "/images/standard-twin-room.jpg",
       alt: "Standard twin room guesthouse Bellville South - clean twin beds with botanical pillows and modern ensuite bathroom",
       bestFor: "Best for 2 contractors or 2 professionals sharing.",
@@ -126,7 +126,7 @@ export default function RoomsPage() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              WhatsApp for Monthly Rates
+              WhatsApp for Availability & Quote
             </a>
           </p>
         </div>
@@ -280,7 +280,7 @@ export default function RoomsPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-sage-600 hover:bg-sage-700">
               <a href="https://wa.me/27745245703?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20your%20monthly%20rates" target="_blank" rel="noopener noreferrer">
-                WhatsApp for Monthly Rates
+                WhatsApp for Availability & Quote
               </a>
             </Button>
             <Button asChild size="lg" variant="outline" className="border-white text-white bg-transparent hover:bg-white/10">
@@ -358,8 +358,7 @@ export default function RoomsPage() {
         <div className="mt-12 bg-blue-50 border border-blue-200 rounded-lg p-6">
           <h3 className="text-lg font-bold text-gray-900 mb-3">ℹ️ Self-Catering Accommodation</h3>
           <p className="text-gray-700 mb-4">
-            60 on Kosmos is a self-catering guesthouse. We do not provide meals or daily cleaning. Each room has a bar
-            fridge for your convenience.
+            60 on Kosmos is a self-catering guesthouse. We do not provide meals or daily cleaning. Deluxe Twin, Double, and Triple rooms include a bar fridge; Standard Twin does not.
           </p>
           <ul className="space-y-2 text-sm text-gray-600">
             <li className="flex items-center">
