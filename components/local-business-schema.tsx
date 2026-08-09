@@ -12,7 +12,7 @@ export function LocalBusinessSchema() {
       "Project Team Lodging Cape Town",
     ],
     description:
-      "Flexible accommodation for project-based teams, contractors, and working professionals. Private ensuite rooms with free WiFi, secure parking, and 24/7 security in Bellville South, Cape Town. Flexible terms from 1 night to monthly stays. Daily, weekly, and monthly rates available.",
+      "Furnished private-ensuite accommodation for students, contractors, medical staff, and working professionals in Bellville South, Cape Town. Private rooms with free WiFi and secure parking. Monthly rates apply to stays of 28 nights or more.",
     url: "https://www.60onkosmos.co.za",
     telephone: "+27745245703",
     email: "info@60onkosmos.co.za",
@@ -132,55 +132,6 @@ export function LocalBusinessSchema() {
       bestRating: "5",
       worstRating: "1",
     },
-    makesOffer: [
-      {
-        "@type": "Offer",
-        name: "Contractor Monthly Accommodation",
-        description:
-          "Monthly accommodation for construction workers, contractors, boilermakers near Sacks Circle, Mill Park, Stikland",
-        priceSpecification: {
-          "@type": "UnitPriceSpecification",
-          price: "464",
-          priceCurrency: "ZAR",
-          unitText: "per night (monthly rate)",
-        },
-      },
-      {
-        "@type": "Offer",
-        name: "Apprentice Training Accommodation",
-        description:
-          "Accommodation for apprentices attending boilermaker, welding, electrical courses at John Thompson and Northlink College",
-        priceSpecification: {
-          "@type": "UnitPriceSpecification",
-          price: "580",
-          priceCurrency: "ZAR",
-          unitText: "per night",
-        },
-      },
-      {
-        "@type": "Offer",
-        name: "Construction Crew Housing",
-        description: "Housing for construction crews working in Bellville, Parow, Stikland, Goodwood, Kuilsriver. Triple Room R224/person/night on monthly rates.",
-        priceSpecification: {
-          "@type": "UnitPriceSpecification",
-          price: "840",
-          priceCurrency: "ZAR",
-          unitText: "per night",
-        },
-      },
-      {
-        "@type": "Offer",
-        name: "Industrial Worker Accommodation",
-        description:
-          "Weekly and monthly stays for workers at Parow Industria, Stikland Industrial, Blackheath Industrial Park",
-        priceSpecification: {
-          "@type": "UnitPriceSpecification",
-          price: "580",
-          priceCurrency: "ZAR",
-          unitText: "per night",
-        },
-      },
-    ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Room Types at 60 on Kosmos",
