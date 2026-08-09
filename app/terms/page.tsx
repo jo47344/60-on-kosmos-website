@@ -2,7 +2,6 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
-import { LocalBusinessSchema } from "@/components/local-business-schema"
 
 export const metadata: Metadata = {
   title: "Terms & House Rules | 60 on Kosmos Guest House",
@@ -15,7 +14,6 @@ export const metadata: Metadata = {
 export default function TermsPage() {
   return (
     <>
-      <LocalBusinessSchema />
       <Navigation />
       <main className="min-h-screen bg-background">
         {/* Hero Section */}

@@ -13,6 +13,15 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Verified Guest Reviews - 60 on Kosmos",
     description: "Real reviews from Booking.com, Airbnb, and Google reviews",
+    url: "https://www.60onkosmos.co.za/testimonials",
+    images: [
+      {
+        url: "https://www.60onkosmos.co.za/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "60 on Kosmos Guest Reviews",
+      },
+    ],
   },
 }
 

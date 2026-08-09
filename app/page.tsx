@@ -16,7 +16,6 @@ import {
   GraduationCap,
   ArrowRight,
 } from "lucide-react"
-import { StructuredData } from "@/components/structured-data"
 import { TrustBadges } from "@/components/trust-badges"
 import { LatestBlogPosts } from "@/components/latest-blog-posts"
 import type { Metadata } from "next"
@@ -81,8 +80,6 @@ export default function HomePage() {
 
   return (
     <>
-      <StructuredData />
-
       <div className="flex flex-col">
         {/* Hero Section */}
         <section className="relative h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] flex items-center justify-center">

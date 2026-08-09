@@ -8,8 +8,48 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
         disallow: ["/api/"],
       },
+      {
+        userAgent: "Googlebot",
+        allow: "/",
+      },
+      {
+        userAgent: "CCBot",
+        allow: "/",
+      },
+      {
+        userAgent: "anthropic-ai",
+        allow: "/",
+      },
+      {
+        userAgent: "Claude-Web",
+        allow: "/",
+      },
+      {
+        userAgent: "GPTBot",
+        allow: "/",
+      },
+      {
+        userAgent: "ChatGPT-User",
+        allow: "/",
+      },
+      {
+        userAgent: "OpenAI-SearchBot",
+        allow: "/",
+      },
+      {
+        userAgent: "Perplexity",
+        allow: "/",
+      },
+      {
+        userAgent: "PerplexityBot",
+        allow: "/",
+      },
+      {
+        userAgent: "Diffbot",
+        allow: "/",
+      },
     ],
-    sitemap: "https://60onkosmos.co.za/sitemap.xml",
-    host: "https://60onkosmos.co.za",
+    sitemap: "https://www.60onkosmos.co.za/sitemap.xml",
+    host: "https://www.60onkosmos.co.za",
   }
 }
