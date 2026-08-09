@@ -7,13 +7,13 @@ import { Card, CardContent } from "@/components/ui/card"
 export const metadata: Metadata = {
   title: "Monthly Accommodation in Bellville South | 60 on Kosmos",
   description:
-    "Monthly accommodation in Bellville South for project teams. Furnished private-ensuite rooms with WiFi, secure gated parking, communal self-catering facilities and weekly housekeeping included. Company invoices available.",
+    "Monthly accommodation in Bellville South for project teams. Furnished private-ensuite rooms with WiFi, secure gated parking, communal self-catering facilities and weekly housekeeping included. Invoices are provided on request.",
   alternates: {
     canonical: "https://www.60onkosmos.co.za/monthly-accommodation",
   },
   openGraph: {
     title: "Monthly Accommodation in Bellville South | 60 on Kosmos",
-    description: "Monthly accommodation in Bellville South for project teams. Furnished private-ensuite rooms with WiFi, secure gated parking, communal self-catering facilities and weekly housekeeping included. Company invoices available.",
+    description: "Monthly accommodation in Bellville South for project teams. Furnished private-ensuite rooms with WiFi, secure gated parking, communal self-catering facilities and weekly housekeeping included. Invoices are provided on request.",
     url: "https://www.60onkosmos.co.za/monthly-accommodation",
     type: "website",
     images: [
@@ -36,7 +36,7 @@ export default function MonthlyAccommodationPage() {
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Monthly Accommodation in Bellville South</h1>
             <p className="text-xl text-gray-600 mb-8">
-              Need monthly accommodation in Bellville South for a project team or work assignment? We offer furnished private-ensuite rooms with WiFi, secure gated parking, communal self-catering facilities and weekly housekeeping included. Company invoices and multi-room quotations are available.
+              Need monthly accommodation in Bellville South for a project team or work assignment? We offer furnished private-ensuite rooms with WiFi, secure gated parking, communal self-catering facilities and weekly housekeeping included. Invoices are provided on request, and multi-room quotations are available.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-sage-600 hover:bg-sage-700">

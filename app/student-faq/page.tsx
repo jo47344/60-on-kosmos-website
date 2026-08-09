@@ -156,8 +156,7 @@ export default function StudentFAQPage() {
                 <AccordionTrigger className="text-left">Do you offer student discounts?</AccordionTrigger>
                 <AccordionContent className="text-gray-600">
                   We offer discounted rates for monthly bookings, which work out much cheaper than nightly rates. For
-                  semester-long stays, WhatsApp us for a custom quote. We also occasionally have special offers - follow
-                  us or check our special offers page!
+                  semester-long stays, WhatsApp us for a custom quote. For stays of 28 nights or more, WhatsApp us for a quote.
                 </AccordionContent>
               </AccordionItem>
 
@@ -188,8 +187,7 @@ export default function StudentFAQPage() {
               <AccordionItem value="item-7">
                 <AccordionTrigger className="text-left">Can I cook my own meals?</AccordionTrigger>
                 <AccordionContent className="text-gray-600">
-                  We have a communal kitchenette where you can prepare meals. Each room also has a bar fridge to store
-                  your food and drinks. This is perfect for students on a budget who want to save money by cooking
+                  We have a communal kitchenette where you can prepare meals. Deluxe Twin, Double, and Triple rooms have a bar fridge; the Standard Twin does not. This is perfect for students on a budget who want to save money by cooking
                   instead of eating out.
                 </AccordionContent>
               </AccordionItem>

@@ -110,7 +110,7 @@ export default function KuilsRiverAccommodationPage() {
                   <div>
                     <h3 className="font-bold mb-2">Streamlined Corporate Billing</h3>
                     <p className="text-gray-600">
-                      One invoice for your entire team. Net 30 payment terms available for large projects and contracts.
+                      Invoices are provided on request for large projects and contracts.
                     </p>
                   </div>
                 </div>

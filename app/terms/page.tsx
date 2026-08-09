@@ -54,7 +54,7 @@ export default function TermsPage() {
               <h3 className="font-semibold text-lg mb-3">Accepted payment methods</h3>
               <p className="text-muted-foreground mb-3">EFT (bank transfer) only. No cash. No payment on arrival for short stays.</p>
               <p className="text-muted-foreground">
-                Banking details and payment instructions are provided on official quotations and invoices issued by 60 on Kosmos. Please verify any change in banking details directly with management before making payment.
+                Banking details and payment instructions are provided on official quotations. Invoices are provided on request. Please verify any change in banking details directly with management before making payment.
               </p>
             </div>
           </section>
@@ -124,7 +124,7 @@ export default function TermsPage() {
             <h2 className="text-2xl font-bold text-foreground mb-4">Check-In & Check-Out</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
               <div className="bg-muted rounded-lg p-6 text-center">
-                <p className="text-3xl font-bold text-sage-600 mb-2">14:00 – 20:00</p>
+                <p className="text-3xl font-bold text-sage-600 mb-2">14:00</p>
                 <p className="text-muted-foreground">Check-In Time</p>
               </div>
               <div className="bg-muted rounded-lg p-6 text-center">
@@ -134,7 +134,6 @@ export default function TermsPage() {
             </div>
             <div className="bg-muted rounded-lg p-6">
               <ul className="space-y-2 text-muted-foreground">
-                <li>Late check-in after 20:00 must be arranged in advance via WhatsApp</li>
                 <li>Early check-in and late check-out subject to availability and may incur an additional charge</li>
                 <li>Valid South African ID or passport required from all guests at check-in</li>
                 <li>International guests must present a valid passport and visa documentation</li>
@@ -228,7 +227,7 @@ export default function TermsPage() {
             <h2 className="text-2xl font-bold text-foreground mb-4">Rates</h2>
             <div className="bg-muted rounded-lg p-6">
               <p className="text-muted-foreground mb-4">
-                Current rates start from <strong>R580/night</strong> (Standard Twin Room, 1–6 nights). Monthly contractor rates from <strong>R464/night</strong>.
+                Current rates start from <strong>R580/night</strong> (Standard Twin Room, 1–6 nights). Monthly rates apply to stays of 28 nights or more.
               </p>
               <p className="text-sm text-muted-foreground italic">
                 All rates confirmed at time of booking are honoured for that booking period. Rates are subject to change for new bookings without prior notice.

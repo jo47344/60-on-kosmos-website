@@ -111,7 +111,7 @@ export default function NorthernSuburbsAccommodationPage() {
                   <div>
                     <h3 className="font-bold mb-2">One Invoice for Your Team</h3>
                     <p className="text-gray-600">
-                      Corporate billing with net 30 terms. Simplified administration for large teams across multiple sites.
+                      Invoices are provided on request. Simplified administration for large teams across multiple sites.
                     </p>
                   </div>
                 </div>

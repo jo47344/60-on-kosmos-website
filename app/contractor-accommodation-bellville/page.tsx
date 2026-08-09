@@ -110,9 +110,9 @@ export default function BellvilleAccommodationPage() {
                 <div className="flex gap-4">
                   <Briefcase className="w-6 h-6 text-sage-600 flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-bold mb-2">Corporate Invoicing &amp; Net 30</h3>
+                    <h3 className="font-bold mb-2">Corporate Invoicing</h3>
                     <p className="text-gray-600">
-                      One invoice for all team members. Flexible payment terms for contractors and established companies.
+                      Invoices are provided on request for contractor and company bookings.
                     </p>
                   </div>
                 </div>

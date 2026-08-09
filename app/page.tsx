@@ -101,7 +101,7 @@ export default function HomePage() {
             <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-4 sm:mb-6 md:mb-8 px-2">
               Flexible weekly and monthly accommodation for contractors, project teams and working professionals. Four private-ensuite rooms accommodate teams of up to nine people.
               <br className="hidden md:block" />
-              WiFi, secure gated parking, weekly housekeeping, and company invoices included.
+              WiFi, secure gated parking, and weekly housekeeping included. Invoices are provided on request.
             </p>
             <div className="flex flex-col gap-2 sm:gap-3 md:flex-row md:gap-4 justify-center items-center px-4 sm:px-0">
               <Button

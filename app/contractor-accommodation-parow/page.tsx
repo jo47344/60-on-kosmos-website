@@ -118,7 +118,7 @@ export default function ParowAccommodationPage() {
                   <div>
                     <h3 className="font-bold mb-2">Corporate Invoicing</h3>
                     <p className="text-gray-600">
-                      One invoice, net 30 terms available. Perfect for large teams and project management companies.
+                      Invoices are provided on request for large teams and project management companies.
                     </p>
                   </div>
                 </div>

@@ -95,8 +95,8 @@ export default function SelfCateringRoomsPage() {
             <div className="flex gap-4">
               <Refrigerator className="w-8 h-8 text-sage-600 flex-shrink-0" />
               <div>
-                <h3 className="font-semibold text-lg mb-2">Full-Size Fridge</h3>
-                <p className="text-gray-600">Store your groceries and fresh food</p>
+                <h3 className="font-semibold text-lg mb-2">Communal Kitchenette</h3>
+                <p className="text-gray-600">Shared cooking facilities for guest use</p>
               </div>
             </div>
             <div className="flex gap-4">
