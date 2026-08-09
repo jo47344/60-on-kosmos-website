@@ -123,7 +123,7 @@ export default function HomePage() {
               </Button>
             </div>
             <div className="mt-4 sm:mt-6 flex items-center justify-center gap-2">
-              <a href="https://www.booking.com/hotel/za/60-on-kosmos.html" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-sage-600 transition">
+              <a href="https://www.booking.com/hotel/za/60-on-kosmos-cape-town.html" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-sage-600 transition">
                 <div className="flex">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400 fill-current" />
@@ -411,7 +411,7 @@ export default function HomePage() {
 
               <div className="bg-white rounded-lg border border-gray-200 p-4 sm:p-6">
                 <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3">Do you have real guest reviews?</h3>
-                <p className="text-gray-700 text-sm sm:text-base">Yes — 46 verified reviews at 8.0/10 &quot;Very Good&quot; on <a href="https://www.booking.com/hotel/za/60-on-kosmos.html" target="_blank" rel="noopener noreferrer" className="text-sage-600 hover:text-sage-700 font-semibold underline">Booking.com</a>, and Superhost status with a 4.65 rating on <a href="https://www.airbnb.co.za/rooms/1055447623" target="_blank" rel="noopener noreferrer" className="text-sage-600 hover:text-sage-700 font-semibold underline">Airbnb</a>. Both link directly to the real listings.</p>
+                <p className="text-gray-700 text-sm sm:text-base">Yes — 46 verified reviews at 8.0/10 &quot;Very Good&quot; on <a href="https://www.booking.com/hotel/za/60-on-kosmos-cape-town.html" target="_blank" rel="noopener noreferrer" className="text-sage-600 hover:text-sage-700 font-semibold underline">Booking.com</a>, and Superhost status with a 4.65 rating on <a href="https://www.airbnb.co.za/rooms/1055447623" target="_blank" rel="noopener noreferrer" className="text-sage-600 hover:text-sage-700 font-semibold underline">Airbnb</a>. Both link directly to the real listings.</p>
               </div>
             </div>
           </div>
