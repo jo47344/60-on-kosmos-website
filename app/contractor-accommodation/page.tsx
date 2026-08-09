@@ -81,7 +81,7 @@ export default function ContractorAccommodationPage() {
       longitude: 18.6403,
     },
     telephone: "+27745245703",
-    url: "https://60onkosmos.co.za/contractor-accommodation",
+    url: "https://www.60onkosmos.co.za/contractor-accommodation",
     priceRange: "R464 - R840",
     currenciesAccepted: "ZAR",
     paymentAccepted: "Cash, EFT, Bank Transfer",

@@ -14,7 +14,7 @@ export function RoomSchema({ rooms }: RoomSchemaProps) {
     "@type": "Product",
     name: room.name,
     description: room.description,
-    image: `https://60onkosmos.co.za${room.image}`,
+    image: `https://www.60onkosmos.co.za${room.image}`,
     brand: {
       "@type": "Organization",
       name: "60 on Kosmos",
@@ -24,7 +24,7 @@ export function RoomSchema({ rooms }: RoomSchemaProps) {
       price: room.price,
       priceCurrency: "ZAR",
       availability: "https://schema.org/InStock",
-      url: "https://60onkosmos.co.za/rooms",
+      url: "https://www.60onkosmos.co.za/rooms",
       priceValidUntil: "2025-12-31",
       seller: {
         "@type": "Organization",

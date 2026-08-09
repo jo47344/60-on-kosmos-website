@@ -28,6 +28,14 @@ export const metadata: Metadata = {
     description: "Accommodation for teams near Parow. Private ensuite rooms, secure parking, WiFi, flexible rates from R580/night.",
     url: "https://www.60onkosmos.co.za/contractor-accommodation-parow",
     type: "website",
+    images: [
+      {
+        url: "https://www.60onkosmos.co.za/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "60 on Kosmos Team Accommodation Near Parow",
+      },
+    ],
   },
 }
 

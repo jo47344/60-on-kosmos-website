@@ -2,7 +2,7 @@ export function LocalBusinessSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": ["LodgingBusiness", "LocalBusiness"],
-    "@id": "https://60onkosmos.co.za/#business",
+    "@id": "https://www.60onkosmos.co.za/#business",
     name: "60 on Kosmos - Accommodation for Project Teams and Working Professionals",
     alternateName: [
       "60 on Kosmos",
@@ -13,7 +13,7 @@ export function LocalBusinessSchema() {
     ],
     description:
       "Flexible accommodation for project-based teams, contractors, and working professionals. Private ensuite rooms with free WiFi, secure parking, and 24/7 security in Bellville South, Cape Town. Flexible terms from 1 night to monthly stays. Daily, weekly, and monthly rates available.",
-    url: "https://60onkosmos.co.za",
+    url: "https://www.60onkosmos.co.za",
     telephone: "+27745245703",
     email: "info@60onkosmos.co.za",
     priceRange: "R580-R840",
@@ -98,12 +98,12 @@ export function LocalBusinessSchema() {
       },
     ],
     image: [
-      "https://60onkosmos.co.za/images/exterior-building.png",
-      "https://60onkosmos.co.za/images/sage-double-room.png",
-      "https://60onkosmos.co.za/images/twin-room-yellow.png",
-      "https://60onkosmos.co.za/images/triple-room-full.jpg",
+      "https://www.60onkosmos.co.za/images/exterior-building.png",
+      "https://www.60onkosmos.co.za/images/sage-double-room.png",
+      "https://www.60onkosmos.co.za/images/twin-room-yellow.png",
+      "https://www.60onkosmos.co.za/images/triple-room-full.jpg",
     ],
-    logo: "https://60onkosmos.co.za/images/60-on-kosmos-logo.png",
+    logo: "https://www.60onkosmos.co.za/images/60-on-kosmos-logo.png",
     sameAs: [
       "https://www.facebook.com/60onkosmos",
       "https://www.instagram.com/60onkosmos",
@@ -259,6 +259,11 @@ export function LocalBusinessSchema() {
     },
     isAccessibleForFree: false,
     publicAccess: true,
+    audience: {
+      "@type": "PeopleAudience",
+      suggestedMinAge: 18,
+      audienceType: "Young professionals, contractors, students",
+    },
     slogan: "Contractor Accommodation in Bellville South - Your Home Away From Home",
     keywords: [
       "contractor accommodation Bellville",

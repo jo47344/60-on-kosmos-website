@@ -15,12 +15,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "contractor-accommodation-parow", priority: 0.95, freq: "daily" as const },
     { url: "contractor-accommodation-stikland", priority: 0.95, freq: "daily" as const },
     { url: "contractor-accommodation-goodwood", priority: 0.95, freq: "daily" as const },
-    { url: "contractor-accommodation-kuilsriver", priority: 0.95, freq: "daily" as const },
+    { url: "contractor-accommodation-kuils-river", priority: 0.95, freq: "daily" as const },
     { url: "contractor-accommodation-northern-suburbs", priority: 0.95, freq: "daily" as const },
 
     // HIGH INTENT - Stay type pages
     { url: "monthly-accommodation", priority: 0.9, freq: "daily" as const },
-    { url: "weekly-accommodation", priority: 0.9, freq: "daily" as const },
     { url: "self-catering-rooms", priority: 0.85, freq: "weekly" as const },
 
     // Conversion pages
@@ -28,26 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "book-now", priority: 0.9, freq: "daily" as const },
     { url: "special-offers", priority: 0.85, freq: "weekly" as const },
 
-    // Location pages - proximity signals
-    { url: "n1-city-accommodation", priority: 0.85, freq: "weekly" as const },
-    { url: "airport-accommodation", priority: 0.8, freq: "weekly" as const },
-    { url: "monthly-accommodation-bellville", priority: 0.8, freq: "weekly" as const },
-    { url: "monthly-accommodation-bellville-south", priority: 0.8, freq: "weekly" as const },
-    { url: "self-catering-accommodation-bellville", priority: 0.75, freq: "weekly" as const },
-    { url: "serviced-accommodation-bellville", priority: 0.75, freq: "weekly" as const },
-    { url: "extended-stay-hotel-bellville", priority: 0.75, freq: "weekly" as const },
-    { url: "bellville-south-guesthouse", priority: 0.7, freq: "weekly" as const },
-    { url: "accommodation-near-bellville-station", priority: 0.7, freq: "monthly" as const },
-    { url: "backpackers-bellville-south", priority: 0.65, freq: "monthly" as const },
-    { url: "cheap-accommodation-bellville-south", priority: 0.65, freq: "monthly" as const },
-
-    // Secondary market - Medical staff
-    { url: "tygerberg-hospital-accommodation", priority: 0.75, freq: "weekly" as const },
-    { url: "accommodation-near-tygerberg-hospital", priority: 0.7, freq: "weekly" as const },
-
     // Short-term university visitors (graduations, block week, visiting professors)
-    { url: "uwc-student-accommodation", priority: 0.65, freq: "weekly" as const },
-    { url: "cput-accommodation", priority: 0.65, freq: "weekly" as const },
     { url: "student-faq", priority: 0.5, freq: "monthly" as const },
 
     // Support pages

@@ -46,7 +46,7 @@ export const robots = {
 }
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://60onkosmos.co.za"),
+  metadataBase: new URL("https://www.60onkosmos.co.za"),
   title: {
     default: "60 on Kosmos - Affordable Contractor & Student Accommodation in Bellville South, Cape Town",
     template: "%s | 60 on Kosmos Bellville South",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_ZA",
-    url: "https://60onkosmos.co.za",
+    url: "https://www.60onkosmos.co.za",
     siteName: "60 on Kosmos Guesthouse Bellville South",
     title: "60 on Kosmos - Affordable Guesthouse Accommodation in Bellville South",
     description:
