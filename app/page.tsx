@@ -22,13 +22,13 @@ import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "60 on Kosmos - Bellville Accommodation for Teams",
-  description: "Flexible accommodation for project teams from R580/night. Private rooms, secure parking, WiFi, flexible terms. Monthly rates from R464/night.",
+  description: "Flexible accommodation for project teams from R580/night. Private rooms, secure parking, WiFi, and monthly rates for stays of 28 nights or more.",
   alternates: {
     canonical: "https://www.60onkosmos.co.za/",
   },
   openGraph: {
     title: "60 on Kosmos - Bellville Accommodation for Teams",
-    description: "Flexible accommodation for project teams from R580/night. Private rooms, secure parking, WiFi, flexible terms. Monthly rates from R464/night.",
+    description: "Flexible accommodation for project teams from R580/night. Private rooms, secure parking, WiFi, and monthly rates for stays of 28 nights or more.",
     url: "https://www.60onkosmos.co.za/",
     type: "website",
     images: [
@@ -47,7 +47,6 @@ export default function HomePage() {
     {
       name: "Standard Twin Room",
       price: "From R580/night",
-      monthlyPrice: "R464/night monthly",
       image: "/images/standard-twin-room.jpg",
       bestFor: "Best for 2 contractors sharing",
       features: ["2 single beds", "Private ensuite", "Free WiFi", "Kitchen access"],
@@ -55,7 +54,6 @@ export default function HomePage() {
     {
       name: "Deluxe Twin Room",
       price: "From R650/night",
-      monthlyPrice: "R520/night monthly",
       image: "/images/deluxe-twin-room.jpg",
       bestFor: "Best for professionals wanting extra comfort",
       features: ["2 single beds", "Private ensuite", "Bar fridge", "Premium linens"],
@@ -63,7 +61,6 @@ export default function HomePage() {
     {
       name: "Double Room",
       price: "From R680/night",
-      monthlyPrice: "R544/night monthly",
       image: "/images/sage-double-room.png",
       bestFor: "Best for solo professionals or couples",
       features: ["Double bed", "Private ensuite", "Bar fridge", "Premium bedding"],
@@ -71,7 +68,6 @@ export default function HomePage() {
     {
       name: "Triple Room",
       price: "From R840/night",
-      monthlyPrice: "R672/night monthly",
       image: "/images/triple-room.jpg",
       bestFor: "Best for 3-person crews",
       features: ["3 single beds", "Private ensuite", "From R224/person monthly", "Best value"],
@@ -147,7 +143,7 @@ export default function HomePage() {
                 </div>
                 <div>
                   <h2 className="text-xl sm:text-2xl font-bold">Perfect for Project Teams</h2>
-                  <p className="text-gray-300">Flexible terms, group discounts, and corporate billing available | Monthly rates from R464/night</p>
+                  <p className="text-gray-300">Flexible terms, group discounts, and corporate billing available | Monthly rates for 28+ nights</p>
                 </div>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
@@ -231,8 +227,8 @@ export default function HomePage() {
                       {room.bestFor}
                     </CardDescription>
                     <div className="mt-2">
-                      <span className="text-base font-semibold text-gray-900">{room.price}</span>
-                      <span className="text-sm text-green-600 ml-2">({room.monthlyPrice})</span>
+<span className="text-base font-semibold text-gray-900">{room.price}</span>
+                <span className="text-sm text-green-600 ml-2">Monthly rates for 28+ nights</span>
                     </div>
                   </CardHeader>
                   <CardContent>
@@ -280,9 +276,9 @@ export default function HomePage() {
                   </div>
                   <Briefcase className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 text-sage-600" />
                   <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Project Teams & Contractors</h3>
-                  <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4">
-                    Daily, weekly, and monthly rates. Group discounts, corporate billing, and flexible check-in.
-                  </p>
+<p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4">
+            Daily and weekly rates, plus monthly rates for stays of 28 nights or more. Group quotes are available, and check-in is from 14:00.
+          </p>
                   <Button asChild className="bg-sage-600 hover:bg-sage-700 w-full">
                     <Link href="/contractor-accommodation">Team Rates</Link>
                   </Button>
@@ -422,7 +418,7 @@ export default function HomePage() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">Ready for Your Next Accommodation?</h2>
             <p className="text-base sm:text-lg mb-6 sm:mb-8 opacity-90">
-              Daily rates from R580/night | Monthly rates from R464/night | Group discounts available
+              Daily rates from R580/night | Monthly rates for 28+ nights | Group discounts available
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <Button
