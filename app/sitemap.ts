@@ -21,11 +21,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // HIGH INTENT - Stay type pages
     { url: "monthly-accommodation", priority: 0.9, freq: "daily" as const },
     { url: "self-catering-rooms", priority: 0.85, freq: "weekly" as const },
+    { url: "accommodation-bellville-south", priority: 0.95, freq: "weekly" as const },
+    { url: "contractors", priority: 0.95, freq: "weekly" as const },
+    { url: "corporate", priority: 0.9, freq: "weekly" as const },
 
     // Conversion pages
     { url: "rooms", priority: 0.9, freq: "weekly" as const },
     { url: "guest-information", priority: 0.85, freq: "monthly" as const },
     { url: "book-now", priority: 0.9, freq: "daily" as const },
+    { url: "check-availability", priority: 0.9, freq: "daily" as const },
 
     // Short-term university visitors (graduations, block week, visiting professors)
     { url: "student-faq", priority: 0.5, freq: "monthly" as const },

@@ -89,51 +89,27 @@ export default function HomePage() {
             quality={85}
           />
           <div className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-2 sm:mb-4 leading-tight">
-              Private Ensuite Rooms for Contractors & Project Teams
-              <br />
-              <span className="text-sage-300">In Bellville South, Cape Town</span>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-2 sm:mb-4 leading-tight text-balance">
+              Private ensuite rooms in Bellville South. Not a shared dorm — your own space.
             </h1>
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-4 sm:mb-6 md:mb-8 px-2">
-              Self-catering accommodation for project teams and working professionals. Four private ensuite rooms accommodate teams of up to nine people.
-              <br className="hidden md:block" />
-              Secure gated parking, WiFi, weekly cleaning, and live-in onsite support. Invoices are provided on request.
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-6 sm:mb-8 px-2 text-pretty">
+              Self-catering guesthouse for contractors, corporate stays, and university visitors. 4 rooms only — we
+              stay small on purpose.
             </p>
-            <div className="flex flex-col gap-2 sm:gap-3 md:flex-row md:gap-4 justify-center items-center px-4 sm:px-0">
+            <div className="flex justify-center px-4 sm:px-0">
               <Button
                 asChild
                 size="lg"
-                className="bg-sage-600 hover:bg-sage-700 text-white w-full sm:w-auto px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 text-sm sm:text-base md:text-lg"
+                className="bg-sage-600 hover:bg-sage-700 text-white w-full sm:w-auto px-6 sm:px-8 md:px-10 py-5 sm:py-6 text-base sm:text-lg"
               >
-                <a href="https://wa.me/27745245703?text=Hi%2C%20I%27m%20looking%20for%20accommodation%20for%20%5Bnumber%20of%20people%5D%20from%20%5Barrival%20date%5D%20to%20%5Bdeparture%20date%5D" target="_blank" rel="noopener noreferrer">WhatsApp for Availability &amp; Quote</a>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="bg-white text-sage-600 hover:bg-sage-50 w-full sm:w-auto px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 text-sm sm:text-base md:text-lg"
-              >
-                <a href="tel:+27745245703">Call 074 524 5703</a>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="bg-white text-sage-600 hover:bg-sage-50 w-full sm:w-auto px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 text-sm sm:text-base md:text-lg"
-              >
-                <a href="/rooms">View Rooms &amp; Rates</a>
+                <Link href="/check-availability">Check availability</Link>
               </Button>
             </div>
-            <p className="mt-4 text-sm sm:text-base text-white/90">From R580/night · Teams up to 9 · Secure parking · Check-in from 14:00</p>
-            <div className="mt-4 sm:mt-6 flex items-center justify-center gap-2">
-              <a href="https://www.booking.com/hotel/za/60-on-kosmos-cape-town.html" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-sage-600 transition">
-                <div className="flex">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <span className="text-sm sm:text-base lg:text-lg font-semibold">Verified guest reviews on Booking.com</span>
-              </a>
+            <div className="mt-5 sm:mt-6 flex items-center justify-center gap-2">
+              <Star className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400 fill-current" />
+              <span className="text-sm sm:text-base text-white/90">
+                4.65★ on Google (23 reviews) · 8.2 on Booking.com
+              </span>
             </div>
           </div>
         </section>
