@@ -126,7 +126,7 @@ export default function AccommodationBellvilleSouthPage() {
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Currently hosting</h2>
           <div className="bg-sage-50 border-l-4 border-sage-600 rounded-lg p-6">
             <p className="text-gray-800 text-pretty">
-              Right now we&apos;re hosting a crew from CJL Spraybooth on a week-by-week basis for the Komati
+              We&apos;re currently hosting a spray booth crew on a week-by-week basis for an active Cape Town
               project — that&apos;s the kind of stay we&apos;re built for: people who need a real bed, a proper
               kitchen, and quiet after a long day on site, not a hotel room they&apos;re paying for and barely using.
             </p>

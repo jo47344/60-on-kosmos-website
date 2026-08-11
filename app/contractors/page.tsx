@@ -77,7 +77,7 @@ export default function ContractorsPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white border-l-4 border-sage-600 rounded-lg p-6 shadow-sm">
             <p className="text-gray-800 text-pretty">
-              CJL Spraybooth&apos;s crew is currently staying with us week-by-week on the Komati project.
+              We&apos;re currently hosting a spray booth crew week-by-week on an active project.
             </p>
           </div>
         </div>
