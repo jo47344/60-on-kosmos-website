@@ -13,28 +13,66 @@ import {
   MapPin,
   Phone,
   ArrowRight,
+  ChevronDown,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import { Breadcrumbs } from "@/components/breadcrumbs"
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
+import { FAQSchema } from "@/components/faq-schema"
 
 export const metadata: Metadata = {
-  title: "Project Team Accommodation Near Stikland | 60 on Kosmos, Bellville South",
+  title: "Guesthouse Near Stikland | 60 on Kosmos, Bellville South",
   description:
-    "Stikland Industrial is minutes away. 60 on Kosmos offers private ensuite rooms, secure parking, and flexible billing for project teams working in Stikland.",
+    "Guesthouse accommodation near Stikland Industrial, minutes away. 60 on Kosmos offers private ensuite rooms, secure parking, and flexible billing for project teams working in Stikland.",
   alternates: {
     canonical: "https://www.60onkosmos.co.za/contractor-accommodation-stikland",
   },
   openGraph: {
-    title: "Project Team Accommodation Near Stikland | 60 on Kosmos",
-    description: "Private ensuite rooms for project teams near Stikland. Secure parking, weekly cleaning, WiFi included.",
+    title: "Guesthouse Near Stikland | 60 on Kosmos",
+    description: "Guesthouse rooms for project teams near Stikland. Secure parking, weekly cleaning, WiFi included.",
     url: "https://www.60onkosmos.co.za/contractor-accommodation-stikland",
     type: "website",
   },
 }
 
+const breadcrumbItems = [
+  { name: "Home", url: "" },
+  { name: "Contractor Accommodation", url: "/contractor-accommodation" },
+  { name: "Stikland", url: "/contractor-accommodation-stikland" },
+]
+
+const faqs = [
+  {
+    question: "How far is 60 on Kosmos from Stikland Industrial?",
+    answer: "Stikland Industrial is just minutes away from our guesthouse in Bellville South.",
+  },
+  {
+    question: "Is there secure parking for work vehicles?",
+    answer: "Yes, gated parking with 24/7 CCTV, with space for bakkies and work vehicles.",
+  },
+  {
+    question: "Can you accommodate a full site crew?",
+    answer:
+      "Yes, we can arrange multiple rooms for teams, with discounted weekly and monthly rates and one consolidated monthly invoice available.",
+  },
+  {
+    question: "Do you provide corporate invoicing?",
+    answer: "Yes, on request for contractors and companies.",
+  },
+  {
+    question: "What's included in the stay?",
+    answer:
+      "Free WiFi, weekly cleaning, secure parking, and access to our self-catering kitchen. Check-in is from 14:00, check-out by 10:00.",
+  },
+]
+
 export default function StiklandAccommodationPage() {
   return (
     <div className="min-h-screen bg-white">
+      <BreadcrumbSchema items={breadcrumbItems} />
+      <Breadcrumbs items={breadcrumbItems} />
+      <FAQSchema faqs={faqs} />
       {/* Hero Section */}
       <section className="relative bg-gray-900 py-16 md:py-24">
         <div className="absolute inset-0">
@@ -53,10 +91,10 @@ export default function StiklandAccommodationPage() {
               <span>Stikland Industrial</span>
             </div>
             <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 text-balance">
-              Accommodation for Teams Working in Stikland
+              A Guesthouse Near Stikland for Project Teams
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Stikland Industrial is minutes away from 60 on Kosmos. We provide secure, flexible accommodation for project teams,
+              Stikland Industrial is minutes away from our guesthouse. We provide secure, flexible accommodation for project teams,
               site crews, and working professionals in the Stikland area — all with one monthly invoice.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -163,6 +201,28 @@ export default function StiklandAccommodationPage() {
                 <Icon className="w-6 h-6 text-sage-600 flex-shrink-0" />
                 <span className="font-medium">{label}</span>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-12 bg-gray-50">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <Card key={index}>
+                <CardContent className="p-6">
+                  <details className="group">
+                    <summary className="flex items-start justify-between cursor-pointer list-none">
+                      <h3 className="text-lg font-semibold text-gray-900 pr-8">{faq.question}</h3>
+                      <ChevronDown className="w-5 h-5 text-sage-600 flex-shrink-0 transition-transform group-open:rotate-180" />
+                    </summary>
+                    <p className="mt-4 text-gray-700 leading-relaxed">{faq.answer}</p>
+                  </details>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>

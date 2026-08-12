@@ -329,7 +329,7 @@ export default function NursingStudentPage() {
               variant="outline"
               className="border-white text-white hover:bg-red-700 bg-transparent"
             >
-              <Link href="/accommodation-near-tygerberg-hospital">View Our Rooms</Link>
+              <Link href="/rooms">View Our Rooms</Link>
             </Button>
           </div>
         </div>

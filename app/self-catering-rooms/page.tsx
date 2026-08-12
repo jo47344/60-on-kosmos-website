@@ -1,8 +1,11 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { Utensils, DollarSign, Home, Wifi, Car, Shield, Coffee, Refrigerator } from "lucide-react"
+import { Utensils, DollarSign, Home, Wifi, Car, Shield, Coffee, Refrigerator, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import { Breadcrumbs } from "@/components/breadcrumbs"
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
+import { FAQSchema } from "@/components/faq-schema"
 
 export const metadata: Metadata = {
   title: "Self-Catering Rooms | Budget",
@@ -13,9 +16,43 @@ export const metadata: Metadata = {
   },
 }
 
+const breadcrumbItems = [
+  { name: "Home", url: "" },
+  { name: "Self-Catering Rooms", url: "/self-catering-rooms" },
+]
+
+const faqs = [
+  {
+    question: "What cooking facilities are available?",
+    answer:
+      "Our communal kitchenette has a gas stove, microwave, air fryer, and kettle. Deluxe Twin, Double, and Triple rooms also include their own bar fridge.",
+  },
+  {
+    question: "Is self-catering accommodation cheaper than full-board options?",
+    answer:
+      "Yes, self-catering rooms start from R580/night, with discounted weekly and monthly rates, making it a budget-friendly option compared to serviced hotels.",
+  },
+  {
+    question: "Do I need to bring my own cookware?",
+    answer:
+      "No, basic cooking utensils are provided in the communal kitchen. There's also a SPAR supermarket 2km away for groceries.",
+  },
+  {
+    question: "Is parking included?",
+    answer: "Yes, free secure gated parking with 24/7 CCTV is included with every room.",
+  },
+  {
+    question: "How often is the room cleaned?",
+    answer: "We provide weekly cleaning, including fresh linen and towels, to help keep our self-catering rates affordable.",
+  },
+]
+
 export default function SelfCateringRoomsPage() {
   return (
     <div className="min-h-screen bg-white">
+      <BreadcrumbSchema items={breadcrumbItems} />
+      <Breadcrumbs items={breadcrumbItems} />
+      <FAQSchema faqs={faqs} />
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-sage-50 to-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -207,7 +244,7 @@ export default function SelfCateringRoomsPage() {
             <Card>
               <CardContent className="pt-6">
                 <h3 className="font-semibold text-lg mb-2">
-                  <Link href="/uwc-student-accommodation" className="text-sage-600 hover:text-sage-700">
+                  <Link href="/student-faq" className="text-sage-600 hover:text-sage-700">
                     Student Accommodation
                   </Link>
                 </h3>
@@ -224,6 +261,28 @@ export default function SelfCateringRoomsPage() {
                 <p className="text-gray-600">Special rates for contractors</p>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-12 bg-gray-50">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <Card key={index}>
+                <CardContent className="p-6">
+                  <details className="group">
+                    <summary className="flex items-start justify-between cursor-pointer list-none">
+                      <h3 className="text-lg font-semibold text-gray-900 pr-8">{faq.question}</h3>
+                      <ChevronDown className="w-5 h-5 text-sage-600 flex-shrink-0 transition-transform group-open:rotate-180" />
+                    </summary>
+                    <p className="mt-4 text-gray-700 leading-relaxed">{faq.answer}</p>
+                  </details>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>

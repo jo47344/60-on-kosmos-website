@@ -42,6 +42,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "local-info", priority: 0.6, freq: "monthly" as const },
     { url: "things-to-do-bellville-south", priority: 0.55, freq: "monthly" as const },
     { url: "terms", priority: 0.5, freq: "yearly" as const },
+    { url: "privacy-policy", priority: 0.4, freq: "yearly" as const },
 
     // Blog - content marketing
     { url: "blog", priority: 0.7, freq: "weekly" as const },

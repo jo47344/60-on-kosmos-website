@@ -3,7 +3,43 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Wifi, Coffee, Car, Shield, Phone } from "lucide-react"
+import { Wifi, Coffee, Car, Shield, Phone, ChevronDown } from "lucide-react"
+import { Breadcrumbs } from "@/components/breadcrumbs"
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
+import { FAQSchema } from "@/components/faq-schema"
+
+const breadcrumbItems = [
+  { name: "Home", url: "" },
+  { name: "Rooms & Rates", url: "/rooms" },
+]
+
+const faqs = [
+  {
+    question: "What room types and rates do you offer?",
+    answer:
+      "Standard Twin from R580/night, Deluxe Twin R650/night, Double R680/night, and Triple R840/night (R280 per person) — with discounted weekly and monthly rates available.",
+  },
+  {
+    question: "What's included in every room rate?",
+    answer:
+      "Free WiFi, weekly cleaning with fresh linen, secure gated parking, and access to our communal self-catering kitchen. Deluxe Twin, Double, and Triple rooms also include a bar fridge.",
+  },
+  {
+    question: "Do you offer discounts for longer stays?",
+    answer:
+      "Yes, weekly (7-27 nights) and monthly (28+ nights) stays are discounted compared to nightly rates — for example, a Standard Twin drops to R522/night weekly and R464/night monthly. Contact us for a custom quote.",
+  },
+  {
+    question: "What are your check-in and check-out times?",
+    answer:
+      "Check-in is from 14:00 and check-out is by 10:00. Early check-in or late check-out may be arranged in advance, subject to availability.",
+  },
+  {
+    question: "How do I book a room?",
+    answer:
+      "Contact us directly via WhatsApp or phone for the fastest response, or use our booking form. We reply within 24 hours.",
+  },
+]
 
 export const metadata: Metadata = {
   title: "Rooms & Rates | From R580/Night | Monthly Discounts",
@@ -110,7 +146,11 @@ export default function RoomsPage() {
   ]
 
   return (
-    <div className="min-h-screen py-16">
+    <>
+      <BreadcrumbSchema items={breadcrumbItems} />
+      <Breadcrumbs items={breadcrumbItems} />
+      <FAQSchema faqs={faqs} />
+      <div className="min-h-screen py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Contact Banner */}
         <div className="bg-green-600 text-white rounded-lg p-4 mb-8 text-center">
@@ -380,6 +420,29 @@ export default function RoomsPage() {
           </ul>
         </div>
       </div>
+
+      {/* FAQ Section */}
+      <div className="bg-gray-50 py-12 mt-4">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <Card key={index}>
+                <CardContent className="p-6">
+                  <details className="group">
+                    <summary className="flex items-start justify-between cursor-pointer list-none">
+                      <h3 className="text-lg font-semibold text-gray-900 pr-8">{faq.question}</h3>
+                      <ChevronDown className="w-5 h-5 text-sage-600 flex-shrink-0 transition-transform group-open:rotate-180" />
+                    </summary>
+                    <p className="mt-4 text-gray-700 leading-relaxed">{faq.answer}</p>
+                  </details>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
+    </>
   )
 }
