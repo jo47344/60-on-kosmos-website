@@ -24,8 +24,7 @@ export default function ThankYouPage() {
         </div>
         <h1 className="text-3xl font-bold text-gray-900 mb-4">Thank You!</h1>
         <p className="text-lg text-gray-700 mb-6">
-          Your booking request has been successfully sent. We will contact you shortly via phone or WhatsApp to confirm
-          your stay.
+          Your message has been sent successfully. We will get back to you shortly via phone or WhatsApp.
         </p>
         <Link
           href="/"
