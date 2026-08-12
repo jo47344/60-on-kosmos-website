@@ -18,15 +18,15 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 
 export const metadata: Metadata = {
-  title: "Project Team Accommodation Near Goodwood | 60 on Kosmos, Bellville South",
+  title: "Guesthouse Near Goodwood | 60 on Kosmos, Bellville South",
   description:
-    "Goodwood and surrounding areas are minutes away. 60 on Kosmos offers private ensuite rooms, secure parking, and flexible corporate terms for project teams.",
+    "Guesthouse accommodation near Goodwood, just minutes away. 60 on Kosmos offers private ensuite rooms, secure parking, and flexible corporate terms for project teams.",
   alternates: {
     canonical: "https://www.60onkosmos.co.za/contractor-accommodation-goodwood",
   },
   openGraph: {
-    title: "Project Team Accommodation Near Goodwood | 60 on Kosmos",
-    description: "Private ensuite rooms for project teams near Goodwood. Secure parking, weekly cleaning, WiFi included.",
+    title: "Guesthouse Near Goodwood | 60 on Kosmos",
+    description: "Guesthouse rooms for project teams near Goodwood. Secure parking, weekly cleaning, WiFi included.",
     url: "https://www.60onkosmos.co.za/contractor-accommodation-goodwood",
     type: "website",
   },
@@ -53,10 +53,10 @@ export default function GoodwoodAccommodationPage() {
               <span>Goodwood and Surrounds</span>
             </div>
             <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 text-balance">
-              Accommodation for Teams Working in Goodwood
+              A Guesthouse Near Goodwood for Project Teams
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Goodwood and surrounding industrial areas are just minutes from 60 on Kosmos. We provide secure, professional
+              Goodwood and surrounding industrial areas are just minutes from our guesthouse. We provide secure, professional
               accommodation for project teams, contractors, and working professionals — all with full corporate support.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

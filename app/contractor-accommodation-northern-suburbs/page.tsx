@@ -18,15 +18,15 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 
 export const metadata: Metadata = {
-  title: "Project Team Accommodation in Northern Suburbs | 60 on Kosmos, Bellville",
+  title: "Guesthouse in the Northern Suburbs | 60 on Kosmos, Bellville",
   description:
-    "Located in Bellville South, 60 on Kosmos is ideal for project teams working across the northern suburbs. Secure private ensuite rooms, parking, and corporate invoicing.",
+    "Guesthouse accommodation in the northern suburbs. Located in Bellville South, 60 on Kosmos is ideal for project teams working across the northern suburbs. Secure private ensuite rooms, parking, and corporate invoicing.",
   alternates: {
     canonical: "https://www.60onkosmos.co.za/contractor-accommodation-northern-suburbs",
   },
   openGraph: {
-    title: "Project Team Accommodation for Northern Suburbs | 60 on Kosmos",
-    description: "Private ensuite rooms for project teams across the northern suburbs. Secure parking, weekly cleaning, WiFi included.",
+    title: "Guesthouse in the Northern Suburbs | 60 on Kosmos",
+    description: "Guesthouse rooms for project teams across the northern suburbs. Secure parking, weekly cleaning, WiFi included.",
     url: "https://www.60onkosmos.co.za/contractor-accommodation-northern-suburbs",
     type: "website",
   },
@@ -53,10 +53,10 @@ export default function NorthernSuburbsAccommodationPage() {
               <span>Northern Suburbs</span>
             </div>
             <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 text-balance">
-              Accommodation for Teams Working Across the Northern Suburbs
+              A Northern Suburbs Guesthouse for Project Teams
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              60 on Kosmos in Bellville South is perfectly positioned to serve project teams working across the northern
+              Our guesthouse in Bellville South is perfectly positioned to serve project teams working across the northern
               suburbs—Parow, Stikland, Goodwood, Kuils River, and beyond. Central location, reliable access, and corporate
               support for all your project needs.
             </p>

@@ -26,12 +26,15 @@ import { Card, CardContent } from "@/components/ui/card"
 import { FAQSchema } from "@/components/faq-schema"
 
 export const metadata: Metadata = {
-  title: "Project Team Accommodation | Bellville South",
-  description: "Flexible accommodation for project teams from R580/night daily, R522/week, R464/month. Secure parking, WiFi, corporate billing available.",
+  title: "Guesthouse & Project Team Accommodation | Bellville South",
+  description: "Guesthouse accommodation for project teams from R580/night daily, R522/week, R464/month. Secure parking, WiFi, corporate billing available.",
   alternates: {
     canonical: "https://www.60onkosmos.co.za/contractor-accommodation",
   },
   keywords: [
+    "guesthouse bellville south",
+    "guesthouse near northern suburbs",
+    "guesthouse near kuils river",
     "contractor accommodation bellville south",
     "self catering contractor accommodation bellville",
     "weekly contractor accommodation bellville south",
@@ -45,8 +48,8 @@ export const metadata: Metadata = {
     "contractor teams accommodation bellville",
   ],
   openGraph: {
-    title: "Project Team Accommodation | Bellville South",
-    description: "Flexible accommodation for project teams from R580/night daily, R522/week, R464/month. Secure parking, WiFi, corporate billing.",
+    title: "Guesthouse & Project Team Accommodation | Bellville South",
+    description: "Guesthouse accommodation for project teams from R580/night daily, R522/week, R464/month. Secure parking, WiFi, corporate billing.",
     url: "https://www.60onkosmos.co.za/contractor-accommodation",
     type: "website",
     images: [
@@ -292,7 +295,7 @@ export default function ContractorAccommodationPage() {
               <span>For Project Teams & Professionals</span>
             </div>
             <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 text-balance">
-              Accommodation for Project Teams & Professionals in Bellville South
+              A Guesthouse for Project Teams & Professionals in Bellville South
             </h1>
             <p className="text-xl text-gray-300 mb-4">
               Book by the week or month with flexible terms. Invoices are provided on request.

@@ -18,14 +18,14 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 
 export const metadata: Metadata = {
-  title: "Team Accommodation Near Parow",
-  description: "Accommodation for teams near Parow. Private ensuite rooms, secure parking, WiFi, flexible rates from R580/night.",
+  title: "Guesthouse Near Parow",
+  description: "Guesthouse accommodation for teams near Parow. Private ensuite rooms, secure parking, WiFi, flexible rates from R580/night.",
   alternates: {
     canonical: "https://www.60onkosmos.co.za/contractor-accommodation-parow",
   },
   openGraph: {
-    title: "Team Accommodation Near Parow",
-    description: "Accommodation for teams near Parow. Private ensuite rooms, secure parking, WiFi, flexible rates from R580/night.",
+    title: "Guesthouse Near Parow",
+    description: "Guesthouse accommodation for teams near Parow. Private ensuite rooms, secure parking, WiFi, flexible rates from R580/night.",
     url: "https://www.60onkosmos.co.za/contractor-accommodation-parow",
     type: "website",
     images: [
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
         url: "https://www.60onkosmos.co.za/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "60 on Kosmos Team Accommodation Near Parow",
+        alt: "60 on Kosmos Guesthouse Near Parow",
       },
     ],
   },
@@ -60,10 +60,10 @@ export default function ParowAccommodationPage() {
               <span>Parow & Parow Industria</span>
             </div>
             <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 text-balance">
-              Accommodation for Teams Working in Parow
+              A Guesthouse Near Parow for Project Teams
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Based in Bellville South, minutes from Parow and Parow Industria, 60 on Kosmos is a private, secure base for
+              Based in Bellville South, minutes from Parow and Parow Industria, our guesthouse is a private, secure base for
               project teams and professionals working sites in the area — without the daily commute a rental or city hotel would
               mean.
             </p>
