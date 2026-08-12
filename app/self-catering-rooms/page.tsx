@@ -3,6 +3,8 @@ import Link from "next/link"
 import { Utensils, DollarSign, Home, Wifi, Car, Shield, Coffee, Refrigerator } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import { Breadcrumbs } from "@/components/breadcrumbs"
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
 
 export const metadata: Metadata = {
   title: "Self-Catering Rooms | Budget",
@@ -13,9 +15,16 @@ export const metadata: Metadata = {
   },
 }
 
+const breadcrumbItems = [
+  { name: "Home", url: "" },
+  { name: "Self-Catering Rooms", url: "/self-catering-rooms" },
+]
+
 export default function SelfCateringRoomsPage() {
   return (
     <div className="min-h-screen bg-white">
+      <BreadcrumbSchema items={breadcrumbItems} />
+      <Breadcrumbs items={breadcrumbItems} />
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-sage-50 to-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

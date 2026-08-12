@@ -16,6 +16,8 @@ import {
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import { Breadcrumbs } from "@/components/breadcrumbs"
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
 
 export const metadata: Metadata = {
   title: "Guesthouse Near Parow",
@@ -39,9 +41,17 @@ export const metadata: Metadata = {
   },
 }
 
+const breadcrumbItems = [
+  { name: "Home", url: "" },
+  { name: "Contractor Accommodation", url: "/contractor-accommodation" },
+  { name: "Parow", url: "/contractor-accommodation-parow" },
+]
+
 export default function ParowAccommodationPage() {
   return (
     <div className="min-h-screen bg-white">
+      <BreadcrumbSchema items={breadcrumbItems} />
+      <Breadcrumbs items={breadcrumbItems} />
       {/* Hero Section */}
       <section className="relative bg-gray-900 py-16 md:py-24">
         <div className="absolute inset-0">

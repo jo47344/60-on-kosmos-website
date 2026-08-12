@@ -24,6 +24,8 @@ import {
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { FAQSchema } from "@/components/faq-schema"
+import { Breadcrumbs } from "@/components/breadcrumbs"
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
 
 export const metadata: Metadata = {
   title: "Guesthouse & Project Team Accommodation | Bellville South",
@@ -272,10 +274,17 @@ export default function ContractorAccommodationPage() {
     },
   ]
 
+  const breadcrumbItems = [
+    { name: "Home", url: "" },
+    { name: "Contractor Accommodation", url: "/contractor-accommodation" },
+  ]
+
   return (
     <div className="min-h-screen bg-white">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
       <FAQSchema faqs={contractorFAQs} />
+      <BreadcrumbSchema items={breadcrumbItems} />
+      <Breadcrumbs items={breadcrumbItems} />
 
       {/* Hero Section */}
       <section className="relative bg-gray-900 py-16 md:py-24">

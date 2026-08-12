@@ -4,6 +4,13 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Wifi, Coffee, Car, Shield, Phone } from "lucide-react"
+import { Breadcrumbs } from "@/components/breadcrumbs"
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
+
+const breadcrumbItems = [
+  { name: "Home", url: "" },
+  { name: "Rooms & Rates", url: "/rooms" },
+]
 
 export const metadata: Metadata = {
   title: "Rooms & Rates | From R580/Night | Monthly Discounts",
@@ -110,7 +117,10 @@ export default function RoomsPage() {
   ]
 
   return (
-    <div className="min-h-screen py-16">
+    <>
+      <BreadcrumbSchema items={breadcrumbItems} />
+      <Breadcrumbs items={breadcrumbItems} />
+      <div className="min-h-screen py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Contact Banner */}
         <div className="bg-green-600 text-white rounded-lg p-4 mb-8 text-center">
@@ -381,5 +391,6 @@ export default function RoomsPage() {
         </div>
       </div>
     </div>
+    </>
   )
 }
