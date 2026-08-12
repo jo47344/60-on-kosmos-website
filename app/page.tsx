@@ -53,21 +53,21 @@ export default function HomePage() {
     },
     {
       name: "Deluxe Twin Room",
-      price: "From R650/night",
+      price: "From R620/night",
       image: "/images/deluxe-twin-room.jpg",
       bestFor: "Best for professionals wanting extra comfort",
       features: ["2 single beds", "Private ensuite", "Bar fridge", "Premium linens"],
     },
     {
       name: "Double Room",
-      price: "From R680/night",
+      price: "From R650/night",
       image: "/images/sage-double-room.png",
       bestFor: "Best for solo professionals or couples",
       features: ["Double bed", "Private ensuite", "Bar fridge", "Premium bedding"],
     },
     {
       name: "Triple Room",
-      price: "From R840/night",
+      price: "From R800/night",
       image: "/images/triple-room.jpg",
       bestFor: "Best for 3-person crews",
       features: ["3 single beds", "Private ensuite", "From R224/person monthly", "Best value"],
@@ -427,7 +427,7 @@ export default function HomePage() {
 
               <div className="bg-white rounded-lg border border-gray-200 p-4 sm:p-6">
                 <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3">How does invoicing work?</h3>
-                <p className="text-gray-700 text-sm sm:text-base">Invoices are provided on request. Monthly rates apply to stays of 28 nights or more; a refundable security deposit may apply to extended stays.</p>
+                <p className="text-gray-700 text-sm sm:text-base">Invoices are provided on request. Monthly rates apply to stays of 28 nights or more. A refundable security deposit may apply to stays of seven nights or longer; the amount and refund conditions will be stated on your quotation.</p>
               </div>
 
               <div className="bg-white rounded-lg border border-gray-200 p-4 sm:p-6">
@@ -502,7 +502,7 @@ export default function HomePage() {
                 name: "How does invoicing work?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Invoices are provided on request. Monthly rates apply to stays of 28 nights or more; a refundable security deposit may apply to extended stays.",
+                  text: "Invoices are provided on request. Monthly rates apply to stays of 28 nights or more. A refundable security deposit may apply to stays of seven nights or longer; the amount and refund conditions will be stated on your quotation.",
                 },
               },
               {

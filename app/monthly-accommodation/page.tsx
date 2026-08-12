@@ -210,20 +210,20 @@ export default function MonthlyAccommodationPage() {
                 <tr className="hover:bg-gray-50">
                   <td className="border border-gray-200 px-4 py-3 font-medium">Deluxe Twin</td>
                   <td className="border border-gray-200 px-4 py-3 text-right">R620</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R558</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R496</td>
-                </tr>
-                <tr className="hover:bg-gray-50">
-                  <td className="border border-gray-200 px-4 py-3 font-medium">Double</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R650</td>
                   <td className="border border-gray-200 px-4 py-3 text-right">R585</td>
                   <td className="border border-gray-200 px-4 py-3 text-right">R520</td>
                 </tr>
                 <tr className="hover:bg-gray-50">
+                  <td className="border border-gray-200 px-4 py-3 font-medium">Double</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">R650</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">R612</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">R544</td>
+                </tr>
+                <tr className="hover:bg-gray-50">
                   <td className="border border-gray-200 px-4 py-3 font-medium">Triple</td>
                   <td className="border border-gray-200 px-4 py-3 text-right">R800</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R720</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R640</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">R756</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">R672</td>
                 </tr>
               </tbody>
             </table>
@@ -231,7 +231,7 @@ export default function MonthlyAccommodationPage() {
           <p className="text-center text-gray-600 text-sm mt-4 italic">Prices per night</p>
           <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg text-center">
             <p className="text-blue-800 text-sm">
-              R1,500 refundable security deposit applies to stays of 7+ nights.
+              A refundable security deposit may apply to stays of seven nights or longer. The amount and refund conditions will be stated on your quotation.
             </p>
           </div>
         </div>

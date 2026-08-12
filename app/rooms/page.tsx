@@ -17,7 +17,7 @@ const faqs = [
   {
     question: "What room types and rates do you offer?",
     answer:
-      "Standard Twin from R580/night, Deluxe Twin R650/night, Double R680/night, and Triple R840/night (R280 per person) — with discounted weekly and monthly rates available.",
+      "Standard Twin from R580/night, Deluxe Twin R620/night, Double R650/night, and Triple R800/night (R267 per person) — with discounted weekly and monthly rates available.",
   },
   {
     question: "What's included in every room rate?",
@@ -43,13 +43,13 @@ const faqs = [
 
 export const metadata: Metadata = {
   title: "Rooms & Rates | From R580/Night | Monthly Discounts",
-  description: "Rooms and rates at 60 on Kosmos. Standard Twin R580/night, Deluxe R650, Double R680, Triple R840. Monthly rates available.",
+  description: "Rooms and rates at 60 on Kosmos. Standard Twin R580/night, Deluxe R620, Double R650, Triple R800. Monthly rates available.",
   keywords:
     "Self-catering rooms Bellville South, contractor accommodation Cape Town, rooms with ensuite Bellville, monthly accommodation Bellville, private bathroom accommodation Cape Town",
   alternates: { canonical: "https://www.60onkosmos.co.za/rooms" },
   openGraph: {
     title: "Rooms & Rates | From R580/Night | Monthly Discounts",
-    description: "Rooms and rates at 60 on Kosmos. Standard Twin R580/night, Deluxe R650, Double R680, Triple R840. Monthly rates available.",
+    description: "Rooms and rates at 60 on Kosmos. Standard Twin R580/night, Deluxe R620, Double R650, Triple R800. Monthly rates available.",
     url: "https://www.60onkosmos.co.za/rooms",
     type: "website",
     images: [
@@ -86,7 +86,7 @@ export default function RoomsPage() {
     {
       id: 2,
       name: "Deluxe Twin Room",
-      price: "R650/night",
+      price: "R620/night",
       weeklyPrice: "R585/night",
       monthlyPrice: "R520/night",
       image: "/images/deluxe-twin-room.jpg",
@@ -105,7 +105,7 @@ export default function RoomsPage() {
     {
       id: 3,
       name: "Double Room",
-      price: "R680/night",
+      price: "R650/night",
       weeklyPrice: "R612/night",
       monthlyPrice: "R544/night",
       image: "/images/sage-double-room.png",
@@ -125,7 +125,7 @@ export default function RoomsPage() {
     {
       id: 4,
       name: "Triple Room",
-      price: "R840/night",
+      price: "R800/night",
       weeklyPrice: "R756/night",
       monthlyPrice: "R672/night",
       perPerson: "From R224/person/night on monthly stays",
@@ -181,7 +181,7 @@ export default function RoomsPage() {
         {/* Deposit Disclosure */}
         <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-8 text-center">
           <p className="text-blue-800 text-sm">
-            A refundable security deposit may apply to stays of seven nights or longer. Terms will be provided on your quotation.
+            A refundable security deposit may apply to stays of seven nights or longer. The amount and refund conditions will be stated on your quotation.
           </p>
         </div>
 
@@ -293,19 +293,19 @@ export default function RoomsPage() {
                 </tr>
                 <tr className="border-b border-gray-800">
                   <td className="py-3 px-4">Deluxe Twin</td>
-                  <td className="text-center py-3 px-4">R650</td>
+                  <td className="text-center py-3 px-4">R620</td>
                   <td className="text-center py-3 px-4 text-sage-400">R585</td>
                   <td className="text-center py-3 px-4 text-green-400 font-bold">R520</td>
                 </tr>
                 <tr className="border-b border-gray-800">
                   <td className="py-3 px-4">Double Room</td>
-                  <td className="text-center py-3 px-4">R680</td>
+                  <td className="text-center py-3 px-4">R650</td>
                   <td className="text-center py-3 px-4 text-sage-400">R612</td>
                   <td className="text-center py-3 px-4 text-green-400 font-bold">R544</td>
                 </tr>
                 <tr>
                   <td className="py-3 px-4">Triple Room</td>
-                  <td className="text-center py-3 px-4">R840</td>
+                  <td className="text-center py-3 px-4">R800</td>
                   <td className="text-center py-3 px-4 text-sage-400">R756</td>
                   <td className="text-center py-3 px-4 text-green-400 font-bold">R672</td>
                 </tr>

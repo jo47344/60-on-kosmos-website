@@ -56,7 +56,7 @@ const faqs = [
   {
     question: "Can you accommodate a full crew or work team?",
     answer:
-      "Yes, we can arrange multiple rooms for larger teams. Our Triple Room sleeps 3 at R840/night (R280 per person), with discounted weekly and monthly rates for longer projects.",
+      "Yes, we can arrange multiple rooms for larger teams. Our Triple Room sleeps 3 at R800/night (R267 per person), with discounted weekly and monthly rates for longer projects.",
   },
   {
     question: "Do you provide invoices for corporate or contractor bookings?",
