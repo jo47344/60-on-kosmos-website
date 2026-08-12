@@ -393,7 +393,11 @@ export default function ContractorAccommodationPage() {
                 </div>
               </div>
               <Button asChild size="lg" className="bg-sage-600 hover:bg-sage-700">
-                <a href="https://wa.me/27745245703?text=Hi%2C%20I%27m%20a%20project%20manager%20and%20need%20to%20book%20accommodation%20for%20my%20team.%20Please%20send%20me%20a%20quote.">
+                <a
+                  href="https://wa.me/27745245703?text=Hi%2060%20on%20Kosmos%2C%20I%27m%20enquiring%20about%20accommodation%20for%20my%20project%20team.%20Company%3A%20%5Bcompany%20name%5D%2C%20team%20size%3A%20%5Bnumber%5D%2C%20dates%3A%20%5Barrival%20date%5D%20to%20%5Bdeparture%20date%5D.%20Parking%20needed%20for%3A%20%5Bcars%2C%20bakkies%2C%20trailers%5D.%20Please%20send%20a%20quote%20and%20confirm%20if%20an%20invoice%20can%20be%20provided."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Building2 className="mr-2 h-5 w-5" />
                   Get Company Quote
                 </a>

@@ -82,7 +82,11 @@ export default function MonthlyAccommodationPage() {
                 <Link href="/book-now">Get Monthly Rates</Link>
               </Button>
               <Button asChild size="lg" variant="outline">
-                <a href="https://wa.me/27745245703?text=Hi%2C%20I%27m%20interested%20in%20monthly%20accommodation%20rates">
+                <a
+                  href="https://wa.me/27745245703?text=Hi%2060%20on%20Kosmos%2C%20I%27m%20enquiring%20about%20monthly%20accommodation%20%2828%2B%20nights%29.%20Number%20of%20people%3A%20%5Bnumber%5D%2C%20preferred%20start%20date%3A%20%5Bdate%5D%2C%20expected%20length%20of%20stay%3A%20%5Bnumber%20of%20months%5D.%20Please%20send%20a%20quote."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   WhatsApp for Quote
                 </a>
               </Button>

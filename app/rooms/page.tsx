@@ -82,6 +82,8 @@ export default function RoomsPage() {
       ],
       description:
         "Clean, comfortable twin beds with modern ensuite bathroom. Access to communal kitchen.",
+      whatsapp:
+        "https://wa.me/27745245703?text=Hi%2060%20on%20Kosmos%2C%20I%27m%20enquiring%20about%20the%20Standard%20Twin%20Room%20for%20%5Bnumber%20of%20people%5D%2C%20from%20%5Barrival%20date%5D%20to%20%5Bdeparture%20date%5D.%20Please%20send%20the%20total%2C%20deposit%2C%20and%20payment%20options.",
     },
     {
       id: 2,
@@ -101,6 +103,8 @@ export default function RoomsPage() {
       ],
       description:
         "Our premium twin room with bar fridge, elegant navy blue headboards and quality bedding. Perfect for business travelers.",
+      whatsapp:
+        "https://wa.me/27745245703?text=Hi%2060%20on%20Kosmos%2C%20I%27m%20enquiring%20about%20the%20Deluxe%20Twin%20Room%20for%20%5Bnumber%20of%20people%5D%2C%20from%20%5Barrival%20date%5D%20to%20%5Bdeparture%20date%5D.%20Please%20send%20the%20total%2C%20deposit%2C%20and%20payment%20options.",
     },
     {
       id: 3,
@@ -121,6 +125,8 @@ export default function RoomsPage() {
       ],
       description:
         "Comfortable double bed with sage green accents and modern ensuite facilities. Extra space and privacy.",
+      whatsapp:
+        "https://wa.me/27745245703?text=Hi%2060%20on%20Kosmos%2C%20I%27m%20enquiring%20about%20the%20Double%20Room%20for%20%5Bnumber%20of%20people%5D%2C%20from%20%5Barrival%20date%5D%20to%20%5Bdeparture%20date%5D.%20Please%20send%20the%20total%2C%20deposit%2C%20and%20payment%20options.",
     },
     {
       id: 4,
@@ -142,6 +148,8 @@ export default function RoomsPage() {
       ],
       description:
         "Spacious room perfect for 3-person crews. Best value per person for contractor teams.",
+      whatsapp:
+        "https://wa.me/27745245703?text=Hi%2060%20on%20Kosmos%2C%20I%27m%20enquiring%20about%20the%20Triple%20Room%20for%20%5Bnumber%20of%20workers%5D%2C%20from%20%5Barrival%20date%5D%20to%20%5Bdeparture%20date%5D.%20Please%20send%20the%20total%2C%20deposit%2C%20parking%20details%2C%20and%20payment%20options.",
     },
   ]
 
@@ -251,7 +259,7 @@ export default function RoomsPage() {
 
                 <div className="space-y-2">
                   <Button asChild className="w-full bg-green-600 hover:bg-green-700">
-                    <a href="https://wa.me/27745245703" target="_blank" rel="noopener noreferrer">
+                    <a href={room.whatsapp} target="_blank" rel="noopener noreferrer">
                       <Phone className="w-4 h-4 mr-2" />
                       WhatsApp Book
                     </a>
