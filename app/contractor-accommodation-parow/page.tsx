@@ -13,11 +13,13 @@ import {
   MapPin,
   Phone,
   ArrowRight,
+  ChevronDown,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Breadcrumbs } from "@/components/breadcrumbs"
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
+import { FAQSchema } from "@/components/faq-schema"
 
 export const metadata: Metadata = {
   title: "Guesthouse Near Parow",
@@ -47,11 +49,36 @@ const breadcrumbItems = [
   { name: "Parow", url: "/contractor-accommodation-parow" },
 ]
 
+const faqs = [
+  {
+    question: "How far is 60 on Kosmos from Parow and Parow Industria?",
+    answer: "We're a short drive from Parow and Parow Industria, based in Bellville South.",
+  },
+  {
+    question: "Do you have secure parking for work vehicles?",
+    answer: "Yes, gated parking with 24/7 CCTV, suitable for bakkies and work vehicles, one per room.",
+  },
+  {
+    question: "Can you accommodate a team working in Parow?",
+    answer:
+      "Yes, we can arrange multiple rooms for crews, with discounted rates for weekly and monthly stays from R580/night.",
+  },
+  {
+    question: "Is invoicing available for contractor bookings?",
+    answer: "Yes, invoices are provided on request.",
+  },
+  {
+    question: "What are your check-in/check-out times?",
+    answer: "Check-in is from 14:00, check-out by 10:00. Weekly cleaning and free WiFi are included.",
+  },
+]
+
 export default function ParowAccommodationPage() {
   return (
     <div className="min-h-screen bg-white">
       <BreadcrumbSchema items={breadcrumbItems} />
       <Breadcrumbs items={breadcrumbItems} />
+      <FAQSchema faqs={faqs} />
       {/* Hero Section */}
       <section className="relative bg-gray-900 py-16 md:py-24">
         <div className="absolute inset-0">
@@ -182,6 +209,28 @@ export default function ParowAccommodationPage() {
                 <Icon className="w-6 h-6 text-sage-600 flex-shrink-0" />
                 <span className="font-medium">{label}</span>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-12 bg-gray-50">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <Card key={index}>
+                <CardContent className="p-6">
+                  <details className="group">
+                    <summary className="flex items-start justify-between cursor-pointer list-none">
+                      <h3 className="text-lg font-semibold text-gray-900 pr-8">{faq.question}</h3>
+                      <ChevronDown className="w-5 h-5 text-sage-600 flex-shrink-0 transition-transform group-open:rotate-180" />
+                    </summary>
+                    <p className="mt-4 text-gray-700 leading-relaxed">{faq.answer}</p>
+                  </details>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>

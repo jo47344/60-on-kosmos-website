@@ -13,11 +13,13 @@ import {
   MapPin,
   Phone,
   ArrowRight,
+  ChevronDown,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Breadcrumbs } from "@/components/breadcrumbs"
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
+import { FAQSchema } from "@/components/faq-schema"
 
 export const metadata: Metadata = {
   title: "Guesthouse Near Goodwood | 60 on Kosmos, Bellville South",
@@ -40,11 +42,37 @@ const breadcrumbItems = [
   { name: "Goodwood", url: "/contractor-accommodation-goodwood" },
 ]
 
+const faqs = [
+  {
+    question: "How far is 60 on Kosmos from Goodwood?",
+    answer: "We're just a few minutes' drive from Goodwood and its surrounding industrial areas, based in Bellville South.",
+  },
+  {
+    question: "Is parking secure for work vehicles?",
+    answer: "Yes, we offer free gated parking with 24/7 CCTV. Bakkies and work vehicles are welcome, one per room.",
+  },
+  {
+    question: "Can you host a full project team near Goodwood?",
+    answer:
+      "Yes, we regularly accommodate crews across multiple rooms, with corporate rates for weekly and monthly stays.",
+  },
+  {
+    question: "Do you offer corporate invoicing?",
+    answer: "Yes, invoices are provided on request for contractors and companies.",
+  },
+  {
+    question: "What's included in the room rate?",
+    answer:
+      "Every room includes free WiFi, weekly cleaning, secure parking, and access to our communal self-catering kitchen. Check-in is from 14:00, check-out by 10:00.",
+  },
+]
+
 export default function GoodwoodAccommodationPage() {
   return (
     <div className="min-h-screen bg-white">
       <BreadcrumbSchema items={breadcrumbItems} />
       <Breadcrumbs items={breadcrumbItems} />
+      <FAQSchema faqs={faqs} />
       {/* Hero Section */}
       <section className="relative bg-gray-900 py-16 md:py-24">
         <div className="absolute inset-0">
@@ -173,6 +201,28 @@ export default function GoodwoodAccommodationPage() {
                 <Icon className="w-6 h-6 text-sage-600 flex-shrink-0" />
                 <span className="font-medium">{label}</span>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-12 bg-gray-50">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <Card key={index}>
+                <CardContent className="p-6">
+                  <details className="group">
+                    <summary className="flex items-start justify-between cursor-pointer list-none">
+                      <h3 className="text-lg font-semibold text-gray-900 pr-8">{faq.question}</h3>
+                      <ChevronDown className="w-5 h-5 text-sage-600 flex-shrink-0 transition-transform group-open:rotate-180" />
+                    </summary>
+                    <p className="mt-4 text-gray-700 leading-relaxed">{faq.answer}</p>
+                  </details>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>

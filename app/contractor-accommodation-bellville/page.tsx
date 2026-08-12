@@ -13,11 +13,13 @@ import {
   MapPin,
   Phone,
   ArrowRight,
+  ChevronDown,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Breadcrumbs } from "@/components/breadcrumbs"
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
+import { FAQSchema } from "@/components/faq-schema"
 
 export const metadata: Metadata = {
   title: "Guesthouse in Bellville | 60 on Kosmos",
@@ -40,11 +42,40 @@ const breadcrumbItems = [
   { name: "Bellville", url: "/contractor-accommodation-bellville" },
 ]
 
+const faqs = [
+  {
+    question: "How close is 60 on Kosmos to TAC Business Park and Northlink College?",
+    answer:
+      "We're based in Bellville South, within easy reach of TAC Business Park, Northlink College, and the surrounding industrial areas — no long commute for local project teams.",
+  },
+  {
+    question: "Is there secure parking for bakkies and work vehicles?",
+    answer:
+      "Yes. Parking is behind locked gates with 24/7 CCTV, one vehicle per room, and bakkies and work vehicles are welcome.",
+  },
+  {
+    question: "Can you accommodate a full crew or work team?",
+    answer:
+      "Yes, we can arrange multiple rooms for larger teams. Our Triple Room sleeps 3 at R840/night (R280 per person), with discounted weekly and monthly rates for longer projects.",
+  },
+  {
+    question: "Do you provide invoices for corporate or contractor bookings?",
+    answer:
+      "Yes, invoices are provided on request for companies and contractors who need booking documentation for expense claims.",
+  },
+  {
+    question: "What are your check-in and check-out times?",
+    answer:
+      "Check-in is from 14:00 and check-out is by 10:00. Weekly cleaning with fresh linen is included in every stay, along with free WiFi and secure parking.",
+  },
+]
+
 export default function BellvilleAccommodationPage() {
   return (
     <div className="min-h-screen bg-white">
       <BreadcrumbSchema items={breadcrumbItems} />
       <Breadcrumbs items={breadcrumbItems} />
+      <FAQSchema faqs={faqs} />
       {/* Hero Section */}
       <section className="relative bg-gray-900 py-16 md:py-24">
         <div className="absolute inset-0">
@@ -175,6 +206,28 @@ export default function BellvilleAccommodationPage() {
                 <Icon className="w-6 h-6 text-sage-600 flex-shrink-0" />
                 <span className="font-medium">{label}</span>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-12 bg-gray-50">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <Card key={index}>
+                <CardContent className="p-6">
+                  <details className="group">
+                    <summary className="flex items-start justify-between cursor-pointer list-none">
+                      <h3 className="text-lg font-semibold text-gray-900 pr-8">{faq.question}</h3>
+                      <ChevronDown className="w-5 h-5 text-sage-600 flex-shrink-0 transition-transform group-open:rotate-180" />
+                    </summary>
+                    <p className="mt-4 text-gray-700 leading-relaxed">{faq.answer}</p>
+                  </details>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>

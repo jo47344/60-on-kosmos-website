@@ -13,11 +13,13 @@ import {
   MapPin,
   Phone,
   ArrowRight,
+  ChevronDown,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Breadcrumbs } from "@/components/breadcrumbs"
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
+import { FAQSchema } from "@/components/faq-schema"
 
 export const metadata: Metadata = {
   title: "Guesthouse Near Kuils River | 60 on Kosmos, Bellville South",
@@ -40,11 +42,39 @@ const breadcrumbItems = [
   { name: "Kuils River", url: "/contractor-accommodation-kuils-river" },
 ]
 
+const faqs = [
+  {
+    question: "How far is 60 on Kosmos from Kuils River?",
+    answer:
+      "We're a convenient drive from Kuils River and its surrounding industrial zones, based in Bellville South.",
+  },
+  {
+    question: "Do you offer secure parking for contractor vehicles?",
+    answer:
+      "Yes, free gated parking with 24/7 CCTV surveillance, with space for bakkies and work vehicles, one per room.",
+  },
+  {
+    question: "Can multiple team members stay together?",
+    answer:
+      "Yes, we can arrange several rooms for site crews and teams, with discounted weekly and monthly rates for Kuils River projects.",
+  },
+  {
+    question: "Is corporate invoicing available?",
+    answer: "Yes, invoices are provided on request for project teams and companies.",
+  },
+  {
+    question: "What are the check-in and cleaning arrangements?",
+    answer:
+      "Check-in is from 14:00 and check-out by 10:00, with weekly cleaning, fresh linen, and free WiFi included throughout your stay.",
+  },
+]
+
 export default function KuilsRiverAccommodationPage() {
   return (
     <div className="min-h-screen bg-white">
       <BreadcrumbSchema items={breadcrumbItems} />
       <Breadcrumbs items={breadcrumbItems} />
+      <FAQSchema faqs={faqs} />
       {/* Hero Section */}
       <section className="relative bg-gray-900 py-16 md:py-24">
         <div className="absolute inset-0">
@@ -173,6 +203,28 @@ export default function KuilsRiverAccommodationPage() {
                 <Icon className="w-6 h-6 text-sage-600 flex-shrink-0" />
                 <span className="font-medium">{label}</span>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-12 bg-gray-50">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <Card key={index}>
+                <CardContent className="p-6">
+                  <details className="group">
+                    <summary className="flex items-start justify-between cursor-pointer list-none">
+                      <h3 className="text-lg font-semibold text-gray-900 pr-8">{faq.question}</h3>
+                      <ChevronDown className="w-5 h-5 text-sage-600 flex-shrink-0 transition-transform group-open:rotate-180" />
+                    </summary>
+                    <p className="mt-4 text-gray-700 leading-relaxed">{faq.answer}</p>
+                  </details>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>

@@ -13,11 +13,13 @@ import {
   MapPin,
   Phone,
   ArrowRight,
+  ChevronDown,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Breadcrumbs } from "@/components/breadcrumbs"
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
+import { FAQSchema } from "@/components/faq-schema"
 
 export const metadata: Metadata = {
   title: "Accommodation Near Durbanville | 60 on Kosmos Guest House, Bellville South",
@@ -39,11 +41,37 @@ const breadcrumbItems = [
   { name: "Accommodation Near Durbanville", url: "/accommodation-durbanville" },
 ]
 
+const faqs = [
+  {
+    question: "How far is 60 on Kosmos from Durbanville?",
+    answer:
+      "We're a short drive from Durbanville, based in Bellville South, making us a convenient guest house option for visitors, contractors, and professionals in the area.",
+  },
+  {
+    question: "Is secure parking included?",
+    answer: "Yes, free gated parking with 24/7 CCTV surveillance is included for every room.",
+  },
+  {
+    question: "Do you offer self-catering facilities?",
+    answer:
+      "Yes, all guests have access to our communal kitchen with a gas stove, microwave, air fryer, and kettle for preparing meals.",
+  },
+  {
+    question: "Can you invoice companies or contractors?",
+    answer: "Yes, invoices are provided on request for corporate and contractor bookings.",
+  },
+  {
+    question: "What are your check-in and check-out times?",
+    answer: "Check-in is from 14:00 and check-out is by 10:00. Weekly cleaning and free WiFi are included in every stay.",
+  },
+]
+
 export default function DurbanvilleAccommodationPage() {
   return (
     <div className="min-h-screen bg-white">
       <BreadcrumbSchema items={breadcrumbItems} />
       <Breadcrumbs items={breadcrumbItems} />
+      <FAQSchema faqs={faqs} />
       {/* Hero Section */}
       <section className="relative bg-gray-900 py-16 md:py-24">
         <div className="absolute inset-0">
@@ -174,6 +202,28 @@ export default function DurbanvilleAccommodationPage() {
                 <Icon className="w-6 h-6 text-sage-600 flex-shrink-0" />
                 <span className="font-medium">{label}</span>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-12 bg-gray-50">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <Card key={index}>
+                <CardContent className="p-6">
+                  <details className="group">
+                    <summary className="flex items-start justify-between cursor-pointer list-none">
+                      <h3 className="text-lg font-semibold text-gray-900 pr-8">{faq.question}</h3>
+                      <ChevronDown className="w-5 h-5 text-sage-600 flex-shrink-0 transition-transform group-open:rotate-180" />
+                    </summary>
+                    <p className="mt-4 text-gray-700 leading-relaxed">{faq.answer}</p>
+                  </details>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>

@@ -13,11 +13,13 @@ import {
   MapPin,
   Phone,
   ArrowRight,
+  ChevronDown,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Breadcrumbs } from "@/components/breadcrumbs"
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
+import { FAQSchema } from "@/components/faq-schema"
 
 export const metadata: Metadata = {
   title: "Guesthouse in the Northern Suburbs | 60 on Kosmos, Bellville",
@@ -40,11 +42,38 @@ const breadcrumbItems = [
   { name: "Northern Suburbs", url: "/contractor-accommodation-northern-suburbs" },
 ]
 
+const faqs = [
+  {
+    question: "Which northern suburbs areas are you central to?",
+    answer:
+      "We're based in Bellville South, centrally positioned for Parow, Stikland, Goodwood, Kuils River, and the wider northern suburbs.",
+  },
+  {
+    question: "Is secure parking available for work vehicles?",
+    answer: "Yes, free gated parking with 24/7 CCTV, and bakkies and work vehicles are welcome.",
+  },
+  {
+    question: "Can you accommodate teams working across different northern suburbs sites?",
+    answer:
+      "Yes, many of our guests are project teams covering multiple northern suburbs locations, and we offer discounted weekly and monthly rates.",
+  },
+  {
+    question: "Do you provide invoices for corporate bookings?",
+    answer: "Yes, on request, for contractors and companies needing documentation.",
+  },
+  {
+    question: "What's included and what are the check-in times?",
+    answer:
+      "Check-in is from 14:00, check-out by 10:00. Every room includes free WiFi, weekly cleaning, and access to our self-catering kitchen.",
+  },
+]
+
 export default function NorthernSuburbsAccommodationPage() {
   return (
     <div className="min-h-screen bg-white">
       <BreadcrumbSchema items={breadcrumbItems} />
       <Breadcrumbs items={breadcrumbItems} />
+      <FAQSchema faqs={faqs} />
       {/* Hero Section */}
       <section className="relative bg-gray-900 py-16 md:py-24">
         <div className="absolute inset-0">
@@ -175,6 +204,28 @@ export default function NorthernSuburbsAccommodationPage() {
                 <Icon className="w-6 h-6 text-sage-600 flex-shrink-0" />
                 <span className="font-medium">{label}</span>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-12 bg-gray-50">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <Card key={index}>
+                <CardContent className="p-6">
+                  <details className="group">
+                    <summary className="flex items-start justify-between cursor-pointer list-none">
+                      <h3 className="text-lg font-semibold text-gray-900 pr-8">{faq.question}</h3>
+                      <ChevronDown className="w-5 h-5 text-sage-600 flex-shrink-0 transition-transform group-open:rotate-180" />
+                    </summary>
+                    <p className="mt-4 text-gray-700 leading-relaxed">{faq.answer}</p>
+                  </details>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
