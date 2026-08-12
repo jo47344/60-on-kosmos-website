@@ -82,7 +82,11 @@ export default function MonthlyAccommodationPage() {
                 <Link href="/book-now">Get Monthly Rates</Link>
               </Button>
               <Button asChild size="lg" variant="outline">
-                <a href="https://wa.me/27745245703?text=Hi%2C%20I%27m%20interested%20in%20monthly%20accommodation%20rates">
+                <a
+                  href="https://wa.me/27745245703?text=Hi%2060%20on%20Kosmos%2C%20I%27m%20enquiring%20about%20monthly%20accommodation%20%2828%2B%20nights%29.%20Number%20of%20people%3A%20%5Bnumber%5D%2C%20preferred%20start%20date%3A%20%5Bdate%5D%2C%20expected%20length%20of%20stay%3A%20%5Bnumber%20of%20months%5D.%20Please%20send%20a%20quote."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   WhatsApp for Quote
                 </a>
               </Button>
@@ -210,20 +214,20 @@ export default function MonthlyAccommodationPage() {
                 <tr className="hover:bg-gray-50">
                   <td className="border border-gray-200 px-4 py-3 font-medium">Deluxe Twin</td>
                   <td className="border border-gray-200 px-4 py-3 text-right">R620</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R558</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R496</td>
-                </tr>
-                <tr className="hover:bg-gray-50">
-                  <td className="border border-gray-200 px-4 py-3 font-medium">Double</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R650</td>
                   <td className="border border-gray-200 px-4 py-3 text-right">R585</td>
                   <td className="border border-gray-200 px-4 py-3 text-right">R520</td>
                 </tr>
                 <tr className="hover:bg-gray-50">
+                  <td className="border border-gray-200 px-4 py-3 font-medium">Double</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">R650</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">R612</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">R544</td>
+                </tr>
+                <tr className="hover:bg-gray-50">
                   <td className="border border-gray-200 px-4 py-3 font-medium">Triple</td>
                   <td className="border border-gray-200 px-4 py-3 text-right">R800</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R720</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R640</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">R756</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">R672</td>
                 </tr>
               </tbody>
             </table>
@@ -231,7 +235,7 @@ export default function MonthlyAccommodationPage() {
           <p className="text-center text-gray-600 text-sm mt-4 italic">Prices per night</p>
           <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg text-center">
             <p className="text-blue-800 text-sm">
-              R1,500 refundable security deposit applies to stays of 7+ nights.
+              A refundable security deposit may apply to stays of seven nights or longer. The amount and refund conditions will be stated on your quotation.
             </p>
           </div>
         </div>

@@ -60,7 +60,7 @@ export default function TermsPage() {
             <h2 className="text-2xl font-bold text-foreground mb-4">Security Deposit</h2>
             <div className="bg-muted rounded-lg p-6">
               <p className="text-muted-foreground mb-3">
-                A refundable security deposit may apply to stays of seven nights or longer. The amount and refund conditions will be stated on the quotation.
+                A refundable security deposit may apply to stays of seven nights or longer. The amount and refund conditions will be stated on your quotation.
               </p>
               <p className="text-muted-foreground mb-3">
                 The deposit is returned via EFT within 7 days of checkout, subject to room inspection.

@@ -79,6 +79,8 @@ export function Navigation() {
               <button
                 onClick={() => setVisitorsOpen(!visitorsOpen)}
                 className="px-4 py-2 rounded-lg hover:bg-white/10 transition-colors duration-200 font-medium flex items-center gap-1"
+                aria-haspopup="true"
+                aria-expanded={visitorsOpen}
               >
                 Visitors
                 <ChevronDown
@@ -108,6 +110,8 @@ export function Navigation() {
               <button
                 onClick={() => setResourcesOpen(!resourcesOpen)}
                 className="px-4 py-2 rounded-lg hover:bg-white/10 transition-colors duration-200 font-medium flex items-center gap-1"
+                aria-haspopup="true"
+                aria-expanded={resourcesOpen}
               >
                 Resources
                 <ChevronDown
@@ -171,6 +175,7 @@ export function Navigation() {
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden p-2 rounded-lg hover:bg-white/10 transition-colors"
             aria-label="Toggle menu"
+            aria-expanded={isOpen}
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>

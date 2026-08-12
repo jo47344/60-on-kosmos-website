@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import {
   MapPin,
-  Phone,
   Star,
   Wifi,
   Car,
@@ -15,6 +14,7 @@ import {
   Briefcase,
   GraduationCap,
   ArrowRight,
+  MessageCircle,
 } from "lucide-react"
 import { TrustBadges } from "@/components/trust-badges"
 import { LatestBlogPosts } from "@/components/latest-blog-posts"
@@ -50,27 +50,35 @@ export default function HomePage() {
       image: "/images/standard-twin-room.jpg",
       bestFor: "Best for 2 contractors sharing",
       features: ["2 single beds", "Private ensuite", "Free WiFi", "Kitchen access"],
+      whatsapp:
+        "https://wa.me/27745245703?text=Hi%2060%20on%20Kosmos%2C%20I%27m%20enquiring%20about%20the%20Standard%20Twin%20Room%20for%20%5Bnumber%20of%20people%5D%2C%20from%20%5Barrival%20date%5D%20to%20%5Bdeparture%20date%5D.%20Please%20send%20the%20total%2C%20deposit%2C%20and%20payment%20options.",
     },
     {
       name: "Deluxe Twin Room",
-      price: "From R650/night",
+      price: "From R620/night",
       image: "/images/deluxe-twin-room.jpg",
       bestFor: "Best for professionals wanting extra comfort",
       features: ["2 single beds", "Private ensuite", "Bar fridge", "Premium linens"],
+      whatsapp:
+        "https://wa.me/27745245703?text=Hi%2060%20on%20Kosmos%2C%20I%27m%20enquiring%20about%20the%20Deluxe%20Twin%20Room%20for%20%5Bnumber%20of%20people%5D%2C%20from%20%5Barrival%20date%5D%20to%20%5Bdeparture%20date%5D.%20Please%20send%20the%20total%2C%20deposit%2C%20and%20payment%20options.",
     },
     {
       name: "Double Room",
-      price: "From R680/night",
+      price: "From R650/night",
       image: "/images/sage-double-room.png",
       bestFor: "Best for solo professionals or couples",
       features: ["Double bed", "Private ensuite", "Bar fridge", "Premium bedding"],
+      whatsapp:
+        "https://wa.me/27745245703?text=Hi%2060%20on%20Kosmos%2C%20I%27m%20enquiring%20about%20the%20Double%20Room%20for%20%5Bnumber%20of%20people%5D%2C%20from%20%5Barrival%20date%5D%20to%20%5Bdeparture%20date%5D.%20Please%20send%20the%20total%2C%20deposit%2C%20and%20payment%20options.",
     },
     {
       name: "Triple Room",
-      price: "From R840/night",
+      price: "From R800/night",
       image: "/images/triple-room.jpg",
       bestFor: "Best for 3-person crews",
       features: ["3 single beds", "Private ensuite", "From R224/person monthly", "Best value"],
+      whatsapp:
+        "https://wa.me/27745245703?text=Hi%2060%20on%20Kosmos%2C%20I%27m%20enquiring%20about%20the%20Triple%20Room%20for%20%5Bnumber%20of%20workers%5D%2C%20from%20%5Barrival%20date%5D%20to%20%5Bdeparture%20date%5D.%20Please%20send%20the%20total%2C%20deposit%2C%20parking%20details%2C%20and%20payment%20options.",
     },
   ]
 
@@ -166,7 +174,11 @@ export default function HomePage() {
                   variant="outline"
                   className="border-white text-white hover:bg-white/10 bg-transparent"
                 >
-                  <a href="https://wa.me/27745245703?text=Hi%2C%20I%27m%20looking%20for%20accommodation%20for%20my%20team">
+                  <a
+                    href="https://wa.me/27745245703?text=Hi%2060%20on%20Kosmos%2C%20I%27m%20enquiring%20about%20accommodation%20for%20my%20team.%20Team%20size%3A%20%5Bnumber%20of%20people%5D%2C%20dates%3A%20%5Barrival%20date%5D%20to%20%5Bdeparture%20date%5D.%20We%20need%20parking%20for%3A%20%5Bcars%2C%20bakkies%2C%20trailers%5D.%20Please%20send%20a%20quote."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     WhatsApp Your Team
                   </a>
                 </Button>
@@ -247,9 +259,17 @@ export default function HomePage() {
                         </li>
                       ))}
                     </ul>
-                    <Button asChild className="w-full bg-sage-600 hover:bg-sage-700">
-                      <a href="/rooms">View Details</a>
-                    </Button>
+                    <div className="flex flex-col sm:flex-row gap-2">
+                      <Button asChild className="w-full bg-sage-600 hover:bg-sage-700">
+                        <a href="/rooms">View Details</a>
+                      </Button>
+                      <Button asChild variant="outline" className="w-full border-green-600 text-green-600 hover:bg-green-50 bg-transparent">
+                        <a href={room.whatsapp} target="_blank" rel="noopener noreferrer">
+                          <MessageCircle className="w-4 h-4 mr-2" />
+                          Quick Quote
+                        </a>
+                      </Button>
+                    </div>
                   </CardContent>
                 </Card>
               ))}
@@ -333,7 +353,13 @@ export default function HomePage() {
                     5km from UWC and 4.5km from CPUT. Flexible arrival times for student stays.
                   </p>
                   <Button asChild variant="outline" className="border-sage-600 text-sage-600 bg-transparent w-full">
-                    <Link href="/rooms">Student Options</Link>
+                    <a
+                      href="https://wa.me/27745245703?text=Hi%2060%20on%20Kosmos%2C%20I%27m%20a%20student%20enquiring%20about%20accommodation%20near%20UWC%2FCPUT.%20Arrival%20date%3A%20%5Bdate%5D%2C%20length%20of%20stay%3A%20%5Bduration%5D.%20Please%20send%20availability%20and%20rates."
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Student Options
+                    </a>
                   </Button>
                 </CardContent>
               </Card>
@@ -346,7 +372,13 @@ export default function HomePage() {
                     8km from Tygerberg Hospital. Ideal for locums, training, and healthcare professionals.
                   </p>
                   <Button asChild variant="outline" className="border-sage-600 text-sage-600 bg-transparent w-full">
-                    <Link href="/rooms">Healthcare Housing</Link>
+                    <a
+                      href="https://wa.me/27745245703?text=Hi%2060%20on%20Kosmos%2C%20I%27m%20a%20healthcare%20professional%20enquiring%20about%20accommodation%20near%20Tygerberg%20Hospital.%20Dates%3A%20%5Barrival%20date%5D%20to%20%5Bdeparture%20date%5D.%20Please%20send%20availability%20and%20rates."
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Healthcare Housing
+                    </a>
                   </Button>
                 </CardContent>
               </Card>
@@ -427,7 +459,7 @@ export default function HomePage() {
 
               <div className="bg-white rounded-lg border border-gray-200 p-4 sm:p-6">
                 <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3">How does invoicing work?</h3>
-                <p className="text-gray-700 text-sm sm:text-base">Invoices are provided on request. Monthly rates apply to stays of 28 nights or more; a refundable security deposit may apply to extended stays.</p>
+                <p className="text-gray-700 text-sm sm:text-base">Invoices are provided on request. Monthly rates apply to stays of 28 nights or more. A refundable security deposit may apply to stays of seven nights or longer; the amount and refund conditions will be stated on your quotation.</p>
               </div>
 
               <div className="bg-white rounded-lg border border-gray-200 p-4 sm:p-6">
@@ -502,7 +534,7 @@ export default function HomePage() {
                 name: "How does invoicing work?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Invoices are provided on request. Monthly rates apply to stays of 28 nights or more; a refundable security deposit may apply to extended stays.",
+                  text: "Invoices are provided on request. Monthly rates apply to stays of 28 nights or more. A refundable security deposit may apply to stays of seven nights or longer; the amount and refund conditions will be stated on your quotation.",
                 },
               },
               {

@@ -7,6 +7,7 @@ import { Wifi, Coffee, Car, Shield, Phone, ChevronDown } from "lucide-react"
 import { Breadcrumbs } from "@/components/breadcrumbs"
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
 import { FAQSchema } from "@/components/faq-schema"
+import { RoomSchema } from "@/components/room-schema"
 
 const breadcrumbItems = [
   { name: "Home", url: "" },
@@ -17,7 +18,7 @@ const faqs = [
   {
     question: "What room types and rates do you offer?",
     answer:
-      "Standard Twin from R580/night, Deluxe Twin R650/night, Double R680/night, and Triple R840/night (R280 per person) — with discounted weekly and monthly rates available.",
+      "Standard Twin from R580/night, Deluxe Twin R620/night, Double R650/night, and Triple R800/night (R267 per person) — with discounted weekly and monthly rates available.",
   },
   {
     question: "What's included in every room rate?",
@@ -43,13 +44,13 @@ const faqs = [
 
 export const metadata: Metadata = {
   title: "Rooms & Rates | From R580/Night | Monthly Discounts",
-  description: "Rooms and rates at 60 on Kosmos. Standard Twin R580/night, Deluxe R650, Double R680, Triple R840. Monthly rates available.",
+  description: "Rooms and rates at 60 on Kosmos. Standard Twin R580/night, Deluxe R620, Double R650, Triple R800. Monthly rates available.",
   keywords:
     "Self-catering rooms Bellville South, contractor accommodation Cape Town, rooms with ensuite Bellville, monthly accommodation Bellville, private bathroom accommodation Cape Town",
   alternates: { canonical: "https://www.60onkosmos.co.za/rooms" },
   openGraph: {
     title: "Rooms & Rates | From R580/Night | Monthly Discounts",
-    description: "Rooms and rates at 60 on Kosmos. Standard Twin R580/night, Deluxe R650, Double R680, Triple R840. Monthly rates available.",
+    description: "Rooms and rates at 60 on Kosmos. Standard Twin R580/night, Deluxe R620, Double R650, Triple R800. Monthly rates available.",
     url: "https://www.60onkosmos.co.za/rooms",
     type: "website",
     images: [
@@ -82,11 +83,13 @@ export default function RoomsPage() {
       ],
       description:
         "Clean, comfortable twin beds with modern ensuite bathroom. Access to communal kitchen.",
+      whatsapp:
+        "https://wa.me/27745245703?text=Hi%2060%20on%20Kosmos%2C%20I%27m%20enquiring%20about%20the%20Standard%20Twin%20Room%20for%20%5Bnumber%20of%20people%5D%2C%20from%20%5Barrival%20date%5D%20to%20%5Bdeparture%20date%5D.%20Please%20send%20the%20total%2C%20deposit%2C%20and%20payment%20options.",
     },
     {
       id: 2,
       name: "Deluxe Twin Room",
-      price: "R650/night",
+      price: "R620/night",
       weeklyPrice: "R585/night",
       monthlyPrice: "R520/night",
       image: "/images/deluxe-twin-room.jpg",
@@ -101,11 +104,13 @@ export default function RoomsPage() {
       ],
       description:
         "Our premium twin room with bar fridge, elegant navy blue headboards and quality bedding. Perfect for business travelers.",
+      whatsapp:
+        "https://wa.me/27745245703?text=Hi%2060%20on%20Kosmos%2C%20I%27m%20enquiring%20about%20the%20Deluxe%20Twin%20Room%20for%20%5Bnumber%20of%20people%5D%2C%20from%20%5Barrival%20date%5D%20to%20%5Bdeparture%20date%5D.%20Please%20send%20the%20total%2C%20deposit%2C%20and%20payment%20options.",
     },
     {
       id: 3,
       name: "Double Room",
-      price: "R680/night",
+      price: "R650/night",
       weeklyPrice: "R612/night",
       monthlyPrice: "R544/night",
       image: "/images/sage-double-room.png",
@@ -121,11 +126,13 @@ export default function RoomsPage() {
       ],
       description:
         "Comfortable double bed with sage green accents and modern ensuite facilities. Extra space and privacy.",
+      whatsapp:
+        "https://wa.me/27745245703?text=Hi%2060%20on%20Kosmos%2C%20I%27m%20enquiring%20about%20the%20Double%20Room%20for%20%5Bnumber%20of%20people%5D%2C%20from%20%5Barrival%20date%5D%20to%20%5Bdeparture%20date%5D.%20Please%20send%20the%20total%2C%20deposit%2C%20and%20payment%20options.",
     },
     {
       id: 4,
       name: "Triple Room",
-      price: "R840/night",
+      price: "R800/night",
       weeklyPrice: "R756/night",
       monthlyPrice: "R672/night",
       perPerson: "From R224/person/night on monthly stays",
@@ -142,6 +149,8 @@ export default function RoomsPage() {
       ],
       description:
         "Spacious room perfect for 3-person crews. Best value per person for contractor teams.",
+      whatsapp:
+        "https://wa.me/27745245703?text=Hi%2060%20on%20Kosmos%2C%20I%27m%20enquiring%20about%20the%20Triple%20Room%20for%20%5Bnumber%20of%20workers%5D%2C%20from%20%5Barrival%20date%5D%20to%20%5Bdeparture%20date%5D.%20Please%20send%20the%20total%2C%20deposit%2C%20parking%20details%2C%20and%20payment%20options.",
     },
   ]
 
@@ -150,6 +159,15 @@ export default function RoomsPage() {
       <BreadcrumbSchema items={breadcrumbItems} />
       <Breadcrumbs items={breadcrumbItems} />
       <FAQSchema faqs={faqs} />
+      <RoomSchema
+        rooms={rooms.map((room) => ({
+          name: room.name,
+          price: Number(room.price.replace(/[^0-9]/g, "")),
+          description: room.description,
+          image: room.image,
+          features: room.features,
+        }))}
+      />
       <div className="min-h-screen py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Contact Banner */}
@@ -181,7 +199,7 @@ export default function RoomsPage() {
         {/* Deposit Disclosure */}
         <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-8 text-center">
           <p className="text-blue-800 text-sm">
-            A refundable security deposit may apply to stays of seven nights or longer. Terms will be provided on your quotation.
+            A refundable security deposit may apply to stays of seven nights or longer. The amount and refund conditions will be stated on your quotation.
           </p>
         </div>
 
@@ -251,7 +269,7 @@ export default function RoomsPage() {
 
                 <div className="space-y-2">
                   <Button asChild className="w-full bg-green-600 hover:bg-green-700">
-                    <a href="https://wa.me/27745245703" target="_blank" rel="noopener noreferrer">
+                    <a href={room.whatsapp} target="_blank" rel="noopener noreferrer">
                       <Phone className="w-4 h-4 mr-2" />
                       WhatsApp Book
                     </a>
@@ -293,19 +311,19 @@ export default function RoomsPage() {
                 </tr>
                 <tr className="border-b border-gray-800">
                   <td className="py-3 px-4">Deluxe Twin</td>
-                  <td className="text-center py-3 px-4">R650</td>
+                  <td className="text-center py-3 px-4">R620</td>
                   <td className="text-center py-3 px-4 text-sage-400">R585</td>
                   <td className="text-center py-3 px-4 text-green-400 font-bold">R520</td>
                 </tr>
                 <tr className="border-b border-gray-800">
                   <td className="py-3 px-4">Double Room</td>
-                  <td className="text-center py-3 px-4">R680</td>
+                  <td className="text-center py-3 px-4">R650</td>
                   <td className="text-center py-3 px-4 text-sage-400">R612</td>
                   <td className="text-center py-3 px-4 text-green-400 font-bold">R544</td>
                 </tr>
                 <tr>
                   <td className="py-3 px-4">Triple Room</td>
-                  <td className="text-center py-3 px-4">R840</td>
+                  <td className="text-center py-3 px-4">R800</td>
                   <td className="text-center py-3 px-4 text-sage-400">R756</td>
                   <td className="text-center py-3 px-4 text-green-400 font-bold">R672</td>
                 </tr>

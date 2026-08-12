@@ -207,6 +207,7 @@ export default function ThingsToDoPage() {
                       src={attraction.image || "/placeholder.svg"}
                       alt={attraction.title}
                       fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
                       className="object-cover"
                     />
                     <div className="absolute top-4 right-4 bg-white px-4 py-2 rounded-full shadow-lg text-sm font-semibold">

@@ -87,7 +87,7 @@ export default function ContractorAccommodationPage() {
     },
     telephone: "+27745245703",
     url: "https://www.60onkosmos.co.za/contractor-accommodation",
-    priceRange: "R464 - R840",
+    priceRange: "R464 - R800",
     currenciesAccepted: "ZAR",
     paymentAccepted: "EFT",
     areaServed: [
@@ -170,7 +170,7 @@ export default function ContractorAccommodationPage() {
     {
       name: "Deluxe Twin Room",
       tagline: "The Comfort Upgrade",
-      price: "R650",
+      price: "R620",
       weeklyPrice: "R585",
       monthlyPrice: "R520",
       perPerson: null,
@@ -193,7 +193,7 @@ export default function ContractorAccommodationPage() {
     {
       name: "Double Room",
       tagline: "The Manager's Choice",
-      price: "R680",
+      price: "R650",
       weeklyPrice: "R612",
       monthlyPrice: "R544",
       perPerson: null,
@@ -216,7 +216,7 @@ export default function ContractorAccommodationPage() {
     {
       name: "Triple Room",
       tagline: "Best Value for Crews",
-      price: "R840",
+      price: "R800",
       weeklyPrice: "R756",
       monthlyPrice: "R672",
       perPerson: "R224/person/night",
@@ -242,7 +242,7 @@ export default function ContractorAccommodationPage() {
   const contractorFAQs = [
     {
       question: "How much does contractor accommodation cost in Bellville South?",
-      answer: "Contractor rates at 60 on Kosmos start from R580/night (Standard Twin, 1–6 nights). Weekly rates (7–27 nights) from R522/night. Monthly rates (28+ nights) from R464/night. Triple Room sleeps 3 from R840/night standard or R672/night monthly (R224/person/night). All rooms have private ensuite bathrooms.",
+      answer: "Contractor rates at 60 on Kosmos start from R580/night (Standard Twin, 1–6 nights). Weekly rates (7–27 nights) from R522/night. Monthly rates (28+ nights) from R464/night. Triple Room sleeps 3 from R800/night standard or R672/night monthly (R224/person/night). All rooms have private ensuite bathrooms.",
     },
     {
       question: "Is there secure parking for work vehicles and bakkies?",
@@ -270,7 +270,7 @@ export default function ContractorAccommodationPage() {
     },
     {
       question: "Can you accommodate work crews or teams?",
-      answer: "Yes, our Triple Room accommodates 3 people at R840/night (R280/person), or R672/night on monthly rates (R224/person/night) - the best value for crews. We can also arrange multiple rooms for larger teams. Many contractors book several rooms for their crews on project assignments.",
+      answer: "Our Triple Room accommodates 3 people at R267/night per person (R800÷3), or R224/night per person on monthly rates (R672÷3) — the best value for crews. We can also arrange multiple rooms for larger teams. Many contractors book several rooms for their crews on project assignments.",
     },
   ]
 
@@ -293,6 +293,7 @@ export default function ContractorAccommodationPage() {
             src="/images/exterior-building.png"
             alt="60 on Kosmos Contractor Accommodation Bellville South"
             fill
+            sizes="100vw"
             className="object-cover opacity-30"
             priority
           />
@@ -393,7 +394,11 @@ export default function ContractorAccommodationPage() {
                 </div>
               </div>
               <Button asChild size="lg" className="bg-sage-600 hover:bg-sage-700">
-                <a href="https://wa.me/27745245703?text=Hi%2C%20I%27m%20a%20project%20manager%20and%20need%20to%20book%20accommodation%20for%20my%20team.%20Please%20send%20me%20a%20quote.">
+                <a
+                  href="https://wa.me/27745245703?text=Hi%2060%20on%20Kosmos%2C%20I%27m%20enquiring%20about%20accommodation%20for%20my%20project%20team.%20Company%3A%20%5Bcompany%20name%5D%2C%20team%20size%3A%20%5Bnumber%5D%2C%20dates%3A%20%5Barrival%20date%5D%20to%20%5Bdeparture%20date%5D.%20Parking%20needed%20for%3A%20%5Bcars%2C%20bakkies%2C%20trailers%5D.%20Please%20send%20a%20quote%20and%20confirm%20if%20an%20invoice%20can%20be%20provided."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Building2 className="mr-2 h-5 w-5" />
                   Get Company Quote
                 </a>
@@ -484,7 +489,7 @@ export default function ContractorAccommodationPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Choose Your Room Type</h2>
             <p className="text-lg text-gray-600">Four options to fit your team structure and budget</p>
-            <p className="text-sm text-gray-600 mt-4">A refundable security deposit may apply to stays of seven nights or longer. Terms on quotation.</p>
+            <p className="text-sm text-gray-600 mt-4">A refundable security deposit may apply to stays of seven nights or longer. The amount and refund conditions will be stated on your quotation.</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -501,6 +506,7 @@ export default function ContractorAccommodationPage() {
                     src={room.image || "/placeholder.svg"}
                     alt={`${room.name} - Contractor accommodation Bellville South`}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     className="object-cover"
                   />
                 </div>
@@ -590,7 +596,7 @@ export default function ContractorAccommodationPage() {
                     <span className="font-semibold">Deluxe Twin Room</span>
                     <p className="text-xs text-gray-500">Best for 2 professionals wanting comfort</p>
                   </td>
-                  <td className="text-center py-4 px-4 font-medium">R650</td>
+                  <td className="text-center py-4 px-4 font-medium">R620</td>
                   <td className="text-center py-4 px-4 font-medium text-sage-600">R585</td>
                   <td className="text-center py-4 px-4 font-bold text-green-600 bg-green-50">R520</td>
                 </tr>
@@ -599,7 +605,7 @@ export default function ContractorAccommodationPage() {
                     <span className="font-semibold">Double Room</span>
                     <p className="text-xs text-gray-500">Best for solo professionals or site supervisors</p>
                   </td>
-                  <td className="text-center py-4 px-4 font-medium">R680</td>
+                  <td className="text-center py-4 px-4 font-medium">R650</td>
                   <td className="text-center py-4 px-4 font-medium text-sage-600">R612</td>
                   <td className="text-center py-4 px-4 font-bold text-green-600 bg-green-50">R544</td>
                 </tr>
@@ -609,7 +615,7 @@ export default function ContractorAccommodationPage() {
                     <p className="text-xs text-gray-500">Best value for 3-person crews</p>
                     <p className="text-xs text-green-600 font-medium">From R224/person on monthly</p>
                   </td>
-                  <td className="text-center py-4 px-4 font-medium">R840</td>
+                  <td className="text-center py-4 px-4 font-medium">R800</td>
                   <td className="text-center py-4 px-4 font-medium text-sage-600">R756</td>
                   <td className="text-center py-4 px-4 font-bold text-green-600 bg-green-50">R672</td>
                 </tr>
@@ -749,13 +755,13 @@ export default function ContractorAccommodationPage() {
               <Briefcase className="w-10 h-10 mx-auto mb-3 text-sage-600" />
               <h3 className="text-lg font-bold mb-2">Managers</h3>
               <p className="text-gray-600 text-sm mb-3">Project leads and supervisors who need workspace and privacy</p>
-              <p className="text-sage-600 font-semibold">From R680/night</p>
+              <p className="text-sage-600 font-semibold">From R650/night</p>
             </Card>
             <Card className="text-center p-6">
               <Users className="w-10 h-10 mx-auto mb-3 text-sage-600" />
               <h3 className="text-lg font-bold mb-2">Work Crews</h3>
               <p className="text-gray-600 text-sm mb-3">3-person teams, R224/person/night on monthly rates</p>
-              <p className="text-sage-600 font-semibold">R840/night (R672 monthly)</p>
+              <p className="text-sage-600 font-semibold">R800/night (R672 monthly)</p>
             </Card>
           </div>
         </div>
@@ -1037,7 +1043,7 @@ export default function ContractorAccommodationPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Book Your Stay?</h2>
           <p className="text-xl mb-8 text-sage-50">
-            Standard Twin R580 | Deluxe Twin R650 | Double R680 | Triple R840/night
+            Standard Twin R580 | Deluxe Twin R620 | Double R650 | Triple R800/night
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-white text-sage-600 hover:bg-gray-100 px-8 py-6 text-lg">
