@@ -25,7 +25,7 @@ export function RoomSchema({ rooms }: RoomSchemaProps) {
       priceCurrency: "ZAR",
       availability: "https://schema.org/InStock",
       url: "https://www.60onkosmos.co.za/rooms",
-      priceValidUntil: "2025-12-31",
+      priceValidUntil: "2027-12-31",
       seller: {
         "@type": "Organization",
         name: "60 on Kosmos",

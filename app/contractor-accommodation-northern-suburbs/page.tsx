@@ -81,6 +81,7 @@ export default function NorthernSuburbsAccommodationPage() {
             src="/images/exterior-building.png"
             alt="60 on Kosmos Contractor Accommodation"
             fill
+            sizes="100vw"
             className="object-cover opacity-30"
             priority
           />

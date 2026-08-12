@@ -7,6 +7,7 @@ import { Wifi, Coffee, Car, Shield, Phone, ChevronDown } from "lucide-react"
 import { Breadcrumbs } from "@/components/breadcrumbs"
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
 import { FAQSchema } from "@/components/faq-schema"
+import { RoomSchema } from "@/components/room-schema"
 
 const breadcrumbItems = [
   { name: "Home", url: "" },
@@ -158,6 +159,15 @@ export default function RoomsPage() {
       <BreadcrumbSchema items={breadcrumbItems} />
       <Breadcrumbs items={breadcrumbItems} />
       <FAQSchema faqs={faqs} />
+      <RoomSchema
+        rooms={rooms.map((room) => ({
+          name: room.name,
+          price: Number(room.price.replace(/[^0-9]/g, "")),
+          description: room.description,
+          image: room.image,
+          features: room.features,
+        }))}
+      />
       <div className="min-h-screen py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Contact Banner */}

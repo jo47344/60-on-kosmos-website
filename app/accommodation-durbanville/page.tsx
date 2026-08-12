@@ -79,6 +79,7 @@ export default function DurbanvilleAccommodationPage() {
             src="/images/exterior-building.png"
             alt="60 on Kosmos Guest House"
             fill
+            sizes="100vw"
             className="object-cover opacity-30"
             priority
           />

@@ -293,6 +293,7 @@ export default function ContractorAccommodationPage() {
             src="/images/exterior-building.png"
             alt="60 on Kosmos Contractor Accommodation Bellville South"
             fill
+            sizes="100vw"
             className="object-cover opacity-30"
             priority
           />
@@ -505,6 +506,7 @@ export default function ContractorAccommodationPage() {
                     src={room.image || "/placeholder.svg"}
                     alt={`${room.name} - Contractor accommodation Bellville South`}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     className="object-cover"
                   />
                 </div>

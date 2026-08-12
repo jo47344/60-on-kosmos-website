@@ -2,6 +2,7 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import dynamic from "next/dynamic"
+import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
@@ -11,7 +12,6 @@ import { StructuredData } from "@/components/structured-data"
 // Dynamic imports for non-critical components
 const StickyMobileCTA = dynamic(() => import("@/components/sticky-mobile-cta").then(mod => ({ default: mod.StickyMobileCTA })), { ssr: false })
 const GoogleAnalytics = dynamic(() => import("@/components/google-analytics").then(mod => ({ default: mod.GoogleAnalytics })), { ssr: false })
-const PerformanceOptimizations = dynamic(() => import("@/components/performance-optimizations").then(mod => ({ default: mod.PerformanceOptimizations })), { ssr: false })
 const Toaster = dynamic(() => import("@/components/ui/toaster").then(mod => ({ default: mod.Toaster })), { ssr: false })
 const WhatsAppWidget = dynamic(() => import("@/components/whatsapp-widget").then(mod => ({ default: mod.WhatsAppWidget })), { ssr: false })
 
@@ -26,23 +26,6 @@ export const viewport = {
   initialScale: 1,
   maximumScale: 5,
   themeColor: "#7c9885",
-}
-
-export const robots = {
-  index: true,
-  follow: true,
-  googleBot: {
-    index: true,
-    follow: true,
-    "max-snippet": -1,
-    "max-image-preview": "large",
-    "max-video-preview": -1,
-  },
-  // Allow AI crawlers
-  "CCBot": "allow",
-  "anthropic-ai": "allow",
-  "GPTBot": "allow",
-  "PerplexityBot": "allow",
 }
 
 export const metadata: Metadata = {
@@ -133,6 +116,12 @@ export default function RootLayout({
         <StructuredData />
       </head>
       <body className={inter.className}>
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[100] focus:bg-sage-600 focus:text-white focus:px-4 focus:py-2 focus:rounded-lg"
+        >
+          Skip to main content
+        </a>
         <GoogleAnalytics />
         <Navigation />
         <main id="main-content" className="min-h-screen">
@@ -141,8 +130,8 @@ export default function RootLayout({
         <Footer />
         <StickyMobileCTA />
         <WhatsAppWidget />
-        <PerformanceOptimizations />
         <Toaster />
+        <Analytics />
       </body>
     </html>
   )
