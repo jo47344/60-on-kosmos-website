@@ -340,7 +340,7 @@ export default function MedicalStaffGuidePage() {
               variant="outline"
               className="border-white text-white hover:bg-sage-700 bg-transparent"
             >
-              <Link href="/accommodation-near-tygerberg-hospital">View Our Tygerberg Rooms</Link>
+              <Link href="/rooms">View Our Tygerberg Rooms</Link>
             </Button>
           </div>
         </div>
@@ -361,7 +361,7 @@ export default function MedicalStaffGuidePage() {
                 <p className="text-sm text-gray-600">Save money with long-term accommodation in Bellville South</p>
               </Card>
             </Link>
-            <Link href="/accommodation-near-tygerberg-hospital" className="block hover:opacity-80">
+            <Link href="/rooms" className="block hover:opacity-80">
               <Card className="p-4">
                 <h4 className="font-bold mb-2">Our Rooms</h4>
                 <p className="text-sm text-gray-600">View available accommodation near Tygerberg Hospital</p>

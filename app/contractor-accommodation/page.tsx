@@ -1136,7 +1136,7 @@ export default function ContractorAccommodationPage() {
               Monthly Stays
             </Link>
             <span className="text-gray-400">|</span>
-            <Link href="/weekly-accommodation" className="text-sage-600 hover:underline">
+            <Link href="/rooms" className="text-sage-600 hover:underline">
               Weekly Stays
             </Link>
             <span className="text-gray-400">|</span>
@@ -1144,7 +1144,7 @@ export default function ContractorAccommodationPage() {
               All Room Types
             </Link>
             <span className="text-gray-400">|</span>
-            <Link href="/n1-city-accommodation" className="text-sage-600 hover:underline">
+            <Link href="/contractor-accommodation-northern-suburbs" className="text-sage-600 hover:underline">
               N1 City Area
             </Link>
           </div>
