@@ -242,7 +242,7 @@ export default function BookNowClientPage() {
           </Button>
 
           <p className="text-xs text-gray-500 text-center mt-4">
-            By submitting, you agree to be contacted via phone or WhatsApp to confirm your booking.
+            We reply within 24 hours. By submitting, you agree to be contacted via phone or WhatsApp to confirm your booking.
           </p>
         </form>
       </div>

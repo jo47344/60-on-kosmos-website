@@ -5,7 +5,7 @@ import { Logo } from "@/components/logo"
 
 export const metadata: Metadata = {
   title: "Thank You for Your Booking! - 60 on Kosmos Guesthouse",
-  description: "Your booking request for 60 on Kosmos Guesthouse has been received. We will contact you shortly.",
+  description: "Your booking request for 60 on Kosmos Guesthouse has been received. We will contact you within 24 hours.",
   robots: {
     index: false,
     follow: false,
@@ -24,7 +24,7 @@ export default function ThankYouPage() {
         </div>
         <h1 className="text-3xl font-bold text-gray-900 mb-4">Thank You!</h1>
         <p className="text-lg text-gray-700 mb-6">
-          Your message has been sent successfully. We will get back to you shortly via phone or WhatsApp.
+          Your message has been sent successfully. We will get back to you within 24 hours via phone or WhatsApp.
         </p>
         <Link
           href="/"

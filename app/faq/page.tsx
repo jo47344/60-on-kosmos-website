@@ -329,7 +329,7 @@ export default function FAQPage() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Still Have Questions?</h2>
             <p className="text-lg text-gray-600 mb-8">
-              We're here to help! Contact us directly and we'll get back to you as soon as possible.
+              We're here to help! Contact us directly and we'll get back to you within 24 hours.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-sage-600 hover:bg-sage-700 text-white px-8 py-6 text-lg">

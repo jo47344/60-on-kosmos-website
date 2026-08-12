@@ -27,10 +27,13 @@ export default function ContactPageClient() {
     setError("")
 
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch("https://formspree.io/f/mblkjbkg", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({ ...formData, _subject: "New Contact Form Message - 60 on Kosmos" }),
       })
 
       if (response.ok) {
@@ -70,6 +73,7 @@ export default function ContactPageClient() {
             </p>
             <p className="text-green-700">Call or WhatsApp for availability and quotations</p>
           </div>
+          <p className="text-sm text-gray-500 mt-3">We reply to all enquiries within 24 hours.</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">

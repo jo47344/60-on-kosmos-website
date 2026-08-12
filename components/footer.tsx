@@ -198,9 +198,12 @@ export function Footer() {
               </p>
             </div>
 
-            <div className="mt-4">
+            <div className="mt-4 flex flex-col gap-1">
               <Link href="/terms" className="text-sage-400 hover:text-white transition-colors text-sm">
                 Terms & House Rules
+              </Link>
+              <Link href="/privacy-policy" className="text-sage-400 hover:text-white transition-colors text-sm">
+                Privacy Policy
               </Link>
             </div>
 
@@ -226,6 +229,10 @@ export function Footer() {
           <p className="mt-2">
             <Link href="/terms" className="hover:text-white transition-colors">
               Terms & House Rules
+            </Link>
+            {" | "}
+            <Link href="/privacy-policy" className="hover:text-white transition-colors">
+              Privacy Policy
             </Link>
             {" | "}
             <span>Rates subject to change without notice</span>
