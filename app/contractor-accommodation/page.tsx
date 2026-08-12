@@ -1095,11 +1095,7 @@ export default function ContractorAccommodationPage() {
           <h3 className="text-xl font-bold text-center mb-6">Contractor Accommodation by Area</h3>
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <Link href="/contractor-accommodation-bellville" className="text-sage-600 hover:underline">
-              Bellville
-            </Link>
-            <span className="text-gray-400">|</span>
-            <Link href="/contractor-accommodation-bellville-south" className="text-sage-600 hover:underline">
-              Bellville South
+              Bellville &amp; Bellville South
             </Link>
             <span className="text-gray-400">|</span>
             <Link href="/contractor-accommodation-goodwood" className="text-sage-600 hover:underline">
@@ -1112,6 +1108,14 @@ export default function ContractorAccommodationPage() {
             <span className="text-gray-400">|</span>
             <Link href="/contractor-accommodation-northern-suburbs" className="text-sage-600 hover:underline">
               Northern Suburbs
+            </Link>
+            <span className="text-gray-400">|</span>
+            <Link href="/accommodation-durbanville" className="text-sage-600 hover:underline">
+              Durbanville
+            </Link>
+            <span className="text-gray-400">|</span>
+            <Link href="/accommodation-brackenfell" className="text-sage-600 hover:underline">
+              Brackenfell
             </Link>
           </div>
           <h3 className="text-xl font-bold text-center mb-6">More Options</h3>

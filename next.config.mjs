@@ -24,6 +24,8 @@ const nextConfig = {
     return [
       // Kuils River location page - fix broken URL
       { source: '/contractor-accommodation-kuilsriver', destination: '/contractor-accommodation-kuils-river', permanent: true },
+      // Bellville South page was merged into contractor-accommodation-bellville (same location, avoids duplicate content)
+      { source: '/contractor-accommodation-bellville-south', destination: '/contractor-accommodation-bellville', permanent: true },
       // Redirect accommodation variants
       { source: '/accommodation-near-bellville-station', destination: '/rooms', permanent: true },
       { source: '/accommodation-near-tygerberg-hospital', destination: '/rooms', permanent: true },

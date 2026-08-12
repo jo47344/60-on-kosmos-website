@@ -127,6 +127,16 @@ export function Footer() {
                   Northern Suburbs
                 </Link>
               </li>
+              <li>
+                <Link href="/accommodation-durbanville" className="hover:text-white transition-colors text-sm">
+                  Near Durbanville
+                </Link>
+              </li>
+              <li>
+                <Link href="/accommodation-brackenfell" className="hover:text-white transition-colors text-sm">
+                  Near Brackenfell
+                </Link>
+              </li>
             </ul>
           </div>
 
