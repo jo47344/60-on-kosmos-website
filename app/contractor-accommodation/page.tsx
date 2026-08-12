@@ -1109,6 +1109,14 @@ export default function ContractorAccommodationPage() {
             <Link href="/contractor-accommodation-northern-suburbs" className="text-sage-600 hover:underline">
               Northern Suburbs
             </Link>
+            <span className="text-gray-400">|</span>
+            <Link href="/accommodation-durbanville" className="text-sage-600 hover:underline">
+              Durbanville
+            </Link>
+            <span className="text-gray-400">|</span>
+            <Link href="/accommodation-brackenfell" className="text-sage-600 hover:underline">
+              Brackenfell
+            </Link>
           </div>
           <h3 className="text-xl font-bold text-center mb-6">More Options</h3>
           <div className="flex flex-wrap justify-center gap-4">

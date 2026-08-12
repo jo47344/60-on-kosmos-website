@@ -21,6 +21,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "monthly-accommodation", priority: 0.9, freq: "daily" as const },
     { url: "self-catering-rooms", priority: 0.85, freq: "weekly" as const },
 
+    // Location pages with confirmed organic search demand
+    { url: "accommodation-durbanville", priority: 0.8, freq: "weekly" as const },
+    { url: "accommodation-brackenfell", priority: 0.75, freq: "weekly" as const },
+
     // Conversion pages
     { url: "rooms", priority: 0.9, freq: "weekly" as const },
     { url: "guest-information", priority: 0.85, freq: "monthly" as const },
