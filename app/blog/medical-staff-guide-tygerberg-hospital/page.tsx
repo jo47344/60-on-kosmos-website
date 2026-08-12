@@ -355,7 +355,7 @@ export default function MedicalStaffGuidePage() {
                 <p className="text-sm text-gray-600">Accommodation tips for nursing students at Tygerberg</p>
               </Card>
             </Link>
-            <Link href="/blog/monthly-accommodation-bellville-south" className="block hover:opacity-80">
+            <Link href="/monthly-accommodation" className="block hover:opacity-80">
               <Card className="p-4">
                 <h4 className="font-bold mb-2">Monthly Rates Guide</h4>
                 <p className="text-sm text-gray-600">Save money with long-term accommodation in Bellville South</p>

@@ -11,7 +11,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // HIGH INTENT MONEY PAGES - Contractor accommodation
     { url: "contractor-accommodation", priority: 1.0, freq: "daily" as const },
     { url: "contractor-accommodation-bellville", priority: 0.95, freq: "daily" as const },
-    { url: "contractor-accommodation-bellville-south", priority: 0.95, freq: "daily" as const },
     { url: "contractor-accommodation-parow", priority: 0.95, freq: "daily" as const },
     { url: "contractor-accommodation-stikland", priority: 0.95, freq: "daily" as const },
     { url: "contractor-accommodation-goodwood", priority: 0.95, freq: "daily" as const },
