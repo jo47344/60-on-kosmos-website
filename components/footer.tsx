@@ -75,7 +75,7 @@ export function Footer() {
                   View on Booking.com
                 </a>
                 <a
-                  href="https://maps.app.goo.gl/Gma3bd2Fv11w1PsBZ"
+                  href="https://www.google.com/maps/search/?api=1&query=60+Kosmos+Street,+Bellville+South,+Cape+Town,+7530"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sage-300 hover:text-sage-100 transition-colors block"
