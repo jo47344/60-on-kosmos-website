@@ -209,21 +209,21 @@ export default function MonthlyAccommodationPage() {
                 </tr>
                 <tr className="hover:bg-gray-50">
                   <td className="border border-gray-200 px-4 py-3 font-medium">Deluxe Twin</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R620</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R558</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R496</td>
-                </tr>
-                <tr className="hover:bg-gray-50">
-                  <td className="border border-gray-200 px-4 py-3 font-medium">Double</td>
                   <td className="border border-gray-200 px-4 py-3 text-right">R650</td>
                   <td className="border border-gray-200 px-4 py-3 text-right">R585</td>
                   <td className="border border-gray-200 px-4 py-3 text-right">R520</td>
                 </tr>
                 <tr className="hover:bg-gray-50">
+                  <td className="border border-gray-200 px-4 py-3 font-medium">Double</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">R680</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">R612</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">R544</td>
+                </tr>
+                <tr className="hover:bg-gray-50">
                   <td className="border border-gray-200 px-4 py-3 font-medium">Triple</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R800</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R720</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R640</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">R840</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">R756</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">R672</td>
                 </tr>
               </tbody>
             </table>

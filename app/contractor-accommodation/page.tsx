@@ -434,6 +434,11 @@ export default function ContractorAccommodationPage() {
                   </div>
                 </li>
               </ul>
+              <p className="text-gray-400 text-sm mt-4 pt-4 border-t border-gray-700">
+                Flexible week-by-week billing — extend a stay or add a room as your project runs, invoiced to your
+                company as you go. No lease or fixed term. A refundable security deposit may apply depending on the
+                length and terms of the booking.
+              </p>
             </div>
           </div>
         </div>
