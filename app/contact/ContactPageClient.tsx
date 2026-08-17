@@ -176,7 +176,7 @@ export default function ContactPageClient() {
                   {error}
                 </div>
               )}
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-4" data-form-name="contact_form">
                 <div>
                   <Label htmlFor="name">Name</Label>
                   <Input id="name" name="name" value={formData.name} onChange={handleChange} required />

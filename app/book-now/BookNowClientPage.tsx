@@ -87,7 +87,7 @@ export default function BookNowClientPage() {
           <Logo size="sm" showTagline={true} />
         </div>
         <h1 className="text-center text-2xl font-bold mb-6 text-gray-900">Book Your Stay</h1>
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-4" data-form-name="book_now_form">
           {error && (
             <div className="p-3 bg-red-50 border border-red-200 rounded-md">
               <p className="text-red-600 text-sm">{error}</p>

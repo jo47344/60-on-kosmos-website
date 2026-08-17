@@ -5,12 +5,12 @@ export const metadata: Metadata = {
   title: "Guest Information | 60 on Kosmos",
   description:
     "Verified guest information for 60 on Kosmos in Bellville South, including rooms, amenities, rates, arrival times, payment, and contact details.",
-  alternates: { canonical: "/guest-information" },
+  alternates: { canonical: "https://www.60onkosmos.co.za/guest-information" },
   openGraph: {
     title: "Guest Information | 60 on Kosmos",
     description:
       "Verified guest information for 60 on Kosmos in Bellville South.",
-    url: "/guest-information",
+    url: "https://www.60onkosmos.co.za/guest-information",
     type: "website",
   },
 }

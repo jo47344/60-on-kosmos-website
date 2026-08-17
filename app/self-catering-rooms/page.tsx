@@ -10,7 +10,7 @@ import { FAQSchema } from "@/components/faq-schema"
 export const metadata: Metadata = {
   title: "Self-Catering Rooms | Budget",
   description:
-    "Affordable self-catering rooms in Bellville South. Fully equipped kitchens, free WiFi, secure parking. Perfect for budget travelers, students, and long-term stays. Book direct.",
+    "Affordable self-catering rooms in Bellville South. Communal self-catering kitchenette, free WiFi, secure parking. Perfect for budget travelers, students, and long-term stays. Book direct.",
   alternates: {
     canonical: "https://www.60onkosmos.co.za/self-catering-rooms",
   },
@@ -63,7 +63,7 @@ export default function SelfCateringRoomsPage() {
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Self-Catering Rooms in Bellville</h1>
             <p className="text-xl text-gray-600 mb-8">
-              Affordable accommodation with fully equipped kitchens. Save money by cooking your own meals while enjoying
+              Affordable accommodation with a communal self-catering kitchenette. Save money by cooking your own meals while enjoying
               comfortable, private rooms.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -127,7 +127,7 @@ export default function SelfCateringRoomsPage() {
       {/* Kitchen Facilities */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">Fully Equipped Kitchen Facilities</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Communal Self-Catering Kitchenette</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="flex gap-4">
               <Refrigerator className="w-8 h-8 text-sage-600 flex-shrink-0" />
