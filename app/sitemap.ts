@@ -12,11 +12,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "contractor-accommodation", priority: 1.0, freq: "daily" as const },
     { url: "contractor-accommodation-bellville", priority: 0.95, freq: "daily" as const },
     { url: "contractor-accommodation-bellville-south", priority: 0.95, freq: "daily" as const },
-    { url: "contractor-accommodation-parow", priority: 0.95, freq: "daily" as const },
     { url: "contractor-accommodation-stikland", priority: 0.95, freq: "daily" as const },
-    { url: "contractor-accommodation-goodwood", priority: 0.95, freq: "daily" as const },
     { url: "contractor-accommodation-kuils-river", priority: 0.95, freq: "daily" as const },
     { url: "contractor-accommodation-northern-suburbs", priority: 0.95, freq: "daily" as const },
+    { url: "contractor-accommodation-grandwest-goodwood", priority: 0.95, freq: "daily" as const },
+    { url: "contractor-accommodation-blackheath-saxenburg", priority: 0.95, freq: "daily" as const },
+    { url: "contractor-accommodation-airport-industria", priority: 0.95, freq: "daily" as const },
+    { url: "contractor-accommodation-n1-city-parow", priority: 0.95, freq: "daily" as const },
+    { url: "contractor-accommodation-century-city", priority: 0.95, freq: "daily" as const },
+    { url: "contractor-accommodation-uwc-cput-bellville", priority: 0.95, freq: "daily" as const },
 
     // HIGH INTENT - Stay type pages
     { url: "monthly-accommodation", priority: 0.9, freq: "daily" as const },

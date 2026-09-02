@@ -98,7 +98,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/contractor-accommodation-parow" className="hover:text-white transition-colors text-sm">
+                <Link href="/contractor-accommodation-n1-city-parow" className="hover:text-white transition-colors text-sm">
                   Near Parow
                 </Link>
               </li>
@@ -108,7 +108,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/contractor-accommodation-goodwood" className="hover:text-white transition-colors text-sm">
+                <Link href="/contractor-accommodation-grandwest-goodwood" className="hover:text-white transition-colors text-sm">
                   Near Goodwood
                 </Link>
               </li>

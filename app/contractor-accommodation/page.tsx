@@ -80,16 +80,18 @@ export default function ContractorAccommodationPage() {
     { name: "Bellville", href: "/contractor-accommodation-bellville" },
     { name: "Sacks Circle Industrial", href: "/contractor-accommodation" },
     { name: "Stikland Industrial", href: "/contractor-accommodation-stikland" },
-    { name: "Blackheath Industrial", href: "/contractor-accommodation-kuils-river" },
-    { name: "Saxenburg Park", href: "/contractor-accommodation-kuils-river" },
+    { name: "Blackheath Industrial", href: "/contractor-accommodation-blackheath-saxenburg" },
+    { name: "Saxenburg Park", href: "/contractor-accommodation-blackheath-saxenburg" },
     { name: "Kuils River", href: "/contractor-accommodation-kuils-river" },
-    { name: "Goodwood", href: "/contractor-accommodation-goodwood" },
-    { name: "GrandWest", href: "/contractor-accommodation-goodwood" },
-    { name: "N1 City", href: "/contractor-accommodation-parow" },
-    { name: "Parow", href: "/contractor-accommodation-parow" },
+    { name: "Goodwood", href: "/contractor-accommodation-grandwest-goodwood" },
+    { name: "GrandWest", href: "/contractor-accommodation-grandwest-goodwood" },
+    { name: "N1 City", href: "/contractor-accommodation-n1-city-parow" },
+    { name: "Parow", href: "/contractor-accommodation-n1-city-parow" },
+    { name: "Airport Industria", href: "/contractor-accommodation-airport-industria" },
+    { name: "Century City", href: "/contractor-accommodation-century-city" },
     { name: "Brackenfell", href: "/contractor-accommodation-northern-suburbs" },
-    { name: "UWC", href: "/contractor-accommodation-bellville" },
-    { name: "CPUT Bellville", href: "/contractor-accommodation-bellville" },
+    { name: "UWC", href: "/contractor-accommodation-uwc-cput-bellville" },
+    { name: "CPUT Bellville", href: "/contractor-accommodation-uwc-cput-bellville" },
     { name: "Northern Suburbs", href: "/contractor-accommodation-northern-suburbs" },
   ]
 
@@ -1225,8 +1227,28 @@ export default function ContractorAccommodationPage() {
               Bellville South
             </Link>
             <span className="text-gray-400">|</span>
-            <Link href="/contractor-accommodation-goodwood" className="text-sage-600 hover:underline">
-              Goodwood
+            <Link href="/contractor-accommodation-grandwest-goodwood" className="text-sage-600 hover:underline">
+              GrandWest & Goodwood
+            </Link>
+            <span className="text-gray-400">|</span>
+            <Link href="/contractor-accommodation-n1-city-parow" className="text-sage-600 hover:underline">
+              N1 City & Parow
+            </Link>
+            <span className="text-gray-400">|</span>
+            <Link href="/contractor-accommodation-blackheath-saxenburg" className="text-sage-600 hover:underline">
+              Blackheath & Saxenburg
+            </Link>
+            <span className="text-gray-400">|</span>
+            <Link href="/contractor-accommodation-airport-industria" className="text-sage-600 hover:underline">
+              Airport Industria
+            </Link>
+            <span className="text-gray-400">|</span>
+            <Link href="/contractor-accommodation-century-city" className="text-sage-600 hover:underline">
+              Century City
+            </Link>
+            <span className="text-gray-400">|</span>
+            <Link href="/contractor-accommodation-uwc-cput-bellville" className="text-sage-600 hover:underline">
+              UWC & CPUT Bellville
             </Link>
             <span className="text-gray-400">|</span>
             <Link href="/contractor-accommodation-kuils-river" className="text-sage-600 hover:underline">
