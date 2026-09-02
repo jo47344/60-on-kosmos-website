@@ -24,17 +24,26 @@ import {
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { FAQSchema } from "@/components/faq-schema"
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
+import { CompanyEnquiryForm } from "@/components/company-enquiry-form"
 
 export const metadata: Metadata = {
-  title: "Project Team Accommodation | Bellville South",
-  description: "Flexible accommodation for project teams from R580/night daily, R522/week, R464/month. Secure parking, WiFi, corporate billing available.",
+  title: "Contractor & Project Team Accommodation | Bellville South",
+  description: "Practical accommodation for contractor, technician and project teams of up to 8 guests in Bellville South. Weekly and monthly rates from R464/night. Secure parking, WiFi, company invoicing.",
   alternates: {
     canonical: "https://www.60onkosmos.co.za/contractor-accommodation",
   },
   keywords: [
+    "contractor accommodation bellville",
     "contractor accommodation bellville south",
+    "project team accommodation cape town",
+    "worker accommodation northern suburbs cape town",
+    "corporate accommodation bellville",
+    "technician accommodation cape town",
+    "long-stay contractor accommodation",
+    "weekly contractor accommodation cape town",
+    "monthly contractor accommodation cape town",
     "self catering contractor accommodation bellville",
-    "weekly contractor accommodation bellville south",
     "project accommodation bellville south",
     "workers accommodation bellville south parking bakkies",
     "contractor accommodation near tac business park",
@@ -45,8 +54,8 @@ export const metadata: Metadata = {
     "contractor teams accommodation bellville",
   ],
   openGraph: {
-    title: "Project Team Accommodation | Bellville South",
-    description: "Flexible accommodation for project teams from R580/night daily, R522/week, R464/month. Secure parking, WiFi, corporate billing.",
+    title: "Contractor & Project Team Accommodation | Bellville South",
+    description: "Practical accommodation for contractor, technician and project teams of up to 8 guests in Bellville South. Weekly and monthly rates from R464/night. Secure parking, WiFi, company invoicing.",
     url: "https://www.60onkosmos.co.za/contractor-accommodation",
     type: "website",
     images: [
@@ -61,6 +70,30 @@ export const metadata: Metadata = {
 }
 
 export default function ContractorAccommodationPage() {
+  const breadcrumbItems = [
+    { name: "Home", url: "/" },
+    { name: "Contractor & Project Team Accommodation", url: "/contractor-accommodation" },
+  ]
+
+  const serviceAreas = [
+    { name: "Bellville South", href: "/accommodation-bellville-south" },
+    { name: "Bellville", href: "/contractor-accommodation-bellville" },
+    { name: "Sacks Circle Industrial", href: "/contractor-accommodation" },
+    { name: "Stikland Industrial", href: "/contractor-accommodation-stikland" },
+    { name: "Blackheath Industrial", href: "/contractor-accommodation-blackheath-saxenburg" },
+    { name: "Saxenburg Park", href: "/contractor-accommodation-blackheath-saxenburg" },
+    { name: "Airport Industria", href: "/contractor-accommodation-airport-industria" },
+    { name: "Goodwood", href: "/contractor-accommodation-grandwest-goodwood" },
+    { name: "GrandWest", href: "/contractor-accommodation-grandwest-goodwood" },
+    { name: "N1 City", href: "/contractor-accommodation-n1-city-parow" },
+    { name: "Parow", href: "/contractor-accommodation-n1-city-parow" },
+    { name: "Century City", href: "/contractor-accommodation-century-city" },
+    { name: "Brackenfell", href: "/contractor-accommodation" },
+    { name: "UWC", href: "/contractor-accommodation-uwc-cput-bellville" },
+    { name: "CPUT Bellville", href: "/contractor-accommodation-uwc-cput-bellville" },
+    { name: "Northern Suburbs", href: "/contractor-accommodation-northern-suburbs" },
+  ]
+
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "LodgingBusiness",
@@ -273,6 +306,22 @@ export default function ContractorAccommodationPage() {
     <div className="min-h-screen bg-white">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
       <FAQSchema faqs={contractorFAQs} />
+      <BreadcrumbSchema items={breadcrumbItems} />
+
+      {/* Breadcrumb */}
+      <nav aria-label="Breadcrumb" className="bg-gray-50 border-b">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+          <ol className="flex items-center gap-2 text-sm text-gray-500">
+            <li>
+              <Link href="/" className="hover:text-sage-600">
+                Home
+              </Link>
+            </li>
+            <li aria-hidden="true">/</li>
+            <li className="text-gray-900 font-medium">Contractor & Project Team Accommodation</li>
+          </ol>
+        </div>
+      </nav>
 
       {/* Hero Section */}
       <section className="relative bg-gray-900 py-16 md:py-24">
@@ -292,21 +341,16 @@ export default function ContractorAccommodationPage() {
               <span>For Project Teams & Professionals</span>
             </div>
             <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 text-balance">
-              Accommodation for Project Teams & Professionals in Bellville South
+              Contractor & Project Team Accommodation in Bellville South
             </h1>
-            <p className="text-xl text-gray-300 mb-4">
-              Book by the week or month with flexible terms. Invoices are provided on request.
-            </p>
-            <p className="text-lg text-gray-400 mb-8">
-              Private ensuite rooms, secure parking, self-catering kitchen, and fast N1 access.
-              <br className="hidden md:block" />
-              Perfect for project teams, site crews, and working professionals.
+            <p className="text-lg sm:text-xl text-gray-300 mb-8 text-pretty max-w-3xl mx-auto">
+              Practical accommodation for small contractor, technician and professional teams working across Cape
+              Town&apos;s Northern Suburbs. Suitable for teams of up to 8 guests, with private ensuite rooms, WiFi,
+              parking, weekly and monthly stay options and company invoicing.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-sage-600 hover:bg-sage-700 text-white px-8 py-6 text-lg">
-                <a href="https://wa.me/27745245703?text=Hi%2C%20I%27m%20interested%20in%20contractor%20accommodation%20rates">
-                  Get a Quote on WhatsApp
-                </a>
+                <a href="#company-enquiry">Get a Company Quote</a>
               </Button>
               <Button
                 asChild
@@ -314,9 +358,13 @@ export default function ContractorAccommodationPage() {
                 variant="outline"
                 className="bg-white text-gray-900 hover:bg-gray-100 px-8 py-6 text-lg"
               >
-                <a href="tel:+27745245703">
+                <a
+                  href="https://wa.me/27745245703?text=Hi%2C%20I%27m%20interested%20in%20contractor%20accommodation%20rates"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Phone className="mr-2 h-5 w-5" />
-                  074 524 5703
+                  WhatsApp Us
                 </a>
               </Button>
             </div>
@@ -344,6 +392,29 @@ export default function ContractorAccommodationPage() {
               <CheckCircle2 className="w-5 h-5" />
               <span>Self-Catering</span>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Project Areas We Regularly Serve */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-center mb-4">Project Areas We Regularly Serve</h2>
+          <p className="text-gray-600 text-center mb-10 max-w-2xl mx-auto">
+            60 on Kosmos regularly hosts contractor and project teams working across these Cape Town Northern
+            Suburbs areas.
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+            {serviceAreas.map((area) => (
+              <Link
+                key={area.name}
+                href={area.href}
+                className="flex items-center gap-2 bg-gray-50 hover:bg-sage-50 border border-gray-200 hover:border-sage-300 rounded-lg p-4 transition-colors"
+              >
+                <MapPin className="w-4 h-4 text-sage-600 flex-shrink-0" />
+                <span className="text-sm font-medium text-gray-800">{area.name}</span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

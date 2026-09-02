@@ -397,8 +397,8 @@ export default function HomePage() {
 
             <div className="space-y-4 sm:space-y-6">
               <div className="bg-white rounded-lg border border-gray-200 p-4 sm:p-6">
-                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3">Can you accommodate teams of up to 9 people?</h3>
-                <p className="text-gray-700 text-sm sm:text-base">Yes. Our four private-ensuite guest rooms can accommodate teams of up to nine people, depending on the required room-sharing arrangement. Multi-room and full guest-accommodation bookings are subject to availability.</p>
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3">Can you accommodate a small team?</h3>
+                <p className="text-gray-700 text-sm sm:text-base">Yes. Our private-ensuite guest rooms can accommodate teams of up to 8 guests, depending on the required room-sharing arrangement. Multi-room bookings are subject to availability.</p>
               </div>
 
               <div className="bg-white rounded-lg border border-gray-200 p-4 sm:p-6">
