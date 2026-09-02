@@ -5,14 +5,14 @@ import { Button } from "@/components/ui/button"
 import { Phone } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Accommodation for Contractors and Project Crews",
+  title: "Day & Week Rates for Contractor Crews | No Lease Required",
   description:
-    "Private-ensuite, self-catering accommodation with secure parking, built for people working, not people on holiday. Book by the day or the week.",
+    "Book contractor accommodation by the day or the week with no lease — daily rates from R580/night, long-stay from R464/night. Private ensuite, self-catering, secure parking. See our full contractor accommodation guide for room details and company invoicing.",
   alternates: { canonical: "https://www.60onkosmos.co.za/contractors" },
   openGraph: {
-    title: "Accommodation for Contractors and Project Crews",
+    title: "Day & Week Rates for Contractor Crews | No Lease Required",
     description:
-      "Private-ensuite, self-catering accommodation with secure parking, built for people working, not people on holiday. Book by the day or the week.",
+      "Book contractor accommodation by the day or the week with no lease — daily rates from R580/night, long-stay from R464/night. Private ensuite, self-catering, secure parking.",
     url: "https://www.60onkosmos.co.za/contractors",
     type: "website",
     images: [
@@ -44,12 +44,25 @@ export default function ContractorsPage() {
         </div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 text-balance">
-            Accommodation for contractors and project crews
+            Day and week rates for contractor crews, no lease
           </h1>
           <p className="text-base sm:text-lg text-gray-300 text-pretty">
             If you&apos;re managing a crew on a Cape Town project, you already know what a bad billet costs you — a
             bad night&apos;s sleep shows up on site the next day. 60 on Kosmos is private-ensuite, self-catering,
             with secure parking, built for people working, not people on holiday.
+          </p>
+        </div>
+      </section>
+
+      {/* Link to main contractor accommodation hub */}
+      <section className="py-6 bg-sage-50 border-b border-sage-100">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-gray-700 text-sm sm:text-base">
+            Looking for full room details, capacity, WiFi, invoicing and area-specific info? See our complete{" "}
+            <Link href="/contractor-accommodation" className="font-semibold text-sage-700 underline hover:text-sage-800">
+              contractor & project team accommodation guide
+            </Link>
+            .
           </p>
         </div>
       </section>
