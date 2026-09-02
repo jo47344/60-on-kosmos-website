@@ -80,17 +80,16 @@ export default function ContractorAccommodationPage() {
     { name: "Bellville", href: "/contractor-accommodation-bellville" },
     { name: "Sacks Circle Industrial", href: "/contractor-accommodation" },
     { name: "Stikland Industrial", href: "/contractor-accommodation-stikland" },
-    { name: "Blackheath Industrial", href: "/contractor-accommodation-blackheath-saxenburg" },
-    { name: "Saxenburg Park", href: "/contractor-accommodation-blackheath-saxenburg" },
-    { name: "Airport Industria", href: "/contractor-accommodation-airport-industria" },
-    { name: "Goodwood", href: "/contractor-accommodation-grandwest-goodwood" },
-    { name: "GrandWest", href: "/contractor-accommodation-grandwest-goodwood" },
-    { name: "N1 City", href: "/contractor-accommodation-n1-city-parow" },
-    { name: "Parow", href: "/contractor-accommodation-n1-city-parow" },
-    { name: "Century City", href: "/contractor-accommodation-century-city" },
-    { name: "Brackenfell", href: "/contractor-accommodation" },
-    { name: "UWC", href: "/contractor-accommodation-uwc-cput-bellville" },
-    { name: "CPUT Bellville", href: "/contractor-accommodation-uwc-cput-bellville" },
+    { name: "Blackheath Industrial", href: "/contractor-accommodation-kuils-river" },
+    { name: "Saxenburg Park", href: "/contractor-accommodation-kuils-river" },
+    { name: "Kuils River", href: "/contractor-accommodation-kuils-river" },
+    { name: "Goodwood", href: "/contractor-accommodation-goodwood" },
+    { name: "GrandWest", href: "/contractor-accommodation-goodwood" },
+    { name: "N1 City", href: "/contractor-accommodation-parow" },
+    { name: "Parow", href: "/contractor-accommodation-parow" },
+    { name: "Brackenfell", href: "/contractor-accommodation-northern-suburbs" },
+    { name: "UWC", href: "/contractor-accommodation-bellville" },
+    { name: "CPUT Bellville", href: "/contractor-accommodation-bellville" },
     { name: "Northern Suburbs", href: "/contractor-accommodation-northern-suburbs" },
   ]
 
@@ -817,6 +816,59 @@ export default function ContractorAccommodationPage() {
               <p className="text-sage-600 font-semibold">R840/night (R672 monthly)</p>
             </Card>
           </div>
+        </div>
+      </section>
+
+      {/* Corporate Trust Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-center mb-10">Why companies choose 60 on Kosmos</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
+            {[
+              "Private ensuite rooms",
+              "Suitable for small teams",
+              "Wi-Fi included",
+              "Secure parking",
+              "Weekly and monthly options",
+              "Company invoices",
+              "Flexible extensions where available",
+              "On-site support",
+              "Easy access to Northern Suburbs industrial areas",
+            ].map((item) => (
+              <div key={item} className="flex items-start gap-2 bg-gray-50 rounded-lg p-4">
+                <CheckCircle2 className="w-5 h-5 text-sage-600 flex-shrink-0 mt-0.5" />
+                <span className="text-gray-800 text-sm font-medium">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* For Project Managers */}
+      <section className="py-16 bg-gray-900">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">Organising accommodation for a project team?</h2>
+          <p className="text-lg text-gray-300 mb-8 text-pretty">
+            Tell us how many people are travelling, your project location and the dates required. We&apos;ll
+            recommend the most practical room combination and provide a straightforward company quote.
+          </p>
+          <Button asChild size="lg" className="bg-sage-600 hover:bg-sage-700 text-white px-8 py-6 text-lg">
+            <a href="#company-enquiry">Send Project Details</a>
+          </Button>
+        </div>
+      </section>
+
+      {/* Company Enquiry Form */}
+      <section id="company-enquiry" className="py-16 bg-gray-50">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Need accommodation for your team?</h2>
+            <p className="text-gray-600 text-pretty">
+              Send us your team size, dates and work location. We&apos;ll confirm the best available room
+              combination and company rate.
+            </p>
+          </div>
+          <CompanyEnquiryForm />
         </div>
       </section>
 
