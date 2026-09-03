@@ -48,7 +48,7 @@ export default function GrandWestGoodwoodPage() {
     "@type": "LodgingBusiness",
     name: "60 on Kosmos - Contractor Accommodation Near GrandWest & Goodwood",
     description:
-      "Private-ensuite accommodation for contractor and project teams working near GrandWest, Goodwood, Parow and N1 City. 5 rooms, suitable for teams of up to 8 guests. Secure parking, WiFi, weekly and monthly rates, company invoicing.",
+      "Private-ensuite accommodation for contractor and project teams working near GrandWest, Goodwood, Parow and N1 City. 4 room types, suitable for teams of up to 8 guests. Secure parking, WiFi, weekly and monthly rates, company invoicing.",
     address: {
       "@type": "PostalAddress",
       streetAddress: "60 Kosmos Street",

@@ -48,7 +48,7 @@ export default function BlackheathSaxenburgPage() {
     "@type": "LodgingBusiness",
     name: "60 on Kosmos - Contractor Accommodation Near Blackheath & Saxenburg Park",
     description:
-      "Private-ensuite accommodation for contractor and project teams working Blackheath Industrial and Saxenburg Park. 5 rooms, suitable for teams of up to 8 guests. Secure parking, WiFi, weekly and monthly rates, company invoicing.",
+      "Private-ensuite accommodation for contractor and project teams working Blackheath Industrial and Saxenburg Park. 4 room types, suitable for teams of up to 8 guests. Secure parking, WiFi, weekly and monthly rates, company invoicing.",
     address: {
       "@type": "PostalAddress",
       streetAddress: "60 Kosmos Street",

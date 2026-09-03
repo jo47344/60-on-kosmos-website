@@ -48,7 +48,7 @@ export default function N1CityParowPage() {
     "@type": "LodgingBusiness",
     name: "60 on Kosmos - Contractor Accommodation Near N1 City & Parow",
     description:
-      "Private-ensuite accommodation for contractor and project teams working near N1 City and Parow. 5 rooms, suitable for teams of up to 8 guests. Secure parking, WiFi, weekly and monthly rates, company invoicing.",
+      "Private-ensuite accommodation for contractor and project teams working near N1 City and Parow. 4 room types, suitable for teams of up to 8 guests. Secure parking, WiFi, weekly and monthly rates, company invoicing.",
     address: {
       "@type": "PostalAddress",
       streetAddress: "60 Kosmos Street",

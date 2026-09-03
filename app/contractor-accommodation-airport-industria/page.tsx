@@ -48,7 +48,7 @@ export default function AirportIndustriaPage() {
     "@type": "LodgingBusiness",
     name: "60 on Kosmos - Contractor Accommodation Near Airport Industria",
     description:
-      "Private-ensuite accommodation for contractor and project teams working near Airport Industria and Cape Town International Airport. 5 rooms, suitable for teams of up to 8 guests. Secure parking, WiFi, weekly and monthly rates, company invoicing.",
+      "Private-ensuite accommodation for contractor and project teams working near Airport Industria and Cape Town International Airport. 4 room types, suitable for teams of up to 8 guests. Secure parking, WiFi, weekly and monthly rates, company invoicing.",
     address: {
       "@type": "PostalAddress",
       streetAddress: "60 Kosmos Street",

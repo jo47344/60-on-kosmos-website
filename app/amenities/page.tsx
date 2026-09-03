@@ -29,7 +29,7 @@ export default function AmenitiesPage() {
   const amenities = [
     {
       icon: Shield,
-      title: "24/7 Security",
+      title: "CCTV-Monitored Property",
       description: "CCTV monitoring, secure gate access, and on-site caretaker for your peace of mind.",
     },
     {

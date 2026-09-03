@@ -15,7 +15,6 @@ import {
   GraduationCap,
   Wrench,
   FileText,
-  Calculator,
   Star,
   Quote,
   ShoppingCart,
@@ -133,7 +132,7 @@ export default function ContractorAccommodationPage() {
       { "@type": "LocationFeatureSpecification", name: "CCTV Security", value: true },
     ],
     nearbyPlaces: [
-      { "@type": "Place", name: "Sacks Circle Industrial", description: "Walking distance" },
+      { "@type": "Place", name: "Sacks Circle Industrial", description: "Nearby" },
       { "@type": "Place", name: "Mill Park Industrial", description: "5 minutes" },
       { "@type": "Place", name: "TAC Business Park", description: "5 minutes" },
 
@@ -274,7 +273,7 @@ export default function ContractorAccommodationPage() {
     },
     {
       question: "Is there secure parking for work vehicles and bakkies?",
-      answer: "Yes, we have secure parking behind locked gates with 24/7 CCTV surveillance. Bakkies, work vehicles, and trailers are welcome. The parking area is well-lit and monitored.",
+      answer: "Yes, we have secure parking behind locked gates with 24/7 CCTV surveillance for bakkies and work vehicles. If you need to bring a trailer, please confirm with us before booking so we can check space is available.",
     },
     {
       question: "Do you accommodate apprentices and trainees on courses?",
@@ -282,15 +281,15 @@ export default function ContractorAccommodationPage() {
     },
     {
       question: "Can contractors cook their own meals?",
-      answer: "Absolutely. All guests have access to self-catering facilities including a communal kitchen with stove, microwave, and refrigerator. Deluxe Twin, Double, and Triple rooms include private bar fridges; the Standard Twin does not.",
+      answer: "Yes. All guests have access to a communal kitchenette for preparing light meals. Deluxe Twin, Double, and Triple rooms include private bar fridges; the Standard Twin does not.",
     },
     {
       question: "How close is 60 on Kosmos to industrial areas?",
-      answer: "We are walking distance from Sacks Circle Industrial, 5 minutes from Mill Park Industrial and TAC Business Park, and 10 minutes from Stikland Industrial. Major employers like Beekman Canopies and Consol Glass are nearby.",
+      answer: "We are close to Sacks Circle Industrial, and a short drive from Mill Park Industrial, TAC Business Park, and Stikland Industrial. Major employers like Beekman Canopies and Consol Glass are nearby.",
     },
     {
       question: "What amenities are included in the room rate?",
-      answer: "All rooms include free WiFi, weekly cleaning with fresh linen, secure parking, CCTV security, ensuite bathroom, and access to self-catering facilities. Electricity and water are included in the rate.",
+      answer: "All rooms include free WiFi, weekly cleaning with fresh linen, secure parking, CCTV security, ensuite bathroom, and access to self-catering facilities. Electricity and water are included for normal use.",
     },
     {
       question: "Do you offer weekly or monthly rates for project stays?",
@@ -334,10 +333,13 @@ export default function ContractorAccommodationPage() {
             <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 text-balance">
               Contractor & Project Team Accommodation in Bellville South
             </h1>
-            <p className="text-lg sm:text-xl text-gray-300 mb-8 text-pretty max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-300 mb-6 text-pretty max-w-3xl mx-auto">
               Practical accommodation for small contractor, technician and professional teams working across Cape
               Town&apos;s Northern Suburbs. Suitable for teams of up to 8 guests, with private ensuite rooms, WiFi,
               parking, weekly and monthly stay options and company invoicing.
+            </p>
+            <p className="text-white font-semibold mb-8 text-pretty max-w-2xl mx-auto">
+              Send us your team size, dates and work location for a company quote.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-sage-600 hover:bg-sage-700 text-white px-8 py-6 text-lg">
@@ -350,7 +352,7 @@ export default function ContractorAccommodationPage() {
                 className="bg-white text-gray-900 hover:bg-gray-100 px-8 py-6 text-lg"
               >
                 <a
-                  href="https://wa.me/27745245703?text=Hi%2C%20I%27m%20interested%20in%20contractor%20accommodation%20rates"
+                  href="https://wa.me/27745245703?text=Hi%2C%20I%27d%20like%20a%20company%20quote.%20Team%20size%3A%20%2C%20Dates%3A%20%2C%20Work%20location%3A%20"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -472,8 +474,8 @@ export default function ContractorAccommodationPage() {
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
                   <div>
-                    <span className="font-medium">Flexible payment terms</span>
-                    <p className="text-gray-400 text-sm">Weekly or monthly billing available</p>
+                    <span className="font-medium">Corporate invoicing available</span>
+                    <p className="text-gray-400 text-sm">Payment terms confirmed on quotation</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
@@ -567,9 +569,6 @@ export default function ContractorAccommodationPage() {
                       <span className="text-2xl font-bold text-sage-600">{room.price}</span>
                       <span className="text-gray-600 text-sm">/night</span>
                     </div>
-                    {room.perPerson && (
-                      <p className="text-xs text-sage-700 font-semibold mt-1">From {room.perPerson} on monthly rates</p>
-                    )}
                   </div>
 
                   <div className="bg-gray-50 rounded-lg p-2 mb-3 text-xs">
@@ -611,107 +610,23 @@ export default function ContractorAccommodationPage() {
         </div>
       </section>
 
-      {/* Rate Card Section */}
+      {/* Rate Card Section - simplified: standard rates above, everything else on quotation */}
       <section className="py-16 bg-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl font-bold text-gray-900 mb-3">Contractor Rates</h2>
-            <p className="text-gray-600">All rooms include private ensuite bathroom, secure parking, WiFi, and weekly cleaning.</p>
-          </div>
-
-          {/* Full Pricing Table */}
-          <div className="overflow-x-auto mb-10">
-            <table className="w-full text-sm border border-gray-200 rounded-lg overflow-hidden">
-              <thead className="bg-gray-900 text-white">
-                <tr>
-                  <th className="text-left py-4 px-4">Room</th>
-                  <th className="text-center py-4 px-4">Standard<br/><span className="text-xs text-gray-400 font-normal">1-6 nights</span></th>
-                  <th className="text-center py-4 px-4">Weekly<br/><span className="text-xs text-gray-400 font-normal">7-27 nights</span></th>
-                  <th className="text-center py-4 px-4 bg-green-800">Monthly<br/><span className="text-xs text-green-300 font-normal">28+ nights</span></th>
-                </tr>
-              </thead>
-              <tbody className="bg-white">
-                <tr className="border-b border-gray-200">
-                  <td className="py-4 px-4">
-                    <span className="font-semibold">Standard Twin Room</span>
-                    <p className="text-xs text-gray-500">Best for 2 contractors sharing</p>
-                  </td>
-                  <td className="text-center py-4 px-4 font-medium">R580</td>
-                  <td className="text-center py-4 px-4 font-medium text-sage-600">R522</td>
-                  <td className="text-center py-4 px-4 font-bold text-green-600 bg-green-50">R464</td>
-                </tr>
-                <tr className="border-b border-gray-200">
-                  <td className="py-4 px-4">
-                    <span className="font-semibold">Deluxe Twin Room</span>
-                    <p className="text-xs text-gray-500">Best for 2 professionals wanting comfort</p>
-                  </td>
-                  <td className="text-center py-4 px-4 font-medium">R650</td>
-                  <td className="text-center py-4 px-4 font-medium text-sage-600">R585</td>
-                  <td className="text-center py-4 px-4 font-bold text-green-600 bg-green-50">R520</td>
-                </tr>
-                <tr className="border-b border-gray-200">
-                  <td className="py-4 px-4">
-                    <span className="font-semibold">Double Room</span>
-                    <p className="text-xs text-gray-500">Best for solo professionals or site supervisors</p>
-                  </td>
-                  <td className="text-center py-4 px-4 font-medium">R680</td>
-                  <td className="text-center py-4 px-4 font-medium text-sage-600">R612</td>
-                  <td className="text-center py-4 px-4 font-bold text-green-600 bg-green-50">R544</td>
-                </tr>
-                <tr>
-                  <td className="py-4 px-4">
-                    <span className="font-semibold">Triple Room</span>
-                    <p className="text-xs text-gray-500">Best value for 3-person crews</p>
-                    <p className="text-xs text-green-600 font-medium">From R224/person on monthly</p>
-                  </td>
-                  <td className="text-center py-4 px-4 font-medium">R840</td>
-                  <td className="text-center py-4 px-4 font-medium text-sage-600">R756</td>
-                  <td className="text-center py-4 px-4 font-bold text-green-600 bg-green-50">R672</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          {/* Crew Booking Options */}
-          <div className="bg-gray-50 rounded-xl p-6 mb-8">
-            <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Crew Booking Options</h3>
-            <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
-              <div className="bg-white p-4 rounded-lg text-center">
-                <p className="text-2xl font-bold text-sage-600">2</p>
-                <p className="text-sm text-gray-600">workers</p>
-                <p className="text-xs text-gray-500 mt-1">Standard or Deluxe Twin</p>
-              </div>
-              <div className="bg-white p-4 rounded-lg text-center">
-                <p className="text-2xl font-bold text-sage-600">3</p>
-                <p className="text-sm text-gray-600">workers</p>
-                <p className="text-xs text-gray-500 mt-1">Triple Room</p>
-              </div>
-              <div className="bg-white p-4 rounded-lg text-center">
-                <p className="text-2xl font-bold text-sage-600">5</p>
-                <p className="text-sm text-gray-600">workers</p>
-                <p className="text-xs text-gray-500 mt-1">Triple + Double Room</p>
-              </div>
-              <div className="bg-white p-4 rounded-lg text-center">
-                <p className="text-2xl font-bold text-sage-600">7+</p>
-                <p className="text-sm text-gray-600">workers</p>
-                <p className="text-xs text-gray-500 mt-1">Multi-room crew quote</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Crew Discount */}
-          <div className="bg-gray-900 text-white rounded-xl p-6 text-center">
-            <div className="flex items-center justify-center gap-2 mb-2">
-              <Users className="w-5 h-5" />
-              <h3 className="text-lg font-bold">Crew Discounts Available</h3>
-            </div>
-            <p className="text-gray-300 mb-4">Booking 2+ rooms? Get a custom quote for your team.</p>
-            <Button asChild className="bg-sage-600 hover:bg-sage-700">
-              <a href="https://wa.me/27745245703?text=Hi%2C%20I%20need%20a%20quote%20for%20multiple%20rooms%20for%20my%20crew">
-                Request Crew Quote
-              </a>
-            </Button>
-          </div>
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-3">Long-Stay & Multi-Room Rates</h2>
+          <p className="text-gray-600 mb-2">
+            Standard nightly rates for each room are shown above.
+          </p>
+          <p className="text-gray-600 mb-8">
+            Long-stay and multi-room contractor rates are available on quotation — tell us your team size, dates and
+            work location and we&apos;ll confirm the best room combination and company rate.
+          </p>
+          <Button asChild size="lg" className="bg-sage-600 hover:bg-sage-700">
+            <a href="#company-enquiry">
+              <Building2 className="mr-2 h-5 w-5" />
+              Get Company Quote
+            </a>
+          </Button>
         </div>
       </section>
 
@@ -753,7 +668,7 @@ export default function ContractorAccommodationPage() {
                 <Card className="p-4">
                   <h4 className="font-bold text-lg">Sacks Circle Industrial</h4>
                   <p className="text-gray-600 text-sm">Major industrial hub with manufacturing & logistics</p>
-                  <p className="text-sage-600 font-medium text-sm mt-1">Walking distance!</p>
+                  <p className="text-sage-600 font-medium text-sm mt-1">Nearby</p>
                 </Card>
                 <Card className="p-4">
                   <h4 className="font-bold text-lg">Mill Park Industrial</h4>
@@ -960,45 +875,6 @@ export default function ContractorAccommodationPage() {
         </div>
       </section>
 
-      {/* Weekly/Monthly Savings */}
-      <section className="py-16 bg-white border-b">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <Calculator className="w-12 h-12 text-sage-600 mx-auto mb-4" />
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Save More on Longer Stays</h2>
-            <p className="text-gray-600">The longer your project, the more you save</p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            <Card className="p-6 text-center">
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Weekly Stay (7 nights)</h3>
-              <p className="text-3xl font-bold text-sage-600 mb-2">Save 10%</p>
-              <p className="text-gray-600 text-sm mb-4">Standard Twin from R3,654/week</p>
-              <p className="text-xs text-gray-500">(Instead of R4,060)</p>
-            </Card>
-            <Card className="p-6 text-center ring-2 ring-sage-600">
-              <div className="bg-sage-600 text-white text-xs font-bold px-3 py-1 rounded-full inline-block mb-2">BEST VALUE</div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Monthly Stay (30 nights)</h3>
-              <p className="text-3xl font-bold text-sage-600 mb-2">Save 20%</p>
-              <p className="text-gray-600 text-sm mb-4">Standard Twin from R13,920/month</p>
-              <p className="text-xs text-gray-500">(Instead of R17,400)</p>
-            </Card>
-            <Card className="p-6 text-center">
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Team Booking (3+ rooms)</h3>
-              <p className="text-3xl font-bold text-sage-600 mb-2">Custom Rate</p>
-              <p className="text-gray-600 text-sm mb-4">Additional discounts for crews</p>
-              <p className="text-xs text-gray-500">Contact us for a quote</p>
-            </Card>
-          </div>
-          <div className="text-center mt-8">
-            <Button asChild size="lg" className="bg-sage-600 hover:bg-sage-700">
-              <a href="https://wa.me/27745245703?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20a%20weekly%2Fmonthly%20contractor%20stay">
-                Get Your Discounted Rate
-              </a>
-            </Button>
-          </div>
-        </div>
-      </section>
-
       {/* Why Choose Us */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1015,7 +891,7 @@ export default function ContractorAccommodationPage() {
               <Utensils className="w-8 h-8 text-sage-600 flex-shrink-0" />
               <div>
                 <h3 className="font-semibold text-lg mb-2">Self-Catering</h3>
-                <p className="text-gray-600">Full kitchen facilities to save money by cooking your own meals</p>
+                <p className="text-gray-600">Communal kitchenette for preparing light meals</p>
               </div>
             </div>
             <div className="flex gap-4">
@@ -1028,8 +904,8 @@ export default function ContractorAccommodationPage() {
             <div className="flex gap-4">
               <Shield className="w-8 h-8 text-sage-600 flex-shrink-0" />
               <div>
-                <h3 className="font-semibold text-lg mb-2">24/7 Security</h3>
-                <p className="text-gray-600">CCTV monitoring for safe and secure accommodation</p>
+                <h3 className="font-semibold text-lg mb-2">CCTV-Monitored Property</h3>
+                <p className="text-gray-600">24/7 CCTV monitoring and secure gated parking</p>
               </div>
             </div>
             <div className="flex gap-4">
@@ -1071,7 +947,7 @@ export default function ContractorAccommodationPage() {
                 <Car className="w-6 h-6 text-sage-600" />
                 <h3 className="font-bold">N1 Highway Access</h3>
               </div>
-              <p className="text-sage-600 font-medium">5 minutes</p>
+              <p className="text-sage-600 font-medium">Easy access</p>
               <p className="text-gray-600 text-sm mt-1">Easy access to Cape Town CBD, universities, and work sites</p>
             </Card>
             <Card className="p-6 bg-sage-50 border-sage-200">
@@ -1089,7 +965,7 @@ export default function ContractorAccommodationPage() {
             <Card className="p-4">
               <MapPin className="w-6 h-6 mx-auto mb-2 text-sage-600" />
               <h3 className="font-bold text-sm">Sacks Circle</h3>
-              <p className="text-sage-600 text-sm">Walking distance</p>
+              <p className="text-sage-600 text-sm">Nearby</p>
             </Card>
             <Card className="p-4">
               <MapPin className="w-6 h-6 mx-auto mb-2 text-sage-600" />
