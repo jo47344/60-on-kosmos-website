@@ -27,6 +27,8 @@ const nextConfig = {
       // Consolidate narrower legacy location pages into broader new pages to avoid duplicate content
       { source: '/contractor-accommodation-goodwood', destination: '/contractor-accommodation-grandwest-goodwood', permanent: true },
       { source: '/contractor-accommodation-parow', destination: '/contractor-accommodation-n1-city-parow', permanent: true },
+      // Bellville South page was merged into contractor-accommodation-bellville (same location, avoids duplicate content)
+      { source: '/contractor-accommodation-bellville-south', destination: '/contractor-accommodation-bellville', permanent: true },
       // Redirect accommodation variants
       { source: '/accommodation-near-bellville-station', destination: '/rooms', permanent: true },
       { source: '/accommodation-near-tygerberg-hospital', destination: '/rooms', permanent: true },

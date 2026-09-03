@@ -75,7 +75,7 @@ export function Footer() {
                   View on Booking.com
                 </a>
                 <a
-                  href="https://maps.app.goo.gl/Gma3bd2Fv11w1PsBZ"
+                  href="https://www.google.com/maps/search/?api=1&query=60+Kosmos+Street,+Bellville+South,+Cape+Town,+7530"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sage-300 hover:text-sage-100 transition-colors block"
@@ -125,6 +125,16 @@ export function Footer() {
               <li>
                 <Link href="/contractor-accommodation-northern-suburbs" className="hover:text-white transition-colors text-sm">
                   Northern Suburbs
+                </Link>
+              </li>
+              <li>
+                <Link href="/accommodation-durbanville" className="hover:text-white transition-colors text-sm">
+                  Near Durbanville
+                </Link>
+              </li>
+              <li>
+                <Link href="/accommodation-brackenfell" className="hover:text-white transition-colors text-sm">
+                  Near Brackenfell
                 </Link>
               </li>
             </ul>
@@ -188,9 +198,12 @@ export function Footer() {
               </p>
             </div>
 
-            <div className="mt-4">
+            <div className="mt-4 flex flex-col gap-1">
               <Link href="/terms" className="text-sage-400 hover:text-white transition-colors text-sm">
                 Terms & House Rules
+              </Link>
+              <Link href="/privacy-policy" className="text-sage-400 hover:text-white transition-colors text-sm">
+                Privacy Policy
               </Link>
             </div>
 
@@ -216,6 +229,10 @@ export function Footer() {
           <p className="mt-2">
             <Link href="/terms" className="hover:text-white transition-colors">
               Terms & House Rules
+            </Link>
+            {" | "}
+            <Link href="/privacy-policy" className="hover:text-white transition-colors">
+              Privacy Policy
             </Link>
             {" | "}
             <span>Rates subject to change without notice</span>

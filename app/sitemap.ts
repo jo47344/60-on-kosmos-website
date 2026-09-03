@@ -11,7 +11,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // HIGH INTENT MONEY PAGES - Contractor accommodation
     { url: "contractor-accommodation", priority: 1.0, freq: "daily" as const },
     { url: "contractor-accommodation-bellville", priority: 0.95, freq: "daily" as const },
-    { url: "contractor-accommodation-bellville-south", priority: 0.95, freq: "daily" as const },
     { url: "contractor-accommodation-stikland", priority: 0.95, freq: "daily" as const },
     { url: "contractor-accommodation-kuils-river", priority: 0.95, freq: "daily" as const },
     { url: "contractor-accommodation-northern-suburbs", priority: 0.95, freq: "daily" as const },
@@ -28,6 +27,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "accommodation-bellville-south", priority: 0.95, freq: "weekly" as const },
     { url: "contractors", priority: 0.95, freq: "weekly" as const },
     { url: "corporate", priority: 0.9, freq: "weekly" as const },
+
+    // Location pages with confirmed organic search demand
+    { url: "accommodation-durbanville", priority: 0.8, freq: "weekly" as const },
+    { url: "accommodation-brackenfell", priority: 0.75, freq: "weekly" as const },
 
     // Conversion pages
     { url: "rooms", priority: 0.9, freq: "weekly" as const },
@@ -47,6 +50,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "local-info", priority: 0.6, freq: "monthly" as const },
     { url: "things-to-do-bellville-south", priority: 0.55, freq: "monthly" as const },
     { url: "terms", priority: 0.5, freq: "yearly" as const },
+    { url: "privacy-policy", priority: 0.4, freq: "yearly" as const },
 
     // Blog - content marketing
     { url: "blog", priority: 0.7, freq: "weekly" as const },

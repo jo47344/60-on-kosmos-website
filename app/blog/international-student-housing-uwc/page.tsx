@@ -438,7 +438,7 @@ export default function InternationalStudentHousingPage() {
                 <p className="text-sm text-gray-600">Accommodation near Tygerberg for medical students</p>
               </Card>
             </Link>
-            <Link href="/blog/cheap-accommodation-bellville-south" className="block hover:opacity-80">
+            <Link href="/monthly-accommodation" className="block hover:opacity-80">
               <Card className="p-4">
                 <h4 className="font-bold mb-2">Budget Accommodation</h4>
                 <p className="text-sm text-gray-600">Find the cheapest safe rooms in Bellville South</p>

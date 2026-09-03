@@ -1,8 +1,11 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { Calendar, DollarSign, Home, Wifi, Car, Utensils, Shield, Clock } from "lucide-react"
+import { Calendar, DollarSign, Home, Wifi, Car, Utensils, Shield, Clock, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import { Breadcrumbs } from "@/components/breadcrumbs"
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
+import { FAQSchema } from "@/components/faq-schema"
 
 export const metadata: Metadata = {
   title: "Monthly Accommodation in Bellville South | 60 on Kosmos",
@@ -27,9 +30,45 @@ export const metadata: Metadata = {
   },
 }
 
+const breadcrumbItems = [
+  { name: "Home", url: "" },
+  { name: "Monthly Accommodation", url: "/monthly-accommodation" },
+]
+
+const faqs = [
+  {
+    question: "What's the minimum stay for monthly rates?",
+    answer:
+      "Monthly rates apply to stays of 28 nights or more. Stays of 7-27 nights qualify for our discounted weekly rate instead.",
+  },
+  {
+    question: "How much is monthly accommodation?",
+    answer:
+      "Monthly rates start from R464/night for a Standard Twin Room, with the first month due in full before or on check-in and subsequent months due on the 1st of each calendar month.",
+  },
+  {
+    question: "Is a security deposit required for monthly stays?",
+    answer:
+      "A refundable security deposit may apply to stays of seven nights or longer. The amount is confirmed on your quotation and refunded via EFT within 7 days of checkout, subject to inspection.",
+  },
+  {
+    question: "What's included in the monthly rate?",
+    answer:
+      "Free WiFi, weekly cleaning with fresh linen, secure gated parking, and access to our communal self-catering kitchen — all included with no hidden extras.",
+  },
+  {
+    question: "Can I get an invoice for my company?",
+    answer:
+      "Yes, invoices are provided on request, which is why we're a popular choice for contractors and companies covering staff accommodation.",
+  },
+]
+
 export default function MonthlyAccommodationPage() {
   return (
     <div className="min-h-screen bg-white">
+      <BreadcrumbSchema items={breadcrumbItems} />
+      <Breadcrumbs items={breadcrumbItems} />
+      <FAQSchema faqs={faqs} />
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-sage-50 to-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -170,21 +209,21 @@ export default function MonthlyAccommodationPage() {
                 </tr>
                 <tr className="hover:bg-gray-50">
                   <td className="border border-gray-200 px-4 py-3 font-medium">Deluxe Twin</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R620</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R558</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R496</td>
-                </tr>
-                <tr className="hover:bg-gray-50">
-                  <td className="border border-gray-200 px-4 py-3 font-medium">Double</td>
                   <td className="border border-gray-200 px-4 py-3 text-right">R650</td>
                   <td className="border border-gray-200 px-4 py-3 text-right">R585</td>
                   <td className="border border-gray-200 px-4 py-3 text-right">R520</td>
                 </tr>
                 <tr className="hover:bg-gray-50">
+                  <td className="border border-gray-200 px-4 py-3 font-medium">Double</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">R680</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">R612</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">R544</td>
+                </tr>
+                <tr className="hover:bg-gray-50">
                   <td className="border border-gray-200 px-4 py-3 font-medium">Triple</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R800</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R720</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R640</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">R840</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">R756</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">R672</td>
                 </tr>
               </tbody>
             </table>
@@ -253,13 +292,35 @@ export default function MonthlyAccommodationPage() {
             <Card>
               <CardContent className="pt-6">
                 <h3 className="font-semibold text-lg mb-2">
-                  <Link href="/uwc-student-accommodation" className="text-sage-600 hover:text-sage-700">
+                  <Link href="/student-faq" className="text-sage-600 hover:text-sage-700">
                     Student Accommodation
                   </Link>
                 </h3>
                 <p className="text-gray-600">Near UWC and CPUT campuses</p>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-12 bg-gray-50">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <Card key={index}>
+                <CardContent className="p-6">
+                  <details className="group">
+                    <summary className="flex items-start justify-between cursor-pointer list-none">
+                      <h3 className="text-lg font-semibold text-gray-900 pr-8">{faq.question}</h3>
+                      <ChevronDown className="w-5 h-5 text-sage-600 flex-shrink-0 transition-transform group-open:rotate-180" />
+                    </summary>
+                    <p className="mt-4 text-gray-700 leading-relaxed">{faq.answer}</p>
+                  </details>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>

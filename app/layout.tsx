@@ -11,6 +11,7 @@ import { StructuredData } from "@/components/structured-data"
 // Dynamic imports for non-critical components
 const StickyMobileCTA = dynamic(() => import("@/components/sticky-mobile-cta").then(mod => ({ default: mod.StickyMobileCTA })), { ssr: false })
 const GoogleAnalytics = dynamic(() => import("@/components/google-analytics").then(mod => ({ default: mod.GoogleAnalytics })), { ssr: false })
+const ConversionTracking = dynamic(() => import("@/components/conversion-tracking").then(mod => ({ default: mod.ConversionTracking })), { ssr: false })
 const PerformanceOptimizations = dynamic(() => import("@/components/performance-optimizations").then(mod => ({ default: mod.PerformanceOptimizations })), { ssr: false })
 const Toaster = dynamic(() => import("@/components/ui/toaster").then(mod => ({ default: mod.Toaster })), { ssr: false })
 const WhatsAppWidget = dynamic(() => import("@/components/whatsapp-widget").then(mod => ({ default: mod.WhatsAppWidget })), { ssr: false })
@@ -104,7 +105,7 @@ export const metadata: Metadata = {
     google: "5vqXUTGkpekxzUZ2SZ9t_sP4o2BVGccbqEQF-dYn9IQ",
   },
   alternates: {
-    canonical: "/",
+    canonical: "https://www.60onkosmos.co.za/",
   },
   category: "Lodging",
   classification: "Guesthouse, Bed and Breakfast, Budget Accommodation",
@@ -134,6 +135,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <GoogleAnalytics />
+        <ConversionTracking />
         <Navigation />
         <main id="main-content" className="min-h-screen">
           {children}

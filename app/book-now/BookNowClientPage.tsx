@@ -2,14 +2,16 @@
 
 import type React from "react"
 import { useState } from "react"
+import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Logo } from "@/components/logo"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { Calendar, Phone, User, CheckCircle, Loader2 } from "lucide-react"
+import { Calendar, Phone, User, Loader2 } from "lucide-react"
 
 export default function BookNowClientPage() {
+  const router = useRouter()
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -20,7 +22,6 @@ export default function BookNowClientPage() {
     notes: "",
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
   const [error, setError] = useState("")
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -61,16 +62,8 @@ export default function BookNowClientPage() {
       })
 
       if (response.ok) {
-        setIsSubmitted(true)
-        setFormData({
-          name: "",
-          phone: "",
-          checkinDate: "",
-          checkoutDate: "",
-          guestCount: "",
-          companyName: "",
-          notes: "",
-        })
+        router.push("/thank-you")
+        return
       } else {
         const result = await response.json()
         setError(
@@ -87,31 +80,6 @@ export default function BookNowClientPage() {
     }
   }
 
-  if (isSubmitted) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-sage-50 p-4">
-        <div className="max-w-md w-full mx-auto p-6 bg-white rounded-lg border shadow-sm">
-          <div className="flex justify-center mb-4">
-            <Logo size="sm" showTagline={true} />
-          </div>
-          <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <CheckCircle className="w-8 h-8 text-green-600" />
-          </div>
-          <h3 className="text-xl font-semibold text-gray-900 mb-2 text-center">Booking Request Sent!</h3>
-          <p className="text-gray-600 mb-6 text-center">
-            Thank you for your booking request. We will contact you shortly to confirm your stay.
-          </p>
-          <Button
-            onClick={() => setIsSubmitted(false)}
-            className="w-full bg-sage-600 hover:bg-sage-700 text-white py-3 rounded-md font-semibold transition-colors"
-          >
-            Make Another Booking
-          </Button>
-        </div>
-      </div>
-    )
-  }
-
   return (
     <div className="min-h-screen flex items-center justify-center bg-sage-50 p-4">
       <div className="max-w-md w-full mx-auto p-6 bg-white rounded-lg border shadow-sm">
@@ -119,7 +87,7 @@ export default function BookNowClientPage() {
           <Logo size="sm" showTagline={true} />
         </div>
         <h1 className="text-center text-2xl font-bold mb-6 text-gray-900">Book Your Stay</h1>
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-4" data-form-name="book_now_form">
           {error && (
             <div className="p-3 bg-red-50 border border-red-200 rounded-md">
               <p className="text-red-600 text-sm">{error}</p>
@@ -274,7 +242,7 @@ export default function BookNowClientPage() {
           </Button>
 
           <p className="text-xs text-gray-500 text-center mt-4">
-            By submitting, you agree to be contacted via phone or WhatsApp to confirm your booking.
+            We reply within 24 hours. By submitting, you agree to be contacted via phone or WhatsApp to confirm your booking.
           </p>
         </form>
       </div>

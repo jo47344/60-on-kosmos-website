@@ -109,7 +109,6 @@ export function LocalBusinessSchema() {
       "https://www.instagram.com/60onkosmos",
       "https://www.airbnb.com/rooms/1332667439996159511",
       "https://www.booking.com/hotel/za/60-on-kosmos-cape-town.html",
-      "https://maps.app.goo.gl/Gma3bd2Fv11w1PsBZ",
       "https://www.google.com/maps/place/60+on+Kosmos+Bellville+South",
     ],
     amenityFeature: [

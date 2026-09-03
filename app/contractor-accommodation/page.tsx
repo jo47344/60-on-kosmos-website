@@ -24,17 +24,21 @@ import {
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { FAQSchema } from "@/components/faq-schema"
+import { Breadcrumbs } from "@/components/breadcrumbs"
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
 import { CompanyEnquiryForm } from "@/components/company-enquiry-form"
 
 export const metadata: Metadata = {
   title: "Contractor & Project Team Accommodation | Bellville South",
-  description: "Practical accommodation for contractor, technician and project teams of up to 8 guests in Bellville South. Weekly and monthly rates from R464/night. Secure parking, WiFi, company invoicing.",
+  description: "Practical accommodation for contractor, technician and project teams of up to 8 guests in Bellville South. Daily rates from R580/night, weekly from R522/night, monthly from R464/night. Secure parking, WiFi, company invoicing.",
   alternates: {
     canonical: "https://www.60onkosmos.co.za/contractor-accommodation",
   },
   keywords: [
     "contractor accommodation bellville",
+    "guesthouse bellville south",
+    "guesthouse near northern suburbs",
+    "guesthouse near kuils river",
     "contractor accommodation bellville south",
     "project team accommodation cape town",
     "worker accommodation northern suburbs cape town",
@@ -55,7 +59,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "Contractor & Project Team Accommodation | Bellville South",
-    description: "Practical accommodation for contractor, technician and project teams of up to 8 guests in Bellville South. Weekly and monthly rates from R464/night. Secure parking, WiFi, company invoicing.",
+    description: "Practical accommodation for contractor, technician and project teams of up to 8 guests in Bellville South. Daily rates from R580/night, weekly from R522/night, monthly from R464/night. Secure parking, WiFi, company invoicing.",
     url: "https://www.60onkosmos.co.za/contractor-accommodation",
     type: "website",
     images: [
@@ -70,11 +74,6 @@ export const metadata: Metadata = {
 }
 
 export default function ContractorAccommodationPage() {
-  const breadcrumbItems = [
-    { name: "Home", url: "/" },
-    { name: "Contractor & Project Team Accommodation", url: "/contractor-accommodation" },
-  ]
-
   const serviceAreas = [
     { name: "Bellville South", href: "/accommodation-bellville-south" },
     { name: "Bellville", href: "/contractor-accommodation-bellville" },
@@ -303,26 +302,17 @@ export default function ContractorAccommodationPage() {
     },
   ]
 
+  const breadcrumbItems = [
+    { name: "Home", url: "" },
+    { name: "Contractor Accommodation", url: "/contractor-accommodation" },
+  ]
+
   return (
     <div className="min-h-screen bg-white">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
       <FAQSchema faqs={contractorFAQs} />
       <BreadcrumbSchema items={breadcrumbItems} />
-
-      {/* Breadcrumb */}
-      <nav aria-label="Breadcrumb" className="bg-gray-50 border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-          <ol className="flex items-center gap-2 text-sm text-gray-500">
-            <li>
-              <Link href="/" className="hover:text-sage-600">
-                Home
-              </Link>
-            </li>
-            <li aria-hidden="true">/</li>
-            <li className="text-gray-900 font-medium">Contractor & Project Team Accommodation</li>
-          </ol>
-        </div>
-      </nav>
+      <Breadcrumbs items={breadcrumbItems} />
 
       {/* Hero Section */}
       <section className="relative bg-gray-900 py-16 md:py-24">
@@ -494,6 +484,11 @@ export default function ContractorAccommodationPage() {
                   </div>
                 </li>
               </ul>
+              <p className="text-gray-400 text-sm mt-4 pt-4 border-t border-gray-700">
+                Flexible week-by-week billing — extend a stay or add a room as your project runs, invoiced to your
+                company as you go. No lease or fixed term. A refundable security deposit may apply depending on the
+                length and terms of the booking.
+              </p>
             </div>
           </div>
         </div>
@@ -1220,11 +1215,7 @@ export default function ContractorAccommodationPage() {
           <h3 className="text-xl font-bold text-center mb-6">Contractor Accommodation by Area</h3>
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <Link href="/contractor-accommodation-bellville" className="text-sage-600 hover:underline">
-              Bellville
-            </Link>
-            <span className="text-gray-400">|</span>
-            <Link href="/contractor-accommodation-bellville-south" className="text-sage-600 hover:underline">
-              Bellville South
+              Bellville &amp; Bellville South
             </Link>
             <span className="text-gray-400">|</span>
             <Link href="/contractor-accommodation-grandwest-goodwood" className="text-sage-600 hover:underline">
@@ -1258,6 +1249,14 @@ export default function ContractorAccommodationPage() {
             <Link href="/contractor-accommodation-northern-suburbs" className="text-sage-600 hover:underline">
               Northern Suburbs
             </Link>
+            <span className="text-gray-400">|</span>
+            <Link href="/accommodation-durbanville" className="text-sage-600 hover:underline">
+              Durbanville
+            </Link>
+            <span className="text-gray-400">|</span>
+            <Link href="/accommodation-brackenfell" className="text-sage-600 hover:underline">
+              Brackenfell
+            </Link>
           </div>
           <h3 className="text-xl font-bold text-center mb-6">More Options</h3>
           <div className="flex flex-wrap justify-center gap-4">
@@ -1265,7 +1264,7 @@ export default function ContractorAccommodationPage() {
               Monthly Stays
             </Link>
             <span className="text-gray-400">|</span>
-            <Link href="/weekly-accommodation" className="text-sage-600 hover:underline">
+            <Link href="/rooms" className="text-sage-600 hover:underline">
               Weekly Stays
             </Link>
             <span className="text-gray-400">|</span>
@@ -1273,7 +1272,7 @@ export default function ContractorAccommodationPage() {
               All Room Types
             </Link>
             <span className="text-gray-400">|</span>
-            <Link href="/n1-city-accommodation" className="text-sage-600 hover:underline">
+            <Link href="/contractor-accommodation-northern-suburbs" className="text-sage-600 hover:underline">
               N1 City Area
             </Link>
           </div>

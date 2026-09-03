@@ -1,7 +1,5 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { Navigation } from "@/components/navigation"
-import { Footer } from "@/components/footer"
 
 export const metadata: Metadata = {
   title: "Terms & House Rules | 60 on Kosmos Guest House",
@@ -13,16 +11,14 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
   return (
-    <>
-      <Navigation />
-      <main className="min-h-screen bg-background">
-        {/* Hero Section */}
-        <section className="bg-sage-700 text-white py-12">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-3xl sm:text-4xl font-bold mb-4">Terms & House Rules</h1>
-            <p className="text-lg text-sage-100">Please read before booking. By confirming a booking at 60 on Kosmos, you agree to these terms.</p>
-          </div>
-        </section>
+    <div className="min-h-screen bg-background">
+      {/* Hero Section */}
+      <section className="bg-sage-700 text-white py-12">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-3xl sm:text-4xl font-bold mb-4">Terms & House Rules</h1>
+          <p className="text-lg text-sage-100">Please read before booking. By confirming a booking at 60 on Kosmos, you agree to these terms.</p>
+        </div>
+      </section>
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Payment Terms */}
@@ -255,8 +251,6 @@ export default function TermsPage() {
             </div>
           </section>
         </div>
-      </main>
-      <Footer />
-    </>
+    </div>
   )
 }

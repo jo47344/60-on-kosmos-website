@@ -22,52 +22,51 @@ import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
 import { FAQSchema } from "@/components/faq-schema"
 
 export const metadata: Metadata = {
-  title: "Guesthouse Near Stikland | 60 on Kosmos, Bellville South",
+  title: "Accommodation Near Brackenfell | 60 on Kosmos Guest House, Bellville South",
   description:
-    "Guesthouse accommodation near Stikland Industrial, minutes away. 60 on Kosmos offers private ensuite rooms, secure parking, and flexible billing for project teams working in Stikland.",
+    "Guest house accommodation a short drive from Brackenfell. Private ensuite rooms, secure parking, self-catering kitchens, and corporate invoicing for project teams, contractors, and visitors.",
   alternates: {
-    canonical: "https://www.60onkosmos.co.za/contractor-accommodation-stikland",
+    canonical: "https://www.60onkosmos.co.za/accommodation-brackenfell",
   },
   openGraph: {
-    title: "Guesthouse Near Stikland | 60 on Kosmos",
-    description: "Guesthouse rooms for project teams near Stikland. Secure parking, weekly cleaning, WiFi included.",
-    url: "https://www.60onkosmos.co.za/contractor-accommodation-stikland",
+    title: "Accommodation Near Brackenfell | 60 on Kosmos",
+    description: "Private ensuite guest house rooms close to Brackenfell. Secure parking, weekly cleaning, WiFi included.",
+    url: "https://www.60onkosmos.co.za/accommodation-brackenfell",
     type: "website",
   },
 }
 
 const breadcrumbItems = [
   { name: "Home", url: "" },
-  { name: "Contractor Accommodation", url: "/contractor-accommodation" },
-  { name: "Stikland", url: "/contractor-accommodation-stikland" },
+  { name: "Accommodation Near Brackenfell", url: "/accommodation-brackenfell" },
 ]
 
 const faqs = [
   {
-    question: "How far is 60 on Kosmos from Stikland Industrial?",
-    answer: "Stikland Industrial is just minutes away from our guesthouse in Bellville South.",
-  },
-  {
-    question: "Is there secure parking for work vehicles?",
-    answer: "Yes, gated parking with 24/7 CCTV, with space for bakkies and work vehicles.",
-  },
-  {
-    question: "Can you accommodate a full site crew?",
+    question: "How far is 60 on Kosmos from Brackenfell?",
     answer:
-      "Yes, we can arrange multiple rooms for teams, with discounted weekly and monthly rates and one consolidated monthly invoice available.",
+      "We're a short drive from Brackenfell, based in Bellville South, making us a convenient guest house option for visitors, contractors, and professionals in the area.",
   },
   {
-    question: "Do you provide corporate invoicing?",
-    answer: "Yes, on request for contractors and companies.",
+    question: "Is secure parking included?",
+    answer: "Yes, free gated parking with 24/7 CCTV surveillance is included for every room.",
   },
   {
-    question: "What's included in the stay?",
+    question: "Do you offer self-catering facilities?",
     answer:
-      "Free WiFi, weekly cleaning, secure parking, and access to our self-catering kitchen. Check-in is from 14:00, check-out by 10:00.",
+      "Yes, all guests have access to our communal kitchen with a gas stove, microwave, air fryer, and kettle for preparing meals.",
+  },
+  {
+    question: "Can you invoice companies or contractors?",
+    answer: "Yes, invoices are provided on request for corporate and contractor bookings.",
+  },
+  {
+    question: "What are your check-in and check-out times?",
+    answer: "Check-in is from 14:00 and check-out is by 10:00. Weekly cleaning and free WiFi are included in every stay.",
   },
 ]
 
-export default function StiklandAccommodationPage() {
+export default function BrackenfellAccommodationPage() {
   return (
     <div className="min-h-screen bg-white">
       <BreadcrumbSchema items={breadcrumbItems} />
@@ -78,7 +77,7 @@ export default function StiklandAccommodationPage() {
         <div className="absolute inset-0">
           <Image
             src="/images/exterior-building.png"
-            alt="60 on Kosmos Contractor Accommodation"
+            alt="60 on Kosmos Guest House"
             fill
             className="object-cover opacity-30"
             priority
@@ -88,14 +87,15 @@ export default function StiklandAccommodationPage() {
           <div className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 bg-sage-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
               <MapPin className="w-4 h-4" />
-              <span>Stikland Industrial</span>
+              <span>Near Brackenfell</span>
             </div>
             <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 text-balance">
-              A Guesthouse Near Stikland for Project Teams
+              Guest House Accommodation Near Brackenfell
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Stikland Industrial is minutes away from our guesthouse. We provide secure, flexible accommodation for project teams,
-              site crews, and working professionals in the Stikland area — all with one monthly invoice.
+              60 on Kosmos is a guest house in Bellville South, a short drive from Brackenfell and its industrial areas.
+              Private ensuite rooms, secure parking, and self-catering kitchens for visitors, project teams, and anyone
+              needing a comfortable, affordable base near Brackenfell.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
@@ -103,7 +103,7 @@ export default function StiklandAccommodationPage() {
                 size="lg"
                 className="bg-sage-600 hover:bg-sage-700 text-white px-8 py-6 text-lg"
               >
-                <a href="https://wa.me/27745245703?text=Hi%2C%20I%27m%20interested%20in%20project%20team%20accommodation.%20Please%20send%20me%20a%20quote.">
+                <a href="https://wa.me/27745245703?text=Hi%2C%20I%27m%20interested%20in%20accommodation%20near%20Brackenfell.%20Please%20send%20me%20more%20info.">
                   Get a Quote on WhatsApp
                 </a>
               </Button>
@@ -126,16 +126,16 @@ export default function StiklandAccommodationPage() {
       {/* Why Choose Section */}
       <section className="py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-8 text-center">Why Choose 60 on Kosmos for Stikland Teams?</h2>
+          <h2 className="text-3xl font-bold mb-8 text-center">Why Stay at 60 on Kosmos Near Brackenfell?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Card>
               <CardContent className="pt-6">
                 <div className="flex gap-4">
                   <Clock className="w-6 h-6 text-sage-600 flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-bold mb-2">Minutes from Stikland Industrial</h3>
+                    <h3 className="font-bold mb-2">Easy Reach of Brackenfell</h3>
                     <p className="text-gray-600">
-                      Quick commute to all major Stikland sites. Your team stays nearby, well-rested, and productive.
+                      A short drive from Brackenfell CBD and its industrial areas, with quick access via the R300 and N1.
                     </p>
                   </div>
                 </div>
@@ -148,7 +148,7 @@ export default function StiklandAccommodationPage() {
                   <div>
                     <h3 className="font-bold mb-2">Corporate Invoicing</h3>
                     <p className="text-gray-600">
-                      Invoices are provided on request for contractor and company bookings.
+                      Invoices are provided on request for company bookings and project teams.
                     </p>
                   </div>
                 </div>
@@ -159,9 +159,10 @@ export default function StiklandAccommodationPage() {
                 <div className="flex gap-4">
                   <Users className="w-6 h-6 text-sage-600 flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-bold mb-2">Flexible Group Booking</h3>
+                    <h3 className="font-bold mb-2">Flexible Stays</h3>
                     <p className="text-gray-600">
-                      Need 5 rooms or 15? We customize layouts, pricing, and meal plans to fit your team&apos;s needs.
+                      Nightly, weekly, and monthly rates with discounts for longer stays. Twin, double, and triple rooms
+                      available.
                     </p>
                   </div>
                 </div>
@@ -172,9 +173,9 @@ export default function StiklandAccommodationPage() {
                 <div className="flex gap-4">
                   <Shield className="w-6 h-6 text-sage-600 flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-bold mb-2">Secure, Gated Community</h3>
+                    <h3 className="font-bold mb-2">Secure Gated Community</h3>
                     <p className="text-gray-600">
-                      Gated parking and access control. Peace of mind for your crew.
+                      Gated parking, CCTV, and on-site management for complete peace of mind.
                     </p>
                   </div>
                 </div>
@@ -233,7 +234,7 @@ export default function StiklandAccommodationPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Book?</h2>
           <p className="text-lg mb-8 text-gray-100">
-            Contact us for a custom quote tailored to your project needs.
+            Contact us for availability and rates near Brackenfell.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
@@ -241,7 +242,7 @@ export default function StiklandAccommodationPage() {
               size="lg"
               className="bg-white text-sage-600 hover:bg-gray-100 px-8 py-6 text-lg font-bold"
             >
-              <a href="https://wa.me/27745245703?text=Hi%2C%20I%27m%20interested%20in%20project%20team%20accommodation.%20Please%20send%20me%20a%20quote.">
+              <a href="https://wa.me/27745245703?text=Hi%2C%20I%27m%20interested%20in%20accommodation%20near%20Brackenfell.%20Please%20send%20me%20more%20info.">
                 Get Quote on WhatsApp
               </a>
             </Button>
@@ -251,8 +252,8 @@ export default function StiklandAccommodationPage() {
               variant="outline"
               className="border-white text-white hover:bg-sage-700 px-8 py-6 text-lg"
             >
-              <a href="/contractor-accommodation">
-                View All Locations
+              <a href="/rooms">
+                View Rooms &amp; Pricing
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </Button>

@@ -307,7 +307,7 @@ export default function DigitalNomadGuidePage() {
               variant="outline"
               className="border-white text-white hover:bg-blue-700 bg-transparent"
             >
-              <Link href="/monthly-accommodation-bellville-south">View Monthly Pricing</Link>
+              <Link href="/monthly-accommodation">View Monthly Pricing</Link>
             </Button>
           </div>
         </div>
