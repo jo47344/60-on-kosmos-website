@@ -161,7 +161,9 @@ export default function StiklandAccommodationPage() {
                   <div>
                     <h3 className="font-bold mb-2">Flexible Group Booking</h3>
                     <p className="text-gray-600">
-                      Need 5 rooms or 15? We customize layouts, pricing, and meal plans to fit your team&apos;s needs.
+                      Need to check availability for your whole team? Let us know your dates and group size — with 4
+                      private ensuite rooms we can usually fit teams of up to 8-9 guests, and we&apos;ll confirm the
+                      best room combination.
                     </p>
                   </div>
                 </div>

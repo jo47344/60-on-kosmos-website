@@ -9,7 +9,7 @@ import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
 export const metadata: Metadata = {
   title: "Contractor Accommodation Near Century City | 60 on Kosmos",
   description:
-    "Corporate and project team accommodation near Century City and Canal Walk. 5 private ensuite rooms, up to 8 guests, weekly/monthly rates, company invoicing.",
+    "Corporate and project team accommodation near Century City and Canal Walk. 4 private ensuite rooms, up to 8 guests, weekly/monthly rates, company invoicing.",
   alternates: {
     canonical: "https://www.60onkosmos.co.za/contractor-accommodation-century-city",
   },
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Contractor Accommodation Near Century City | 60 on Kosmos",
     description:
-      "Corporate and project team accommodation near Century City and Canal Walk. 5 private ensuite rooms, up to 8 guests.",
+      "Corporate and project team accommodation near Century City and Canal Walk. 4 private ensuite rooms, up to 8 guests.",
     url: "https://www.60onkosmos.co.za/contractor-accommodation-century-city",
     type: "website",
     images: [
@@ -48,7 +48,7 @@ export default function CenturyCityPage() {
     "@type": "LodgingBusiness",
     name: "60 on Kosmos - Contractor Accommodation Near Century City",
     description:
-      "Private-ensuite accommodation for contractor and project teams working near Century City and Canal Walk. 5 rooms, suitable for teams of up to 8 guests. Secure parking, WiFi, weekly and monthly rates, company invoicing.",
+      "Private-ensuite accommodation for contractor and project teams working near Century City and Canal Walk. 4 rooms, suitable for teams of up to 8 guests. Secure parking, WiFi, weekly and monthly rates, company invoicing.",
     address: {
       "@type": "PostalAddress",
       streetAddress: "60 Kosmos Street",
@@ -253,7 +253,7 @@ export default function CenturyCityPage() {
 
           <h3 className="text-2xl font-bold text-center mb-6">Rooms & what&apos;s included</h3>
           <p className="text-center text-gray-600 max-w-2xl mx-auto mb-8">
-            5 private ensuite rooms at 60 on Kosmos, suitable for small teams of up to 8 guests in total.
+            4 private ensuite rooms at 60 on Kosmos, suitable for small teams of up to 8 guests in total.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
             {[
