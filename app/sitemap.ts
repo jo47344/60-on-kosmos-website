@@ -11,15 +11,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // HIGH INTENT MONEY PAGES - Contractor accommodation
     { url: "contractor-accommodation", priority: 1.0, freq: "daily" as const },
     { url: "contractor-accommodation-bellville", priority: 0.95, freq: "daily" as const },
-    { url: "contractor-accommodation-parow", priority: 0.95, freq: "daily" as const },
     { url: "contractor-accommodation-stikland", priority: 0.95, freq: "daily" as const },
-    { url: "contractor-accommodation-goodwood", priority: 0.95, freq: "daily" as const },
     { url: "contractor-accommodation-kuils-river", priority: 0.95, freq: "daily" as const },
     { url: "contractor-accommodation-northern-suburbs", priority: 0.95, freq: "daily" as const },
+    { url: "contractor-accommodation-grandwest-goodwood", priority: 0.95, freq: "daily" as const },
+    { url: "contractor-accommodation-blackheath-saxenburg", priority: 0.95, freq: "daily" as const },
+    { url: "contractor-accommodation-airport-industria", priority: 0.95, freq: "daily" as const },
+    { url: "contractor-accommodation-n1-city-parow", priority: 0.95, freq: "daily" as const },
+    { url: "contractor-accommodation-century-city", priority: 0.95, freq: "daily" as const },
+    { url: "contractor-accommodation-uwc-cput-bellville", priority: 0.95, freq: "daily" as const },
 
     // HIGH INTENT - Stay type pages
     { url: "monthly-accommodation", priority: 0.9, freq: "daily" as const },
     { url: "self-catering-rooms", priority: 0.85, freq: "weekly" as const },
+    { url: "accommodation-bellville-south", priority: 0.95, freq: "weekly" as const },
+    { url: "contractors", priority: 0.95, freq: "weekly" as const },
+    { url: "corporate", priority: 0.9, freq: "weekly" as const },
 
     // Location pages with confirmed organic search demand
     { url: "accommodation-durbanville", priority: 0.8, freq: "weekly" as const },
@@ -29,6 +36,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "rooms", priority: 0.9, freq: "weekly" as const },
     { url: "guest-information", priority: 0.85, freq: "monthly" as const },
     { url: "book-now", priority: 0.9, freq: "daily" as const },
+    { url: "check-availability", priority: 0.9, freq: "daily" as const },
 
     // Short-term university visitors (graduations, block week, visiting professors)
     { url: "student-faq", priority: 0.5, freq: "monthly" as const },
