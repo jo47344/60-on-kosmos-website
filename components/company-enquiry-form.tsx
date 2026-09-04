@@ -17,6 +17,9 @@ const initialFormData = {
   arrivalDate: "",
   departureDate: "",
   workLocation: "",
+  roomSharing: "",
+  vehicleCount: "",
+  invoiceRequired: false,
   specialRequirements: "",
 }
 
@@ -27,9 +30,11 @@ export function CompanyEnquiryForm() {
   const [error, setError] = useState("")
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, type } = e.target
+    const value = type === "checkbox" ? (e.target as HTMLInputElement).checked : e.target.value
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [name]: value,
     })
     setError("")
   }
@@ -92,8 +97,20 @@ export function CompanyEnquiryForm() {
           <CheckCircle2 className="w-8 h-8 text-green-600" />
         </div>
         <h3 className="text-xl font-bold text-gray-900 mb-2">Request received</h3>
-        <p className="text-gray-600 mb-6">
+        <p className="text-gray-600 mb-4">
           Thanks — we&apos;ll confirm the best available room combination and company rate shortly.
+        </p>
+        <p className="text-gray-600 mb-6">
+          Need a faster reply?{" "}
+          <a
+            href="https://wa.me/27745245703?text=Hi%2C%20I%27ve%20just%20sent%20a%20company%20quote%20request%20and%20wanted%20to%20follow%20up%20on%20WhatsApp."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sage-600 font-medium underline"
+          >
+            Message us on WhatsApp
+          </a>
+          .
         </p>
         <Button
           onClick={() => setIsSubmitted(false)}
@@ -183,7 +200,7 @@ export function CompanyEnquiryForm() {
 
       <div>
         <Label htmlFor="guestCount" className="text-sm font-medium text-gray-700">
-          Number of guests *
+          Team size *
         </Label>
         <Input
           id="guestCount"
@@ -248,9 +265,57 @@ export function CompanyEnquiryForm() {
         />
       </div>
 
+      <div className="grid sm:grid-cols-2 gap-4">
+        <div>
+          <Label htmlFor="roomSharing" className="text-sm font-medium text-gray-700">
+            Room-sharing requirements
+          </Label>
+          <Input
+            id="roomSharing"
+            name="roomSharing"
+            value={formData.roomSharing}
+            onChange={handleInputChange}
+            disabled={isSubmitting}
+            className="mt-1"
+            placeholder="e.g., 2 per room, or all separate rooms"
+          />
+        </div>
+        <div>
+          <Label htmlFor="vehicleCount" className="text-sm font-medium text-gray-700">
+            Number of vehicles
+          </Label>
+          <Input
+            id="vehicleCount"
+            name="vehicleCount"
+            type="number"
+            min="0"
+            value={formData.vehicleCount}
+            onChange={handleInputChange}
+            disabled={isSubmitting}
+            className="mt-1"
+            placeholder="e.g., 2"
+          />
+        </div>
+      </div>
+
+      <div className="flex items-center gap-2">
+        <input
+          id="invoiceRequired"
+          name="invoiceRequired"
+          type="checkbox"
+          checked={formData.invoiceRequired}
+          onChange={handleInputChange}
+          disabled={isSubmitting}
+          className="h-4 w-4 rounded border-gray-300"
+        />
+        <Label htmlFor="invoiceRequired" className="text-sm font-medium text-gray-700">
+          We need a company invoice
+        </Label>
+      </div>
+
       <div>
         <Label htmlFor="specialRequirements" className="text-sm font-medium text-gray-700">
-          Special requirements
+          Any other invoicing or special requirements
         </Label>
         <Textarea
           id="specialRequirements"

@@ -349,10 +349,10 @@ export default function MedicalStaffGuidePage() {
         <div className="mt-12">
           <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Guides</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Link href="/blog/nursing-student-accommodation-tygerberg" className="block hover:opacity-80">
+            <Link href="/accommodation-near-cput" className="block hover:opacity-80">
               <Card className="p-4">
-                <h4 className="font-bold mb-2">Nursing Student Guide</h4>
-                <p className="text-sm text-gray-600">Accommodation tips for nursing students at Tygerberg</p>
+                <h4 className="font-bold mb-2">Accommodation Near CPUT</h4>
+                <p className="text-sm text-gray-600">Guest accommodation near the CPUT Bellville campus</p>
               </Card>
             </Link>
             <Link href="/monthly-accommodation" className="block hover:opacity-80">

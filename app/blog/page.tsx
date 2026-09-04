@@ -28,13 +28,13 @@ export default function BlogPage() {
     },
     {
       slug: "international-student-housing-uwc",
-      title: "International Student Housing Near UWC: Complete 2025 Guide",
+      title: "Short- and Medium-Term Accommodation for International Students Visiting UWC and CPUT",
       excerpt:
-        "Just accepted to UWC? Find temporary accommodation while you settle in, navigate campus housing, and explore Bellville South.",
+        "A practical guide to guest accommodation for exchange, research and short-programme students visiting UWC or CPUT — not a campus residence.",
       image: "/images/twin-room-yellow.png",
       category: "Students",
       date: "2025-01-09",
-      readTime: "10 min read",
+      readTime: "7 min read",
     },
     {
       slug: "corporate-relocation-cape-town",
@@ -55,25 +55,6 @@ export default function BlogPage() {
       category: "Remote Work",
       date: "2025-01-07",
       readTime: "7 min read",
-    },
-    {
-      slug: "nursing-student-accommodation-tygerberg",
-      title: "Nursing Student Accommodation Near Tygerberg Hospital: What You Need",
-      excerpt:
-        "Starting your practical training at Tygerberg? Find safe, affordable accommodation close to the hospital.",
-      image: "/images/triple-room-full.jpg",
-      category: "Students",
-      date: "2025-01-06",
-      readTime: "5 min read",
-    },
-    {
-      slug: "wedding-guest-accommodation-cape-town",
-      title: "Affordable Wedding Guest Accommodation in Cape Town",
-      excerpt: "Attending a Cape Town wedding? Save money with budget-friendly group accommodation in Bellville South.",
-      image: "/images/exterior-courtyard.png",
-      category: "Events",
-      date: "2025-01-05",
-      readTime: "4 min read",
     },
   ]
 

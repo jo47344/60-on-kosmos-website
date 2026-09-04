@@ -7,12 +7,12 @@ import { ArrowRight, Calendar } from "lucide-react"
 export function LatestBlogPosts() {
   const posts = [
     {
-      slug: "medical-staff-guide-tygerberg-hospital",
-      title: "Medical Staff Guide: Relocating to Tygerberg Hospital",
+      slug: "corporate-relocation-cape-town",
+      title: "Corporate Relocation Guide: Bellville & Cape Town",
       excerpt:
-        "Everything you need to know about accommodation, transport, and settling in for locum doctors and medical professionals.",
+        "What HR and project managers need to know about housing contractors and relocating staff to Bellville and Cape Town's northern suburbs.",
       image: "/images/sage-double-room.png",
-      category: "Medical Staff",
+      category: "Corporate",
       date: "2025-01-10",
     },
     {

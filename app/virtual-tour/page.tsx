@@ -119,7 +119,7 @@ export default function VirtualTourPage() {
         },
         {
           src: "/images/exterior-courtyard.png",
-          alt: "Secure parking courtyard at 60 on Kosmos with CCTV monitoring",
+          alt: "Secure parking courtyard at 60 on Kosmos with CCTV and ADT armed response",
           caption: "Secure parking behind locked gates",
         },
       ],

@@ -19,6 +19,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "contractor-accommodation-n1-city-parow", priority: 0.95, freq: "daily" as const },
     { url: "contractor-accommodation-century-city", priority: 0.95, freq: "daily" as const },
     { url: "contractor-accommodation-uwc-cput-bellville", priority: 0.95, freq: "daily" as const },
+    { url: "accommodation-near-uwc", priority: 0.85, freq: "weekly" as const },
+    { url: "accommodation-near-cput", priority: 0.85, freq: "weekly" as const },
 
     // HIGH INTENT - Stay type pages
     { url: "monthly-accommodation", priority: 0.9, freq: "daily" as const },
@@ -57,7 +59,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "blog/digital-nomad-guide-bellville-south", priority: 0.6, freq: "monthly" as const },
     { url: "blog/medical-staff-guide-tygerberg-hospital", priority: 0.6, freq: "monthly" as const },
     { url: "blog/international-student-housing-uwc", priority: 0.5, freq: "monthly" as const },
-    { url: "blog/nursing-student-accommodation-tygerberg", priority: 0.5, freq: "monthly" as const },
   ]
 
   const now = new Date().toISOString()

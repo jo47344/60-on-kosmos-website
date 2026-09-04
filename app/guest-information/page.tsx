@@ -51,6 +51,7 @@ export default function GuestInformationPage() {
           <h2 className="font-serif text-3xl">Practical details</h2>
           <p className="leading-relaxed text-muted-foreground">We offer furnished private-ensuite accommodation in Bellville South for short stays and longer stays of 28 nights or more.</p>
           <Link className="font-medium text-primary underline underline-offset-4" href="/rooms">View rooms and current rates</Link>
+          <Link className="font-medium text-primary underline underline-offset-4" href="/terms">View full payment terms by length of stay</Link>
         </div>
         <dl className="grid gap-0 divide-y divide-border border-y border-border">
           {facts.map(([label, value]) => (

@@ -30,7 +30,7 @@ export default function AmenitiesPage() {
     {
       icon: Shield,
       title: "CCTV-Monitored Property",
-      description: "CCTV monitoring, secure gate access, and on-site caretaker for your peace of mind.",
+      description: "CCTV and ADT armed response, plus secure gate access, for your peace of mind.",
     },
     {
       icon: Wifi,

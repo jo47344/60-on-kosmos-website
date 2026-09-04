@@ -222,7 +222,7 @@ export default function LocalInfoPage() {
               <ul className="text-gray-600 mb-4 space-y-2">
                 <li className="flex items-start">
                   <Camera className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
-                  <span>24/7 CCTV monitoring at our property</span>
+                  <span>CCTV and ADT armed response at our property</span>
                 </li>
                 <li className="flex items-start">
                   <Car className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" />

@@ -239,7 +239,7 @@ export default function StudentFAQPage() {
               <AccordionItem value="item-12">
                 <AccordionTrigger className="text-left">Is there parking if I have my own car?</AccordionTrigger>
                 <AccordionContent className="text-gray-600">
-                  Yes! We have secure, enclosed parking with 24/7 CCTV monitoring. Perfect for students who drive from
+                  Yes! We have secure, enclosed parking with CCTV and ADT armed response. Perfect for students who drive from
                   other provinces or have their own vehicles. Parking is included at no extra cost.
                 </AccordionContent>
               </AccordionItem>
@@ -292,8 +292,12 @@ export default function StudentFAQPage() {
               <AccordionItem value="item-16">
                 <AccordionTrigger className="text-left">What payment methods do you accept?</AccordionTrigger>
                 <AccordionContent className="text-gray-600">
-                  We accept bank transfers (EFT), instant EFT, and cash. For monthly bookings, we can arrange payment
-                  plans. Contact us via WhatsApp to discuss payment options that work for you.
+                  We accept EFT (bank transfer) only — cash is not accepted. Payment timing depends on your length of
+                  stay; see our{" "}
+                  <a href="/terms" className="text-primary underline">
+                    Terms & House Rules
+                  </a>{" "}
+                  page for full details, or contact us via WhatsApp with any questions.
                 </AccordionContent>
               </AccordionItem>
 
