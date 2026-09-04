@@ -117,7 +117,7 @@ export function OptimizedBookingForm() {
     <Card className="w-full max-w-md mx-auto">
       <CardHeader>
         <CardTitle className="text-center text-xl font-semibold text-gray-900">Book Your Stay</CardTitle>
-        <p className="text-center text-gray-600 text-sm">Best rates guaranteed when you book direct</p>
+        <p className="text-center text-gray-600 text-sm">Fill out the form below and we'll confirm your booking</p>
       </CardHeader>
       <CardContent>
         <form onSubmit={handleSubmit} className="space-y-4">

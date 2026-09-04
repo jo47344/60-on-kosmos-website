@@ -21,14 +21,14 @@ import { LatestBlogPosts } from "@/components/latest-blog-posts"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "60 on Kosmos - Bellville Accommodation for Teams",
-  description: "Flexible accommodation for project teams from R580/night. Private rooms, secure parking, WiFi, and monthly rates for stays of 28 nights or more.",
+  title: "Bellville South Accommodation for Contractors & Teams | 60 on Kosmos",
+  description: "Private ensuite accommodation in Bellville South for contractors, project teams and working professionals. Secure parking, WiFi, weekly cleaning and company invoices. Request a quote.",
   alternates: {
     canonical: "https://www.60onkosmos.co.za/",
   },
   openGraph: {
-    title: "60 on Kosmos - Bellville Accommodation for Teams",
-    description: "Flexible accommodation for project teams from R580/night. Private rooms, secure parking, WiFi, and monthly rates for stays of 28 nights or more.",
+    title: "Bellville South Accommodation for Contractors & Teams | 60 on Kosmos",
+    description: "Private ensuite accommodation in Bellville South for contractors, project teams and working professionals. Secure parking, WiFi, weekly cleaning and company invoices. Request a quote.",
     url: "https://www.60onkosmos.co.za/",
     type: "website",
     images: [
@@ -90,26 +90,31 @@ export default function HomePage() {
           />
           <div className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-2 sm:mb-4 leading-tight text-balance">
-              Private ensuite rooms in Bellville South. Not a shared dorm — your own space.
+              Private Ensuite Accommodation in Bellville South for Project Teams and Professionals
             </h1>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-6 sm:mb-8 px-2 text-pretty">
-              Self-catering guesthouse for contractors, corporate stays, and university visitors. 4 rooms only — we
-              stay small on purpose.
+              Four private-ensuite rooms for contractors, technicians, supervisors and working professionals.
+              Suitable for small teams of up to 8 guests, with secure gated parking, WiFi, communal kitchenette
+              access, weekly cleaning and company invoicing.
             </p>
-            <div className="flex justify-center px-4 sm:px-0">
+            <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 px-4 sm:px-0">
               <Button
                 asChild
                 size="lg"
                 className="bg-sage-600 hover:bg-sage-700 text-white w-full sm:w-auto px-6 sm:px-8 md:px-10 py-5 sm:py-6 text-base sm:text-lg"
               >
-                <Link href="/check-availability">Check availability</Link>
+                <a href="https://wa.me/27745245703?text=Hi%2C%20I%27d%20like%20a%20company%20quote.%20Company%20name%3A%20%2C%20Number%20of%20guests%3A%20%2C%20Arrival%20date%3A%20%2C%20Departure%20date%3A%20%2C%20Work%20location%3A%20%2C%20Room-sharing%20requirements%3A%20">
+                  Request a Company Quote
+                </a>
               </Button>
-            </div>
-            <div className="mt-5 sm:mt-6 flex items-center justify-center gap-2">
-              <Star className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400 fill-current" />
-              <span className="text-sm sm:text-base text-white/90">
-                4.65★ on Google (23 reviews) · 8.2 on Booking.com
-              </span>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="bg-white/10 border-white text-white hover:bg-white/20 w-full sm:w-auto px-6 sm:px-8 md:px-10 py-5 sm:py-6 text-base sm:text-lg"
+              >
+                <Link href="/check-availability">Check Room Availability</Link>
+              </Button>
             </div>
           </div>
         </section>
@@ -306,7 +311,7 @@ export default function HomePage() {
                   <GraduationCap className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 text-sage-600" />
                   <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">International Students</h3>
                   <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4">
-                    5km from UWC and 4.5km from CPUT. Flexible arrival times for student stays.
+                    5km from UWC and 4.5km from CPUT. Contact us to arrange your arrival time.
                   </p>
                   <Button asChild variant="outline" className="border-sage-600 text-sage-600 bg-transparent w-full">
                     <Link href="/rooms">Student Options</Link>
@@ -408,7 +413,7 @@ export default function HomePage() {
 
               <div className="bg-white rounded-lg border border-gray-200 p-4 sm:p-6">
                 <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3">Is there parking for work vehicles?</h3>
-                <p className="text-gray-700 text-sm sm:text-base">Yes, secure off-street parking with space for bakkies and trailers, plus CCTV and a live-in caretaker.</p>
+                <p className="text-gray-700 text-sm sm:text-base">Yes, secure gated parking is available for work vehicles, with CCTV and ADT armed response. If you need to bring a trailer, please confirm with us before booking so we can check space is available.</p>
               </div>
 
               <div className="bg-white rounded-lg border border-gray-200 p-4 sm:p-6">
@@ -423,7 +428,7 @@ export default function HomePage() {
 
               <div className="bg-white rounded-lg border border-gray-200 p-4 sm:p-6">
                 <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3">Do you have real guest reviews?</h3>
-                <p className="text-gray-700 text-sm sm:text-base">Yes — 46 verified reviews at 8.0/10 &quot;Very Good&quot; on <a href="https://www.booking.com/hotel/za/60-on-kosmos-cape-town.html" target="_blank" rel="noopener noreferrer" className="text-sage-600 hover:text-sage-700 font-semibold underline">Booking.com</a>, and Superhost status with a 4.65 rating on <a href="https://www.airbnb.co.za/rooms/1055447623" target="_blank" rel="noopener noreferrer" className="text-sage-600 hover:text-sage-700 font-semibold underline">Airbnb</a>. Both link directly to the real listings.</p>
+                <p className="text-gray-700 text-sm sm:text-base">Yes — view our latest verified reviews directly on <a href="https://www.booking.com/hotel/za/60-on-kosmos-cape-town.html" target="_blank" rel="noopener noreferrer" className="text-sage-600 hover:text-sage-700 font-semibold underline">Booking.com</a> and <a href="https://www.airbnb.co.za/rooms/1055447623" target="_blank" rel="noopener noreferrer" className="text-sage-600 hover:text-sage-700 font-semibold underline">Airbnb</a>. Both link directly to the real listings.</p>
               </div>
             </div>
           </div>
@@ -486,7 +491,7 @@ export default function HomePage() {
                 name: "Is there parking for work vehicles?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Yes, secure off-street parking with space for bakkies and trailers, plus CCTV and a live-in caretaker.",
+                  text: "Yes, secure gated parking is available for work vehicles, with CCTV and ADT armed response. If you need to bring a trailer, please confirm with us before booking so we can check space is available.",
                 },
               },
               {
@@ -510,7 +515,7 @@ export default function HomePage() {
                 name: "Do you have real guest reviews?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Yes — 46 verified reviews at 8.0/10 \"Very Good\" on Booking.com, and Superhost status with a 4.65 rating on Airbnb. Both link directly to the real listings.",
+                  text: "Yes — view our latest verified reviews directly on Booking.com and Airbnb. Both link directly to the real listings.",
                 },
               },
             ],

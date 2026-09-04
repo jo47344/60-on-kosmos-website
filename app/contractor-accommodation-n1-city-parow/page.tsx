@@ -43,29 +43,8 @@ export default function N1CityParowPage() {
     { name: "N1 City & Parow", url: "/contractor-accommodation-n1-city-parow" },
   ]
 
-  const schemaData = {
-    "@context": "https://schema.org",
-    "@type": "LodgingBusiness",
-    name: "60 on Kosmos - Contractor Accommodation Near N1 City & Parow",
-    description:
-      "Private-ensuite accommodation for contractor and project teams working near N1 City and Parow. 4 room types, suitable for teams of up to 8 guests. Secure parking, WiFi, weekly and monthly rates, company invoicing.",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "60 Kosmos Street",
-      addressLocality: "Bellville South",
-      addressRegion: "Western Cape",
-      postalCode: "7530",
-      addressCountry: "ZA",
-    },
-    geo: { "@type": "GeoCoordinates", latitude: -33.9347, longitude: 18.6489 },
-    telephone: "+27745245703",
-    priceRange: "R464-R840",
-    url: "https://www.60onkosmos.co.za/contractor-accommodation-n1-city-parow",
-  }
-
   return (
     <div className="min-h-screen bg-white">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
       <BreadcrumbSchema items={breadcrumbItems} />
 
       <nav aria-label="Breadcrumb" className="bg-gray-50 border-b">
@@ -314,7 +293,7 @@ export default function N1CityParowPage() {
               GrandWest & Goodwood
             </Link>
             <span className="text-gray-300">|</span>
-            <Link href="/contractor-accommodation-bellville" className="text-sage-600 hover:text-sage-700">
+            <Link href="/contractor-accommodation" className="text-sage-600 hover:text-sage-700">
               Bellville
             </Link>
             <span className="text-gray-300">|</span>

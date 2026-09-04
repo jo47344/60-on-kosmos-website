@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     template: "%s | 60 on Kosmos Bellville South",
   },
   description:
-    "Self-catering ensuite accommodation in Bellville South. Perfect for contractors, students & young professionals. Near UWC & Tygerberg Hospital. Secure parking, free WiFi, weekly cleaning. Book direct for best rates!",
+    "Self-catering ensuite accommodation in Bellville South. Perfect for contractors, students & young professionals. Near UWC & Tygerberg Hospital. Secure parking, free WiFi, weekly cleaning. Request a quote today.",
   keywords:
     "60 on Kosmos, Bellville South accommodation, guesthouse Cape Town, UWC accommodation, Tygerberg Hospital lodging, contractor accommodation Bellville, student accommodation Cape Town, affordable guesthouse, ensuite rooms Bellville, monthly accommodation Cape Town",
   authors: [{ name: "60 on Kosmos" }],

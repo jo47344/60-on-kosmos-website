@@ -16,8 +16,7 @@ export function RoomSchema({ rooms }: RoomSchemaProps) {
     description: room.description,
     image: `https://www.60onkosmos.co.za${room.image}`,
     brand: {
-      "@type": "Organization",
-      name: "60 on Kosmos",
+      "@id": "https://www.60onkosmos.co.za/#lodgingbusiness",
     },
     offers: {
       "@type": "Offer",
@@ -27,8 +26,7 @@ export function RoomSchema({ rooms }: RoomSchemaProps) {
       url: "https://www.60onkosmos.co.za/rooms",
       priceValidUntil: "2025-12-31",
       seller: {
-        "@type": "Organization",
-        name: "60 on Kosmos",
+        "@id": "https://www.60onkosmos.co.za/#lodgingbusiness",
       },
     },
     category: "Hotel Room",

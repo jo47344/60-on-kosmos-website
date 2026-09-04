@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import { business, stayTerms, rooms as siteRooms } from "@/lib/site-facts"
 
 export const metadata: Metadata = {
   title: "Guest Information | 60 on Kosmos",
@@ -16,21 +17,20 @@ export const metadata: Metadata = {
 }
 
 const facts = [
-  ["Address", "60 Kosmos Street, Bellville South, Cape Town"],
-  ["Phone and WhatsApp", "074 524 5703"],
-  ["Check-in", "14:00"],
-  ["Check-out", "10:00"],
-  ["Payment", "EFT only; cash is not accepted"],
+  ["Address", business.fullAddress],
+  ["Phone and WhatsApp", business.phone],
+  ["Check-in", stayTerms.checkIn],
+  ["Check-out", stayTerms.checkOut],
+  ["Quiet hours", stayTerms.quietHoursLabel],
+  ["Payment", stayTerms.payment],
   ["Invoices", "Provided on request"],
-  ["Monthly stays", "Monthly rates apply to stays of 28 nights or more"],
+  ["Monthly stays", `Monthly rates apply to stays of ${stayTerms.monthlyRateMinNights} nights or more`],
 ]
 
-const rooms = [
-  ["Standard Twin", "Two single beds, private ensuite bathroom, WiFi, and no bar fridge"],
-  ["Deluxe Twin", "Two single beds, private ensuite bathroom, WiFi, and a bar fridge"],
-  ["Double Room", "Double bed, private ensuite bathroom, WiFi, and a bar fridge"],
-  ["Triple Room", "Three single beds, private ensuite bathroom, WiFi, and a bar fridge"],
-]
+const rooms = siteRooms.map((room) => [
+  room.name,
+  `${room.layout}, private ensuite bathroom, WiFi, and ${room.barFridge ? "a bar fridge" : "no bar fridge"}`,
+])
 
 export default function GuestInformationPage() {
   return (

@@ -127,7 +127,7 @@ export default function CheckAvailabilityClientPage() {
         <p className="text-center text-sm text-gray-600 mb-6">
           Answer three quick questions and we&apos;ll get back to you.
         </p>
-        <form onSubmit={handleSubmit} className="space-y-5">
+        <form onSubmit={handleSubmit} className="space-y-5" data-form-name="check_availability_form">
           {error && (
             <div className="p-3 bg-red-50 border border-red-200 rounded-md">
               <p className="text-red-600 text-sm">{error}</p>

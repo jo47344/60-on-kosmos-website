@@ -107,7 +107,7 @@ export function CompanyEnquiryForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="bg-white rounded-xl border p-6 sm:p-8 space-y-5">
+    <form onSubmit={handleSubmit} className="bg-white rounded-xl border p-6 sm:p-8 space-y-5" data-form-name="company_enquiry_form">
       {error && (
         <div className="p-3 bg-red-50 border border-red-200 rounded-md">
           <p className="text-red-600 text-sm">{error}</p>

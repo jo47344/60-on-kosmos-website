@@ -5,13 +5,13 @@ import Image from "next/image"
 
 export const metadata: Metadata = {
   title: "Amenities & Services | 60 on Kosmos",
-  description: "24/7 security, free WiFi, safe parking, outdoor areas, self-catering kitchen at our Bellville South guesthouse accommodation.",
+  description: "CCTV and ADT armed response, free WiFi, secure gated parking, outdoor areas, communal kitchenette at our Bellville South guesthouse accommodation.",
   keywords:
     "Guesthouse amenities Bellville South, secure accommodation Cape Town, CCTV security guesthouse, free WiFi accommodation Bellville, safe parking Cape Town, outdoor seating guesthouse",
   alternates: { canonical: "https://www.60onkosmos.co.za/amenities" },
   openGraph: {
     title: "Amenities & Services | 60 on Kosmos",
-    description: "24/7 security, free WiFi, safe parking, outdoor areas, self-catering kitchen at our Bellville South guesthouse accommodation.",
+    description: "CCTV and ADT armed response, free WiFi, secure gated parking, outdoor areas, communal kitchenette at our Bellville South guesthouse accommodation.",
     url: "https://www.60onkosmos.co.za/amenities",
     type: "website",
     images: [

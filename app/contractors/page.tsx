@@ -7,12 +7,12 @@ import { Phone } from "lucide-react"
 export const metadata: Metadata = {
   title: "Day & Week Rates for Contractor Crews | No Lease Required",
   description:
-    "Book contractor accommodation by the day or the week with no lease — daily rates from R580/night, long-stay from R464/night. Private ensuite, self-catering, secure parking. See our full contractor accommodation guide for room details and company invoicing.",
+    "Book contractor accommodation by the day or the week with no lease — daily rates from R580 to R840/night, long-stay from R464/night. Private ensuite, self-catering, secure parking. See our full contractor accommodation guide for room details and company invoicing.",
   alternates: { canonical: "https://www.60onkosmos.co.za/contractors" },
   openGraph: {
     title: "Day & Week Rates for Contractor Crews | No Lease Required",
     description:
-      "Book contractor accommodation by the day or the week with no lease — daily rates from R580/night, long-stay from R464/night. Private ensuite, self-catering, secure parking.",
+      "Book contractor accommodation by the day or the week with no lease — daily rates from R580 to R840/night, long-stay from R464/night. Private ensuite, self-catering, secure parking.",
     url: "https://www.60onkosmos.co.za/contractors",
     type: "website",
     images: [
@@ -76,21 +76,10 @@ export default function ContractorsPage() {
           </p>
           <div className="rounded-lg border bg-gray-50 p-6">
             <p className="text-gray-900 font-semibold">
-              Daily rates: R580–R800/night ({rateIncludes})
+              Daily rates: R580–R840/night ({rateIncludes})
             </p>
             <p className="text-gray-900 font-semibold mt-2">
               Long-stay rate: R464/night ({rateIncludes})
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Real example */}
-      <section className="py-12 sm:py-16 bg-gray-50">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white border-l-4 border-sage-600 rounded-lg p-6 shadow-sm">
-            <p className="text-gray-800 text-pretty">
-              We&apos;re currently hosting a spray booth crew week-by-week on an active project.
             </p>
           </div>
         </div>
