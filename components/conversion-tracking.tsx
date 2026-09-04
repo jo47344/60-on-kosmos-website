@@ -36,6 +36,10 @@ export function ConversionTracking() {
         sendEvent("whatsapp_click", "whatsapp_button")
       } else if (href.startsWith("mailto:")) {
         sendEvent("email_click", "email_link")
+      } else if (href.startsWith("/check-availability")) {
+        sendEvent("check_availability_click", "check_availability_link")
+      } else if (href.startsWith("/book-now")) {
+        sendEvent("booking_click", "book_now_link")
       } else if (/^https?:\/\//.test(href) && !href.includes("60onkosmos.co.za")) {
         sendEvent("external_link_click", link.hostname)
       }
@@ -46,6 +50,11 @@ export function ConversionTracking() {
       if (!form) return
       const formName = form.dataset.formName || "unnamed_form"
       sendEvent("form_submit", formName)
+      // The company-quote form is the primary contractor conversion, so it
+      // also fires its own named event rather than only the generic one.
+      if (formName === "company_enquiry_form") {
+        sendEvent("company_quote_submit", "company_enquiry_form")
+      }
     }
 
     document.addEventListener("click", handleClick)

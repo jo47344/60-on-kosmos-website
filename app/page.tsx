@@ -81,7 +81,7 @@ export default function HomePage() {
         <section className="relative h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] flex items-center justify-center">
           <Image
             src="/images/exterior-building.png"
-            alt="60 on Kosmos Guesthouse Bellville South - Affordable accommodation near UWC and Tygerberg Hospital Cape Town"
+            alt="60 on Kosmos Guesthouse Bellville South - accommodation for project teams and contractors in Cape Town"
             fill
             className="object-cover brightness-50"
             priority
@@ -90,12 +90,11 @@ export default function HomePage() {
           />
           <div className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-2 sm:mb-4 leading-tight text-balance">
-              Private Ensuite Accommodation in Bellville South for Project Teams and Professionals
+              Accommodation for Small Project Teams in Bellville
             </h1>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-6 sm:mb-8 px-2 text-pretty">
-              Four private-ensuite rooms for contractors, technicians, supervisors and working professionals.
-              Suitable for small teams of up to 8 guests, with secure gated parking, WiFi, communal kitchenette
-              access, weekly cleaning and company invoicing.
+              Private ensuite rooms, secure parking, WiFi, weekly cleaning and flexible company rates for teams of
+              up to eight.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 px-4 sm:px-0">
               <Button
@@ -103,9 +102,7 @@ export default function HomePage() {
                 size="lg"
                 className="bg-sage-600 hover:bg-sage-700 text-white w-full sm:w-auto px-6 sm:px-8 md:px-10 py-5 sm:py-6 text-base sm:text-lg"
               >
-                <a href="https://wa.me/27745245703?text=Hi%2C%20I%27d%20like%20a%20company%20quote.%20Company%20name%3A%20%2C%20Number%20of%20guests%3A%20%2C%20Arrival%20date%3A%20%2C%20Departure%20date%3A%20%2C%20Work%20location%3A%20%2C%20Room-sharing%20requirements%3A%20">
-                  Request a Company Quote
-                </a>
+                <Link href="/contractor-accommodation#company-enquiry">Get a Company Quote</Link>
               </Button>
               <Button
                 asChild
@@ -113,7 +110,7 @@ export default function HomePage() {
                 variant="outline"
                 className="bg-white/10 border-white text-white hover:bg-white/20 w-full sm:w-auto px-6 sm:px-8 md:px-10 py-5 sm:py-6 text-base sm:text-lg"
               >
-                <Link href="/check-availability">Check Room Availability</Link>
+                <Link href="/check-availability">Check Short-Stay Availability</Link>
               </Button>
             </div>
           </div>
@@ -322,12 +319,13 @@ export default function HomePage() {
               <Card className="text-center hover:shadow-lg transition-shadow">
                 <CardContent className="pt-6 sm:pt-8 pb-6 sm:pb-8 px-4">
                   <Users className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 text-sage-600" />
-                  <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Medical & Wellness Professionals</h3>
+                  <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Working Professionals & Visitors</h3>
                   <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4">
-                    8km from Tygerberg Hospital. Ideal for locums, training, and healthcare professionals.
+                    Short and medium stays for training, site visits, and business travel in Cape Town's northern
+                    suburbs.
                   </p>
                   <Button asChild variant="outline" className="border-sage-600 text-sage-600 bg-transparent w-full">
-                    <Link href="/rooms">Healthcare Housing</Link>
+                    <Link href="/rooms">View Rooms</Link>
                   </Button>
                 </CardContent>
               </Card>

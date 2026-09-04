@@ -25,32 +25,35 @@ import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
 import { CompanyEnquiryForm } from "@/components/company-enquiry-form"
 
 export const metadata: Metadata = {
-  title: "Contractor Accommodation Bellville South | 60 on Kosmos",
-  description: "Accommodation for small contractor and project teams in Bellville South. Private ensuite rooms, secure parking, WiFi, weekly cleaning, flexible extensions and company invoices.",
+  // The root layout's title template ("%s | 60 on Kosmos Bellville South")
+  // applies to every nested page unless overridden with `absolute` — without
+  // this, the rendered <title> silently repeats the brand name a second time.
+  title: { absolute: "Contractor Accommodation Bellville | Project Teams" },
+  description: "Secure contractor and workers' accommodation in Bellville for small project teams. Ensuite rooms, Wi-Fi, parking, company invoices and monthly rates.",
   alternates: {
     canonical: "https://www.60onkosmos.co.za/contractor-accommodation",
   },
   keywords: [
     "contractor accommodation bellville",
+    "contractors accommodation cape town",
+    "workers accommodation bellville",
+    "project team accommodation bellville",
+    "company staff accommodation bellville",
+    "technician and installer accommodation cape town",
+    "monthly contractor accommodation",
+    "long-stay contractor accommodation",
     "guesthouse bellville south",
     "guesthouse near northern suburbs",
     "guesthouse near kuils river",
-    "contractor accommodation bellville south",
-    "project team accommodation cape town",
     "corporate accommodation bellville",
-    "technician accommodation cape town",
-    "long-stay contractor accommodation",
     "weekly contractor accommodation cape town",
-    "monthly contractor accommodation cape town",
     "self catering contractor accommodation bellville",
-    "project accommodation bellville south",
     "site supervisor accommodation bellville",
     "consulting and engineering staff accommodation",
-    "contractor teams accommodation bellville",
   ],
   openGraph: {
-    title: "Contractor Accommodation Bellville South | 60 on Kosmos",
-    description: "Accommodation for small contractor and project teams in Bellville South. Private ensuite rooms, secure parking, WiFi, weekly cleaning, flexible extensions and company invoices.",
+    title: "Contractor Accommodation Bellville | Project Teams",
+    description: "Secure contractor and workers' accommodation in Bellville for small project teams. Ensuite rooms, Wi-Fi, parking, company invoices and monthly rates.",
     url: "https://www.60onkosmos.co.za/contractor-accommodation",
     type: "website",
     images: [
@@ -219,12 +222,12 @@ export default function ContractorAccommodationPage() {
               <span>For Project Teams & Professionals</span>
             </div>
             <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 text-balance">
-              Contractor & Project Team Accommodation in Bellville South
+              Contractor & Project Team Accommodation in Bellville
             </h1>
             <p className="text-lg sm:text-xl text-gray-300 mb-6 text-pretty max-w-3xl mx-auto">
-              Practical accommodation for small contractor, technician, installer and project teams working across
-              Cape Town&apos;s Northern Suburbs. Suitable for teams of up to 8 guests, with private ensuite rooms,
-              WiFi, secure parking, weekly and monthly stay options and company invoicing.
+              Practical accommodation for small contractor, worker, technician, installer and project teams in
+              Bellville and Cape Town&apos;s northern suburbs. Suitable for teams of up to 8 guests, with private
+              ensuite rooms, WiFi, secure parking, weekly and monthly stay options and company invoicing.
             </p>
             <p className="text-white font-semibold mb-8 text-pretty max-w-2xl mx-auto">
               Send us your team size, dates and work location for a company quote.
@@ -359,7 +362,7 @@ export default function ContractorAccommodationPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Choose Your Room Combination</h2>
             <p className="text-lg text-gray-600">Four room types, suitable for teams of up to 8 guests</p>
-            <p className="text-sm text-gray-600 mt-4">A refundable security deposit may apply to stays of seven nights or longer. Terms on quotation.</p>
+            <p className="text-sm text-gray-600 mt-4">Prices below are per room, not per person, unless stated otherwise. A refundable security deposit may apply to stays of seven nights or longer. Terms on quotation.</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -427,9 +430,13 @@ export default function ContractorAccommodationPage() {
           </div>
 
           <div className="mt-10 max-w-2xl mx-auto text-center">
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-600 mb-2">
               Long-stay and multi-room contractor rates are available on quotation — tell us your team size, dates
               and work location and we&apos;ll confirm the best room combination and company rate.
+            </p>
+            <p className="text-sm text-gray-500 mb-6">
+              Monthly team rates can work out from approximately R224 per person per night when sharing. Final rates
+              depend on team size, room allocation, availability and length of stay.
             </p>
             <Button asChild size="lg" className="bg-sage-600 hover:bg-sage-700">
               <a href="#company-enquiry">

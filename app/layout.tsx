@@ -53,9 +53,9 @@ export const metadata: Metadata = {
     template: "%s | 60 on Kosmos Bellville South",
   },
   description:
-    "Self-catering ensuite accommodation in Bellville South. Perfect for contractors, students & young professionals. Near UWC & Tygerberg Hospital. Secure parking, free WiFi, weekly cleaning. Request a quote today.",
+    "Self-catering ensuite accommodation in Bellville South for small contractor and project teams. Secure parking, free WiFi, weekly cleaning, company invoices. Request a quote today.",
   keywords:
-    "60 on Kosmos, Bellville South accommodation, guesthouse Cape Town, UWC accommodation, Tygerberg Hospital lodging, contractor accommodation Bellville, student accommodation Cape Town, affordable guesthouse, ensuite rooms Bellville, monthly accommodation Cape Town",
+    "60 on Kosmos, Bellville South accommodation, guesthouse Cape Town, contractor accommodation Bellville, project team accommodation Bellville, workers accommodation Bellville, UWC accommodation, affordable guesthouse, ensuite rooms Bellville, monthly accommodation Cape Town",
   authors: [{ name: "60 on Kosmos" }],
   creator: "60 on Kosmos",
   publisher: "60 on Kosmos",
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     siteName: "60 on Kosmos Guesthouse Bellville South",
     title: "60 on Kosmos - Affordable Guesthouse Accommodation in Bellville South",
     description:
-      "Self-catering ensuite rooms near UWC & Tygerberg Hospital. Perfect for contractors, students & professionals. Secure parking, free WiFi, weekly cleaning.",
+      "Self-catering ensuite rooms for contractors, project teams and professionals in Bellville South. Secure parking, free WiFi, weekly cleaning.",
     images: [
       {
         url: "/images/exterior-building.png",
@@ -86,7 +86,7 @@ export const metadata: Metadata = {
     site: "@60onKosmos",
     title: "60 on Kosmos - Affordable Accommodation Bellville South",
     description:
-      "Self-catering ensuite rooms. Perfect for contractors & students. Near UWC & Tygerberg Hospital. Secure parking & free WiFi.",
+      "Self-catering ensuite rooms for contractors and project teams in Bellville South. Secure parking & free WiFi.",
     images: ["/images/exterior-building.png"],
   },
   robots: {
