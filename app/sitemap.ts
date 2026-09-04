@@ -10,7 +10,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // HIGH INTENT MONEY PAGES - Contractor accommodation
     { url: "contractor-accommodation", priority: 1.0, freq: "daily" as const },
-    { url: "contractor-accommodation-bellville", priority: 0.95, freq: "daily" as const },
     { url: "contractor-accommodation-stikland", priority: 0.95, freq: "daily" as const },
     { url: "contractor-accommodation-kuils-river", priority: 0.95, freq: "daily" as const },
     { url: "contractor-accommodation-northern-suburbs", priority: 0.95, freq: "daily" as const },
@@ -59,9 +58,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "blog/medical-staff-guide-tygerberg-hospital", priority: 0.6, freq: "monthly" as const },
     { url: "blog/international-student-housing-uwc", priority: 0.5, freq: "monthly" as const },
     { url: "blog/nursing-student-accommodation-tygerberg", priority: 0.5, freq: "monthly" as const },
-
-    // Low priority utility
-    { url: "thank-you", priority: 0.3, freq: "yearly" as const },
   ]
 
   const now = new Date().toISOString()

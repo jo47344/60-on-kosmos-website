@@ -164,8 +164,8 @@ export default function MonthlyAccommodationPage() {
             <div className="flex gap-4">
               <Shield className="w-8 h-8 text-sage-600 flex-shrink-0" />
               <div>
-                <h3 className="font-semibold text-lg mb-2">24/7 Security</h3>
-                <p className="text-gray-600">Safe and secure accommodation</p>
+                <h3 className="font-semibold text-lg mb-2">CCTV-Monitored Property</h3>
+                <p className="text-gray-600">24/7 CCTV monitoring and secure gated parking</p>
               </div>
             </div>
             <div className="flex gap-4">

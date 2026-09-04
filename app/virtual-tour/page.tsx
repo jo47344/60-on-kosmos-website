@@ -192,7 +192,7 @@ export default function VirtualTourPage() {
               </div>
               <div className="bg-white rounded-lg p-4 shadow-sm">
                 <Shield className="w-8 h-8 text-sage-600 mx-auto mb-2" />
-                <p className="font-semibold">24/7 Security</p>
+                <p className="font-semibold">CCTV & Secure Parking</p>
               </div>
             </div>
           </div>

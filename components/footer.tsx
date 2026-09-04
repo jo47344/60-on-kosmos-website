@@ -118,7 +118,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/contractor-accommodation-bellville" className="hover:text-white transition-colors text-sm">
+                <Link href="/contractor-accommodation" className="hover:text-white transition-colors text-sm">
                   In Bellville
                 </Link>
               </li>

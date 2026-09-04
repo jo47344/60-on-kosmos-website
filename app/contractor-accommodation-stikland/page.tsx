@@ -161,7 +161,8 @@ export default function StiklandAccommodationPage() {
                   <div>
                     <h3 className="font-bold mb-2">Flexible Group Booking</h3>
                     <p className="text-gray-600">
-                      Need 5 rooms or 15? We customize layouts, pricing, and meal plans to fit your team&apos;s needs.
+                      Booking for a larger crew? We help you combine our room types and confirm a company rate for your
+                      team&apos;s needs.
                     </p>
                   </div>
                 </div>

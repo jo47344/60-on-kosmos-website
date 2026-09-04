@@ -67,19 +67,6 @@ export default function CorporatePage() {
         </div>
       </section>
 
-      {/* Corporate clients placeholder */}
-      <section className="py-12 sm:py-16 bg-gray-50">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Corporate clients</h2>
-          <div className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center bg-white">
-            <p className="text-gray-500 font-medium">
-              [PLACEHOLDER — Joann to add corporate client logos/quotes here: Origan, Project Up, OJ Plant Hire,
-              Impendulo]
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="py-12 sm:py-16 bg-gray-900">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

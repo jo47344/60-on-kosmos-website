@@ -389,7 +389,7 @@ export default function RoomsPage() {
             </div>
             <div className="text-center">
               <Shield className="w-12 h-12 text-green-600 mx-auto mb-3" />
-              <h3 className="font-semibold">24/7 Security</h3>
+              <h3 className="font-semibold">CCTV & Secure Gated Parking</h3>
             </div>
           </div>
         </div>

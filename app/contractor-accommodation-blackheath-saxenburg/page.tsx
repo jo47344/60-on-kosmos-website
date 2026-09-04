@@ -43,29 +43,8 @@ export default function BlackheathSaxenburgPage() {
     { name: "Blackheath & Saxenburg Park", url: "/contractor-accommodation-blackheath-saxenburg" },
   ]
 
-  const schemaData = {
-    "@context": "https://schema.org",
-    "@type": "LodgingBusiness",
-    name: "60 on Kosmos - Contractor Accommodation Near Blackheath & Saxenburg Park",
-    description:
-      "Private-ensuite accommodation for contractor and project teams working Blackheath Industrial and Saxenburg Park. 5 rooms, suitable for teams of up to 8 guests. Secure parking, WiFi, weekly and monthly rates, company invoicing.",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "60 Kosmos Street",
-      addressLocality: "Bellville South",
-      addressRegion: "Western Cape",
-      postalCode: "7530",
-      addressCountry: "ZA",
-    },
-    geo: { "@type": "GeoCoordinates", latitude: -33.9347, longitude: 18.6489 },
-    telephone: "+27745245703",
-    priceRange: "R464-R840",
-    url: "https://www.60onkosmos.co.za/contractor-accommodation-blackheath-saxenburg",
-  }
-
   return (
     <div className="min-h-screen bg-white">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
       <BreadcrumbSchema items={breadcrumbItems} />
 
       <nav aria-label="Breadcrumb" className="bg-gray-50 border-b">

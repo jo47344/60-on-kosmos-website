@@ -260,8 +260,8 @@ export default function ContactPageClient() {
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Why Choose Direct Booking?</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Best Rates</h3>
-              <p className="text-gray-600">Get our best prices when you book directly with us</p>
+              <h3 className="font-semibold text-gray-900 mb-2">Direct Rates</h3>
+              <p className="text-gray-600">No third-party booking fees when you book directly with us</p>
             </div>
             <div>
               <h3 className="font-semibold text-gray-900 mb-2">Personal Service</h3>

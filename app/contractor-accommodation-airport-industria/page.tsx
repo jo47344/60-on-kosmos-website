@@ -43,29 +43,8 @@ export default function AirportIndustriaPage() {
     { name: "Airport Industria", url: "/contractor-accommodation-airport-industria" },
   ]
 
-  const schemaData = {
-    "@context": "https://schema.org",
-    "@type": "LodgingBusiness",
-    name: "60 on Kosmos - Contractor Accommodation Near Airport Industria",
-    description:
-      "Private-ensuite accommodation for contractor and project teams working near Airport Industria and Cape Town International Airport. 5 rooms, suitable for teams of up to 8 guests. Secure parking, WiFi, weekly and monthly rates, company invoicing.",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "60 Kosmos Street",
-      addressLocality: "Bellville South",
-      addressRegion: "Western Cape",
-      postalCode: "7530",
-      addressCountry: "ZA",
-    },
-    geo: { "@type": "GeoCoordinates", latitude: -33.9347, longitude: 18.6489 },
-    telephone: "+27745245703",
-    priceRange: "R464-R840",
-    url: "https://www.60onkosmos.co.za/contractor-accommodation-airport-industria",
-  }
-
   return (
     <div className="min-h-screen bg-white">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
       <BreadcrumbSchema items={breadcrumbItems} />
 
       <nav aria-label="Breadcrumb" className="bg-gray-50 border-b">
@@ -241,8 +220,9 @@ export default function AirportIndustriaPage() {
                   <div>
                     <h3 className="font-bold mb-2">Suits irregular shift schedules</h3>
                     <p className="text-gray-600 text-sm">
-                      Self-catering rooms and flexible check-in mean crews working odd hours around flight or cargo
-                      schedules aren&apos;t tied to hotel meal times.
+                      Self-catering rooms suit crews working odd hours around flight or cargo schedules, since
+                      you&apos;re not tied to hotel meal times. Contact us to arrange arrival outside normal check-in
+                      hours.
                     </p>
                   </div>
                 </div>
@@ -314,7 +294,7 @@ export default function AirportIndustriaPage() {
               N1 City & Parow
             </Link>
             <span className="text-gray-300">|</span>
-            <Link href="/contractor-accommodation-bellville-south" className="text-sage-600 hover:text-sage-700">
+            <Link href="/contractor-accommodation" className="text-sage-600 hover:text-sage-700">
               Bellville South
             </Link>
             <span className="text-gray-300">|</span>

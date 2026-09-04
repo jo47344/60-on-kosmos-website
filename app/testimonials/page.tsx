@@ -8,7 +8,7 @@ import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
 export const metadata: Metadata = {
   title: "Verified Guest Reviews - 60 on Kosmos Bellville South",
   description:
-    "Read verified reviews from real guests on Booking.com (8.0/10, 46 reviews), Airbnb (4.65 rating, Superhost), and Google. See what contractors, students, and families say.",
+    "Read verified reviews from real guests on Booking.com, Airbnb, and Google. See what contractors, students, and families say.",
   alternates: { canonical: "https://www.60onkosmos.co.za/testimonials" },
   openGraph: {
     title: "Verified Guest Reviews - 60 on Kosmos",
@@ -89,10 +89,8 @@ export default function TestimonialsPage() {
                     <Star key={i} className="w-5 h-5 text-yellow-500 fill-current" />
                   ))}
                 </div>
-                <p className="text-2xl font-bold text-gray-900">8.0/10</p>
-                <p className="text-sm text-gray-600 mt-2">Very Good</p>
-                <p className="text-xs text-sage-600 font-semibold mt-2">46 verified reviews</p>
-                <p className="text-xs text-gray-500 mt-1">Staff score: 9.2</p>
+                <p className="text-lg font-bold text-gray-900">Booking.com</p>
+                <p className="text-sm text-gray-600 mt-2">View our latest verified reviews</p>
                 <Button asChild size="sm" className="mt-4 w-full bg-sage-600 hover:bg-sage-700" variant="default">
                   <a href="https://www.booking.com/hotel/za/60-on-kosmos-cape-town.html" target="_blank" rel="noopener noreferrer">
                     View on Booking.com
@@ -106,10 +104,8 @@ export default function TestimonialsPage() {
                     <Star key={i} className="w-5 h-5 text-yellow-500 fill-current" />
                   ))}
                 </div>
-                <p className="text-2xl font-bold text-gray-900">4.65</p>
-                <p className="text-sm text-gray-600 mt-2">Superhost Rating</p>
-                <p className="text-xs text-sage-600 font-semibold mt-2">Highly rated host</p>
-                <p className="text-xs text-gray-500 mt-1">Consistent excellence</p>
+                <p className="text-lg font-bold text-gray-900">Airbnb</p>
+                <p className="text-sm text-gray-600 mt-2">View our latest verified reviews</p>
                 <Button asChild size="sm" className="mt-4 w-full bg-sage-600 hover:bg-sage-700" variant="default">
                   <a href="https://www.airbnb.co.za/rooms/1055447623" target="_blank" rel="noopener noreferrer">
                     View on Airbnb

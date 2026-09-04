@@ -27,8 +27,11 @@ const nextConfig = {
       // Consolidate narrower legacy location pages into broader new pages to avoid duplicate content
       { source: '/contractor-accommodation-goodwood', destination: '/contractor-accommodation-grandwest-goodwood', permanent: true },
       { source: '/contractor-accommodation-parow', destination: '/contractor-accommodation-n1-city-parow', permanent: true },
-      // Bellville South page was merged into contractor-accommodation-bellville (same location, avoids duplicate content)
-      { source: '/contractor-accommodation-bellville-south', destination: '/contractor-accommodation-bellville', permanent: true },
+      // Bellville and Bellville South pages were consolidated into the main contractor-accommodation
+      // page (same location, avoids duplicate/competing content). Both point directly at the final
+      // destination so neither hops through an intermediate redirect.
+      { source: '/contractor-accommodation-bellville-south', destination: '/contractor-accommodation', permanent: true },
+      { source: '/contractor-accommodation-bellville', destination: '/contractor-accommodation', permanent: true },
       // Redirect accommodation variants
       { source: '/accommodation-near-bellville-station', destination: '/rooms', permanent: true },
       { source: '/accommodation-near-tygerberg-hospital', destination: '/rooms', permanent: true },

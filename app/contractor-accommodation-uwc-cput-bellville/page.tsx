@@ -43,29 +43,8 @@ export default function UwcCputBellvillePage() {
     { name: "UWC & CPUT Bellville", url: "/contractor-accommodation-uwc-cput-bellville" },
   ]
 
-  const schemaData = {
-    "@context": "https://schema.org",
-    "@type": "LodgingBusiness",
-    name: "60 on Kosmos - Company Accommodation Near UWC & CPUT Bellville",
-    description:
-      "Private-ensuite accommodation for company staff, trainers and project teams working near UWC and the CPUT Bellville campus. 5 rooms, suitable for teams of up to 8 guests. Secure parking, WiFi, weekly and monthly rates, company invoicing.",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "60 Kosmos Street",
-      addressLocality: "Bellville South",
-      addressRegion: "Western Cape",
-      postalCode: "7530",
-      addressCountry: "ZA",
-    },
-    geo: { "@type": "GeoCoordinates", latitude: -33.9347, longitude: 18.6489 },
-    telephone: "+27745245703",
-    priceRange: "R464-R840",
-    url: "https://www.60onkosmos.co.za/contractor-accommodation-uwc-cput-bellville",
-  }
-
   return (
     <div className="min-h-screen bg-white">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
       <BreadcrumbSchema items={breadcrumbItems} />
 
       <nav aria-label="Breadcrumb" className="bg-gray-50 border-b">
@@ -310,12 +289,8 @@ export default function UwcCputBellvillePage() {
               All contractor accommodation locations
             </Link>
             <span className="text-gray-300">|</span>
-            <Link href="/contractor-accommodation-bellville" className="text-sage-600 hover:text-sage-700">
-              Bellville
-            </Link>
-            <span className="text-gray-300">|</span>
-            <Link href="/contractor-accommodation-bellville-south" className="text-sage-600 hover:text-sage-700">
-              Bellville South
+            <Link href="/contractor-accommodation" className="text-sage-600 hover:text-sage-700">
+              Bellville &amp; Bellville South
             </Link>
             <span className="text-gray-300">|</span>
             <Link href="/contractor-accommodation-stikland" className="text-sage-600 hover:text-sage-700">

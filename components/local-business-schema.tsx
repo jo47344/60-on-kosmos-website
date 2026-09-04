@@ -1,8 +1,10 @@
+import { business, stayTerms, priceRangeLabel, reviewPlatforms } from "@/lib/site-facts"
+
 export function LocalBusinessSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": ["LodgingBusiness", "LocalBusiness"],
-    "@id": "https://www.60onkosmos.co.za/#business",
+    "@id": "https://www.60onkosmos.co.za/#lodgingbusiness",
     name: "60 on Kosmos - Accommodation for Project Teams and Working Professionals",
     alternateName: [
       "60 on Kosmos",
@@ -12,25 +14,25 @@ export function LocalBusinessSchema() {
       "Project Team Lodging Cape Town",
     ],
     description:
-      "Furnished private-ensuite accommodation for students, contractors, medical staff, and working professionals in Bellville South, Cape Town. Private rooms with free WiFi and secure parking. Monthly rates apply to stays of 28 nights or more.",
+      "Furnished private-ensuite accommodation for contractors, project teams, and working professionals in Bellville South, Cape Town. Private rooms with free WiFi and secure parking. Monthly rates apply to stays of 28 nights or more.",
     url: "https://www.60onkosmos.co.za",
-    telephone: "+27745245703",
-    email: "info@60onkosmos.co.za",
-    priceRange: "R580-R840",
+    telephone: business.phoneIntl,
+    email: business.email,
+    priceRange: priceRangeLabel,
     currenciesAccepted: "ZAR",
     paymentAccepted: "EFT",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "60 Kosmos Street",
-      addressLocality: "Bellville South",
-      addressRegion: "Western Cape",
-      postalCode: "7530",
-      addressCountry: "ZA",
+      streetAddress: business.streetAddress,
+      addressLocality: business.addressLocality,
+      addressRegion: business.addressRegion,
+      postalCode: business.postalCode,
+      addressCountry: business.addressCountry,
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: -33.9347,
-      longitude: 18.6489,
+      latitude: business.latitude,
+      longitude: business.longitude,
     },
     areaServed: [
       {
@@ -107,30 +109,24 @@ export function LocalBusinessSchema() {
     sameAs: [
       "https://www.facebook.com/60onkosmos",
       "https://www.instagram.com/60onkosmos",
-      "https://www.airbnb.com/rooms/1332667439996159511",
-      "https://www.booking.com/hotel/za/60-on-kosmos-cape-town.html",
+      reviewPlatforms.airbnb,
+      reviewPlatforms.booking,
       "https://www.google.com/maps/place/60+on+Kosmos+Bellville+South",
     ],
     amenityFeature: [
       { "@type": "LocationFeatureSpecification", name: "Free WiFi", value: true },
       { "@type": "LocationFeatureSpecification", name: "Secure Parking", value: true },
-      { "@type": "LocationFeatureSpecification", name: "24/7 CCTV Security", value: true },
+      { "@type": "LocationFeatureSpecification", name: "CCTV Security", value: true },
+      { "@type": "LocationFeatureSpecification", name: "ADT Armed Response", value: true },
       { "@type": "LocationFeatureSpecification", name: "Ensuite Bathrooms", value: true },
       { "@type": "LocationFeatureSpecification", name: "Bar Fridge in Deluxe Twin, Double, and Triple rooms", value: true },
       { "@type": "LocationFeatureSpecification", name: "Weekly Cleaning Service", value: true },
       { "@type": "LocationFeatureSpecification", name: "Communal Kitchenette", value: true },
       { "@type": "LocationFeatureSpecification", name: "Outdoor Seating Area", value: true },
     ],
-    checkinTime: "14:00",
-    checkoutTime: "10:00",
+    checkinTime: stayTerms.checkIn,
+    checkoutTime: stayTerms.checkOut,
     petsAllowed: false,
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.8",
-      reviewCount: "25",
-      bestRating: "5",
-      worstRating: "1",
-    },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Room Types at 60 on Kosmos",
@@ -218,12 +214,11 @@ export function LocalBusinessSchema() {
     keywords: [
       "contractor accommodation Bellville",
       "contractor accommodation Cape Town",
-      "construction worker housing",
+      "project team accommodation Bellville South",
       "monthly accommodation Bellville South",
-      "apprentice accommodation near John Thompson",
-      "boilermaker accommodation Cape Town",
-      "welder accommodation Bellville",
-      "electrician accommodation Bellville",
+      "technician accommodation Cape Town",
+      "site supervisor accommodation Bellville",
+      "consulting and engineering staff accommodation",
       "Sacks Circle accommodation",
       "Mill Park guesthouse",
       "Stikland industrial accommodation",
@@ -232,8 +227,8 @@ export function LocalBusinessSchema() {
       "Kuilsriver contractor housing",
       "industrial area accommodation Cape Town",
       "weekly accommodation Bellville",
-      "construction crew housing Northern Suburbs",
-      "budget accommodation for workers",
+      "corporate accommodation Northern Suburbs",
+      "short-term work assignment accommodation",
     ],
   }
 
