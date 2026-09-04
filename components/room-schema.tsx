@@ -8,7 +8,16 @@ interface RoomSchemaProps {
   }>
 }
 
+// Computed at render time, one year out, so this never ships an expired
+// (and therefore invalid/stale-looking) date the way a hard-coded string would.
+function oneYearFromNow(): string {
+  const date = new Date()
+  date.setFullYear(date.getFullYear() + 1)
+  return date.toISOString().split("T")[0]
+}
+
 export function RoomSchema({ rooms }: RoomSchemaProps) {
+  const priceValidUntil = oneYearFromNow()
   const roomSchemas = rooms.map((room) => ({
     "@context": "https://schema.org",
     "@type": "Product",
@@ -24,7 +33,7 @@ export function RoomSchema({ rooms }: RoomSchemaProps) {
       priceCurrency: "ZAR",
       availability: "https://schema.org/InStock",
       url: "https://www.60onkosmos.co.za/rooms",
-      priceValidUntil: "2025-12-31",
+      priceValidUntil,
       seller: {
         "@id": "https://www.60onkosmos.co.za/#lodgingbusiness",
       },

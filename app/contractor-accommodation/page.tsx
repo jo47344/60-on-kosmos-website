@@ -471,7 +471,7 @@ export default function ContractorAccommodationPage() {
               <Shield className="w-8 h-8 text-sage-600 flex-shrink-0" />
               <div>
                 <h3 className="font-semibold text-lg mb-2">CCTV & ADT Armed Response</h3>
-                <p className="text-gray-600">CCTV monitoring and secure gated parking</p>
+                <p className="text-gray-600">CCTV and ADT armed response, plus secure gated parking</p>
               </div>
             </div>
             <div className="flex gap-4">
