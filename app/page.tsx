@@ -308,10 +308,11 @@ export default function HomePage() {
                   <GraduationCap className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 text-sage-600" />
                   <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">International Students</h3>
                   <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4">
-                    5km from UWC and 4.5km from CPUT. Contact us to arrange your arrival time.
+                    Approximately 5–8 minutes from UWC or CPUT by car, subject to traffic. For exchange, research and
+                    short-programme visits.
                   </p>
                   <Button asChild variant="outline" className="border-sage-600 text-sage-600 bg-transparent w-full">
-                    <Link href="/rooms">Student Options</Link>
+                    <Link href="/accommodation-near-uwc">Student Options</Link>
                   </Button>
                 </CardContent>
               </Card>

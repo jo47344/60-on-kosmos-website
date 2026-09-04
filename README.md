@@ -57,7 +57,8 @@ Production-ready Next.js 14 website for 60 on Kosmos guesthouse in Bellville Sou
 - `/blog/corporate-relocation-cape-town`
 - `/blog/digital-nomad-guide-bellville-south`
 - `/blog/medical-staff-guide-tygerberg-hospital`
-- `/blog/nursing-student-accommodation-tygerberg`
+- `/accommodation-near-uwc`
+- `/accommodation-near-cput`
 
 ### Components (25 Total)
 

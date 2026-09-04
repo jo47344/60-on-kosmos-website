@@ -296,6 +296,14 @@ export default function UwcCputBellvillePage() {
             <Link href="/contractor-accommodation-stikland" className="text-sage-600 hover:text-sage-700">
               Stikland Industrial
             </Link>
+            <span className="text-gray-300">|</span>
+            <Link href="/accommodation-near-uwc" className="text-sage-600 hover:text-sage-700">
+              Visiting UWC, not a contractor?
+            </Link>
+            <span className="text-gray-300">|</span>
+            <Link href="/accommodation-near-cput" className="text-sage-600 hover:text-sage-700">
+              Visiting CPUT, not a contractor?
+            </Link>
           </div>
         </div>
       </section>

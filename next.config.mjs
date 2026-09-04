@@ -23,35 +23,39 @@ const nextConfig = {
   async redirects() {
     return [
       // Kuils River location page - fix broken URL
-      { source: '/contractor-accommodation-kuilsriver', destination: '/contractor-accommodation-kuils-river', permanent: true },
+      { source: '/contractor-accommodation-kuilsriver', destination: 'https://www.60onkosmos.co.za/contractor-accommodation-kuils-river', permanent: true },
       // Consolidate narrower legacy location pages into broader new pages to avoid duplicate content
-      { source: '/contractor-accommodation-goodwood', destination: '/contractor-accommodation-grandwest-goodwood', permanent: true },
-      { source: '/contractor-accommodation-parow', destination: '/contractor-accommodation-n1-city-parow', permanent: true },
+      { source: '/contractor-accommodation-goodwood', destination: 'https://www.60onkosmos.co.za/contractor-accommodation-grandwest-goodwood', permanent: true },
+      { source: '/contractor-accommodation-parow', destination: 'https://www.60onkosmos.co.za/contractor-accommodation-n1-city-parow', permanent: true },
       // Bellville and Bellville South pages were consolidated into the main contractor-accommodation
       // page (same location, avoids duplicate/competing content). Both point directly at the final
       // destination so neither hops through an intermediate redirect.
-      { source: '/contractor-accommodation-bellville-south', destination: '/contractor-accommodation', permanent: true },
-      { source: '/contractor-accommodation-bellville', destination: '/contractor-accommodation', permanent: true },
+      { source: '/contractor-accommodation-bellville-south', destination: 'https://www.60onkosmos.co.za/contractor-accommodation', permanent: true },
+      { source: '/contractor-accommodation-bellville', destination: 'https://www.60onkosmos.co.za/contractor-accommodation', permanent: true },
       // Redirect accommodation variants
-      { source: '/accommodation-near-bellville-station', destination: '/rooms', permanent: true },
-      { source: '/accommodation-near-tygerberg-hospital', destination: '/rooms', permanent: true },
-      { source: '/bellville-south-guesthouse', destination: '/rooms', permanent: true },
-      { source: '/cheap-accommodation-bellville-south', destination: '/monthly-accommodation', permanent: true },
-      { source: '/special-offers', destination: '/monthly-accommodation', permanent: true },
-      { source: '/monthly-accommodation-bellville', destination: '/monthly-accommodation', permanent: true },
-      { source: '/monthly-accommodation-bellville-south', destination: '/monthly-accommodation', permanent: true },
-      { source: '/self-catering-accommodation-bellville', destination: '/self-catering-rooms', permanent: true },
-      { source: '/serviced-accommodation-bellville', destination: '/rooms', permanent: true },
-      { source: '/n1-city-accommodation', destination: '/contractor-accommodation', permanent: true },
-      { source: '/backpackers-bellville-south', destination: '/rooms', permanent: true },
-      { source: '/airport-accommodation', destination: '/rooms', permanent: true },
-      { source: '/cput-accommodation', destination: '/rooms', permanent: true },
-      { source: '/extended-stay-hotel-bellville', destination: '/monthly-accommodation', permanent: true },
-      { source: '/near-cput-bellville', destination: '/rooms', permanent: true },
-      { source: '/near-uwc-bellville', destination: '/rooms', permanent: true },
-      { source: '/tygerberg-hospital-accommodation', destination: '/rooms', permanent: true },
-      { source: '/uwc-student-accommodation', destination: '/rooms', permanent: true },
-      { source: '/weekly-accommodation', destination: '/monthly-accommodation', permanent: true },
+      { source: '/accommodation-near-bellville-station', destination: 'https://www.60onkosmos.co.za/rooms', permanent: true },
+      { source: '/accommodation-near-tygerberg-hospital', destination: 'https://www.60onkosmos.co.za/rooms', permanent: true },
+      { source: '/bellville-south-guesthouse', destination: 'https://www.60onkosmos.co.za/rooms', permanent: true },
+      { source: '/cheap-accommodation-bellville-south', destination: 'https://www.60onkosmos.co.za/monthly-accommodation', permanent: true },
+      { source: '/special-offers', destination: 'https://www.60onkosmos.co.za/monthly-accommodation', permanent: true },
+      { source: '/monthly-accommodation-bellville', destination: 'https://www.60onkosmos.co.za/monthly-accommodation', permanent: true },
+      { source: '/monthly-accommodation-bellville-south', destination: 'https://www.60onkosmos.co.za/monthly-accommodation', permanent: true },
+      { source: '/self-catering-accommodation-bellville', destination: 'https://www.60onkosmos.co.za/self-catering-rooms', permanent: true },
+      { source: '/serviced-accommodation-bellville', destination: 'https://www.60onkosmos.co.za/rooms', permanent: true },
+      { source: '/n1-city-accommodation', destination: 'https://www.60onkosmos.co.za/contractor-accommodation', permanent: true },
+      { source: '/backpackers-bellville-south', destination: 'https://www.60onkosmos.co.za/rooms', permanent: true },
+      { source: '/airport-accommodation', destination: 'https://www.60onkosmos.co.za/rooms', permanent: true },
+      { source: '/extended-stay-hotel-bellville', destination: 'https://www.60onkosmos.co.za/monthly-accommodation', permanent: true },
+      { source: '/tygerberg-hospital-accommodation', destination: 'https://www.60onkosmos.co.za/rooms', permanent: true },
+      { source: '/weekly-accommodation', destination: 'https://www.60onkosmos.co.za/monthly-accommodation', permanent: true },
+      // UWC/CPUT keyword URLs now point at the dedicated commercial pages
+      // instead of the generic /rooms page, so they don't lose keyword relevance.
+      { source: '/cput-accommodation', destination: 'https://www.60onkosmos.co.za/accommodation-near-cput', permanent: true },
+      { source: '/near-cput-bellville', destination: 'https://www.60onkosmos.co.za/accommodation-near-cput', permanent: true },
+      { source: '/near-uwc-bellville', destination: 'https://www.60onkosmos.co.za/accommodation-near-uwc', permanent: true },
+      { source: '/uwc-student-accommodation', destination: 'https://www.60onkosmos.co.za/accommodation-near-uwc', permanent: true },
+      // Nursing-student blog post consolidated into the broader Tygerberg medical-staff guide.
+      { source: '/blog/nursing-student-accommodation-tygerberg', destination: 'https://www.60onkosmos.co.za/blog/medical-staff-guide-tygerberg-hospital', permanent: true },
     ]
   },
   async headers() {
