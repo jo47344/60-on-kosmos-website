@@ -8,12 +8,13 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Calendar, Phone, User, MessageCircle, CheckCircle, Loader2 } from "lucide-react"
+import { Calendar, Mail, Phone, User, MessageCircle, CheckCircle, Loader2 } from "lucide-react"
 
 export function OptimizedBookingForm() {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
+    email: "",
     checkinDate: "",
     checkoutDate: "",
     roomType: "",
@@ -44,6 +45,12 @@ export function OptimizedBookingForm() {
     setIsSubmitting(true)
     setError("") // Clear previous errors
 
+    if (!formData.name || !formData.phone || !formData.email || !formData.checkinDate || !formData.checkoutDate || !formData.roomType) {
+      setError("Please fill in all required fields.")
+      setIsSubmitting(false)
+      return
+    }
+
     try {
       const response = await fetch("https://formspree.io/f/mblkjbkg", {
         // Replace 'mblkjbkg' with your actual Formspree form ID
@@ -61,6 +68,7 @@ export function OptimizedBookingForm() {
         setFormData({
           name: "",
           phone: "",
+          email: "",
           checkinDate: "",
           checkoutDate: "",
           roomType: "",
@@ -162,6 +170,26 @@ export function OptimizedBookingForm() {
                 onChange={handleInputChange}
                 className="pl-10"
                 placeholder="074 123 4567"
+                disabled={isSubmitting}
+              />
+            </div>
+          </div>
+
+          <div>
+            <Label htmlFor="email" className="text-sm font-medium text-gray-700">
+              Email Address *
+            </Label>
+            <div className="relative mt-1">
+              <Mail className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+              <Input
+                id="email"
+                name="email"
+                type="email"
+                required
+                value={formData.email}
+                onChange={handleInputChange}
+                className="pl-10"
+                placeholder="you@example.com"
                 disabled={isSubmitting}
               />
             </div>
