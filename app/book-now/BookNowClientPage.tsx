@@ -8,13 +8,14 @@ import { Logo } from "@/components/logo"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { Calendar, Phone, User, Loader2 } from "lucide-react"
+import { Calendar, Mail, Phone, User, Loader2 } from "lucide-react"
 
 export default function BookNowClientPage() {
   const router = useRouter()
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
+    email: "",
     checkinDate: "",
     checkoutDate: "",
     guestCount: "",
@@ -37,7 +38,7 @@ export default function BookNowClientPage() {
     setIsSubmitting(true)
     setError("")
 
-    if (!formData.name || !formData.phone || !formData.guestCount || !formData.checkinDate || !formData.checkoutDate) {
+    if (!formData.name || !formData.phone || !formData.email || !formData.guestCount || !formData.checkinDate || !formData.checkoutDate) {
       setError("Please fill in all required fields.")
       setIsSubmitting(false)
       return
@@ -129,6 +130,26 @@ export default function BookNowClientPage() {
                 onChange={handleInputChange}
                 className="pl-10 w-full border rounded p-3 text-gray-700 focus:ring-sage-500 focus:border-sage-500"
                 placeholder="e.g., 074 123 4567"
+                disabled={isSubmitting}
+              />
+            </div>
+          </div>
+
+          <div>
+            <Label htmlFor="email" className="text-sm font-medium text-gray-700">
+              Email Address *
+            </Label>
+            <div className="relative mt-1">
+              <Mail className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+              <Input
+                id="email"
+                name="email"
+                type="email"
+                required
+                value={formData.email}
+                onChange={handleInputChange}
+                className="pl-10 w-full border rounded p-3 text-gray-700 focus:ring-sage-500 focus:border-sage-500"
+                placeholder="you@example.com"
                 disabled={isSubmitting}
               />
             </div>
