@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect } from "react"
+import { initializeAttribution } from "@/lib/analytics-attribution"
 
 declare global {
   interface Window {
@@ -23,6 +24,8 @@ function sendEvent(action: string, label: string) {
 // any other guest-submitted content.
 export function ConversionTracking() {
   useEffect(() => {
+    initializeAttribution()
+
     const handleClick = (event: MouseEvent) => {
       const target = event.target as HTMLElement | null
       const link = target?.closest("a[href]") as HTMLAnchorElement | null
@@ -50,11 +53,6 @@ export function ConversionTracking() {
       if (!form) return
       const formName = form.dataset.formName || "unnamed_form"
       sendEvent("form_submit", formName)
-      // The company-quote form is the primary contractor conversion, so it
-      // also fires its own named event rather than only the generic one.
-      if (formName === "company_enquiry_form") {
-        sendEvent("company_quote_submit", "company_enquiry_form")
-      }
     }
 
     document.addEventListener("click", handleClick)
