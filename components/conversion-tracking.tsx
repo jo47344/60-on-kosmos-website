@@ -52,7 +52,7 @@ export function ConversionTracking() {
       const form = event.target as HTMLFormElement | null
       if (!form) return
       const formName = form.dataset.formName || "unnamed_form"
-      sendEvent("form_submit", formName)
+      sendEvent("form_submit_attempt", formName)
     }
 
     document.addEventListener("click", handleClick)

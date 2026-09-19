@@ -43,7 +43,10 @@ function readCurrentAttribution(): Partial<AnalyticsAttribution> {
 
   let referrer = ""
   try {
-    referrer = document.referrer ? new URL(document.referrer).origin : ""
+    if (document.referrer) {
+      const referrerUrl = new URL(document.referrer)
+      referrer = `${referrerUrl.origin}${referrerUrl.pathname}`.slice(0, 500)
+    }
   } catch {
     referrer = ""
   }
@@ -68,8 +71,9 @@ export function initializeAttribution(): void {
   }
 }
 
-export function getAttribution(formPage = window.location.pathname): AnalyticsAttribution {
+export function getAttribution(formPage?: string): AnalyticsAttribution {
   const current = readCurrentAttribution()
+  const resolvedFormPage = formPage || (typeof window !== "undefined" ? window.location.pathname : "")
   let initial: Partial<AnalyticsAttribution> = {}
 
   try {
@@ -81,7 +85,7 @@ export function getAttribution(formPage = window.location.pathname): AnalyticsAt
 
   return {
     landingPage: initial.landingPage || current.landingPage || "",
-    formPage,
+    formPage: resolvedFormPage,
     referrer: initial.referrer || current.referrer || "",
     utmSource: initial.utmSource || current.utmSource || "",
     utmMedium: initial.utmMedium || current.utmMedium || "",
