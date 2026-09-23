@@ -23,9 +23,9 @@ export const business = {
 export const stayTerms = {
   checkIn: "14:00",
   checkOut: "10:00",
-  quietHoursStart: "21:30",
-  quietHoursEnd: "07:00",
-  quietHoursLabel: "21:30–07:00",
+  quietHoursStart: "22:00",
+  quietHoursEnd: "08:00",
+  quietHoursLabel: "22:00–08:00",
   monthlyRateMinNights: 28,
   payment: "EFT only; cash is not accepted",
 } as const

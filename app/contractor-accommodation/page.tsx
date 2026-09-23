@@ -438,6 +438,17 @@ export default function ContractorAccommodationPage() {
               Monthly team rates can work out from approximately R224 per person per night when sharing. Final rates
               depend on team size, room allocation, availability and length of stay.
             </p>
+            <p className="text-sm text-gray-500 mb-6">
+              Just need day or week rates?{" "}
+              <Link href="/contractors" className="text-sage-600 underline">
+                See contractor day &amp; week rates
+              </Link>
+              . Looking for an extended-stay overview for your company?{" "}
+              <Link href="/corporate" className="text-sage-600 underline">
+                See corporate extended-stay accommodation
+              </Link>
+              .
+            </p>
             <Button asChild size="lg" className="bg-sage-600 hover:bg-sage-700">
               <a href="#company-enquiry">
                 <Building2 className="mr-2 h-5 w-5" />
