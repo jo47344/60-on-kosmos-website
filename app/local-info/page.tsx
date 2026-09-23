@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Link from "next/link"
 import { MapPin, Car, ShoppingBag, GraduationCap, Building, Wine, Shield, Camera, AlertTriangle, Navigation } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Local Area & Attractions - 60 on Kosmos Bellville South",
     description: "Perfectly located near UWC, Tygerberg Hospital and major Cape Town attractions",
+    url: "https://www.60onkosmos.co.za/local-info",
   },
 }
 
@@ -109,6 +111,13 @@ export default function LocalInfoPage() {
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             60 on Kosmos is perfectly located in Bellville South with easy access to universities, hospitals, shopping,
             and Cape Town's major attractions.
+          </p>
+          <p className="text-gray-600 max-w-2xl mx-auto mt-4">
+            For a longer list of nearby activities, see our full guide to{" "}
+            <Link href="/things-to-do-bellville-south" className="text-green-700 underline hover:no-underline">
+              things to do in Bellville South
+            </Link>
+            .
           </p>
         </div>
 

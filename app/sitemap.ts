@@ -3,7 +3,7 @@ import type { MetadataRoute } from "next"
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://www.60onkosmos.co.za"
 
-  // All 47 pages organized by priority for contractor-focused ranking
+  // Pages organized by priority for contractor-focused ranking, grouped below by category.
   const routes = [
     // Homepage - highest priority
     { url: "", priority: 1.0, freq: "daily" as const },
@@ -37,7 +37,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "rooms", priority: 0.9, freq: "weekly" as const },
     { url: "guest-information", priority: 0.85, freq: "monthly" as const },
     { url: "book-now", priority: 0.9, freq: "daily" as const },
-    { url: "check-availability", priority: 0.9, freq: "daily" as const },
+    // check-availability is intentionally excluded: it's noindexed
+    // (app/check-availability/page.tsx sets robots: { index: false }),
+    // so it shouldn't be listed in the sitemap.
 
     // Short-term university visitors (graduations, block week, visiting professors)
     { url: "student-faq", priority: 0.5, freq: "monthly" as const },

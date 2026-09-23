@@ -155,6 +155,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/things-to-do-bellville-south" className="hover:text-white transition-colors">
+                  Things to Do
+                </Link>
+              </li>
+              <li>
                 <Link href="/student-faq" className="hover:text-white transition-colors">
                   Student FAQ
                 </Link>
