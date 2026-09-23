@@ -219,7 +219,7 @@ export default function AmenitiesPage() {
                 <div className="flex items-start">
                   <Camera className="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
                   <div>
-                    <p className="font-medium text-gray-900">CCTV Surveillance</p>
+                    <p className="font-medium text-gray-900">CCTV & ADT Armed Response</p>
                     <p className="text-gray-600 text-sm">Security camera coverage at the property entrance and parking areas</p>
                   </div>
                 </div>
@@ -257,7 +257,7 @@ export default function AmenitiesPage() {
               <div className="flex items-start">
                 <Camera className="w-6 h-6 text-green-600 mr-3 mt-1" />
                 <div>
-                  <h3 className="font-semibold text-gray-900">CCTV Surveillance</h3>
+                  <h3 className="font-semibold text-gray-900">CCTV & ADT Armed Response</h3>
                   <p className="text-gray-600">Security cameras at entrance and parking areas</p>
                 </div>
               </div>
