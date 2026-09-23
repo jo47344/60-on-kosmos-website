@@ -42,7 +42,7 @@ export default function FAQPage() {
         name: "Is there secure parking available?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes, we offer free secure on-site parking behind locked gates with 24/7 CCTV surveillance. Your vehicle will be safe throughout your stay.",
+          text: "Yes, we offer free secure on-site parking behind locked gates with CCTV and ADT armed response. Your vehicle will be safe throughout your stay.",
         },
       },
       {
@@ -193,7 +193,7 @@ export default function FAQPage() {
     {
       question: "Is there secure parking available?",
       answer:
-        "Yes, we offer free secure on-site parking behind locked gates with 24/7 CCTV surveillance. Your vehicle will be safe throughout your stay.",
+        "Yes, we offer free secure on-site parking behind locked gates with CCTV and ADT armed response. Your vehicle will be safe throughout your stay.",
     },
     {
       question: "Do you allow contractors and offer monthly rates?",

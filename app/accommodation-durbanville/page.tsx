@@ -49,7 +49,7 @@ const faqs = [
   },
   {
     question: "Is secure parking included?",
-    answer: "Yes, free gated parking with 24/7 CCTV surveillance is included for every room.",
+    answer: "Yes, free gated parking with CCTV and ADT armed response is included for every room.",
   },
   {
     question: "Do you offer self-catering facilities?",
@@ -173,9 +173,9 @@ export default function DurbanvilleAccommodationPage() {
                 <div className="flex gap-4">
                   <Shield className="w-6 h-6 text-sage-600 flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-bold mb-2">Secure Gated Community</h3>
+                    <h3 className="font-bold mb-2">Secure Gated Parking</h3>
                     <p className="text-gray-600">
-                      Gated parking, CCTV, and on-site management for complete peace of mind.
+                      Gated parking, CCTV, and ADT armed response.
                     </p>
                   </div>
                 </div>
@@ -196,7 +196,7 @@ export default function DurbanvilleAccommodationPage() {
               { icon: Users, label: "Private Ensuite" },
               { icon: Utensils, label: "Self-Catering Kitchen" },
               { icon: CheckCircle2, label: "Weekly Cleaning" },
-              { icon: Shield, label: "CCTV Surveillance" },
+              { icon: Shield, label: "CCTV & ADT Armed Response" },
             ].map(({ icon: Icon, label }, index) => (
               <div key={index} className="flex items-center gap-3 bg-white p-4 rounded-lg border">
                 <Icon className="w-6 h-6 text-sage-600 flex-shrink-0" />

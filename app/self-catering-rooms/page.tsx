@@ -39,7 +39,7 @@ const faqs = [
   },
   {
     question: "Is parking included?",
-    answer: "Yes, free secure gated parking with 24/7 CCTV is included with every room.",
+    answer: "Yes, free secure gated parking with CCTV and ADT armed response is included with every room.",
   },
   {
     question: "How often is the room cleaned?",

@@ -53,7 +53,7 @@ function FAQSchema() {
     {
       question: "Is it safe for students?",
       answer:
-        "Yes! We have 24/7 CCTV surveillance, secure entrance, enclosed parking, and are in a safe residential neighborhood.",
+        "Yes! We have CCTV and ADT armed response, secure entrance, enclosed parking, and are in a safe residential neighborhood.",
     },
     {
       question: "Are utilities included in the price?",
@@ -264,7 +264,7 @@ export default function StudentFAQPage() {
                 <AccordionContent className="text-gray-600">
                   Yes! We take security very seriously. We have:
                   <ul className="list-disc ml-6 mt-2 space-y-1">
-                    <li>24/7 CCTV surveillance throughout the property</li>
+                    <li>CCTV and ADT armed response</li>
                     <li>Secure entrance with access control</li>
                     <li>Enclosed parking area</li>
                     <li>Well-lit premises</li>

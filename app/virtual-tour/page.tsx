@@ -105,7 +105,7 @@ export default function VirtualTourPage() {
     {
       title: "Outdoor & Common Areas",
       description: "Relax in our covered outdoor seating area and secure courtyard parking.",
-      features: ["Outdoor Seating", "BBQ Area", "Secure Parking", "24/7 CCTV", "Gardens"],
+      features: ["Outdoor Seating", "BBQ Area", "Secure Parking", "CCTV & ADT Armed Response", "Gardens"],
       images: [
         {
           src: "/images/outdoor-seating.png",
