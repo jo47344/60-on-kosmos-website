@@ -17,6 +17,7 @@ import {
   ArrowRight,
 } from "lucide-react"
 import { TrustBadges } from "@/components/trust-badges"
+import { rooms as roomRates, stayTerms } from "@/lib/site-facts"
 import { LatestBlogPosts } from "@/components/latest-blog-posts"
 import type { Metadata } from "next"
 
@@ -42,35 +43,41 @@ export const metadata: Metadata = {
   },
 }
 
+const rateFor = (name: string) => {
+  const rate = roomRates.find((room) => room.name === name)
+  if (!rate) throw new Error(`No rate in lib/site-facts.ts for ${name}`)
+  return rate
+}
+
 export default function HomePage() {
   const roomTypes = [
     {
       name: "Standard Twin Room",
-      price: "From R580/night",
+      rate: rateFor("Standard Twin"),
       image: "/images/standard-twin-room.jpg",
       bestFor: "Best for 2 contractors sharing",
       features: ["2 single beds", "Private ensuite", "Free WiFi", "Kitchen access"],
     },
     {
       name: "Deluxe Twin Room",
-      price: "From R650/night",
+      rate: rateFor("Deluxe Twin"),
       image: "/images/deluxe-twin-room.jpg",
       bestFor: "Best for professionals wanting extra comfort",
       features: ["2 single beds", "Private ensuite", "Bar fridge", "Premium linens"],
     },
     {
       name: "Double Room",
-      price: "From R680/night",
+      rate: rateFor("Double Room"),
       image: "/images/sage-double-room.png",
       bestFor: "Best for solo professionals or couples",
       features: ["Double bed", "Private ensuite", "Bar fridge", "Premium bedding"],
     },
     {
       name: "Triple Room",
-      price: "From R840/night",
+      rate: rateFor("Triple Room"),
       image: "/images/triple-room.jpg",
       bestFor: "Best for 3-person crews",
-      features: ["3 single beds", "Private ensuite", "From R224/person monthly", "Best value"],
+      features: ["3 single beds", "Private ensuite", `Monthly: R${rateFor("Triple Room").monthlyPrice / 3} per person per night`, "Best value"],
     },
   ]
 
@@ -187,8 +194,9 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-8 sm:mb-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">Our Rooms</h2>
-              <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-                Clean, comfortable ensuite rooms with free WiFi, secure parking, and weekly cleaning included.
+              <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto text-pretty">
+                Every room has a private ensuite, WiFi, secure parking and weekly cleaning. Stays of{" "}
+                {stayTerms.monthlyRateMinNights} nights or more pay the lower monthly rate shown on each room.
               </p>
             </div>
 
@@ -208,19 +216,21 @@ export default function HomePage() {
                   </div>
                   <CardHeader className="pb-3">
                     <CardTitle className="text-lg sm:text-xl">{room.name}</CardTitle>
-                    <CardDescription className="text-sm text-sage-600 font-medium">
+                    <CardDescription className="text-sm text-sage-700 font-medium">
                       {room.bestFor}
                     </CardDescription>
-                    <div className="mt-2">
-<span className="text-base font-semibold text-gray-900">{room.price}</span>
-                <span className="text-sm text-green-600 ml-2">Monthly rates for 28+ nights</span>
+                    <div className="mt-2 space-y-0.5">
+                      <p className="text-base font-semibold text-gray-900">From R{room.rate.price}/night</p>
+                      <p className="text-sm font-medium text-sage-700">
+                        R{room.rate.monthlyPrice}/night on {stayTerms.monthlyRateMinNights}+ night stays
+                      </p>
                     </div>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-2 mb-4">
                       {room.features.map((feature, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-600">
-                          <CheckCircle2 className="w-4 h-4 mr-2 text-green-600 flex-shrink-0" />
+                          <CheckCircle2 className="w-4 h-4 mr-2 text-sage-700 flex-shrink-0" aria-hidden="true" />
                           {feature}
                         </li>
                       ))}
