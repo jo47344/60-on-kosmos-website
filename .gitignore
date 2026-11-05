@@ -25,3 +25,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# impeccable engine binary (downloaded on first run by the skill launcher)
+/.claude/skills/impeccable/scripts/bin/
