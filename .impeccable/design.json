@@ -1,0 +1,442 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-05T22:21:57+00:00",
+  "title": "Design System: 60 on Kosmos",
+  "extensions": {
+    "colorMeta": {
+      "workday-sage": {
+        "role": "primary",
+        "displayName": "Workday Sage",
+        "tonalRamp": [
+          "#384c3d",
+          "#495f4f",
+          "#5a7261",
+          "#6b8573",
+          "#7c9885",
+          "#87af8f",
+          "#c3d7c7",
+          "#f0f4f1"
+        ]
+      },
+      "workday-sage-deep": {
+        "role": "primary",
+        "displayName": "Workday Sage Deep",
+        "tonalRamp": [
+          "#384c3d",
+          "#495f4f",
+          "#5a7261",
+          "#6b8573",
+          "#7c9885",
+          "#87af8f",
+          "#c3d7c7",
+          "#f0f4f1"
+        ]
+      },
+      "veranda-sage": {
+        "role": "primary",
+        "displayName": "Veranda Sage",
+        "tonalRamp": [
+          "#384c3d",
+          "#495f4f",
+          "#5a7261",
+          "#6b8573",
+          "#7c9885",
+          "#87af8f",
+          "#c3d7c7",
+          "#f0f4f1"
+        ]
+      },
+      "sage-mist": {
+        "role": "primary",
+        "displayName": "Sage Mist",
+        "tonalRamp": [
+          "#384c3d",
+          "#495f4f",
+          "#5a7261",
+          "#6b8573",
+          "#7c9885",
+          "#87af8f",
+          "#c3d7c7",
+          "#f0f4f1"
+        ]
+      },
+      "sage-pale": {
+        "role": "primary",
+        "displayName": "Sage Pale",
+        "tonalRamp": [
+          "#384c3d",
+          "#495f4f",
+          "#5a7261",
+          "#6b8573",
+          "#7c9885",
+          "#87af8f",
+          "#c3d7c7",
+          "#f0f4f1"
+        ]
+      },
+      "sage-leaf": {
+        "role": "primary",
+        "displayName": "Sage Leaf",
+        "tonalRamp": [
+          "#384c3d",
+          "#495f4f",
+          "#5a7261",
+          "#6b8573",
+          "#7c9885",
+          "#87af8f",
+          "#c3d7c7",
+          "#f0f4f1"
+        ]
+      },
+      "contact-green": {
+        "role": "secondary",
+        "displayName": "Contact Green",
+        "tonalRamp": [
+          "#14532d",
+          "#166534",
+          "#15803d",
+          "#16a34a",
+          "#22c55e",
+          "#86efac",
+          "#bbf7d0",
+          "#f0fdf4"
+        ]
+      },
+      "contact-green-deep": {
+        "role": "secondary",
+        "displayName": "Contact Green Deep",
+        "tonalRamp": [
+          "#14532d",
+          "#166534",
+          "#15803d",
+          "#16a34a",
+          "#22c55e",
+          "#86efac",
+          "#bbf7d0",
+          "#f0fdf4"
+        ]
+      },
+      "kosmos-teal": {
+        "role": "tertiary",
+        "displayName": "Kosmos Teal",
+        "tonalRamp": [
+          "#0f3b3b",
+          "#134d4d",
+          "#1a5f5f",
+          "#2a7a7a",
+          "#4d9999",
+          "#80bfbf",
+          "#b3dada",
+          "#e6f4f4"
+        ]
+      },
+      "chimney-slate": {
+        "role": "tertiary",
+        "displayName": "Chimney Slate",
+        "tonalRamp": [
+          "#1e252b",
+          "#2c353d",
+          "#3d4852",
+          "#55616c",
+          "#717d88",
+          "#a3acb5",
+          "#d1d6db",
+          "#f1f3f5"
+        ]
+      },
+      "site-ink": {
+        "role": "neutral",
+        "displayName": "Site Ink",
+        "tonalRamp": [
+          "#111827",
+          "#1f2937",
+          "#374151",
+          "#4b5563",
+          "#6b7280",
+          "#d1d5db",
+          "#e5e7eb",
+          "#f9fafb"
+        ]
+      },
+      "body-slate": {
+        "role": "neutral",
+        "displayName": "Body Slate",
+        "tonalRamp": [
+          "#111827",
+          "#1f2937",
+          "#374151",
+          "#4b5563",
+          "#6b7280",
+          "#d1d5db",
+          "#e5e7eb",
+          "#f9fafb"
+        ]
+      },
+      "label-graphite": {
+        "role": "neutral",
+        "displayName": "Label Graphite",
+        "tonalRamp": [
+          "#111827",
+          "#1f2937",
+          "#374151",
+          "#4b5563",
+          "#6b7280",
+          "#d1d5db",
+          "#e5e7eb",
+          "#f9fafb"
+        ]
+      },
+      "quiet-gray": {
+        "role": "neutral",
+        "displayName": "Quiet Gray",
+        "tonalRamp": [
+          "#111827",
+          "#1f2937",
+          "#374151",
+          "#4b5563",
+          "#6b7280",
+          "#d1d5db",
+          "#e5e7eb",
+          "#f9fafb"
+        ]
+      },
+      "cloud": {
+        "role": "neutral",
+        "displayName": "Cloud",
+        "tonalRamp": [
+          "#111827",
+          "#1f2937",
+          "#374151",
+          "#4b5563",
+          "#6b7280",
+          "#d1d5db",
+          "#e5e7eb",
+          "#f9fafb"
+        ]
+      },
+      "rule-line": {
+        "role": "neutral",
+        "displayName": "Rule Line",
+        "tonalRamp": [
+          "#111827",
+          "#1f2937",
+          "#374151",
+          "#4b5563",
+          "#6b7280",
+          "#d1d5db",
+          "#e5e7eb",
+          "#f9fafb"
+        ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "White",
+        "tonalRamp": [
+          "#111827",
+          "#1f2937",
+          "#374151",
+          "#4b5563",
+          "#6b7280",
+          "#d1d5db",
+          "#e5e7eb",
+          "#f9fafb"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero headline on photo backgrounds; one per page."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section headings."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Card titles such as room names, band headings."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Section intros and main paragraphs."
+      },
+      "body-sm": {
+        "displayName": "Body Small",
+        "purpose": "Card feature lists, footer, supporting detail."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Form labels, buttons, navigation links."
+      }
+    },
+    "shadows": [
+      {
+        "name": "resting-card",
+        "value": "0 1px 2px 0 rgb(0 0 0 / 0.05)",
+        "purpose": "Default for cards and form panels."
+      },
+      {
+        "name": "lifted-card",
+        "value": "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
+        "purpose": "Card hover state and dropdown menus."
+      },
+      {
+        "name": "floating-bar",
+        "value": "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
+        "purpose": "Navigation bar and sticky mobile contact bar."
+      },
+      {
+        "name": "floating-action",
+        "value": "0 25px 50px -12px rgb(0 0 0 / 0.25)",
+        "purpose": "Floating WhatsApp button and chat panel."
+      }
+    ],
+    "motion": [
+      {
+        "name": "color-change",
+        "value": "150ms cubic-bezier(0.4, 0, 0.2, 1)",
+        "purpose": "Button and link hover colour changes."
+      },
+      {
+        "name": "menu-in",
+        "value": "200ms ease-out fade + slide from top",
+        "purpose": "Dropdown menus and accordion open."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "xl",
+        "value": "1280px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main call to action, e.g. Get a Company Quote.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">For Teams &amp; Contractors <svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14\"/><path d=\"m12 5 7 7-7 7\"/></svg></a>",
+      "css": ".ds-btn-primary { font-family: Inter, system-ui, sans-serif; display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 32px; background: #6b8573; color: #fff; border-radius: 6px; font-size: 1rem; font-weight: 500; text-decoration: none; transition: background-color 0.15s; } .ds-btn-primary:hover { background: #5a7261; } .ds-btn-primary:focus-visible { outline: 2px solid #111827; outline-offset: 2px; }"
+    },
+    {
+      "name": "Outline Button on Dark",
+      "kind": "button",
+      "refersTo": "button-outline-on-dark",
+      "description": "Second action on photo heroes and the charcoal team band.",
+      "html": "<div class=\"ds-dark-stage\"><a class=\"ds-btn-outline-dark\" href=\"#\">Check Short-Stay Availability</a></div>",
+      "css": ".ds-dark-stage { background: #111827; padding: 24px; } .ds-btn-outline-dark { font-family: Inter, system-ui, sans-serif; display: inline-flex; align-items: center; height: 44px; padding: 0 32px; background: rgba(255,255,255,0.1); color: #fff; border: 1px solid #fff; border-radius: 6px; font-size: 1rem; font-weight: 500; text-decoration: none; transition: background-color 0.15s; } .ds-btn-outline-dark:hover { background: rgba(255,255,255,0.2); } .ds-btn-outline-dark:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }"
+    },
+    {
+      "name": "Contact Button",
+      "kind": "button",
+      "refersTo": "button-contact",
+      "description": "WhatsApp and call actions only, in Contact Green.",
+      "html": "<a class=\"ds-btn-contact\" href=\"#\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7.9 20A9 9 0 1 0 4 16.1L2 22Z\"/></svg> Start WhatsApp Chat</a>",
+      "css": ".ds-btn-contact { font-family: Inter, system-ui, sans-serif; display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 16px; background: #16a34a; color: #fff; border-radius: 8px; font-weight: 600; text-decoration: none; transition: background-color 0.15s; } .ds-btn-contact:hover { background: #15803d; } .ds-btn-contact:focus-visible { outline: 2px solid #111827; outline-offset: 2px; }"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Form field with label above, as in the company enquiry form.",
+      "html": "<div class=\"ds-field\"><label class=\"ds-label\" for=\"ds-company\">Company name</label><input class=\"ds-input\" id=\"ds-company\" placeholder=\"e.g. Acme Construction\"></div>",
+      "css": ".ds-field { font-family: Inter, system-ui, sans-serif; display: grid; gap: 6px; max-width: 320px; } .ds-label { font-size: 0.875rem; font-weight: 500; color: #374151; } .ds-input { font-family: Inter, system-ui, sans-serif; height: 40px; padding: 8px 12px; border: 1px solid #e2e8f0; border-radius: 6px; background: #fff; color: #111827; font-size: 0.875rem; } .ds-input::placeholder { color: #6b7280; } .ds-input:focus-visible { outline: 2px solid #111827; outline-offset: 2px; }"
+    },
+    {
+      "name": "Room Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Room summary card: photo, name, best-for line, features; lifts on hover.",
+      "html": "<a class=\"ds-room-card\" href=\"#\"><div class=\"ds-room-photo\" role=\"img\" aria-label=\"Room photo\"></div><div class=\"ds-room-body\"><h3 class=\"ds-room-title\">Double Room</h3><p class=\"ds-room-best\">Best for solo professionals or couples</p><ul class=\"ds-room-list\"><li><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#5a7261\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"m9 12 2 2 4-4\"/></svg> Double bed</li><li><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#5a7261\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"m9 12 2 2 4-4\"/></svg> Private ensuite</li><li><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#5a7261\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"m9 12 2 2 4-4\"/></svg> Bar fridge</li></ul><p class=\"ds-room-price\">From R680/night</p></div></a>",
+      "css": ".ds-room-card { font-family: Inter, system-ui, sans-serif; display: block; width: 300px; background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05); text-decoration: none; color: #111827; transition: box-shadow 0.2s; } .ds-room-card:hover { box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1); } .ds-room-card:focus-visible { outline: 2px solid #111827; outline-offset: 2px; } .ds-room-photo { height: 192px; background: linear-gradient(#c3d7c7,#87af8f); } .ds-room-body { padding: 24px; } .ds-room-title { margin: 0 0 4px; font-size: 1.25rem; font-weight: 600; letter-spacing: -0.025em; } .ds-room-best { margin: 0 0 12px; font-size: 0.875rem; font-weight: 500; color: #5a7261; } .ds-room-list { list-style: none; margin: 0 0 16px; padding: 0; display: grid; gap: 6px; font-size: 0.875rem; color: #4b5563; } .ds-room-list li { display: flex; align-items: center; gap: 8px; } .ds-room-price { margin: 0; font-weight: 700; color: #111827; }"
+    },
+    {
+      "name": "Navigation Bar",
+      "kind": "nav",
+      "refersTo": "nav-bar",
+      "description": "Sticky Veranda Sage bar with logo and white links.",
+      "html": "<nav class=\"ds-nav\"><span class=\"ds-nav-logo\">60 on Kosmos</span><div class=\"ds-nav-links\"><a href=\"#\">Rooms</a><a href=\"#\">Contractors</a><a href=\"#\">Monthly</a><a href=\"#\">Contact</a></div></nav>",
+      "css": ".ds-nav { font-family: Inter, system-ui, sans-serif; display: flex; align-items: center; justify-content: space-between; height: 80px; padding: 0 32px; background: #7c9885; color: #fff; box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); } .ds-nav-logo { background: #fff; color: #1a5f5f; font-weight: 700; padding: 8px 12px; border-radius: 8px; } .ds-nav-links { display: flex; gap: 4px; } .ds-nav-links a { color: #fff; text-decoration: none; font-weight: 500; padding: 8px 16px; border-radius: 8px; transition: background-color 0.2s; } .ds-nav-links a:hover { background: rgba(255,255,255,0.1); } .ds-nav-links a:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }"
+    },
+    {
+      "name": "Team Band",
+      "kind": "custom",
+      "refersTo": "team-band",
+      "description": "Charcoal closing call to action for project teams.",
+      "html": "<section class=\"ds-team-band\"><div class=\"ds-team-copy\"><span class=\"ds-team-icon\"><svg width=\"32\" height=\"32\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2\"/><circle cx=\"9\" cy=\"7\" r=\"4\"/><path d=\"M22 21v-2a4 4 0 0 0-3-3.87\"/><path d=\"M16 3.13a4 4 0 0 1 0 7.75\"/></svg></span><div><h2>Perfect for Project Teams</h2><p>Flexible terms, group discounts and company invoices | Monthly rates for 28+ nights</p></div></div><a class=\"ds-team-btn\" href=\"#\">For Teams &amp; Contractors</a></section>",
+      "css": ".ds-team-band { font-family: Inter, system-ui, sans-serif; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; padding: 48px 32px; background: #111827; color: #fff; } .ds-team-copy { display: flex; align-items: center; gap: 16px; } .ds-team-icon { display: inline-flex; padding: 12px; border-radius: 9999px; background: #6b8573; } .ds-team-band h2 { margin: 0; font-size: 1.5rem; font-weight: 700; } .ds-team-band p { margin: 4px 0 0; color: #d1d5db; } .ds-team-btn { display: inline-flex; align-items: center; height: 44px; padding: 0 32px; background: #6b8573; color: #fff; border-radius: 6px; font-weight: 500; text-decoration: none; transition: background-color 0.15s; } .ds-team-btn:hover { background: #5a7261; } .ds-team-btn:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }"
+    },
+    {
+      "name": "Sticky Mobile Contact Bar",
+      "kind": "custom",
+      "refersTo": "button-contact",
+      "description": "Bottom contact bar on screens under 1024px.",
+      "html": "<div class=\"ds-sticky-bar\"><a href=\"#\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7.9 20A9 9 0 1 0 4 16.1L2 22Z\"/></svg> WhatsApp Us</a><a href=\"#\">Call 074 524 5703</a></div>",
+      "css": ".ds-sticky-bar { font-family: Inter, system-ui, sans-serif; display: flex; gap: 12px; padding: 12px; background: #16a34a; border-top: 1px solid #15803d; box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1); max-width: 420px; } .ds-sticky-bar a { flex: 1; display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 12px; background: #fff; color: #15803d; border-radius: 9999px; font-weight: 600; font-size: 0.875rem; text-decoration: none; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); } .ds-sticky-bar a:hover { background: #f3f4f6; } .ds-sticky-bar a:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Site Office Welcome",
+    "overview": "60 on Kosmos looks like a well-run base for a working crew: practical, dependable and calm. A foreman or office manager booking rooms for a team should find the facts quickly (rooms, rates, parking, security, invoices) and the way to make contact even faster. The muted sage green supplies the welcome. Plain white surfaces, strong Inter headings and straight-talking copy supply the reliability.\n\nThe system is sturdy and plain. Buttons are solid blocks of colour, cards are white panels with a soft shadow, and real photographs of the property do the persuading. Pages stack in a steady rhythm: a photo hero, a sage info band, white and pale-gray content sections, a charcoal band for team enquiries, and a charcoal footer. Density is moderate. Each section makes one point, with generous vertical space (64px) between sections.\n\nContact is the most important action on every page. A bright contact green is reserved for WhatsApp and phone, so those actions stand apart from the sage brand colour wherever they appear.",
+    "keyCharacteristics": [
+      "Muted sage green brand colour on clean white and pale-gray surfaces",
+      "One typeface (Inter), with bold headings and calm gray body text",
+      "Real property photography; photo heroes are darkened for legible white text",
+      "Solid, plain buttons; white cards with soft shadows that lift on hover",
+      "Bright contact green used only for WhatsApp and call actions",
+      "Charcoal bands anchor team-enquiry sections and the footer"
+    ],
+    "rules": [
+      {
+        "name": "The Contact Green Rule",
+        "body": "Bright green means \"talk to us now\": WhatsApp or call. Never use it for decoration, success badges, ticks or section backgrounds, or it stops pointing at the phone.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Sage Family Rule",
+        "body": "Brand colour comes from the sage scale only. Don't introduce new hues (blues, purples, ambers) for emphasis. Use weight, size or a sage tint instead.",
+        "section": "colors"
+      },
+      {
+        "name": "The Bold Facts Rule",
+        "body": "Prices, room names and practical facts (parking, security, WiFi) are set in semibold or bold so a skimming booker finds them first. Descriptive copy stays regular weight.",
+        "section": "typography"
+      },
+      {
+        "name": "The Lift Means Click Rule",
+        "body": "A card grows its shadow on hover only when the whole card (or its main action) is a link. Static information panels stay at the resting shadow.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** use Workday Sage (#6b8573) for primary buttons and Workday Sage Deep (#5a7261) for their hover state.",
+      "**Do** use Workday Sage Deep (#5a7261), not Workday Sage, for sage-coloured text on white, so it meets the 4.5:1 contrast minimum.",
+      "**Do** keep Contact Green (#16a34a) for WhatsApp and call actions, with an icon, so contact stands out on every page.",
+      "**Do** use real photographs of the property, and darken photo heroes so white text stays readable.",
+      "**Do** set prices, room names and practical facts in semibold or bold.",
+      "**Do** keep cards white with an 8px radius and resting shadow, lifting on hover only when they are links.",
+      "**Do** keep the official logo SVG unchanged, in Kosmos Teal and Chimney Slate."
+    ],
+    "donts": [
+      "**Don't** use Contact Green for decoration, success badges or section backgrounds.",
+      "**Don't** set small white text on Veranda Sage (#7c9885) or Contact Green (#16a34a); both are around 3.1–3.3:1 against white. Keep text on them at medium weight or larger, or use the deeper shade.",
+      "**Don't** introduce new accent hues (blue, purple, amber gradients) or gradient backgrounds; the purple-to-blue gradient panel on the student FAQ page is off-system.",
+      "**Don't** add a second typeface; hierarchy comes from Inter's size and weight.",
+      "**Don't** add pulsing or attention-grabbing animation to buttons; plain buttons fit the \"Site Office Welcome\".",
+      "**Don't** use stock imagery or illustrations in place of the real rooms and property."
+    ]
+  }
+}
