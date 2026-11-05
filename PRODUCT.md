@@ -8,7 +8,7 @@ web
 
 ## Users
 
-**Primary (confirmed):** companies and site managers who need to house small project teams or contractors in Bellville / Cape Town's northern suburbs, often for stays of a month or more. The person deciding is usually arranging a stay for others: they compare price, location, security and practicality (parking, cleaning, invoices), then make contact to confirm availability and rates. Teams are up to eight people across the four rooms.
+**Primary (confirmed):** companies and site managers who need to house small project teams or contractors in Bellville / Cape Town's northern suburbs, often for stays of a month or more. The person deciding is usually arranging a stay for others: they compare price, location, security and practicality (parking, cleaning, invoices), then make contact to confirm availability and rates. Teams are up to nine people across the four rooms (9 sleeping places: 2 + 2 + a double bed for 2 + 3), confirmed by the owner.
 
 **Secondary:** individual long-stay guests: UWC and CPUT students, Tygerberg Hospital medical staff, corporate relocations, and other working professionals needing furnished accommodation in Bellville South.
 
@@ -20,7 +20,7 @@ Success is **any direct contact**: phone call, WhatsApp, email, the company enqu
 
 ## Positioning
 
-A small, owner-run guesthouse where a whole small team can take the property (4 rooms, up to 8 guests) with private ensuites. It has secure gated parking with CCTV and ADT armed response, weekly cleaning, self-catering, company invoices and monthly rates from 28 nights. It sits in Bellville South, close to the northern-suburbs industrial and business areas, UWC, CPUT and Tygerberg Hospital.
+A small, owner-run guesthouse where a whole small team can take the property (4 rooms, 9 beds, up to 9 guests) with private ensuites. It has secure gated parking with CCTV and ADT armed response, weekly cleaning, self-catering, company invoices and monthly rates from 28 nights. It sits in Bellville South, close to the northern-suburbs industrial and business areas, UWC, CPUT and Tygerberg Hospital.
 
 ## Operating Context
 
