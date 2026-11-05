@@ -1,6 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Bricolage_Grotesque, Public_Sans } from "next/font/google"
+import { Inter } from "next/font/google"
 import dynamic from "next/dynamic"
 import "./globals.css"
 import { Navigation } from "@/components/navigation"
@@ -16,24 +16,17 @@ const PerformanceOptimizations = dynamic(() => import("@/components/performance-
 const Toaster = dynamic(() => import("@/components/ui/toaster").then(mod => ({ default: mod.Toaster })), { ssr: false })
 const WhatsAppWidget = dynamic(() => import("@/components/whatsapp-widget").then(mod => ({ default: mod.WhatsAppWidget })), { ssr: false })
 
-const display = Bricolage_Grotesque({
+const inter = Inter({ 
   subsets: ["latin"],
   display: "swap",
-  weight: ["600", "700", "800"],
-  variable: "--font-display",
-})
-
-const body = Public_Sans({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-body",
+  preload: true,
 })
 
 export const viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
-  themeColor: "#4a6352",
+  themeColor: "#7c9885",
 }
 
 export const robots = {
@@ -131,7 +124,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en-ZA" className={`bg-background ${display.variable} ${body.variable}`}>
+    <html lang="en-ZA" className="bg-background">
       <head>
         <link rel="preconnect" href="https://wa.me" />
         <link rel="dns-prefetch" href="https://wa.me" />
@@ -140,7 +133,7 @@ export default function RootLayout({
         <LocalBusinessSchema />
         <StructuredData />
       </head>
-      <body className="font-sans antialiased">
+      <body className={inter.className}>
         <GoogleAnalytics />
         <ConversionTracking />
         <Navigation />

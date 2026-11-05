@@ -39,12 +39,12 @@ export function Navigation() {
   }, [])
 
   return (
-    <nav ref={navRef} className="bg-sage-700 text-white sticky top-0 z-50 shadow-lg">
+    <nav ref={navRef} className="bg-[#7c9885] text-white sticky top-0 z-50 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex-shrink-0 rounded-lg bg-white px-2 py-1 shadow-sm" aria-label="60 on Kosmos home">
-            <Logo size="sm" showTagline={false} className="h-12 w-auto" />
+          <Link href="/" className="flex-shrink-0">
+            <Logo size="sm" showTagline={false} className="h-14 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -94,7 +94,7 @@ export function Navigation() {
                   <div className="absolute right-0 mt-2 w-64 bg-white rounded-lg shadow-xl py-2 z-20 animate-in fade-in slide-in-from-top-2 duration-200">
                     <Link
                       href="/student-faq"
-                      className="block px-4 py-3 text-gray-700 hover:bg-sage-50 transition-colors"
+                      className="block px-4 py-3 text-gray-700 hover:bg-[#7c9885]/10 transition-colors"
                       onClick={() => setVisitorsOpen(false)}
                     >
                       <div className="font-medium">Visitor FAQ</div>
@@ -125,28 +125,28 @@ export function Navigation() {
                   <div className="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-xl py-2 z-20 animate-in fade-in slide-in-from-top-2 duration-200">
                     <Link
                       href="/local-info"
-                      className="block px-4 py-3 text-gray-700 hover:bg-sage-50 transition-colors"
+                      className="block px-4 py-3 text-gray-700 hover:bg-[#7c9885]/10 transition-colors"
                       onClick={() => setResourcesOpen(false)}
                     >
                       <div className="font-medium">Local Info</div>
                     </Link>
                     <Link
                       href="/virtual-tour"
-                      className="block px-4 py-3 text-gray-700 hover:bg-sage-50 transition-colors"
+                      className="block px-4 py-3 text-gray-700 hover:bg-[#7c9885]/10 transition-colors"
                       onClick={() => setResourcesOpen(false)}
                     >
                       <div className="font-medium">Virtual Tour</div>
                     </Link>
                     <Link
                       href="/faq"
-                      className="block px-4 py-3 text-gray-700 hover:bg-sage-50 transition-colors"
+                      className="block px-4 py-3 text-gray-700 hover:bg-[#7c9885]/10 transition-colors"
                       onClick={() => setResourcesOpen(false)}
                     >
                       <div className="font-medium">FAQ</div>
                     </Link>
                     <Link
                       href="/blog"
-                      className="block px-4 py-3 text-gray-700 hover:bg-sage-50 transition-colors"
+                      className="block px-4 py-3 text-gray-700 hover:bg-[#7c9885]/10 transition-colors"
                       onClick={() => setResourcesOpen(false)}
                     >
                       <div className="font-medium">Blog</div>
@@ -164,7 +164,7 @@ export function Navigation() {
             </Link>
             <Link
               href="/book-now"
-              className="ml-2 px-6 py-2 bg-white text-sage-800 rounded-lg hover:bg-gray-100 transition-colors duration-200 font-bold shadow-lg"
+              className="ml-2 px-6 py-2 bg-white text-[#7c9885] rounded-lg hover:bg-gray-100 transition-colors duration-200 font-bold shadow-lg"
             >
               Book Now
             </Link>
@@ -184,7 +184,7 @@ export function Navigation() {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden bg-sage-800 border-t border-white/10">
+        <div className="md:hidden bg-[#6d8876] border-t border-white/10">
           <div className="px-4 pt-2 pb-4 space-y-1">
             <Link
               href="/"
@@ -267,7 +267,7 @@ export function Navigation() {
             </Link>
             <Link
               href="/book-now"
-              className="block px-4 py-3 bg-white text-sage-800 rounded-lg hover:bg-gray-100 transition-colors font-bold text-center shadow-lg mt-2"
+              className="block px-4 py-3 bg-white text-[#7c9885] rounded-lg hover:bg-gray-100 transition-colors font-bold text-center shadow-lg mt-2"
               onClick={() => setIsOpen(false)}
             >
               Book Now
