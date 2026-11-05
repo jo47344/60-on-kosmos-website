@@ -1,34 +1,27 @@
 "use client"
 import { Phone, MessageCircle } from "lucide-react"
-import { Button } from "@/components/ui/button"
 
 export function StickyMobileCTA() {
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 lg:hidden">
-      <div className="bg-green-600 shadow-lg border-t border-green-700">
-        <div className="flex items-center justify-center gap-3 p-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))]">
-          <Button
-            asChild
-            size="sm"
-            className="flex-1 bg-white text-green-600 hover:bg-gray-100 font-semibold rounded-full shadow-md"
+    <div className="mobile-cta-bar fixed bottom-0 left-0 right-0 z-50 lg:hidden">
+      <div className="border-t border-sage-900 bg-sage-800/95 shadow-lg">
+        <div className="grid grid-cols-2 gap-2 p-2.5 pb-[calc(0.625rem+env(safe-area-inset-bottom))]">
+          <a
+            href="https://wa.me/27745245703?text=Hi%2C%20I%27d%20like%20to%20book%20a%20room%20at%2060%20on%20Kosmos.%20Dates%3A%20"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex min-h-12 items-center justify-center gap-2 rounded-lg bg-[#25D366] px-3 font-semibold text-gray-900 hover:bg-[#3be07a]"
           >
-            <a
-              href="https://wa.me/27745245703?text=Hi%2C%20I%20want%20to%20book%20a%20room%20at%2060%20on%20Kosmos%20from%20[insert%20dates]"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <MessageCircle className="w-4 h-4 mr-2" />WhatsApp Us
-            </a>
-          </Button>
-          <Button
-            asChild
-            size="sm"
-            className="flex-1 bg-white text-green-600 hover:bg-gray-100 font-semibold rounded-full shadow-md"
+            <MessageCircle className="h-5 w-5" aria-hidden="true" />
+            WhatsApp us
+          </a>
+          <a
+            href="tel:+27745245703"
+            className="flex min-h-12 items-center justify-center gap-2 rounded-lg bg-white px-3 font-semibold text-sage-900 hover:bg-sage-50"
           >
-            <a href="tel:+27745245703">
-              <Phone className="w-4 h-4 mr-2" />Call 074 524 5703
-            </a>
-          </Button>
+            <Phone className="h-5 w-5" aria-hidden="true" />
+            074 524 5703
+          </a>
         </div>
       </div>
     </div>

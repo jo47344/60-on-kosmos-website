@@ -38,9 +38,9 @@ export function LatestBlogPosts() {
   return (
     <section className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Latest Accommodation Guides</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+        <div className="mb-10 flex flex-col gap-3">
+          <h2 className="text-3xl font-bold text-gray-900 md:text-4xl">Latest Accommodation Guides</h2>
+          <p className="max-w-2xl text-lg text-gray-600">
             Expert tips and guides for finding accommodation in Bellville South, Cape Town
           </p>
         </div>
@@ -64,7 +64,7 @@ export function LatestBlogPosts() {
                   </div>
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-sage-600 transition-colors line-clamp-2">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-sage-700 transition-colors line-clamp-2">
                     {post.title}
                   </h3>
                   <p className="text-gray-600 text-sm mb-4 line-clamp-2">{post.excerpt}</p>
@@ -73,7 +73,7 @@ export function LatestBlogPosts() {
                       <Calendar className="w-3 h-3 mr-2" />
                       <span>{new Date(post.date).toLocaleDateString("en-GB")}</span>
                     </div>
-                    <span className="text-sage-600 text-sm font-semibold group-hover:underline">Read More →</span>
+                    <span className="text-sage-700 text-sm font-semibold group-hover:underline">Read More →</span>
                   </div>
                 </CardContent>
               </Card>
@@ -81,7 +81,7 @@ export function LatestBlogPosts() {
           ))}
         </div>
 
-        <div className="text-center mt-10">
+        <div className="mt-10">
           <Button asChild variant="outline" size="lg" className="bg-transparent">
             <Link href="/blog">
               View All Guides <ArrowRight className="w-4 h-4 ml-2" />

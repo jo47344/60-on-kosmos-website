@@ -1,41 +1,42 @@
 import Link from "next/link"
-import { Shield, Star, FileText, Clock } from "lucide-react"
+import { Shield, Star, FileText, MessageCircle } from "lucide-react"
+
+const items = [
+  { icon: Star, title: "Verified reviews", detail: "Booking.com and Google", href: "/testimonials" },
+  { icon: Shield, title: "CCTV-monitored", detail: "CCTV and secure gates" },
+  { icon: FileText, title: "Company invoices", detail: "Provided on request" },
+  { icon: MessageCircle, title: "Book direct", detail: "WhatsApp or enquiry form" },
+]
 
 export function TrustBadges() {
   return (
-    <section className="py-8 bg-gradient-to-r from-blue-50 to-green-50 border-y border-blue-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          <Link href="/testimonials" className="text-center block">
-            <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-3">
-              <Star className="w-8 h-8 text-yellow-600 fill-current" />
-            </div>
-            <div className="font-bold text-gray-900">Verified Reviews</div>
-            <div className="text-sm text-gray-600">See our latest ratings</div>
-          </Link>
-          <div className="text-center">
-            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
-              <Shield className="w-8 h-8 text-green-600" />
-            </div>
-            <div className="font-bold text-gray-900">CCTV-Monitored</div>
-            <div className="text-sm text-gray-600">CCTV & secure gates</div>
-          </div>
-          <div className="text-center">
-            <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
-              <FileText className="w-8 h-8 text-blue-600" />
-            </div>
-            <div className="font-bold text-gray-900">Company Invoices</div>
-            <div className="text-sm text-gray-600">Provided on request</div>
-          </div>
-          <div className="text-center">
-            <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">
-              <Clock className="w-8 h-8 text-purple-600" />
-            </div>
-            <div className="font-bold text-gray-900">Book Direct</div>
-            <div className="text-sm text-gray-600">WhatsApp or enquiry form</div>
-          </div>
-        </div>
-      </div>
+    <section aria-label="Why guests book with us" className="border-b border-sage-100 bg-sage-50">
+      <ul className="mx-auto grid max-w-7xl grid-cols-2 gap-x-6 gap-y-5 px-4 py-6 sm:px-6 md:grid-cols-4 lg:px-8">
+        {items.map(({ icon: Icon, title, detail, href }) => {
+          const content = (
+            <>
+              <span className="flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-white text-sage-700 ring-1 ring-sage-200">
+                <Icon className="h-5 w-5" aria-hidden="true" />
+              </span>
+              <span className="min-w-0">
+                <span className="block font-semibold text-gray-900">{title}</span>
+                <span className="block text-sm text-gray-600">{detail}</span>
+              </span>
+            </>
+          )
+          return (
+            <li key={title}>
+              {href ? (
+                <Link href={href} className="flex items-center gap-3 rounded-lg hover:text-sage-800">
+                  {content}
+                </Link>
+              ) : (
+                <div className="flex items-center gap-3">{content}</div>
+              )}
+            </li>
+          )
+        })}
+      </ul>
     </section>
   )
 }

@@ -15,6 +15,7 @@ import {
   Briefcase,
   GraduationCap,
   ArrowRight,
+  Sparkles,
 } from "lucide-react"
 import { TrustBadges } from "@/components/trust-badges"
 import { LatestBlogPosts } from "@/components/latest-blog-posts"
@@ -78,40 +79,61 @@ export default function HomePage() {
     <>
       <div className="flex flex-col">
         {/* Hero Section */}
-        <section className="relative h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] flex items-center justify-center">
+        <section className="relative isolate flex min-h-[540px] items-end overflow-hidden sm:min-h-[600px] lg:min-h-[660px]">
           <Image
             src="/images/exterior-building.png"
             alt="60 on Kosmos Guesthouse Bellville South - accommodation for project teams and contractors in Cape Town"
             fill
-            className="object-cover brightness-50"
+            className="-z-10 object-cover"
             priority
             sizes="100vw"
             quality={85}
           />
-          <div className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-2 sm:mb-4 leading-tight text-balance">
-              Accommodation for Small Project Teams in Bellville
-            </h1>
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-6 sm:mb-8 px-2 text-pretty">
-              Private ensuite rooms, secure parking, WiFi, weekly cleaning and flexible company rates for teams of
-              up to eight.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 px-4 sm:px-0">
-              <Button
-                asChild
-                size="lg"
-                className="bg-sage-600 hover:bg-sage-700 text-white w-full sm:w-auto px-6 sm:px-8 md:px-10 py-5 sm:py-6 text-base sm:text-lg"
-              >
-                <Link href="/contractor-accommodation#company-enquiry">Get a Company Quote</Link>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="bg-white/10 border-white text-white hover:bg-white/20 w-full sm:w-auto px-6 sm:px-8 md:px-10 py-5 sm:py-6 text-base sm:text-lg"
-              >
-                <Link href="/check-availability">Check Short-Stay Availability</Link>
-              </Button>
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 -z-10 bg-gradient-to-t from-sage-900/95 via-sage-900/70 to-sage-900/20 md:bg-gradient-to-r md:from-sage-900/95 md:via-sage-900/70 md:to-sage-900/10"
+          />
+          <div className="mx-auto w-full max-w-7xl px-4 pb-12 pt-24 sm:px-6 sm:pb-16 lg:px-8 lg:pb-20">
+            <div className="flex max-w-2xl flex-col gap-5 text-white sm:gap-6">
+              <p className="text-sm font-semibold text-sage-100">Bellville South, Cape Town · Near the N1</p>
+              <h1 className="text-4xl font-bold leading-[1.05] sm:text-5xl lg:text-6xl">
+                Accommodation for Small Project Teams in Bellville
+              </h1>
+              <p className="max-w-xl text-lg text-white/90 sm:text-xl">
+                Private ensuite rooms, secure parking, WiFi, weekly cleaning and flexible company rates for teams of
+                up to eight.
+              </p>
+              <div className="flex flex-col gap-3 sm:flex-row">
+                <Button
+                  asChild
+                  size="lg"
+                  className="h-auto bg-white px-7 py-4 text-base font-semibold text-sage-900 hover:bg-sage-50"
+                >
+                  <Link href="/contractor-accommodation#company-enquiry">Get a Company Quote</Link>
+                </Button>
+                <Button
+                  asChild
+                  size="lg"
+                  variant="outline"
+                  className="h-auto border-white/70 bg-transparent px-7 py-4 text-base font-semibold text-white hover:bg-white/10 hover:text-white"
+                >
+                  <Link href="/check-availability">Check Short-Stay Availability</Link>
+                </Button>
+              </div>
+              <dl className="mt-2 grid max-w-xl grid-cols-3 gap-4 border-t border-white/20 pt-5 text-white">
+                <div>
+                  <dt className="text-xs text-white/75 sm:text-sm">Rooms from</dt>
+                  <dd className="font-display text-xl font-bold sm:text-2xl">R580<span className="text-sm font-medium text-white/75">/night</span></dd>
+                </div>
+                <div>
+                  <dt className="text-xs text-white/75 sm:text-sm">Team size</dt>
+                  <dd className="font-display text-xl font-bold sm:text-2xl">Up to 8</dd>
+                </div>
+                <div>
+                  <dt className="text-xs text-white/75 sm:text-sm">Monthly rates</dt>
+                  <dd className="font-display text-xl font-bold sm:text-2xl">28+ nights</dd>
+                </div>
+              </dl>
             </div>
           </div>
         </section>
@@ -119,123 +141,106 @@ export default function HomePage() {
         {/* Trust Badges */}
         <TrustBadges />
 
-        <section className="bg-gray-900 text-white py-8 sm:py-12">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
-              <div className="flex items-center gap-4">
-                <div className="bg-sage-600 p-3 rounded-full">
-                  <Users className="w-8 h-8" />
-                </div>
-                <div>
-                  <h2 className="text-xl sm:text-2xl font-bold">Perfect for Project Teams</h2>
-                  <p className="text-gray-300">Flexible terms, group discounts, and corporate billing available | Monthly rates for 28+ nights</p>
-                </div>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
-                <Button asChild size="lg" className="bg-sage-600 hover:bg-sage-700 text-white px-8">
+        {/* Project teams */}
+        <section className="bg-sage-900 text-white">
+          <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 sm:py-16 lg:grid-cols-[1.1fr_1fr] lg:items-center lg:px-8">
+            <div className="flex flex-col gap-4">
+              <h2 className="text-3xl font-bold sm:text-4xl">Built for project teams</h2>
+              <p className="max-w-xl text-lg text-sage-100">
+                Flexible terms, group quotes and company invoices on request. Monthly rates apply to stays of 28
+                nights or more.
+              </p>
+              <div className="mt-2 flex flex-col gap-3 sm:flex-row">
+                <Button asChild size="lg" className="bg-white text-sage-900 hover:bg-sage-50">
                   <Link href="/contractor-accommodation">
-                    For Teams & Contractors
-                    <ArrowRight className="ml-2 h-5 w-5" />
+                    Team &amp; contractor rates
+                    <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
                   </Link>
                 </Button>
                 <Button
                   asChild
                   size="lg"
                   variant="outline"
-                  className="border-white text-white hover:bg-white/10 bg-transparent"
+                  className="border-white/60 bg-transparent text-white hover:bg-white/10 hover:text-white"
                 >
                   <a href="https://wa.me/27745245703?text=Hi%2C%20I%27m%20looking%20for%20accommodation%20for%20my%20team">
-                    WhatsApp Your Team
+                    WhatsApp your team&apos;s dates
                   </a>
                 </Button>
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* Quick Info Bar */}
-        <section className="bg-sage-600 text-white py-4 sm:py-6">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 text-center">
-              <div className="flex items-center justify-center gap-2 sm:gap-3">
-                <MapPin className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" />
-                <div className="text-left">
-                  <div className="font-semibold text-sm sm:text-base">Near N1 Highway</div>
-                  <div className="text-xs sm:text-sm opacity-90">Easy site access</div>
-                </div>
-              </div>
-              <div className="flex items-center justify-center gap-2 sm:gap-3">
-                <Shield className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" />
-                <div className="text-left">
-                  <div className="font-semibold text-sm sm:text-base">Secure Gated Parking</div>
-                  <div className="text-xs sm:text-sm opacity-90">CCTV · secure gated parking · ADT armed response</div>
-                </div>
-              </div>
-              <div className="flex items-center justify-center gap-2 sm:gap-3">
-                <Wifi className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" />
-                <div className="text-left">
-                  <div className="font-semibold text-sm sm:text-base">Free High-Speed WiFi</div>
-                  <div className="text-xs sm:text-sm opacity-90">Stay connected</div>
-                </div>
-              </div>
-            </div>
+            <ul className="grid gap-px overflow-hidden rounded-xl bg-white/15 sm:grid-cols-3 lg:grid-cols-1">
+              {[
+                { icon: MapPin, title: "Near the N1", detail: "Easy access to sites across the northern suburbs" },
+                { icon: Shield, title: "Secure gated parking", detail: "CCTV, secure gates and ADT armed response" },
+                { icon: Wifi, title: "Free high-speed WiFi", detail: "For calls, reports and downtime" },
+              ].map(({ icon: Icon, title, detail }) => (
+                <li key={title} className="flex items-start gap-4 bg-sage-900 p-5">
+                  <Icon className="mt-0.5 h-6 w-6 flex-none text-sage-300" aria-hidden="true" />
+                  <div>
+                    <p className="font-semibold">{title}</p>
+                    <p className="text-sm text-sage-100">{detail}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
 
         {/* Rooms Section */}
         <section className="py-12 sm:py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-8 sm:mb-12">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">Our Rooms</h2>
-              <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
+            <div className="mb-8 flex flex-col gap-3 sm:mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 md:text-4xl">Our Rooms</h2>
+              <p className="max-w-2xl text-lg text-gray-600">
                 Clean, comfortable ensuite rooms with free WiFi, secure parking, and weekly cleaning included.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {roomTypes.map((room, index) => (
-                <Card key={index} className="overflow-hidden hover:shadow-xl transition-shadow">
+                <Card key={index} className="flex flex-col overflow-hidden transition-shadow hover:shadow-lg">
                   <div className="relative h-48 sm:h-52">
                     <Image
                       src={room.image || "/placeholder.svg"}
                       alt={`${room.name} - Accommodation Bellville South`}
                       fill
                       className="object-cover"
-                      sizes="(max-width: 640px) 100vw, 33vw"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                       loading={index > 0 ? "lazy" : undefined}
                       quality={80}
                     />
                   </div>
                   <CardHeader className="pb-3">
                     <CardTitle className="text-lg sm:text-xl">{room.name}</CardTitle>
-                    <CardDescription className="text-sm text-sage-600 font-medium">
+                    <CardDescription className="text-sm font-medium text-sage-700">
                       {room.bestFor}
                     </CardDescription>
-                    <div className="mt-2">
-<span className="text-base font-semibold text-gray-900">{room.price}</span>
-                <span className="text-sm text-green-600 ml-2">Monthly rates for 28+ nights</span>
+                    <div className="mt-2 flex flex-col">
+                      <span className="font-display text-lg font-bold text-gray-900">{room.price}</span>
+                      <span className="text-sm text-gray-600">Monthly rates for 28+ nights</span>
                     </div>
                   </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-2 mb-4">
+                  <CardContent className="flex flex-1 flex-col">
+                    <ul className="mb-5 space-y-2">
                       {room.features.map((feature, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-600">
-                          <CheckCircle2 className="w-4 h-4 mr-2 text-green-600 flex-shrink-0" />
+                          <CheckCircle2 className="mr-2 h-4 w-4 flex-shrink-0 text-sage-600" aria-hidden="true" />
                           {feature}
                         </li>
                       ))}
                     </ul>
-                    <Button asChild className="w-full bg-sage-600 hover:bg-sage-700">
-                      <a href="/rooms">View Details</a>
+                    <Button asChild className="mt-auto w-full bg-sage-600 hover:bg-sage-700">
+                      <Link href="/rooms">View {room.name}</Link>
                     </Button>
                   </CardContent>
                 </Card>
               ))}
             </div>
 
-            <div className="text-center mt-8 sm:mt-12">
-              <Button asChild size="lg" className="bg-sage-600 hover:bg-sage-700 w-full sm:w-auto">
-                <Link href="/rooms">View All Rooms</Link>
+            <div className="mt-8 sm:mt-10">
+              <Button asChild size="lg" variant="outline" className="w-full border-sage-600 text-sage-800 sm:w-auto">
+                <Link href="/rooms">Compare all rooms</Link>
               </Button>
             </div>
           </div>
@@ -244,9 +249,9 @@ export default function HomePage() {
         {/* Featured Guest Reviews */}
         <section className="py-12 sm:py-16 bg-sage-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col gap-3 text-center mb-8 sm:mb-10">
-              <p className="text-sm font-semibold uppercase tracking-widest text-sage-700">Trusted by guests</p>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">Clean, safe, and welcoming</h2>
+            <div className="mb-8 flex flex-col gap-3 sm:mb-10">
+              <p className="text-sm font-semibold text-sage-700">Trusted by guests</p>
+              <h2 className="text-3xl font-bold text-gray-900 md:text-4xl">Clean, safe, and welcoming</h2>
               <p className="text-base sm:text-lg text-gray-600">Read verified guest feedback on Booking.com and Google Reviews.</p>
             </div>
             <div className="grid gap-5 md:grid-cols-3">
@@ -260,14 +265,14 @@ export default function HomePage() {
                     <div className="flex gap-1" aria-label="5 star review">
                       {[...Array(5)].map((_, index) => <Star key={index} className="h-4 w-4 fill-yellow-400 text-yellow-400" />)}
                     </div>
-                    <p className="text-gray-700 leading-relaxed">&quot;{review.quote}&quot;</p>
+                    <p className="text-lg leading-relaxed text-gray-800">&ldquo;{review.quote}&rdquo;</p>
                     <p className="text-sm font-semibold text-gray-900">{review.name} <span className="font-normal text-gray-500">· {review.source}</span></p>
                   </CardContent>
                 </Card>
               ))}
             </div>
-            <div className="mt-8 text-center">
-              <Button asChild variant="outline" className="border-sage-600 text-sage-700">
+            <div className="mt-8">
+              <Button asChild variant="outline" className="border-sage-600 text-sage-800">
                 <Link href="/testimonials">Read more guest reviews</Link>
               </Button>
             </div>
@@ -277,55 +282,53 @@ export default function HomePage() {
         {/* Target Audience Section */}
         <section className="py-12 sm:py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-8 sm:mb-12">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
-                Who Stays With Us?
-              </h2>
-              <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-                From construction crews to international students—we welcome project-based teams and working professionals.
+            <div className="mb-8 flex flex-col gap-3 sm:mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 md:text-4xl">Who Stays With Us?</h2>
+              <p className="max-w-2xl text-lg text-gray-600">
+                Project teams, visiting students and working professionals, from a single night to several months.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-              <Card className="text-center hover:shadow-lg transition-shadow ring-2 ring-sage-600">
-                <CardContent className="pt-6 sm:pt-8 pb-6 sm:pb-8 px-4">
-                  <div className="bg-sage-600 text-white text-xs font-bold px-3 py-1 rounded-full inline-block mb-4">
-                    MOST POPULAR
+              <Card className="flex flex-col ring-2 ring-sage-600">
+                <CardContent className="flex flex-1 flex-col items-start gap-3 p-6">
+                  <div className="rounded-full bg-sage-600 px-3 py-1 text-xs font-bold text-white">
+                    Most popular
                   </div>
-                  <Briefcase className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 text-sage-600" />
-                  <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Project Teams & Contractors</h3>
-<p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4">
+                  <Briefcase className="h-9 w-9 text-sage-600" aria-hidden="true" />
+                  <h3 className="text-xl font-bold">Project Teams & Contractors</h3>
+<p className="flex-1 text-gray-600">
             Daily and weekly rates, plus monthly rates for stays of 28 nights or more. Group quotes are available, and check-in is from 14:00.
           </p>
-                  <Button asChild className="bg-sage-600 hover:bg-sage-700 w-full">
+                  <Button asChild className="mt-2 w-full bg-sage-600 hover:bg-sage-700">
                     <Link href="/contractor-accommodation">Team Rates</Link>
                   </Button>
                 </CardContent>
               </Card>
 
-              <Card className="text-center hover:shadow-lg transition-shadow">
-                <CardContent className="pt-6 sm:pt-8 pb-6 sm:pb-8 px-4">
-                  <GraduationCap className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 text-sage-600" />
-                  <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">International Students</h3>
-                  <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4">
+              <Card className="flex flex-col">
+                <CardContent className="flex flex-1 flex-col items-start gap-3 p-6">
+                  <GraduationCap className="h-9 w-9 text-sage-600" aria-hidden="true" />
+                  <h3 className="text-xl font-bold">International Students</h3>
+                  <p className="flex-1 text-gray-600">
                     Approximately 5–8 minutes from UWC or CPUT by car, subject to traffic. For exchange, research and
                     short-programme visits.
                   </p>
-                  <Button asChild variant="outline" className="border-sage-600 text-sage-600 bg-transparent w-full">
+                  <Button asChild variant="outline" className="mt-2 w-full border-sage-600 bg-transparent text-sage-800">
                     <Link href="/accommodation-near-uwc">Student Options</Link>
                   </Button>
                 </CardContent>
               </Card>
 
-              <Card className="text-center hover:shadow-lg transition-shadow">
-                <CardContent className="pt-6 sm:pt-8 pb-6 sm:pb-8 px-4">
-                  <Users className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 text-sage-600" />
-                  <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Working Professionals & Visitors</h3>
-                  <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4">
+              <Card className="flex flex-col">
+                <CardContent className="flex flex-1 flex-col items-start gap-3 p-6">
+                  <Users className="h-9 w-9 text-sage-600" aria-hidden="true" />
+                  <h3 className="text-xl font-bold">Working Professionals & Visitors</h3>
+                  <p className="flex-1 text-gray-600">
                     Short and medium stays for training, site visits, and business travel in Cape Town's northern
                     suburbs.
                   </p>
-                  <Button asChild variant="outline" className="border-sage-600 text-sage-600 bg-transparent w-full">
+                  <Button asChild variant="outline" className="mt-2 w-full border-sage-600 bg-transparent text-sage-800">
                     <Link href="/rooms">View Rooms</Link>
                   </Button>
                 </CardContent>
@@ -337,50 +340,50 @@ export default function HomePage() {
         {/* Amenities Section */}
         <section className="py-12 sm:py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-8 sm:mb-12">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">What's Included</h2>
+            <div className="mb-8 sm:mb-10">
+              <h2 className="text-3xl font-bold text-gray-900 md:text-4xl">What&apos;s Included</h2>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
-              <div className="text-center">
-                <div className="w-14 h-14 sm:w-16 sm:h-16 bg-sage-100 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                  <Wifi className="w-7 h-7 sm:w-8 sm:h-8 text-sage-600" />
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4">
+              <div className="flex items-start gap-4">
+                <div className="flex h-12 w-12 flex-none items-center justify-center rounded-lg bg-sage-100">
+                  <Wifi className="h-6 w-6 text-sage-700" aria-hidden="true" />
                 </div>
-                <h3 className="font-semibold text-base sm:text-lg mb-1 sm:mb-2">Free WiFi</h3>
-                <p className="text-gray-600 text-xs sm:text-sm">High-speed internet</p>
+                <div><h3 className="text-lg font-semibold">Free WiFi</h3>
+                <p className="text-sm text-gray-600">High-speed internet</p></div>
               </div>
 
-              <div className="text-center">
-                <div className="w-14 h-14 sm:w-16 sm:h-16 bg-sage-100 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                  <Car className="w-7 h-7 sm:w-8 sm:h-8 text-sage-600" />
+              <div className="flex items-start gap-4">
+                <div className="flex h-12 w-12 flex-none items-center justify-center rounded-lg bg-sage-100">
+                  <Car className="h-6 w-6 text-sage-700" aria-hidden="true" />
                 </div>
-                <h3 className="font-semibold text-base sm:text-lg mb-1 sm:mb-2">Secure Parking</h3>
-                <p className="text-gray-600 text-xs sm:text-sm">CCTV + ADT armed response</p>
+                <div><h3 className="text-lg font-semibold">Secure Parking</h3>
+                <p className="text-sm text-gray-600">CCTV + ADT armed response</p></div>
               </div>
 
-              <div className="text-center">
-                <div className="w-14 h-14 sm:w-16 sm:h-16 bg-sage-100 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                  <Shield className="w-7 h-7 sm:w-8 sm:h-8 text-sage-600" />
+              <div className="flex items-start gap-4">
+                <div className="flex h-12 w-12 flex-none items-center justify-center rounded-lg bg-sage-100">
+                  <Sparkles className="h-6 w-6 text-sage-700" aria-hidden="true" />
                 </div>
-                <h3 className="font-semibold text-base sm:text-lg mb-1 sm:mb-2">Weekly Cleaning</h3>
-                <p className="text-gray-600 text-xs sm:text-sm">Fresh linen included</p>
+                <div><h3 className="text-lg font-semibold">Weekly Cleaning</h3>
+                <p className="text-sm text-gray-600">Fresh linen included</p></div>
               </div>
 
-              <div className="text-center">
-                <div className="w-14 h-14 sm:w-16 sm:h-16 bg-sage-100 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                  <Coffee className="w-7 h-7 sm:w-8 sm:h-8 text-sage-600" />
+              <div className="flex items-start gap-4">
+                <div className="flex h-12 w-12 flex-none items-center justify-center rounded-lg bg-sage-100">
+                  <Coffee className="h-6 w-6 text-sage-700" aria-hidden="true" />
                 </div>
-                <h3 className="font-semibold text-base sm:text-lg mb-1 sm:mb-2">Self-Catering</h3>
-                <p className="text-gray-600 text-xs sm:text-sm">Kitchen facilities</p>
+                <div><h3 className="text-lg font-semibold">Self-Catering</h3>
+                <p className="text-sm text-gray-600">Kitchen facilities</p></div>
               </div>
             </div>
 
-            <div className="text-center mt-8 sm:mt-12">
+            <div className="mt-8 sm:mt-10">
               <Button
                 asChild
                 size="lg"
                 variant="outline"
-                className="border-sage-600 text-sage-600 bg-transparent w-full sm:w-auto"
+                className="w-full border-sage-600 bg-transparent text-sage-800 sm:w-auto"
               >
                 <Link href="/amenities">View All Amenities</Link>
               </Button>
@@ -394,9 +397,9 @@ export default function HomePage() {
         {/* FAQ Section */}
         <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-10 sm:mb-12 md:mb-16">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">Frequently Asked Questions</h2>
-              <p className="text-base sm:text-lg text-gray-600">Quick answers to common questions about our accommodation</p>
+            <div className="mb-8 flex flex-col gap-3 sm:mb-10">
+              <h2 className="text-3xl font-bold text-gray-900 md:text-4xl">Frequently Asked Questions</h2>
+              <p className="text-lg text-gray-600">Quick answers to common questions about our accommodation</p>
             </div>
 
             <div className="space-y-4 sm:space-y-6">
@@ -434,17 +437,19 @@ export default function HomePage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-12 sm:py-16 bg-sage-600 text-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">Ready for Your Next Accommodation?</h2>
-            <p className="text-base sm:text-lg mb-6 sm:mb-8 opacity-90">
-              Daily rates from R580/night | Monthly rates for 28+ nights | Group discounts available
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+        <section className="bg-sage-800 py-12 text-white sm:py-16">
+          <div className="mx-auto flex max-w-7xl flex-col gap-6 px-4 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
+            <div className="flex flex-col gap-3">
+              <h2 className="text-3xl font-bold md:text-4xl">Need rooms for your team?</h2>
+              <p className="max-w-xl text-lg text-sage-100">
+                Send your dates and team size on WhatsApp. Quotes usually go out the same day.
+              </p>
+            </div>
+            <div className="flex flex-col gap-3 sm:flex-row">
               <Button
                 asChild
                 size="lg"
-                className="bg-white text-sage-600 hover:bg-gray-100 w-full sm:w-auto px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg"
+                className="h-auto w-full bg-white px-7 py-4 text-base font-semibold text-sage-900 hover:bg-sage-50 sm:w-auto"
               >
                 <Link href="/book-now">Book Now</Link>
               </Button>
@@ -452,9 +457,9 @@ export default function HomePage() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-sage-700 w-full sm:w-auto px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg bg-transparent"
+                className="h-auto w-full border-white/70 bg-transparent px-7 py-4 text-base font-semibold text-white hover:bg-white/10 hover:text-white sm:w-auto"
               >
-                <a href="https://wa.me/27745245703?text=Hi%2C%20I%27m%20looking%20for%20accommodation%20for%20myself%20or%20my%20team">Get in Touch</a>
+                <a href="https://wa.me/27745245703?text=Hi%2C%20I%27m%20looking%20for%20accommodation%20for%20myself%20or%20my%20team">WhatsApp 074 524 5703</a>
               </Button>
             </div>
           </div>
@@ -471,10 +476,10 @@ export default function HomePage() {
             mainEntity: [
               {
                 "@type": "Question",
-                name: "Can you take a crew of 8–10 workers for several months?",
+                name: "Can you accommodate a small team?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "We're a four-room house designed for smaller skilled teams; long labour-crew deployments are usually better served by a rented house near site.",
+                  text: "Yes. Our private-ensuite guest rooms can accommodate teams of up to 8 guests, depending on the required room-sharing arrangement. Multi-room bookings are subject to availability.",
                 },
               },
               {

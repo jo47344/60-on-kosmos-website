@@ -38,7 +38,7 @@ export function WhatsAppWidget() {
   return (
     <>
       {/* Floating WhatsApp Button */}
-      <div className="fixed bottom-6 right-6 z-50 hidden md:block">
+      <div className="fixed bottom-6 right-6 z-50 hidden lg:block">
         {isOpen && (
           <div className="absolute bottom-20 right-0 w-80 bg-white rounded-lg shadow-2xl border border-gray-200 mb-2 animate-in slide-in-from-bottom-5">
             <div className="bg-green-600 text-white p-4 rounded-t-lg flex items-center justify-between">
@@ -48,7 +48,7 @@ export function WhatsAppWidget() {
                 </div>
                 <div>
                   <h3 className="font-semibold">60 on Kosmos</h3>
-                  <p className="text-xs opacity-90">Typically replies instantly</p>
+                  <p className="text-xs opacity-90">Usually replies the same day</p>
                 </div>
               </div>
               <button
@@ -62,10 +62,10 @@ export function WhatsAppWidget() {
             <div className="p-4">
               <div className="bg-gray-100 rounded-lg p-3 mb-4">
                 <p className="text-sm text-gray-700 mb-2">
-                  <strong>Hi there!</strong> 👋
+                  <strong>Hi there!</strong>
                 </p>
                 <p className="text-sm text-gray-600">
-                  Need help booking a room? We're here to assist you with availability, rates, and any questions!
+                  Need help booking a room? Send your dates and number of guests, and we'll reply with availability and rates.
                 </p>
               </div>
               <button
@@ -82,23 +82,14 @@ export function WhatsAppWidget() {
 
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="bg-green-600 hover:bg-green-700 text-white rounded-full p-4 shadow-2xl transition-all duration-300 hover:scale-110 flex items-center justify-center group"
-          aria-label="Open WhatsApp chat"
+          className="bg-green-600 hover:bg-green-700 text-white rounded-full p-4 shadow-2xl transition-all duration-300 flex items-center justify-center group"
+          aria-label={isOpen ? "Close WhatsApp chat" : "Open WhatsApp chat"}
+          aria-expanded={isOpen}
         >
           {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
         </button>
       </div>
 
-      {/* Mobile WhatsApp FAB (shows on mobile only) */}
-      <div className="fixed bottom-20 right-4 z-40 md:hidden">
-        <button
-          onClick={handleWhatsAppClick}
-          className="bg-green-600 hover:bg-green-700 text-white rounded-full p-4 shadow-2xl transition-all duration-300 hover:scale-110 flex items-center justify-center"
-          aria-label="Chat on WhatsApp"
-        >
-          <MessageCircle className="w-6 h-6" />
-        </button>
-      </div>
     </>
   )
 }

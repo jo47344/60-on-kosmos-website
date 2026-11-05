@@ -68,214 +68,58 @@
   }
 }
 
-/* Critical CSS for above-the-fold content */
-.hero-section {
-  min-height: 100vh;
-  background: linear-gradient(135deg, #f0f4f1 0%, #e1ebe3 100%);
+/* Typography: display face for headings, body face everywhere else */
+@layer base {
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display), var(--font-body), system-ui, sans-serif;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  :focus-visible {
+    outline: 3px solid #4a6352;
+    outline-offset: 2px;
+  }
 }
 
-/* Enhanced image quality and performance */
-.enhanced-image {
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
-  filter: contrast(1.2) saturate(1.15) brightness(1.05);
-  transition: transform 0.3s ease, filter 0.3s ease;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  transform: translateZ(0);
-  will-change: transform;
-}
-
-.enhanced-image:hover {
-  filter: contrast(1.25) saturate(1.2) brightness(1.08);
-  transform: scale(1.02) translateZ(0);
-}
-
-/* Optimize all images for better clarity and performance */
-img {
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  filter: contrast(1.15) saturate(1.1) brightness(1.03);
-  loading: lazy;
-}
-
-/* Critical images should load immediately */
-img[priority] {
-  loading: eager;
-}
-
-/* Smooth scrolling with performance optimization */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 80px;
+  scroll-padding-top: 88px;
 }
 
-/* Performance optimizations */
-* {
-  box-sizing: border-box;
-}
-
-/* Optimize font loading */
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-}
-
-/* Conversion-focused animations */
-@keyframes pulse-cta {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-}
-
-.cta-pulse {
-  animation: pulse-cta 2s infinite;
-}
-
-/* Mobile-first responsive optimizations */
+/* Mobile CTA bar */
 @media (max-width: 768px) {
-  .enhanced-image {
-    filter: contrast(1.18) saturate(1.12) brightness(1.04);
-  }
-
-  .enhanced-image:hover {
-    transform: none;
-    filter: contrast(1.2) saturate(1.15) brightness(1.05);
-  }
-
-  /* Optimize mobile performance */
-  img {
-    content-visibility: auto;
-    contain-intrinsic-size: 300px 200px;
-  }
-
-  /* Mobile CTA optimizations */
   .mobile-cta-bar {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
   }
 }
 
-/* Tablet optimizations */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .enhanced-image {
-    filter: contrast(1.19) saturate(1.13) brightness(1.04);
-  }
-}
-
-/* Desktop optimizations */
-@media (min-width: 1025px) {
-  .enhanced-image {
-    filter: contrast(1.2) saturate(1.15) brightness(1.05);
-  }
-}
-
-/* High DPI display optimizations */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .enhanced-image {
-    filter: contrast(1.15) saturate(1.1) brightness(1.03);
-  }
-}
-
-/* Reduce motion for accessibility */
 @media (prefers-reduced-motion: reduce) {
-  .enhanced-image {
-    transition: none;
-  }
-
-  .enhanced-image:hover {
-    transform: none;
-  }
-
   html {
     scroll-behavior: auto;
   }
 
-  .cta-pulse {
-    animation: none;
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
 
-/* Dark mode optimizations */
-@media (prefers-color-scheme: dark) {
-  .enhanced-image {
-    filter: contrast(1.1) saturate(1.05) brightness(0.95);
-  }
-}
-
-/* Print styles */
 @media print {
-  .enhanced-image {
-    filter: none;
-  }
-
   .mobile-cta-bar,
   .sticky-cta {
     display: none !important;
   }
-}
-
-/* Focus states for accessibility */
-.focus-visible:focus {
-  outline: 2px solid #7c9885;
-  outline-offset: 2px;
-}
-
-/* Loading states */
-.loading-skeleton {
-  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-  background-size: 200% 100%;
-  animation: loading 1.5s infinite;
-}
-
-@keyframes loading {
-  0% {
-    background-position: 200% 0;
-  }
-  100% {
-    background-position: -200% 0;
-  }
-}
-
-/* Conversion optimization styles */
-.urgency-banner {
-  background: linear-gradient(45deg, #fef3c7, #fde68a);
-  border: 1px solid #f59e0b;
-  animation: subtle-pulse 3s infinite;
-}
-
-@keyframes subtle-pulse {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.95;
-  }
-}
-
-/* Trust signals */
-.trust-badge {
-  background: linear-gradient(135deg, #10b981, #059669);
-  color: white;
-  padding: 0.25rem 0.75rem;
-  border-radius: 9999px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.25rem;
-}
-
-/* Performance monitoring */
-.performance-marker {
-  display: none;
 }
 
 /* Add safe area padding for mobile devices with notches */
@@ -289,12 +133,5 @@ html {
 @media (max-width: 1023px) {
   footer {
     padding-bottom: 80px !important;
-  }
-}
-
-/* Fix mobile viewport height issues */
-@supports (height: 100dvh) {
-  .hero-section {
-    min-height: 100dvh;
   }
 }

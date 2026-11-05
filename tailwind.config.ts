@@ -19,6 +19,10 @@ const config: Config = {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ["var(--font-body)", "system-ui", "-apple-system", "Segoe UI", "sans-serif"],
+        display: ["var(--font-display)", "var(--font-body)", "system-ui", "sans-serif"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -60,10 +64,10 @@ const config: Config = {
           300: "#a5c3ab",
           400: "#87af8f",
           500: "#7c9885",
-          600: "#6b8573",
-          700: "#5a7261",
-          800: "#495f4f",
-          900: "#384c3d",
+          600: "#587361",
+          700: "#4a6352",
+          800: "#3f5546",
+          900: "#334538",
         },
       },
       borderRadius: {
