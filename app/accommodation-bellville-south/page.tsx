@@ -56,7 +56,7 @@ const faqs = [
   {
     question: "How many people can you accommodate?",
     answer:
-      "We have 4 private ensuite rooms, suitable for individuals, couples or small teams of up to 8 guests in total. Tell us your group size and we'll confirm the best room combination.",
+      "We have 4 private ensuite rooms, suitable for individuals, couples or small teams of up to 9 guests in total. Tell us your group size and we'll confirm the best room combination.",
   },
   {
     question: "How far is 60 on Kosmos from UWC and CPUT?",

@@ -109,7 +109,7 @@ const faqs = [
   {
     question: "How many people can you accommodate?",
     answer:
-      "We have 4 private ensuite rooms, suitable for small teams of up to 8 guests in total. Tell us your team size and we'll confirm the best room combination and a company rate.",
+      "We have 4 private ensuite rooms, suitable for small teams of up to 9 guests in total. Tell us your team size and we'll confirm the best room combination and a company rate.",
   },
   {
     question: "Do you provide invoices for corporate bookings?",

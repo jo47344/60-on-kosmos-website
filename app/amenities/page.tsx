@@ -72,8 +72,7 @@ export default function AmenitiesPage() {
   const roomFeatures = [
     "Private ensuite bathrooms",
     "Clean linen and towels",
-    "Hot water 24/7",
-    "Free WiFi",
+      "Free WiFi",
     "Modern furnishings",
     "Weekly cleaning service",
     "Quiet environment",

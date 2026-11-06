@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { Facebook, Instagram, Mail, Phone, MapPin } from "lucide-react"
 import { Logo } from "./logo"
+import { reviewPlatforms } from "@/lib/site-facts"
 
 export function Footer() {
   return (
@@ -73,6 +74,14 @@ export function Footer() {
                   className="text-sage-300 hover:text-sage-100 transition-colors block"
                 >
                   View on Booking.com
+                </a>
+                <a
+                  href={reviewPlatforms.google}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sage-300 hover:text-sage-100 transition-colors block"
+                >
+                  Read our Google reviews
                 </a>
                 <a
                   href="https://www.google.com/maps/search/?api=1&query=60+Kosmos+Street,+Bellville+South,+Cape+Town,+7530"

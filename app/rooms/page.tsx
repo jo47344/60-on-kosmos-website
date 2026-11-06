@@ -96,7 +96,6 @@ export default function RoomsPage() {
         "2 single beds",
         "Private ensuite bathroom",
         "Bar fridge",
-        "Premium bedding",
         "Weekly cleaning",
       ],
       description:
@@ -116,7 +115,6 @@ export default function RoomsPage() {
         "Private ensuite bathroom",
         "Bar fridge",
         "Free WiFi",
-        "Premium bedding",
         "Weekly cleaning",
       ],
       description:
@@ -341,10 +339,6 @@ export default function RoomsPage() {
                 Weekly cleaning service maintains high standards of cleanliness.
               </p>
               <ul className="space-y-2 text-gray-600">
-                <li className="flex items-center">
-                  <span className="w-1.5 h-1.5 bg-green-600 rounded-full mr-2"></span>
-                  Hot water 24/7
-                </li>
                 <li className="flex items-center">
                   <span className="w-1.5 h-1.5 bg-green-600 rounded-full mr-2"></span>
                   Clean towels provided
