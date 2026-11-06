@@ -38,7 +38,7 @@ export function WhatsAppWidget() {
   return (
     <>
       {/* Floating WhatsApp Button */}
-      <div className="fixed bottom-6 right-6 z-50 hidden md:block">
+      <div className="fixed bottom-6 right-6 z-50 hidden lg:block">
         {isOpen && (
           <div className="absolute bottom-20 right-0 w-80 bg-white rounded-lg shadow-2xl border border-gray-200 mb-2 animate-in slide-in-from-bottom-5">
             <div className="bg-green-600 text-white p-4 rounded-t-lg flex items-center justify-between">
@@ -86,17 +86,6 @@ export function WhatsAppWidget() {
           aria-label="Open WhatsApp chat"
         >
           {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
-        </button>
-      </div>
-
-      {/* Mobile WhatsApp FAB (shows on mobile only) */}
-      <div className="fixed bottom-20 right-4 z-40 md:hidden">
-        <button
-          onClick={handleWhatsAppClick}
-          className="bg-green-600 hover:bg-green-700 text-white rounded-full p-4 shadow-2xl transition-all duration-300 hover:scale-110 flex items-center justify-center"
-          aria-label="Chat on WhatsApp"
-        >
-          <MessageCircle className="w-6 h-6" />
         </button>
       </div>
     </>

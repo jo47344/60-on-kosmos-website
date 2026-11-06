@@ -2,13 +2,13 @@
 
 import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
-import { Menu, X, ChevronDown } from "lucide-react"
+import { Menu, X, ChevronDown, Phone } from "lucide-react"
+import { business } from "@/lib/site-facts"
 import { Logo } from "./logo"
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [resourcesOpen, setResourcesOpen] = useState(false)
-  const [visitorsOpen, setVisitorsOpen] = useState(false)
   const navRef = useRef<HTMLElement>(null)
 
   // Close dropdowns when clicking outside
@@ -16,7 +16,6 @@ export function Navigation() {
     const handleClickOutside = (event: MouseEvent) => {
       if (navRef.current && !navRef.current.contains(event.target as Node)) {
         setResourcesOpen(false)
-        setVisitorsOpen(false)
       }
     }
 
@@ -29,7 +28,6 @@ export function Navigation() {
     const handleEscape = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         setResourcesOpen(false)
-        setVisitorsOpen(false)
         setIsOpen(false)
       }
     }
@@ -48,66 +46,38 @@ export function Navigation() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-1">
-            <Link
-              href="/"
-              className="px-4 py-2 rounded-lg hover:bg-white/10 transition-colors duration-200 font-medium"
-            >
-              Home
-            </Link>
+          <div className="hidden lg:flex items-center gap-1">
             <Link
               href="/rooms"
-              className="px-4 py-2 rounded-lg hover:bg-white/10 transition-colors duration-200 font-medium"
+              className="whitespace-nowrap px-2.5 xl:px-4 py-2 rounded-lg hover:bg-white/10 transition-colors duration-200 font-medium"
             >
               Rooms
             </Link>
             <Link
               href="/contractor-accommodation"
-              className="px-4 py-2 rounded-lg hover:bg-white/10 transition-colors duration-200 font-medium"
+              className="whitespace-nowrap px-2.5 xl:px-4 py-2 rounded-lg hover:bg-white/10 transition-colors duration-200 font-medium"
             >
               For Teams
             </Link>
             <Link
               href="/amenities"
-              className="px-4 py-2 rounded-lg hover:bg-white/10 transition-colors duration-200 font-medium"
+              className="whitespace-nowrap px-2.5 xl:px-4 py-2 rounded-lg hover:bg-white/10 transition-colors duration-200 font-medium"
             >
               Amenities
             </Link>
 
-            {/* Visitors Dropdown */}
-            <div className="relative">
-              <button
-                onClick={() => setVisitorsOpen(!visitorsOpen)}
-                className="px-4 py-2 rounded-lg hover:bg-white/10 transition-colors duration-200 font-medium flex items-center gap-1"
-              >
-                Visitors
-                <ChevronDown
-                  className={`w-4 h-4 transition-transform duration-200 ${visitorsOpen ? "rotate-180" : ""}`}
-                />
-              </button>
-
-              {visitorsOpen && (
-                <>
-                  <div className="fixed inset-0 z-10" onClick={() => setVisitorsOpen(false)} />
-                  <div className="absolute right-0 mt-2 w-64 bg-white rounded-lg shadow-xl py-2 z-20 animate-in fade-in slide-in-from-top-2 duration-200">
-                    <Link
-                      href="/student-faq"
-                      className="block px-4 py-3 text-gray-700 hover:bg-[#7c9885]/10 transition-colors"
-                      onClick={() => setVisitorsOpen(false)}
-                    >
-                      <div className="font-medium">Visitor FAQ</div>
-                      <div className="text-xs text-gray-500">Graduations, block week, short stays</div>
-                    </Link>
-                  </div>
-                </>
-              )}
-            </div>
+            <Link
+              href="/student-faq"
+              className="whitespace-nowrap px-2.5 xl:px-4 py-2 rounded-lg hover:bg-white/10 transition-colors duration-200 font-medium"
+            >
+              Visitor FAQ
+            </Link>
 
             {/* Resources Dropdown */}
             <div className="relative">
               <button
                 onClick={() => setResourcesOpen(!resourcesOpen)}
-                className="px-4 py-2 rounded-lg hover:bg-white/10 transition-colors duration-200 font-medium flex items-center gap-1"
+                className="whitespace-nowrap px-2.5 xl:px-4 py-2 rounded-lg hover:bg-white/10 transition-colors duration-200 font-medium flex items-center gap-1"
               >
                 Resources
                 <ChevronDown
@@ -154,22 +124,29 @@ export function Navigation() {
 
             <Link
               href="/contact"
-              className="px-4 py-2 rounded-lg hover:bg-white/10 transition-colors duration-200 font-medium"
+              className="whitespace-nowrap px-2.5 xl:px-4 py-2 rounded-lg hover:bg-white/10 transition-colors duration-200 font-medium"
             >
               Contact
             </Link>
             <Link
               href="/book-now"
-              className="ml-2 px-6 py-2 bg-white text-[#7c9885] rounded-lg hover:bg-gray-100 transition-colors duration-200 font-bold shadow-lg"
+              className="whitespace-nowrap px-2.5 xl:px-4 py-2 rounded-lg hover:bg-white/10 transition-colors duration-200 font-medium"
             >
               Book Now
             </Link>
+            <a
+              href={`tel:${business.phoneIntl}`}
+              className="ml-2 inline-flex whitespace-nowrap items-center gap-2 px-4 xl:px-5 py-2 bg-white text-sage-800 rounded-lg hover:bg-gray-100 transition-colors duration-200 font-bold shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#7c9885]"
+            >
+              <Phone className="h-4 w-4" aria-hidden="true" />
+              {business.phone}
+            </a>
           </div>
 
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-white/10 transition-colors"
+            className="lg:hidden p-2 rounded-lg hover:bg-white/10 transition-colors"
             aria-label="Toggle menu"
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -179,7 +156,7 @@ export function Navigation() {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden bg-[#6d8876] border-t border-white/10">
+        <div className="lg:hidden bg-[#6d8876] border-t border-white/10">
           <div className="px-4 pt-2 pb-4 space-y-1">
             <Link
               href="/"
