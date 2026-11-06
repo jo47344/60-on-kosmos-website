@@ -370,15 +370,22 @@ export default function HomePage() {
           <h2 id="reviews-heading" className="text-3xl font-bold text-gray-900 sm:text-4xl">
             What guests say
           </h2>
-          <div className="mt-10 grid gap-10 md:grid-cols-2">
+          <div className="mt-10 grid gap-10 md:grid-cols-3">
             {[
               {
                 quote: "They are very welcoming and caring. Comfortable place and nice environment, it was very clean.",
                 name: "Hlumisa",
+                source: "Booking.com",
               },
               {
                 quote: "The room was clean and Steve was super friendly.",
                 name: "Taukobong",
+                source: "Booking.com",
+              },
+              {
+                quote: "Very friendly and helpful staff, and the rooms are very neat and clean.",
+                name: "Dineo",
+                source: "Google",
               },
             ].map((review) => (
               <figure key={review.name}>
@@ -386,7 +393,7 @@ export default function HomePage() {
                   &ldquo;{review.quote}&rdquo;
                 </blockquote>
                 <figcaption className="mt-4 text-gray-700">
-                  <span className="font-semibold text-gray-900">{review.name}</span>, guest review on Booking.com
+                  <span className="font-semibold text-gray-900">{review.name}</span>, guest review on {review.source}
                 </figcaption>
               </figure>
             ))}
