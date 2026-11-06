@@ -1,0 +1,14 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "inter",
+        "createdAt": "2026-11-06T08:19:33.659Z",
+        "reason": "Incumbent site typeface, recorded as the system's only face in DESIGN.md (Typography); changing it is a rebrand, not a homepage fix"
+      }
+    ]
+  }
+}
