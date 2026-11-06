@@ -407,6 +407,15 @@ export default function HomePage() {
               className="font-semibold text-sage-700 underline underline-offset-4 hover:text-sage-800"
             >
               Booking.com
+            </a>
+            ,{" "}
+            <a
+              href={reviewPlatforms.google}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-sage-700 underline underline-offset-4 hover:text-sage-800"
+            >
+              Google
             </a>{" "}
             and{" "}
             <a

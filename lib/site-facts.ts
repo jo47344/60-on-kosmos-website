@@ -99,4 +99,6 @@ export const priceRangeLabel = "R464 - R840"
 export const reviewPlatforms = {
   booking: "https://www.booking.com/hotel/za/60-on-kosmos-cape-town.html",
   airbnb: "https://www.airbnb.co.za/rooms/1055447623",
+  // Google Business Profile share link, supplied by the owner.
+  google: "https://share.google/cQTqA5TBvE9XDki11",
 } as const
