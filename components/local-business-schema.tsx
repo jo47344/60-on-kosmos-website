@@ -111,7 +111,7 @@ export function LocalBusinessSchema() {
       "https://www.instagram.com/60onkosmos",
       reviewPlatforms.airbnb,
       reviewPlatforms.booking,
-      "https://www.google.com/maps/place/60+on+Kosmos+Bellville+South",
+      reviewPlatforms.google,
     ],
     amenityFeature: [
       { "@type": "LocationFeatureSpecification", name: "Free WiFi", value: true },
@@ -190,7 +190,7 @@ export function LocalBusinessSchema() {
             "@type": "HotelRoom",
             name: "Triple Room",
             description:
-              "Large room with three single beds. Best value for 3-person crews at R224/person on monthly rates.",
+              "Large room with three single beds. Best value for 3-person crews: R224 per person per night on monthly rates.",
             bed: { "@type": "BedDetails", numberOfBeds: 3, typeOfBed: "Single" },
             occupancy: { "@type": "QuantitativeValue", minValue: 1, maxValue: 3 },
           },

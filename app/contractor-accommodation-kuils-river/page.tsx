@@ -55,7 +55,7 @@ const faqs = [
   {
     question: "Can multiple team members stay together?",
     answer:
-      "Yes. We have 4 private ensuite rooms, suitable for small teams of up to 8 guests in total. Tell us your team size and dates and we'll confirm the best room combination and a company rate.",
+      "Yes. We have 4 private ensuite rooms, suitable for small teams of up to 9 guests in total. Tell us your team size and dates and we'll confirm the best room combination and a company rate.",
   },
   {
     question: "Is corporate invoicing available?",

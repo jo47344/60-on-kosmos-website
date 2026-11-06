@@ -174,10 +174,6 @@ export default function CorporateRelocationPage() {
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span>24/7 access (for irregular hours)</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
                   <span>Kitchen access or nearby food options</span>
                 </li>
                 <li className="flex items-start">

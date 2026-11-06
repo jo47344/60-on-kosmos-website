@@ -48,7 +48,7 @@ export function WhatsAppWidget() {
                 </div>
                 <div>
                   <h3 className="font-semibold">60 on Kosmos</h3>
-                  <p className="text-xs opacity-90">Typically replies instantly</p>
+                  <p className="text-xs opacity-90">Quotes usually go out the same day</p>
                 </div>
               </div>
               <button

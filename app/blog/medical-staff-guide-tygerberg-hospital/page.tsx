@@ -294,7 +294,6 @@ export default function MedicalStaffGuidePage() {
               <ul className="text-sm text-gray-700 space-y-1">
                 <li>• Secure parking</li>
                 <li>• Fast WiFi</li>
-                <li>• 24/7 access (for shifts)</li>
                 <li>• Private bathroom</li>
                 <li>• Within 15km of hospital</li>
               </ul>

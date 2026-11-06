@@ -9,7 +9,7 @@ import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
 export const metadata: Metadata = {
   title: "Company Accommodation Near UWC & CPUT Bellville | 60 on Kosmos",
   description:
-    "Company and project team accommodation near UWC and CPUT Bellville campus. 4 private ensuite rooms, up to 8 guests, weekly/monthly rates, company invoicing.",
+    "Company and project team accommodation near UWC and CPUT Bellville campus. 4 private ensuite rooms, up to 9 guests, weekly/monthly rates, company invoicing.",
   alternates: {
     canonical: "https://www.60onkosmos.co.za/contractor-accommodation-uwc-cput-bellville",
   },
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Company Accommodation Near UWC & CPUT Bellville | 60 on Kosmos",
     description:
-      "Company and project team accommodation near UWC and CPUT Bellville campus. 4 private ensuite rooms, up to 8 guests.",
+      "Company and project team accommodation near UWC and CPUT Bellville campus. 4 private ensuite rooms, up to 9 guests.",
     url: "https://www.60onkosmos.co.za/contractor-accommodation-uwc-cput-bellville",
     type: "website",
     images: [
@@ -90,7 +90,7 @@ export default function UwcCputBellvillePage() {
             <p className="text-lg sm:text-xl text-gray-300 mb-8 text-pretty max-w-3xl mx-auto">
               Practical, private-ensuite accommodation in Bellville South for company staff, visiting trainers, and
               project teams working near the University of the Western Cape and CPUT Bellville campus. Suitable for
-              teams of up to 8 guests, with weekly and monthly stay options and company invoicing.
+              teams of up to 9 guests, with weekly and monthly stay options and company invoicing.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-sage-600 hover:bg-sage-700 text-white px-8 py-6 text-lg">
@@ -230,7 +230,7 @@ export default function UwcCputBellvillePage() {
 
           <h3 className="text-2xl font-bold text-center mb-6">Rooms & what&apos;s included</h3>
           <p className="text-center text-gray-600 max-w-2xl mx-auto mb-8">
-            4 private ensuite rooms at 60 on Kosmos, suitable for small teams of up to 8 guests in total.
+            4 private ensuite rooms at 60 on Kosmos, suitable for small teams of up to 9 guests in total.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
             {[
