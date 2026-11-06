@@ -26,13 +26,15 @@ export const stayTerms = {
   quietHoursStart: "22:00",
   quietHoursEnd: "08:00",
   quietHoursLabel: "22:00–08:00",
+  weeklyRateMinNights: 7,
   monthlyRateMinNights: 28,
   payment: "EFT only; cash is not accepted",
 } as const
 
 export const capacity = {
   roomCount: 4,
-  maxGuests: 8,
+  // Owner-confirmed: 9 sleeping places across the four rooms.
+  maxGuests: 9,
 } as const
 
 // Confirmed facilities. Do not describe these as "full kitchen," "24/7
@@ -56,6 +58,7 @@ export const rooms = [
     weeklyPrice: 522,
     monthlyPrice: 464,
     layout: "Two single beds",
+    sleeps: 2,
     barFridge: false,
   },
   {
@@ -64,6 +67,7 @@ export const rooms = [
     weeklyPrice: 585,
     monthlyPrice: 520,
     layout: "Two single beds",
+    sleeps: 2,
     barFridge: true,
   },
   {
@@ -72,6 +76,7 @@ export const rooms = [
     weeklyPrice: 612,
     monthlyPrice: 544,
     layout: "One double bed",
+    sleeps: 2,
     barFridge: true,
   },
   {
@@ -80,6 +85,7 @@ export const rooms = [
     weeklyPrice: 756,
     monthlyPrice: 672,
     layout: "Three single beds",
+    sleeps: 3,
     barFridge: true,
   },
 ] as const

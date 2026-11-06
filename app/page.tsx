@@ -1,35 +1,21 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import {
-  MapPin,
-  Phone,
-  Star,
-  Wifi,
-  Car,
-  Shield,
-  Coffee,
-  CheckCircle2,
-  Users,
-  Briefcase,
-  GraduationCap,
-  ArrowRight,
-} from "lucide-react"
-import { TrustBadges } from "@/components/trust-badges"
-import { rooms as roomRates, stayTerms } from "@/lib/site-facts"
+import { ArrowRight, MessageCircle, Phone } from "lucide-react"
 import { LatestBlogPosts } from "@/components/latest-blog-posts"
+import { business, capacity, reviewPlatforms, rooms, stayTerms } from "@/lib/site-facts"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Bellville South Accommodation for Contractors & Teams | 60 on Kosmos",
-  description: "Private ensuite accommodation in Bellville South for contractors, project teams and working professionals. Secure parking, WiFi, weekly cleaning and company invoices. Request a quote.",
+  description:
+    "Private ensuite accommodation in Bellville South for contractors, project teams and working professionals. Secure parking, WiFi, weekly cleaning and company invoices. Request a quote.",
   alternates: {
     canonical: "https://www.60onkosmos.co.za/",
   },
   openGraph: {
     title: "Bellville South Accommodation for Contractors & Teams | 60 on Kosmos",
-    description: "Private ensuite accommodation in Bellville South for contractors, project teams and working professionals. Secure parking, WiFi, weekly cleaning and company invoices. Request a quote.",
+    description:
+      "Private ensuite accommodation in Bellville South for contractors, project teams and working professionals. Secure parking, WiFi, weekly cleaning and company invoices. Request a quote.",
     url: "https://www.60onkosmos.co.za/",
     type: "website",
     images: [
@@ -43,491 +29,494 @@ export const metadata: Metadata = {
   },
 }
 
-const rateFor = (name: string) => {
-  const rate = roomRates.find((room) => room.name === name)
-  if (!rate) throw new Error(`No rate in lib/site-facts.ts for ${name}`)
-  return rate
+const roomPhotos: Record<(typeof rooms)[number]["name"], { src: string; alt: string }> = {
+  "Standard Twin": {
+    src: "/images/standard-twin-room.jpg",
+    alt: "Standard Twin room with two single beds",
+  },
+  "Deluxe Twin": {
+    src: "/images/deluxe-twin-room.jpg",
+    alt: "Deluxe Twin room with two single beds",
+  },
+  "Double Room": {
+    src: "/images/sage-double-room.png",
+    alt: "Double Room with one double bed",
+  },
+  "Triple Room": {
+    src: "/images/triple-room.jpg",
+    alt: "Triple Room with three single beds",
+  },
+}
+
+const lowestMonthlyRate = Math.min(...rooms.map((room) => room.monthlyPrice))
+const telHref = `tel:${business.phoneIntl}`
+const whatsappHref = `https://wa.me/${business.whatsappNumber}?text=${encodeURIComponent(
+  "Hi, I'd like a quote for my team. Dates and team size:",
+)}`
+const quoteHref = "/contractor-accommodation#company-enquiry"
+
+const faqs = [
+  {
+    question: `Can you take a crew of more than ${capacity.maxGuests} people?`,
+    answer: `We're a four-room house that sleeps up to ${capacity.maxGuests}, designed for smaller skilled teams. Long labour-crew deployments are usually better served by a rented house near site.`,
+  },
+  {
+    question: "Can you provide visa documentation?",
+    answer:
+      "We don't provide visa documentation. Please confirm what you need with the relevant authorities before booking.",
+  },
+]
+
+function ContactButtons({ onDark = false }: { onDark?: boolean }) {
+  return (
+    <div className="flex flex-col gap-3 sm:flex-row">
+      <a
+        href={telHref}
+        className="inline-flex h-12 items-center justify-center gap-2 rounded-md bg-green-700 px-6 font-semibold text-white transition-colors hover:bg-green-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-700 focus-visible:ring-offset-2"
+      >
+        <Phone className="h-5 w-5" aria-hidden="true" />
+        Call {business.phone}
+      </a>
+      <a
+        href={whatsappHref}
+        className={`inline-flex h-12 items-center justify-center gap-2 rounded-md border-2 px-6 font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${
+          onDark
+            ? "border-white text-white hover:bg-white/10 focus-visible:ring-white focus-visible:ring-offset-gray-900"
+            : "border-green-700 text-green-800 hover:bg-green-50 focus-visible:ring-green-700"
+        }`}
+      >
+        <MessageCircle className="h-5 w-5" aria-hidden="true" />
+        WhatsApp us
+      </a>
+    </div>
+  )
 }
 
 export default function HomePage() {
-  const roomTypes = [
-    {
-      name: "Standard Twin Room",
-      rate: rateFor("Standard Twin"),
-      image: "/images/standard-twin-room.jpg",
-      bestFor: "Best for 2 contractors sharing",
-      features: ["2 single beds", "Private ensuite", "Free WiFi", "Kitchen access"],
-    },
-    {
-      name: "Deluxe Twin Room",
-      rate: rateFor("Deluxe Twin"),
-      image: "/images/deluxe-twin-room.jpg",
-      bestFor: "Best for professionals wanting extra comfort",
-      features: ["2 single beds", "Private ensuite", "Bar fridge", "Premium linens"],
-    },
-    {
-      name: "Double Room",
-      rate: rateFor("Double Room"),
-      image: "/images/sage-double-room.png",
-      bestFor: "Best for solo professionals or couples",
-      features: ["Double bed", "Private ensuite", "Bar fridge", "Premium bedding"],
-    },
-    {
-      name: "Triple Room",
-      rate: rateFor("Triple Room"),
-      image: "/images/triple-room.jpg",
-      bestFor: "Best for 3-person crews",
-      features: ["3 single beds", "Private ensuite", `Monthly: R${rateFor("Triple Room").monthlyPrice / 3} per person per night`, "Best value"],
-    },
-  ]
-
   return (
     <>
-      <div className="flex flex-col">
-        {/* Hero Section */}
-        <section className="relative h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] flex items-center justify-center">
-          <Image
-            src="/images/exterior-building.png"
-            alt="60 on Kosmos Guesthouse Bellville South - accommodation for project teams and contractors in Cape Town"
-            fill
-            className="object-cover brightness-50"
-            priority
-            sizes="100vw"
-            quality={85}
-          />
-          <div className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-2 sm:mb-4 leading-tight text-balance">
-              Accommodation for Small Project Teams in Bellville
+      {/* Hero: what this is, who it's for, and how to reach us */}
+      <section className="bg-sage-50">
+        <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-12 sm:px-6 sm:py-16 lg:grid-cols-[minmax(0,1fr)_minmax(0,26rem)] lg:gap-16 lg:px-8 lg:py-20">
+          <div>
+            <h1 className="max-w-2xl text-balance text-4xl font-bold leading-tight text-gray-900 sm:text-5xl">
+              Accommodation for small project teams in Bellville
             </h1>
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-6 sm:mb-8 px-2 text-pretty">
-              Private ensuite rooms, secure parking, WiFi, weekly cleaning and flexible company rates for teams of
-              up to eight.
+            <p className="mt-5 max-w-xl text-pretty text-lg leading-relaxed text-gray-700">
+              Private ensuite rooms, secure gated parking, WiFi, weekly cleaning and company invoices, at{" "}
+              {business.streetAddress}, {business.addressLocality}.
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 px-4 sm:px-0">
-              <Button
-                asChild
-                size="lg"
-                className="bg-sage-600 hover:bg-sage-700 text-white w-full sm:w-auto px-6 sm:px-8 md:px-10 py-5 sm:py-6 text-base sm:text-lg"
+            <p className="mt-6 text-base font-semibold text-gray-900">
+              {capacity.roomCount} rooms · Sleeps up to {capacity.maxGuests} · From R{lowestMonthlyRate}/night on
+              monthly stays
+            </p>
+
+            <div className="mt-8 flex flex-col gap-4">
+              <Link
+                href={quoteHref}
+                className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-md bg-sage-700 px-8 text-lg font-semibold text-white transition-colors hover:bg-sage-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage-700 focus-visible:ring-offset-2 sm:w-fit"
               >
-                <Link href="/contractor-accommodation#company-enquiry">Get a Company Quote</Link>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="bg-white/10 border-white text-white hover:bg-white/20 w-full sm:w-auto px-6 sm:px-8 md:px-10 py-5 sm:py-6 text-base sm:text-lg"
+                Get a team quote
+                <ArrowRight className="h-5 w-5" aria-hidden="true" />
+              </Link>
+              <ContactButtons />
+            </div>
+            <p className="mt-6 text-sm text-gray-700">
+              Booking a short stay for yourself?{" "}
+              <Link
+                href="/check-availability"
+                className="font-semibold text-sage-700 underline underline-offset-4 hover:text-sage-800"
               >
-                <Link href="/check-availability">Check Short-Stay Availability</Link>
-              </Button>
-            </div>
+                Check availability
+              </Link>
+            </p>
           </div>
-        </section>
 
-        {/* Trust Badges */}
-        <TrustBadges />
+          <figure className="mx-auto w-full max-w-sm lg:max-w-none">
+            <Image
+              src="/images/main-entrance.png"
+              alt="Front door and paved yard with covered parking at 60 on Kosmos, Bellville South"
+              width={720}
+              height={960}
+              priority
+              sizes="(min-width: 1024px) 416px, (min-width: 640px) 384px, 100vw"
+              className="aspect-[4/3] h-auto w-full rounded-lg object-cover shadow-sm lg:aspect-auto"
+            />
+            <figcaption className="mt-3 text-sm text-gray-600">
+              The entrance and paved yard at {business.streetAddress}.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
 
-        <section className="bg-gray-900 text-white py-8 sm:py-12">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
-              <div className="flex items-center gap-4">
-                <div className="bg-sage-600 p-3 rounded-full">
-                  <Users className="w-8 h-8" />
-                </div>
-                <div>
-                  <h2 className="text-xl sm:text-2xl font-bold">Perfect for Project Teams</h2>
-                  <p className="text-gray-300">Flexible terms, group discounts, and corporate billing available | Monthly rates for 28+ nights</p>
-                </div>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
-                <Button asChild size="lg" className="bg-sage-600 hover:bg-sage-700 text-white px-8">
-                  <Link href="/contractor-accommodation">
-                    For Teams & Contractors
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </Button>
-                <Button
-                  asChild
-                  size="lg"
-                  variant="outline"
-                  className="border-white text-white hover:bg-white/10 bg-transparent"
-                >
-                  <a href="https://wa.me/27745245703?text=Hi%2C%20I%27m%20looking%20for%20accommodation%20for%20my%20team">
-                    WhatsApp Your Team
-                  </a>
-                </Button>
-              </div>
-            </div>
+      {/* The spec sheet: rooms, beds and rates */}
+      <section id="rates" aria-labelledby="rates-heading" className="bg-white py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <h2 id="rates-heading" className="text-3xl font-bold text-gray-900 sm:text-4xl">
+              Rooms, beds and rates
+            </h2>
+            <p className="mt-4 text-pretty text-lg leading-relaxed text-gray-700">
+              Every room has a private ensuite, WiFi and weekly cleaning. Weekly rates apply from{" "}
+              {stayTerms.weeklyRateMinNights} nights and monthly rates from {stayTerms.monthlyRateMinNights} nights.
+            </p>
           </div>
-        </section>
 
-        {/* Quick Info Bar */}
-        <section className="bg-sage-600 text-white py-4 sm:py-6">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 text-center">
-              <div className="flex items-center justify-center gap-2 sm:gap-3">
-                <MapPin className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" />
-                <div className="text-left">
-                  <div className="font-semibold text-sm sm:text-base">Near N1 Highway</div>
-                  <div className="text-xs sm:text-sm opacity-90">Easy site access</div>
-                </div>
-              </div>
-              <div className="flex items-center justify-center gap-2 sm:gap-3">
-                <Shield className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" />
-                <div className="text-left">
-                  <div className="font-semibold text-sm sm:text-base">Secure Gated Parking</div>
-                  <div className="text-xs sm:text-sm opacity-90">CCTV · secure gated parking · ADT armed response</div>
-                </div>
-              </div>
-              <div className="flex items-center justify-center gap-2 sm:gap-3">
-                <Wifi className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" />
-                <div className="text-left">
-                  <div className="font-semibold text-sm sm:text-base">Free High-Speed WiFi</div>
-                  <div className="text-xs sm:text-sm opacity-90">Stay connected</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+          <table className="mt-10 w-full border-collapse text-left">
+            <caption className="sr-only">
+              Rooms at 60 on Kosmos with beds, bar fridge and rates per room per night
+            </caption>
+            <thead className="hidden border-b-2 border-gray-900 text-sm text-gray-700 md:table-header-group">
+              <tr>
+                <th scope="col" className="py-3 pr-4 font-semibold">
+                  Room
+                </th>
+                <th scope="col" className="px-4 py-3 font-semibold">
+                  Beds
+                </th>
+                <th scope="col" className="px-4 py-3 font-semibold">
+                  Bar fridge
+                </th>
+                <th scope="col" className="px-4 py-3 text-right font-semibold">
+                  Nightly
+                </th>
+                <th scope="col" className="px-4 py-3 text-right font-semibold">
+                  Weekly ({stayTerms.weeklyRateMinNights}–{stayTerms.monthlyRateMinNights - 1} nights)
+                </th>
+                <th scope="col" className="py-3 pl-4 text-right font-semibold">
+                  Monthly ({stayTerms.monthlyRateMinNights}+ nights)
+                </th>
+              </tr>
+            </thead>
+            <tbody className="block md:table-row-group">
+              {rooms.map((room) => {
+                const photo = roomPhotos[room.name]
+                return (
+                  <tr
+                    key={room.name}
+                    className="grid grid-cols-[5rem_1fr] gap-x-4 gap-y-1 border-b border-gray-200 py-5 md:table-row md:py-0"
+                  >
+                    <th scope="row" className="col-span-2 font-normal md:py-4 md:pr-4">
+                      <span className="flex items-center gap-4">
+                        <Image
+                          src={photo.src}
+                          alt={photo.alt}
+                          width={80}
+                          height={60}
+                          className="h-[60px] w-20 shrink-0 rounded object-cover"
+                        />
+                        <span>
+                          <span className="block text-lg font-semibold text-gray-900">{room.name}</span>
+                          <span className="block text-sm text-gray-700">Sleeps {room.sleeps}</span>
+                        </span>
+                      </span>
+                    </th>
+                    <td className="col-span-2 text-gray-800 md:px-4 md:py-4">
+                      <span className="sr-only md:hidden">Beds: </span>
+                      {room.layout}
+                      <span className="md:hidden">{room.barFridge ? " · Bar fridge" : " · No bar fridge"}</span>
+                    </td>
+                    <td className="hidden text-gray-800 md:table-cell md:px-4 md:py-4">
+                      {room.barFridge ? "Yes" : "No"}
+                    </td>
+                    <td className="col-span-2 flex justify-between text-gray-900 md:table-cell md:px-4 md:py-4 md:text-right md:tabular-nums">
+                      <span className="text-gray-700 md:hidden">Nightly</span>
+                      <span>From R{room.price}</span>
+                    </td>
+                    <td className="col-span-2 flex justify-between text-gray-900 md:table-cell md:px-4 md:py-4 md:text-right md:tabular-nums">
+                      <span className="text-gray-700 md:hidden">
+                        Weekly ({stayTerms.weeklyRateMinNights}–{stayTerms.monthlyRateMinNights - 1} nights)
+                      </span>
+                      <span>From R{room.weeklyPrice}</span>
+                    </td>
+                    <td className="col-span-2 flex justify-between font-semibold text-sage-800 md:table-cell md:py-4 md:pl-4 md:text-right md:tabular-nums">
+                      <span className="font-normal text-gray-700 md:hidden">
+                        Monthly ({stayTerms.monthlyRateMinNights}+ nights)
+                      </span>
+                      <span>From R{room.monthlyPrice}</span>
+                    </td>
+                  </tr>
+                )
+              })}
+            </tbody>
+            <tfoot className="block md:table-footer-group">
+              <tr className="block md:table-row">
+                <th scope="row" colSpan={6} className="block pt-4 text-left font-semibold text-gray-900 md:table-cell">
+                  {capacity.roomCount} rooms · Sleeps up to {capacity.maxGuests} in total
+                </th>
+              </tr>
+            </tfoot>
+          </table>
 
-        {/* Rooms Section */}
-        <section className="py-12 sm:py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-8 sm:mb-12">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">Our Rooms</h2>
-              <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto text-pretty">
-                Every room has a private ensuite, WiFi, secure parking and weekly cleaning. Stays of{" "}
-                {stayTerms.monthlyRateMinNights} nights or more pay the lower monthly rate shown on each room.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
-              {roomTypes.map((room, index) => (
-                <Card key={index} className="overflow-hidden hover:shadow-xl transition-shadow">
-                  <div className="relative h-48 sm:h-52">
-                    <Image
-                      src={room.image || "/placeholder.svg"}
-                      alt={`${room.name} - Accommodation Bellville South`}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 640px) 100vw, 33vw"
-                      loading={index > 0 ? "lazy" : undefined}
-                      quality={80}
-                    />
-                  </div>
-                  <CardHeader className="pb-3">
-                    <CardTitle className="text-lg sm:text-xl">{room.name}</CardTitle>
-                    <CardDescription className="text-sm text-sage-700 font-medium">
-                      {room.bestFor}
-                    </CardDescription>
-                    <div className="mt-2 space-y-0.5">
-                      <p className="text-base font-semibold text-gray-900">From R{room.rate.price}/night</p>
-                      <p className="text-sm font-medium text-sage-700">
-                        R{room.rate.monthlyPrice}/night on {stayTerms.monthlyRateMinNights}+ night stays
-                      </p>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-2 mb-4">
-                      {room.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-600">
-                          <CheckCircle2 className="w-4 h-4 mr-2 text-sage-700 flex-shrink-0" aria-hidden="true" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                    <Button asChild className="w-full bg-sage-600 hover:bg-sage-700">
-                      <a href="/rooms">View Details</a>
-                    </Button>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-
-            <div className="text-center mt-8 sm:mt-12">
-              <Button asChild size="lg" className="bg-sage-600 hover:bg-sage-700 w-full sm:w-auto">
-                <Link href="/rooms">View All Rooms</Link>
-              </Button>
-            </div>
-          </div>
-        </section>
-
-        {/* Featured Guest Reviews */}
-        <section className="py-12 sm:py-16 bg-sage-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col gap-3 text-center mb-8 sm:mb-10">
-              <p className="text-sm font-semibold uppercase tracking-widest text-sage-700">Trusted by guests</p>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">Clean, safe, and welcoming</h2>
-              <p className="text-base sm:text-lg text-gray-600">Read verified guest feedback on Booking.com and Google Reviews.</p>
-            </div>
-            <div className="grid gap-5 md:grid-cols-3">
-              {[
-                { quote: "They are very welcoming and caring. Comfortable place and nice environment, it was very clean.", name: "Hlumisa", source: "Booking.com" },
-                { quote: "The room was clean and Steve was super friendly.", name: "Taukobong", source: "Booking.com" },
-                { quote: "Very friendly and helpful staff, and the rooms are very neat and clean.", name: "Dineo", source: "Google Reviews" },
-              ].map((review) => (
-                <Card key={review.name} className="border-sage-200 bg-white">
-                  <CardContent className="flex flex-col gap-4 p-6">
-                    <div className="flex gap-1" aria-label="5 star review">
-                      {[...Array(5)].map((_, index) => <Star key={index} className="h-4 w-4 fill-yellow-400 text-yellow-400" />)}
-                    </div>
-                    <p className="text-gray-700 leading-relaxed">&quot;{review.quote}&quot;</p>
-                    <p className="text-sm font-semibold text-gray-900">{review.name} <span className="font-normal text-gray-500">· {review.source}</span></p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-            <div className="mt-8 text-center">
-              <Button asChild variant="outline" className="border-sage-600 text-sage-700">
-                <Link href="/testimonials">Read more guest reviews</Link>
-              </Button>
-            </div>
-          </div>
-        </section>
-
-        {/* Target Audience Section */}
-        <section className="py-12 sm:py-16 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-8 sm:mb-12">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
-                Who Stays With Us?
-              </h2>
-              <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-                From construction crews to international students—we welcome project-based teams and working professionals.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-              <Card className="text-center hover:shadow-lg transition-shadow ring-2 ring-sage-600">
-                <CardContent className="pt-6 sm:pt-8 pb-6 sm:pb-8 px-4">
-                  <div className="bg-sage-600 text-white text-xs font-bold px-3 py-1 rounded-full inline-block mb-4">
-                    MOST POPULAR
-                  </div>
-                  <Briefcase className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 text-sage-600" />
-                  <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Project Teams & Contractors</h3>
-<p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4">
-            Daily and weekly rates, plus monthly rates for stays of 28 nights or more. Group quotes are available, and check-in is from 14:00.
+          <p className="mt-6 text-sm text-gray-700">
+            Rates are per room, per night. Your quote confirms the price for your dates.
           </p>
-                  <Button asChild className="bg-sage-600 hover:bg-sage-700 w-full">
-                    <Link href="/contractor-accommodation">Team Rates</Link>
-                  </Button>
-                </CardContent>
-              </Card>
+          <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-8">
+            <Link
+              href={quoteHref}
+              className="inline-flex h-12 items-center justify-center gap-2 rounded-md bg-sage-700 px-8 font-semibold text-white transition-colors hover:bg-sage-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage-700 focus-visible:ring-offset-2"
+            >
+              Get a team quote
+              <ArrowRight className="h-5 w-5" aria-hidden="true" />
+            </Link>
+            <Link
+              href="/rooms"
+              className="font-semibold text-sage-700 underline underline-offset-4 hover:text-sage-800"
+            >
+              Room photos and details
+            </Link>
+          </div>
+        </div>
+      </section>
 
-              <Card className="text-center hover:shadow-lg transition-shadow">
-                <CardContent className="pt-6 sm:pt-8 pb-6 sm:pb-8 px-4">
-                  <GraduationCap className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 text-sage-600" />
-                  <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">International Students</h3>
-                  <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4">
-                    Approximately 5–8 minutes from UWC or CPUT by car, subject to traffic. For exchange, research and
-                    short-programme visits.
-                  </p>
-                  <Button asChild variant="outline" className="border-sage-600 text-sage-600 bg-transparent w-full">
-                    <Link href="/accommodation-near-uwc">Student Options</Link>
-                  </Button>
-                </CardContent>
-              </Card>
-
-              <Card className="text-center hover:shadow-lg transition-shadow">
-                <CardContent className="pt-6 sm:pt-8 pb-6 sm:pb-8 px-4">
-                  <Users className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 text-sage-600" />
-                  <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Working Professionals & Visitors</h3>
-                  <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4">
-                    Short and medium stays for training, site visits, and business travel in Cape Town's northern
-                    suburbs.
-                  </p>
-                  <Button asChild variant="outline" className="border-sage-600 text-sage-600 bg-transparent w-full">
-                    <Link href="/rooms">View Rooms</Link>
-                  </Button>
-                </CardContent>
-              </Card>
+      {/* On site: security, the house, and times */}
+      <section aria-labelledby="onsite-heading" className="bg-gray-50 py-16 sm:py-20">
+        <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[minmax(0,1fr)_auto] lg:gap-16 lg:px-8">
+          <div>
+            <h2 id="onsite-heading" className="text-3xl font-bold text-gray-900 sm:text-4xl">
+              On site
+            </h2>
+            <div className="mt-10 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900">Security and parking</h3>
+                <ul className="mt-3 space-y-2 text-gray-700">
+                  <li>Secure gated parking for work vehicles</li>
+                  <li>CCTV and ADT armed response</li>
+                  <li>Bringing a trailer? Confirm space with us before booking.</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900">In the house</h3>
+                <ul className="mt-3 space-y-2 text-gray-700">
+                  <li>Private ensuite in every room</li>
+                  <li>WiFi included</li>
+                  <li>Weekly cleaning</li>
+                  <li>Communal kitchenette for self&#8209;catering</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900">Times</h3>
+                <dl className="mt-3 space-y-2 text-gray-700">
+                  <div className="flex gap-2">
+                    <dt>Check-in:</dt>
+                    <dd className="font-semibold text-gray-900">from {stayTerms.checkIn}</dd>
+                  </div>
+                  <div className="flex gap-2">
+                    <dt>Check-out:</dt>
+                    <dd className="font-semibold text-gray-900">by {stayTerms.checkOut}</dd>
+                  </div>
+                  <div className="flex gap-2">
+                    <dt>Quiet hours:</dt>
+                    <dd className="font-semibold text-gray-900">{stayTerms.quietHoursLabel}</dd>
+                  </div>
+                </dl>
+              </div>
             </div>
           </div>
-        </section>
+          <figure className="w-full max-w-[337px]">
+            <Image
+              src="/images/secure-parking-cctv.jpg"
+              alt="Night-time CCTV view of guest vehicles parked inside the gated yard"
+              width={337}
+              height={182}
+              className="h-auto w-full rounded-lg"
+            />
+            <figcaption className="mt-3 text-sm text-gray-600">The gated yard on the on-site CCTV camera.</figcaption>
+          </figure>
+        </div>
+      </section>
 
-        {/* Amenities Section */}
-        <section className="py-12 sm:py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-8 sm:mb-12">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">What's Included</h2>
-            </div>
+      {/* How booking works: terms beside the contact actions */}
+      <section aria-labelledby="booking-heading" className="bg-gray-900 py-16 text-white sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 id="booking-heading" className="text-3xl font-bold sm:text-4xl">
+            How booking works
+          </h2>
+          <ol className="mt-10 grid gap-10 md:grid-cols-3">
+            <li>
+              <p className="text-sm font-semibold text-sage-300">Step 1</p>
+              <h3 className="mt-1 text-xl font-semibold">Send your dates and team size</h3>
+              <p className="mt-2 text-gray-300">WhatsApp or call {business.phone}.</p>
+            </li>
+            <li>
+              <p className="text-sm font-semibold text-sage-300">Step 2</p>
+              <h3 className="mt-1 text-xl font-semibold">Get your quote</h3>
+              <p className="mt-2 text-gray-300">Quotes usually go out the same day.</p>
+            </li>
+            <li>
+              <p className="text-sm font-semibold text-sage-300">Step 3</p>
+              <h3 className="mt-1 text-xl font-semibold">Pay by EFT</h3>
+              <p className="mt-2 text-gray-300">
+                EFT only; cash is not accepted. A refundable security deposit may apply to extended stays. Invoices on
+                request.
+              </p>
+            </li>
+          </ol>
+          <div className="mt-12 flex flex-col gap-4 lg:flex-row lg:items-center lg:gap-8">
+            <ContactButtons onDark />
+            <Link
+              href={quoteHref}
+              className="font-semibold text-white underline underline-offset-4 hover:text-sage-200"
+            >
+              Or send a company quote request
+            </Link>
+          </div>
+        </div>
+      </section>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
-              <div className="text-center">
-                <div className="w-14 h-14 sm:w-16 sm:h-16 bg-sage-100 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                  <Wifi className="w-7 h-7 sm:w-8 sm:h-8 text-sage-600" />
+      {/* Guest reviews */}
+      <section aria-labelledby="reviews-heading" className="bg-sage-50 py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 id="reviews-heading" className="text-3xl font-bold text-gray-900 sm:text-4xl">
+            What guests say
+          </h2>
+          <div className="mt-10 grid gap-10 md:grid-cols-2">
+            {[
+              {
+                quote: "They are very welcoming and caring. Comfortable place and nice environment, it was very clean.",
+                name: "Hlumisa",
+              },
+              {
+                quote: "The room was clean and Steve was super friendly.",
+                name: "Taukobong",
+              },
+            ].map((review) => (
+              <figure key={review.name}>
+                <blockquote className="text-pretty text-xl leading-relaxed text-gray-900">
+                  &ldquo;{review.quote}&rdquo;
+                </blockquote>
+                <figcaption className="mt-4 text-gray-700">
+                  <span className="font-semibold text-gray-900">{review.name}</span>, guest review on Booking.com
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+          <p className="mt-10 text-pretty text-gray-700">
+            Read all our reviews on{" "}
+            <a
+              href={reviewPlatforms.booking}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-sage-700 underline underline-offset-4 hover:text-sage-800"
+            >
+              Booking.com
+            </a>{" "}
+            and{" "}
+            <a
+              href={reviewPlatforms.airbnb}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-sage-700 underline underline-offset-4 hover:text-sage-800"
+            >
+              Airbnb
+            </a>
+            .
+          </p>
+        </div>
+      </section>
+
+      {/* Also staying with us */}
+      <section aria-labelledby="also-heading" className="bg-white py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 id="also-heading" className="text-3xl font-bold text-gray-900 sm:text-4xl">
+            Not booking for a team?
+          </h2>
+          <p className="mt-4 max-w-2xl text-lg text-gray-700">
+            Students, hospital staff and individual guests stay with us too.
+          </p>
+          <ul className="mt-8 grid border-t border-gray-200 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                href: "/accommodation-near-uwc",
+                label: "UWC students",
+                detail: "Accommodation near UWC",
+              },
+              {
+                href: "/accommodation-near-cput",
+                label: "CPUT students",
+                detail: "Accommodation near CPUT",
+              },
+              {
+                href: "/monthly-accommodation",
+                label: "Tygerberg Hospital staff",
+                detail: "Monthly stays for medical staff",
+              },
+              {
+                href: "/check-availability",
+                label: "Short stays",
+                detail: "Check dates for a night or a week",
+              },
+            ].map((item) => (
+              <li key={item.href} className="border-b border-gray-200">
+                <Link
+                  href={item.href}
+                  className="group flex h-full items-center justify-between gap-4 py-5 pr-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage-700 sm:pr-6"
+                >
+                  <span>
+                    <span className="block font-semibold text-gray-900 group-hover:text-sage-800">{item.label}</span>
+                    <span className="block text-sm text-gray-700">{item.detail}</span>
+                  </span>
+                  <ArrowRight
+                    className="h-5 w-5 shrink-0 text-sage-700 transition-transform group-hover:translate-x-1"
+                    aria-hidden="true"
+                  />
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <LatestBlogPosts />
+
+      {/* FAQ: only what the sections above don't already answer */}
+      <section aria-labelledby="faq-heading" className="bg-white py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <h2 id="faq-heading" className="text-3xl font-bold text-gray-900 sm:text-4xl">
+              Other questions
+            </h2>
+            <dl className="mt-8 divide-y divide-gray-200 border-y border-gray-200">
+              {faqs.map((faq) => (
+                <div key={faq.question} className="py-6">
+                  <dt className="text-lg font-semibold text-gray-900">{faq.question}</dt>
+                  <dd className="mt-2 text-gray-700">{faq.answer}</dd>
                 </div>
-                <h3 className="font-semibold text-base sm:text-lg mb-1 sm:mb-2">Free WiFi</h3>
-                <p className="text-gray-600 text-xs sm:text-sm">High-speed internet</p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-14 h-14 sm:w-16 sm:h-16 bg-sage-100 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                  <Car className="w-7 h-7 sm:w-8 sm:h-8 text-sage-600" />
-                </div>
-                <h3 className="font-semibold text-base sm:text-lg mb-1 sm:mb-2">Secure Parking</h3>
-                <p className="text-gray-600 text-xs sm:text-sm">CCTV + ADT armed response</p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-14 h-14 sm:w-16 sm:h-16 bg-sage-100 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                  <Shield className="w-7 h-7 sm:w-8 sm:h-8 text-sage-600" />
-                </div>
-                <h3 className="font-semibold text-base sm:text-lg mb-1 sm:mb-2">Weekly Cleaning</h3>
-                <p className="text-gray-600 text-xs sm:text-sm">Fresh linen included</p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-14 h-14 sm:w-16 sm:h-16 bg-sage-100 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                  <Coffee className="w-7 h-7 sm:w-8 sm:h-8 text-sage-600" />
-                </div>
-                <h3 className="font-semibold text-base sm:text-lg mb-1 sm:mb-2">Self-Catering</h3>
-                <p className="text-gray-600 text-xs sm:text-sm">Kitchen facilities</p>
-              </div>
-            </div>
-
-            <div className="text-center mt-8 sm:mt-12">
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="border-sage-600 text-sage-600 bg-transparent w-full sm:w-auto"
+              ))}
+            </dl>
+            <p className="mt-6 text-gray-700">
+              More answers in the{" "}
+              <Link
+                href="/faq"
+                className="font-semibold text-sage-700 underline underline-offset-4 hover:text-sage-800"
               >
-                <Link href="/amenities">View All Amenities</Link>
-              </Button>
-            </div>
-          </div>
-        </section>
-
-        {/* Latest Blog Posts */}
-        <LatestBlogPosts />
-
-        {/* FAQ Section */}
-        <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-10 sm:mb-12 md:mb-16">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">Frequently Asked Questions</h2>
-              <p className="text-base sm:text-lg text-gray-600">Quick answers to common questions about our accommodation</p>
-            </div>
-
-            <div className="space-y-4 sm:space-y-6">
-              <div className="bg-white rounded-lg border border-gray-200 p-4 sm:p-6">
-                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3">Can you accommodate a small team?</h3>
-                <p className="text-gray-700 text-sm sm:text-base">Yes. Our private-ensuite guest rooms can accommodate teams of up to 8 guests, depending on the required room-sharing arrangement. Multi-room bookings are subject to availability.</p>
-              </div>
-
-              <div className="bg-white rounded-lg border border-gray-200 p-4 sm:p-6">
-                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3">How does invoicing work?</h3>
-                <p className="text-gray-700 text-sm sm:text-base">Invoices are provided on request. Monthly rates apply to stays of 28 nights or more; a refundable security deposit may apply to extended stays.</p>
-              </div>
-
-              <div className="bg-white rounded-lg border border-gray-200 p-4 sm:p-6">
-                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3">Is there parking for work vehicles?</h3>
-                <p className="text-gray-700 text-sm sm:text-base">Yes, secure gated parking is available for work vehicles, with CCTV and ADT armed response. If you need to bring a trailer, please confirm with us before booking so we can check space is available.</p>
-              </div>
-
-              <div className="bg-white rounded-lg border border-gray-200 p-4 sm:p-6">
-                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3">Can the team cook?</h3>
-                <p className="text-gray-700 text-sm sm:text-base">Yes, guests have kitchen access.</p>
-              </div>
-
-              <div className="bg-white rounded-lg border border-gray-200 p-4 sm:p-6">
-                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3">How fast can you confirm a booking?</h3>
-                <p className="text-gray-700 text-sm sm:text-base">WhatsApp 074 524 5703 with dates and team size; quotes usually go out the same day.</p>
-              </div>
-
-              <div className="bg-white rounded-lg border border-gray-200 p-4 sm:p-6">
-                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3">Do you have real guest reviews?</h3>
-                <p className="text-gray-700 text-sm sm:text-base">Yes — view our latest verified reviews directly on <a href="https://www.booking.com/hotel/za/60-on-kosmos-cape-town.html" target="_blank" rel="noopener noreferrer" className="text-sage-600 hover:text-sage-700 font-semibold underline">Booking.com</a> and <a href="https://www.airbnb.co.za/rooms/1055447623" target="_blank" rel="noopener noreferrer" className="text-sage-600 hover:text-sage-700 font-semibold underline">Airbnb</a>. Both link directly to the real listings.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-12 sm:py-16 bg-sage-600 text-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">Ready for Your Next Accommodation?</h2>
-            <p className="text-base sm:text-lg mb-6 sm:mb-8 opacity-90">
-              Daily rates from R580/night | Monthly rates for 28+ nights | Group discounts available
+                full FAQ
+              </Link>{" "}
+              and the{" "}
+              <Link
+                href="/guest-information"
+                className="font-semibold text-sage-700 underline underline-offset-4 hover:text-sage-800"
+              >
+                guest information
+              </Link>{" "}
+              page.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-              <Button
-                asChild
-                size="lg"
-                className="bg-white text-sage-600 hover:bg-gray-100 w-full sm:w-auto px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg"
-              >
-                <Link href="/book-now">Book Now</Link>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-sage-700 w-full sm:w-auto px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg bg-transparent"
-              >
-                <a href="https://wa.me/27745245703?text=Hi%2C%20I%27m%20looking%20for%20accommodation%20for%20myself%20or%20my%20team">Get in Touch</a>
-              </Button>
-            </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
 
-      {/* FAQPage Schema (JSON-LD) */}
+      {/* FAQPage schema: mirrors the visible questions exactly */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            mainEntity: [
-              {
-                "@type": "Question",
-                name: "Can you take a crew of 8–10 workers for several months?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "We're a four-room house designed for smaller skilled teams; long labour-crew deployments are usually better served by a rented house near site.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "How does invoicing work?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Invoices are provided on request. Monthly rates apply to stays of 28 nights or more; a refundable security deposit may apply to extended stays.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Is there parking for work vehicles?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Yes, secure gated parking is available for work vehicles, with CCTV and ADT armed response. If you need to bring a trailer, please confirm with us before booking so we can check space is available.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Can the team cook?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Yes, guests have kitchen access.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "How fast can you confirm a booking?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "WhatsApp 074 524 5703 with dates and team size; quotes usually go out the same day.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Do you have real guest reviews?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Yes — view our latest verified reviews directly on Booking.com and Airbnb. Both link directly to the real listings.",
-                },
-              },
-            ],
+            mainEntity: faqs.map((faq) => ({
+              "@type": "Question",
+              name: faq.question,
+              acceptedAnswer: { "@type": "Answer", text: faq.answer },
+            })),
           }),
         }}
       />
