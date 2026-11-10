@@ -87,6 +87,14 @@ export const rooms = [
   },
 ] as const
 
+// Owner-confirmed group offer (Nov 2026): 10% off the nightly room rates when
+// one group books all four rooms direct for at least two nights. It does not
+// stack with the 7+ or 28+ night rates, which are already discounted.
+export const groupOffer = {
+  discountPercent: 10,
+  minNights: 2,
+} as const
+
 export const priceRangeLabel = "R464 - R840"
 
 // Review platforms with genuine, live listings. Deliberately no hard-coded

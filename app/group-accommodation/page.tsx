@@ -5,19 +5,19 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle2, ChevronDown, DoorOpen, MessageCircle, Phone, ShieldCheck, Users } from "lucide-react"
 import { FAQSchema } from "@/components/faq-schema"
-import { business, capacity, rooms, stayTerms } from "@/lib/site-facts"
+import { business, capacity, groupOffer, rooms, stayTerms } from "@/lib/site-facts"
 
 const pageUrl = "https://www.60onkosmos.co.za/group-accommodation"
 
-// All four rooms together, at the published per-room rates. No separate
-// group price is invented here: these are the room rates added up.
+// Standard totals are the published per-room rates added up. The group rate
+// is the owner-confirmed discount in site-facts applied to the nightly total.
 const allRoomsNightly = rooms.reduce((total, room) => total + room.price, 0)
 const allRoomsWeekly = rooms.reduce((total, room) => total + room.weeklyPrice, 0)
-const perPersonNightly = Math.round(allRoomsNightly / capacity.maxGuests)
-const perPersonWeekly = Math.round(allRoomsWeekly / capacity.maxGuests)
+const groupNightly = Math.round((allRoomsNightly * (100 - groupOffer.discountPercent)) / 100)
+const perPersonGroup = Math.round(groupNightly / capacity.maxGuests)
 const rand = (amount: number) => `R${amount.toLocaleString("en-ZA").replace(/ /g, " ")}`
 
-const description = `Book all ${capacity.roomCount} private ensuite rooms at 60 on Kosmos, Bellville South. Sleeps up to ${capacity.maxGuests} adults, with the property to your group alone. From ${rand(allRoomsNightly)} a night for all rooms.`
+const description = `Book all ${capacity.roomCount} private ensuite rooms at 60 on Kosmos, Bellville South. Sleeps up to ${capacity.maxGuests} adults, with the property to your group alone. Group rate ${rand(groupNightly)} a night for all rooms, direct bookings of ${groupOffer.minNights} nights or more.`
 
 export const metadata: Metadata = {
   title: `Group Accommodation Bellville | Sleeps ${capacity.maxGuests} Adults`,
@@ -87,7 +87,7 @@ const faqs = [
   },
   {
     question: "What does it cost to book all the rooms?",
-    answer: `All ${capacity.roomCount} rooms together come to ${rand(allRoomsNightly)} a night for stays of 1 to 6 nights, and ${rand(allRoomsWeekly)} a night for stays of 7 to 27 nights. That is the published rate for each room added up.`,
+    answer: `Book all ${capacity.roomCount} rooms directly with us for ${groupOffer.minNights} nights or more and the group rate is ${rand(groupNightly)} a night, which is ${groupOffer.discountPercent}% off the standard ${rand(allRoomsNightly)}. A single night is ${rand(allRoomsNightly)}. Stays of 7 to 27 nights are ${rand(allRoomsWeekly)} a night, with no further group discount.`,
   },
   {
     question: "How do we pay?",
@@ -122,7 +122,8 @@ export default function GroupAccommodationPage() {
           </h1>
           <p className="text-base sm:text-lg text-gray-200 text-pretty mb-8">
             Book all {capacity.roomCount} private ensuite rooms and have 60 on Kosmos to your group alone. Sleeps up
-            to {capacity.maxGuests} adults, from {rand(allRoomsNightly)} a night for all rooms.
+            to {capacity.maxGuests} adults, at a group rate of {rand(groupNightly)} a night for all rooms when you book
+            direct for {groupOffer.minNights} nights or more.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-3">
             <Button asChild size="lg" className="bg-green-600 hover:bg-green-700 text-white">
@@ -201,7 +202,7 @@ export default function GroupAccommodationPage() {
                   </tr>
                 ))}
                 <tr className="bg-sage-50 border-t-2 border-sage-600">
-                  <th scope="row" className="px-4 py-3 text-sm font-bold text-gray-900">All four rooms</th>
+                  <th scope="row" className="px-4 py-3 text-sm font-bold text-gray-900">All four rooms, standard</th>
                   <td className="px-4 py-3 text-sm text-gray-700">Up to {capacity.maxGuests} adults</td>
                   <td className="px-4 py-3 text-sm font-bold text-gray-900 text-right">{rand(allRoomsNightly)}</td>
                   <td className="px-4 py-3 text-sm font-bold text-gray-900 text-right">{rand(allRoomsWeekly)}</td>
@@ -209,10 +210,20 @@ export default function GroupAccommodationPage() {
               </tbody>
             </table>
           </div>
+          <div className="mt-6 rounded-lg border-2 border-sage-600 bg-white p-5">
+            <p className="text-sm font-semibold uppercase tracking-wide text-sage-700">Group rate, book direct</p>
+            <p className="mt-1 text-2xl font-bold text-gray-900">
+              {rand(groupNightly)} a night for all four rooms
+            </p>
+            <p className="mt-2 text-sm text-gray-700">
+              That is {groupOffer.discountPercent}% off the standard {rand(allRoomsNightly)}, or about R{perPersonGroup}{" "}
+              per person a night with {capacity.maxGuests} adults sharing. It applies when one group books all{" "}
+              {capacity.roomCount} rooms directly with us for {groupOffer.minNights} nights or more.
+            </p>
+          </div>
           <p className="text-sm text-gray-600 mt-4">
-            Rates are per room, per night. With {capacity.maxGuests} adults sharing, all four rooms work out to about
-            R{perPersonNightly} per person a night, or about R{perPersonWeekly} on stays of 7 nights or more. Final
-            rates depend on dates and availability.
+            Rates in the table are per room, per night. Stays of 7 nights or more are already at the lower 7-27 night
+            rate, so the group discount is not added on top. Final rates depend on dates and availability.
           </p>
         </div>
       </section>
