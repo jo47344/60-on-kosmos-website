@@ -56,14 +56,14 @@ export default function HomePage() {
       price: "From R650/night",
       image: "/images/deluxe-twin-room.jpg",
       bestFor: "Best for professionals wanting extra comfort",
-      features: ["2 single beds", "Private ensuite", "Bar fridge", "Premium linens"],
+      features: ["2 single beds", "Private ensuite", "Bar fridge", "Free WiFi"],
     },
     {
       name: "Double Room",
       price: "From R680/night",
       image: "/images/sage-double-room.png",
       bestFor: "Best for solo professionals or couples",
-      features: ["Double bed", "Private ensuite", "Bar fridge", "Premium bedding"],
+      features: ["Double bed", "Private ensuite", "Bar fridge", "Free WiFi"],
     },
     {
       name: "Triple Room",
@@ -287,11 +287,8 @@ export default function HomePage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-              <Card className="text-center hover:shadow-lg transition-shadow ring-2 ring-sage-600">
+              <Card className="text-center hover:shadow-lg transition-shadow">
                 <CardContent className="pt-6 sm:pt-8 pb-6 sm:pb-8 px-4">
-                  <div className="bg-sage-600 text-white text-xs font-bold px-3 py-1 rounded-full inline-block mb-4">
-                    MOST POPULAR
-                  </div>
                   <Briefcase className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 text-sage-600" />
                   <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Project Teams & Contractors</h3>
 <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4">
