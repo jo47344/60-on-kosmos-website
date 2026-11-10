@@ -93,6 +93,9 @@ export const rooms = [
 export const groupOffer = {
   discountPercent: 10,
   minNights: 2,
+  // Booking deposit that confirms a group booking (owner-confirmed, Nov 2026).
+  // Separate from the refundable security deposit on longer stays.
+  depositPercent: 50,
 } as const
 
 export const priceRangeLabel = "R464 - R840"
