@@ -26,6 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "monthly-accommodation", priority: 0.9, freq: "daily" as const },
     { url: "self-catering-rooms", priority: 0.85, freq: "weekly" as const },
     { url: "accommodation-bellville-south", priority: 0.95, freq: "weekly" as const },
+    { url: "group-accommodation", priority: 0.9, freq: "weekly" as const },
     { url: "contractors", priority: 0.95, freq: "weekly" as const },
     { url: "corporate", priority: 0.9, freq: "weekly" as const },
 
