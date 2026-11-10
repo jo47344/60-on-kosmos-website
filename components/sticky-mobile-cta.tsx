@@ -13,7 +13,7 @@ export function StickyMobileCTA() {
             className="flex-1 bg-white text-green-600 hover:bg-gray-100 font-semibold rounded-full shadow-md"
           >
             <a
-              href="https://wa.me/27745245703?text=Hi%2C%20I%20want%20to%20book%20a%20room%20at%2060%20on%20Kosmos%20from%20[insert%20dates]"
+              href="https://wa.me/27745245703?text=Hi%2C%20I%27d%20like%20to%20book%20a%20room%20at%2060%20on%20Kosmos.%20My%20dates%20are%3A%20"
               target="_blank"
               rel="noopener noreferrer"
             >

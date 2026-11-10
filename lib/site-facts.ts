@@ -16,8 +16,9 @@ export const business = {
   phoneIntl: "+27745245703",
   whatsappNumber: "27745245703",
   email: "info@60onkosmos.co.za",
-  latitude: -33.9347,
-  longitude: 18.6489,
+  // Matches the Google Business Profile and Booking.com map pins.
+  latitude: -33.9176,
+  longitude: 18.64,
 } as const
 
 export const stayTerms = {
@@ -32,7 +33,9 @@ export const stayTerms = {
 
 export const capacity = {
   roomCount: 4,
-  maxGuests: 8,
+  // Owner-confirmed: 9 sleeping places across the four rooms, counting the
+  // Double Room as two people sharing the double bed (a couple).
+  maxGuests: 9,
 } as const
 
 // Confirmed facilities. Do not describe these as "full kitchen," "24/7
@@ -93,4 +96,6 @@ export const priceRangeLabel = "R464 - R840"
 export const reviewPlatforms = {
   booking: "https://www.booking.com/hotel/za/60-on-kosmos-cape-town.html",
   airbnb: "https://www.airbnb.co.za/rooms/1055447623",
+  // Google Business Profile share link, supplied by the owner.
+  google: "https://share.google/cQTqA5TBvE9XDki11",
 } as const

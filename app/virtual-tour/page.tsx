@@ -65,12 +65,12 @@ export default function VirtualTourPage() {
     },
     {
       title: "Deluxe Twin Room",
-      description: "Premium twin room with navy blue headboards and upgraded furnishings.",
-      features: ["2 Single Beds", "Bar Fridge", "Premium Bedding", "Ensuite Bathroom", "Free WiFi"],
+      description: "Twin room with two single beds, navy blue headboards and a bar fridge.",
+      features: ["2 Single Beds", "Bar Fridge", "Ensuite Bathroom", "Free WiFi"],
       images: [
         {
           src: "/images/deluxe-twin-navy.jpg",
-          alt: "Deluxe twin room at 60 on Kosmos with navy blue headboards and premium bedding",
+          alt: "Deluxe twin room at 60 on Kosmos with navy blue headboards",
           caption: "Deluxe twin with navy blue accents",
         },
         {

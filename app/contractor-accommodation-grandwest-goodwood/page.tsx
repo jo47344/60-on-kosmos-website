@@ -9,7 +9,7 @@ import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
 export const metadata: Metadata = {
   title: "Contractor Accommodation Near GrandWest & Goodwood | 60 on Kosmos",
   description:
-    "Practical accommodation for project teams working near GrandWest, Goodwood, Parow and N1 City. 4 private ensuite rooms, up to 8 guests, weekly/monthly rates, company invoicing.",
+    "Practical accommodation for project teams working near GrandWest, Goodwood, Parow and N1 City. 4 private ensuite rooms, up to 9 guests, weekly/monthly rates, company invoicing.",
   alternates: {
     canonical: "https://www.60onkosmos.co.za/contractor-accommodation-grandwest-goodwood",
   },
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Contractor Accommodation Near GrandWest & Goodwood | 60 on Kosmos",
     description:
-      "Practical accommodation for project teams working near GrandWest, Goodwood, Parow and N1 City. 4 private ensuite rooms, up to 8 guests.",
+      "Practical accommodation for project teams working near GrandWest, Goodwood, Parow and N1 City. 4 private ensuite rooms, up to 9 guests.",
     url: "https://www.60onkosmos.co.za/contractor-accommodation-grandwest-goodwood",
     type: "website",
     images: [
@@ -89,7 +89,7 @@ export default function GrandWestGoodwoodPage() {
             </h1>
             <p className="text-lg sm:text-xl text-gray-300 mb-8 text-pretty max-w-3xl mx-auto">
               Practical, private-ensuite accommodation in Bellville South for project teams working the GrandWest,
-              Goodwood, Parow and N1 City corridor. Suitable for teams of up to 8 guests, with weekly and monthly
+              Goodwood, Parow and N1 City corridor. Suitable for teams of up to 9 guests, with weekly and monthly
               stay options and company invoicing.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -232,7 +232,7 @@ export default function GrandWestGoodwoodPage() {
 
           <h3 className="text-2xl font-bold text-center mb-6">Rooms & what&apos;s included</h3>
           <p className="text-center text-gray-600 max-w-2xl mx-auto mb-8">
-            4 private ensuite rooms at 60 on Kosmos, suitable for small teams of up to 8 guests in total.
+            4 private ensuite rooms at 60 on Kosmos, suitable for small teams of up to 9 guests in total.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
             {[

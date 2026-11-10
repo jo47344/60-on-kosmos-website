@@ -56,14 +56,14 @@ export default function HomePage() {
       price: "From R650/night",
       image: "/images/deluxe-twin-room.jpg",
       bestFor: "Best for professionals wanting extra comfort",
-      features: ["2 single beds", "Private ensuite", "Bar fridge", "Premium linens"],
+      features: ["2 single beds", "Private ensuite", "Bar fridge", "Free WiFi"],
     },
     {
       name: "Double Room",
       price: "From R680/night",
       image: "/images/sage-double-room.png",
       bestFor: "Best for solo professionals or couples",
-      features: ["Double bed", "Private ensuite", "Bar fridge", "Premium bedding"],
+      features: ["Double bed", "Private ensuite", "Bar fridge", "Free WiFi"],
     },
     {
       name: "Triple Room",
@@ -94,7 +94,7 @@ export default function HomePage() {
             </h1>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-6 sm:mb-8 px-2 text-pretty">
               Private ensuite rooms, secure parking, WiFi, weekly cleaning and flexible company rates for teams of
-              up to eight.
+              up to nine.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 px-4 sm:px-0">
               <Button
@@ -287,11 +287,8 @@ export default function HomePage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-              <Card className="text-center hover:shadow-lg transition-shadow ring-2 ring-sage-600">
+              <Card className="text-center hover:shadow-lg transition-shadow">
                 <CardContent className="pt-6 sm:pt-8 pb-6 sm:pb-8 px-4">
-                  <div className="bg-sage-600 text-white text-xs font-bold px-3 py-1 rounded-full inline-block mb-4">
-                    MOST POPULAR
-                  </div>
                   <Briefcase className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 text-sage-600" />
                   <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Project Teams & Contractors</h3>
 <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4">
@@ -402,7 +399,7 @@ export default function HomePage() {
             <div className="space-y-4 sm:space-y-6">
               <div className="bg-white rounded-lg border border-gray-200 p-4 sm:p-6">
                 <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3">Can you accommodate a small team?</h3>
-                <p className="text-gray-700 text-sm sm:text-base">Yes. Our private-ensuite guest rooms can accommodate teams of up to 8 guests, depending on the required room-sharing arrangement. Multi-room bookings are subject to availability.</p>
+                <p className="text-gray-700 text-sm sm:text-base">Yes. Our four private-ensuite rooms sleep up to 9 guests in total: two twin rooms, a triple room, and a double room where two people share the double bed. Multi-room bookings are subject to availability.</p>
               </div>
 
               <div className="bg-white rounded-lg border border-gray-200 p-4 sm:p-6">
@@ -471,10 +468,10 @@ export default function HomePage() {
             mainEntity: [
               {
                 "@type": "Question",
-                name: "Can you take a crew of 8–10 workers for several months?",
+                name: "Can you accommodate a small team?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "We're a four-room house designed for smaller skilled teams; long labour-crew deployments are usually better served by a rented house near site.",
+                  text: "Yes. Our four private-ensuite rooms sleep up to 9 guests in total: two twin rooms, a triple room, and a double room where two people share the double bed. Multi-room bookings are subject to availability.",
                 },
               },
               {

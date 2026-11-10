@@ -59,7 +59,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "blog", priority: 0.7, freq: "weekly" as const },
     { url: "blog/corporate-relocation-cape-town", priority: 0.6, freq: "monthly" as const },
     { url: "blog/digital-nomad-guide-bellville-south", priority: 0.6, freq: "monthly" as const },
-    { url: "blog/medical-staff-guide-tygerberg-hospital", priority: 0.6, freq: "monthly" as const },
     { url: "blog/international-student-housing-uwc", priority: 0.5, freq: "monthly" as const },
   ]
 

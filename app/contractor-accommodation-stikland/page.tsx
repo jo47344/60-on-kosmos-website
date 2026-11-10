@@ -56,7 +56,7 @@ const faqs = [
   {
     question: "Can you accommodate a small site crew?",
     answer:
-      "Yes. We have 4 private ensuite rooms, suitable for small teams of up to 8 guests in total. Tell us your team size and we'll confirm the best room combination and a company rate.",
+      "Yes. We have 4 private ensuite rooms, suitable for small teams of up to 9 guests in total. Tell us your team size and we'll confirm the best room combination and a company rate.",
   },
   {
     question: "Do you provide corporate invoicing?",

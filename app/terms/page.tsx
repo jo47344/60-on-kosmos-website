@@ -143,7 +143,7 @@ export default function TermsPage() {
             <div className="bg-sage-50 border border-sage-200 rounded-lg p-6">
               <p className="text-muted-foreground mb-3">Every room rate includes:</p>
               <ul className="space-y-2 text-muted-foreground">
-                <li>• Private ensuite bathroom with hot water 24/7</li>
+                <li>• Private ensuite bathroom</li>
                 <li>• Weekly cleaning service with fresh linen and towel change</li>
                 <li>• Free high-speed WiFi</li>
                 <li>• Secure parking (one vehicle per room)</li>

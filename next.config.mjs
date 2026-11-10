@@ -54,8 +54,9 @@ const nextConfig = {
       { source: '/near-cput-bellville', destination: 'https://www.60onkosmos.co.za/accommodation-near-cput', permanent: true },
       { source: '/near-uwc-bellville', destination: 'https://www.60onkosmos.co.za/accommodation-near-uwc', permanent: true },
       { source: '/uwc-student-accommodation', destination: 'https://www.60onkosmos.co.za/accommodation-near-uwc', permanent: true },
-      // Nursing-student blog post consolidated into the broader Tygerberg medical-staff guide.
-      { source: '/blog/nursing-student-accommodation-tygerberg', destination: 'https://www.60onkosmos.co.za/blog/medical-staff-guide-tygerberg-hospital', permanent: true },
+      // Tygerberg Hospital posts retired (not a target market). Both point straight at the blog index.
+      { source: '/blog/nursing-student-accommodation-tygerberg', destination: 'https://www.60onkosmos.co.za/blog', permanent: true },
+      { source: '/blog/medical-staff-guide-tygerberg-hospital', destination: 'https://www.60onkosmos.co.za/blog', permanent: true },
     ]
   },
   async headers() {

@@ -112,8 +112,8 @@ export const metadata: Metadata = {
   other: {
     "geo.region": "ZA-WC",
     "geo.placename": "Bellville South, Cape Town",
-    "geo.position": "-33.9347;18.6489",
-    ICBM: "-33.9347, 18.6489",
+    "geo.position": "-33.9176;18.64",
+    ICBM: "-33.9176, 18.64",
   },
     generator: 'v0.app'
 }

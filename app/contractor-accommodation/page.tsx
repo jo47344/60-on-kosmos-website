@@ -99,7 +99,6 @@ export default function ContractorAccommodationPage() {
         "Weekly cleaning included",
         "Secure parking",
       ],
-      highlight: false,
     },
     {
       name: "Deluxe Twin Room",
@@ -115,12 +114,10 @@ export default function ContractorAccommodationPage() {
         "2 comfortable single beds",
         "Private ensuite bathroom",
         "Bar fridge",
-        "Premium bedding",
         "Free WiFi",
         "Weekly cleaning included",
         "Secure parking",
       ],
-      highlight: false,
     },
     {
       name: "Double Room",
@@ -137,11 +134,9 @@ export default function ContractorAccommodationPage() {
         "Private ensuite bathroom",
         "Bar fridge",
         "Free WiFi",
-        "Premium bedding",
         "Weekly cleaning included",
         "Secure parking",
       ],
-      highlight: true,
     },
     {
       name: "Triple Room",
@@ -162,7 +157,6 @@ export default function ContractorAccommodationPage() {
         "Weekly cleaning included",
         "Secure parking",
       ],
-      highlight: false,
     },
   ]
 
@@ -185,7 +179,7 @@ export default function ContractorAccommodationPage() {
     },
     {
       question: "Can you accommodate work crews or teams?",
-      answer: "Yes, our Triple Room accommodates 3 people, and we can arrange multiple rooms for larger teams — up to 8 guests in total. Many contractors book several rooms for their crews on project assignments. Tell us your team size for a company quote.",
+      answer: "Yes, our Triple Room accommodates 3 people, and we can arrange multiple rooms for larger teams — up to 9 guests in total. Many contractors book several rooms for their crews on project assignments. Tell us your team size for a company quote.",
     },
     {
       question: "Do you provide company invoices?",
@@ -226,7 +220,7 @@ export default function ContractorAccommodationPage() {
             </h1>
             <p className="text-lg sm:text-xl text-gray-300 mb-6 text-pretty max-w-3xl mx-auto">
               Practical accommodation for small contractor, worker, technician, installer and project teams in
-              Bellville and Cape Town&apos;s northern suburbs. Suitable for teams of up to 8 guests, with private
+              Bellville and Cape Town&apos;s northern suburbs. Suitable for teams of up to 9 guests, with private
               ensuite rooms, WiFi, secure parking, weekly and monthly stay options and company invoicing.
             </p>
             <p className="text-white font-semibold mb-8 text-pretty max-w-2xl mx-auto">
@@ -361,7 +355,7 @@ export default function ContractorAccommodationPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Choose Your Room Combination</h2>
-            <p className="text-lg text-gray-600">Four room types, suitable for teams of up to 8 guests</p>
+            <p className="text-lg text-gray-600">Four room types, suitable for teams of up to 9 guests</p>
             <p className="text-sm text-gray-600 mt-4">Prices below are per room, not per person, unless stated otherwise. A refundable security deposit may apply to stays of seven nights or longer. Terms on quotation.</p>
           </div>
 
@@ -369,11 +363,8 @@ export default function ContractorAccommodationPage() {
             {roomTypes.map((room, index) => (
               <Card
                 key={index}
-                className={`overflow-hidden ${room.highlight ? "ring-2 ring-sage-600 shadow-xl" : "hover:shadow-lg"} transition-all`}
+                className="overflow-hidden hover:shadow-lg transition-all"
               >
-                {room.highlight && (
-                  <div className="bg-sage-600 text-white text-center py-2 text-sm font-semibold">MOST POPULAR</div>
-                )}
                 <div className="relative h-40">
                   <Image
                     src={room.image || "/placeholder.svg"}
@@ -416,7 +407,7 @@ export default function ContractorAccommodationPage() {
                   <Button
                     asChild
                     size="sm"
-                    className={`w-full ${room.highlight ? "bg-sage-600 hover:bg-sage-700" : "bg-gray-900 hover:bg-gray-800"}`}
+                    className="w-full bg-sage-700 hover:bg-sage-800"
                   >
                     <a
                       href={`https://wa.me/27745245703?text=Hi%2C%20I%27m%20interested%20in%20the%20${encodeURIComponent(room.name)}%20at%20${room.price}`}
