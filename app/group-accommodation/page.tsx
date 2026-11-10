@@ -91,7 +91,7 @@ const faqs = [
   },
   {
     question: "How do we pay?",
-    answer: `Direct bookings are paid by EFT; we don't take cash. Banking details are on your quotation. Check-in is from ${stayTerms.checkIn} and check-out is by ${stayTerms.checkOut}.`,
+    answer: `A ${groupOffer.depositPercent}% deposit confirms a group booking. Direct bookings are paid by EFT; we don't take cash. Banking details are on your quotation. Check-in is from ${stayTerms.checkIn} and check-out is by ${stayTerms.checkOut}.`,
   },
   {
     question: "Can we book fewer than four rooms?",
@@ -220,6 +220,9 @@ export default function GroupAccommodationPage() {
               per person a night with {capacity.maxGuests} adults sharing. It applies when one group books all{" "}
               {capacity.roomCount} rooms directly with us for {groupOffer.minNights} nights or more.
             </p>
+            <p className="mt-2 text-sm text-gray-700">
+              A {groupOffer.depositPercent}% deposit confirms your group booking.
+            </p>
           </div>
           <p className="text-sm text-gray-600 mt-4">
             Rates in the table are per room, per night. Stays of 7 nights or more are already at the lower 7-27 night
@@ -293,7 +296,8 @@ export default function GroupAccommodationPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4">Check your dates</h2>
           <p className="mb-8 text-sage-100">
-            Send us your dates and the number of adults. Quotes usually go out the same day.
+            Send us your dates and the number of adults. Quotes usually go out the same day, and a{" "}
+            {groupOffer.depositPercent}% deposit confirms the booking.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-3">
             <Button asChild size="lg" className="bg-white text-sage-700 hover:bg-gray-100">
