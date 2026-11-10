@@ -94,7 +94,7 @@ export default function HomePage() {
             </h1>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-6 sm:mb-8 px-2 text-pretty">
               Private ensuite rooms, secure parking, WiFi, weekly cleaning and flexible company rates for teams of
-              up to eight.
+              up to nine.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 px-4 sm:px-0">
               <Button
@@ -402,7 +402,7 @@ export default function HomePage() {
             <div className="space-y-4 sm:space-y-6">
               <div className="bg-white rounded-lg border border-gray-200 p-4 sm:p-6">
                 <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3">Can you accommodate a small team?</h3>
-                <p className="text-gray-700 text-sm sm:text-base">Yes. Our private-ensuite guest rooms can accommodate teams of up to 8 guests, depending on the required room-sharing arrangement. Multi-room bookings are subject to availability.</p>
+                <p className="text-gray-700 text-sm sm:text-base">Yes. Our four private-ensuite rooms sleep up to 9 guests in total: two twin rooms, a triple room, and a double room where two people share the double bed. Multi-room bookings are subject to availability.</p>
               </div>
 
               <div className="bg-white rounded-lg border border-gray-200 p-4 sm:p-6">
@@ -474,7 +474,7 @@ export default function HomePage() {
                 name: "Can you accommodate a small team?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Yes. Our private-ensuite guest rooms can accommodate teams of up to 8 guests, depending on the required room-sharing arrangement. Multi-room bookings are subject to availability.",
+                  text: "Yes. Our four private-ensuite rooms sleep up to 9 guests in total: two twin rooms, a triple room, and a double room where two people share the double bed. Multi-room bookings are subject to availability.",
                 },
               },
               {

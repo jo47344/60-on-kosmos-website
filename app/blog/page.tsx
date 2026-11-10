@@ -8,24 +8,14 @@ import { Calendar, ArrowRight, Phone } from "lucide-react"
 export const metadata: Metadata = {
   title: "Accommodation Blog | 60 on Kosmos",
   description:
-    "Expert accommodation guides for Bellville South. Tips for medical staff, students, contractors, and visitors staying near UWC, Tygerberg Hospital, and Cape Town.",
+    "Expert accommodation guides for Bellville South. Tips for contractors, project teams, students and visitors staying near UWC, CPUT and Cape Town's northern suburbs.",
   keywords:
-    "bellville south accommodation blog, cape town visitor guide, tygerberg hospital tips, uwc student housing guide, bellville south living",
+    "bellville south accommodation blog, cape town visitor guide, contractor accommodation guide, uwc student housing guide, bellville south living",
   alternates: { canonical: "https://www.60onkosmos.co.za/blog" },
 }
 
 export default function BlogPage() {
   const posts = [
-    {
-      slug: "medical-staff-guide-tygerberg-hospital",
-      title: "Complete Guide for Medical Staff Relocating to Tygerberg Hospital",
-      excerpt:
-        "Moving to Tygerberg for a locum position or permanent role? Everything you need to know about accommodation, transport, and settling in.",
-      image: "/images/sage-double-room.png",
-      category: "Medical Staff",
-      date: "2025-01-10",
-      readTime: "8 min read",
-    },
     {
       slug: "international-student-housing-uwc",
       title: "Short- and Medium-Term Accommodation for International Students Visiting UWC and CPUT",
