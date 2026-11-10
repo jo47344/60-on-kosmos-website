@@ -107,6 +107,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/group-accommodation" className="hover:text-white transition-colors text-sm">
+                  For Groups (all four rooms)
+                </Link>
+              </li>
+              <li>
                 <Link href="/contractor-accommodation-n1-city-parow" className="hover:text-white transition-colors text-sm">
                   Near Parow
                 </Link>
