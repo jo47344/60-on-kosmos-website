@@ -16,8 +16,9 @@ export const business = {
   phoneIntl: "+27745245703",
   whatsappNumber: "27745245703",
   email: "info@60onkosmos.co.za",
-  latitude: -33.9347,
-  longitude: 18.6489,
+  // Matches the Google Business Profile and Booking.com map pins.
+  latitude: -33.9176,
+  longitude: 18.64,
 } as const
 
 export const stayTerms = {

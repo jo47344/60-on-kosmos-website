@@ -39,8 +39,8 @@ export function LocalBusinessSchema() {
         "@type": "GeoCircle",
         geoMidpoint: {
           "@type": "GeoCoordinates",
-          latitude: -33.9347,
-          longitude: 18.6489,
+          latitude: business.latitude,
+          longitude: business.longitude,
         },
         geoRadius: "20000",
       },
@@ -111,7 +111,7 @@ export function LocalBusinessSchema() {
       "https://www.instagram.com/60onkosmos",
       reviewPlatforms.airbnb,
       reviewPlatforms.booking,
-      "https://www.google.com/maps/place/60+on+Kosmos+Bellville+South",
+      "https://www.google.com/maps/place/?q=place_id:ChIJK1OUJiBRzB0RTn3iFG4MYj4",
     ],
     amenityFeature: [
       { "@type": "LocationFeatureSpecification", name: "Free WiFi", value: true },
@@ -298,15 +298,6 @@ export function LocalBusinessSchema() {
           "@type": "Place",
           name: "Blackheath Industrial Park (Kuilsriver)",
           description: "Industrial park - 10km from 60 on Kosmos",
-        },
-      },
-      {
-        "@type": "ListItem",
-        position: 8,
-        item: {
-          "@type": "Place",
-          name: "Tygerberg Hospital",
-          description: "Major hospital - 8km from 60 on Kosmos",
         },
       },
     ],

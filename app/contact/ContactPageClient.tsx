@@ -73,7 +73,7 @@ export default function ContactPageClient() {
             </p>
             <p className="text-green-700">Call or WhatsApp for availability and quotations</p>
           </div>
-          <p className="text-sm text-gray-500 mt-3">We reply to all enquiries within 24 hours.</p>
+          <p className="text-sm text-gray-500 mt-3">We usually reply the same day.</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">

@@ -16,14 +16,6 @@ export function StructuredData() {
     publisher: {
       "@id": "https://www.60onkosmos.co.za/#lodgingbusiness",
     },
-    potentialAction: {
-      "@type": "SearchAction",
-      target: {
-        "@type": "EntryPoint",
-        urlTemplate: "https://www.60onkosmos.co.za/search?q={search_term_string}",
-      },
-      "query-input": "required name=search_term_string",
-    },
     inLanguage: "en-ZA",
   }
 

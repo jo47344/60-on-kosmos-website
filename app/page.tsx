@@ -471,10 +471,10 @@ export default function HomePage() {
             mainEntity: [
               {
                 "@type": "Question",
-                name: "Can you take a crew of 8–10 workers for several months?",
+                name: "Can you accommodate a small team?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "We're a four-room house designed for smaller skilled teams; long labour-crew deployments are usually better served by a rented house near site.",
+                  text: "Yes. Our private-ensuite guest rooms can accommodate teams of up to 8 guests, depending on the required room-sharing arrangement. Multi-room bookings are subject to availability.",
                 },
               },
               {
