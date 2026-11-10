@@ -17,7 +17,7 @@ const groupNightly = Math.round((allRoomsNightly * (100 - groupOffer.discountPer
 const perPersonGroup = Math.round(groupNightly / capacity.maxGuests)
 const rand = (amount: number) => `R${amount.toLocaleString("en-ZA").replace(/ /g, " ")}`
 
-const description = `Book all ${capacity.roomCount} private ensuite rooms at 60 on Kosmos, Bellville South. Sleeps up to ${capacity.maxGuests} adults, with the property to your group alone. Group rate ${rand(groupNightly)} a night for all rooms, direct bookings of ${groupOffer.minNights} nights or more.`
+const description = `Book all ${capacity.roomCount} private ensuite rooms at 60 on Kosmos, Bellville South. Sleeps up to ${capacity.maxGuests} adults, with the property to your group alone. From R${perPersonGroup} per person a night (${rand(groupNightly)} for all rooms), direct bookings of ${groupOffer.minNights} nights or more.`
 
 export const metadata: Metadata = {
   title: `Group Accommodation Bellville | Sleeps ${capacity.maxGuests} Adults`,
@@ -122,8 +122,8 @@ export default function GroupAccommodationPage() {
           </h1>
           <p className="text-base sm:text-lg text-gray-200 text-pretty mb-8">
             Book all {capacity.roomCount} private ensuite rooms and have 60 on Kosmos to your group alone. Sleeps up
-            to {capacity.maxGuests} adults, at a group rate of {rand(groupNightly)} a night for all rooms when you book
-            direct for {groupOffer.minNights} nights or more.
+            to {capacity.maxGuests} adults, from R{perPersonGroup} per person a night ({rand(groupNightly)} for all four
+            rooms) when you book direct for {groupOffer.minNights} nights or more.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-3">
             <Button asChild size="lg" className="bg-green-600 hover:bg-green-700 text-white">
@@ -212,13 +212,15 @@ export default function GroupAccommodationPage() {
           </div>
           <div className="mt-6 rounded-lg border-2 border-sage-600 bg-white p-5">
             <p className="text-sm font-semibold uppercase tracking-wide text-sage-700">Group rate, book direct</p>
-            <p className="mt-1 text-2xl font-bold text-gray-900">
-              {rand(groupNightly)} a night for all four rooms
+            <p className="mt-1 text-2xl font-bold text-gray-900">From R{perPersonGroup} per person a night</p>
+            <p className="mt-1 text-base font-semibold text-gray-900">
+              {rand(groupNightly)} a night for all four rooms, sleeping up to {capacity.maxGuests} adults
             </p>
             <p className="mt-2 text-sm text-gray-700">
-              That is {groupOffer.discountPercent}% off the standard {rand(allRoomsNightly)}, or about R{perPersonGroup}{" "}
-              per person a night with {capacity.maxGuests} adults sharing. It applies when one group books all{" "}
-              {capacity.roomCount} rooms directly with us for {groupOffer.minNights} nights or more.
+              The per-person figure is with {capacity.maxGuests} adults sharing; a smaller group pays the same{" "}
+              {rand(groupNightly)} between fewer people. That is {groupOffer.discountPercent}% off the standard{" "}
+              {rand(allRoomsNightly)}, and it applies when one group books all {capacity.roomCount} rooms directly with
+              us for {groupOffer.minNights} nights or more.
             </p>
             <p className="mt-2 text-sm text-gray-700">
               A {groupOffer.depositPercent}% deposit confirms your group booking.
