@@ -89,7 +89,7 @@ export default function RoomsPage() {
       price: "R650/night",
       weeklyPrice: "R585/night",
       monthlyPrice: "R520/night",
-      image: "/images/deluxe-twin-room.jpg",
+      image: "/images/deluxe-twin-navy-hd.jpg",
       alt: "Deluxe twin room guesthouse Bellville South - premium navy blue headboards with quality bedding and palm artwork",
       bestFor: "Best for 2 professionals wanting extra comfort.",
       features: [
@@ -355,7 +355,7 @@ export default function RoomsPage() {
             </div>
             <div className="relative h-64 lg:h-80">
               <Image
-                src="/images/ensuite-bathroom.jpg"
+                src="/images/ensuite-shower.jpg"
                 alt="Modern ensuite bathroom guesthouse Bellville South - gray marble tiles, white fixtures and shower"
                 fill
                 className="object-cover rounded-lg professional-image"

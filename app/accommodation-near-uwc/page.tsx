@@ -92,7 +92,7 @@ export default function AccommodationNearUwcPage() {
       <section className="relative bg-gray-900 py-16 md:py-24">
         <div className="absolute inset-0">
           <Image
-            src="/images/main-entrance.png"
+            src="/images/house-front.jpg"
             alt="60 on Kosmos guest accommodation near UWC"
             fill
             className="object-cover opacity-30"

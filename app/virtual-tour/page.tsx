@@ -23,7 +23,7 @@ export default function VirtualTourPage() {
         {
           type: "youtube",
           embedId: "YOUR_YOUTUBE_VIDEO_ID", // Replace with your actual YouTube video ID
-          thumbnail: "/images/main-entrance.png",
+          thumbnail: "/images/house-front.jpg",
           caption: "Complete property walkthrough",
         },
       ],
@@ -35,7 +35,7 @@ export default function VirtualTourPage() {
       features: ["2 Single Beds", "Ensuite Bathroom", "No Bar Fridge", "Free WiFi", "Work Desk"],
       images: [
         {
-          src: "/images/twin-room-yellow.png",
+          src: "/images/twin-room-yellow.jpg",
           alt: "Standard twin room at 60 on Kosmos Bellville South with two single beds and yellow accents",
           caption: "Twin room with comfortable beds and modern decor",
         },
@@ -69,7 +69,7 @@ export default function VirtualTourPage() {
       features: ["2 Single Beds", "Bar Fridge", "Ensuite Bathroom", "Free WiFi"],
       images: [
         {
-          src: "/images/deluxe-twin-navy.jpg",
+          src: "/images/deluxe-twin-navy-hd.jpg",
           alt: "Deluxe twin room at 60 on Kosmos with navy blue headboards",
           caption: "Deluxe twin with navy blue accents",
         },
@@ -108,17 +108,17 @@ export default function VirtualTourPage() {
       features: ["Outdoor Seating", "BBQ Area", "Secure Parking", "CCTV & ADT Armed Response", "Gardens"],
       images: [
         {
-          src: "/images/outdoor-seating.png",
+          src: "/images/outdoor-seating.jpg",
           alt: "Covered outdoor seating area at 60 on Kosmos Bellville South for guest relaxation",
           caption: "Covered outdoor dining and seating area",
         },
         {
-          src: "/images/outdoor-area.png",
-          alt: "Additional outdoor space at 60 on Kosmos guesthouse with seating",
-          caption: "Outdoor relaxation space",
+          src: "/images/walkway-security.jpg",
+          alt: "Paved walkway at 60 on Kosmos with CCTV camera and ADT armed response sign",
+          caption: "CCTV and ADT armed response",
         },
         {
-          src: "/images/exterior-courtyard.png",
+          src: "/images/courtyard-parking.jpg",
           alt: "Secure parking courtyard at 60 on Kosmos with CCTV and ADT armed response",
           caption: "Secure parking behind locked gates",
         },
@@ -130,12 +130,12 @@ export default function VirtualTourPage() {
       features: ["Main Entrance", "Secure Perimeter", "Well-lit Exterior", "Easy Access", "CCTV Cameras"],
       images: [
         {
-          src: "/images/exterior-building.png",
+          src: "/images/house-front.jpg",
           alt: "60 on Kosmos guesthouse exterior building in Bellville South Cape Town",
           caption: "60 on Kosmos guesthouse exterior",
         },
         {
-          src: "/images/main-entrance.png",
+          src: "/images/entrance-door.jpg",
           alt: "Main entrance to 60 on Kosmos with secure access",
           caption: "Secure main entrance with intercom",
         },

@@ -74,7 +74,7 @@ export const metadata: Metadata = {
       "Self-catering ensuite rooms for contractors, project teams and professionals in Bellville South. Secure parking, free WiFi, weekly cleaning.",
     images: [
       {
-        url: "/images/main-entrance.png",
+        url: "/images/house-front.jpg",
         width: 1200,
         height: 630,
         alt: "60 on Kosmos Guesthouse Bellville South Exterior",
@@ -87,7 +87,7 @@ export const metadata: Metadata = {
     title: "60 on Kosmos - Affordable Accommodation Bellville South",
     description:
       "Self-catering ensuite rooms for contractors and project teams in Bellville South. Secure parking & free WiFi.",
-    images: ["/images/main-entrance.png"],
+    images: ["/images/house-front.jpg"],
   },
   robots: {
     index: true,

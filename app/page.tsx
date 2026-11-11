@@ -54,7 +54,7 @@ export default function HomePage() {
     {
       name: "Deluxe Twin Room",
       price: "From R650/night",
-      image: "/images/deluxe-twin-room.jpg",
+      image: "/images/deluxe-twin-navy-hd.jpg",
       bestFor: "Best for professionals wanting extra comfort",
       features: ["2 single beds", "Private ensuite", "Bar fridge", "Free WiFi"],
     },
@@ -80,7 +80,7 @@ export default function HomePage() {
         {/* Hero Section */}
         <section className="relative h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] flex items-center justify-center">
           <Image
-            src="/images/main-entrance.png"
+            src="/images/house-front.jpg"
             alt="60 on Kosmos Guesthouse Bellville South - accommodation for project teams and contractors in Cape Town"
             fill
             className="object-cover brightness-50"

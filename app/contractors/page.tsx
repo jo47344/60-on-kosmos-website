@@ -35,7 +35,7 @@ export default function ContractorsPage() {
       <section className="relative bg-gray-900 py-14 sm:py-20">
         <div className="absolute inset-0">
           <Image
-            src="/images/main-entrance.png"
+            src="/images/house-front.jpg"
             alt="60 on Kosmos guesthouse exterior for contractor accommodation"
             fill
             className="object-cover opacity-30"

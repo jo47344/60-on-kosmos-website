@@ -71,7 +71,7 @@ export default function CenturyCityPage() {
       <section className="relative bg-gray-900 py-16 md:py-24">
         <div className="absolute inset-0">
           <Image
-            src="/images/main-entrance.png"
+            src="/images/house-front.jpg"
             alt="60 on Kosmos accommodation near Century City"
             fill
             className="object-cover opacity-30"

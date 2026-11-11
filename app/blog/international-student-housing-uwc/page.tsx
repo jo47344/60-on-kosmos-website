@@ -43,7 +43,7 @@ export default function InternationalStudentHousingPage() {
         {/* Featured Image */}
         <div className="relative h-96 rounded-lg overflow-hidden mb-8">
           <Image
-            src="/images/twin-room-yellow.png"
+            src="/images/twin-room-yellow.jpg"
             alt="International student accommodation near UWC and CPUT Bellville"
             fill
             className="object-cover"

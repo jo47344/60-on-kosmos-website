@@ -109,7 +109,7 @@ export default function GroupAccommodationPage() {
       <section className="relative bg-gray-900 py-14 sm:py-20">
         <div className="absolute inset-0">
           <Image
-            src="/images/outdoor-seating.png"
+            src="/images/outdoor-seating.jpg"
             alt="Covered outdoor seating area at 60 on Kosmos, Bellville South"
             fill
             className="object-cover opacity-30"

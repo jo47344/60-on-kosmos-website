@@ -109,7 +109,7 @@ export default function ContractorAccommodationPage() {
       capacity: "1-2 People",
       layout: "2 Single Beds",
       bestFor: "2 professionals wanting extra comfort",
-      image: "/images/deluxe-twin-room.jpg",
+      image: "/images/deluxe-twin-navy-hd.jpg",
       features: [
         "2 comfortable single beds",
         "Private ensuite bathroom",
@@ -202,7 +202,7 @@ export default function ContractorAccommodationPage() {
       <section className="relative bg-gray-900 py-16 md:py-24">
         <div className="absolute inset-0">
           <Image
-            src="/images/main-entrance.png"
+            src="/images/house-front.jpg"
             alt="60 on Kosmos Contractor Accommodation Bellville South"
             fill
             className="object-cover opacity-30"

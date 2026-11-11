@@ -21,7 +21,7 @@ export default function BlogPage() {
       title: "Short- and Medium-Term Accommodation for International Students Visiting UWC and CPUT",
       excerpt:
         "A practical guide to guest accommodation for exchange, research and short-programme students visiting UWC or CPUT — not a campus residence.",
-      image: "/images/twin-room-yellow.png",
+      image: "/images/twin-room-yellow.jpg",
       category: "Students",
       date: "2025-01-09",
       readTime: "7 min read",
@@ -31,7 +31,7 @@ export default function BlogPage() {
       title: "Corporate Relocation to Cape Town: Why Choose Bellville South",
       excerpt:
         "Relocating employees to Cape Town? Discover why Bellville South offers the best value for corporate accommodation.",
-      image: "/images/outdoor-seating.png",
+      image: "/images/outdoor-seating.jpg",
       category: "Business",
       date: "2025-01-08",
       readTime: "6 min read",
@@ -41,7 +41,7 @@ export default function BlogPage() {
       title: "Digital Nomad Guide: Working Remotely from Bellville South",
       excerpt:
         "Why Bellville South is Cape Town's best-kept secret for digital nomads. Fast WiFi, low cost, great community.",
-      image: "/images/deluxe-twin-navy.jpg",
+      image: "/images/deluxe-twin-navy-hd.jpg",
       category: "Remote Work",
       date: "2025-01-07",
       readTime: "7 min read",
