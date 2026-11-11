@@ -498,6 +498,32 @@ export default function ContractorAccommodationPage() {
               </div>
             </div>
           </div>
+          <div className="grid md:grid-cols-2 gap-6 mt-12">
+            <figure className="relative h-64 md:h-72 rounded-lg overflow-hidden">
+              <Image
+                src="/images/secure-parking-van.jpg"
+                alt="Contractor work van parked overnight inside the locked gates at 60 on Kosmos, Bellville South"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+              <figcaption className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-sm px-4 py-2">
+                Work vans and bakkies stay inside the locked gates overnight, on CCTV
+              </figcaption>
+            </figure>
+            <figure className="relative h-64 md:h-72 rounded-lg overflow-hidden">
+              <Image
+                src="/images/courtyard-parking.jpg"
+                alt="Paved, gated parking courtyard at 60 on Kosmos guesthouse in Bellville South"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+              <figcaption className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-sm px-4 py-2">
+                Paved, gated parking for your team's vehicles
+              </figcaption>
+            </figure>
+          </div>
         </div>
       </section>
 

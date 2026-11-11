@@ -122,6 +122,11 @@ export default function VirtualTourPage() {
           alt: "Secure parking courtyard at 60 on Kosmos with CCTV and ADT armed response",
           caption: "Secure parking behind locked gates",
         },
+        {
+          src: "/images/secure-parking-van.jpg",
+          alt: "Contractor work van parked overnight inside the gates at 60 on Kosmos",
+          caption: "Work vans parked safely inside the gates overnight",
+        },
       ],
     },
     {
