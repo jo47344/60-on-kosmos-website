@@ -101,7 +101,7 @@ export function LocalBusinessSchema() {
     ],
     image: [
       "https://www.60onkosmos.co.za/images/main-entrance.png",
-      "https://www.60onkosmos.co.za/images/sage-double-room.png",
+      "https://www.60onkosmos.co.za/images/double-room-sage.jpg",
       "https://www.60onkosmos.co.za/images/twin-room-yellow.png",
       "https://www.60onkosmos.co.za/images/triple-room-full.jpg",
     ],

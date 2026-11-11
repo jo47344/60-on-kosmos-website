@@ -61,14 +61,14 @@ export default function HomePage() {
     {
       name: "Double Room",
       price: "From R680/night",
-      image: "/images/sage-double-room.png",
+      image: "/images/double-room-sage.jpg",
       bestFor: "Best for solo professionals or couples",
       features: ["Double bed", "Private ensuite", "Bar fridge", "Free WiFi"],
     },
     {
       name: "Triple Room",
       price: "From R840/night",
-      image: "/images/triple-room-full.jpg",
+      image: "/images/triple-room-view.jpg",
       bestFor: "Best for 3-person crews",
       features: ["3 single beds", "Private ensuite", "From R224/person monthly", "Best value"],
     },

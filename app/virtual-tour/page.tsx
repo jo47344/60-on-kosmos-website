@@ -52,7 +52,7 @@ export default function VirtualTourPage() {
       features: ["Double Bed", "Ensuite Bathroom", "Bar Fridge", "Free WiFi", "Wardrobe"],
       images: [
         {
-          src: "/images/sage-double-room.png",
+          src: "/images/double-room-sage.jpg",
           alt: "Double room at 60 on Kosmos Bellville South with sage green decor and double bed",
           caption: "Double room with modern sage green styling",
         },

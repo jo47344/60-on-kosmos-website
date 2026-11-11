@@ -107,7 +107,7 @@ export default function RoomsPage() {
       price: "R680/night",
       weeklyPrice: "R612/night",
       monthlyPrice: "R544/night",
-      image: "/images/sage-double-room.png",
+      image: "/images/double-room-sage.jpg",
       alt: "Double room guesthouse Bellville South - self-catering accommodation Cape Town near UWC and Tygerberg Hospital with ensuite bathroom",
       bestFor: "Best for solo professionals, couples, or site supervisors.",
       features: [
@@ -127,7 +127,7 @@ export default function RoomsPage() {
       weeklyPrice: "R756/night",
       monthlyPrice: "R672/night",
       perPerson: "From R224/person/night on monthly stays",
-      image: "/images/triple-room-full.jpg",
+      image: "/images/triple-room-view.jpg",
       alt: "Triple room guesthouse Bellville South - spacious room with multiple beds, desk and tea station for contractor crews",
       bestFor: "Best value for 3-person contractor crews.",
       features: [

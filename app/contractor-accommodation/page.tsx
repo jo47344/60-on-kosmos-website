@@ -128,7 +128,7 @@ export default function ContractorAccommodationPage() {
       capacity: "1-2 People",
       layout: "1 Double Bed",
       bestFor: "Solo professionals, couples, or site supervisors",
-      image: "/images/sage-double-room.png",
+      image: "/images/double-room-sage.jpg",
       features: [
         "Spacious double bed",
         "Private ensuite bathroom",
@@ -147,7 +147,7 @@ export default function ContractorAccommodationPage() {
       capacity: "3 People",
       layout: "3 Single Beds",
       bestFor: "3-person contractor crews",
-      image: "/images/triple-room-full.jpg",
+      image: "/images/triple-room-view.jpg",
       features: [
         "3 comfortable single beds",
         "Private ensuite bathroom",

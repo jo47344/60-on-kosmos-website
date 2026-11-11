@@ -11,7 +11,7 @@ export function LatestBlogPosts() {
       title: "Corporate Relocation Guide: Bellville & Cape Town",
       excerpt:
         "What HR and project managers need to know about housing contractors and relocating staff to Bellville and Cape Town's northern suburbs.",
-      image: "/images/sage-double-room.png",
+      image: "/images/double-room-sage.jpg",
       category: "Corporate",
       date: "2025-01-10",
     },
