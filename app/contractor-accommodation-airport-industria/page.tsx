@@ -71,7 +71,7 @@ export default function AirportIndustriaPage() {
       <section className="relative bg-gray-900 py-16 md:py-24">
         <div className="absolute inset-0">
           <Image
-            src="/images/exterior-building.png"
+            src="/images/main-entrance.png"
             alt="60 on Kosmos accommodation near Airport Industria"
             fill
             className="object-cover opacity-30"

@@ -24,7 +24,7 @@ export default function ThingsToDoPage() {
       color: "bg-blue-100 text-blue-600",
       description:
         "Historic university campus with beautiful architecture. Visitors can explore the campus, visit the Robben Island Mayibuye Archive, and enjoy the botanical gardens.",
-      image: "/images/exterior-building.png",
+      image: "/images/main-entrance.png",
       activities: ["Campus tours", "Museum visits", "Botanical gardens", "Student events"],
     },
     {

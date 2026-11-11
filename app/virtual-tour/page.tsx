@@ -23,7 +23,7 @@ export default function VirtualTourPage() {
         {
           type: "youtube",
           embedId: "YOUR_YOUTUBE_VIDEO_ID", // Replace with your actual YouTube video ID
-          thumbnail: "/images/exterior-building.png",
+          thumbnail: "/images/main-entrance.png",
           caption: "Complete property walkthrough",
         },
       ],

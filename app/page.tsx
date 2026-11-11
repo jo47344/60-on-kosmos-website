@@ -68,7 +68,7 @@ export default function HomePage() {
     {
       name: "Triple Room",
       price: "From R840/night",
-      image: "/images/triple-room.jpg",
+      image: "/images/triple-room-full.jpg",
       bestFor: "Best for 3-person crews",
       features: ["3 single beds", "Private ensuite", "From R224/person monthly", "Best value"],
     },
@@ -80,7 +80,7 @@ export default function HomePage() {
         {/* Hero Section */}
         <section className="relative h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] flex items-center justify-center">
           <Image
-            src="/images/exterior-building.png"
+            src="/images/main-entrance.png"
             alt="60 on Kosmos Guesthouse Bellville South - accommodation for project teams and contractors in Cape Town"
             fill
             className="object-cover brightness-50"

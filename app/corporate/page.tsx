@@ -34,7 +34,7 @@ export default function CorporatePage() {
       <section className="relative bg-gray-900 py-14 sm:py-20">
         <div className="absolute inset-0">
           <Image
-            src="/images/exterior-building.png"
+            src="/images/main-entrance.png"
             alt="60 on Kosmos guesthouse exterior for corporate accommodation"
             fill
             className="object-cover opacity-30"
