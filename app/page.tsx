@@ -13,11 +13,11 @@ import {
   CheckCircle2,
   Users,
   Briefcase,
-  GraduationCap,
+  FileText,
   ArrowRight,
 } from "lucide-react"
 import { TrustBadges } from "@/components/trust-badges"
-import { LatestBlogPosts } from "@/components/latest-blog-posts"
+import { reviewPlatforms } from "@/lib/site-facts"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -62,7 +62,7 @@ export default function HomePage() {
       name: "Double Room",
       price: "From R680/night",
       image: "/images/double-room-sage.jpg",
-      bestFor: "Best for solo professionals or couples",
+      bestFor: "Best for solo professionals and site supervisors",
       features: ["Double bed", "Private ensuite", "Bar fridge", "Free WiFi"],
     },
     {
@@ -70,7 +70,7 @@ export default function HomePage() {
       price: "From R840/night",
       image: "/images/triple-room-view.jpg",
       bestFor: "Best for 3-person crews",
-      features: ["3 single beds", "Private ensuite", "From R224/person monthly", "Best value"],
+      features: ["3 single beds", "Private ensuite", "R224 per person per night on monthly stays", "Best value"],
     },
   ]
 
@@ -247,7 +247,7 @@ export default function HomePage() {
             <div className="flex flex-col gap-3 text-center mb-8 sm:mb-10">
               <p className="text-sm font-semibold uppercase tracking-widest text-sage-700">Trusted by guests</p>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">Clean, safe, and welcoming</h2>
-              <p className="text-base sm:text-lg text-gray-600">Read verified guest feedback on Booking.com and Google Reviews.</p>
+              <p className="text-base sm:text-lg text-gray-600">Read verified guest feedback on Booking.com, Google and Airbnb.</p>
             </div>
             <div className="grid gap-5 md:grid-cols-3">
               {[
@@ -282,7 +282,7 @@ export default function HomePage() {
                 Who Stays With Us?
               </h2>
               <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-                From construction crews to international students—we welcome project-based teams and working professionals.
+                Built for project teams, contractors and working professionals on site in Cape Town's northern suburbs.
               </p>
             </div>
 
@@ -302,14 +302,14 @@ export default function HomePage() {
 
               <Card className="text-center hover:shadow-lg transition-shadow">
                 <CardContent className="pt-6 sm:pt-8 pb-6 sm:pb-8 px-4">
-                  <GraduationCap className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 text-sage-600" />
-                  <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">International Students</h3>
+                  <FileText className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 text-sage-600" />
+                  <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Booking for a Company?</h3>
                   <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4">
-                    Approximately 5–8 minutes from UWC or CPUT by car, subject to traffic. For exchange, research and
-                    short-programme visits.
+                    Send your dates and team size for a written quote, usually the same day. Invoices are provided on
+                    request for company claims.
                   </p>
                   <Button asChild variant="outline" className="border-sage-600 text-sage-600 bg-transparent w-full">
-                    <Link href="/accommodation-near-uwc">Student Options</Link>
+                    <Link href="/contractor-accommodation#company-enquiry">Get a Company Quote</Link>
                   </Button>
                 </CardContent>
               </Card>
@@ -385,8 +385,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Latest Blog Posts */}
-        <LatestBlogPosts />
 
         {/* FAQ Section */}
         <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
@@ -424,7 +422,7 @@ export default function HomePage() {
 
               <div className="bg-white rounded-lg border border-gray-200 p-4 sm:p-6">
                 <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3">Do you have real guest reviews?</h3>
-                <p className="text-gray-700 text-sm sm:text-base">Yes — view our latest verified reviews directly on <a href="https://www.booking.com/hotel/za/60-on-kosmos-cape-town.html" target="_blank" rel="noopener noreferrer" className="text-sage-600 hover:text-sage-700 font-semibold underline">Booking.com</a> and <a href="https://www.airbnb.co.za/rooms/1055447623" target="_blank" rel="noopener noreferrer" className="text-sage-600 hover:text-sage-700 font-semibold underline">Airbnb</a>. Both link directly to the real listings.</p>
+                <p className="text-gray-700 text-sm sm:text-base">Yes — view our latest verified reviews directly on <a href="https://www.booking.com/hotel/za/60-on-kosmos-cape-town.html" target="_blank" rel="noopener noreferrer" className="text-sage-600 hover:text-sage-700 font-semibold underline">Booking.com</a>, <a href={reviewPlatforms.google} target="_blank" rel="noopener noreferrer" className="text-sage-600 hover:text-sage-700 font-semibold underline">Google</a> and <a href="https://www.airbnb.co.za/rooms/1055447623" target="_blank" rel="noopener noreferrer" className="text-sage-600 hover:text-sage-700 font-semibold underline">Airbnb</a>. Each links directly to the real listing.</p>
               </div>
             </div>
           </div>
@@ -511,7 +509,7 @@ export default function HomePage() {
                 name: "Do you have real guest reviews?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Yes — view our latest verified reviews directly on Booking.com and Airbnb. Both link directly to the real listings.",
+                  text: "Yes — view our latest verified reviews directly on Booking.com, Google and Airbnb. Each links directly to the real listing.",
                 },
               },
             ],
