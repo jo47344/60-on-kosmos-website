@@ -40,7 +40,7 @@ export default function DigitalNomadGuidePage() {
 
         <div className="relative h-96 rounded-lg overflow-hidden mb-8">
           <Image
-            src="/images/deluxe-twin-navy.jpg"
+            src="/images/deluxe-twin-navy-hd.jpg"
             alt="Digital nomad accommodation Bellville South Cape Town with fast WiFi"
             fill
             className="object-cover"

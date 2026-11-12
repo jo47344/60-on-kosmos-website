@@ -40,7 +40,7 @@ export default function CorporateRelocationPage() {
 
         <div className="relative h-96 rounded-lg overflow-hidden mb-8">
           <Image
-            src="/images/outdoor-seating.png"
+            src="/images/outdoor-seating.jpg"
             alt="Corporate accommodation near Cape Town for employee relocation"
             fill
             className="object-cover"

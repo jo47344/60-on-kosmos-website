@@ -79,7 +79,7 @@ export default function StiklandAccommodationPage() {
       <section className="relative bg-gray-900 py-16 md:py-24">
         <div className="absolute inset-0">
           <Image
-            src="/images/exterior-building.png"
+            src="/images/house-front.jpg"
             alt="60 on Kosmos accommodation near Stikland Industrial"
             fill
             className="object-cover opacity-30"

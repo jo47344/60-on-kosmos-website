@@ -24,7 +24,7 @@ export default function ThingsToDoPage() {
       color: "bg-blue-100 text-blue-600",
       description:
         "Historic university campus with beautiful architecture. Visitors can explore the campus, visit the Robben Island Mayibuye Archive, and enjoy the botanical gardens.",
-      image: "/images/exterior-building.png",
+      image: "/images/house-front.jpg",
       activities: ["Campus tours", "Museum visits", "Botanical gardens", "Student events"],
     },
     {
@@ -35,7 +35,7 @@ export default function ThingsToDoPage() {
       color: "bg-green-100 text-green-600",
       description:
         "Modern shopping center with SPAR supermarket, restaurants, pharmacy, banks, and various retail stores. Everything you need for daily essentials.",
-      image: "/images/exterior-courtyard.png",
+      image: "/images/courtyard-parking.jpg",
       activities: ["Grocery shopping", "Banking", "Pharmacy", "Restaurants & takeaways"],
     },
     {
@@ -46,7 +46,7 @@ export default function ThingsToDoPage() {
       color: "bg-purple-100 text-purple-600",
       description:
         "Explore Cape Town's bustling city center and the iconic V&A Waterfront. World-class shopping, dining, entertainment, and the famous Two Oceans Aquarium.",
-      image: "/images/outdoor-seating.png",
+      image: "/images/outdoor-seating.jpg",
       activities: ["Shopping", "Waterfront dining", "Aquarium", "Boat tours"],
     },
     {
@@ -57,7 +57,7 @@ export default function ThingsToDoPage() {
       color: "bg-orange-100 text-orange-600",
       description:
         "One of the New 7 Wonders of Nature. Take the rotating cable car to the summit for breathtaking 360° views of Cape Town, or hike one of many trails.",
-      image: "/images/outdoor-area.png",
+      image: "/images/walkway-security.jpg",
       activities: ["Cable car rides", "Hiking trails", "Photography", "Nature walks"],
     },
   ]

@@ -89,7 +89,7 @@ export default function RoomsPage() {
       price: "R650/night",
       weeklyPrice: "R585/night",
       monthlyPrice: "R520/night",
-      image: "/images/deluxe-twin-room.jpg",
+      image: "/images/deluxe-twin-navy-hd.jpg",
       alt: "Deluxe twin room guesthouse Bellville South - premium navy blue headboards with quality bedding and palm artwork",
       bestFor: "Best for 2 professionals wanting extra comfort.",
       features: [
@@ -107,7 +107,7 @@ export default function RoomsPage() {
       price: "R680/night",
       weeklyPrice: "R612/night",
       monthlyPrice: "R544/night",
-      image: "/images/sage-double-room.png",
+      image: "/images/double-room-sage.jpg",
       alt: "Double room guesthouse Bellville South - self-catering accommodation Cape Town near UWC and Tygerberg Hospital with ensuite bathroom",
       bestFor: "Best for solo professionals, couples, or site supervisors.",
       features: [
@@ -127,7 +127,7 @@ export default function RoomsPage() {
       weeklyPrice: "R756/night",
       monthlyPrice: "R672/night",
       perPerson: "From R224/person/night on monthly stays",
-      image: "/images/triple-room.jpg",
+      image: "/images/triple-room-view.jpg",
       alt: "Triple room guesthouse Bellville South - spacious room with multiple beds, desk and tea station for contractor crews",
       bestFor: "Best value for 3-person contractor crews.",
       features: [
@@ -355,7 +355,7 @@ export default function RoomsPage() {
             </div>
             <div className="relative h-64 lg:h-80">
               <Image
-                src="/images/ensuite-bathroom.jpg"
+                src="/images/ensuite-shower.jpg"
                 alt="Modern ensuite bathroom guesthouse Bellville South - gray marble tiles, white fixtures and shower"
                 fill
                 className="object-cover rounded-lg professional-image"

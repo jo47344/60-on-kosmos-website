@@ -84,6 +84,14 @@ export function Footer() {
                   Read our Google reviews
                 </a>
                 <a
+                  href={reviewPlatforms.airbnb}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sage-300 hover:text-sage-100 transition-colors block"
+                >
+                  View on Airbnb
+                </a>
+                <a
                   href="https://www.google.com/maps/search/?api=1&query=60+Kosmos+Street,+Bellville+South,+Cape+Town,+7530"
                   target="_blank"
                   rel="noopener noreferrer"

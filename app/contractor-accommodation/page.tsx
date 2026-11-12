@@ -109,7 +109,7 @@ export default function ContractorAccommodationPage() {
       capacity: "1-2 People",
       layout: "2 Single Beds",
       bestFor: "2 professionals wanting extra comfort",
-      image: "/images/deluxe-twin-room.jpg",
+      image: "/images/deluxe-twin-navy-hd.jpg",
       features: [
         "2 comfortable single beds",
         "Private ensuite bathroom",
@@ -128,7 +128,7 @@ export default function ContractorAccommodationPage() {
       capacity: "1-2 People",
       layout: "1 Double Bed",
       bestFor: "Solo professionals, couples, or site supervisors",
-      image: "/images/sage-double-room.png",
+      image: "/images/double-room-sage.jpg",
       features: [
         "Spacious double bed",
         "Private ensuite bathroom",
@@ -147,7 +147,7 @@ export default function ContractorAccommodationPage() {
       capacity: "3 People",
       layout: "3 Single Beds",
       bestFor: "3-person contractor crews",
-      image: "/images/triple-room.jpg",
+      image: "/images/triple-room-view.jpg",
       features: [
         "3 comfortable single beds",
         "Private ensuite bathroom",
@@ -202,7 +202,7 @@ export default function ContractorAccommodationPage() {
       <section className="relative bg-gray-900 py-16 md:py-24">
         <div className="absolute inset-0">
           <Image
-            src="/images/exterior-building.png"
+            src="/images/house-front.jpg"
             alt="60 on Kosmos Contractor Accommodation Bellville South"
             fill
             className="object-cover opacity-30"
@@ -497,6 +497,32 @@ export default function ContractorAccommodationPage() {
                 <p className="text-gray-600">Invoices provided on request for company claims</p>
               </div>
             </div>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6 mt-12">
+            <figure className="relative h-64 md:h-72 rounded-lg overflow-hidden">
+              <Image
+                src="/images/secure-parking-van.jpg"
+                alt="Contractor work van parked overnight inside the locked gates at 60 on Kosmos, Bellville South"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+              <figcaption className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-sm px-4 py-2">
+                Work vans and bakkies stay inside the locked gates overnight, on CCTV
+              </figcaption>
+            </figure>
+            <figure className="relative h-64 md:h-72 rounded-lg overflow-hidden">
+              <Image
+                src="/images/courtyard-parking.jpg"
+                alt="Paved, gated parking courtyard at 60 on Kosmos guesthouse in Bellville South"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+              <figcaption className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-sm px-4 py-2">
+                Paved, gated parking for your team's vehicles
+              </figcaption>
+            </figure>
           </div>
         </div>
       </section>

@@ -5,7 +5,7 @@ import { useEffect } from "react"
 export function PerformanceOptimizations() {
   useEffect(() => {
     // Preload critical resources
-    const preloadLinks = ["/images/sage-double-room.png", "/images/twin-room-yellow.png", "/images/twin-room-black.png"]
+    const preloadLinks = ["/images/double-room-sage.jpg", "/images/twin-room-yellow.jpg", "/images/twin-room-black.png"]
 
     preloadLinks.forEach((href) => {
       const link = document.createElement("link")

@@ -43,7 +43,7 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex-shrink-0">
+          <Link href="/" className="flex-shrink-0 bg-white rounded-lg px-2 py-1 shadow-sm" aria-label="60 on Kosmos home">
             <Logo size="sm" showTagline={false} className="h-14 w-auto" />
           </Link>
 

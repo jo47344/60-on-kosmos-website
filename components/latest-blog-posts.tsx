@@ -11,7 +11,7 @@ export function LatestBlogPosts() {
       title: "Corporate Relocation Guide: Bellville & Cape Town",
       excerpt:
         "What HR and project managers need to know about housing contractors and relocating staff to Bellville and Cape Town's northern suburbs.",
-      image: "/images/sage-double-room.png",
+      image: "/images/double-room-sage.jpg",
       category: "Corporate",
       date: "2025-01-10",
     },
@@ -20,7 +20,7 @@ export function LatestBlogPosts() {
       title: "International Student Housing Near UWC",
       excerpt:
         "Complete guide for international students starting at UWC. Pre-arrival accommodation, costs, and settling in tips.",
-      image: "/images/twin-room-yellow.png",
+      image: "/images/twin-room-yellow.jpg",
       category: "Students",
       date: "2025-01-09",
     },
@@ -29,7 +29,7 @@ export function LatestBlogPosts() {
       title: "Digital Nomad Guide: Working Remotely from Bellville South",
       excerpt:
         "Why Bellville South is Cape Town's best-kept secret for digital nomads. Fast WiFi, low cost, great community.",
-      image: "/images/deluxe-twin-navy.jpg",
+      image: "/images/deluxe-twin-navy-hd.jpg",
       category: "Remote Work",
       date: "2025-01-07",
     },

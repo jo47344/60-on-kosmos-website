@@ -118,7 +118,7 @@ export default function AmenitiesPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="relative h-80 rounded-lg overflow-hidden">
               <Image
-                src="/images/outdoor-seating.png"
+                src="/images/outdoor-seating.jpg"
                 alt="Outdoor dining area guesthouse Bellville South - guest relaxation space at affordable accommodation Cape Town near UWC with covered seating"
                 fill
                 className="object-cover professional-image loading-optimized"
@@ -133,7 +133,7 @@ export default function AmenitiesPage() {
 
             <div className="relative h-80 rounded-lg overflow-hidden">
               <Image
-                src="/images/exterior-courtyard.png"
+                src="/images/courtyard-parking.jpg"
                 alt="Secure parking courtyard 60 on Kosmos guesthouse Bellville South - safe vehicle storage Cape Town accommodation with high walls and CCTV"
                 fill
                 className="object-cover professional-image loading-optimized"
