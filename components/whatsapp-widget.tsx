@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { MessageCircle, X } from "lucide-react"
+import { trackWhatsAppClick, type WhatsAppClickLocation } from "@/lib/analytics"
 
 export function WhatsAppWidget() {
   const [isOpen, setIsOpen] = useState(false)
@@ -28,7 +29,10 @@ export function WhatsAppWidget() {
   const whatsappNumber = "27745245703"
   const defaultMessage = "Hi, I'd like to book a room at 60 on Kosmos. Can you help me with availability and rates?"
 
-  const handleWhatsAppClick = () => {
+  // These are <button>s (not links), so the global link listener in
+  // conversion-tracking.tsx never sees them; track the click here instead.
+  const handleWhatsAppClick = (location: WhatsAppClickLocation) => {
+    trackWhatsAppClick(location)
     const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(defaultMessage)}`
     window.open(url, "_blank", "noopener,noreferrer")
   }
@@ -69,7 +73,7 @@ export function WhatsAppWidget() {
                 </p>
               </div>
               <button
-                onClick={handleWhatsAppClick}
+                onClick={() => handleWhatsAppClick("floating_widget")}
                 className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-4 rounded-lg flex items-center justify-center gap-2 transition-colors"
               >
                 <MessageCircle className="w-5 h-5" />
@@ -92,7 +96,7 @@ export function WhatsAppWidget() {
       {/* Mobile WhatsApp FAB (shows on mobile only) */}
       <div className="fixed bottom-20 right-4 z-40 md:hidden">
         <button
-          onClick={handleWhatsAppClick}
+          onClick={() => handleWhatsAppClick("mobile_floating_button")}
           className="bg-green-600 hover:bg-green-700 text-white rounded-full p-4 shadow-2xl transition-all duration-300 hover:scale-110 flex items-center justify-center"
           aria-label="Chat on WhatsApp"
         >

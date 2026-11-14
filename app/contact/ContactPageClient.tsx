@@ -9,6 +9,8 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react"
+import { attributionPayload, getAttribution } from "@/lib/analytics-attribution"
+import { trackLeadSuccess } from "@/lib/analytics"
 
 export default function ContactPageClient() {
   const router = useRouter()
@@ -27,16 +29,22 @@ export default function ContactPageClient() {
     setError("")
 
     try {
+      const attribution = getAttribution(window.location.pathname)
       const response = await fetch("https://formspree.io/f/mblkjbkg", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
-        body: JSON.stringify({ ...formData, _subject: "New Contact Form Message - 60 on Kosmos" }),
+        body: JSON.stringify({
+          ...formData,
+          _subject: "New Contact Form Message - 60 on Kosmos",
+          ...attributionPayload(attribution),
+        }),
       })
 
       if (response.ok) {
+        trackLeadSuccess("contact_form")
         router.push("/thank-you")
         return
       } else {

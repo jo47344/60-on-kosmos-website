@@ -16,6 +16,7 @@ export function StickyMobileCTA() {
               href="https://wa.me/27745245703?text=Hi%2C%20I%27d%20like%20to%20book%20a%20room%20at%2060%20on%20Kosmos.%20My%20dates%20are%3A%20"
               target="_blank"
               rel="noopener noreferrer"
+              data-track-location="mobile_sticky_bar"
             >
               <MessageCircle className="w-4 h-4 mr-2" />WhatsApp Us
             </a>
