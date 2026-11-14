@@ -8,12 +8,7 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { CheckCircle2, Loader2 } from "lucide-react"
 import { attributionPayload, getAttribution } from "@/lib/analytics-attribution"
-
-declare global {
-  interface Window {
-    gtag?: (...args: unknown[]) => void
-  }
-}
+import { trackLeadSuccess } from "@/lib/analytics"
 
 const initialFormData = {
   companyName: "",
@@ -81,13 +76,7 @@ export function CompanyEnquiryForm() {
       })
 
       if (response.ok) {
-        if (typeof window.gtag === "function") {
-          window.gtag("event", "generate_lead", {
-            form_name: "company_enquiry_form",
-            page_path: window.location.pathname,
-            landing_page: attribution.landingPage,
-          })
-        }
+        trackLeadSuccess("company_enquiry_form")
         setIsSubmitted(true)
         setFormData(initialFormData)
       } else {

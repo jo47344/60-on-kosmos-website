@@ -2,21 +2,10 @@
 
 import { useEffect } from "react"
 import { initializeAttribution } from "@/lib/analytics-attribution"
-
-declare global {
-  interface Window {
-    gtag?: (...args: unknown[]) => void
-  }
-}
+import { trackEvent, trackWhatsAppClick, type WhatsAppClickLocation } from "@/lib/analytics"
 
 function sendEvent(action: string, label: string) {
-  if (typeof window !== "undefined" && typeof window.gtag === "function") {
-    window.gtag("event", action, {
-      event_category: "engagement",
-      event_label: label,
-      page_path: window.location.pathname,
-    })
-  }
+  trackEvent(action, { event_category: "engagement", event_label: label }, label)
 }
 
 // Tracks interaction events only (which button/link/form was used, and on
@@ -36,7 +25,8 @@ export function ConversionTracking() {
       if (href.startsWith("tel:")) {
         sendEvent("phone_click", "call_button")
       } else if (href.includes("wa.me") || href.includes("whatsapp.com")) {
-        sendEvent("whatsapp_click", "whatsapp_button")
+        const location = (link.dataset.trackLocation as WhatsAppClickLocation | undefined) || "link"
+        trackWhatsAppClick(location)
       } else if (href.startsWith("mailto:")) {
         sendEvent("email_click", "email_link")
       } else if (href.startsWith("/check-availability")) {
@@ -52,6 +42,8 @@ export function ConversionTracking() {
       const form = event.target as HTMLFormElement | null
       if (!form) return
       const formName = form.dataset.formName || "unnamed_form"
+      // An attempt only: completed leads are recorded separately as
+      // "generate_lead" after Formspree confirms the submission.
       sendEvent("form_submit_attempt", formName)
     }
 

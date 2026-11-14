@@ -10,6 +10,8 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Calendar, Mail, Phone, User, Loader2, MessageCircle, ShieldCheck, Wifi, Car } from "lucide-react"
 import { business, rooms, reviewPlatforms, stayTerms } from "@/lib/site-facts"
+import { attributionPayload, getAttribution } from "@/lib/analytics-attribution"
+import { trackLeadSuccess } from "@/lib/analytics"
 
 const fromPrice = Math.min(...rooms.map((room) => room.price))
 
@@ -75,16 +77,18 @@ export default function BookNowClientPage() {
     }
 
     try {
+      const attribution = getAttribution(window.location.pathname)
       const response = await fetch("https://formspree.io/f/mblkjbkg", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, ...attributionPayload(attribution) }),
       })
 
       if (response.ok) {
+        trackLeadSuccess("book_now_form")
         router.push("/thank-you")
         return
       } else {
