@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { MessageCircle, X } from "lucide-react"
-import { trackWhatsAppClick, type WhatsAppClickLocation } from "@/lib/analytics"
+import { trackWhatsAppClick } from "@/lib/analytics"
 
 export function WhatsAppWidget() {
   const [isOpen, setIsOpen] = useState(false)
@@ -31,8 +31,11 @@ export function WhatsAppWidget() {
 
   // These are <button>s (not links), so the global link listener in
   // conversion-tracking.tsx never sees them; track the click here instead.
-  const handleWhatsAppClick = (location: WhatsAppClickLocation) => {
-    trackWhatsAppClick(location)
+  const handleWhatsAppClick = (buttonLocation: "floating_widget" | "mobile_floating_button") => {
+    trackWhatsAppClick({
+      buttonLocation,
+      ctaText: buttonLocation === "floating_widget" ? "Start Chat on WhatsApp" : "Chat on WhatsApp",
+    })
     const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(defaultMessage)}`
     window.open(url, "_blank", "noopener,noreferrer")
   }
