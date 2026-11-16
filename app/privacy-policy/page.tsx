@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import { AnalyticsOptOut } from "@/components/analytics-opt-out"
 
 export const metadata: Metadata = {
   title: "Privacy Policy | 60 on Kosmos Guest House",
@@ -27,7 +28,7 @@ export default function PrivacyPolicyPage() {
       </section>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <p className="text-sm text-muted-foreground mb-10">Last updated: 12 August 2026</p>
+        <p className="text-sm text-muted-foreground mb-10">Last updated: 16 November 2026</p>
 
         <section className="mb-10">
           <h2 className="text-2xl font-bold text-foreground mb-4">Who We Are</h2>
@@ -51,7 +52,8 @@ export default function PrivacyPolicyPage() {
               <li>• Company name, if you book as a corporate/contractor group</li>
               <li>• Any message content or special requests you provide</li>
               <li>• South African ID or passport details collected on arrival for guest registration</li>
-              <li>• Basic usage data (pages visited) via Google Analytics, once enabled</li>
+              <li>• Basic website usage data (pages visited, buttons used) via Google Analytics</li>
+              <li>• How you found our website (for example a search engine, Google Maps, Facebook, Instagram or a campaign link), submitted with your enquiry</li>
             </ul>
           </div>
         </section>
@@ -65,6 +67,7 @@ export default function PrivacyPolicyPage() {
               <li>• To meet legal guest-registration requirements</li>
               <li>• To send invoices for corporate or contractor bookings, on request</li>
               <li>• To understand how visitors use our website, so we can improve it</li>
+              <li>• To understand which channels (search, maps, social media, campaigns) bring us enquiries and bookings</li>
             </ul>
             <p className="text-muted-foreground mt-3">
               We do not sell your personal information, and we do not use it for marketing without your consent.
@@ -84,7 +87,7 @@ export default function PrivacyPolicyPage() {
                 • <strong>Formspree</strong> — handles and delivers form submissions to our inbox
               </li>
               <li>
-                • <strong>Google Analytics</strong> — anonymised website usage statistics, once enabled
+                • <strong>Google Analytics</strong> — website usage statistics. We do not send your name, phone number, email address or message to Google Analytics
               </li>
             </ul>
             <p className="text-muted-foreground mt-3">
@@ -109,9 +112,13 @@ export default function PrivacyPolicyPage() {
           <h2 className="text-2xl font-bold text-foreground mb-4">Cookies</h2>
           <div className="bg-muted rounded-lg p-6">
             <p className="text-muted-foreground">
-              Our website may use cookies for basic functionality and, once enabled, Google Analytics to
-              understand how visitors use the site. You can disable cookies in your browser settings at any time.
+              We use Google Analytics cookies to understand how visitors use the site. We also keep a small record
+              in your browser of how you first and most recently found our website (for example &quot;Google
+              search&quot; or &quot;Facebook&quot;, the page you arrived on and the date). It contains no contact
+              details, is only sent to us if you submit an enquiry form, and is deleted automatically after 90 days.
+              You can turn this off below, or disable cookies and site data in your browser settings at any time.
             </p>
+            <AnalyticsOptOut />
           </div>
         </section>
 

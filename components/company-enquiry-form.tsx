@@ -8,7 +8,7 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { CheckCircle2, Loader2 } from "lucide-react"
 import { attributionPayload, getAttribution } from "@/lib/analytics-attribution"
-import { trackLeadSuccess } from "@/lib/analytics"
+import { getPendingLeadId, trackLeadSuccess } from "@/lib/analytics"
 
 const initialFormData = {
   companyName: "",
@@ -62,6 +62,7 @@ export function CompanyEnquiryForm() {
 
     try {
       const attribution = getAttribution(window.location.pathname)
+      const leadId = getPendingLeadId("company_enquiry_form")
       const response = await fetch("https://formspree.io/f/mblkjbkg", {
         method: "POST",
         headers: {
@@ -71,12 +72,12 @@ export function CompanyEnquiryForm() {
         body: JSON.stringify({
           formType: "Company Enquiry",
           ...formData,
-          ...attributionPayload(attribution),
+          ...attributionPayload(attribution, { leadId, contactMethod: "Website form – Company enquiry" }),
         }),
       })
 
       if (response.ok) {
-        trackLeadSuccess("company_enquiry_form")
+        trackLeadSuccess("company_enquiry_form", leadId)
         setIsSubmitted(true)
         setFormData(initialFormData)
       } else {

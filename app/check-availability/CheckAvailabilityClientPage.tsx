@@ -9,7 +9,7 @@ import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { CheckCircle, Loader2 } from "lucide-react"
 import { attributionPayload, getAttribution } from "@/lib/analytics-attribution"
-import { trackLeadSuccess } from "@/lib/analytics"
+import { getPendingLeadId, trackLeadSuccess } from "@/lib/analytics"
 
 export default function CheckAvailabilityClientPage() {
   const [formData, setFormData] = useState({
@@ -58,6 +58,7 @@ export default function CheckAvailabilityClientPage() {
 
     try {
       const attribution = getAttribution(window.location.pathname)
+      const leadId = getPendingLeadId("check_availability_form")
       const response = await fetch("https://formspree.io/f/mblkjbkg", {
         method: "POST",
         headers: {
@@ -67,12 +68,12 @@ export default function CheckAvailabilityClientPage() {
         body: JSON.stringify({
           formType: "Check Availability",
           ...formData,
-          ...attributionPayload(attribution),
+          ...attributionPayload(attribution, { leadId, contactMethod: "Website form – Check availability" }),
         }),
       })
 
       if (response.ok) {
-        trackLeadSuccess("check_availability_form")
+        trackLeadSuccess("check_availability_form", leadId)
         setIsSubmitted(true)
         setFormData({
           purpose: "",

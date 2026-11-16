@@ -11,7 +11,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Calendar, Mail, Phone, User, Loader2, MessageCircle, ShieldCheck, Wifi, Car } from "lucide-react"
 import { business, rooms, reviewPlatforms, stayTerms } from "@/lib/site-facts"
 import { attributionPayload, getAttribution } from "@/lib/analytics-attribution"
-import { trackLeadSuccess } from "@/lib/analytics"
+import { getPendingLeadId, trackLeadSuccess } from "@/lib/analytics"
 
 const fromPrice = Math.min(...rooms.map((room) => room.price))
 
@@ -78,17 +78,18 @@ export default function BookNowClientPage() {
 
     try {
       const attribution = getAttribution(window.location.pathname)
+      const leadId = getPendingLeadId("book_now_form")
       const response = await fetch("https://formspree.io/f/mblkjbkg", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
-        body: JSON.stringify({ ...formData, ...attributionPayload(attribution) }),
+        body: JSON.stringify({ ...formData, ...attributionPayload(attribution, { leadId, contactMethod: "Website form – Book now" }) }),
       })
 
       if (response.ok) {
-        trackLeadSuccess("book_now_form")
+        trackLeadSuccess("book_now_form", leadId)
         router.push("/thank-you")
         return
       } else {

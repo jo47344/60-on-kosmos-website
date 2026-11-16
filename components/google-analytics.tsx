@@ -11,6 +11,11 @@ export function GoogleAnalytics() {
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
+            try {
+              if (localStorage.getItem('kosmos_analytics_opt_out') === '1') {
+                window['ga-disable-G-GE9K8ZZ7RL'] = true;
+              }
+            } catch (e) {}
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
