@@ -14,7 +14,22 @@ export const metadata: Metadata = {
 }
 
 export default function VirtualTourPage() {
+  // To add a video to any section: upload it to the 60 on Kosmos YouTube channel, then add
+  // a `videos` entry with the ID from the share link (youtu.be/<THIS PART>).
   const tourSections = [
+    {
+      title: "Property Video Tour",
+      description: "Watch a walkthrough of 60 on Kosmos — the rooms, outdoor areas and secure parking.",
+      features: ["Full Property Tour", "Room Walkthroughs", "Outdoor Areas", "Secure Parking"],
+      videos: [
+        {
+          type: "youtube",
+          embedId: "UlMR67Av9TE",
+          caption: "60 on Kosmos property tour",
+        },
+      ],
+      images: [],
+    },
     {
       title: "Standard Twin Room",
       description: "Comfortable twin beds with ensuite bathroom. Perfect for contractors and budget travelers.",
@@ -36,15 +51,6 @@ export default function VirtualTourPage() {
       title: "Double Room",
       description: "Spacious double room with sage green decor. Ideal for couples and solo travelers.",
       features: ["Double Bed", "Ensuite Bathroom", "Bar Fridge", "Free WiFi", "Wardrobe"],
-      // To add a video: upload it to the 60 on Kosmos YouTube channel, then add an entry
-      // here with the ID from the share link (youtu.be/<THIS PART>).
-      videos: [
-        {
-          type: "youtube",
-          embedId: "UlMR67Av9TE",
-          caption: "Double Room video tour",
-        },
-      ],
       images: [
         {
           src: "/images/double-room-sage.jpg",
@@ -152,7 +158,7 @@ export default function VirtualTourPage() {
     (section.videos ?? []).map((video) => ({
       "@context": "https://schema.org",
       "@type": "VideoObject",
-      name: `${section.title} Tour – 60 on Kosmos Guesthouse, Bellville South`,
+      name: `${video.caption} – 60 on Kosmos Guesthouse, Bellville South`,
       description: section.description,
       thumbnailUrl: `https://i.ytimg.com/vi/${video.embedId}/hqdefault.jpg`,
       uploadDate: "2026-11-20",
