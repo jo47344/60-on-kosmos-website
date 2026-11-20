@@ -14,17 +14,18 @@ export const metadata: Metadata = {
 }
 
 export default function VirtualTourPage() {
+  // To add a video to any section: upload it to the 60 on Kosmos YouTube channel, then add
+  // a `videos` entry with the ID from the share link (youtu.be/<THIS PART>).
   const tourSections = [
     {
-      title: "Welcome Video Tour",
-      description: "Watch a guided tour of our guesthouse facilities and rooms",
-      features: ["Full Property Tour", "Room Walkthroughs", "Amenities Showcase", "Neighbourhood Overview"],
+      title: "Property Video Tour",
+      description: "Watch a walkthrough of 60 on Kosmos — the rooms, outdoor areas and secure parking.",
+      features: ["Full Property Tour", "Room Walkthroughs", "Outdoor Areas", "Secure Parking"],
       videos: [
         {
           type: "youtube",
-          embedId: "YOUR_YOUTUBE_VIDEO_ID", // Replace with your actual YouTube video ID
-          thumbnail: "/images/house-front.jpg",
-          caption: "Complete property walkthrough",
+          embedId: "UlMR67Av9TE",
+          caption: "60 on Kosmos property tour",
         },
       ],
       images: [],
@@ -153,9 +154,28 @@ export default function VirtualTourPage() {
     { name: "Virtual Tour", url: "/virtual-tour" },
   ]
 
+  const videoSchema = tourSections.flatMap((section) =>
+    (section.videos ?? []).map((video) => ({
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      name: `${video.caption} – 60 on Kosmos Guesthouse, Bellville South`,
+      description: section.description,
+      thumbnailUrl: `https://i.ytimg.com/vi/${video.embedId}/hqdefault.jpg`,
+      uploadDate: "2026-11-20",
+      embedUrl: `https://www.youtube.com/embed/${video.embedId}`,
+      contentUrl: `https://www.youtube.com/watch?v=${video.embedId}`,
+    })),
+  )
+
   return (
     <>
       <BreadcrumbSchema items={breadcrumbItems} />
+      {videoSchema.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }}
+        />
+      )}
 
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
@@ -226,16 +246,17 @@ export default function VirtualTourPage() {
 
                   {/* Video Section */}
                   {section.videos && section.videos.length > 0 && (
-                    <div className="grid grid-cols-1 gap-6 mb-8">
+                    <div className="grid grid-cols-1 gap-6 mb-8 max-w-4xl mx-auto">
                       {section.videos.map((video, videoIndex) => (
                         <Card key={videoIndex} className="overflow-hidden hover:shadow-xl transition-shadow">
                           <div className="relative aspect-video bg-gray-900">
                             {video.type === "youtube" ? (
                               <iframe
                                 className="w-full h-full"
-                                src={`https://www.youtube.com/embed/${video.embedId}`}
-                                title={video.caption}
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                src={`https://www.youtube-nocookie.com/embed/${video.embedId}?rel=0`}
+                                title={`${video.caption} – 60 on Kosmos`}
+                                loading="lazy"
+                                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
                                 allowFullScreen
                               />
                             ) : (
