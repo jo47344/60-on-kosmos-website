@@ -16,20 +16,6 @@ export const metadata: Metadata = {
 export default function VirtualTourPage() {
   const tourSections = [
     {
-      title: "Welcome Video Tour",
-      description: "Watch a guided tour of our guesthouse facilities and rooms",
-      features: ["Full Property Tour", "Room Walkthroughs", "Amenities Showcase", "Neighbourhood Overview"],
-      videos: [
-        {
-          type: "youtube",
-          embedId: "YOUR_YOUTUBE_VIDEO_ID", // Replace with your actual YouTube video ID
-          thumbnail: "/images/house-front.jpg",
-          caption: "Complete property walkthrough",
-        },
-      ],
-      images: [],
-    },
-    {
       title: "Standard Twin Room",
       description: "Comfortable twin beds with ensuite bathroom. Perfect for contractors and budget travelers.",
       features: ["2 Single Beds", "Ensuite Bathroom", "No Bar Fridge", "Free WiFi", "Work Desk"],
@@ -50,6 +36,15 @@ export default function VirtualTourPage() {
       title: "Double Room",
       description: "Spacious double room with sage green decor. Ideal for couples and solo travelers.",
       features: ["Double Bed", "Ensuite Bathroom", "Bar Fridge", "Free WiFi", "Wardrobe"],
+      // To add a video: upload it to the 60 on Kosmos YouTube channel, then add an entry
+      // here with the ID from the share link (youtu.be/<THIS PART>).
+      videos: [
+        {
+          type: "youtube",
+          embedId: "UlMR67Av9TE",
+          caption: "Double Room video tour",
+        },
+      ],
       images: [
         {
           src: "/images/double-room-sage.jpg",
@@ -153,9 +148,28 @@ export default function VirtualTourPage() {
     { name: "Virtual Tour", url: "/virtual-tour" },
   ]
 
+  const videoSchema = tourSections.flatMap((section) =>
+    (section.videos ?? []).map((video) => ({
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      name: `${section.title} Tour – 60 on Kosmos Guesthouse, Bellville South`,
+      description: section.description,
+      thumbnailUrl: `https://i.ytimg.com/vi/${video.embedId}/hqdefault.jpg`,
+      uploadDate: "2026-11-20",
+      embedUrl: `https://www.youtube.com/embed/${video.embedId}`,
+      contentUrl: `https://www.youtube.com/watch?v=${video.embedId}`,
+    })),
+  )
+
   return (
     <>
       <BreadcrumbSchema items={breadcrumbItems} />
+      {videoSchema.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }}
+        />
+      )}
 
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
@@ -226,16 +240,17 @@ export default function VirtualTourPage() {
 
                   {/* Video Section */}
                   {section.videos && section.videos.length > 0 && (
-                    <div className="grid grid-cols-1 gap-6 mb-8">
+                    <div className="grid grid-cols-1 gap-6 mb-8 max-w-4xl mx-auto">
                       {section.videos.map((video, videoIndex) => (
                         <Card key={videoIndex} className="overflow-hidden hover:shadow-xl transition-shadow">
                           <div className="relative aspect-video bg-gray-900">
                             {video.type === "youtube" ? (
                               <iframe
                                 className="w-full h-full"
-                                src={`https://www.youtube.com/embed/${video.embedId}`}
-                                title={video.caption}
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                src={`https://www.youtube-nocookie.com/embed/${video.embedId}?rel=0`}
+                                title={`${video.caption} – 60 on Kosmos`}
+                                loading="lazy"
+                                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
                                 allowFullScreen
                               />
                             ) : (
