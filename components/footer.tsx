@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Facebook, Instagram, Mail, Phone, MapPin } from "lucide-react"
+import { Facebook, Instagram, Youtube, Mail, Phone, MapPin } from "lucide-react"
 import { Logo } from "./logo"
 import { reviewPlatforms } from "@/lib/site-facts"
 
@@ -64,6 +64,15 @@ export function Footer() {
                   aria-label="Visit our Instagram page"
                 >
                   <Instagram className="w-6 h-6" />
+                </a>
+                <a
+                  href="https://www.youtube.com/@60onKosmos"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors"
+                  aria-label="Watch 60 on Kosmos on YouTube"
+                >
+                  <Youtube className="w-6 h-6" />
                 </a>
               </div>
               <div className="space-y-2 text-sm">
@@ -184,6 +193,11 @@ export function Footer() {
               <li>
                 <Link href="/student-faq" className="hover:text-white transition-colors">
                   Student FAQ
+                </Link>
+              </li>
+              <li>
+                <Link href="/virtual-tour" className="hover:text-white transition-colors">
+                  Virtual Tour
                 </Link>
               </li>
               <li>

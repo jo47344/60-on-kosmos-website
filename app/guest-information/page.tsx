@@ -3,7 +3,7 @@ import Link from "next/link"
 import { business, stayTerms, rooms as siteRooms } from "@/lib/site-facts"
 
 export const metadata: Metadata = {
-  title: "Guest Information | 60 on Kosmos",
+  title: "Guest Information",
   description:
     "Verified guest information for 60 on Kosmos in Bellville South, including rooms, amenities, rates, arrival times, payment, and contact details.",
   alternates: { canonical: "https://www.60onkosmos.co.za/guest-information" },
