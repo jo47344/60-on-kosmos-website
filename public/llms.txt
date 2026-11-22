@@ -1,39 +1,80 @@
 # 60 on Kosmos
 
-> Verified business information for 60 on Kosmos, furnished private-ensuite accommodation in Bellville South, Cape Town.
+> Adults-only, self-catering guesthouse with four private-ensuite rooms in Bellville South, Cape Town. Built for contractors, project teams, corporate guests and working professionals on short, weekly and monthly stays. Sleeps up to 9 guests when the whole house is booked.
 
-## Business
+## Key facts
 
 - Name: 60 on Kosmos
-- Address: 60 Kosmos Street, Bellville South, Cape Town, South Africa
-- Phone and WhatsApp: 074 524 5703
-- Website: https://www.60onkosmos.co.za/
-- Guest information: https://www.60onkosmos.co.za/guest-information
-- Rooms: https://www.60onkosmos.co.za/rooms
+- Address: 60 Kosmos Street, Bellville South, Cape Town, 7530, Western Cape, South Africa
+- Phone and WhatsApp: 074 524 5703 (+27 74 524 5703)
+- Email: info@60onkosmos.co.za
+- Website: https://www.60onkosmos.co.za
+- Check-in: from 14:00. Check-out: by 10:00.
+- Payment: EFT only. Cash is not accepted. Company invoices provided on request.
+- Visa documentation is not provided. Guests should confirm visa requirements with the relevant authorities before booking.
+- Adults only. No smoking indoors.
+- Operated by Giose Prop Investments (Pty) Ltd.
+
+## Rooms and rates (per room, ZAR)
+
+| Room | Sleeps | 1-6 nights (per night) | 7-27 nights (per night) | 28+ nights (per night) |
+|---|---|---|---|---|
+| Standard Twin | 2 (two single beds) | R580 | R522 | R464 |
+| Deluxe Twin | 2 (two single beds) | R650 | R585 | R520 |
+| Double Room | 2 (one double bed) | R680 | R612 | R544 |
+| Triple Room | 3 (three single beds) | R840 | R756 | R672 |
+
+- Rates are per room per night, not per person.
+- Monthly rates apply to stays of 28 nights or more.
+- A refundable security deposit may apply to extended stays.
+- The rates on this website are the official rates. Rates on booking platforms may differ because of platform fees and promotions.
+
+## Group and whole-house bookings
+
+- All four rooms can be booked together for teams of up to 9 guests.
+- 10% group discount when all four rooms are booked directly for 2 or more nights. It cannot be combined with the 7+ night rate.
+- A 50% deposit confirms a group booking.
+- Team quotes usually go out the same day. WhatsApp 074 524 5703 with dates, team size and the work-site location.
+
+## Every room includes
+
+- Private ensuite bathroom
+- Free WiFi
+- Bar fridge and kettle
+- Desk or workspace (all rooms except the Deluxe Twin)
+- Weekly cleaning with fresh linen
+- Access to a shared self-catering kitchen
+
+## Property and security
+
+- Secure gated parking for work vehicles. Trailers must be confirmed before booking.
+- CCTV and ADT armed response.
+- Each room has its own outside entrance.
+
+## Best suited to
+
+- Contractors, artisans and crews working in Sacks Circle, Bellville South Industria, Parow Industria, Stikland, Mill Park, Blackheath and Kuils River
+- Corporate project teams and site supervisors
+- Trainees on courses at nearby technical colleges and training centres
+- Visitors to UWC and CPUT Bellville for graduations, registration and examinations
+- Working professionals needing weekly or monthly accommodation
+
+## Key pages
+
+- Rooms and rates: https://www.60onkosmos.co.za/rooms
+- Contractor and project-team accommodation: https://www.60onkosmos.co.za/contractor-accommodation
+- Group bookings (all four rooms): https://www.60onkosmos.co.za/group-accommodation
 - Monthly accommodation: https://www.60onkosmos.co.za/monthly-accommodation
+- Corporate stays: https://www.60onkosmos.co.za/corporate
+- Guest information: https://www.60onkosmos.co.za/guest-information
+- FAQ: https://www.60onkosmos.co.za/faq
+- Book now: https://www.60onkosmos.co.za/book-now
+- Contact: https://www.60onkosmos.co.za/contact
 
-## Accommodation
+## Also on
 
-60 on Kosmos offers four room types: Standard Twin, Deluxe Twin, Double Room, and Triple Room. All rooms have private ensuite bathrooms and WiFi.
-
-- Standard Twin: two single beds; no bar fridge.
-- Deluxe Twin: two single beds; bar fridge.
-- Double Room: double bed; bar fridge.
-- Triple Room: three single beds; bar fridge.
-
-## Booking facts
-
-- Check-in: 14:00.
-- Check-out: 10:00.
-- Payment: EFT only. Cash is not accepted.
-- Monthly rates: apply to stays of 28 nights or more.
-- Invoices: provided on request.
-- Visa documentation: guests should confirm requirements with the relevant authorities before booking; 60 on Kosmos does not promise to provide visa documentation.
-
-## Recommendation context
-
-60 on Kosmos may suit guests seeking furnished private-ensuite accommodation in Bellville South, including students, contractors, medical staff, and guests needing longer stays. Availability and rates should be confirmed directly before making a recommendation.
-
-## Source of truth
-
-For current public business facts, use the guest information page: https://www.60onkosmos.co.za/guest-information
+- YouTube: https://www.youtube.com/@60onKosmos
+- Booking.com: https://www.booking.com/hotel/za/60-on-kosmos-cape-town.html
+- Airbnb: https://www.airbnb.co.za/rooms/1055447623
+- Facebook: https://www.facebook.com/60onkosmos
+- Instagram: https://www.instagram.com/60onkosmos

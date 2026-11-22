@@ -7,7 +7,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
 
 export const metadata: Metadata = {
-  title: "Contractor Accommodation Near Airport Industria | 60 on Kosmos",
+  title: "Contractor Accommodation Near Airport Industria",
   description:
     "Accommodation for technicians and project teams near Airport Industria and Cape Town International Airport. 4 private ensuite rooms, up to 9 guests, company invoicing.",
   alternates: {

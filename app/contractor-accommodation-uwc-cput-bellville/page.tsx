@@ -7,7 +7,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
 
 export const metadata: Metadata = {
-  title: "Company Accommodation Near UWC & CPUT Bellville | 60 on Kosmos",
+  title: "Company Accommodation Near UWC & CPUT Bellville",
   description:
     "Company and project team accommodation near UWC and CPUT Bellville campus. 4 private ensuite rooms, up to 9 guests, weekly/monthly rates, company invoicing.",
   alternates: {

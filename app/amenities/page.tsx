@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import Image from "next/image"
 
 export const metadata: Metadata = {
-  title: "Amenities & Services | 60 on Kosmos",
+  title: "Amenities & Services",
   description: "CCTV and ADT armed response, free WiFi, secure gated parking, outdoor areas, communal kitchenette at our Bellville South guesthouse accommodation.",
   keywords:
     "Guesthouse amenities Bellville South, secure accommodation Cape Town, CCTV security guesthouse, free WiFi accommodation Bellville, safe parking Cape Town, outdoor seating guesthouse",

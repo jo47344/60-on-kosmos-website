@@ -8,7 +8,7 @@ import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
 import { FAQSchema } from "@/components/faq-schema"
 
 export const metadata: Metadata = {
-  title: "Monthly Accommodation in Bellville South | 60 on Kosmos",
+  title: "Monthly Accommodation in Bellville South",
   description:
     "Monthly accommodation in Bellville South for project teams. Furnished private-ensuite rooms with WiFi, secure gated parking, communal self-catering facilities and weekly housekeeping included. Invoices are provided on request.",
   alternates: {

@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import ContactPageClient from "./ContactPageClient"
 
 export const metadata: Metadata = {
-  title: "Book & Contact | 60 on Kosmos",
+  title: "Book & Contact",
   description: "Book accommodation or get in touch. Call 074 524 5703 or WhatsApp. Located at 60 Kosmos Street, Bellville South, Cape Town.",
   keywords:
     "Contact guesthouse Bellville South, book accommodation Cape Town, 074 524 5703, 60 Kosmos Street Bellville South, WhatsApp booking, near UWC accommodation contact",
