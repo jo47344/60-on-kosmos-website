@@ -4,7 +4,7 @@ import { CheckCircle } from "lucide-react"
 import { Logo } from "@/components/logo"
 
 export const metadata: Metadata = {
-  title: "Thank You for Your Booking! - 60 on Kosmos Guesthouse",
+  title: "Booking Request Received",
   description: "Your booking request for 60 on Kosmos Guesthouse has been received. We will contact you within 24 hours.",
   robots: {
     index: false,

@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | 60 on Kosmos Guest House",
+  title: "Privacy Policy",
   description: "How 60 on Kosmos Guest House collects, uses, and protects your personal information, in line with South Africa's POPIA.",
   alternates: {
     canonical: "https://www.60onkosmos.co.za/privacy-policy",

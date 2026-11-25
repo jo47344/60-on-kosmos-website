@@ -22,6 +22,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "accommodation-near-uwc", priority: 0.85, freq: "weekly" as const },
     { url: "accommodation-near-cput", priority: 0.85, freq: "weekly" as const },
 
+    { url: "contractor-accommodation-rates", priority: 0.85, freq: "monthly" as const },
+    { url: "construction-worker-accommodation-cape-town", priority: 0.85, freq: "monthly" as const },
+    { url: "accommodation-with-company-invoice-bellville", priority: 0.85, freq: "monthly" as const },
+    { url: "contractor-accommodation-faq", priority: 0.85, freq: "monthly" as const },
+
     // HIGH INTENT - Stay type pages
     { url: "monthly-accommodation", priority: 0.9, freq: "daily" as const },
     { url: "self-catering-rooms", priority: 0.85, freq: "weekly" as const },

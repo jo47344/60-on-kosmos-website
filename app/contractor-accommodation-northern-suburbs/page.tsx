@@ -23,7 +23,7 @@ import { FAQSchema } from "@/components/faq-schema"
 import { capacity, facilities } from "@/lib/site-facts"
 
 export const metadata: Metadata = {
-  title: "Guesthouse in the Northern Suburbs | 60 on Kosmos, Bellville",
+  title: "Accommodation in Cape Town’s Northern Suburbs",
   description:
     "Guesthouse accommodation in the northern suburbs. Located in Bellville South, 60 on Kosmos is ideal for project teams working across the northern suburbs. Secure private ensuite rooms, parking, and corporate invoicing.",
   alternates: {

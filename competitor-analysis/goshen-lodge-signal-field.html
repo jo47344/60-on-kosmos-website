@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Goshen Lodge Signal Field</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@800&family=Instrument+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* VOICE: a competitive-intelligence brief that reads like a good newspaper graphics desk.
+   IDEA: a radio/survey "signal field": every listing a business owns is a transmitter; the contractor searching sits where the signals meet.
+   PICTURE: seeded generative flow field. Particle streams leave each channel node and drift toward the searcher; the trails' density is the online presence.
+   COLOUR and TYPE: white ground, ink, vermilion = Goshen, deep blue = 60 on Kosmos. Sofia Sans Condensed 800 + Instrument Sans.
+   LAYOUT: title band, a full-bleed canvas with a legend panel, then findings, pricing, scorecard, and actions. */
+:root{color-scheme:light dark;--bg:light-dark(#ffffff,#120d0b);--ink:light-dark(#14181c,#f2ede9);--mute:light-dark(#5b6168,#b3aaa4);--line:light-dark(#e4e1dc,#2c2420);--g:light-dark(#ff4a1c,#ff6a40);--k:light-dark(#1d5fd1,#6ea0ff);--panel:light-dark(#f6f4f1,#1b1512)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Instrument Sans",system-ui,sans-serif;overflow-x:clip}
+.band{padding:clamp(28px,4vw,64px) max(5vw,16px)}
+.wrap{max-width:1240px;margin:0 auto}
+h1,h2{font-family:"Sofia Sans Condensed",Impact,sans-serif;font-weight:800;line-height:1.05;text-wrap:balance;margin:0 0 .4em}
+h1{font-size:clamp(34px,5vw,52px)}h2{font-size:clamp(26px,3vw,34px)}
+.lede{font-size:17px;max-width:70ch;color:var(--mute);margin:0}
+.g{color:var(--g)}.k{color:var(--k)}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) 340px;border-block:1px solid var(--line)}
+.fig{position:relative;min-height:520px;background:var(--bg)}
+.fig>canvas{position:absolute;inset:0;width:100%;height:100%}
+.legend{background:var(--panel);padding:24px;border-inline-start:1px solid var(--line);font-size:14px}
+.legend h3{font-size:14px;margin:0 0 8px}
+.legend ul{list-style:none;padding:0;margin:0 0 18px}
+.legend li{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;padding:3px 0;border-bottom:1px solid var(--line)}
+.legend li span:last-child{color:var(--mute);white-space:nowrap}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;vertical-align:1px}
+.ctrl{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+button{font:600 15px "Instrument Sans",sans-serif;min-height:44px;padding:0 16px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer}
+button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
+button:focus-visible{outline:3px solid var(--k);outline-offset:2px}
+.seed{font-size:13px;color:var(--mute);margin-top:8px}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin-top:28px}
+.kpi b{display:block;font:800 clamp(30px,4vw,44px)/1 "Sofia Sans Condensed",sans-serif}
+.kpi span{font-size:14px;color:var(--mute)}
+.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px}
+.cols p,.cols li{max-width:70ch}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:13px;color:var(--mute);font-weight:600}
+td.n{text-align:right;white-space:nowrap}
+.bar{height:10px;border-radius:5px;background:var(--g)}
+.bars div{display:grid;grid-template-columns:200px minmax(0,1fr) 60px;gap:10px;align-items:center;font-size:14px;padding:4px 0}
+.bars .n{text-align:right;white-space:nowrap}
+ol.act li{margin-bottom:12px}
+.note{font-size:13px;color:var(--mute)}
+.src a{color:inherit}
+.scroll{overflow-x:auto}
+@media(max-width:900px){.hero{grid-template-columns:1fr}.legend{border-inline-start:0;border-top:1px solid var(--line)}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.cols{grid-template-columns:1fr}}
+@media(max-width:600px){.fig{min-height:380px}.bars div{grid-template-columns:120px minmax(0,1fr) 48px}table{font-size:13px}.stack thead{display:none}.stack tr{display:grid;padding-block:10px}.stack td{display:flow-root;border:0;padding:3px 0;padding-inline-start:8em;text-align:start}.stack td::before{content:attr(data-l);float:inline-start;width:7.5em;margin-inline-start:-8em;white-space:normal;color:var(--mute)}.stack td:empty{display:none}}
+</style>
+<script>new MutationObserver(()=>{for(const c of document.querySelectorAll('.stack td:not([data-l])')){let i=0,p=c;while(p=p.previousElementSibling)i+=p.colSpan;c.dataset.l=c.closest('table').rows[0].cells[i]?.textContent||''}}).observe(document,{childList:true,subtree:true})</script>
+</head>
+<body>
+
+<header class="band"><div class="wrap">
+<h1><span class="g">Goshen Lodge</span> wins on how many places it shows up, not on rankings or reviews</h1>
+<p class="lede">The four Goodwood and Bellville properties are each listed separately on Google Maps and about eight booking sites, and the business runs three websites. A contractor searching runs into Goshen from many directions. Search data shows its contractor website hardly ranks at all.</p>
+<div class="kpis">
+<div class="kpi"><b class="g">≈14</b><span>separate places Goshen shows up (Google pins, subdomains, OTAs, Facebook)</span></div>
+<div class="kpi"><b>R250</b><span>headline contractor price, per person per night sharing</span></div>
+<div class="kpi"><b>4.5–4.8★</b><span>Google rating per property, 42–156 reviews each</span></div>
+<div class="kpi"><b>1</b><span>keyword the contractor subdomain ranks for in South Africa (Semrush)</span></div>
+</div>
+</div></header>
+
+<section class="hero" aria-label="Generative signal field">
+<div class="fig"><canvas id="cv" role="img" aria-label="Particle streams flow from Goshen Lodge's listings (vermilion) and 60 on Kosmos's website (blue) toward a central contractor searching. Goshen's streams are far denser."></canvas></div>
+<aside class="legend">
+<h3>How the picture works</h3>
+<p style="margin:0 0 14px">Each dot on the outer ring is one channel. It sends out particle streams in proportion to how much it's seen. They drift on a seeded flow field toward the contractor searching, at the centre. The thicker the weave, the more often that business comes up.</p>
+<h3><span class="dot" style="background:var(--g)"></span>Goshen Lodge channels</h3>
+<ul id="lg"></ul>
+<h3><span class="dot" style="background:var(--k)"></span>60 on Kosmos channels</h3>
+<ul id="lk"></ul>
+<div class="ctrl">
+<button id="bBoth" aria-pressed="true">Both</button>
+<button id="bG" aria-pressed="false">Goshen only</button>
+<button id="bK" aria-pressed="false">Kosmos only</button>
+<button id="bSeed">New seed</button>
+</div>
+<div class="seed" id="seedTxt"></div>
+</aside>
+</section>
+
+<section class="band"><div class="wrap cols">
+<div>
+<h2>What they're doing right</h2>
+<ul>
+<li><b>One business shown as four properties.</b> Goodwood, Barnard (Bellville), Spencer and Fitzroy each have their own Google listing and booking-site pages. That's four map pins and four review counts instead of one.</li>
+<li><b>A separate site for each kind of guest.</b> <i>goshenlodge.com</i> is the main site, <i>sacontractors.</i> is for contractors, and <i>hourlyrooms.</i> is for short stays. Each has its own blog and location pages, such as "Guest House in Goodwood" and "Our Locations".</li>
+<li><b>A price per person, in simple tiers.</b> Premium R350, Standard R300, Budget R250 per person per night, sharing. A site manager can multiply that by their crew size in their head.</li>
+<li><b>A capacity number.</b> "Group bookings of up to 102 guests" tells a big contractor straight away that they can house the whole crew.</li>
+<li><b>Built for how contractors' companies pay.</b> They advertise one monthly invoice for the whole stay, no or low deposit, utilities included, weekly linen, and bulk discounts from 10 beds.</li>
+<li><b>Everyday comforts written as specifications.</b> 100+ Mbps Wi-Fi, a 32" Smart TV, secure parking and a self-catering kitchen in every tier.</li>
+<li><b>Listed nearly everywhere.</b> Booking.com, Expedia, Hotels.com, Trip.com, LekkeSlaap and TravelGround, plus Facebook.</li>
+</ul>
+</div>
+<div>
+<h2>Where they're weak</h2>
+<ul>
+<li><b>Low scores on the booking sites.</b> Booking.com rates Fitzroy 5.6 ("Fair") from 69 reviews and Spencer 6.6 from 15. On LekkeSlaap, Spencer scores 2.9/5 and the host 2.8/5.</li>
+<li><b>Their contractor site barely ranks.</b> Of about 163 organic visits a month in South Africa, 97% go to the hourly-rooms site. The contractor site ranks for 1 keyword and gets about 5 visits.</li>
+<li><b>Their details don't agree with each other.</b> Different pages give contractor prices from R250 or R300, different phone numbers (078 240 8278 and 087 265 5005), and different lists of locations. Google trusts a business less when its details don't match across the web.</li>
+<li><b>Their social media is quiet.</b> The Facebook pages show 0 reviews, and their Instagram activity couldn't be confirmed.</li>
+<li><b>Their brand is split.</b> The hourly-rooms site shares a name with the contractor site, which can put corporate bookers off.</li>
+</ul>
+</div>
+</div></section>
+
+<section class="band" style="background:var(--panel)"><div class="wrap">
+<h2>Pricing compared</h2>
+<div class="scroll">
+<table class="stack">
+<thead><tr><th>Offer</th><th>Business</th><th>Price as shown</th><th>Per person</th><th>Long-stay terms</th></tr></thead>
+<tbody>
+<tr><td>Contractor tiers (Budget / Standard / Premium)</td><td>Goshen</td><td class="n">R250 / R300 / R350</td><td class="n">R250–R350 pppn</td><td>Discount from 14+ nights; one monthly invoice</td></tr>
+<tr><td>Spencer studio (sleeps 2), LekkeSlaap</td><td>Goshen</td><td class="n">R563 (was R750)</td><td class="n">≈R282</td><td>25% off for 30+ nights</td></tr>
+<tr><td>Spencer apartment (sleeps 8), LekkeSlaap</td><td>Goshen</td><td class="n">R2,400</td><td class="n">R300</td><td>n/a</td></tr>
+<tr><td>Fitzroy room, TravelGround</td><td>Goshen</td><td class="n">R675 (was R750)</td><td class="n">≈R338</td><td>n/a</td></tr>
+<tr><td>Standard Twin (1–6 nights)</td><td>60 on Kosmos</td><td class="n">R580</td><td class="n">R290</td><td>Monthly rates from 14+ nights</td></tr>
+<tr><td>Triple Room</td><td>60 on Kosmos</td><td class="n">R840</td><td class="n">R280</td><td>Monthly rates from 14+ nights</td></tr>
+</tbody></table>
+</div>
+<p class="note">Your price per person is already in Goshen's range. The difference is that Goshen leads with the price per person, while your site leads with the room price.</p>
+</div></section>
+
+<section class="band"><div class="wrap cols">
+<div>
+<h2>Where Goshen's search traffic comes from</h2>
+<p class="note">Semrush, South Africa database: 65 ranking keywords, about 163 visits a month, Semrush rank 132,142. 9 keywords show a local map pack and 32 show an AI Overview.</p>
+<div class="bars" id="bars"></div>
+<p class="note">Their best keywords are all hourly-room searches, e.g. "hourly rooms cape town" (#1), "hourly rooms in goodwood" (#1) and "rooms per hour near me" (#10, 1,000 searches a month). None is a contractor keyword. Semrush had no data for 60onkosmos.vercel.app, because sites on a shared vercel.app address are rarely tracked.</p>
+</div>
+<div>
+<h2>What 60 on Kosmos should do next</h2>
+<ol class="act">
+<li><b>Lead with the price per person.</b> Put "From R280 per person per night, sharing" above the fold and show tiers by room type, with a calculator: crew size × nights = monthly total.</li>
+<li><b>Show your capacity.</b> State your total beds plainly, e.g. "Sleeps up to X contractors", and add a "whole-crew" quote form.</li>
+<li><b>Publish the paperwork.</b> One monthly tax invoice, VAT, deposit terms, purchase orders accepted, utilities included. Corporate bookers look for these.</li>
+<li><b>Be listed wherever contractors look.</b> List on LekkeSlaap, TravelGround and Booking.com with the same name, address and phone number everywhere. Your clean, ensuite rooms can beat Goshen's 5.6–6.6 scores.</li>
+<li><b>Get Google reviews on purpose.</b> Goshen has 42–156 per property. Ask every crew foreman for a review at checkout, using a QR code on the room door.</li>
+<li><b>Move to your own domain.</b> A vercel.app address limits how much Google trusts the site and isn't tracked by SEO tools. Point your 40 location pages at a .co.za.</li>
+<li><b>Take the contractor keywords they've left open.</b> Their contractor site ranks for 1 keyword, so "contractor accommodation Bellville / Parow / Goodwood / Stikland" are there for the taking.</li>
+</ol>
+</div>
+</div></section>
+
+<footer class="band" style="border-top:1px solid var(--line)"><div class="wrap">
+<p class="note"><b>Method and limits (25 Nov 2026):</b> Your four links couldn't be opened directly from the research environment, so the Booking.com share link and the share.google link weren't confirmed. Figures come from search-engine extracts of goshenlodge.com, its subdomains, Booking.com, LekkeSlaap, TravelGround, Expedia/Hotels.com and Facebook, plus Semrush (ZA). Some Goshen pages contradict each other, so check prices on the live pages before you quote against them. 60 on Kosmos prices are taken from this repository.</p>
+<p class="note src">Sources: <a href="https://www.goshenlodge.com/">goshenlodge.com</a> · <a href="https://www.sacontractors.goshenlodge.com/">sacontractors.goshenlodge.com</a> · <a href="https://www.sacontractors.goshenlodge.com/our-locations">Our Locations</a> · <a href="https://www.hourlyrooms.goshenlodge.com/">hourlyrooms.goshenlodge.com</a> · <a href="https://www.goshenlodge.com/faq">Goshen FAQ</a> · <a href="https://www.lekkeslaap.co.za/accommodation/goshen-lodge-on-64-spencer">LekkeSlaap Spencer</a> · <a href="https://travelground.com/accommodation/goshen-guesthouse">TravelGround Fitzroy</a> · <a href="https://www.booking.com/guest-house/city/za/goodwood.html">Booking.com Goodwood</a> · <a href="https://za.hotels.com/ho3326126048/goshen-lodge-fitzroy-cape-town-south-africa">Hotels.com Fitzroy</a> · <a href="https://www.google.co.za/travel/hotels/entity/ChkInPThotqu7Lc4Gg0vZy8xMXRycnBnejcwEAE">Google Travel Fitzroy</a> · <a href="https://www.facebook.com/GoshenLodgeAccommodation/">Facebook</a></p>
+</div></footer>
+
+<script>
+{
+const G=[
+ ["Google pin: Goodwood",9,"4.7–4.8★"],["Google pin: Barnard (Bellville)",9,"4.7–4.8★"],["Google pin: Spencer",8,"4.7★"],["Google pin: Fitzroy",8,"4.5★ · 42"],
+ ["hourlyrooms. subdomain",10,"~158 visits/mo"],["goshenlodge.com",4,"9 keywords"],["sacontractors. subdomain",2,"1 keyword"],
+ ["Booking.com (Fitzroy)",6,"5.6 · 69"],["Booking.com (Spencer)",4,"6.6 · 15"],["Expedia / Hotels.com",5,"7.2 · 26"],
+ ["LekkeSlaap ×3",4,"2.9–4.2/5"],["TravelGround",3,"4.6/5 · 1"],["Trip.com",2,"listed"],["Facebook",2,"0 reviews"]];
+const K=[["60onkosmos.vercel.app (40+ SEO pages)",7,"shows up in search"]];
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const li=a=>a.map(r=>`<li><span>${esc(r[0])}</span><span>${esc(r[2])}</span></li>`).join("");
+document.getElementById("lg").innerHTML=li(G);document.getElementById("lk").innerHTML=li(K);
+const T=[["hourlyrooms.goshenlodge.com",158],["www.sacontractors…",5],["www.goshenlodge.com",0],["www.hourlyrooms…",0]];
+document.getElementById("bars").innerHTML=T.map(r=>`<div><span>${esc(r[0])}</span><span><span class="bar" style="display:block;width:${Math.max(r[1]/158*100,1)}%"></span></span><span class="n">${r[1]}/mo</span></div>`).join("");
+
+const cv=document.getElementById("cv"),ctx=cv.getContext("2d");
+const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+let seed=(Date.now()%99991)|0,mode="both",raf=0,W=0,H=0,P=[],nodes=[],frame=0;
+const probe=document.createElement("i");probe.style.display="none";document.body.appendChild(probe);
+const css=n=>{probe.style.color=`var(${n})`;return getComputedStyle(probe).color};
+function rng(a){return()=>{a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+let R,perm;
+function noise(x,y){const xi=Math.floor(x),yi=Math.floor(y),xf=x-xi,yf=y-yi;const h=(i,j)=>perm[(perm[(i&255)]+j)&255]/255;const s=t=>t*t*(3-2*t);const a=h(xi,yi),b=h(xi+1,yi),c=h(xi,yi+1),d=h(xi+1,yi+1);const u=s(xf),v=s(yf);return a+(b-a)*u+(c-a)*v+(a-b-c+d)*u*v}
+function setup(){
+ const r=cv.getBoundingClientRect(),dpr=Math.min(devicePixelRatio||1,2);W=r.width;H=r.height;cv.width=W*dpr;cv.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);
+ R=rng(seed);perm=Array.from({length:256},()=>Math.floor(R()*256));
+ const cx=W/2,cy=H/2,rad=Math.min(W,H)*0.42,all=[...G.map(g=>[...g,"g"]),...K.map(k=>[...k,"k"])];
+ nodes=all.map((n,i)=>{const a=i/all.length*Math.PI*2+R()*0.25-Math.PI/2;const rr=rad*(0.82+R()*0.18);return{x:cx+Math.cos(a)*rr*(W/Math.min(W,H))*0.9,y:cy+Math.sin(a)*rr,w:n[1],t:n[3]}});
+ P=[];for(const n of nodes){if(mode==="g"&&n.t==="k"||mode==="k"&&n.t==="g")continue;const c=n.w*40;for(let i=0;i<c;i++){const a=R()*7,r=R()*26;P.push({x:n.x+Math.cos(a)*r,y:n.y+Math.sin(a)*r,t:n.t,life:200+R()*400,delay:Math.floor(R()*420),v:0.8+R()*1.2,o:R()*3})}}
+ ctx.fillStyle=css("--bg");ctx.fillRect(0,0,W,H);frame=0;
+}
+function step(){
+ const cx=W/2,cy=H/2,gc=css("--g"),kc=css("--k");ctx.lineWidth=0.7;
+ for(const p of P){if(p.life<=0)continue;if(p.delay>0){p.delay--;continue}const a=noise(p.x*0.006+p.o,p.y*0.006)*Math.PI*4;let dx=Math.cos(a),dy=Math.sin(a);const tx=cx-p.x,ty=cy-p.y,d=Math.hypot(tx,ty)||1;const pull=0.45+0.6*(1-Math.min(d/(Math.min(W,H)*0.45),1));dx+=tx/d*pull;dy+=ty/d*pull;
+  const nx=p.x+dx*p.v,ny=p.y+dy*p.v;ctx.strokeStyle=p.t==="g"?gc:kc;ctx.globalAlpha=0.06;ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(nx,ny);ctx.stroke();p.x=nx;p.y=ny;p.life--;if(d<14)p.life=0}
+ ctx.globalAlpha=1;
+ for(const n of nodes){if(mode==="g"&&n.t==="k"||mode==="k"&&n.t==="g")continue;ctx.fillStyle=n.t==="g"?gc:kc;ctx.beginPath();ctx.arc(n.x,n.y,3+n.w*0.6,0,7);ctx.fill()}
+ ctx.fillStyle=css("--ink");ctx.beginPath();ctx.arc(cx,cy,7,0,7);ctx.fill();ctx.strokeStyle=css("--ink");ctx.lineWidth=1;ctx.beginPath();ctx.arc(cx,cy,16,0,7);ctx.stroke();
+ frame++;
+}
+function run(){cancelAnimationFrame(raf);setup();document.getElementById("seedTxt").textContent="Seed "+seed+". The centre dot is the contractor searching.";
+ if(reduce){for(let i=0;i<900;i++)step();return}
+ const loop=()=>{for(let i=0;i<4;i++)step();if(frame<900)raf=requestAnimationFrame(loop)};loop()}
+const btns={both:"bBoth",g:"bG",k:"bK"};
+for(const m in btns)document.getElementById(btns[m]).addEventListener("click",()=>{mode=m;for(const o in btns)document.getElementById(btns[o]).setAttribute("aria-pressed",o===m);run()});
+document.getElementById("bSeed").addEventListener("click",()=>{seed=Math.floor(Math.random()*99991);run()});
+let rt;const ro=new ResizeObserver(()=>{clearTimeout(rt);rt=setTimeout(run,150)});ro.observe(cv);
+}
+</script>
+</body>
+</html>

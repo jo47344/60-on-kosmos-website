@@ -280,6 +280,6 @@ export function Footer() {
           </p>
         </div>
       </div>
-    </footer>
+    <nav aria-label="Team booking resources" className="max-w-7xl mx-auto px-5 py-5 flex flex-wrap gap-4 text-sm"><a href="/contractor-accommodation-rates">Contractor rates</a><a href="/construction-worker-accommodation-cape-town">Construction teams</a><a href="/accommodation-with-company-invoice-bellville">Company invoices</a><a href="/contractor-accommodation-faq">Team booking questions</a></nav></footer>
   )
 }

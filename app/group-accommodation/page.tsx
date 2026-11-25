@@ -1,3 +1,5 @@
+import { RateTable } from "@/components/rate-table"
+import { EstimateLink } from "@/components/estimate-link"
 import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
@@ -12,12 +14,11 @@ const pageUrl = "https://www.60onkosmos.co.za/group-accommodation"
 // Standard totals are the published per-room rates added up. The group rate
 // is the owner-confirmed discount in site-facts applied to the nightly total.
 const allRoomsNightly = rooms.reduce((total, room) => total + room.price, 0)
-const allRoomsWeekly = rooms.reduce((total, room) => total + room.weeklyPrice, 0)
 const groupNightly = Math.round((allRoomsNightly * (100 - groupOffer.discountPercent)) / 100)
 const perPersonGroup = Math.round(groupNightly / capacity.maxGuests)
 const rand = (amount: number) => `R${amount.toLocaleString("en-ZA").replace(/ /g, " ")}`
 
-const description = `Book all ${capacity.roomCount} private ensuite rooms at 60 on Kosmos, Bellville South. Sleeps up to ${capacity.maxGuests} adults, with the property to your group alone. From R${perPersonGroup} per person a night (${rand(groupNightly)} for all rooms) on direct bookings of ${groupOffer.minNights} nights or more.`
+const description = `Book all ${capacity.roomCount} private ensuite rooms at 60 on Kosmos, Bellville South. Sleeps up to ${capacity.maxGuests} adults, with all guest rooms reserved for your group; caretaker onsite. From R${perPersonGroup} per person a night (${rand(groupNightly)} for all rooms) on direct bookings of ${groupOffer.minNights} to 6 nights.`
 
 export const metadata: Metadata = {
   title: `Group Accommodation Bellville | Sleeps ${capacity.maxGuests} Adults`,
@@ -78,7 +79,7 @@ const faqs = [
   },
   {
     question: "Will there be other guests on the property?",
-    answer: `Not when your group books all ${capacity.roomCount} rooms. There are only ${capacity.roomCount} guest rooms, so the property is yours for the stay.`,
+    answer: `Not when your group books all ${capacity.roomCount} rooms. There are only ${capacity.roomCount} guest rooms, so there are no unrelated overnight guests. Our caretaker lives onsite and assists with arrival and property upkeep. Shared facilities and house rules apply.`,
   },
   {
     question: "Can children stay?",
@@ -87,7 +88,7 @@ const faqs = [
   },
   {
     question: "What does it cost to book all the rooms?",
-    answer: `Book all ${capacity.roomCount} rooms directly with us for ${groupOffer.minNights} nights or more and the group rate is ${rand(groupNightly)} a night, which is ${groupOffer.discountPercent}% off the standard ${rand(allRoomsNightly)} and works out to about R${perPersonGroup} per person with ${capacity.maxGuests} adults. A single night is ${rand(allRoomsNightly)}. Stays of 7 to 27 nights are ${rand(allRoomsWeekly)} a night, with no further group discount.`,
+    answer: `Book all ${capacity.roomCount} rooms directly with us for ${groupOffer.minNights} to 6 nights and the group rate is ${rand(groupNightly)} a night, which is ${groupOffer.discountPercent}% off the standard ${rand(allRoomsNightly)} and works out to about R${perPersonGroup} per person with ${capacity.maxGuests} adults. A single night is ${rand(allRoomsNightly)}. Weekly and monthly totals depend on sharing and supervisor privacy. Use our calculator for the room arrangement; no discounts are stacked.`,
   },
   {
     question: "How do we pay?",
@@ -121,9 +122,9 @@ export default function GroupAccommodationPage() {
             Group Accommodation in Bellville South
           </h1>
           <p className="text-base sm:text-lg text-gray-200 text-pretty mb-8">
-            Book all {capacity.roomCount} private ensuite rooms and have 60 on Kosmos to your group alone. Sleeps up
+            Book all {capacity.roomCount} private ensuite rooms for your group, with our caretaker living onsite. Sleeps up
             to {capacity.maxGuests} adults, from R{perPersonGroup} per person a night: {rand(groupNightly)} for all{" "}
-            {capacity.roomCount} rooms when you book direct for {groupOffer.minNights} nights or more.
+            {capacity.roomCount} rooms when you book direct for {groupOffer.minNights} to 6 nights.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-3">
             <Button asChild size="lg" className="bg-green-600 hover:bg-green-700 text-white">
@@ -141,6 +142,7 @@ export default function GroupAccommodationPage() {
           </div>
         </div>
       </section>
+<EstimateLink />
 
       {/* Why it works for groups */}
       <section className="py-12 sm:py-16 bg-white">
@@ -160,7 +162,7 @@ export default function GroupAccommodationPage() {
               <p className="font-medium text-gray-900 mb-1">Only your group</p>
               <p className="text-sm text-gray-600">
                 There are only {capacity.roomCount} guest rooms. Book them all and there are no other guests on the
-                property.
+                property. Our caretaker remains onsite and assists with arrival and property upkeep.
               </p>
             </div>
             <div className="bg-gray-50 rounded-lg p-5 border border-gray-200">
@@ -183,32 +185,7 @@ export default function GroupAccommodationPage() {
             Room.
           </p>
           <div className="overflow-hidden rounded-lg border bg-white">
-            <table className="w-full text-left">
-              <thead className="bg-gray-900 text-white">
-                <tr>
-                  <th scope="col" className="px-4 py-3 text-sm font-semibold">Room</th>
-                  <th scope="col" className="px-4 py-3 text-sm font-semibold">Beds</th>
-                  <th scope="col" className="px-4 py-3 text-sm font-semibold text-right">1-6 nights</th>
-                  <th scope="col" className="px-4 py-3 text-sm font-semibold text-right">7-27 nights</th>
-                </tr>
-              </thead>
-              <tbody>
-                {rooms.map((room, idx) => (
-                  <tr key={room.name} className={idx % 2 === 0 ? "bg-white" : "bg-gray-50"}>
-                    <th scope="row" className="px-4 py-3 text-sm font-medium text-gray-900">{room.name}</th>
-                    <td className="px-4 py-3 text-sm text-gray-600">{room.layout}</td>
-                    <td className="px-4 py-3 text-sm text-gray-900 text-right">R{room.price}</td>
-                    <td className="px-4 py-3 text-sm text-gray-900 text-right">R{room.weeklyPrice}</td>
-                  </tr>
-                ))}
-                <tr className="bg-sage-50 border-t-2 border-sage-600">
-                  <th scope="row" className="px-4 py-3 text-sm font-bold text-gray-900">All four rooms, standard</th>
-                  <td className="px-4 py-3 text-sm text-gray-700">Up to {capacity.maxGuests} adults</td>
-                  <td className="px-4 py-3 text-sm font-bold text-gray-900 text-right">{rand(allRoomsNightly)}</td>
-                  <td className="px-4 py-3 text-sm font-bold text-gray-900 text-right">{rand(allRoomsWeekly)}</td>
-                </tr>
-              </tbody>
-            </table>
+            <RateTable />
           </div>
           <div className="mt-6 rounded-lg border-2 border-sage-600 bg-white p-5">
             <p className="text-sm font-semibold uppercase tracking-wide text-sage-700">Group rate, book direct</p>
@@ -220,15 +197,14 @@ export default function GroupAccommodationPage() {
               That is {groupOffer.discountPercent}% off the standard {rand(allRoomsNightly)}. The per-person figure is
               with {capacity.maxGuests} adults sharing; a smaller group pays the same {rand(groupNightly)} in total. It
               applies when one group books all {capacity.roomCount} rooms directly with us for {groupOffer.minNights}{" "}
-              nights or more.
+              to 6 nights.
             </p>
             <p className="mt-2 text-sm text-gray-700">
               A {groupOffer.depositPercent}% deposit confirms your group booking.
             </p>
           </div>
           <p className="text-sm text-gray-600 mt-4">
-            Rates in the table are per room, per night. Stays of 7 nights or more are already at the lower 7-27 night
-            rate, so the group discount is not added on top. Final rates depend on dates and availability.
+            Rates in the table are per room, per night. All-room totals depend on sharing and supervisor privacy; use the calculator for the full stay cost. The 10% group discount applies only to 2–6 nights and is not stacked with weekly or monthly rates.
           </p>
         </div>
       </section>

@@ -22,7 +22,7 @@ import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
 import { FAQSchema } from "@/components/faq-schema"
 
 export const metadata: Metadata = {
-  title: "Accommodation Near Durbanville | 60 on Kosmos Guest House, Bellville South",
+  title: "Accommodation Near Durbanville, Cape Town",
   description:
     "Guest house accommodation a short drive from Durbanville. Private ensuite rooms, secure parking, self-catering kitchens, and corporate invoicing for project teams, contractors, and visitors.",
   alternates: {

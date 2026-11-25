@@ -1,0 +1,45 @@
+{
+  "rooms": [
+    {
+      "name": "Standard Twin",
+      "beds": "2 single beds",
+      "cap": 2,
+      "night": 580,
+      "weekly": 520,
+      "monthly": 480
+    },
+    {
+      "name": "Deluxe Twin",
+      "beds": "2 single beds",
+      "cap": 2,
+      "night": 650,
+      "weekly": 520,
+      "monthly": 480
+    },
+    {
+      "name": "Triple Room",
+      "beds": "3 single beds",
+      "cap": 3,
+      "night": 840,
+      "weekly": 750,
+      "monthly": 660
+    },
+    {
+      "name": "Green Double Room",
+      "beds": "1 double bed",
+      "cap": 2,
+      "night": 680,
+      "weekly": 520,
+      "monthly": 480
+    }
+  ],
+  "bothTwins": {
+    "weekly": 500,
+    "monthly": 460
+  },
+  "doubleSolo": {
+    "weekly": 500,
+    "monthly": 400
+  },
+  "shortGroupDiscount": 0.1
+}

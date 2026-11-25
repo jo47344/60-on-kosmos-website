@@ -1,3 +1,5 @@
+import { EstimateLink } from "@/components/estimate-link"
+import { RateTable } from "@/components/rate-table"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { Calendar, DollarSign, Home, Wifi, Car, Utensils, Shield, Clock, ChevronDown } from "lucide-react"
@@ -44,7 +46,7 @@ const faqs = [
   {
     question: "How much is monthly accommodation?",
     answer:
-      "Monthly rates start from R464/night for a Standard Twin Room, with the first month due in full before or on check-in and subsequent months due on the 1st of each calendar month.",
+      "Monthly rates start from R480/night for a Standard Twin Room, with the first month due in full before or on check-in and subsequent months due on the 1st of each calendar month.",
   },
   {
     question: "Is a security deposit required for monthly stays?",
@@ -90,6 +92,7 @@ export default function MonthlyAccommodationPage() {
           </div>
         </div>
       </section>
+<EstimateLink />
 
       {/* Benefits */}
       <section className="py-12 bg-white border-b">
@@ -191,47 +194,12 @@ export default function MonthlyAccommodationPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center mb-12">Monthly Rates</h2>
           <div className="overflow-x-auto">
-            <table className="w-full border-collapse">
-              <thead>
-                <tr className="bg-sage-50">
-                  <th className="border border-gray-200 px-4 py-3 text-left font-semibold">Room Type</th>
-                  <th className="border border-gray-200 px-4 py-3 text-right font-semibold">1–6 nights</th>
-                  <th className="border border-gray-200 px-4 py-3 text-right font-semibold">7–27 nights</th>
-                  <th className="border border-gray-200 px-4 py-3 text-right font-semibold">28+ nights</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="hover:bg-gray-50">
-                  <td className="border border-gray-200 px-4 py-3 font-medium">Standard Twin</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R580</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R522</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R464</td>
-                </tr>
-                <tr className="hover:bg-gray-50">
-                  <td className="border border-gray-200 px-4 py-3 font-medium">Deluxe Twin</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R650</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R585</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R520</td>
-                </tr>
-                <tr className="hover:bg-gray-50">
-                  <td className="border border-gray-200 px-4 py-3 font-medium">Double</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R680</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R612</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R544</td>
-                </tr>
-                <tr className="hover:bg-gray-50">
-                  <td className="border border-gray-200 px-4 py-3 font-medium">Triple</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R840</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R756</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R672</td>
-                </tr>
-              </tbody>
-            </table>
+            <RateTable />
           </div>
           <p className="text-center text-gray-600 text-sm mt-4 italic">Prices per night</p>
           <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg text-center">
             <p className="text-blue-800 text-sm">
-              R1,500 refundable security deposit applies to stays of 7+ nights.
+              A refundable security deposit may apply to stays of 7+ nights. The amount and conditions are confirmed in your written quote.
             </p>
           </div>
         </div>

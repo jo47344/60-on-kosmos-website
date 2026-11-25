@@ -1,3 +1,5 @@
+import stayRates from "./stay-rates.json"
+
 // Single source of truth for 60 on Kosmos's rates, capacity, and facilities.
 // Import these values wherever a page states a fact about the business,
 // rather than re-typing the number/string — that's how these details drift
@@ -39,8 +41,8 @@ export const capacity = {
 } as const
 
 // Confirmed facilities. Do not describe these as "full kitchen," "24/7
-// security," "instant confirmation," "best-rate guarantee," "live-in
-// caretaker," or with unqualified flexible-arrival or vehicle/trailer
+// security," "instant confirmation," "best-rate guarantee,"
+// or with unqualified flexible-arrival or vehicle/trailer
 // capacity promises unless that wording has been specifically confirmed.
 export const facilities = [
   "Private ensuite bathrooms",
@@ -52,40 +54,13 @@ export const facilities = [
   "Company invoices available",
 ] as const
 
-export const rooms = [
-  {
-    name: "Standard Twin",
-    price: 580,
-    weeklyPrice: 522,
-    monthlyPrice: 464,
-    layout: "Two single beds",
-    barFridge: false,
-  },
-  {
-    name: "Deluxe Twin",
-    price: 650,
-    weeklyPrice: 585,
-    monthlyPrice: 520,
-    layout: "Two single beds",
-    barFridge: true,
-  },
-  {
-    name: "Double Room",
-    price: 680,
-    weeklyPrice: 612,
-    monthlyPrice: 544,
-    layout: "One double bed",
-    barFridge: true,
-  },
-  {
-    name: "Triple Room",
-    price: 840,
-    weeklyPrice: 756,
-    monthlyPrice: 672,
-    layout: "Three single beds",
-    barFridge: true,
-  },
-] as const
+const roomOrder = [0, 1, 3, 2]
+export const rooms = roomOrder.map(index => {
+  const room = stayRates.rooms[index]
+  return { name: room.name === "Green Double Room" ? "Double Room" : room.name,
+    price: room.night, weeklyPrice: room.weekly, monthlyPrice: room.monthly,
+    layout: room.beds, barFridge: true }
+})
 
 // Owner-confirmed group offer (Nov 2026): 10% off the nightly room rates when
 // one group books all four rooms direct for at least two nights. It does not
@@ -98,7 +73,7 @@ export const groupOffer = {
   depositPercent: 50,
 } as const
 
-export const priceRangeLabel = "R464 - R840"
+export const priceRangeLabel = "R400 - R840"
 
 // Review platforms with genuine, live listings. Deliberately no hard-coded
 // rating value or review count here — those drift out of date and conflict

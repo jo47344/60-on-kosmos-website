@@ -25,7 +25,7 @@ const faqs = [
   {
     question: "What cooking facilities are available?",
     answer:
-      "Our communal kitchenette has a gas stove, microwave, air fryer, and kettle. Deluxe Twin, Double, and Triple rooms also include their own bar fridge.",
+      "Our communal kitchenette has a gas stove, microwave, air fryer, and kettle. Every room, including Standard Twin, has a fridge.",
   },
   {
     question: "Is self-catering accommodation cheaper than full-board options?",

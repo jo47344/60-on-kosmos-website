@@ -6,7 +6,9 @@
     "build": "next build",
     "dev": "next dev",
     "lint": "next lint",
-    "start": "next start"
+    "start": "next start",
+    "prebuild": "node scripts/sync-estimate-rates.cjs",
+    "test": "node scripts/sync-estimate-rates.cjs && node tests/verify.cjs && node tests/verify-mixed.cjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",

@@ -29,28 +29,11 @@ export const viewport = {
   themeColor: "#7c9885",
 }
 
-export const robots = {
-  index: true,
-  follow: true,
-  googleBot: {
-    index: true,
-    follow: true,
-    "max-snippet": -1,
-    "max-image-preview": "large",
-    "max-video-preview": -1,
-  },
-  // Allow AI crawlers
-  "CCBot": "allow",
-  "anthropic-ai": "allow",
-  "GPTBot": "allow",
-  "PerplexityBot": "allow",
-}
-
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.60onkosmos.co.za"),
   title: {
     default: "60 on Kosmos - Affordable Contractor & Student Accommodation in Bellville South, Cape Town",
-    template: "%s | 60 on Kosmos Bellville South",
+    template: "%s | 60 on Kosmos",
   },
   description:
     "Self-catering ensuite accommodation in Bellville South for small contractor and project teams. Secure parking, free WiFi, weekly cleaning, company invoices. Request a quote today.",
