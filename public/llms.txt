@@ -19,23 +19,24 @@
 
 | Room | Sleeps | 1-6 nights (per night) | 7-27 nights (per night) | 28+ nights (per night) |
 |---|---|---|---|---|
-| Standard Twin | 2 (two single beds) | R580 | R522 | R464 |
+| Standard Twin | 2 (two single beds) | R580 | R522 | R500 |
 | Deluxe Twin | 2 (two single beds) | R650 | R585 | R520 |
 | Double Room | 2 (one double bed) | R680 | R612 | R544 |
-| Triple Room | 3 (three single beds) | R840 | R756 | R672 |
+| Triple Room | 3 (three single beds) | R840 | R756 | R700 |
 
-- Rates are per room per night, not per person.
-- Per person when a room is fully shared: the lowest is R224 per person per night, with three adults sharing the Triple Room for 28+ nights, subject to availability (R252 for 7-27 nights, R280 for 1-6 nights). Two sharing the Standard Twin: R232 (28+ nights), R261 (7-27 nights), R290 (1-6 nights).
-- Whole house (all 4 rooms): R2,750 per night (1-6 nights), R2,475 (7-27 nights), R2,200 (28+ nights). Sleeps up to 9 adults on a monthly stay, about R244 per person per night.
+- Rates are per room per night, not per person. Guests pay for the rooms reserved and the nights stayed. There is one room of each type.
+- The length of the stay sets the rate for every night: 1-6 nights, 7-27 nights, or 28+ nights. Prices are never quoted per calendar month.
+- All four rooms: R2,750 per night (1-6 nights), R2,475 (7-27 nights), R2,264 (28+ nights). For example, all four rooms for 28 nights cost R63,392.
+- Example: the Standard Twin and Deluxe Twin for 28 nights cost R1,020 per night, R28,560 in total.
+- Per-person figures are examples only. The lowest 28+ night equivalent is approximately R233.33 per person per night, only when three adults share the Triple Room for 28+ nights, subject to availability.
 - Beds: 7 single beds and 1 double bed. A group of nine needs two adults to share the double bed in the Double Room.
-- Monthly rates apply to stays of 28 nights or more.
 - A refundable security deposit may apply to extended stays.
 - The rates on this website are the official rates. Rates on booking platforms may differ because of platform fees and promotions.
 
 ## Group and whole-house bookings
 
 - All four rooms can be booked together for teams of up to 9 adults (two sharing the double bed). There is one room of each type.
-- 10% group discount when all four rooms are booked directly for 2 or more nights. It cannot be combined with the 7+ night rate.
+- 10% group discount when all four rooms are booked directly for 2-6 nights, off the 1-6 night rates (R2,475 per night for all four rooms). It does not combine with the 7-27 night or 28+ night rates.
 - A 50% deposit confirms a group booking.
 - Team quotes usually go out the same day. WhatsApp 074 524 5703 with dates, team size and the work-site location.
 

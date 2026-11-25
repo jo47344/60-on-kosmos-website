@@ -5,14 +5,7 @@ import { Button } from "@/components/ui/button"
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
 import { FAQSchema } from "@/components/faq-schema"
 import { PerPersonRatesTable } from "@/components/per-person-rates-table"
-import {
-  business,
-  facilities,
-  lowestPerPerson,
-  lowestPerPersonQualifier,
-  rooms,
-  stayTerms,
-} from "@/lib/site-facts"
+import { business, facilities, roomRateRange, stayTerms } from "@/lib/site-facts"
 
 // Shared layout for "answer pages": pages written to answer one specific buyer
 // question (the kind people type into ChatGPT or Google) in a form that search
@@ -48,8 +41,8 @@ export interface AnswerPageProps {
 
 const SITE = "https://www.60onkosmos.co.za"
 
-const roomLow = Math.min(...rooms.map((r) => r.monthlyPrice))
-const roomHigh = Math.max(...rooms.map((r) => r.price))
+const roomLow = roomRateRange.low
+const roomHigh = roomRateRange.high
 
 export function AnswerPage(props: AnswerPageProps) {
   const url = `${SITE}${props.path}`
@@ -76,7 +69,7 @@ export function AnswerPage(props: AnswerPageProps) {
       priceCurrency: "ZAR",
       lowPrice: roomLow,
       highPrice: roomHigh,
-      offerCount: rooms.length,
+      offerCount: 4,
       priceSpecification: {
         "@type": "UnitPriceSpecification",
         priceCurrency: "ZAR",
@@ -133,11 +126,8 @@ export function AnswerPage(props: AnswerPageProps) {
           </div>
           <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 text-balance">{props.h1}</h1>
           <p className="text-lg sm:text-xl text-gray-200 mb-8 text-pretty max-w-3xl mx-auto">
-            Rooms R{roomLow}–R{roomHigh} per night · secure gated parking · CCTV and ADT armed response · company
-            invoices
-          </p>
-          <p className="text-sm text-gray-300 mb-8 -mt-4 text-pretty max-w-3xl mx-auto">
-            From R{lowestPerPerson.monthly} per person per night with {lowestPerPersonQualifier}.
+            Rooms R{roomLow}–R{roomHigh} per room per night · secure gated parking · CCTV and ADT armed response ·
+            company invoices
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-sage-600 hover:bg-sage-700 text-white px-8 py-6 text-lg">
@@ -187,8 +177,7 @@ export function AnswerPage(props: AnswerPageProps) {
             <div>
               <dt className="font-semibold text-gray-900 inline">Price: </dt>
               <dd className="inline">
-                R{roomLow}–R{roomHigh} per room per night. From R{lowestPerPerson.monthly} per person per night with{" "}
-                {lowestPerPersonQualifier}
+                R{roomLow}–R{roomHigh} per room per night, depending on the room and the number of nights
               </dd>
             </div>
             <div>
@@ -250,10 +239,10 @@ export function AnswerPage(props: AnswerPageProps) {
       {/* Prices */}
       <section className="py-12 bg-white" id="rates">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Rates per person and per room</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Room rates</h2>
           <p className="text-gray-600 mb-6">
-            Official direct rates in South African rand. Rooms are priced per room per night; the per-person figure is
-            the room rate divided by the number of beds when the room is fully shared.
+            Official direct rates in South African rand, per room per night. Per-person figures are examples only:
+            the room rate divided by the number of adults when every bed in that room is used.
           </p>
           <PerPersonRatesTable />
         </div>

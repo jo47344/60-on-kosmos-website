@@ -35,7 +35,7 @@ const included = [
   "Free WiFi",
   "Secure parking",
   "Weekly servicing",
-  "No lease, one-month minimum on long stays",
+  "No lease; long-stay rates from 28 nights",
 ]
 
 const nearbyAreas = [

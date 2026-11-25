@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { formatRand, quoteStay, rooms as rateData } from "@/lib/site-facts"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
@@ -320,13 +321,14 @@ export default function StudentFAQPage() {
               <AccordionItem value="item-19">
                 <AccordionTrigger className="text-left">How much does monthly accommodation cost?</AccordionTrigger>
                 <AccordionContent className="text-gray-600">
-                  Monthly rates apply to stays of 28 nights or more and are charged per room per night. For a
-                  30-night stay:
+                  Rates for stays of 28 nights or more are charged per room per night. For a 28-night stay:
                   <ul className="list-disc ml-6 mt-2 space-y-1">
-                    <li>Standard Twin: R464/night (about R13,920)</li>
-                    <li>Deluxe Twin: R520/night (about R15,600)</li>
-                    <li>Double Room: R544/night (about R16,320)</li>
-                    <li>Triple Room: R672/night (about R20,160)</li>
+                    {rateData.map((r) => (
+                      <li key={r.name}>
+                        {r.name}: {formatRand(r.monthlyPrice)}/night ({formatRand(quoteStay([r.name], 28).total)} for 28
+                        nights)
+                      </li>
+                    ))}
                   </ul>
                   Rates are subject to availability. Contact us to confirm dates.
                 </AccordionContent>

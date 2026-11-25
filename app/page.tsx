@@ -17,18 +17,18 @@ import {
   ArrowRight,
 } from "lucide-react"
 import { TrustBadges } from "@/components/trust-badges"
-import { reviewPlatforms } from "@/lib/site-facts"
+import { reviewPlatforms, roomRateRange } from "@/lib/site-facts"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: { absolute: "Contractor and Team Accommodation in Bellville, Cape Town | 60 on Kosmos" },
-  description: "60 on Kosmos: ensuite rooms for contractors and project teams in Bellville South, Cape Town. Rooms R464–R840 per night; from R224 pp with 3 sharing the Triple Room for 28+ nights. Secure gated parking, CCTV, WiFi, company invoices.",
+  description: `60 on Kosmos: en-suite rooms for contractors and project teams in Bellville South, Cape Town. Rooms R${roomRateRange.low}–R${roomRateRange.high} per room per night, depending on room and nights. Secure gated parking, CCTV, WiFi, company invoices.`,
   alternates: {
     canonical: "https://www.60onkosmos.co.za/",
   },
   openGraph: {
     title: "Contractor and Team Accommodation in Bellville, Cape Town | 60 on Kosmos",
-    description: "60 on Kosmos: ensuite rooms for contractors and project teams in Bellville South, Cape Town. Rooms R464–R840 per night; from R224 pp with 3 sharing the Triple Room for 28+ nights. Secure gated parking, CCTV, WiFi, company invoices.",
+    description: `60 on Kosmos: en-suite rooms for contractors and project teams in Bellville South, Cape Town. Rooms R${roomRateRange.low}–R${roomRateRange.high} per room per night, depending on room and nights. Secure gated parking, CCTV, WiFi, company invoices.`,
     url: "https://www.60onkosmos.co.za/",
     type: "website",
     images: [
@@ -70,7 +70,7 @@ export default function HomePage() {
       price: "From R840/night",
       image: "/images/triple-room-view.jpg",
       bestFor: "Best for 3-person crews",
-      features: ["3 single beds", "Private ensuite", "R224 per person per night with 3 sharing for 28+ nights, subject to availability", "Best value"],
+      features: ["3 single beds", "Private ensuite", "Best value"],
     },
   ]
 

@@ -1,17 +1,22 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
+import { formatRand, rooms as rateData, stayTerms } from "@/lib/site-facts"
+
+const from28 = Math.min(...rateData.map((r) => r.monthlyPrice))
+const nightlyLow = Math.min(...rateData.map((r) => r.price))
+const nightlyHigh = Math.max(...rateData.map((r) => r.price))
 import { Button } from "@/components/ui/button"
 
 export const metadata: Metadata = {
   title: "Extended-Stay Accommodation for Corporate Teams",
   description:
-    "Private ensuite, self-catering, one invoice a month — no lease, no long-term commitment. Monthly rate R464/night, one-month minimum.",
+    `Private ensuite, self-catering, one invoice a month — no lease, no long-term commitment. 28+ night rates from R${from28} per room per night.`,
   alternates: { canonical: "https://www.60onkosmos.co.za/corporate" },
   openGraph: {
     title: "Extended-Stay Accommodation for Corporate Teams",
     description:
-      "Private ensuite, self-catering, one invoice a month — no lease, no long-term commitment. Monthly rate R464/night, one-month minimum.",
+      `Private ensuite, self-catering, one invoice a month — no lease, no long-term commitment. 28+ night rates from R${from28} per room per night.`,
     url: "https://www.60onkosmos.co.za/corporate",
     type: "website",
     images: [
@@ -59,7 +64,7 @@ export default function CorporatePage() {
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">How it works</h2>
           <div className="rounded-lg border bg-gray-50 p-6 space-y-2">
             <p className="text-gray-900 font-semibold">
-              Monthly rate: R464/night, one-month minimum ({rateIncludes})
+              Rates for stays of {stayTerms.monthlyRateMinNights}+ nights: from {formatRand(from28)} per room per night ({rateIncludes})
             </p>
             <p className="text-gray-700">Invoiced directly, no lease required.</p>
             <p className="text-gray-700">Rooms serviced weekly.</p>

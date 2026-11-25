@@ -1,10 +1,12 @@
 import type { Metadata } from "next"
 import { AnswerPage } from "@/components/answer-page"
-import { lowestPerPerson, lowestPerPersonQualifier, nineGuestNote, perPersonRates, stayTerms } from "@/lib/site-facts"
+import { formatRand, nineGuestNote, quoteStay, roomRateRange, stayTerms } from "@/lib/site-facts"
+
+const std5 = quoteStay(["Standard Twin"], 5)
 
 const path = "/accommodation-with-company-invoice-bellville"
 const title = "Bellville Accommodation for Technicians with Company Invoices | 60 on Kosmos, Cape Town"
-const description = `Places to stay in Bellville, Cape Town, for technicians, installers and engineers that issue company invoices. Ensuite rooms from R${perPersonRates[0].nightly} per person, secure parking, WiFi, EFT payment.`
+const description = `Places to stay in Bellville, Cape Town, for technicians, installers and engineers that issue company invoices. En-suite rooms R${roomRateRange.low}–R${roomRateRange.high} per room per night, secure parking, WiFi, EFT payment.`
 
 export const metadata: Metadata = {
   title: { absolute: title },
@@ -26,7 +28,7 @@ export default function Page() {
       breadcrumb="Company Invoices"
       eyebrow="Bellville, Cape Town"
       h1="Accommodation in Bellville for Technicians, with Company Invoices"
-      quickAnswer={`60 on Kosmos at 60 Kosmos Street, Bellville South, Cape Town, houses technicians, installers, engineers and site supervisors on company business, and issues company invoices on request. Payment is by EFT. Each room has its own en-suite bathroom, with WiFi, a desk in most rooms, weekly cleaning and secure gated parking for company vehicles. Two technicians sharing a Standard Twin pay R${perPersonRates[0].nightly} each per night, and the lowest price is R${lowestPerPerson.monthly} per person per night with ${lowestPerPersonQualifier}.`}
+      quickAnswer={`60 on Kosmos at 60 Kosmos Street, Bellville South, Cape Town, houses technicians, installers, engineers and site supervisors on company business, and issues company invoices on request. Payment is by EFT. Each room has its own en-suite bathroom, with WiFi, a desk in most rooms, weekly cleaning and secure gated parking for company vehicles. Rooms cost R${roomRateRange.low}–R${roomRateRange.high} per room per night. For example, two technicians in the Standard Twin for 5 nights pay ${formatRand(std5.perNight)} per night, ${formatRand(std5.total)} for the room.`}
       serviceName="Business accommodation with company invoicing, Bellville"
       serviceDescription="En-suite rooms for technicians and company staff, with company invoices, EFT payment and secure parking for company vehicles."
       areaServed={["Bellville", "Bellville South", "Parow", "Tygervalley", "Cape Town Northern Suburbs"]}
@@ -39,7 +41,7 @@ export default function Page() {
             "EFT payment. Cash is not accepted, which keeps a clean paper trail.",
             "One invoice can cover several rooms for the whole team.",
             "Clear published rates with no platform fees when you book direct.",
-            `Weekly (7+ nights) and monthly (${stayTerms.monthlyRateMinNights}+ nights) rates for longer call-outs and installs.`,
+            `7–27 night and ${stayTerms.monthlyRateMinNights}+ night rates for longer call-outs and installs.`,
           ],
         },
         {

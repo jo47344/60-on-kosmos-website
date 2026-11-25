@@ -6,6 +6,10 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Breadcrumbs } from "@/components/breadcrumbs"
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
 import { FAQSchema } from "@/components/faq-schema"
+import { formatRand, rooms as rateData } from "@/lib/site-facts"
+
+const rate = Object.fromEntries(rateData.map((r) => [r.name, r]))
+
 
 export const metadata: Metadata = {
   title: "Monthly Accommodation in Bellville South",
@@ -44,7 +48,7 @@ const faqs = [
   {
     question: "How much is monthly accommodation?",
     answer:
-      "Monthly rates start from R464/night for a Standard Twin Room, with the first month due in full before or on check-in and subsequent months due on the 1st of each calendar month.",
+      `Rates for stays of 28+ nights start from ${formatRand(Math.min(...rateData.map((r) => r.monthlyPrice)))} per room per night (Standard Twin), charged for the nights stayed, with the first month due in full before or on check-in and subsequent months due on the 1st of each calendar month.`,
   },
   {
     question: "Is a security deposit required for monthly stays?",
@@ -203,27 +207,27 @@ export default function MonthlyAccommodationPage() {
               <tbody>
                 <tr className="hover:bg-gray-50">
                   <td className="border border-gray-200 px-4 py-3 font-medium">Standard Twin</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R580</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R522</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R464</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">{formatRand(rate["Standard Twin"].price)}</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">{formatRand(rate["Standard Twin"].weeklyPrice)}</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">{formatRand(rate["Standard Twin"].monthlyPrice)}</td>
                 </tr>
                 <tr className="hover:bg-gray-50">
                   <td className="border border-gray-200 px-4 py-3 font-medium">Deluxe Twin</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R650</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R585</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R520</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">{formatRand(rate["Deluxe Twin"].price)}</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">{formatRand(rate["Deluxe Twin"].weeklyPrice)}</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">{formatRand(rate["Deluxe Twin"].monthlyPrice)}</td>
                 </tr>
                 <tr className="hover:bg-gray-50">
                   <td className="border border-gray-200 px-4 py-3 font-medium">Double</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R680</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R612</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R544</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">{formatRand(rate["Double Room"].price)}</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">{formatRand(rate["Double Room"].weeklyPrice)}</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">{formatRand(rate["Double Room"].monthlyPrice)}</td>
                 </tr>
                 <tr className="hover:bg-gray-50">
                   <td className="border border-gray-200 px-4 py-3 font-medium">Triple</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R840</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R756</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R672</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">{formatRand(rate["Triple Room"].price)}</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">{formatRand(rate["Triple Room"].weeklyPrice)}</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">{formatRand(rate["Triple Room"].monthlyPrice)}</td>
                 </tr>
               </tbody>
             </table>

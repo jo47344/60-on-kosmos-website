@@ -1,10 +1,13 @@
 import type { Metadata } from "next"
 import { AnswerPage } from "@/components/answer-page"
-import { lowestPerPerson, lowestPerPersonQualifier, nineGuestNote, wholeHouse, stayTerms } from "@/lib/site-facts"
+import { formatRand, nineGuestNote, quoteStay, roomRateRange, rooms, stayTerms, wholeHouse } from "@/lib/site-facts"
+
+const N = stayTerms.monthlyRateMinNights
+const allN = quoteStay(rooms.map((r) => r.name), N)
 
 const path = "/construction-worker-accommodation-cape-town"
-const title = "Construction Worker Accommodation Cape Town Northern Suburbs | Monthly | 60 on Kosmos"
-const description = `Monthly accommodation for construction workers and site crews in Cape Town’s northern suburbs. Bellville South, near the N1 and R300. From R${lowestPerPerson.monthly} pp (3 sharing the Triple Room, 28+ nights). Gated parking for bakkies, CCTV.`
+const title = "Construction Worker Accommodation Cape Town Northern Suburbs | Long Stays | 60 on Kosmos"
+const description = `Long-stay accommodation for construction workers and site crews in Cape Town’s northern suburbs. Bellville South, near the N1 and R300. ${N}+ night rates from R${roomRateRange.low} per room per night. Gated parking for bakkies, CCTV.`
 
 export const metadata: Metadata = {
   title: { absolute: title },
@@ -25,9 +28,9 @@ export default function Page() {
       path={path}
       breadcrumb="Construction Crews"
       eyebrow="Cape Town Northern Suburbs"
-      h1="Monthly Accommodation for Construction Workers in Cape Town’s Northern Suburbs"
-      quickAnswer={`60 on Kosmos is a gated, self-catering guesthouse at 60 Kosmos Street, Bellville South, in Cape Town’s northern suburbs, set up for construction crews on long stays. Monthly rates (${stayTerms.monthlyRateMinNights}+ nights) start at R${lowestPerPerson.monthly} per person per night with ${lowestPerPersonQualifier}. The whole house costs R${wholeHouse.monthly.toLocaleString("en-US")} per night on a monthly stay and sleeps up to 9 adults, with two sharing the double bed. Bakkies and work vans park inside locked gates on CCTV with ADT armed response. Every room has a private ensuite, and WiFi, weekly cleaning and company invoices are included.`}
-      serviceName="Monthly construction worker accommodation, Cape Town northern suburbs"
+      h1="Long-Stay Accommodation for Construction Workers in Cape Town’s Northern Suburbs"
+      quickAnswer={`60 on Kosmos is a gated, self-catering guesthouse at 60 Kosmos Street, Bellville South, in Cape Town’s northern suburbs, set up for construction crews on long stays. For stays of ${N}+ nights, rooms cost R${roomRateRange.low}–R${Math.max(...rooms.map((r) => r.monthlyPrice))} per room per night. All four rooms cost ${formatRand(wholeHouse.monthly)} per night for ${N}+ nights (${formatRand(allN.total)} for ${N} nights) and sleep up to 9 adults, with two sharing the double bed. Bakkies and work vans park inside locked gates on CCTV with ADT armed response. Each room has its own en-suite bathroom, and WiFi, weekly cleaning and company invoices are included.`}
+      serviceName="Long-stay construction worker accommodation, Cape Town northern suburbs"
       serviceDescription="Long-stay, budget accommodation for construction workers, site crews and artisans near the N1 and R300 in Bellville South, Cape Town."
       areaServed={[
         "Bellville",
@@ -40,7 +43,7 @@ export default function Page() {
         "Stikland",
         "Cape Town Northern Suburbs",
       ]}
-      whatsappText="Hi, I need monthly accommodation for a construction crew. Crew size: , start date: , site: "
+      whatsappText="Hi, I need long-stay accommodation for a construction crew. Crew size: , start date: , site: "
       sections={[
         {
           heading: "Built for site crews, not tourists",
@@ -66,8 +69,8 @@ export default function Page() {
         {
           heading: "Long-stay terms that suit project budgets",
           bullets: [
-            `Monthly rate from ${stayTerms.monthlyRateMinNights} nights, about 20% below the nightly rate.`,
-            "Weekly rate from 7 nights, for shorter phases and call-outs.",
+            `${N}+ night rate for stays of ${N} nights or more, charged per room per night for every night of the stay.`,
+            "7–27 night rate for shorter phases and call-outs.",
             "Weekly cleaning with fresh linen, so the crew isn’t living in a mess by week three.",
             "Company invoices and EFT payment, so it fits straight into project costing.",
             "A refundable security deposit may apply to extended stays.",
@@ -76,8 +79,8 @@ export default function Page() {
       ]}
       faqs={[
         {
-          question: "Where can construction workers stay monthly in Cape Town’s northern suburbs?",
-          answer: `60 on Kosmos in Bellville South offers monthly accommodation (${stayTerms.monthlyRateMinNights}+ nights) for construction crews, from R${lowestPerPerson.monthly} per person per night with ${lowestPerPersonQualifier}. It has four rooms, each with its own en-suite bathroom, with 7 single beds and 1 double bed, a self-catering kitchen, WiFi, weekly cleaning and gated parking for work vehicles.`,
+          question: "Where can construction workers stay long-term in Cape Town’s northern suburbs?",
+          answer: `60 on Kosmos in Bellville South offers ${N}+ night rates for construction crews from R${roomRateRange.low} per room per night. It has four rooms, each with its own en-suite bathroom, with 7 single beds and 1 double bed, a self-catering kitchen, WiFi, weekly cleaning and gated parking for work vehicles.`,
         },
         {
           question: "Is there secure parking for bakkies and company vehicles?",
@@ -89,14 +92,14 @@ export default function Page() {
         },
         {
           question: "Can a whole crew book the house?",
-          answer: `Yes, subject to availability. ${nineGuestNote} On a monthly stay that’s R${wholeHouse.monthly.toLocaleString("en-US")} per night for the whole house.`,
+          answer: `Yes, subject to availability. ${nineGuestNote} For ${N} nights all four rooms cost ${formatRand(wholeHouse.monthly)} per night, ${formatRand(allN.total)} in total.`,
         },
       ]}
       related={[
-        { href: "/contractor-accommodation-rates", label: "Rates per person" },
+        { href: "/contractor-accommodation-rates", label: "Room rates" },
         { href: "/contractor-accommodation-northern-suburbs", label: "Northern suburbs accommodation" },
         { href: "/contractor-accommodation-n1-city-parow", label: "Near N1 City & Parow" },
-        { href: "/monthly-accommodation", label: "Monthly accommodation" },
+        { href: "/monthly-accommodation", label: "Long-stay accommodation" },
       ]}
     />
   )

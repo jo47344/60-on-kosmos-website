@@ -23,14 +23,16 @@ import { FAQSchema } from "@/components/faq-schema"
 import { Breadcrumbs } from "@/components/breadcrumbs"
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
 import { CompanyEnquiryForm } from "@/components/company-enquiry-form"
-import { lowestPerPerson, lowestPerPersonQualifier } from "@/lib/site-facts"
+import { formatRand, roomRateRange, rooms as rateData, stayTerms } from "@/lib/site-facts"
+
+const rate = Object.fromEntries(rateData.map((r) => [r.name, r]))
 
 export const metadata: Metadata = {
   // The root layout’s title template ("%s | 60 on Kosmos Bellville South")
   // applies to every nested page unless overridden with `absolute` — without
   // this, the rendered <title> silently repeats the brand name a second time.
   title: { absolute: "Contractor Accommodation Bellville, Cape Town | Secure Parking | 60 on Kosmos" },
-  description: "60 on Kosmos: contractor accommodation in Bellville South, Cape Town. Rooms R464–R840 per night; from R224 pp with 3 sharing the Triple Room for 28+ nights. Gated parking for bakkies, CCTV, en-suite rooms, WiFi and company invoices.",
+  description: `60 on Kosmos: contractor accommodation in Bellville South, Cape Town. Rooms R${roomRateRange.low}–R${roomRateRange.high} per room per night, depending on room and nights. Gated parking for bakkies, CCTV, en-suite rooms, WiFi and company invoices.`,
   alternates: {
     canonical: "https://www.60onkosmos.co.za/contractor-accommodation",
   },
@@ -54,7 +56,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "Contractor Accommodation Bellville, Cape Town | Secure Parking | 60 on Kosmos",
-    description: "60 on Kosmos: contractor accommodation in Bellville South, Cape Town. Rooms R464–R840 per night; from R224 pp with 3 sharing the Triple Room for 28+ nights. Gated parking for bakkies, CCTV, en-suite rooms, WiFi and company invoices.",
+    description: `60 on Kosmos: contractor accommodation in Bellville South, Cape Town. Rooms R${roomRateRange.low}–R${roomRateRange.high} per room per night, depending on room and nights. Gated parking for bakkies, CCTV, en-suite rooms, WiFi and company invoices.`,
     url: "https://www.60onkosmos.co.za/contractor-accommodation",
     type: "website",
     images: [
@@ -85,9 +87,9 @@ export default function ContractorAccommodationPage() {
     {
       name: "Standard Twin Room",
       tagline: "The Contractor Essential",
-      price: "R580",
-      weeklyPrice: "R522",
-      monthlyPrice: "R464",
+      price: formatRand(rate["Standard Twin"].price),
+      weeklyPrice: formatRand(rate["Standard Twin"].weeklyPrice),
+      monthlyPrice: formatRand(rate["Standard Twin"].monthlyPrice),
       capacity: "1-2 People",
       layout: "2 Single Beds",
       bestFor: "2 contractors or professionals sharing",
@@ -104,9 +106,9 @@ export default function ContractorAccommodationPage() {
     {
       name: "Deluxe Twin Room",
       tagline: "The Comfort Upgrade",
-      price: "R650",
-      weeklyPrice: "R585",
-      monthlyPrice: "R520",
+      price: formatRand(rate["Deluxe Twin"].price),
+      weeklyPrice: formatRand(rate["Deluxe Twin"].weeklyPrice),
+      monthlyPrice: formatRand(rate["Deluxe Twin"].monthlyPrice),
       capacity: "1-2 People",
       layout: "2 Single Beds",
       bestFor: "2 professionals wanting extra comfort",
@@ -123,9 +125,9 @@ export default function ContractorAccommodationPage() {
     {
       name: "Double Room",
       tagline: "The Manager’s Choice",
-      price: "R680",
-      weeklyPrice: "R612",
-      monthlyPrice: "R544",
+      price: formatRand(rate["Double Room"].price),
+      weeklyPrice: formatRand(rate["Double Room"].weeklyPrice),
+      monthlyPrice: formatRand(rate["Double Room"].monthlyPrice),
       capacity: "1-2 People",
       layout: "1 Double Bed",
       bestFor: "Solo professionals, couples, or site supervisors",
@@ -142,9 +144,9 @@ export default function ContractorAccommodationPage() {
     {
       name: "Triple Room",
       tagline: "Best Value for Crews",
-      price: "R840",
-      weeklyPrice: "R756",
-      monthlyPrice: "R672",
+      price: formatRand(rate["Triple Room"].price),
+      weeklyPrice: formatRand(rate["Triple Room"].weeklyPrice),
+      monthlyPrice: formatRand(rate["Triple Room"].monthlyPrice),
       capacity: "3 People",
       layout: "3 Single Beds",
       bestFor: "3-person contractor crews",
@@ -164,7 +166,7 @@ export default function ContractorAccommodationPage() {
   const contractorFAQs = [
     {
       question: "How much does contractor accommodation cost in Bellville South?",
-      answer: "Contractor rates at 60 on Kosmos start from R580/night (Standard Twin, 1–6 nights). Weekly rates (7–27 nights) from R522/night. Monthly rates (28+ nights) from R464/night. Long-stay and multi-room rates are confirmed on quotation.",
+      answer: `Rates are per room per night. The Standard Twin costs ${formatRand(rate["Standard Twin"].price)} for 1–6 nights, ${formatRand(rate["Standard Twin"].weeklyPrice)} for 7–27 nights and ${formatRand(rate["Standard Twin"].monthlyPrice)} for ${stayTerms.monthlyRateMinNights}+ nights. Across all four rooms, rates range from R${roomRateRange.low} to R${roomRateRange.high} per room per night. Multi-room quotes are confirmed on request.`,
     },
     {
       question: "Is there secure parking for work vehicles and bakkies?",
@@ -222,15 +224,14 @@ export default function ContractorAccommodationPage() {
             <p className="text-lg sm:text-xl text-gray-300 mb-6 text-pretty max-w-3xl mx-auto">
               Practical accommodation for small contractor, worker, technician, installer and project teams in
               Bellville and Cape Town’s northern suburbs. Suitable for teams of up to 9 guests, with private
-              ensuite rooms, WiFi, secure parking, weekly and monthly stay options and company invoicing.
+              ensuite rooms, WiFi, secure parking, 7–27 night and 28+ night rates and company invoicing.
             </p>
             <p className="text-white font-semibold mb-2 text-pretty max-w-2xl mx-auto">
-              From R{lowestPerPerson.monthly} per person per night with {lowestPerPersonQualifier} · gated
-              parking for bakkies on CCTV
+              Rooms R{roomRateRange.low}–R{roomRateRange.high} per room per night · gated parking for bakkies on CCTV
             </p>
             <p className="text-gray-300 mb-8 text-pretty max-w-2xl mx-auto">
               <Link href="/contractor-accommodation-rates" className="underline hover:text-white">
-                See rates per person
+                See room rates
               </Link>{" "}
               ·{" "}
               <Link href="/contractor-accommodation-faq" className="underline hover:text-white">
@@ -438,8 +439,8 @@ export default function ContractorAccommodationPage() {
               and work location and we’ll confirm the best room combination and company rate.
             </p>
             <p className="text-sm text-gray-500 mb-6">
-              The lowest per-person rate is R224 per night, with three adults sharing the Triple Room for 28+ nights,
-              subject to availability. Final rates depend on team size, room allocation, availability and length of stay.
+              Rates are charged per room per night for the rooms reserved and the nights stayed, at the rate for the
+              length of the stay. Subject to availability.
             </p>
             <p className="text-sm text-gray-500 mb-6">
               Just need day or week rates?{" "}

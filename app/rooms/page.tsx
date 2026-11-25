@@ -7,6 +7,10 @@ import { Wifi, Coffee, Car, Shield, Phone, ChevronDown } from "lucide-react"
 import { Breadcrumbs } from "@/components/breadcrumbs"
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
 import { FAQSchema } from "@/components/faq-schema"
+import { formatRand, rooms as rateData, tripleShareMonthly } from "@/lib/site-facts"
+
+const rate = Object.fromEntries(rateData.map((r) => [r.name, r]))
+
 
 const breadcrumbItems = [
   { name: "Home", url: "" },
@@ -17,7 +21,7 @@ const faqs = [
   {
     question: "What room types and rates do you offer?",
     answer:
-      "Standard Twin from R580/night, Deluxe Twin R650/night, Double R680/night, and Triple R840/night (R280 per person) — with discounted weekly and monthly rates available.",
+      `Per room per night for 1–6 nights: Standard Twin ${formatRand(rate["Standard Twin"].price)}, Deluxe Twin ${formatRand(rate["Deluxe Twin"].price)}, Double ${formatRand(rate["Double Room"].price)} and Triple ${formatRand(rate["Triple Room"].price)}. Lower room rates apply to stays of 7–27 nights and 28+ nights.`,
   },
   {
     question: "What’s included in every room rate?",
@@ -27,7 +31,7 @@ const faqs = [
   {
     question: "Do you offer discounts for longer stays?",
     answer:
-      "Yes, weekly (7-27 nights) and monthly (28+ nights) stays are discounted compared to nightly rates — for example, a Standard Twin drops to R522/night weekly and R464/night monthly. Contact us for a custom quote.",
+      `Yes. Stays of 7–27 nights and 28+ nights have lower room rates than 1–6 night stays. For example, the Standard Twin is ${formatRand(rate["Standard Twin"].price)} per night for 1–6 nights, ${formatRand(rate["Standard Twin"].weeklyPrice)} for 7–27 nights and ${formatRand(rate["Standard Twin"].monthlyPrice)} for 28+ nights. Contact us for a custom quote.`,
   },
   {
     question: "What are your check-in and check-out times?",
@@ -68,9 +72,9 @@ export default function RoomsPage() {
     {
       id: 1,
       name: "Standard Twin Room",
-      price: "R580/night",
-      weeklyPrice: "R522/night",
-      monthlyPrice: "R464/night on 28+ night stays",
+      price: `${formatRand(rate["Standard Twin"].price)}/night`,
+      weeklyPrice: `${formatRand(rate["Standard Twin"].weeklyPrice)}/night`,
+      monthlyPrice: `${formatRand(rate["Standard Twin"].monthlyPrice)}/night`,
       image: "/images/standard-twin-room.jpg",
       alt: "Standard twin room guesthouse Bellville South - clean twin beds with botanical pillows and modern ensuite bathroom",
       bestFor: "Best for 2 contractors or 2 professionals sharing.",
@@ -86,9 +90,9 @@ export default function RoomsPage() {
     {
       id: 2,
       name: "Deluxe Twin Room",
-      price: "R650/night",
-      weeklyPrice: "R585/night",
-      monthlyPrice: "R520/night",
+      price: `${formatRand(rate["Deluxe Twin"].price)}/night`,
+      weeklyPrice: `${formatRand(rate["Deluxe Twin"].weeklyPrice)}/night`,
+      monthlyPrice: `${formatRand(rate["Deluxe Twin"].monthlyPrice)}/night`,
       image: "/images/deluxe-twin-navy-hd.jpg",
       alt: "Deluxe twin room guesthouse Bellville South - premium navy blue headboards with quality bedding and palm artwork",
       bestFor: "Best for 2 professionals wanting extra comfort.",
@@ -104,9 +108,9 @@ export default function RoomsPage() {
     {
       id: 3,
       name: "Double Room",
-      price: "R680/night",
-      weeklyPrice: "R612/night",
-      monthlyPrice: "R544/night",
+      price: `${formatRand(rate["Double Room"].price)}/night`,
+      weeklyPrice: `${formatRand(rate["Double Room"].weeklyPrice)}/night`,
+      monthlyPrice: `${formatRand(rate["Double Room"].monthlyPrice)}/night`,
       image: "/images/double-room-sage.jpg",
       alt: "Double room guesthouse Bellville South - self-catering accommodation Cape Town near UWC and Tygerberg Hospital with ensuite bathroom",
       bestFor: "Best for solo professionals, couples, or site supervisors.",
@@ -123,10 +127,10 @@ export default function RoomsPage() {
     {
       id: 4,
       name: "Triple Room",
-      price: "R840/night",
-      weeklyPrice: "R756/night",
-      monthlyPrice: "R672/night",
-      perPerson: "R224/person/night with 3 adults sharing for 28+ nights, subject to availability",
+      price: `${formatRand(rate["Triple Room"].price)}/night`,
+      weeklyPrice: `${formatRand(rate["Triple Room"].weeklyPrice)}/night`,
+      monthlyPrice: `${formatRand(rate["Triple Room"].monthlyPrice)}/night`,
+      perPerson: `About ${formatRand(tripleShareMonthly.perPerson)}/person/night only when 3 adults share for 28+ nights, subject to availability`,
       image: "/images/triple-room-view.jpg",
       alt: "Triple room guesthouse Bellville South - spacious room with multiple beds, desk and tea station for contractor crews",
       bestFor: "Best value for 3-person contractor crews.",
@@ -285,27 +289,27 @@ export default function RoomsPage() {
               <tbody>
                 <tr className="border-b border-gray-800">
                   <td className="py-3 px-4">Standard Twin</td>
-                  <td className="text-center py-3 px-4">R580</td>
-                  <td className="text-center py-3 px-4 text-sage-400">R522</td>
-                  <td className="text-center py-3 px-4 text-green-400 font-bold">R464</td>
+                  <td className="text-center py-3 px-4">{formatRand(rate["Standard Twin"].price)}</td>
+                  <td className="text-center py-3 px-4 text-sage-400">{formatRand(rate["Standard Twin"].weeklyPrice)}</td>
+                  <td className="text-center py-3 px-4 text-green-400 font-bold">{formatRand(rate["Standard Twin"].monthlyPrice)}</td>
                 </tr>
                 <tr className="border-b border-gray-800">
                   <td className="py-3 px-4">Deluxe Twin</td>
-                  <td className="text-center py-3 px-4">R650</td>
-                  <td className="text-center py-3 px-4 text-sage-400">R585</td>
-                  <td className="text-center py-3 px-4 text-green-400 font-bold">R520</td>
+                  <td className="text-center py-3 px-4">{formatRand(rate["Deluxe Twin"].price)}</td>
+                  <td className="text-center py-3 px-4 text-sage-400">{formatRand(rate["Deluxe Twin"].weeklyPrice)}</td>
+                  <td className="text-center py-3 px-4 text-green-400 font-bold">{formatRand(rate["Deluxe Twin"].monthlyPrice)}</td>
                 </tr>
                 <tr className="border-b border-gray-800">
                   <td className="py-3 px-4">Double Room</td>
-                  <td className="text-center py-3 px-4">R680</td>
-                  <td className="text-center py-3 px-4 text-sage-400">R612</td>
-                  <td className="text-center py-3 px-4 text-green-400 font-bold">R544</td>
+                  <td className="text-center py-3 px-4">{formatRand(rate["Double Room"].price)}</td>
+                  <td className="text-center py-3 px-4 text-sage-400">{formatRand(rate["Double Room"].weeklyPrice)}</td>
+                  <td className="text-center py-3 px-4 text-green-400 font-bold">{formatRand(rate["Double Room"].monthlyPrice)}</td>
                 </tr>
                 <tr>
                   <td className="py-3 px-4">Triple Room</td>
-                  <td className="text-center py-3 px-4">R840</td>
-                  <td className="text-center py-3 px-4 text-sage-400">R756</td>
-                  <td className="text-center py-3 px-4 text-green-400 font-bold">R672</td>
+                  <td className="text-center py-3 px-4">{formatRand(rate["Triple Room"].price)}</td>
+                  <td className="text-center py-3 px-4 text-sage-400">{formatRand(rate["Triple Room"].weeklyPrice)}</td>
+                  <td className="text-center py-3 px-4 text-green-400 font-bold">{formatRand(rate["Triple Room"].monthlyPrice)}</td>
                 </tr>
               </tbody>
             </table>

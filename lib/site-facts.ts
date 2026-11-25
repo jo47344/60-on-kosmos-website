@@ -52,12 +52,17 @@ export const facilities = [
   "Company invoices available",
 ] as const
 
+// Rates per room per night, in rand. price = 1–6 nights, weeklyPrice = 7–27
+// nights, monthlyPrice = 28+ nights (owner-confirmed 28+ night rates, Nov 2026:
+// Standard Twin R500, Deluxe Twin R520, Double R544, Triple R700). There is one
+// room of each type. "monthlyPrice" is a nightly rate for stays of 28+ nights,
+// never a calendar-month price.
 export const rooms = [
   {
     name: "Standard Twin",
     price: 580,
     weeklyPrice: 522,
-    monthlyPrice: 464,
+    monthlyPrice: 500,
     layout: "Two single beds",
     barFridge: false,
   },
@@ -81,7 +86,7 @@ export const rooms = [
     name: "Triple Room",
     price: 840,
     weeklyPrice: 756,
-    monthlyPrice: 672,
+    monthlyPrice: 700,
     layout: "Three single beds",
     barFridge: true,
   },
@@ -98,7 +103,12 @@ export const groupOffer = {
   depositPercent: 50,
 } as const
 
-export const priceRangeLabel = "R464 - R840"
+// Per room per night: cheapest 28+ night room rate to dearest 1–6 night rate.
+export const roomRateRange = {
+  low: Math.min(...rooms.map((r) => r.monthlyPrice)), // R500
+  high: Math.max(...rooms.map((r) => r.price)), // R840
+} as const
+export const priceRangeLabel = `R${roomRateRange.low} - R${roomRateRange.high}`
 
 // Review platforms with genuine, live listings. Deliberately no hard-coded
 // rating value or review count here — those drift out of date and conflict
@@ -111,44 +121,73 @@ export const reviewPlatforms = {
   google: "https://share.google/cQTqA5TBvE9XDki11",
 } as const
 
-// Per-person cost when a room is fully shared (room rate ÷ beds). Derived from
-// the confirmed room rates above, so it can never drift from them. Crews and
-// AI assistants compare contractor accommodation per person per night.
-const sleeps = { "Standard Twin": 2, "Deluxe Twin": 2, "Double Room": 2, "Triple Room": 3 } as const
+// Rand formatting: whole numbers as "R1,234", fractions as "R233.33".
+export function formatRand(n: number): string {
+  const rounded = Math.round(n * 100) / 100
+  return Number.isInteger(rounded)
+    ? `R${rounded.toLocaleString("en-US")}`
+    : `R${rounded.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`
+}
 
-export const perPersonRates = rooms.map((r) => {
-  const n = sleeps[r.name]
-  return {
-    name: r.name,
-    sleeps: n,
-    nightly: Math.round(r.price / n),
-    weekly: Math.round(r.weeklyPrice / n),
-    monthly: Math.round(r.monthlyPrice / n),
-  }
-})
+export type RoomName = (typeof rooms)[number]["name"]
+export type RateTier = "nightly" | "weekly" | "monthly"
 
-// The lowest per-person figures all come from the Triple Room with three
-// adults sharing. Always state them with that qualifier (see below) — they
-// are not available for every room or every group size.
-export const lowestPerPerson = {
-  nightly: Math.min(...perPersonRates.map((r) => r.nightly)), // R280 (Triple, 1–6 nights)
-  weekly: Math.min(...perPersonRates.map((r) => r.weekly)), // R252 (Triple, 7–27 nights)
-  monthly: Math.min(...perPersonRates.map((r) => r.monthly)), // R224 (Triple, 28+ nights)
-} as const
+const roomByName = Object.fromEntries(rooms.map((r) => [r.name, r])) as Record<RoomName, (typeof rooms)[number]>
 
-export const lowestPerPersonQualifier = `three adults sharing the Triple Room for ${stayTerms.monthlyRateMinNights}+ nights, subject to availability`
+export function rateTierFor(nights: number): RateTier {
+  if (nights >= stayTerms.monthlyRateMinNights) return "monthly"
+  if (nights >= 7) return "weekly"
+  return "nightly"
+}
+
+export function roomRate(name: RoomName, nights: number): number {
+  const r = roomByName[name]
+  const tier = rateTierFor(nights)
+  return tier === "monthly" ? r.monthlyPrice : tier === "weekly" ? r.weeklyPrice : r.price
+}
+
+// Price a stay for the rooms actually reserved and the nights actually stayed.
+// The group discount only applies when all four rooms are booked direct for
+// 2–6 nights (nightly rates); it never stacks with the 7+ or 28+ night rates.
+export function quoteStay(roomNames: readonly RoomName[], nights: number) {
+  const tier = rateTierFor(nights)
+  const fullRate = roomNames.reduce((sum, n) => sum + roomRate(n, nights), 0)
+  const allFourRooms = rooms.every((r) => roomNames.includes(r.name))
+  const groupDiscount = tier === "nightly" && allFourRooms && nights >= groupOffer.minNights
+  const perNight = groupDiscount ? fullRate * (1 - groupOffer.discountPercent / 100) : fullRate
+  return { tier, nights, perNight, total: perNight * nights, groupDiscount }
+}
 
 // Bed configuration: 7 single beds (2 + 2 + 3) and one double bed. A group of
 // nine is only possible with two adults sharing the double bed.
+const sleeps: Record<RoomName, number> = { "Standard Twin": 2, "Deluxe Twin": 2, "Double Room": 2, "Triple Room": 3 }
 export const beds = { single: 7, double: 1 } as const
 export const nineGuestNote =
   "The house has 7 single beds and 1 double bed, so a group of nine needs two adults to share the double bed in the Double Room."
 
-// Whole house (all four rooms; 9 guests only with two sharing the double bed)
-// per night at each rate tier.
+// Per-person figures are examples only: the room rate divided by the number of
+// adults when every bed is used. Lead with room prices; quote these only with
+// their qualifier. Rounded to cents, never to whole rand.
+export const perPersonRates = rooms.map((r) => {
+  const n = sleeps[r.name]
+  const cents = (v: number) => Math.round((v / n) * 100) / 100
+  return { name: r.name, sleeps: n, nightly: cents(r.price), weekly: cents(r.weeklyPrice), monthly: cents(r.monthlyPrice) }
+})
+
+// The lowest 28+ night per-person equivalent: approximately R233.33, only
+// when three adults share the Triple Room.
+const triple = roomByName["Triple Room"]
+export const tripleShareMonthly = {
+  perPerson: Math.round((triple.monthlyPrice / 3) * 100) / 100, // 233.33
+  qualifier: `only when three adults share the Triple Room for ${stayTerms.monthlyRateMinNights}+ nights, subject to availability`,
+} as const
+
+// Whole house (all four rooms) per night at each rate tier, from quoteStay so
+// the group-discount rule is applied the same way everywhere.
+const allRooms = rooms.map((r) => r.name)
 export const wholeHouse = {
-  nightly: rooms.reduce((s, r) => s + r.price, 0), // R2,750
-  weekly: rooms.reduce((s, r) => s + r.weeklyPrice, 0), // R2,475
-  monthly: rooms.reduce((s, r) => s + r.monthlyPrice, 0), // R2,200
-  groupNightly: Math.round(rooms.reduce((s, r) => s + r.price, 0) * (1 - groupOffer.discountPercent / 100)), // R2,475
+  nightly: quoteStay(allRooms, 1).perNight, // R2,750 (1 night, no group discount)
+  groupNightly: quoteStay(allRooms, groupOffer.minNights).perNight, // R2,475 (2–6 nights, 10% off)
+  weekly: quoteStay(allRooms, 7).perNight, // R2,475 (7–27 nights)
+  monthly: quoteStay(allRooms, stayTerms.monthlyRateMinNights).perNight, // R2,264 (28+ nights)
 } as const
