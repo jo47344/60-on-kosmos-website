@@ -7,12 +7,12 @@ import { Phone } from "lucide-react"
 export const metadata: Metadata = {
   title: "Day & Week Rates for Contractor Crews | No Lease Required",
   description:
-    "Book contractor accommodation by the day or the week with no lease — daily rates from R580 to R840/night, long-stay from R464/night. Private ensuite, self-catering, secure parking. See our full contractor accommodation guide for room details and company invoicing.",
+    "Book contractor accommodation by the day or the week with no lease — daily rates from R580 to R840/night, long-stay from R480/night. Private ensuite, self-catering, secure parking. See our full contractor accommodation guide for room details and company invoicing.",
   alternates: { canonical: "https://www.60onkosmos.co.za/contractors" },
   openGraph: {
     title: "Day & Week Rates for Contractor Crews | No Lease Required",
     description:
-      "Book contractor accommodation by the day or the week with no lease — daily rates from R580 to R840/night, long-stay from R464/night. Private ensuite, self-catering, secure parking.",
+      "Book contractor accommodation by the day or the week with no lease — daily rates from R580 to R840/night, long-stay from R480/night. Private ensuite, self-catering, secure parking.",
     url: "https://www.60onkosmos.co.za/contractors",
     type: "website",
     images: [
@@ -72,14 +72,14 @@ export default function ContractorsPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Week-to-week, no lease</h2>
           <p className="text-gray-700 text-pretty mb-4">
-            Book by the day or the week. No lease, no minimum beyond one month for long stays.
+            Weekly pricing applies from 7 nights; monthly pricing applies from 28 nights. Booked dates and room arrangements are confirmed in writing. Extensions are subject to availability and a new written confirmation.
           </p>
           <div className="rounded-lg border bg-gray-50 p-6">
             <p className="text-gray-900 font-semibold">
               Daily rates: R580–R840/night ({rateIncludes})
             </p>
             <p className="text-gray-900 font-semibold mt-2">
-              Long-stay rate: R464/night ({rateIncludes})
+              Long-stay rate: R480/night ({rateIncludes})
             </p>
           </div>
         </div>

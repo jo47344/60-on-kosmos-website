@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Terms & House Rules | 60 on Kosmos Guest House",
+  title: "Terms & House Rules",
   description: "Booking terms, cancellation policy, and house rules for 60 on Kosmos Guest House in Bellville South.",
   alternates: {
     canonical: "https://www.60onkosmos.co.za/terms",
@@ -146,7 +146,7 @@ export default function TermsPage() {
                 <li>• Private ensuite bathroom</li>
                 <li>• Weekly cleaning service with fresh linen and towel change</li>
                 <li>• Free high-speed WiFi</li>
-                <li>• Secure parking (one vehicle per room)</li>
+                <li>• Gated parking subject to vehicle size and available space; confirm vehicles and trailers before booking</li>
                 <li>• Welcome refreshments at check-in (tea, coffee, milk)</li>
                 <li>• Access to communal self-catering kitchen</li>
               </ul>
@@ -188,7 +188,7 @@ export default function TermsPage() {
 
               <div className="bg-muted rounded-lg p-6">
                 <h3 className="font-semibold mb-2">Parking</h3>
-                <p className="text-muted-foreground">One vehicle per room, parked at owner&apos;s risk. No unauthorised vehicles. Work vehicles and bakkies welcome in designated areas.</p>
+                <p className="text-muted-foreground">Parking is subject to vehicle size and available space, at owner&apos;s risk. Confirm vehicles and trailers before booking. No unauthorised vehicles. Work vehicles and bakkies welcome in designated areas.</p>
               </div>
 
               <div className="bg-muted rounded-lg p-6">

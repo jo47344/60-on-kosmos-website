@@ -6,7 +6,7 @@ import { Star, Quote, MapPin, Calendar } from "lucide-react"
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
 
 export const metadata: Metadata = {
-  title: "Verified Guest Reviews - 60 on Kosmos Bellville South",
+  title: "Verified Guest Reviews",
   description:
     "Read verified reviews from real guests on Booking.com, Airbnb, and Google. See what contractors, students, and families say.",
   alternates: { canonical: "https://www.60onkosmos.co.za/testimonials" },

@@ -1,6 +1,8 @@
 "use client"
+import { RateTable } from "@/components/rate-table"
 
 import type React from "react"
+import { StayEstimate } from "@/components/stay-estimate"
 import { useState } from "react"
 import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
@@ -116,7 +118,7 @@ export default function BookNowClientPage() {
           <div className="flex justify-center mb-4">
             <Logo size="sm" showTagline={true} />
           </div>
-          <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">Book Your Stay</h1>
+          <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">Estimate & Book Your Stay</h1>
           <p className="mt-2 text-gray-700">
             Private ensuite rooms in Bellville South from <strong>R{fromPrice}/night</strong> when you book direct.
           </p>
@@ -133,7 +135,9 @@ export default function BookNowClientPage() {
           </ul>
         </div>
 
-        <div className="grid gap-6 lg:grid-cols-5">
+        <StayEstimate />
+<details className="mt-8"><summary className="cursor-pointer font-semibold text-lg">Prefer to send a booking request without an estimate?</summary>
+<div className="grid gap-6 lg:grid-cols-5 mt-5">
           {/* Booking form */}
           <div className="lg:col-span-3 p-5 sm:p-6 bg-white rounded-lg border shadow-sm">
             <h2 className="text-lg font-semibold text-gray-900 mb-1">Your dates</h2>
@@ -191,6 +195,7 @@ export default function BookNowClientPage() {
                   id="guestCount"
                   name="guestCount"
                   type="number"
+                  max="9"
                   inputMode="numeric"
                   min="1"
                   required
@@ -351,29 +356,7 @@ export default function BookNowClientPage() {
           <div className="lg:col-span-2 space-y-6">
             <div className="p-5 sm:p-6 bg-white rounded-lg border shadow-sm">
               <h2 className="text-lg font-semibold text-gray-900 mb-3">Direct rates per room, per night</h2>
-              <table className="w-full text-sm">
-                <thead>
-                  <tr className="text-left text-gray-500 border-b">
-                    <th scope="col" className="py-2 font-medium">Room</th>
-                    <th scope="col" className="py-2 font-medium text-right">1-6 nights</th>
-                    <th scope="col" className="py-2 font-medium text-right">7-27</th>
-                    <th scope="col" className="py-2 font-medium text-right">{stayTerms.monthlyRateMinNights}+</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {rooms.map((room) => (
-                    <tr key={room.name} className="border-b last:border-0">
-                      <th scope="row" className="py-2.5 text-left font-medium text-gray-900">
-                        {room.name}
-                        <span className="block text-xs font-normal text-gray-500">{room.layout}</span>
-                      </th>
-                      <td className="py-2.5 text-right text-gray-900">R{room.price}</td>
-                      <td className="py-2.5 text-right text-gray-700">R{room.weeklyPrice}</td>
-                      <td className="py-2.5 text-right text-gray-700">R{room.monthlyPrice}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+              <RateTable />
               <p className="text-xs text-gray-500 mt-3">
                 Every room has a private ensuite bathroom. Check-in from {stayTerms.checkIn}, check-out by{" "}
                 {stayTerms.checkOut}. Direct bookings are paid by EFT; company invoices on request.
@@ -402,6 +385,7 @@ export default function BookNowClientPage() {
             </div>
           </div>
         </div>
+        </details>
       </div>
     </div>
   )

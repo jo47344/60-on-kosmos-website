@@ -120,7 +120,7 @@ export function LocalBusinessSchema() {
       { "@type": "LocationFeatureSpecification", name: "CCTV Security", value: true },
       { "@type": "LocationFeatureSpecification", name: "ADT Armed Response", value: true },
       { "@type": "LocationFeatureSpecification", name: "Ensuite Bathrooms", value: true },
-      { "@type": "LocationFeatureSpecification", name: "Bar Fridge in Deluxe Twin, Double, and Triple rooms", value: true },
+      { "@type": "LocationFeatureSpecification", name: "Fridge in every guest room", value: true },
       { "@type": "LocationFeatureSpecification", name: "Weekly Cleaning Service", value: true },
       { "@type": "LocationFeatureSpecification", name: "Communal Kitchenette", value: true },
       { "@type": "LocationFeatureSpecification", name: "Outdoor Seating Area", value: true },
@@ -137,7 +137,7 @@ export function LocalBusinessSchema() {
           itemOffered: {
             "@type": "HotelRoom",
             name: "Standard Twin Room",
-            description: "Twin room with ensuite bathroom. Access to communal kitchen.",
+            description: "Twin room with fridge and ensuite bathroom. Access to communal kitchenette.",
             bed: { "@type": "BedDetails", numberOfBeds: 2, typeOfBed: "Single" },
             occupancy: { "@type": "QuantitativeValue", minValue: 1, maxValue: 2 },
           },
@@ -191,7 +191,7 @@ export function LocalBusinessSchema() {
             "@type": "HotelRoom",
             name: "Triple Room",
             description:
-              "Large room with three single beds. Best value for 3-person crews: R224 per person per night on monthly rates.",
+              "Large room with three single beds. Best value for 3-person crews: R220 per person per night on monthly rates.",
             bed: { "@type": "BedDetails", numberOfBeds: 3, typeOfBed: "Single" },
             occupancy: { "@type": "QuantitativeValue", minValue: 1, maxValue: 3 },
           },

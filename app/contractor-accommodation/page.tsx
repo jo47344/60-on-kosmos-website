@@ -1,3 +1,5 @@
+import { EstimateLink } from "@/components/estimate-link"
+import { rooms as roomRates } from "@/lib/site-facts"
 import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
@@ -28,7 +30,7 @@ export const metadata: Metadata = {
   // The root layout's title template ("%s | 60 on Kosmos Bellville South")
   // applies to every nested page unless overridden with `absolute` — without
   // this, the rendered <title> silently repeats the brand name a second time.
-  title: { absolute: "Contractor Accommodation Bellville | Project Teams" },
+  title: { absolute: "Contractor Accommodation Bellville, Cape Town | 60 on Kosmos" },
   description: "Secure contractor and workers' accommodation in Bellville for small project teams. Ensuite rooms, Wi-Fi, parking, company invoices and monthly rates.",
   alternates: {
     canonical: "https://www.60onkosmos.co.za/contractor-accommodation",
@@ -84,9 +86,9 @@ export default function ContractorAccommodationPage() {
     {
       name: "Standard Twin Room",
       tagline: "The Contractor Essential",
-      price: "R580",
-      weeklyPrice: "R522",
-      monthlyPrice: "R464",
+      price: `R${roomRates[0].price}`,
+      weeklyPrice: `R${roomRates[0].weeklyPrice}`,
+      monthlyPrice: `R${roomRates[0].monthlyPrice}`,
       capacity: "1-2 People",
       layout: "2 Single Beds",
       bestFor: "2 contractors or professionals sharing",
@@ -94,6 +96,7 @@ export default function ContractorAccommodationPage() {
       features: [
         "2 comfortable single beds",
         "Private ensuite bathroom",
+        "Bar fridge",
         "Free WiFi",
         "Communal kitchenette access",
         "Weekly cleaning included",
@@ -103,9 +106,9 @@ export default function ContractorAccommodationPage() {
     {
       name: "Deluxe Twin Room",
       tagline: "The Comfort Upgrade",
-      price: "R650",
-      weeklyPrice: "R585",
-      monthlyPrice: "R520",
+      price: `R${roomRates[1].price}`,
+      weeklyPrice: `R${roomRates[1].weeklyPrice}`,
+      monthlyPrice: `R${roomRates[1].monthlyPrice}`,
       capacity: "1-2 People",
       layout: "2 Single Beds",
       bestFor: "2 professionals wanting extra comfort",
@@ -122,9 +125,9 @@ export default function ContractorAccommodationPage() {
     {
       name: "Double Room",
       tagline: "The Manager's Choice",
-      price: "R680",
-      weeklyPrice: "R612",
-      monthlyPrice: "R544",
+      price: `R${roomRates[2].price}`,
+      weeklyPrice: `R${roomRates[2].weeklyPrice}`,
+      monthlyPrice: `R${roomRates[2].monthlyPrice}`,
       capacity: "1-2 People",
       layout: "1 Double Bed",
       bestFor: "Solo professionals, couples, or site supervisors",
@@ -141,9 +144,9 @@ export default function ContractorAccommodationPage() {
     {
       name: "Triple Room",
       tagline: "Best Value for Crews",
-      price: "R840",
-      weeklyPrice: "R756",
-      monthlyPrice: "R672",
+      price: `R${roomRates[3].price}`,
+      weeklyPrice: `R${roomRates[3].weeklyPrice}`,
+      monthlyPrice: `R${roomRates[3].monthlyPrice}`,
       capacity: "3 People",
       layout: "3 Single Beds",
       bestFor: "3-person contractor crews",
@@ -163,7 +166,7 @@ export default function ContractorAccommodationPage() {
   const contractorFAQs = [
     {
       question: "How much does contractor accommodation cost in Bellville South?",
-      answer: "Contractor rates at 60 on Kosmos start from R580/night (Standard Twin, 1–6 nights). Weekly rates (7–27 nights) from R522/night. Monthly rates (28+ nights) from R464/night. Long-stay and multi-room rates are confirmed on quotation.",
+      answer: "Contractor rates at 60 on Kosmos start from R580/night (Standard Twin, 1–6 nights). Weekly rates (7–27 nights) from R520/night. Monthly rates (28+ nights) from R480/night. Long-stay and multi-room rates are confirmed on quotation.",
     },
     {
       question: "Is there secure parking for work vehicles and bakkies?",
@@ -171,7 +174,7 @@ export default function ContractorAccommodationPage() {
     },
     {
       question: "Can contractors cook their own meals?",
-      answer: "Yes. All guests have access to a communal kitchenette for preparing light meals. Deluxe Twin, Double, and Triple rooms include private bar fridges; the Standard Twin does not.",
+      answer: "Yes. All guests have access to a communal kitchenette for preparing light meals. Every room, including Standard Twin, has a fridge.",
     },
     {
       question: "What amenities are included in the room rate?",
@@ -249,6 +252,7 @@ export default function ContractorAccommodationPage() {
           </div>
         </div>
       </section>
+<EstimateLink />
 
       <section className="bg-sage-600 text-white py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -342,7 +346,7 @@ export default function ContractorAccommodationPage() {
               </ul>
               <p className="text-gray-400 text-sm mt-4 pt-4 border-t border-gray-700">
                 Flexible week-by-week billing — extend a stay or add a room as your project runs, invoiced to your
-                company as you go. No lease or fixed term. A refundable security deposit may apply depending on the
+                company as you go. Extensions require availability and written confirmation; a possible extension does not reserve future dates. A refundable security deposit may apply depending on the
                 length and terms of the booking.
               </p>
             </div>
@@ -426,7 +430,7 @@ export default function ContractorAccommodationPage() {
               and work location and we&apos;ll confirm the best room combination and company rate.
             </p>
             <p className="text-sm text-gray-500 mb-6">
-              Monthly team rates can work out from approximately R224 per person per night when sharing. Final rates
+              A Triple Room is R220 per person per night when three adults share for 28+ nights. Final rates
               depend on team size, room allocation, availability and length of stay.
             </p>
             <p className="text-sm text-gray-500 mb-6">

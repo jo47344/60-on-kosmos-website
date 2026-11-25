@@ -26,6 +26,8 @@ const nextConfig = {
       // Send every path on them permanently to the real domain.
       { source: '/:path*', has: [{ type: 'host', value: '60onkosmos.vercel.app' }], destination: 'https://www.60onkosmos.co.za/:path*', permanent: true },
       { source: '/:path*', has: [{ type: 'host', value: 'v0-vo-ai-website-prompt.vercel.app' }], destination: 'https://www.60onkosmos.co.za/:path*', permanent: true },
+      { source: '/:path*', has: [{ type: 'host', value: '60-on-kosmos.vercel.app' }], destination: 'https://www.60onkosmos.co.za/:path*', permanent: true },
+      { source: '/:path*', has: [{ type: 'host', value: '60-on-kosmos-website.vercel.app' }], destination: 'https://www.60onkosmos.co.za/:path*', permanent: true },
       // Kuils River location page - fix broken URL
       { source: '/contractor-accommodation-kuilsriver', destination: 'https://www.60onkosmos.co.za/contractor-accommodation-kuils-river', permanent: true },
       // Consolidate narrower legacy location pages into broader new pages to avoid duplicate content
@@ -65,6 +67,7 @@ const nextConfig = {
   },
   async headers() {
     return [
+      { source: "/stay-estimate/:path*", headers: [{ key: "X-Robots-Tag", value: "noindex, follow" }, { key: "Cache-Control", value: "public, max-age=0, must-revalidate" }] },
       {
         source: "/robots.txt",
         headers: [

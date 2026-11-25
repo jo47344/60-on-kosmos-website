@@ -1,3 +1,6 @@
+import { EstimateLink } from "@/components/estimate-link"
+import { rooms as roomRates } from "@/lib/site-facts"
+import { RateTable } from "@/components/rate-table"
 import type { Metadata } from "next"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
@@ -22,12 +25,12 @@ const faqs = [
   {
     question: "What's included in every room rate?",
     answer:
-      "Free WiFi, weekly cleaning with fresh linen, secure gated parking, and access to our communal self-catering kitchen. Deluxe Twin, Double, and Triple rooms also include a bar fridge.",
+      "Free WiFi, weekly cleaning with fresh linen, secure gated parking, and access to our communal self-catering kitchen. Every room, including Standard Twin, has a fridge.",
   },
   {
     question: "Do you offer discounts for longer stays?",
     answer:
-      "Yes, weekly (7-27 nights) and monthly (28+ nights) stays are discounted compared to nightly rates — for example, a Standard Twin drops to R522/night weekly and R464/night monthly. Contact us for a custom quote.",
+      "Yes, weekly (7-27 nights) and monthly (28+ nights) stays are discounted compared to nightly rates — for example, a Standard Twin drops to R520/night weekly and R480/night monthly. Contact us for a custom quote.",
   },
   {
     question: "What are your check-in and check-out times?",
@@ -68,15 +71,16 @@ export default function RoomsPage() {
     {
       id: 1,
       name: "Standard Twin Room",
-      price: "R580/night",
-      weeklyPrice: "R522/night",
-      monthlyPrice: "R464/night on 28+ night stays",
+      price: `R${roomRates[0].price}/night`,
+      weeklyPrice: `R${roomRates[0].weeklyPrice}/night`,
+      monthlyPrice: `R${roomRates[0].monthlyPrice}/night`,
       image: "/images/standard-twin-room.jpg",
       alt: "Standard twin room guesthouse Bellville South - clean twin beds with botanical pillows and modern ensuite bathroom",
       bestFor: "Best for 2 contractors or 2 professionals sharing.",
       features: [
         "2 single beds",
         "Private ensuite bathroom",
+        "Bar fridge",
         "Free WiFi",
         "Weekly cleaning",
       ],
@@ -86,9 +90,9 @@ export default function RoomsPage() {
     {
       id: 2,
       name: "Deluxe Twin Room",
-      price: "R650/night",
-      weeklyPrice: "R585/night",
-      monthlyPrice: "R520/night",
+      price: `R${roomRates[1].price}/night`,
+      weeklyPrice: `R${roomRates[1].weeklyPrice}/night`,
+      monthlyPrice: `R${roomRates[1].monthlyPrice}/night`,
       image: "/images/deluxe-twin-navy-hd.jpg",
       alt: "Deluxe twin room guesthouse Bellville South - premium navy blue headboards with quality bedding and palm artwork",
       bestFor: "Best for 2 professionals wanting extra comfort.",
@@ -104,9 +108,9 @@ export default function RoomsPage() {
     {
       id: 3,
       name: "Double Room",
-      price: "R680/night",
-      weeklyPrice: "R612/night",
-      monthlyPrice: "R544/night",
+      price: `R${roomRates[2].price}/night`,
+      weeklyPrice: `R${roomRates[2].weeklyPrice}/night`,
+      monthlyPrice: `R${roomRates[2].monthlyPrice}/night`,
       image: "/images/double-room-sage.jpg",
       alt: "Double room guesthouse Bellville South - self-catering accommodation Cape Town near UWC and Tygerberg Hospital with ensuite bathroom",
       bestFor: "Best for solo professionals, couples, or site supervisors.",
@@ -123,10 +127,10 @@ export default function RoomsPage() {
     {
       id: 4,
       name: "Triple Room",
-      price: "R840/night",
-      weeklyPrice: "R756/night",
-      monthlyPrice: "R672/night",
-      perPerson: "From R224/person/night on monthly stays",
+      price: `R${roomRates[3].price}/night`,
+      weeklyPrice: `R${roomRates[3].weeklyPrice}/night`,
+      monthlyPrice: `R${roomRates[3].monthlyPrice}/night`,
+      perPerson: "R220/person/night when 3 adults share for 28+ nights",
       image: "/images/triple-room-view.jpg",
       alt: "Triple room guesthouse Bellville South - spacious room with multiple beds, desk and tea station for contractor crews",
       bestFor: "Best value for 3-person contractor crews.",
@@ -148,6 +152,7 @@ export default function RoomsPage() {
       <BreadcrumbSchema items={breadcrumbItems} />
       <Breadcrumbs items={breadcrumbItems} />
       <FAQSchema faqs={faqs} />
+<EstimateLink />
       <div className="min-h-screen py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Contact Banner */}
@@ -172,7 +177,7 @@ export default function RoomsPage() {
         {/* Ensuite Highlight */}
         <div className="bg-sage-50 border border-sage-200 rounded-lg p-4 mb-8 text-center">
           <p className="text-sage-800 font-medium">
-            All rooms have private ensuite bathrooms - no shared facilities
+            Private ensuite bathrooms in every room; kitchenette and outdoor areas are shared
           </p>
         </div>
 
@@ -186,7 +191,7 @@ export default function RoomsPage() {
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Self-Catering Rooms & Rates</h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            All rooms include a private ensuite bathroom and free WiFi. Deluxe Twin, Double, and Triple rooms include a bar fridge; Standard Twin does not. Clean linen, welcome refreshments, and weekly cleaning service are included.
+            All rooms include a private ensuite bathroom and free WiFi. Every room, including Standard Twin, has a fridge. Clean linen, welcome refreshments, and weekly cleaning service are included.
           </p>
         </div>
 
@@ -202,7 +207,7 @@ export default function RoomsPage() {
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   priority={room.id <= 2}
                 />
-                <Badge className="absolute top-4 left-4 bg-green-600">Available</Badge>
+                <Badge className="absolute top-4 left-4 bg-green-600">Check availability</Badge>
               </div>
               <CardContent className="p-6">
                 <div className="mb-4">
@@ -273,42 +278,7 @@ export default function RoomsPage() {
           
           {/* Pricing Table */}
           <div className="overflow-x-auto mb-8">
-            <table className="w-full max-w-3xl mx-auto text-sm">
-              <thead>
-                <tr className="border-b border-gray-700">
-                  <th className="text-left py-3 px-4">Room</th>
-                  <th className="text-center py-3 px-4">Standard<br/><span className="text-xs text-gray-400">1-6 nights</span></th>
-                  <th className="text-center py-3 px-4">Weekly<br/><span className="text-xs text-gray-400">7-27 nights</span></th>
-                  <th className="text-center py-3 px-4">Monthly<br/><span className="text-xs text-gray-400">28+ nights</span></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border-b border-gray-800">
-                  <td className="py-3 px-4">Standard Twin</td>
-                  <td className="text-center py-3 px-4">R580</td>
-                  <td className="text-center py-3 px-4 text-sage-400">R522</td>
-                  <td className="text-center py-3 px-4 text-green-400 font-bold">R464</td>
-                </tr>
-                <tr className="border-b border-gray-800">
-                  <td className="py-3 px-4">Deluxe Twin</td>
-                  <td className="text-center py-3 px-4">R650</td>
-                  <td className="text-center py-3 px-4 text-sage-400">R585</td>
-                  <td className="text-center py-3 px-4 text-green-400 font-bold">R520</td>
-                </tr>
-                <tr className="border-b border-gray-800">
-                  <td className="py-3 px-4">Double Room</td>
-                  <td className="text-center py-3 px-4">R680</td>
-                  <td className="text-center py-3 px-4 text-sage-400">R612</td>
-                  <td className="text-center py-3 px-4 text-green-400 font-bold">R544</td>
-                </tr>
-                <tr>
-                  <td className="py-3 px-4">Triple Room</td>
-                  <td className="text-center py-3 px-4">R840</td>
-                  <td className="text-center py-3 px-4 text-sage-400">R756</td>
-                  <td className="text-center py-3 px-4 text-green-400 font-bold">R672</td>
-                </tr>
-              </tbody>
-            </table>
+            <RateTable />
           </div>
 
           <p className="text-center text-sage-400 text-sm mb-6">
@@ -392,7 +362,7 @@ export default function RoomsPage() {
         <div className="mt-12 bg-blue-50 border border-blue-200 rounded-lg p-6">
           <h3 className="text-lg font-bold text-gray-900 mb-3">ℹ️ Self-Catering Accommodation</h3>
           <p className="text-gray-700 mb-4">
-            60 on Kosmos is a self-catering guesthouse. We do not provide meals or daily cleaning. Deluxe Twin, Double, and Triple rooms include a bar fridge; Standard Twin does not.
+            60 on Kosmos is a self-catering guesthouse. We do not provide meals or daily cleaning. Every room, including Standard Twin, has a fridge.
           </p>
           <ul className="space-y-2 text-sm text-gray-600">
             <li className="flex items-center">

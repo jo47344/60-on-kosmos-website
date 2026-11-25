@@ -187,7 +187,7 @@ export default function StudentFAQPage() {
               <AccordionItem value="item-7">
                 <AccordionTrigger className="text-left">Can I cook my own meals?</AccordionTrigger>
                 <AccordionContent className="text-gray-600">
-                  We have a communal kitchenette where you can prepare meals. Deluxe Twin, Double, and Triple rooms have a bar fridge; the Standard Twin does not. This is perfect for students on a budget who want to save money by cooking
+                  We have a communal kitchenette where you can prepare meals. Every room, including Standard Twin, has a fridge. This is perfect for students on a budget who want to save money by cooking
                   instead of eating out.
                 </AccordionContent>
               </AccordionItem>

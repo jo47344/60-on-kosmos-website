@@ -1,3 +1,4 @@
+import { EstimateLink } from "@/components/estimate-link"
 import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
@@ -6,12 +7,12 @@ import { Button } from "@/components/ui/button"
 export const metadata: Metadata = {
   title: "Extended-Stay Accommodation for Corporate Teams",
   description:
-    "Private ensuite, self-catering, one invoice a month — no lease, no long-term commitment. Monthly rate R464/night, one-month minimum.",
+    "Private ensuite, self-catering, one invoice a month — booked dates and payment terms confirmed in writing. Monthly Twin rate R480 per room/night from 28 nights, subject to availability.",
   alternates: { canonical: "https://www.60onkosmos.co.za/corporate" },
   openGraph: {
     title: "Extended-Stay Accommodation for Corporate Teams",
     description:
-      "Private ensuite, self-catering, one invoice a month — no lease, no long-term commitment. Monthly rate R464/night, one-month minimum.",
+      "Private ensuite, self-catering, one invoice a month — booked dates and payment terms confirmed in writing. Monthly Twin rate R480 per room/night from 28 nights, subject to availability.",
     url: "https://www.60onkosmos.co.za/corporate",
     type: "website",
     images: [
@@ -46,12 +47,13 @@ export default function CorporatePage() {
             Extended-stay accommodation for corporate teams
           </h1>
           <p className="text-base sm:text-lg text-gray-300 text-pretty">
-            Private ensuite, self-catering, one invoice a month — no lease, no long-term commitment. Built for
+            Private ensuite, self-catering, one invoice a month — booked dates and payment terms confirmed in writing. Built for
             teams that need to put people up in Cape Town for weeks or months at a time, not a hotel bill that
             adds up fast.
           </p>
         </div>
       </section>
+<EstimateLink />
 
       {/* How it works */}
       <section className="py-12 sm:py-16 bg-white">
@@ -59,9 +61,9 @@ export default function CorporatePage() {
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">How it works</h2>
           <div className="rounded-lg border bg-gray-50 p-6 space-y-2">
             <p className="text-gray-900 font-semibold">
-              Monthly rate: R464/night, one-month minimum ({rateIncludes})
+              Monthly Twin rate: R480 per room/night, 28-night minimum ({rateIncludes})
             </p>
-            <p className="text-gray-700">Invoiced directly, no lease required.</p>
+            <p className="text-gray-700">Company invoices available. Only confirmed dates are reserved; possible extensions do not hold future rooms.</p>
             <p className="text-gray-700">Rooms serviced weekly.</p>
           </div>
         </div>

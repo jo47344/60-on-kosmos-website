@@ -22,7 +22,7 @@ import { FAQSchema } from "@/components/faq-schema"
 import { capacity, facilities } from "@/lib/site-facts"
 
 export const metadata: Metadata = {
-  title: "Guesthouse Near Kuils River | 60 on Kosmos, Bellville South",
+  title: "Accommodation Near Kuils River, Cape Town",
   description:
     "Guesthouse accommodation near Kuils River and surrounding industrial zones. 60 on Kosmos offers private ensuite rooms, secure parking, and flexible corporate terms for project teams.",
   alternates: {

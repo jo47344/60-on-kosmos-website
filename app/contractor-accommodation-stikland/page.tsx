@@ -23,7 +23,7 @@ import { FAQSchema } from "@/components/faq-schema"
 import { capacity, facilities } from "@/lib/site-facts"
 
 export const metadata: Metadata = {
-  title: "Guesthouse Near Stikland | 60 on Kosmos, Bellville South",
+  title: "Accommodation Near Stikland, Cape Town",
   description:
     "Guesthouse accommodation near Stikland Industrial, minutes away. 60 on Kosmos offers private ensuite rooms, secure parking, and flexible billing for project teams working in Stikland.",
   alternates: {

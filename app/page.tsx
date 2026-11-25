@@ -1,3 +1,4 @@
+import { EstimateLink } from "@/components/estimate-link"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
@@ -21,13 +22,13 @@ import { reviewPlatforms } from "@/lib/site-facts"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Bellville South Accommodation for Contractors & Teams | 60 on Kosmos",
+  title: "Ensuite Accommodation in Bellville South, Cape Town",
   description: "Private ensuite accommodation in Bellville South for contractors, project teams and working professionals. Secure parking, WiFi, weekly cleaning and company invoices. Request a quote.",
   alternates: {
     canonical: "https://www.60onkosmos.co.za/",
   },
   openGraph: {
-    title: "Bellville South Accommodation for Contractors & Teams | 60 on Kosmos",
+    title: "Ensuite Accommodation in Bellville South, Cape Town",
     description: "Private ensuite accommodation in Bellville South for contractors, project teams and working professionals. Secure parking, WiFi, weekly cleaning and company invoices. Request a quote.",
     url: "https://www.60onkosmos.co.za/",
     type: "website",
@@ -49,7 +50,7 @@ export default function HomePage() {
       price: "From R580/night",
       image: "/images/standard-twin-room.jpg",
       bestFor: "Best for 2 contractors sharing",
-      features: ["2 single beds", "Private ensuite", "Free WiFi", "Kitchen access"],
+      features: ["2 single beds", "Private ensuite", "Bar fridge", "Kitchen access"],
     },
     {
       name: "Deluxe Twin Room",
@@ -70,7 +71,7 @@ export default function HomePage() {
       price: "From R840/night",
       image: "/images/triple-room-view.jpg",
       bestFor: "Best for 3-person crews",
-      features: ["3 single beds", "Private ensuite", "R224 per person per night on monthly stays", "Best value"],
+      features: ["3 single beds", "Private ensuite", "R220 pp/night: 3 sharing for 28+ nights", "Best value"],
     },
   ]
 
@@ -115,6 +116,7 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+<EstimateLink />
 
         {/* Trust Badges */}
         <TrustBadges />

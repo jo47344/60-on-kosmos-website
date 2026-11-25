@@ -6,7 +6,7 @@ import { MapPin, ShoppingCart, Utensils, Coffee, Building, Trees, GraduationCap,
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
 
 export const metadata: Metadata = {
-  title: "Things to Do Near Bellville South | 60 on Kosmos Local Guide",
+  title: "Things to Do Near Bellville South, Cape Town",
   description:
     "Discover the best restaurants, shopping, attractions and activities near 60 on Kosmos Bellville South. Complete guide to exploring the area around UWC and Tygerberg Hospital.",
   keywords:
