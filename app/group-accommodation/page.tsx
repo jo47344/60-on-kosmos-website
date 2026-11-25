@@ -17,7 +17,7 @@ const groupNightly = Math.round((allRoomsNightly * (100 - groupOffer.discountPer
 const perPersonGroup = Math.round(groupNightly / capacity.maxGuests)
 const rand = (amount: number) => `R${amount.toLocaleString("en-ZA").replace(/ /g, " ")}`
 
-const description = `Book all ${capacity.roomCount} private ensuite rooms at 60 on Kosmos, Bellville South. Sleeps up to ${capacity.maxGuests} adults, with the property to your group alone. From R${perPersonGroup} per person a night (${rand(groupNightly)} for all rooms) on direct bookings of ${groupOffer.minNights} nights or more.`
+const description = `Book all ${capacity.roomCount} private ensuite rooms at 60 on Kosmos, Bellville South. Sleeps up to ${capacity.maxGuests} adults, with the property to your group alone. ${rand(groupNightly)} a night for all ${capacity.roomCount} rooms on direct bookings of ${groupOffer.minNights}–6 nights (${groupOffer.discountPercent}% off the 1–6 night rates).`
 
 export const metadata: Metadata = {
   title: `Group Accommodation Bellville | Sleeps ${capacity.maxGuests} Adults`,
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
 }
 
 const whatsappHref = `https://wa.me/${business.whatsappNumber}?text=${encodeURIComponent(
-  "Hi, I'd like to book all four rooms at 60 on Kosmos for a group.\nNumber of adults: \nCheck-in: \nCheck-out: ",
+  "Hi, I’d like to book all four rooms at 60 on Kosmos for a group.\nNumber of adults: \nCheck-in: \nCheck-out: ",
 )}`
 
 const whoItSuits = [
@@ -87,16 +87,16 @@ const faqs = [
   },
   {
     question: "What does it cost to book all the rooms?",
-    answer: `Book all ${capacity.roomCount} rooms directly with us for ${groupOffer.minNights} nights or more and the group rate is ${rand(groupNightly)} a night, which is ${groupOffer.discountPercent}% off the standard ${rand(allRoomsNightly)} and works out to about R${perPersonGroup} per person with ${capacity.maxGuests} adults. A single night is ${rand(allRoomsNightly)}. Stays of 7 to 27 nights are ${rand(allRoomsWeekly)} a night, with no further group discount.`,
+    answer: `Book all ${capacity.roomCount} rooms directly with us for ${groupOffer.minNights}–6 nights and the group rate is ${rand(groupNightly)} a night for all ${capacity.roomCount} rooms, which is ${groupOffer.discountPercent}% off the standard ${rand(allRoomsNightly)}. As an example only, that is about R${perPersonGroup} per person if ${capacity.maxGuests} adults share, with two in the double bed. A single night is ${rand(allRoomsNightly)}. Stays of 7 to 27 nights are ${rand(allRoomsWeekly)} a night, with no further group discount.`,
   },
   {
     question: "How do we pay?",
-    answer: `A ${groupOffer.depositPercent}% deposit confirms a group booking. Direct bookings are paid by EFT; we don't take cash. Banking details are on your quotation. Check-in is from ${stayTerms.checkIn} and check-out is by ${stayTerms.checkOut}.`,
+    answer: `A ${groupOffer.depositPercent}% deposit confirms a group booking. Direct bookings are paid by EFT; we don’t take cash. Banking details are on your quotation. Check-in is from ${stayTerms.checkIn} and check-out is by ${stayTerms.checkOut}.`,
   },
   {
     question: "Can we book fewer than four rooms?",
     answer:
-      "Yes. Tell us how many adults are in your group and we'll confirm the best room combination, but other guests may then be staying in the remaining rooms.",
+      "Yes. Tell us how many adults are in your group and we’ll confirm the best room combination, but other guests may then be staying in the remaining rooms.",
   },
 ]
 
@@ -122,8 +122,8 @@ export default function GroupAccommodationPage() {
           </h1>
           <p className="text-base sm:text-lg text-gray-200 text-pretty mb-8">
             Book all {capacity.roomCount} private ensuite rooms and have 60 on Kosmos to your group alone. Sleeps up
-            to {capacity.maxGuests} adults, from R{perPersonGroup} per person a night: {rand(groupNightly)} for all{" "}
-            {capacity.roomCount} rooms when you book direct for {groupOffer.minNights} nights or more.
+            to {capacity.maxGuests} adults (two sharing the double bed). {rand(groupNightly)} a night for all{" "}
+            {capacity.roomCount} rooms when you book direct for {groupOffer.minNights}–6 nights.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-3">
             <Button asChild size="lg" className="bg-green-600 hover:bg-green-700 text-white">
@@ -151,8 +151,8 @@ export default function GroupAccommodationPage() {
               <DoorOpen className="w-6 h-6 text-sage-600 mb-3" aria-hidden="true" />
               <p className="font-medium text-gray-900 mb-1">Your own door and bathroom</p>
               <p className="text-sm text-gray-600">
-                Each room has a private ensuite and its own outside entrance, so nobody shares a bathroom or walks
-                through someone else&apos;s space.
+                Each room has its own en-suite bathroom, used only by that room’s occupants, and its own outside entrance,
+                so nobody walks through someone else’s space.
               </p>
             </div>
             <div className="bg-gray-50 rounded-lg p-5 border border-gray-200">
@@ -212,15 +212,15 @@ export default function GroupAccommodationPage() {
           </div>
           <div className="mt-6 rounded-lg border-2 border-sage-600 bg-white p-5">
             <p className="text-sm font-semibold uppercase tracking-wide text-sage-700">Group rate, book direct</p>
-            <p className="mt-1 text-2xl font-bold text-gray-900">From R{perPersonGroup} per person a night</p>
-            <p className="mt-1 text-base font-semibold text-gray-900">
-              {rand(groupNightly)} a night for all four rooms
+            <p className="mt-1 text-2xl font-bold text-gray-900">{rand(groupNightly)} a night for all four rooms</p>
+            <p className="mt-1 text-sm text-gray-700">
+              Example only: about R{perPersonGroup} per person if {capacity.maxGuests} adults share, two in the double
+              bed.
             </p>
             <p className="mt-2 text-sm text-gray-700">
-              That is {groupOffer.discountPercent}% off the standard {rand(allRoomsNightly)}. The per-person figure is
-              with {capacity.maxGuests} adults sharing; a smaller group pays the same {rand(groupNightly)} in total. It
-              applies when one group books all {capacity.roomCount} rooms directly with us for {groupOffer.minNights}{" "}
-              nights or more.
+              That is {groupOffer.discountPercent}% off the standard {rand(allRoomsNightly)}. A smaller group pays the same{" "}
+              {rand(groupNightly)} in total. It applies when one group books all {capacity.roomCount} rooms directly
+              with us for {groupOffer.minNights}–6 nights.
             </p>
             <p className="mt-2 text-sm text-gray-700">
               A {groupOffer.depositPercent}% deposit confirms your group booking.

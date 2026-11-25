@@ -4,11 +4,20 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Calendar, ArrowLeft, Phone, Wifi, CheckCircle, Laptop } from "lucide-react"
+import { formatRand, rooms as rateData } from "@/lib/site-facts"
+
+// Single-occupancy rooms (Standard Twin, Deluxe Twin, Double) on the 28+ night
+// rate, from the central rate data. Totals are for the nights stated, never a
+// calendar month.
+const single = rateData.filter((r) => r.name !== "Triple Room").map((r) => r.monthlyPrice)
+const lo = Math.min(...single)
+const hi = Math.max(...single)
+const f = (n: number) => formatRand(n).slice(1) // number without the "R"
 
 export const metadata: Metadata = {
   title: "Digital Nomad Guide | Cape Town",
   description:
-    "Why Bellville South is Cape Town's best-kept secret for digital nomads. Fast WiFi, low cost, great community. Complete guide to remote work accommodation, coworking, and costs.",
+    "Why Bellville South is Cape Town’s best-kept secret for digital nomads. Fast WiFi, low cost, great community. Complete guide to remote work accommodation, coworking, and costs.",
   keywords:
     "digital nomad cape town, remote work accommodation bellville, cheap coworking cape town, digital nomad bellville south, remote worker housing cape town",
   alternates: { canonical: "https://www.60onkosmos.co.za/blog/digital-nomad-guide-bellville-south" },
@@ -28,7 +37,7 @@ export default function DigitalNomadGuidePage() {
             DIGITAL NOMAD GUIDE
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Digital Nomad Guide: Why Bellville South is Cape Town's Best-Kept Secret
+            Digital Nomad Guide: Why Bellville South is Cape Town’s Best-Kept Secret
           </h1>
           <div className="flex items-center text-gray-600">
             <Calendar className="w-4 h-4 mr-2" />
@@ -50,7 +59,7 @@ export default function DigitalNomadGuidePage() {
 
         <div className="prose prose-lg max-w-none">
           <p className="text-xl text-gray-700 mb-6 font-medium">
-            Cape Town is consistently ranked as one of Africa's best cities for digital nomads. But while everyone
+            Cape Town is consistently ranked as one of Africa’s best cities for digital nomads. But while everyone
             flocks to expensive Sea Point and Camps Bay, smart remote workers are discovering Bellville South—where you
             get the same quality WiFi and lifestyle for 40-60% less money.
           </p>
@@ -58,12 +67,12 @@ export default function DigitalNomadGuidePage() {
           <div className="bg-green-50 border-l-4 border-green-600 p-6 mb-8">
             <p className="text-green-900 font-bold mb-2">💰 The Math is Simple:</p>
             <p className="text-green-800 mb-2">
-              <strong>Sea Point/CBD:</strong> R1,000-1,500/night (R30,000-45,000/month)
+              <strong>Sea Point/CBD:</strong> R1,000-1,500/night (R28,000-42,000 for 28 nights)
             </p>
             <p className="text-green-800">
-              <strong>Bellville South:</strong> R530-750/night (R13,500-18,000/month with monthly rates)
+              <strong>Bellville South:</strong> R{lo}-{hi}/night per room on 28+ night rates (R{f(lo * 28)}-{f(hi * 28)} for 28 nights)
             </p>
-            <p className="text-green-700 font-bold mt-2">Save R16,500-27,000 per month = More time traveling!</p>
+            <p className="text-green-700 font-bold mt-2">Save roughly R{f(28000 - hi * 28)}-{f(42000 - lo * 28)} over 28 nights = More time traveling!</p>
           </div>
 
           <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Why Digital Nomads Love Bellville South</h2>
@@ -124,8 +133,8 @@ export default function DigitalNomadGuidePage() {
             <table className="w-full">
               <tbody className="text-gray-700">
                 <tr className="border-b">
-                  <td className="py-3">Accommodation (monthly rate)</td>
-                  <td className="py-3 text-right">R13,500 - R16,000</td>
+                  <td className="py-3">Accommodation (28 nights, 28+ night rate)</td>
+                  <td className="py-3 text-right">R{f(lo * 28)} - R{f(hi * 28)}</td>
                 </tr>
                 <tr className="border-b">
                   <td className="py-3">Groceries (cook at guesthouse)</td>
@@ -148,12 +157,12 @@ export default function DigitalNomadGuidePage() {
                   <td className="py-3 text-right">R2,000 - R4,000</td>
                 </tr>
                 <tr className="font-bold text-lg border-t-2">
-                  <td className="py-3">Total Monthly Cost</td>
-                  <td className="py-3 text-right text-green-700">R19,300 - R27,500</td>
+                  <td className="py-3">Total for 28 nights</td>
+                  <td className="py-3 text-right text-green-700">R{f(lo * 28 + 5800)} - R{f(hi * 28 + 11500)}</td>
                 </tr>
                 <tr>
                   <td colSpan={2} className="pt-3 text-sm text-gray-600 italic">
-                    vs. Sea Point/CBD: R35,000-60,000/month
+                    vs. Sea Point/CBD: R35,000-60,000 for a similar stay
                   </td>
                 </tr>
               </tbody>
@@ -293,7 +302,7 @@ export default function DigitalNomadGuidePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
               <a
-                href="https://wa.me/27745245703?text=Hi%2C%20I'm%20a%20digital%20nomad%20looking%20for%20accommodation"
+                href="https://wa.me/27745245703?text=Hi%2C%20I%27m%20a%20digital%20nomad%20looking%20for%20accommodation"
                 target="_blank"
                 rel="noopener noreferrer"
               >

@@ -22,7 +22,7 @@ import { FAQSchema } from "@/components/faq-schema"
 import { capacity, facilities } from "@/lib/site-facts"
 
 export const metadata: Metadata = {
-  title: "Guesthouse Near Kuils River | 60 on Kosmos, Bellville South",
+  title: { absolute: "Guesthouse Near Kuils River | 60 on Kosmos, Bellville South, Cape Town" },
   description:
     "Guesthouse accommodation near Kuils River and surrounding industrial zones. 60 on Kosmos offers private ensuite rooms, secure parking, and flexible corporate terms for project teams.",
   alternates: {
@@ -55,11 +55,11 @@ const faqs = [
   {
     question: "Can multiple team members stay together?",
     answer:
-      "Yes. We have 4 private ensuite rooms, suitable for small teams of up to 9 guests in total. Tell us your team size and dates and we'll confirm the best room combination and a company rate.",
+      "Yes. We have 4 private ensuite rooms, suitable for small teams of up to 9 guests in total. Tell us your team size and dates and we’ll confirm the best room combination and a company rate.",
   },
   {
     question: "Is corporate invoicing available?",
-    answer: "Yes, invoices are provided on request. We accept EFT payment only — we don't take cash.",
+    answer: "Yes, invoices are provided on request. We accept EFT payment only — we don’t take cash.",
   },
   {
     question: "What are the check-in and cleaning arrangements?",
@@ -131,7 +131,7 @@ export default function KuilsRiverAccommodationPage() {
             <p>
               Kuils River and the neighbouring Blackheath Industrial Park, reached via the R300, are home to a mix
               of warehousing, manufacturing and logistics operations. Teams working this belt are often on shift
-              schedules that don&apos;t line up with typical hotel check-in and meal times.
+              schedules that don’t line up with typical hotel check-in and meal times.
             </p>
             <p>
               60 on Kosmos in Bellville South is roughly a 15–20 minute drive via the R300 — close enough for
@@ -145,7 +145,7 @@ export default function KuilsRiverAccommodationPage() {
         </div>
       </section>
 
-      {/* Who it's for */}
+      {/* Who it’s for */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold mb-6">Who this is for</h2>
@@ -204,7 +204,7 @@ export default function KuilsRiverAccommodationPage() {
                     <h3 className="font-bold mb-2">Room-sharing for small teams</h3>
                     <p className="text-gray-600 text-sm">
                       {capacity.roomCount} private ensuite rooms, suitable for small teams of up to {capacity.maxGuests}{" "}
-                      guests in total. Tell us your team size and we&apos;ll confirm the best combination.
+                      guests in total. Tell us your team size and we’ll confirm the best combination.
                     </p>
                   </div>
                 </div>
@@ -228,10 +228,10 @@ export default function KuilsRiverAccommodationPage() {
         </div>
       </section>
 
-      {/* What's Included */}
+      {/* What’s Included */}
       <section className="py-12 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-8 text-center">What&apos;s Included in Every Room</h2>
+          <h2 className="text-3xl font-bold mb-8 text-center">What’s Included in Every Room</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {[
               { icon: Wifi, label: facilities[3] },

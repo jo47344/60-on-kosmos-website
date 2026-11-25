@@ -109,7 +109,7 @@ export default function CheckAvailabilityClientPage() {
           </div>
           <h1 className="text-xl font-semibold text-gray-900 mb-2">Request Sent</h1>
           <p className="text-gray-600 mb-6">
-            We&apos;ll get back to you shortly via WhatsApp or email with availability.
+            We’ll get back to you shortly via WhatsApp or email with availability.
           </p>
           <Button
             onClick={() => setIsSubmitted(false)}
@@ -130,7 +130,7 @@ export default function CheckAvailabilityClientPage() {
         </div>
         <h1 className="text-center text-2xl font-bold mb-2 text-gray-900">Check availability</h1>
         <p className="text-center text-sm text-gray-600 mb-6">
-          Answer three quick questions and we&apos;ll get back to you.
+          Answer three quick questions and we’ll get back to you.
         </p>
         <form onSubmit={handleSubmit} className="space-y-5" data-form-name="check_availability_form">
           {error && (

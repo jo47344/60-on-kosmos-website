@@ -6,6 +6,10 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Breadcrumbs } from "@/components/breadcrumbs"
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
 import { FAQSchema } from "@/components/faq-schema"
+import { formatRand, rooms as rateData } from "@/lib/site-facts"
+
+const rate = Object.fromEntries(rateData.map((r) => [r.name, r]))
+
 
 export const metadata: Metadata = {
   title: "Monthly Accommodation in Bellville South",
@@ -37,14 +41,14 @@ const breadcrumbItems = [
 
 const faqs = [
   {
-    question: "What's the minimum stay for monthly rates?",
+    question: "What’s the minimum stay for monthly rates?",
     answer:
       "Monthly rates apply to stays of 28 nights or more. Stays of 7-27 nights qualify for our discounted weekly rate instead.",
   },
   {
     question: "How much is monthly accommodation?",
     answer:
-      "Monthly rates start from R464/night for a Standard Twin Room, with the first month due in full before or on check-in and subsequent months due on the 1st of each calendar month.",
+      `Rates for stays of 28+ nights start from ${formatRand(Math.min(...rateData.map((r) => r.monthlyPrice)))} per room per night (Standard Twin), charged for the nights stayed, with the first month due in full before or on check-in and subsequent months due on the 1st of each calendar month.`,
   },
   {
     question: "Is a security deposit required for monthly stays?",
@@ -52,14 +56,14 @@ const faqs = [
       "A refundable security deposit may apply to stays of seven nights or longer. The amount is confirmed on your quotation and refunded via EFT within 7 days of checkout, subject to inspection.",
   },
   {
-    question: "What's included in the monthly rate?",
+    question: "What’s included in the monthly rate?",
     answer:
       "Free WiFi, weekly cleaning with fresh linen, secure gated parking, and access to our communal self-catering kitchen — all included with no hidden extras.",
   },
   {
     question: "Can I get an invoice for my company?",
     answer:
-      "Yes, invoices are provided on request, which is why we're a popular choice for contractors and companies covering staff accommodation.",
+      "Yes, invoices are provided on request, which is why we’re a popular choice for contractors and companies covering staff accommodation.",
   },
 ]
 
@@ -135,10 +139,10 @@ export default function MonthlyAccommodationPage() {
         </div>
       </section>
 
-      {/* What's Included */}
+      {/* What’s Included */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">What's Included in Monthly Accommodation</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">What’s Included in Monthly Accommodation</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="flex gap-4">
               <Wifi className="w-8 h-8 text-sage-600 flex-shrink-0" />
@@ -203,27 +207,27 @@ export default function MonthlyAccommodationPage() {
               <tbody>
                 <tr className="hover:bg-gray-50">
                   <td className="border border-gray-200 px-4 py-3 font-medium">Standard Twin</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R580</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R522</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R464</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">{formatRand(rate["Standard Twin"].price)}</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">{formatRand(rate["Standard Twin"].weeklyPrice)}</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">{formatRand(rate["Standard Twin"].monthlyPrice)}</td>
                 </tr>
                 <tr className="hover:bg-gray-50">
                   <td className="border border-gray-200 px-4 py-3 font-medium">Deluxe Twin</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R650</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R585</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R520</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">{formatRand(rate["Deluxe Twin"].price)}</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">{formatRand(rate["Deluxe Twin"].weeklyPrice)}</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">{formatRand(rate["Deluxe Twin"].monthlyPrice)}</td>
                 </tr>
                 <tr className="hover:bg-gray-50">
                   <td className="border border-gray-200 px-4 py-3 font-medium">Double</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R680</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R612</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R544</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">{formatRand(rate["Double Room"].price)}</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">{formatRand(rate["Double Room"].weeklyPrice)}</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">{formatRand(rate["Double Room"].monthlyPrice)}</td>
                 </tr>
                 <tr className="hover:bg-gray-50">
                   <td className="border border-gray-200 px-4 py-3 font-medium">Triple</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R840</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R756</td>
-                  <td className="border border-gray-200 px-4 py-3 text-right">R672</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">{formatRand(rate["Triple Room"].price)}</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">{formatRand(rate["Triple Room"].weeklyPrice)}</td>
+                  <td className="border border-gray-200 px-4 py-3 text-right">{formatRand(rate["Triple Room"].monthlyPrice)}</td>
                 </tr>
               </tbody>
             </table>

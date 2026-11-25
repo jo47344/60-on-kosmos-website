@@ -34,7 +34,7 @@ export default function FAQPage() {
         name: "How far is 60 on Kosmos from UWC?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "We are approximately 5km from the University of the Western Cape (UWC) campus in Bellville. It's about a 10-minute drive, making us ideal accommodation for UWC students, parents visiting students, and staff.",
+          text: "We are approximately 5km from the University of the Western Cape (UWC) campus in Bellville. It’s about a 10-minute drive, making us ideal accommodation for UWC students, parents visiting students, and staff.",
         },
       },
       {
@@ -58,12 +58,12 @@ export default function FAQPage() {
         name: "How far are you from Tygerberg Hospital?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Tygerberg Hospital is approximately 8km away, roughly a 12-15 minute drive. We're a popular choice for locum doctors, nursing students, and medical staff needing affordable accommodation near the hospital.",
+          text: "Tygerberg Hospital is approximately 8km away, roughly a 12-15 minute drive. We’re a popular choice for locum doctors, nursing students, and medical staff needing affordable accommodation near the hospital.",
         },
       },
       {
         "@type": "Question",
-        name: "What's included in the room rate?",
+        name: "What’s included in the room rate?",
         acceptedAnswer: {
           "@type": "Answer",
           text: "Each room includes a private ensuite bathroom and free WiFi. Deluxe Twin, Double, and Triple rooms have a bar fridge; the Standard Twin does not. Clean linen and towels, weekly cleaning service, and welcome refreshments are included. You also have access to our communal kitchenette with gas stove, microwave, and air fryer for light meal preparation.",
@@ -74,7 +74,7 @@ export default function FAQPage() {
         name: "Is there a kitchen I can use?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes! We have a communal kitchenette area equipped with a gas stove, microwave, air fryer, and basic cooking utensils. This is perfect for preparing light meals. Deluxe Twin, Double, and Triple rooms have a bar fridge; the Standard Twin does not. There's a SPAR supermarket 2km away for groceries.",
+          text: "Yes! We have a communal kitchenette area equipped with a gas stove, microwave, air fryer, and basic cooking utensils. This is perfect for preparing light meals. Deluxe Twin, Double, and Triple rooms have a bar fridge; the Standard Twin does not. There’s a SPAR supermarket 2km away for groceries.",
         },
       },
       {
@@ -106,7 +106,7 @@ export default function FAQPage() {
         name: "What are your check-in and check-out times?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Check-in time is from 14:00 (2 PM) and check-out is by 10:00 AM. If you need different times, please contact us in advance and we'll try to accommodate you.",
+          text: "Check-in time is from 14:00 (2 PM) and check-out is by 10:00 AM. If you need different times, please contact us in advance and we’ll try to accommodate you.",
         },
       },
       {
@@ -114,7 +114,7 @@ export default function FAQPage() {
         name: "Is WiFi available and reliable?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes, we provide free high-speed WiFi throughout the property. It's reliable enough for video calls, online classes, and remote work - perfect for students and professionals.",
+          text: "Yes, we provide free high-speed WiFi throughout the property. It’s reliable enough for video calls, online classes, and remote work - perfect for students and professionals.",
         },
       },
       {
@@ -130,7 +130,7 @@ export default function FAQPage() {
         name: "How do I get to the property from Cape Town International Airport?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "We are approximately 25km from Cape Town International Airport, about a 25-30 minute drive. We don't offer airport transfers, but you can use Uber, Bolt, or arrange a private taxi. Many guests find ride-sharing apps to be the most convenient and affordable option.",
+          text: "We are approximately 25km from Cape Town International Airport, about a 25-30 minute drive. We don’t offer airport transfers, but you can use Uber, Bolt, or arrange a private taxi. Many guests find ride-sharing apps to be the most convenient and affordable option.",
         },
       },
       {
@@ -188,7 +188,7 @@ export default function FAQPage() {
     {
       question: "How far is 60 on Kosmos from UWC?",
       answer:
-        "We are approximately 5km from the University of the Western Cape (UWC) campus in Bellville. It's about a 10-minute drive, making us ideal accommodation for UWC students, parents visiting students, and staff.",
+        "We are approximately 5km from the University of the Western Cape (UWC) campus in Bellville. It’s about a 10-minute drive, making us ideal accommodation for UWC students, parents visiting students, and staff.",
     },
     {
       question: "Is there secure parking available?",
@@ -203,17 +203,17 @@ export default function FAQPage() {
     {
       question: "How far are you from Tygerberg Hospital?",
       answer:
-        "Tygerberg Hospital is approximately 8km away, roughly a 12-15 minute drive. We're a popular choice for locum doctors, nursing students, and medical staff needing affordable accommodation near the hospital.",
+        "Tygerberg Hospital is approximately 8km away, roughly a 12-15 minute drive. We’re a popular choice for locum doctors, nursing students, and medical staff needing affordable accommodation near the hospital.",
     },
     {
-      question: "What's included in the room rate?",
+      question: "What’s included in the room rate?",
       answer:
         "Each room includes a private ensuite bathroom and free WiFi. Deluxe Twin, Double, and Triple rooms have a bar fridge; the Standard Twin does not. Clean linen and towels, weekly cleaning service, and welcome refreshments are included. You also have access to our communal kitchenette with gas stove, microwave, and air fryer for light meal preparation.",
     },
     {
       question: "Is there a kitchen I can use?",
       answer:
-        "Yes! We have a communal kitchenette area equipped with a gas stove, microwave, air fryer, and basic cooking utensils. This is perfect for preparing light meals. Deluxe Twin, Double, and Triple rooms have a bar fridge; the Standard Twin does not. There's a SPAR supermarket 2km away for groceries.",
+        "Yes! We have a communal kitchenette area equipped with a gas stove, microwave, air fryer, and basic cooking utensils. This is perfect for preparing light meals. Deluxe Twin, Double, and Triple rooms have a bar fridge; the Standard Twin does not. There’s a SPAR supermarket 2km away for groceries.",
     },
     {
       question: "Is breakfast included?",
@@ -233,12 +233,12 @@ export default function FAQPage() {
     {
       question: "What are your check-in and check-out times?",
       answer:
-        "Check-in time is from 14:00 (2 PM) and check-out is by 10:00 AM. If you need different times, please contact us in advance and we'll try to accommodate you.",
+        "Check-in time is from 14:00 (2 PM) and check-out is by 10:00 AM. If you need different times, please contact us in advance and we’ll try to accommodate you.",
     },
     {
       question: "Is WiFi available and reliable?",
       answer:
-        "Yes, we provide free high-speed WiFi throughout the property. It's reliable enough for video calls, online classes, and remote work - perfect for students and professionals.",
+        "Yes, we provide free high-speed WiFi throughout the property. It’s reliable enough for video calls, online classes, and remote work - perfect for students and professionals.",
     },
     {
       question: "Are children allowed?",
@@ -248,7 +248,7 @@ export default function FAQPage() {
     {
       question: "How do I get to the property from Cape Town International Airport?",
       answer:
-        "We are approximately 25km from Cape Town International Airport, about a 25-30 minute drive. We don't offer airport transfers, but you can use Uber, Bolt, or arrange a private taxi. Many guests find ride-sharing apps to be the most convenient and affordable option.",
+        "We are approximately 25km from Cape Town International Airport, about a 25-30 minute drive. We don’t offer airport transfers, but you can use Uber, Bolt, or arrange a private taxi. Many guests find ride-sharing apps to be the most convenient and affordable option.",
     },
     {
       question: "What cooking facilities are available?",
@@ -329,7 +329,7 @@ export default function FAQPage() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Still Have Questions?</h2>
             <p className="text-lg text-gray-600 mb-8">
-              We're here to help! Contact us directly and we'll get back to you within 24 hours.
+              We’re here to help! Contact us directly and we’ll get back to you within 24 hours.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-sage-600 hover:bg-sage-700 text-white px-8 py-6 text-lg">

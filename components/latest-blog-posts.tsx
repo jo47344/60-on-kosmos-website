@@ -10,7 +10,7 @@ export function LatestBlogPosts() {
       slug: "corporate-relocation-cape-town",
       title: "Corporate Relocation Guide: Bellville & Cape Town",
       excerpt:
-        "What HR and project managers need to know about housing contractors and relocating staff to Bellville and Cape Town's northern suburbs.",
+        "What HR and project managers need to know about housing contractors and relocating staff to Bellville and Cape Town’s northern suburbs.",
       image: "/images/double-room-sage.jpg",
       category: "Corporate",
       date: "2025-01-10",
@@ -28,7 +28,7 @@ export function LatestBlogPosts() {
       slug: "digital-nomad-guide-bellville-south",
       title: "Digital Nomad Guide: Working Remotely from Bellville South",
       excerpt:
-        "Why Bellville South is Cape Town's best-kept secret for digital nomads. Fast WiFi, low cost, great community.",
+        "Why Bellville South is Cape Town’s best-kept secret for digital nomads. Fast WiFi, low cost, great community.",
       image: "/images/deluxe-twin-navy-hd.jpg",
       category: "Remote Work",
       date: "2025-01-07",

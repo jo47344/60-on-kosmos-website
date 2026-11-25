@@ -19,28 +19,32 @@
 
 | Room | Sleeps | 1-6 nights (per night) | 7-27 nights (per night) | 28+ nights (per night) |
 |---|---|---|---|---|
-| Standard Twin | 2 (two single beds) | R580 | R522 | R464 |
-| Deluxe Twin | 2 (two single beds) | R650 | R585 | R520 |
-| Double Room | 2 (one double bed) | R680 | R612 | R544 |
-| Triple Room | 3 (three single beds) | R840 | R756 | R672 |
+| Standard Twin | 2 (two single beds) | R580 | R522 | R520 |
+| Deluxe Twin | 2 (two single beds) | R650 | R585 | R540 |
+| Double Room | 2 (one double bed) | R680 | R612 | R550 |
+| Triple Room | 3 (three single beds) | R840 | R756 | R750 |
 
-- Rates are per room per night, not per person.
-- Monthly rates apply to stays of 28 nights or more.
+- Rates are per room per night, not per person. Guests pay for the rooms reserved and the nights stayed. There is one room of each type.
+- The length of the stay sets the rate for every night: 1-6 nights, 7-27 nights, or 28+ nights. Prices are never quoted per calendar month.
+- All four rooms: R2,750 per night (1-6 nights), R2,475 (7-27 nights), R2,360 (28+ nights). For example, all four rooms for 28 nights cost R66,080.
+- Example: the Standard Twin and Deluxe Twin for 28 nights cost R1,060 per night, R29,680 in total.
+- Per-person figures are examples only. The lowest 28+ night equivalent is R250 per person per night, only when three adults share the Triple Room for 28+ nights, subject to availability.
+- Beds: 7 single beds and 1 double bed. A group of nine needs two adults to share the double bed in the Double Room.
 - A refundable security deposit may apply to extended stays.
 - The rates on this website are the official rates. Rates on booking platforms may differ because of platform fees and promotions.
 
 ## Group and whole-house bookings
 
-- All four rooms can be booked together for teams of up to 9 guests.
-- 10% group discount when all four rooms are booked directly for 2 or more nights. It cannot be combined with the 7+ night rate.
+- All four rooms can be booked together for teams of up to 9 adults (two sharing the double bed). There is one room of each type.
+- 10% group discount when all four rooms are booked directly for 2-6 nights, off the 1-6 night rates (R2,475 per night for all four rooms). It does not combine with the 7-27 night or 28+ night rates.
 - A 50% deposit confirms a group booking.
 - Team quotes usually go out the same day. WhatsApp 074 524 5703 with dates, team size and the work-site location.
 
 ## Every room includes
 
-- Private ensuite bathroom
+- Its own en-suite bathroom, used only by that room's occupants
 - Free WiFi
-- Bar fridge and kettle
+- Bar fridge in the Deluxe Twin, Double Room and Triple Room (not the Standard Twin)
 - Desk or workspace (all rooms except the Deluxe Twin)
 - Weekly cleaning with fresh linen
 - Access to a shared self-catering kitchen
@@ -61,6 +65,10 @@
 
 ## Key pages
 
+- Contractor rates per person: https://www.60onkosmos.co.za/contractor-accommodation-rates
+- Contractor accommodation FAQ: https://www.60onkosmos.co.za/contractor-accommodation-faq
+- Monthly construction worker accommodation (northern suburbs): https://www.60onkosmos.co.za/construction-worker-accommodation-cape-town
+- Accommodation with company invoices: https://www.60onkosmos.co.za/accommodation-with-company-invoice-bellville
 - Rooms and rates: https://www.60onkosmos.co.za/rooms
 - Contractor and project-team accommodation: https://www.60onkosmos.co.za/contractor-accommodation
 - Group bookings (all four rooms): https://www.60onkosmos.co.za/group-accommodation

@@ -17,18 +17,18 @@ import {
   ArrowRight,
 } from "lucide-react"
 import { TrustBadges } from "@/components/trust-badges"
-import { reviewPlatforms } from "@/lib/site-facts"
+import { reviewPlatforms, roomRateRange } from "@/lib/site-facts"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Bellville South Accommodation for Contractors & Teams | 60 on Kosmos",
-  description: "Private ensuite accommodation in Bellville South for contractors, project teams and working professionals. Secure parking, WiFi, weekly cleaning and company invoices. Request a quote.",
+  title: { absolute: "Contractor and Team Accommodation in Bellville, Cape Town | 60 on Kosmos" },
+  description: `60 on Kosmos: en-suite rooms for contractors and project teams in Bellville South, Cape Town. Rooms R${roomRateRange.low}–R${roomRateRange.high} per room per night, depending on room and nights. Secure gated parking, CCTV, WiFi, company invoices.`,
   alternates: {
     canonical: "https://www.60onkosmos.co.za/",
   },
   openGraph: {
-    title: "Bellville South Accommodation for Contractors & Teams | 60 on Kosmos",
-    description: "Private ensuite accommodation in Bellville South for contractors, project teams and working professionals. Secure parking, WiFi, weekly cleaning and company invoices. Request a quote.",
+    title: "Contractor and Team Accommodation in Bellville, Cape Town | 60 on Kosmos",
+    description: `60 on Kosmos: en-suite rooms for contractors and project teams in Bellville South, Cape Town. Rooms R${roomRateRange.low}–R${roomRateRange.high} per room per night, depending on room and nights. Secure gated parking, CCTV, WiFi, company invoices.`,
     url: "https://www.60onkosmos.co.za/",
     type: "website",
     images: [
@@ -70,7 +70,7 @@ export default function HomePage() {
       price: "From R840/night",
       image: "/images/triple-room-view.jpg",
       bestFor: "Best for 3-person crews",
-      features: ["3 single beds", "Private ensuite", "R224 per person per night on monthly stays", "Best value"],
+      features: ["3 single beds", "Private ensuite", "Best value"],
     },
   ]
 
@@ -282,7 +282,7 @@ export default function HomePage() {
                 Who Stays With Us?
               </h2>
               <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-                Built for project teams, contractors and working professionals on site in Cape Town's northern suburbs.
+                Built for project teams, contractors and working professionals on site in Cape Town’s northern suburbs.
               </p>
             </div>
 
@@ -319,7 +319,7 @@ export default function HomePage() {
                   <Users className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 text-sage-600" />
                   <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Working Professionals & Visitors</h3>
                   <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4">
-                    Short and medium stays for training, site visits, and business travel in Cape Town's northern
+                    Short and medium stays for training, site visits, and business travel in Cape Town’s northern
                     suburbs.
                   </p>
                   <Button asChild variant="outline" className="border-sage-600 text-sage-600 bg-transparent w-full">
@@ -335,7 +335,7 @@ export default function HomePage() {
         <section className="py-12 sm:py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-8 sm:mb-12">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">What's Included</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">What’s Included</h2>
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">

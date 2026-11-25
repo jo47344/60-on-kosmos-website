@@ -4,6 +4,15 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Calendar, ArrowLeft, Phone, Building, CheckCircle } from "lucide-react"
+import { formatRand, rooms as rateData } from "@/lib/site-facts"
+
+// Single-occupancy rooms (Standard Twin, Deluxe Twin, Double) on the 28+ night
+// rate, from the central rate data. Totals are for the nights stated, never a
+// calendar month.
+const single = rateData.filter((r) => r.name !== "Triple Room").map((r) => r.monthlyPrice)
+const lo = Math.min(...single)
+const hi = Math.max(...single)
+const f = (n: number) => formatRand(n).slice(1) // number without the "R"
 
 export const metadata: Metadata = {
   title: "Corporate Relocation Guide | Cape Town",
@@ -50,8 +59,8 @@ export default function CorporateRelocationPage() {
 
         <div className="prose prose-lg max-w-none">
           <p className="text-xl text-gray-700 mb-6 font-medium">
-            Relocating employees to Cape Town? Finding cost-effective, professional accommodation that doesn't
-            compromise on quality can be challenging. Here's why forward-thinking HR managers are choosing Bellville
+            Relocating employees to Cape Town? Finding cost-effective, professional accommodation that doesn’t
+            compromise on quality can be challenging. Here’s why forward-thinking HR managers are choosing Bellville
             South over expensive Cape Town CBD hotels.
           </p>
 
@@ -74,18 +83,18 @@ export default function CorporateRelocationPage() {
                 <li className="flex items-start">
                   <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
                   <span>
-                    <strong>Hotel CBD:</strong> R1,000-1,700/night (R30,000-51,000/month)
+                    <strong>Hotel CBD:</strong> R1,000-1,700/night (R28,000-47,600 for 28 nights)
                   </span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
                   <span>
-                    <strong>Bellville South:</strong> R620-750/night (R13,500-18,000/month)
+                    <strong>Bellville South:</strong> R{lo}-{hi}/night per room on 28+ night rates (R{f(lo * 28)}-{f(hi * 28)} for 28 nights)
                   </span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="font-bold text-green-700">Save R16,500-33,000 per employee per month</span>
+                  <span className="font-bold text-green-700">Save roughly R{f(28000 - hi * 28)}-{f(47600 - lo * 28)} per employee over 28 nights</span>
                 </li>
               </ul>
             </Card>
@@ -129,8 +138,8 @@ export default function CorporateRelocationPage() {
                 <tr className="border-b">
                   <td className="py-3">Accommodation (90 nights)</td>
                   <td className="py-3 text-right">R90,000-153,000</td>
-                  <td className="py-3 text-right">R40,500-48,600</td>
-                  <td className="py-3 text-right text-green-600 font-bold">R49,500-104,400</td>
+                  <td className="py-3 text-right">R{f(lo * 90)}-{f(hi * 90)}</td>
+                  <td className="py-3 text-right text-green-600 font-bold">R{f(90000 - hi * 90)}-{f(153000 - lo * 90)}</td>
                 </tr>
                 <tr className="border-b">
                   <td className="py-3">Parking</td>
@@ -145,10 +154,10 @@ export default function CorporateRelocationPage() {
                   <td className="py-3 text-right text-green-600 font-bold">R2,000-5,000</td>
                 </tr>
                 <tr className="font-bold text-lg border-t-2">
-                  <td className="py-3">Total 3-Month Cost</td>
+                  <td className="py-3">Total for 90 nights</td>
                   <td className="py-3 text-right text-red-700">R108,000-185,000</td>
-                  <td className="py-3 text-right text-green-700">R40,500-48,600</td>
-                  <td className="py-3 text-right text-green-700">R59,400-136,400</td>
+                  <td className="py-3 text-right text-green-700">R{f(lo * 90)}-{f(hi * 90)}</td>
+                  <td className="py-3 text-right text-green-700">R{f(108000 - hi * 90)}-{f(185000 - lo * 90)}</td>
                 </tr>
               </tbody>
             </table>
@@ -289,7 +298,7 @@ export default function CorporateRelocationPage() {
           <Building className="w-16 h-16 mx-auto mb-4" />
           <h2 className="text-2xl font-bold mb-4">Need Corporate Accommodation in Bellville South?</h2>
           <p className="text-lg mb-6 opacity-90">
-            Let's discuss your employee relocation needs. Monthly rates, flexible terms, professional service.
+            Let’s discuss your employee relocation needs. Monthly rates, flexible terms, professional service.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-white text-purple-600 hover:bg-gray-100">

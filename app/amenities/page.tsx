@@ -302,7 +302,7 @@ export default function AmenitiesPage() {
         <div className="bg-green-50 rounded-lg p-8 text-center">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">What Makes Us Different</h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-6">
-            We understand what local travellers need. Whether you're a contractor working in the area, a student
+            We understand what local travellers need. Whether you’re a contractor working in the area, a student
             visiting UWC, or a family needing temporary accommodation, we provide the essentials: safety, cleanliness,
             and affordability without compromise.
           </p>

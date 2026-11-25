@@ -35,7 +35,7 @@ const included = [
   "Free WiFi",
   "Secure parking",
   "Weekly servicing",
-  "No lease, one-month minimum on long stays",
+  "No lease; long-stay rates from 28 nights",
 ]
 
 const nearbyAreas = [
@@ -56,7 +56,7 @@ const faqs = [
   {
     question: "How many people can you accommodate?",
     answer:
-      "We have 4 private ensuite rooms, suitable for individuals, couples or small teams of up to 9 guests in total. Tell us your group size and we'll confirm the best room combination.",
+      "We have 4 private ensuite rooms, suitable for individuals, couples or small teams of up to 9 guests in total. Tell us your group size and we’ll confirm the best room combination.",
   },
   {
     question: "How far is 60 on Kosmos from UWC and CPUT?",
@@ -65,7 +65,7 @@ const faqs = [
   },
   {
     question: "Do you accept walk-in payments or cash?",
-    answer: "We accept EFT payment only — we don't take cash. Banking details are provided on your quotation.",
+    answer: "We accept EFT payment only — we don’t take cash. Banking details are provided on your quotation.",
   },
   {
     question: "Can you invoice a company directly?",
@@ -94,7 +94,7 @@ export default function AccommodationBellvilleSouthPage() {
           </h1>
           <p className="text-base sm:text-lg text-gray-300 text-pretty">
             60 on Kosmos is a 4-room, private-ensuite, self-catering guesthouse on Kosmos Street, Bellville South.
-            We&apos;re not a B&amp;B and we&apos;re not a shared-room lodge — every guest gets their own ensuite room
+            We’re not a B&amp;B and we’re not a shared-room lodge — every guest gets their own ensuite room
             and access to a self-catering kitchen.
           </p>
         </div>
@@ -141,10 +141,10 @@ export default function AccommodationBellvilleSouthPage() {
         </div>
       </section>
 
-      {/* What's actually included */}
+      {/* What’s actually included */}
       <section className="py-12 sm:py-16 bg-gray-50">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">What&apos;s actually included</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">What’s actually included</h2>
           <ul className="space-y-3">
             {included.map((item) => (
               <li key={item} className="flex items-start gap-3">
@@ -231,7 +231,7 @@ export default function AccommodationBellvilleSouthPage() {
               <CardContent className="pt-6">
                 <h3 className="font-bold mb-2">Small teams &amp; room-sharing</h3>
                 <p className="text-gray-600 text-sm">
-                  Booking for more than one person? Tell us your team size and dates and we&apos;ll confirm the best
+                  Booking for more than one person? Tell us your team size and dates and we’ll confirm the best
                   combination across our {capacity.roomCount} rooms, up to {capacity.maxGuests} guests in total.
                 </p>
               </CardContent>

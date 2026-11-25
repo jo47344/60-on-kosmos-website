@@ -6,7 +6,7 @@ import { Star, Quote, MapPin, Calendar } from "lucide-react"
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
 
 export const metadata: Metadata = {
-  title: "Verified Guest Reviews - 60 on Kosmos Bellville South",
+  title: { absolute: "Verified Guest Reviews - 60 on Kosmos Bellville South, Cape Town" },
   description:
     "Read verified reviews from real guests on Booking.com, Airbnb, and Google. See what contractors, students, and families say.",
   alternates: { canonical: "https://www.60onkosmos.co.za/testimonials" },
@@ -48,7 +48,7 @@ export default function TestimonialsPage() {
       source: "Google Reviews",
       rating: 5,
       country: "France",
-      text: "Super logement où vous trouverez tout ce dont vous aurait besoin, proche de toute commodité. Le service est génial, toujours prêt à aider au besoin. J'y ai passé plusieurs mois et je recommande à tout voyageur. Merci encore à Steve et Joann d'avoir rendu ça possible.",
+      text: "Super logement où vous trouverez tout ce dont vous aurait besoin, proche de toute commodité. Le service est génial, toujours prêt à aider au besoin. J’y ai passé plusieurs mois et je recommande à tout voyageur. Merci encore à Steve et Joann d’avoir rendu ça possible.",
       verified: true,
     },
     {
@@ -173,7 +173,7 @@ export default function TestimonialsPage() {
               </Card>
               <Card className="p-8">
                 <h3 className="text-lg font-bold text-gray-900 mb-3">Real Guest Names & Locations</h3>
-                <p className="text-gray-600">Every review shows the guest's real location and verified booking. You know exactly who is recommending us and from where.</p>
+                <p className="text-gray-600">Every review shows the guest’s real location and verified booking. You know exactly who is recommending us and from where.</p>
               </Card>
               <Card className="p-8">
                 <h3 className="text-lg font-bold text-gray-900 mb-3">Direct Links to Platforms</h3>

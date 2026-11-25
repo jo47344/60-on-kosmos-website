@@ -1,18 +1,23 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
+import { formatRand, rooms as rateData, stayTerms } from "@/lib/site-facts"
+
+const from28 = Math.min(...rateData.map((r) => r.monthlyPrice))
+const nightlyLow = Math.min(...rateData.map((r) => r.price))
+const nightlyHigh = Math.max(...rateData.map((r) => r.price))
 import { Button } from "@/components/ui/button"
 import { Phone } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Day & Week Rates for Contractor Crews | No Lease Required",
   description:
-    "Book contractor accommodation by the day or the week with no lease — daily rates from R580 to R840/night, long-stay from R464/night. Private ensuite, self-catering, secure parking. See our full contractor accommodation guide for room details and company invoicing.",
+    `Book contractor accommodation by the day or the week with no lease — 1–6 night rates R${nightlyLow}–R${nightlyHigh} per room per night, 28+ night stays from R${from28} per room per night. Private ensuite, self-catering, secure parking. See our full contractor accommodation guide for room details and company invoicing.`,
   alternates: { canonical: "https://www.60onkosmos.co.za/contractors" },
   openGraph: {
     title: "Day & Week Rates for Contractor Crews | No Lease Required",
     description:
-      "Book contractor accommodation by the day or the week with no lease — daily rates from R580 to R840/night, long-stay from R464/night. Private ensuite, self-catering, secure parking.",
+      `Book contractor accommodation by the day or the week with no lease — 1–6 night rates R${nightlyLow}–R${nightlyHigh} per room per night, 28+ night stays from R${from28} per room per night. Private ensuite, self-catering, secure parking.`,
     url: "https://www.60onkosmos.co.za/contractors",
     type: "website",
     images: [
@@ -47,8 +52,8 @@ export default function ContractorsPage() {
             Day and week rates for contractor crews, no lease
           </h1>
           <p className="text-base sm:text-lg text-gray-300 text-pretty">
-            If you&apos;re managing a crew on a Cape Town project, you already know what a bad billet costs you — a
-            bad night&apos;s sleep shows up on site the next day. 60 on Kosmos is private-ensuite, self-catering,
+            If you’re managing a crew on a Cape Town project, you already know what a bad billet costs you — a
+            bad night’s sleep shows up on site the next day. 60 on Kosmos is private-ensuite, self-catering,
             with secure parking, built for people working, not people on holiday.
           </p>
         </div>
@@ -72,14 +77,14 @@ export default function ContractorsPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Week-to-week, no lease</h2>
           <p className="text-gray-700 text-pretty mb-4">
-            Book by the day or the week. No lease, no minimum beyond one month for long stays.
+            Book by the day or the week. No lease. Long-stay rates apply to stays of 28 nights or more.
           </p>
           <div className="rounded-lg border bg-gray-50 p-6">
             <p className="text-gray-900 font-semibold">
-              Daily rates: R580–R840/night ({rateIncludes})
+              1–6 night rates: {formatRand(nightlyLow)}–{formatRand(nightlyHigh)} per room per night ({rateIncludes})
             </p>
             <p className="text-gray-900 font-semibold mt-2">
-              Long-stay rate: R464/night ({rateIncludes})
+              {stayTerms.monthlyRateMinNights}+ night rates: from {formatRand(from28)} per room per night ({rateIncludes})
             </p>
           </div>
         </div>

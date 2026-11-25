@@ -125,26 +125,26 @@ export default function CenturyCityPage() {
               Century City, home to Canal Walk and a dense cluster of corporate office parks along the N1, hosts a
               steady flow of office fit-out, IT infrastructure, HVAC, and facilities projects. Teams working here
               are often on-site for a defined project window — a floor refurbishment, a systems rollout, a retail
-              store upgrade — and need accommodation that&apos;s close enough to the N1 without the premium of staying
+              store upgrade — and need accommodation that’s close enough to the N1 without the premium of staying
               inside Century City itself.
             </p>
             <p>
               60 on Kosmos in Bellville South is roughly a 20–25 minute drive from Century City via the N1, which is
-              realistic for teams who don&apos;t need to be on-site before regular office hours but still want to avoid
-              long daily commutes from further afield. It&apos;s a practical, cost-effective alternative to
+              realistic for teams who don’t need to be on-site before regular office hours but still want to avoid
+              long daily commutes from further afield. It’s a practical, cost-effective alternative to
               short-let apartments in the Century City area for multi-week contracts.
             </p>
             <p>
-              We&apos;ve accommodated office fit-out crews, IT and cabling technicians, and facilities management teams
+              We’ve accommodated office fit-out crews, IT and cabling technicians, and facilities management teams
               working Canal Walk and the surrounding corporate parks — people who want a private room to unwind in
-              after a day of client-facing work, plus a kitchen and laundry so they&apos;re not living out of a
+              after a day of client-facing work, plus a kitchen and laundry so they’re not living out of a
               suitcase for a six-week contract.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Who it's for */}
+      {/* Who it’s for */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold mb-6">Who this is for</h2>
@@ -230,7 +230,7 @@ export default function CenturyCityPage() {
             </Card>
           </div>
 
-          <h3 className="text-2xl font-bold text-center mb-6">Rooms & what&apos;s included</h3>
+          <h3 className="text-2xl font-bold text-center mb-6">Rooms & what’s included</h3>
           <p className="text-center text-gray-600 max-w-2xl mx-auto mb-8">
             4 private ensuite rooms at 60 on Kosmos, suitable for small teams of up to 9 guests in total.
           </p>
@@ -257,7 +257,7 @@ export default function CenturyCityPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Send us your dates, team size and work location for a company quote.</h2>
           <p className="text-lg text-gray-100 mb-8">
-            We&apos;ll confirm the best available room combination for your team near Century City.
+            We’ll confirm the best available room combination for your team near Century City.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-white text-sage-600 hover:bg-gray-100 px-8 py-6 text-lg font-bold">

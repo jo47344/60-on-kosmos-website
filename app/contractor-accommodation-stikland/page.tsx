@@ -23,7 +23,7 @@ import { FAQSchema } from "@/components/faq-schema"
 import { capacity, facilities } from "@/lib/site-facts"
 
 export const metadata: Metadata = {
-  title: "Guesthouse Near Stikland | 60 on Kosmos, Bellville South",
+  title: { absolute: "Guesthouse Near Stikland | 60 on Kosmos, Bellville South, Cape Town" },
   description:
     "Guesthouse accommodation near Stikland Industrial, minutes away. 60 on Kosmos offers private ensuite rooms, secure parking, and flexible billing for project teams working in Stikland.",
   alternates: {
@@ -56,14 +56,14 @@ const faqs = [
   {
     question: "Can you accommodate a small site crew?",
     answer:
-      "Yes. We have 4 private ensuite rooms, suitable for small teams of up to 9 guests in total. Tell us your team size and we'll confirm the best room combination and a company rate.",
+      "Yes. We have 4 private ensuite rooms, suitable for small teams of up to 9 guests in total. Tell us your team size and we’ll confirm the best room combination and a company rate.",
   },
   {
     question: "Do you provide corporate invoicing?",
-    answer: "Yes, on request for contractors and companies. We accept EFT payment only — we don't take cash.",
+    answer: "Yes, on request for contractors and companies. We accept EFT payment only — we don’t take cash.",
   },
   {
-    question: "What's included in the stay?",
+    question: "What’s included in the stay?",
     answer:
       "Free WiFi, weekly cleaning, secure parking, and access to our self-catering kitchen. Check-in is from 14:00, check-out by 10:00.",
   },
@@ -130,7 +130,7 @@ export default function StiklandAccommodationPage() {
           <h2 className="text-3xl font-bold mb-6">Close to Stikland Industrial</h2>
           <div className="prose prose-lg text-gray-700 space-y-4">
             <p>
-              Stikland Industrial, one of Bellville&apos;s established industrial and manufacturing areas, sits only
+              Stikland Industrial, one of Bellville’s established industrial and manufacturing areas, sits only
               around 5km from 60 on Kosmos — one of the closest work areas to our guesthouse. That short distance
               matters for teams on early-start shifts or working odd hours around machinery downtime windows.
             </p>
@@ -143,7 +143,7 @@ export default function StiklandAccommodationPage() {
         </div>
       </section>
 
-      {/* Who it's for */}
+      {/* Who it’s for */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold mb-6">Who this is for</h2>
@@ -202,7 +202,7 @@ export default function StiklandAccommodationPage() {
                     <h3 className="font-bold mb-2">Room-sharing for small teams</h3>
                     <p className="text-gray-600 text-sm">
                       {capacity.roomCount} private ensuite rooms, suitable for small teams of up to {capacity.maxGuests}{" "}
-                      guests in total. Tell us your team size and we&apos;ll confirm the best combination.
+                      guests in total. Tell us your team size and we’ll confirm the best combination.
                     </p>
                   </div>
                 </div>
@@ -226,10 +226,10 @@ export default function StiklandAccommodationPage() {
         </div>
       </section>
 
-      {/* What's Included */}
+      {/* What’s Included */}
       <section className="py-12 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-8 text-center">What&apos;s Included in Every Room</h2>
+          <h2 className="text-3xl font-bold mb-8 text-center">What’s Included in Every Room</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {[
               { icon: Wifi, label: facilities[3] },

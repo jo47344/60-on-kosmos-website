@@ -100,7 +100,7 @@ export function OptimizedBookingForm() {
             <CheckCircle className="w-8 h-8 text-green-600" />
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-2">Booking Request Sent!</h3>
-          <p className="text-gray-600 mb-6">Thanks! We'll confirm your booking via WhatsApp.</p>
+          <p className="text-gray-600 mb-6">Thanks! We’ll confirm your booking via WhatsApp.</p>
           <div className="space-y-3">
             <Button asChild className="w-full bg-green-600 hover:bg-green-700 text-white">
               <a
@@ -125,7 +125,7 @@ export function OptimizedBookingForm() {
     <Card className="w-full max-w-md mx-auto">
       <CardHeader>
         <CardTitle className="text-center text-xl font-semibold text-gray-900">Book Your Stay</CardTitle>
-        <p className="text-center text-gray-600 text-sm">Fill out the form below and we'll confirm your booking</p>
+        <p className="text-center text-gray-600 text-sm">Fill out the form below and we’ll confirm your booking</p>
       </CardHeader>
       <CardContent>
         <form onSubmit={handleSubmit} className="space-y-4">

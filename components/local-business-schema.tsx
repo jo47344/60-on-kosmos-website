@@ -1,4 +1,13 @@
-import { business, stayTerms, priceRangeLabel, reviewPlatforms } from "@/lib/site-facts"
+import { business, stayTerms, priceRangeLabel, reviewPlatforms, rooms } from "@/lib/site-facts"
+
+const rate = Object.fromEntries(rooms.map((r) => [r.name, r]))
+
+// Per room per night, one specification per rate tier, from the central data.
+const priceSpecs = (name: string) => [
+  { "@type": "UnitPriceSpecification", price: rate[name].price, priceCurrency: "ZAR", unitText: "per room per night, 1–6 nights" },
+  { "@type": "UnitPriceSpecification", price: rate[name].weeklyPrice, priceCurrency: "ZAR", unitText: "per room per night, 7–27 nights" },
+  { "@type": "UnitPriceSpecification", price: rate[name].monthlyPrice, priceCurrency: "ZAR", unitText: `per room per night, ${stayTerms.monthlyRateMinNights}+ nights` },
+]
 
 export function LocalBusinessSchema() {
   const schema = {
@@ -141,12 +150,7 @@ export function LocalBusinessSchema() {
             bed: { "@type": "BedDetails", numberOfBeds: 2, typeOfBed: "Single" },
             occupancy: { "@type": "QuantitativeValue", minValue: 1, maxValue: 2 },
           },
-          priceSpecification: {
-            "@type": "UnitPriceSpecification",
-            price: "580",
-            priceCurrency: "ZAR",
-            unitText: "per night",
-          },
+          priceSpecification: priceSpecs("Standard Twin"),
         },
         {
           "@type": "Offer",
@@ -158,12 +162,7 @@ export function LocalBusinessSchema() {
             occupancy: { "@type": "QuantitativeValue", minValue: 1, maxValue: 2 },
             amenityFeature: [{ "@type": "LocationFeatureSpecification", name: "Bar Fridge", value: true }],
           },
-          priceSpecification: {
-            "@type": "UnitPriceSpecification",
-            price: "650",
-            priceCurrency: "ZAR",
-            unitText: "per night",
-          },
+          priceSpecification: priceSpecs("Deluxe Twin"),
         },
         {
           "@type": "Offer",
@@ -178,12 +177,7 @@ export function LocalBusinessSchema() {
               { "@type": "LocationFeatureSpecification", name: "Bar Fridge", value: true },
             ],
           },
-          priceSpecification: {
-            "@type": "UnitPriceSpecification",
-            price: "680",
-            priceCurrency: "ZAR",
-            unitText: "per night",
-          },
+          priceSpecification: priceSpecs("Double Room"),
         },
         {
           "@type": "Offer",
@@ -191,16 +185,11 @@ export function LocalBusinessSchema() {
             "@type": "HotelRoom",
             name: "Triple Room",
             description:
-              "Large room with three single beds. Best value for 3-person crews: R224 per person per night on monthly rates.",
+              "Large room with three single beds for up to three adults. Priced per room per night.",
             bed: { "@type": "BedDetails", numberOfBeds: 3, typeOfBed: "Single" },
             occupancy: { "@type": "QuantitativeValue", minValue: 1, maxValue: 3 },
           },
-          priceSpecification: {
-            "@type": "UnitPriceSpecification",
-            price: "840",
-            priceCurrency: "ZAR",
-            unitText: "per night",
-          },
+          priceSpecification: priceSpecs("Triple Room"),
         },
       ],
     },

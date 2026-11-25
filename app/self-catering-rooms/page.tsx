@@ -35,7 +35,7 @@ const faqs = [
   {
     question: "Do I need to bring my own cookware?",
     answer:
-      "No, basic cooking utensils are provided in the communal kitchen. There's also a SPAR supermarket 2km away for groceries.",
+      "No, basic cooking utensils are provided in the communal kitchen. There’s also a SPAR supermarket 2km away for groceries.",
   },
   {
     question: "Is parking included?",
@@ -175,10 +175,10 @@ export default function SelfCateringRoomsPage() {
         </div>
       </section>
 
-      {/* What's Included */}
+      {/* What’s Included */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">What's Included</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">What’s Included</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="flex gap-4">
               <Wifi className="w-8 h-8 text-sage-600 flex-shrink-0" />
