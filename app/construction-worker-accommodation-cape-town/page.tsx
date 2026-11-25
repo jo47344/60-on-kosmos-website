@@ -1,10 +1,10 @@
 import type { Metadata } from "next"
 import { AnswerPage } from "@/components/answer-page"
-import { lowestPerPerson, wholeHouse, stayTerms } from "@/lib/site-facts"
+import { lowestPerPerson, lowestPerPersonQualifier, nineGuestNote, wholeHouse, stayTerms } from "@/lib/site-facts"
 
 const path = "/construction-worker-accommodation-cape-town"
 const title = "Construction Worker Accommodation Cape Town Northern Suburbs | Monthly | 60 on Kosmos"
-const description = `Monthly accommodation for construction workers and site crews in Cape Town’s northern suburbs. Bellville South, near the N1 and R300. From R${lowestPerPerson.monthly} per person per night, gated parking for bakkies, CCTV.`
+const description = `Monthly accommodation for construction workers and site crews in Cape Town’s northern suburbs. Bellville South, near the N1 and R300. From R${lowestPerPerson.monthly} pp (3 sharing the Triple Room, 28+ nights). Gated parking for bakkies, CCTV.`
 
 export const metadata: Metadata = {
   title: { absolute: title },
@@ -26,7 +26,7 @@ export default function Page() {
       breadcrumb="Construction Crews"
       eyebrow="Cape Town Northern Suburbs"
       h1="Monthly Accommodation for Construction Workers in Cape Town’s Northern Suburbs"
-      quickAnswer={`60 on Kosmos is a gated, self-catering guesthouse at 60 Kosmos Street, Bellville South, in Cape Town’s northern suburbs, set up for construction crews on long stays. Monthly rates (${stayTerms.monthlyRateMinNights}+ nights) start at R${lowestPerPerson.monthly} per person per night, and the whole house sleeps 9 for R${wholeHouse.monthly.toLocaleString("en-ZA")} per night. Bakkies and work vans park inside locked gates on CCTV with ADT armed response. Every room has a private ensuite, and WiFi, weekly cleaning and company invoices are included.`}
+      quickAnswer={`60 on Kosmos is a gated, self-catering guesthouse at 60 Kosmos Street, Bellville South, in Cape Town’s northern suburbs, set up for construction crews on long stays. Monthly rates (${stayTerms.monthlyRateMinNights}+ nights) start at R${lowestPerPerson.monthly} per person per night with ${lowestPerPersonQualifier}. The whole house costs R${wholeHouse.monthly.toLocaleString("en-US")} per night on a monthly stay and sleeps up to 9 adults, with two sharing the double bed. Bakkies and work vans park inside locked gates on CCTV with ADT armed response. Every room has a private ensuite, and WiFi, weekly cleaning and company invoices are included.`}
       serviceName="Monthly construction worker accommodation, Cape Town northern suburbs"
       serviceDescription="Long-stay, budget accommodation for construction workers, site crews and artisans near the N1 and R300 in Bellville South, Cape Town."
       areaServed={[
@@ -45,8 +45,8 @@ export default function Page() {
         {
           heading: "Built for site crews, not tourists",
           paragraphs: [
-            "Construction teams need a quiet bed, a hot shower, somewhere to cook and a safe place for the vehicle. That’s what 60 on Kosmos provides. It’s an adults-only house with four private-ensuite rooms, each with its own outside entrance, so a 05:30 start doesn’t wake anyone else up.",
-            "The house sleeps up to 9 people across a Standard Twin, Deluxe Twin, Double Room and Triple Room, so a full crew plus a site supervisor can stay together under one roof and one invoice.",
+            "Construction teams need a quiet bed, a hot shower, somewhere to cook and a safe place for the vehicle. That’s what 60 on Kosmos provides. It’s an adults-only house with four rooms, each with its own en-suite bathroom and its own outside entrance, so a 05:30 start doesn’t wake anyone else up.",
+            `There is one each of the Standard Twin, Deluxe Twin, Double Room and Triple Room: 7 single beds and 1 double bed. Eight adults can each have their own bed; a ninth is possible only if two adults share the double bed. The whole crew stays under one roof and one invoice.`,
           ],
         },
         {
@@ -77,7 +77,7 @@ export default function Page() {
       faqs={[
         {
           question: "Where can construction workers stay monthly in Cape Town’s northern suburbs?",
-          answer: `60 on Kosmos in Bellville South offers monthly accommodation (${stayTerms.monthlyRateMinNights}+ nights) for construction crews from R${lowestPerPerson.monthly} per person per night. It has four private-ensuite rooms for up to 9 people, a self-catering kitchen, WiFi, weekly cleaning and gated parking for work vehicles.`,
+          answer: `60 on Kosmos in Bellville South offers monthly accommodation (${stayTerms.monthlyRateMinNights}+ nights) for construction crews, from R${lowestPerPerson.monthly} per person per night with ${lowestPerPersonQualifier}. It has four rooms, each with its own en-suite bathroom, with 7 single beds and 1 double bed, a self-catering kitchen, WiFi, weekly cleaning and gated parking for work vehicles.`,
         },
         {
           question: "Is there secure parking for bakkies and company vehicles?",
@@ -89,7 +89,7 @@ export default function Page() {
         },
         {
           question: "Can a whole crew book the house?",
-          answer: `Yes. All four rooms can be booked together for up to 9 people. On a monthly stay that’s R${wholeHouse.monthly.toLocaleString("en-ZA")} per night for the whole house.`,
+          answer: `Yes, subject to availability. ${nineGuestNote} On a monthly stay that’s R${wholeHouse.monthly.toLocaleString("en-US")} per night for the whole house.`,
         },
       ]}
       related={[

@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import { AnswerPage } from "@/components/answer-page"
-import { lowestPerPerson, perPersonRates, stayTerms } from "@/lib/site-facts"
+import { lowestPerPerson, lowestPerPersonQualifier, nineGuestNote, perPersonRates, stayTerms } from "@/lib/site-facts"
 
 const path = "/accommodation-with-company-invoice-bellville"
 const title = "Bellville Accommodation for Technicians with Company Invoices | 60 on Kosmos, Cape Town"
@@ -26,9 +26,9 @@ export default function Page() {
       breadcrumb="Company Invoices"
       eyebrow="Bellville, Cape Town"
       h1="Accommodation in Bellville for Technicians, with Company Invoices"
-      quickAnswer={`60 on Kosmos at 60 Kosmos Street, Bellville South, Cape Town, houses technicians, installers, engineers and site supervisors on company business, and issues company invoices on request. Payment is by EFT. Rooms are private-ensuite, with WiFi, a desk in most rooms, weekly cleaning and secure gated parking for company vehicles. Two technicians sharing a Standard Twin pay R${perPersonRates[0].nightly} each per night, and long stays start at R${lowestPerPerson.monthly} per person per night.`}
+      quickAnswer={`60 on Kosmos at 60 Kosmos Street, Bellville South, Cape Town, houses technicians, installers, engineers and site supervisors on company business, and issues company invoices on request. Payment is by EFT. Each room has its own en-suite bathroom, with WiFi, a desk in most rooms, weekly cleaning and secure gated parking for company vehicles. Two technicians sharing a Standard Twin pay R${perPersonRates[0].nightly} each per night, and the lowest price is R${lowestPerPerson.monthly} per person per night with ${lowestPerPersonQualifier}.`}
       serviceName="Business accommodation with company invoicing, Bellville"
-      serviceDescription="Private-ensuite rooms for technicians and company staff, with company invoices, EFT payment and secure parking for company vehicles."
+      serviceDescription="En-suite rooms for technicians and company staff, with company invoices, EFT payment and secure parking for company vehicles."
       areaServed={["Bellville", "Bellville South", "Parow", "Tygervalley", "Cape Town Northern Suburbs"]}
       whatsappText="Hi, I need accommodation with a company invoice. Company: , people: , dates: "
       sections={[
@@ -45,11 +45,11 @@ export default function Page() {
         {
           heading: "Rooms suited to working technicians",
           bullets: [
-            "Private ensuite bathroom in every room.",
+            "Each room has its own en-suite bathroom, used only by that room’s occupants.",
             "Desk or workspace in every room except the Deluxe Twin, plus fast WiFi for reports and remote support.",
             "Own outside entrance per room for early call-outs.",
             "Company vehicles and tools stay behind locked gates on CCTV, with ADT armed response.",
-            "Self-catering kitchen, bar fridge and kettle (no bar fridge in the Standard Twin).",
+            "Shared self-catering kitchenette (gas stove, microwave, air fryer, kettle). Deluxe Twin, Double and Triple rooms also have a bar fridge; the Standard Twin does not.",
           ],
         },
       ]}
@@ -60,7 +60,7 @@ export default function Page() {
         },
         {
           question: "Can one invoice cover a whole team?",
-          answer: "Yes. Book several rooms, or all four for up to 9 people, and we’ll issue one company invoice for the stay.",
+          answer: `Yes. Book several rooms, or all four, and we’ll issue one company invoice for the stay. ${nineGuestNote}`,
         },
         {
           question: "Is there a workspace in the rooms?",

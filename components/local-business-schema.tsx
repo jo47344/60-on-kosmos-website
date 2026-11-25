@@ -191,7 +191,7 @@ export function LocalBusinessSchema() {
             "@type": "HotelRoom",
             name: "Triple Room",
             description:
-              "Large room with three single beds. Best value for 3-person crews: R224 per person per night on monthly rates.",
+              "Large room with three single beds. Best value for 3-person crews: R224 per person per night with three adults sharing for 28+ nights, subject to availability.",
             bed: { "@type": "BedDetails", numberOfBeds: 3, typeOfBed: "Single" },
             occupancy: { "@type": "QuantitativeValue", minValue: 1, maxValue: 3 },
           },

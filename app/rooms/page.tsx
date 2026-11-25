@@ -126,7 +126,7 @@ export default function RoomsPage() {
       price: "R840/night",
       weeklyPrice: "R756/night",
       monthlyPrice: "R672/night",
-      perPerson: "From R224/person/night on monthly stays",
+      perPerson: "R224/person/night with 3 adults sharing for 28+ nights, subject to availability",
       image: "/images/triple-room-view.jpg",
       alt: "Triple room guesthouse Bellville South - spacious room with multiple beds, desk and tea station for contractor crews",
       bestFor: "Best value for 3-person contractor crews.",

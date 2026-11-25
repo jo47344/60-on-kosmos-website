@@ -151,8 +151,8 @@ export default function GroupAccommodationPage() {
               <DoorOpen className="w-6 h-6 text-sage-600 mb-3" aria-hidden="true" />
               <p className="font-medium text-gray-900 mb-1">Your own door and bathroom</p>
               <p className="text-sm text-gray-600">
-                Each room has a private ensuite and its own outside entrance, so nobody shares a bathroom or walks
-                through someone else’s space.
+                Each room has its own en-suite bathroom, used only by that room’s occupants, and its own outside entrance,
+                so nobody walks through someone else’s space.
               </p>
             </div>
             <div className="bg-gray-50 rounded-lg p-5 border border-gray-200">

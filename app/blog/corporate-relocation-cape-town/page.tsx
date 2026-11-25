@@ -80,12 +80,12 @@ export default function CorporateRelocationPage() {
                 <li className="flex items-start">
                   <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
                   <span>
-                    <strong>Bellville South:</strong> R620-750/night (R13,500-18,000/month)
+                    <strong>Bellville South:</strong> R464-680/night on 28+ night rates (about R13,920-20,400/month)
                   </span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="font-bold text-green-700">Save R16,500-33,000 per employee per month</span>
+                  <span className="font-bold text-green-700">Save roughly R9,600-37,000 per employee per month</span>
                 </li>
               </ul>
             </Card>
@@ -129,8 +129,8 @@ export default function CorporateRelocationPage() {
                 <tr className="border-b">
                   <td className="py-3">Accommodation (90 nights)</td>
                   <td className="py-3 text-right">R90,000-153,000</td>
-                  <td className="py-3 text-right">R40,500-48,600</td>
-                  <td className="py-3 text-right text-green-600 font-bold">R49,500-104,400</td>
+                  <td className="py-3 text-right">R41,760-61,200</td>
+                  <td className="py-3 text-right text-green-600 font-bold">R28,800-111,240</td>
                 </tr>
                 <tr className="border-b">
                   <td className="py-3">Parking</td>
@@ -147,8 +147,8 @@ export default function CorporateRelocationPage() {
                 <tr className="font-bold text-lg border-t-2">
                   <td className="py-3">Total 3-Month Cost</td>
                   <td className="py-3 text-right text-red-700">R108,000-185,000</td>
-                  <td className="py-3 text-right text-green-700">R40,500-48,600</td>
-                  <td className="py-3 text-right text-green-700">R59,400-136,400</td>
+                  <td className="py-3 text-right text-green-700">R41,760-61,200</td>
+                  <td className="py-3 text-right text-green-700">R46,800-143,240</td>
                 </tr>
               </tbody>
             </table>

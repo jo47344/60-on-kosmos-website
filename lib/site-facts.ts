@@ -127,13 +127,25 @@ export const perPersonRates = rooms.map((r) => {
   }
 })
 
+// The lowest per-person figures all come from the Triple Room with three
+// adults sharing. Always state them with that qualifier (see below) — they
+// are not available for every room or every group size.
 export const lowestPerPerson = {
   nightly: Math.min(...perPersonRates.map((r) => r.nightly)), // R280 (Triple, 1–6 nights)
   weekly: Math.min(...perPersonRates.map((r) => r.weekly)), // R252 (Triple, 7–27 nights)
   monthly: Math.min(...perPersonRates.map((r) => r.monthly)), // R224 (Triple, 28+ nights)
 } as const
 
-// Whole house (all four rooms, 9 guests) per night at each rate tier.
+export const lowestPerPersonQualifier = `three adults sharing the Triple Room for ${stayTerms.monthlyRateMinNights}+ nights, subject to availability`
+
+// Bed configuration: 7 single beds (2 + 2 + 3) and one double bed. A group of
+// nine is only possible with two adults sharing the double bed.
+export const beds = { single: 7, double: 1 } as const
+export const nineGuestNote =
+  "The house has 7 single beds and 1 double bed, so a group of nine needs two adults to share the double bed in the Double Room."
+
+// Whole house (all four rooms; 9 guests only with two sharing the double bed)
+// per night at each rate tier.
 export const wholeHouse = {
   nightly: rooms.reduce((s, r) => s + r.price, 0), // R2,750
   weekly: rooms.reduce((s, r) => s + r.weeklyPrice, 0), // R2,475

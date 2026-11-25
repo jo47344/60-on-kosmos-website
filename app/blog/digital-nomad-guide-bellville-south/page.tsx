@@ -61,9 +61,9 @@ export default function DigitalNomadGuidePage() {
               <strong>Sea Point/CBD:</strong> R1,000-1,500/night (R30,000-45,000/month)
             </p>
             <p className="text-green-800">
-              <strong>Bellville South:</strong> R530-750/night (R13,500-18,000/month with monthly rates)
+              <strong>Bellville South:</strong> R464-680/night on 28+ night rates (about R13,920-20,400 for 30 nights)
             </p>
-            <p className="text-green-700 font-bold mt-2">Save R16,500-27,000 per month = More time traveling!</p>
+            <p className="text-green-700 font-bold mt-2">Save roughly R9,600-31,000 per month = More time traveling!</p>
           </div>
 
           <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Why Digital Nomads Love Bellville South</h2>
@@ -125,7 +125,7 @@ export default function DigitalNomadGuidePage() {
               <tbody className="text-gray-700">
                 <tr className="border-b">
                   <td className="py-3">Accommodation (monthly rate)</td>
-                  <td className="py-3 text-right">R13,500 - R16,000</td>
+                  <td className="py-3 text-right">R13,920 - R20,400</td>
                 </tr>
                 <tr className="border-b">
                   <td className="py-3">Groceries (cook at guesthouse)</td>
@@ -149,7 +149,7 @@ export default function DigitalNomadGuidePage() {
                 </tr>
                 <tr className="font-bold text-lg border-t-2">
                   <td className="py-3">Total Monthly Cost</td>
-                  <td className="py-3 text-right text-green-700">R19,300 - R27,500</td>
+                  <td className="py-3 text-right text-green-700">R19,720 - R31,900</td>
                 </tr>
                 <tr>
                   <td colSpan={2} className="pt-3 text-sm text-gray-600 italic">

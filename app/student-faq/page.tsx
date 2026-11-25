@@ -320,14 +320,15 @@ export default function StudentFAQPage() {
               <AccordionItem value="item-19">
                 <AccordionTrigger className="text-left">How much does monthly accommodation cost?</AccordionTrigger>
                 <AccordionContent className="text-gray-600">
-                  Monthly rates vary by room type but are significantly discounted compared to nightly rates. For
-                  example:
+                  Monthly rates apply to stays of 28 nights or more and are charged per room per night. For a
+                  30-night stay:
                   <ul className="list-disc ml-6 mt-2 space-y-1">
-                    <li>Twin Room: From R12,000/month</li>
-                    <li>Double Room: From R15,000/month</li>
-                    <li>Triple Room: From R18,000/month</li>
+                    <li>Standard Twin: R464/night (about R13,920)</li>
+                    <li>Deluxe Twin: R520/night (about R15,600)</li>
+                    <li>Double Room: R544/night (about R16,320)</li>
+                    <li>Triple Room: R672/night (about R20,160)</li>
                   </ul>
-                  Contact us for the most current monthly rates and semester-long discounts.
+                  Rates are subject to availability. Contact us to confirm dates.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
