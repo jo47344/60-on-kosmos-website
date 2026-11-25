@@ -8,7 +8,7 @@ import { Calendar, ArrowLeft, Phone, Wifi, CheckCircle, Laptop } from "lucide-re
 export const metadata: Metadata = {
   title: "Digital Nomad Guide | Cape Town",
   description:
-    "Why Bellville South is Cape Town's best-kept secret for digital nomads. Fast WiFi, low cost, great community. Complete guide to remote work accommodation, coworking, and costs.",
+    "Why Bellville South is Cape Town’s best-kept secret for digital nomads. Fast WiFi, low cost, great community. Complete guide to remote work accommodation, coworking, and costs.",
   keywords:
     "digital nomad cape town, remote work accommodation bellville, cheap coworking cape town, digital nomad bellville south, remote worker housing cape town",
   alternates: { canonical: "https://www.60onkosmos.co.za/blog/digital-nomad-guide-bellville-south" },
@@ -28,7 +28,7 @@ export default function DigitalNomadGuidePage() {
             DIGITAL NOMAD GUIDE
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Digital Nomad Guide: Why Bellville South is Cape Town's Best-Kept Secret
+            Digital Nomad Guide: Why Bellville South is Cape Town’s Best-Kept Secret
           </h1>
           <div className="flex items-center text-gray-600">
             <Calendar className="w-4 h-4 mr-2" />
@@ -50,7 +50,7 @@ export default function DigitalNomadGuidePage() {
 
         <div className="prose prose-lg max-w-none">
           <p className="text-xl text-gray-700 mb-6 font-medium">
-            Cape Town is consistently ranked as one of Africa's best cities for digital nomads. But while everyone
+            Cape Town is consistently ranked as one of Africa’s best cities for digital nomads. But while everyone
             flocks to expensive Sea Point and Camps Bay, smart remote workers are discovering Bellville South—where you
             get the same quality WiFi and lifestyle for 40-60% less money.
           </p>
@@ -293,7 +293,7 @@ export default function DigitalNomadGuidePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
               <a
-                href="https://wa.me/27745245703?text=Hi%2C%20I'm%20a%20digital%20nomad%20looking%20for%20accommodation"
+                href="https://wa.me/27745245703?text=Hi%2C%20I%27m%20a%20digital%20nomad%20looking%20for%20accommodation"
                 target="_blank"
                 rel="noopener noreferrer"
               >

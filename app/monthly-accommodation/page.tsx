@@ -37,7 +37,7 @@ const breadcrumbItems = [
 
 const faqs = [
   {
-    question: "What's the minimum stay for monthly rates?",
+    question: "What’s the minimum stay for monthly rates?",
     answer:
       "Monthly rates apply to stays of 28 nights or more. Stays of 7-27 nights qualify for our discounted weekly rate instead.",
   },
@@ -52,14 +52,14 @@ const faqs = [
       "A refundable security deposit may apply to stays of seven nights or longer. The amount is confirmed on your quotation and refunded via EFT within 7 days of checkout, subject to inspection.",
   },
   {
-    question: "What's included in the monthly rate?",
+    question: "What’s included in the monthly rate?",
     answer:
       "Free WiFi, weekly cleaning with fresh linen, secure gated parking, and access to our communal self-catering kitchen — all included with no hidden extras.",
   },
   {
     question: "Can I get an invoice for my company?",
     answer:
-      "Yes, invoices are provided on request, which is why we're a popular choice for contractors and companies covering staff accommodation.",
+      "Yes, invoices are provided on request, which is why we’re a popular choice for contractors and companies covering staff accommodation.",
   },
 ]
 
@@ -135,10 +135,10 @@ export default function MonthlyAccommodationPage() {
         </div>
       </section>
 
-      {/* What's Included */}
+      {/* What’s Included */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">What's Included in Monthly Accommodation</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">What’s Included in Monthly Accommodation</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="flex gap-4">
               <Wifi className="w-8 h-8 text-sage-600 flex-shrink-0" />

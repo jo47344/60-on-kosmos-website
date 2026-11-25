@@ -8,7 +8,7 @@ import { Calendar, ArrowRight, Phone } from "lucide-react"
 export const metadata: Metadata = {
   title: "Accommodation Blog",
   description:
-    "Expert accommodation guides for Bellville South. Tips for contractors, project teams, students and visitors staying near UWC, CPUT and Cape Town's northern suburbs.",
+    "Expert accommodation guides for Bellville South. Tips for contractors, project teams, students and visitors staying near UWC, CPUT and Cape Town’s northern suburbs.",
   keywords:
     "bellville south accommodation blog, cape town visitor guide, contractor accommodation guide, uwc student housing guide, bellville south living",
   alternates: { canonical: "https://www.60onkosmos.co.za/blog" },
@@ -40,7 +40,7 @@ export default function BlogPage() {
       slug: "digital-nomad-guide-bellville-south",
       title: "Digital Nomad Guide: Working Remotely from Bellville South",
       excerpt:
-        "Why Bellville South is Cape Town's best-kept secret for digital nomads. Fast WiFi, low cost, great community.",
+        "Why Bellville South is Cape Town’s best-kept secret for digital nomads. Fast WiFi, low cost, great community.",
       image: "/images/deluxe-twin-navy-hd.jpg",
       category: "Remote Work",
       date: "2025-01-07",

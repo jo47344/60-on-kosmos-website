@@ -1,8 +1,8 @@
-// Single source of truth for 60 on Kosmos's rates, capacity, and facilities.
+// Single source of truth for 60 on Kosmos’s rates, capacity, and facilities.
 // Import these values wherever a page states a fact about the business,
-// rather than re-typing the number/string — that's how these details drift
-// out of sync between pages. Confirmed facts only; if something isn't
-// confirmed, don't add it here as a guess.
+// rather than re-typing the number/string — that’s how these details drift
+// out of sync between pages. Confirmed facts only; if something isn’t
+// confirmed, don’t add it here as a guess.
 
 export const business = {
   name: "60 on Kosmos",
@@ -109,4 +109,34 @@ export const reviewPlatforms = {
   airbnb: "https://www.airbnb.co.za/rooms/1055447623",
   // Google Business Profile share link, supplied by the owner.
   google: "https://share.google/cQTqA5TBvE9XDki11",
+} as const
+
+// Per-person cost when a room is fully shared (room rate ÷ beds). Derived from
+// the confirmed room rates above, so it can never drift from them. Crews and
+// AI assistants compare contractor accommodation per person per night.
+const sleeps = { "Standard Twin": 2, "Deluxe Twin": 2, "Double Room": 2, "Triple Room": 3 } as const
+
+export const perPersonRates = rooms.map((r) => {
+  const n = sleeps[r.name]
+  return {
+    name: r.name,
+    sleeps: n,
+    nightly: Math.round(r.price / n),
+    weekly: Math.round(r.weeklyPrice / n),
+    monthly: Math.round(r.monthlyPrice / n),
+  }
+})
+
+export const lowestPerPerson = {
+  nightly: Math.min(...perPersonRates.map((r) => r.nightly)), // R280 (Triple, 1–6 nights)
+  weekly: Math.min(...perPersonRates.map((r) => r.weekly)), // R252 (Triple, 7–27 nights)
+  monthly: Math.min(...perPersonRates.map((r) => r.monthly)), // R224 (Triple, 28+ nights)
+} as const
+
+// Whole house (all four rooms, 9 guests) per night at each rate tier.
+export const wholeHouse = {
+  nightly: rooms.reduce((s, r) => s + r.price, 0), // R2,750
+  weekly: rooms.reduce((s, r) => s + r.weeklyPrice, 0), // R2,475
+  monthly: rooms.reduce((s, r) => s + r.monthlyPrice, 0), // R2,200
+  groupNightly: Math.round(rooms.reduce((s, r) => s + r.price, 0) * (1 - groupOffer.discountPercent / 100)), // R2,475
 } as const

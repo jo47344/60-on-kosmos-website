@@ -1,6 +1,6 @@
 // The single LodgingBusiness entity (components/local-business-schema.tsx,
 // @id https://www.60onkosmos.co.za/#lodgingbusiness) already carries the
-// business's name, address, logo, and social links. This component only
+// business’s name, address, logo, and social links. This component only
 // declares the WebSite entity and points its publisher at that same
 // LodgingBusiness @id, rather than declaring a second, separate
 // Organization entity with its own (and previously inconsistent) NAP data.

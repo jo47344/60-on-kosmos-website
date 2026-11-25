@@ -9,7 +9,7 @@ import { FAQSchema } from "@/components/faq-schema"
 import { capacity, facilities } from "@/lib/site-facts"
 
 export const metadata: Metadata = {
-  title: { absolute: "Accommodation Near CPUT Bellville Campus" },
+  title: { absolute: "Accommodation Near CPUT Bellville Campus | 60 on Kosmos, Cape Town" },
   description:
     "Guest accommodation near the CPUT Bellville campus for exchange students, visiting researchers, short courses, graduations and family visiting students. Ensuite rooms, WiFi, secure parking.",
   alternates: {
@@ -44,7 +44,7 @@ const faqs = [
   {
     question: "Is this a CPUT campus residence or NSFAS-accredited property?",
     answer:
-      "No. 60 on Kosmos is an independent guesthouse, not a CPUT campus residence and not an NSFAS-accredited student property. We are not a substitute for full academic-year residence — we're a practical option for shorter stays of a few weeks to a few months.",
+      "No. 60 on Kosmos is an independent guesthouse, not a CPUT campus residence and not an NSFAS-accredited student property. We are not a substitute for full academic-year residence — we’re a practical option for shorter stays of a few weeks to a few months.",
   },
   {
     question: "How far is 60 on Kosmos from CPUT Bellville campus?",
@@ -137,12 +137,12 @@ export default function AccommodationNearCputPage() {
         </div>
       </section>
 
-      {/* Who it's for */}
+      {/* Who it’s for */}
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold mb-6">Who this is for</h2>
           <p className="text-gray-700 mb-6">
-            We're not trying to be a permanent student residence — our real markets around CPUT Bellville are
+            We’re not trying to be a permanent student residence — our real markets around CPUT Bellville are
             shorter, defined stays:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -175,7 +175,7 @@ export default function AccommodationNearCputPage() {
       {/* Rooms / facilities */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-10">Rooms &amp; what&apos;s included</h2>
+          <h2 className="text-3xl font-bold text-center mb-10">Rooms &amp; what’s included</h2>
           <p className="text-center text-gray-600 max-w-2xl mx-auto mb-8">
             {capacity.roomCount} private ensuite rooms at 60 on Kosmos, suitable for individuals, couples, or small
             groups of up to {capacity.maxGuests} guests in total.
@@ -247,7 +247,7 @@ export default function AccommodationNearCputPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Send us your dates for a quote</h2>
           <p className="text-lg text-gray-100 mb-8">
-            Tell us your arrival date and how long you need to stay near CPUT, and we&apos;ll confirm availability
+            Tell us your arrival date and how long you need to stay near CPUT, and we’ll confirm availability
             and rates.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -23,7 +23,7 @@ import { FAQSchema } from "@/components/faq-schema"
 import { capacity, facilities } from "@/lib/site-facts"
 
 export const metadata: Metadata = {
-  title: "Guesthouse in the Northern Suburbs | 60 on Kosmos, Bellville",
+  title: { absolute: "Contractor Accommodation Northern Suburbs, Cape Town | Monthly Crew Rooms | 60 on Kosmos" },
   description:
     "Guesthouse accommodation in the northern suburbs. Located in Bellville South, 60 on Kosmos is ideal for project teams working across the northern suburbs. Secure private ensuite rooms, parking, and corporate invoicing.",
   alternates: {
@@ -109,11 +109,11 @@ const faqs = [
   {
     question: "How many people can you accommodate?",
     answer:
-      "We have 4 private ensuite rooms, suitable for small teams of up to 9 guests in total. Tell us your team size and we'll confirm the best room combination and a company rate.",
+      "We have 4 private ensuite rooms, suitable for small teams of up to 9 guests in total. Tell us your team size and we’ll confirm the best room combination and a company rate.",
   },
   {
     question: "Do you provide invoices for corporate bookings?",
-    answer: "Yes, on request, for contractors and companies needing documentation. We accept EFT payment only — we don't take cash.",
+    answer: "Yes, on request, for contractors and companies needing documentation. We accept EFT payment only — we don’t take cash.",
   },
 ]
 
@@ -178,7 +178,7 @@ export default function NorthernSuburbsAccommodationPage() {
           <h2 className="text-3xl font-bold mb-4 text-center">Find your area</h2>
           <p className="text-gray-700 mb-10 text-center max-w-2xl mx-auto">
             One guesthouse, several nearby work areas. Each link below goes to a page with area-specific detail —
-            distance, who it suits, and what&apos;s nearby.
+            distance, who it suits, and what’s nearby.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {areaGuide.map((area) => (
@@ -198,7 +198,7 @@ export default function NorthernSuburbsAccommodationPage() {
         </div>
       </section>
 
-      {/* Who it's for */}
+      {/* Who it’s for */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold mb-6">Who this is for</h2>
@@ -237,7 +237,7 @@ export default function NorthernSuburbsAccommodationPage() {
                     <h3 className="font-bold mb-2">Room-sharing for small teams</h3>
                     <p className="text-gray-600 text-sm">
                       {capacity.roomCount} private ensuite rooms, suitable for small teams of up to {capacity.maxGuests}{" "}
-                      guests in total. Tell us your team size and we&apos;ll confirm the best combination.
+                      guests in total. Tell us your team size and we’ll confirm the best combination.
                     </p>
                   </div>
                 </div>
@@ -261,10 +261,10 @@ export default function NorthernSuburbsAccommodationPage() {
         </div>
       </section>
 
-      {/* What's Included */}
+      {/* What’s Included */}
       <section className="py-12 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-8 text-center">What&apos;s Included in Every Room</h2>
+          <h2 className="text-3xl font-bold mb-8 text-center">What’s Included in Every Room</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {[
               { icon: Wifi, label: facilities[3] },

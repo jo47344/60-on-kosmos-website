@@ -47,7 +47,7 @@ export default function BookNowClientPage() {
 
   // Build the WhatsApp message from whatever the guest has filled in so far,
   // so the fastest route to a booking never depends on completing the form.
-  const whatsappLines = ["Hi, I'd like to book a room at 60 on Kosmos."]
+  const whatsappLines = ["Hi, I’d like to book a room at 60 on Kosmos."]
   if (formData.checkinDate) whatsappLines.push(`Check-in: ${formatDate(formData.checkinDate)}`)
   if (formData.checkoutDate) whatsappLines.push(`Check-out: ${formatDate(formData.checkoutDate)}`)
   if (formData.guestCount) whatsappLines.push(`Guests: ${formData.guestCount}`)
@@ -96,12 +96,12 @@ export default function BookNowClientPage() {
         setError(
           result?.errors
             ? result.errors.map((err: any) => err.message).join(", ")
-            : "We couldn't send your request. Please use the WhatsApp button instead so we don't miss you.",
+            : "We couldn’t send your request. Please use the WhatsApp button instead so we don’t miss you.",
         )
       }
     } catch (networkError) {
       console.error("Network error during Formspree submission:", networkError)
-      setError("We couldn't send your request. Please use the WhatsApp button instead so we don't miss you.")
+      setError("We couldn’t send your request. Please use the WhatsApp button instead so we don’t miss you.")
     } finally {
       setIsSubmitting(false)
     }

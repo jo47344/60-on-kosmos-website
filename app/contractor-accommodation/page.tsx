@@ -23,13 +23,14 @@ import { FAQSchema } from "@/components/faq-schema"
 import { Breadcrumbs } from "@/components/breadcrumbs"
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
 import { CompanyEnquiryForm } from "@/components/company-enquiry-form"
+import { lowestPerPerson } from "@/lib/site-facts"
 
 export const metadata: Metadata = {
-  // The root layout's title template ("%s | 60 on Kosmos Bellville South")
+  // The root layout’s title template ("%s | 60 on Kosmos Bellville South")
   // applies to every nested page unless overridden with `absolute` — without
   // this, the rendered <title> silently repeats the brand name a second time.
-  title: { absolute: "Contractor Accommodation Bellville | Project Teams" },
-  description: "Secure contractor and workers' accommodation in Bellville for small project teams. Ensuite rooms, Wi-Fi, parking, company invoices and monthly rates.",
+  title: { absolute: "Contractor Accommodation Bellville, Cape Town | Secure Parking | 60 on Kosmos" },
+  description: "60 on Kosmos: contractor accommodation in Bellville South, Cape Town. From R224 per person per night on monthly stays. Secure gated parking for bakkies, CCTV, ensuite rooms, WiFi and company invoices.",
   alternates: {
     canonical: "https://www.60onkosmos.co.za/contractor-accommodation",
   },
@@ -52,8 +53,8 @@ export const metadata: Metadata = {
     "consulting and engineering staff accommodation",
   ],
   openGraph: {
-    title: "Contractor Accommodation Bellville | Project Teams",
-    description: "Secure contractor and workers' accommodation in Bellville for small project teams. Ensuite rooms, Wi-Fi, parking, company invoices and monthly rates.",
+    title: "Contractor Accommodation Bellville, Cape Town | Secure Parking | 60 on Kosmos",
+    description: "60 on Kosmos: contractor accommodation in Bellville South, Cape Town. From R224 per person per night on monthly stays. Secure gated parking for bakkies, CCTV, ensuite rooms, WiFi and company invoices.",
     url: "https://www.60onkosmos.co.za/contractor-accommodation",
     type: "website",
     images: [
@@ -121,7 +122,7 @@ export default function ContractorAccommodationPage() {
     },
     {
       name: "Double Room",
-      tagline: "The Manager's Choice",
+      tagline: "The Manager’s Choice",
       price: "R680",
       weeklyPrice: "R612",
       monthlyPrice: "R544",
@@ -216,15 +217,26 @@ export default function ContractorAccommodationPage() {
               <span>For Project Teams & Professionals</span>
             </div>
             <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 text-balance">
-              Contractor & Project Team Accommodation in Bellville
+              Contractor & Project Team Accommodation in Bellville, Cape Town
             </h1>
             <p className="text-lg sm:text-xl text-gray-300 mb-6 text-pretty max-w-3xl mx-auto">
               Practical accommodation for small contractor, worker, technician, installer and project teams in
-              Bellville and Cape Town&apos;s northern suburbs. Suitable for teams of up to 9 guests, with private
+              Bellville and Cape Town’s northern suburbs. Suitable for teams of up to 9 guests, with private
               ensuite rooms, WiFi, secure parking, weekly and monthly stay options and company invoicing.
             </p>
-            <p className="text-white font-semibold mb-8 text-pretty max-w-2xl mx-auto">
-              Send us your team size, dates and work location for a company quote.
+            <p className="text-white font-semibold mb-2 text-pretty max-w-2xl mx-auto">
+              From R{lowestPerPerson.monthly} per person per night on monthly stays · R{lowestPerPerson.weekly} weekly ·
+              gated parking for bakkies on CCTV
+            </p>
+            <p className="text-gray-300 mb-8 text-pretty max-w-2xl mx-auto">
+              <Link href="/contractor-accommodation-rates" className="underline hover:text-white">
+                See rates per person
+              </Link>{" "}
+              ·{" "}
+              <Link href="/contractor-accommodation-faq" className="underline hover:text-white">
+                Contractor FAQ
+              </Link>{" "}
+              · Send us your team size, dates and work location for a company quote.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-sage-600 hover:bg-sage-700 text-white px-8 py-6 text-lg">
@@ -423,7 +435,7 @@ export default function ContractorAccommodationPage() {
           <div className="mt-10 max-w-2xl mx-auto text-center">
             <p className="text-gray-600 mb-2">
               Long-stay and multi-room contractor rates are available on quotation — tell us your team size, dates
-              and work location and we&apos;ll confirm the best room combination and company rate.
+              and work location and we’ll confirm the best room combination and company rate.
             </p>
             <p className="text-sm text-gray-500 mb-6">
               Monthly team rates can work out from approximately R224 per person per night when sharing. Final rates
@@ -520,7 +532,7 @@ export default function ContractorAccommodationPage() {
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
               <figcaption className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-sm px-4 py-2">
-                Paved, gated parking for your team's vehicles
+                Paved, gated parking for your team’s vehicles
               </figcaption>
             </figure>
           </div>
@@ -648,7 +660,7 @@ export default function ContractorAccommodationPage() {
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Need accommodation for your team?</h2>
             <p className="text-gray-600 text-pretty">
-              Send us your team size, dates and work location. We&apos;ll confirm the best available room
+              Send us your team size, dates and work location. We’ll confirm the best available room
               combination and company rate.
             </p>
           </div>

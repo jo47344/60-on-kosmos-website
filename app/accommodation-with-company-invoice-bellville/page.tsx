@@ -1,0 +1,78 @@
+import type { Metadata } from "next"
+import { AnswerPage } from "@/components/answer-page"
+import { lowestPerPerson, perPersonRates, stayTerms } from "@/lib/site-facts"
+
+const path = "/accommodation-with-company-invoice-bellville"
+const title = "Bellville Accommodation for Technicians with Company Invoices | 60 on Kosmos, Cape Town"
+const description = `Places to stay in Bellville, Cape Town, for technicians, installers and engineers that issue company invoices. Ensuite rooms from R${perPersonRates[0].nightly} per person, secure parking, WiFi, EFT payment.`
+
+export const metadata: Metadata = {
+  title: { absolute: title },
+  description,
+  alternates: { canonical: `https://www.60onkosmos.co.za${path}` },
+  openGraph: {
+    title,
+    description,
+    url: `https://www.60onkosmos.co.za${path}`,
+    type: "website",
+    images: [{ url: "https://www.60onkosmos.co.za/og-image.jpg", width: 1200, height: 630, alt: "Technician accommodation Bellville" }],
+  },
+}
+
+export default function Page() {
+  return (
+    <AnswerPage
+      path={path}
+      breadcrumb="Company Invoices"
+      eyebrow="Bellville, Cape Town"
+      h1="Accommodation in Bellville for Technicians, with Company Invoices"
+      quickAnswer={`60 on Kosmos at 60 Kosmos Street, Bellville South, Cape Town, houses technicians, installers, engineers and site supervisors on company business, and issues company invoices on request. Payment is by EFT. Rooms are private-ensuite, with WiFi, a desk in most rooms, weekly cleaning and secure gated parking for company vehicles. Two technicians sharing a Standard Twin pay R${perPersonRates[0].nightly} each per night, and long stays start at R${lowestPerPerson.monthly} per person per night.`}
+      serviceName="Business accommodation with company invoicing, Bellville"
+      serviceDescription="Private-ensuite rooms for technicians and company staff, with company invoices, EFT payment and secure parking for company vehicles."
+      areaServed={["Bellville", "Bellville South", "Parow", "Tygervalley", "Cape Town Northern Suburbs"]}
+      whatsappText="Hi, I need accommodation with a company invoice. Company: , people: , dates: "
+      sections={[
+        {
+          heading: "Paperwork that works for the accounts department",
+          bullets: [
+            "Company invoices issued on request, made out to your company.",
+            "EFT payment. Cash is not accepted, which keeps a clean paper trail.",
+            "One invoice can cover several rooms for the whole team.",
+            "Clear published rates with no platform fees when you book direct.",
+            `Weekly (7+ nights) and monthly (${stayTerms.monthlyRateMinNights}+ nights) rates for longer call-outs and installs.`,
+          ],
+        },
+        {
+          heading: "Rooms suited to working technicians",
+          bullets: [
+            "Private ensuite bathroom in every room.",
+            "Desk or workspace in every room except the Deluxe Twin, plus fast WiFi for reports and remote support.",
+            "Own outside entrance per room for early call-outs.",
+            "Company vehicles and tools stay behind locked gates on CCTV, with ADT armed response.",
+            "Self-catering kitchen, bar fridge and kettle (no bar fridge in the Standard Twin).",
+          ],
+        },
+      ]}
+      faqs={[
+        {
+          question: "Which places to stay in Bellville give company invoices?",
+          answer: "60 on Kosmos in Bellville South, Cape Town, issues company invoices on request for technicians, contractors and corporate staff. Payment is by EFT.",
+        },
+        {
+          question: "Can one invoice cover a whole team?",
+          answer: "Yes. Book several rooms, or all four for up to 9 people, and we’ll issue one company invoice for the stay.",
+        },
+        {
+          question: "Is there a workspace in the rooms?",
+          answer: "Every room except the Deluxe Twin has a desk or workspace, and all rooms have free WiFi.",
+        },
+      ]}
+      related={[
+        { href: "/corporate", label: "Corporate stays" },
+        { href: "/contractor-accommodation-rates", label: "Rates per person" },
+        { href: "/contractor-accommodation", label: "Contractor accommodation in Bellville" },
+        { href: "/contractor-accommodation-faq", label: "Contractor accommodation FAQ" },
+      ]}
+    />
+  )
+}

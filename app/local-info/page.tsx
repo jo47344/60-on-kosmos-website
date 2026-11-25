@@ -30,7 +30,7 @@ export default function LocalInfoPage() {
       icon: Building,
       name: "Castle of Good Hope",
       distance: "15km",
-      description: "Historic fort and museum, one of Cape Town's most significant cultural landmarks.",
+      description: "Historic fort and museum, one of Cape Town’s most significant cultural landmarks.",
       type: "Attraction",
     },
     {
@@ -110,7 +110,7 @@ export default function LocalInfoPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Local Area & Attractions</h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             60 on Kosmos is perfectly located in Bellville South with easy access to universities, hospitals, shopping,
-            and Cape Town's major attractions.
+            and Cape Town’s major attractions.
           </p>
           <p className="text-gray-600 max-w-2xl mx-auto mt-4">
             For a longer list of nearby activities, see our full guide to{" "}

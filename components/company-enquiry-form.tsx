@@ -103,7 +103,7 @@ export function CompanyEnquiryForm() {
         </div>
         <h3 className="text-xl font-bold text-gray-900 mb-2">Request received</h3>
         <p className="text-gray-600 mb-4">
-          Thanks — we&apos;ll confirm the best available room combination and company rate shortly.
+          Thanks — we’ll confirm the best available room combination and company rate shortly.
         </p>
         <p className="text-gray-600 mb-6">
           Need a faster reply?{" "}

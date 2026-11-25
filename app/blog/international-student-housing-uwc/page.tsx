@@ -56,7 +56,7 @@ export default function InternationalStudentHousingPage() {
           <p className="text-xl text-gray-700 mb-6 font-medium">
             60 on Kosmos has previously hosted international students visiting UWC and CPUT for exchange programmes
             and research stays of two to three months. This guide covers who this suits, and — just as
-            importantly — who it doesn&apos;t.
+            importantly — who it doesn’t.
           </p>
 
           <div className="bg-blue-50 border-l-4 border-blue-500 p-6 mb-8">
@@ -91,7 +91,7 @@ export default function InternationalStudentHousingPage() {
             ))}
           </div>
 
-          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">What&apos;s included</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">What’s included</h2>
 
           <p className="text-gray-700 mb-6">
             Rooms are private and ensuite, with WiFi, secure gated parking, weekly cleaning, and access to a communal
@@ -172,7 +172,7 @@ export default function InternationalStudentHousingPage() {
           <GraduationCap className="w-16 h-16 mx-auto mb-4" />
           <h2 className="text-2xl font-bold mb-4">Visiting UWC or CPUT?</h2>
           <p className="text-lg mb-6 opacity-90">
-            Send us your dates and we&apos;ll confirm availability and rates.
+            Send us your dates and we’ll confirm availability and rates.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-white text-blue-600 hover:bg-gray-100">

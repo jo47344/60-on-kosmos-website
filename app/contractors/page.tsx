@@ -47,8 +47,8 @@ export default function ContractorsPage() {
             Day and week rates for contractor crews, no lease
           </h1>
           <p className="text-base sm:text-lg text-gray-300 text-pretty">
-            If you&apos;re managing a crew on a Cape Town project, you already know what a bad billet costs you — a
-            bad night&apos;s sleep shows up on site the next day. 60 on Kosmos is private-ensuite, self-catering,
+            If you’re managing a crew on a Cape Town project, you already know what a bad billet costs you — a
+            bad night’s sleep shows up on site the next day. 60 on Kosmos is private-ensuite, self-catering,
             with secure parking, built for people working, not people on holiday.
           </p>
         </div>

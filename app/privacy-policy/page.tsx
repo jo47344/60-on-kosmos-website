@@ -2,8 +2,8 @@ import type { Metadata } from "next"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | 60 on Kosmos Guest House",
-  description: "How 60 on Kosmos Guest House collects, uses, and protects your personal information, in line with South Africa's POPIA.",
+  title: { absolute: "Privacy Policy | 60 on Kosmos Guest House, Cape Town" },
+  description: "How 60 on Kosmos Guest House collects, uses, and protects your personal information, in line with South Africa’s POPIA.",
   alternates: {
     canonical: "https://www.60onkosmos.co.za/privacy-policy",
   },
@@ -35,7 +35,7 @@ export default function PrivacyPolicyPage() {
             <p className="text-muted-foreground">
               60 on Kosmos Guest House (&quot;we&quot;, &quot;us&quot;, &quot;our&quot;) operates from 60 Kosmos Street,
               Bellville South, Cape Town, 7530, South Africa. This policy explains how we handle personal
-              information in accordance with South Africa&apos;s Protection of Personal Information Act, 2013
+              information in accordance with South Africa’s Protection of Personal Information Act, 2013
               (POPIA).
             </p>
           </div>
@@ -99,7 +99,7 @@ export default function PrivacyPolicyPage() {
           <div className="bg-muted rounded-lg p-6">
             <p className="text-muted-foreground">
               We keep booking and guest-registration records for as long as necessary to meet legal, tax, and
-              accommodation-establishment record-keeping obligations. Enquiry messages that don&apos;t lead to a
+              accommodation-establishment record-keeping obligations. Enquiry messages that don’t lead to a
               booking are retained only as long as needed to respond to you.
             </p>
           </div>

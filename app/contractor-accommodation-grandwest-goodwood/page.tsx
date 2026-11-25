@@ -138,13 +138,13 @@ export default function GrandWestGoodwoodPage() {
             <p>
               We regularly host small teams — electricians, shopfitters, HVAC technicians, and site supervisors —
               who are working shifts or short contracts in this part of the Northern Suburbs and need somewhere
-              straightforward to sleep, eat, and plan the next day&apos;s work.
+              straightforward to sleep, eat, and plan the next day’s work.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Who it's for */}
+      {/* Who it’s for */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold mb-6">Who this is for</h2>
@@ -230,7 +230,7 @@ export default function GrandWestGoodwoodPage() {
             </Card>
           </div>
 
-          <h3 className="text-2xl font-bold text-center mb-6">Rooms & what&apos;s included</h3>
+          <h3 className="text-2xl font-bold text-center mb-6">Rooms & what’s included</h3>
           <p className="text-center text-gray-600 max-w-2xl mx-auto mb-8">
             4 private ensuite rooms at 60 on Kosmos, suitable for small teams of up to 9 guests in total.
           </p>
@@ -257,7 +257,7 @@ export default function GrandWestGoodwoodPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Send us your dates, team size and work location for a company quote.</h2>
           <p className="text-lg text-gray-100 mb-8">
-            We&apos;ll confirm the best available room combination for your team near GrandWest or Goodwood.
+            We’ll confirm the best available room combination for your team near GrandWest or Goodwood.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-white text-sage-600 hover:bg-gray-100 px-8 py-6 text-lg font-bold">

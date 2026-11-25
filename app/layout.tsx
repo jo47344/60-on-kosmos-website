@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.60onkosmos.co.za"),
   title: {
     default: "60 on Kosmos - Affordable Contractor & Student Accommodation in Bellville South, Cape Town",
-    template: "%s | 60 on Kosmos Bellville South",
+    template: "%s | 60 on Kosmos Bellville, Cape Town",
   },
   description:
     "Self-catering ensuite accommodation in Bellville South for small contractor and project teams. Secure parking, free WiFi, weekly cleaning, company invoices. Request a quote today.",

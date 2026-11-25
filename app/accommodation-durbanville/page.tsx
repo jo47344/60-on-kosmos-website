@@ -22,7 +22,7 @@ import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
 import { FAQSchema } from "@/components/faq-schema"
 
 export const metadata: Metadata = {
-  title: "Accommodation Near Durbanville | 60 on Kosmos Guest House, Bellville South",
+  title: { absolute: "Accommodation Near Durbanville | 60 on Kosmos Guest House, Bellville South, Cape Town" },
   description:
     "Guest house accommodation a short drive from Durbanville. Private ensuite rooms, secure parking, self-catering kitchens, and corporate invoicing for project teams, contractors, and visitors.",
   alternates: {
@@ -45,7 +45,7 @@ const faqs = [
   {
     question: "How far is 60 on Kosmos from Durbanville?",
     answer:
-      "We're a short drive from Durbanville, based in Bellville South, making us a convenient guest house option for visitors, contractors, and professionals in the area.",
+      "We’re a short drive from Durbanville, based in Bellville South, making us a convenient guest house option for visitors, contractors, and professionals in the area.",
   },
   {
     question: "Is secure parking included?",
@@ -185,10 +185,10 @@ export default function DurbanvilleAccommodationPage() {
         </div>
       </section>
 
-      {/* What&apos;s Included */}
+      {/* What’s Included */}
       <section className="py-12 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-8 text-center">What&apos;s Included in Every Room</h2>
+          <h2 className="text-3xl font-bold mb-8 text-center">What’s Included in Every Room</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {[
               { icon: Wifi, label: "Free WiFi" },

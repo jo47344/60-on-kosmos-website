@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 
 export const metadata: Metadata = {
   title: "Page Not Found",
-  description: "The page you're looking for doesn't exist. Find rooms, rates, and contact details for 60 on Kosmos Guesthouse in Bellville South.",
+  description: "The page you’re looking for doesn’t exist. Find rooms, rates, and contact details for 60 on Kosmos Guesthouse in Bellville South.",
   robots: {
     index: false,
     follow: true,
@@ -32,7 +32,7 @@ export default function NotFound() {
         <p className="text-sage-600 font-bold text-6xl mb-2">404</p>
         <h1 className="text-2xl font-bold text-gray-900 mb-4">Page Not Found</h1>
         <p className="text-gray-600 mb-8">
-          Sorry, we couldn&apos;t find the page you&apos;re looking for. It may have been moved or no longer exists.
+          Sorry, we couldn’t find the page you’re looking for. It may have been moved or no longer exists.
         </p>
 
         <Button

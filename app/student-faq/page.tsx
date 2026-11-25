@@ -27,7 +27,7 @@ function FAQSchema() {
         "We recommend booking at least 1-2 weeks in advance, especially for busy periods like exam weeks, orientation weekends, and graduation ceremonies.",
     },
     {
-      question: "What's the check-in/check-out time?",
+      question: "What’s the check-in/check-out time?",
       answer: "Standard check-in is from 14:00 and check-out is by 10:00. Contact us via WhatsApp to arrange flexible times.",
     },
     {
@@ -48,7 +48,7 @@ function FAQSchema() {
     {
       question: "How do I get to CPUT/UWC campus?",
       answer:
-        "We're just 4.5km from CPUT and 5.5km from UWC - about 8-10 minutes by car. Options include Uber, own vehicle with free secure parking, or Golden Arrow buses.",
+        "We’re just 4.5km from CPUT and 5.5km from UWC - about 8-10 minutes by car. Options include Uber, own vehicle with free secure parking, or Golden Arrow buses.",
     },
     {
       question: "Is it safe for students?",
@@ -144,10 +144,10 @@ export default function StudentFAQPage() {
               </AccordionItem>
 
               <AccordionItem value="item-3">
-                <AccordionTrigger className="text-left">What's the check-in/check-out time?</AccordionTrigger>
+                <AccordionTrigger className="text-left">What’s the check-in/check-out time?</AccordionTrigger>
                 <AccordionContent className="text-gray-600">
                   Standard check-in is from 14:00 and check-out is by 10:00. However, we understand students have
-                  different schedules. Contact us via WhatsApp to arrange flexible check-in/out times if needed - we'll
+                  different schedules. Contact us via WhatsApp to arrange flexible check-in/out times if needed - we’ll
                   do our best to accommodate you!
                 </AccordionContent>
               </AccordionItem>
@@ -163,7 +163,7 @@ export default function StudentFAQPage() {
               <AccordionItem value="item-5">
                 <AccordionTrigger className="text-left">Can I extend my stay if needed?</AccordionTrigger>
                 <AccordionContent className="text-gray-600">
-                  Yes, if we have availability. Let us know as soon as you realize you need to extend, and we'll do our
+                  Yes, if we have availability. Let us know as soon as you realize you need to extend, and we’ll do our
                   best to accommodate you. This is especially common during exam periods when students need extra study
                   time!
                 </AccordionContent>
@@ -212,8 +212,8 @@ export default function StudentFAQPage() {
               <AccordionItem value="item-10">
                 <AccordionTrigger className="text-left">Do you provide bedding and towels?</AccordionTrigger>
                 <AccordionContent className="text-gray-600">
-                  Yes! Fresh linen and towels are provided, and they're changed weekly with our professional cleaning
-                  service. You don't need to bring bedding or towels from home - we've got you covered.
+                  Yes! Fresh linen and towels are provided, and they’re changed weekly with our professional cleaning
+                  service. You don’t need to bring bedding or towels from home - we’ve got you covered.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
@@ -226,7 +226,7 @@ export default function StudentFAQPage() {
               <AccordionItem value="item-11">
                 <AccordionTrigger className="text-left">How do I get to CPUT/UWC campus?</AccordionTrigger>
                 <AccordionContent className="text-gray-600">
-                  We're just 4.5km from CPUT and 5.5km from UWC - about 8-10 minutes by car. Options include:
+                  We’re just 4.5km from CPUT and 5.5km from UWC - about 8-10 minutes by car. Options include:
                   <ul className="list-disc ml-6 mt-2 space-y-1">
                     <li>Uber/Bolt: R30-R50 per trip</li>
                     <li>Own vehicle: Free secure parking available</li>
@@ -352,14 +352,14 @@ export default function StudentFAQPage() {
                 <AccordionTrigger className="text-left">Can I share a room with a friend?</AccordionTrigger>
                 <AccordionContent className="text-gray-600">
                   Yes! Our Twin and Triple rooms are perfect for sharing with friends or classmates. Sharing helps split
-                  costs and makes studying together easier. Just let us know when booking that you're coming as a group.
+                  costs and makes studying together easier. Just let us know when booking that you’re coming as a group.
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-22">
                 <AccordionTrigger className="text-left">What if I have a medical emergency?</AccordionTrigger>
                 <AccordionContent className="text-gray-600">
-                  We're close to Tygerberg Hospital (7.5km) and there are several medical facilities in Bellville. In
+                  We’re close to Tygerberg Hospital (7.5km) and there are several medical facilities in Bellville. In
                   case of emergency, dial 10177 for an ambulance or 112 from your cell phone. We can also assist in
                   contacting emergency services if needed.
                 </AccordionContent>
@@ -370,9 +370,9 @@ export default function StudentFAQPage() {
                   Is the accommodation quiet enough for studying?
                 </AccordionTrigger>
                 <AccordionContent className="text-gray-600">
-                  Yes! We're in a quiet residential area away from nightlife and busy streets. We maintain a peaceful
+                  Yes! We’re in a quiet residential area away from nightlife and busy streets. We maintain a peaceful
                   environment especially during exam periods. If you need to study late or have early morning classes,
-                  you'll find it's an ideal study environment.
+                  you’ll find it’s an ideal study environment.
                 </AccordionContent>
               </AccordionItem>
 
@@ -382,7 +382,7 @@ export default function StudentFAQPage() {
                 </AccordionTrigger>
                 <AccordionContent className="text-gray-600">
                   Definitely! Many parents book rooms when visiting their students for orientation, graduation, or just
-                  to check in. It's convenient because you're close to campus and can easily meet up with your student.
+                  to check in. It’s convenient because you’re close to campus and can easily meet up with your student.
                   We offer parent-friendly rooms with comfortable double beds.
                 </AccordionContent>
               </AccordionItem>
@@ -393,7 +393,7 @@ export default function StudentFAQPage() {
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-8 text-white text-center">
             <h3 className="text-2xl font-bold mb-4">Still Have Questions?</h3>
             <p className="text-lg mb-6 opacity-90">
-              WhatsApp us anytime! We're here to help students and parents with any questions about accommodation.
+              WhatsApp us anytime! We’re here to help students and parents with any questions about accommodation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-white text-purple-600 hover:bg-gray-100">

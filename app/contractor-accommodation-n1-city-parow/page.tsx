@@ -126,7 +126,7 @@ export default function N1CityParowPage() {
               office and medical precinct, while neighbouring Parow along Voortrekker Road and Parow Industria
               further south hold a mix of retail, distribution and light-industrial premises. Project teams working
               here span retail fit-outs, office refurbishments, HVAC and electrical maintenance, and distribution
-              centre work — all needing a base that&apos;s close but doesn&apos;t cost city-hotel rates.
+              centre work — all needing a base that’s close but doesn’t cost city-hotel rates.
             </p>
             <p>
               60 on Kosmos in Bellville South is only a short hop from both N1 City and Parow — typically 10–15
@@ -137,13 +137,13 @@ export default function N1CityParowPage() {
             <p>
               We regularly host retail fit-out crews, office refurbishment teams, and maintenance technicians
               working this corridor — people who need dependable Wi-Fi for admin and reporting, secure overnight
-              parking, and a kitchen so they&apos;re not relying on takeaways every night of a multi-week job.
+              parking, and a kitchen so they’re not relying on takeaways every night of a multi-week job.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Who it's for */}
+      {/* Who it’s for */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold mb-6">Who this is for</h2>
@@ -229,7 +229,7 @@ export default function N1CityParowPage() {
             </Card>
           </div>
 
-          <h3 className="text-2xl font-bold text-center mb-6">Rooms & what&apos;s included</h3>
+          <h3 className="text-2xl font-bold text-center mb-6">Rooms & what’s included</h3>
           <p className="text-center text-gray-600 max-w-2xl mx-auto mb-8">
             4 private ensuite rooms at 60 on Kosmos, suitable for small teams of up to 9 guests in total.
           </p>
@@ -256,7 +256,7 @@ export default function N1CityParowPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Send us your dates, team size and work location for a company quote.</h2>
           <p className="text-lg text-gray-100 mb-8">
-            We&apos;ll confirm the best available room combination for your team near N1 City or Parow.
+            We’ll confirm the best available room combination for your team near N1 City or Parow.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-white text-sage-600 hover:bg-gray-100 px-8 py-6 text-lg font-bold">

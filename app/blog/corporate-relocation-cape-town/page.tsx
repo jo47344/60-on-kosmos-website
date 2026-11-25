@@ -50,8 +50,8 @@ export default function CorporateRelocationPage() {
 
         <div className="prose prose-lg max-w-none">
           <p className="text-xl text-gray-700 mb-6 font-medium">
-            Relocating employees to Cape Town? Finding cost-effective, professional accommodation that doesn't
-            compromise on quality can be challenging. Here's why forward-thinking HR managers are choosing Bellville
+            Relocating employees to Cape Town? Finding cost-effective, professional accommodation that doesn’t
+            compromise on quality can be challenging. Here’s why forward-thinking HR managers are choosing Bellville
             South over expensive Cape Town CBD hotels.
           </p>
 
@@ -289,7 +289,7 @@ export default function CorporateRelocationPage() {
           <Building className="w-16 h-16 mx-auto mb-4" />
           <h2 className="text-2xl font-bold mb-4">Need Corporate Accommodation in Bellville South?</h2>
           <p className="text-lg mb-6 opacity-90">
-            Let's discuss your employee relocation needs. Monthly rates, flexible terms, professional service.
+            Let’s discuss your employee relocation needs. Monthly rates, flexible terms, professional service.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-white text-purple-600 hover:bg-gray-100">

@@ -27,7 +27,7 @@ export function WhatsAppWidget() {
   }, [isMounted])
 
   const whatsappNumber = "27745245703"
-  const defaultMessage = "Hi, I'd like to book a room at 60 on Kosmos. Can you help me with availability and rates?"
+  const defaultMessage = "Hi, I’d like to book a room at 60 on Kosmos. Can you help me with availability and rates?"
 
   // These are <button>s (not links), so the global link listener in
   // conversion-tracking.tsx never sees them; track the click here instead.
@@ -69,7 +69,7 @@ export function WhatsAppWidget() {
                   <strong>Hi there!</strong> 👋
                 </p>
                 <p className="text-sm text-gray-600">
-                  Need help booking a room? We're here to assist you with availability, rates, and any questions!
+                  Need help booking a room? We’re here to assist you with availability, rates, and any questions!
                 </p>
               </div>
               <button

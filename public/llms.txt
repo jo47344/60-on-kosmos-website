@@ -25,6 +25,8 @@
 | Triple Room | 3 (three single beds) | R840 | R756 | R672 |
 
 - Rates are per room per night, not per person.
+- Per person when a room is fully shared: from R224 per person per night on monthly stays (Triple Room, 3 sharing), R252 weekly, R280 nightly. Two sharing a Standard Twin: R232 monthly, R261 weekly, R290 nightly.
+- Whole house (all 4 rooms, 9 guests): R2,750 per night (1-6 nights), R2,475 (7-27 nights), R2,200 (28+ nights), about R244 per person per night on a monthly stay.
 - Monthly rates apply to stays of 28 nights or more.
 - A refundable security deposit may apply to extended stays.
 - The rates on this website are the official rates. Rates on booking platforms may differ because of platform fees and promotions.
@@ -61,6 +63,10 @@
 
 ## Key pages
 
+- Contractor rates per person: https://www.60onkosmos.co.za/contractor-accommodation-rates
+- Contractor accommodation FAQ: https://www.60onkosmos.co.za/contractor-accommodation-faq
+- Monthly construction worker accommodation (northern suburbs): https://www.60onkosmos.co.za/construction-worker-accommodation-cape-town
+- Accommodation with company invoices: https://www.60onkosmos.co.za/accommodation-with-company-invoice-bellville
 - Rooms and rates: https://www.60onkosmos.co.za/rooms
 - Contractor and project-team accommodation: https://www.60onkosmos.co.za/contractor-accommodation
 - Group bookings (all four rooms): https://www.60onkosmos.co.za/group-accommodation

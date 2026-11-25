@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Terms & House Rules | 60 on Kosmos Guest House",
+  title: { absolute: "Terms & House Rules | 60 on Kosmos Guest House, Cape Town" },
   description: "Booking terms, cancellation policy, and house rules for 60 on Kosmos Guest House in Bellville South.",
   alternates: {
     canonical: "https://www.60onkosmos.co.za/terms",
@@ -42,7 +42,7 @@ export default function TermsPage() {
             <div className="bg-muted rounded-lg p-6 mb-4">
               <h3 className="font-semibold text-lg mb-3">Monthly stays (28+ nights)</h3>
               <p className="text-muted-foreground">
-                First month&apos;s accommodation due in full before or on check-in. Subsequent months due on the 1st of each calendar month. Late payment may result in termination of stay.
+                First month’s accommodation due in full before or on check-in. Subsequent months due on the 1st of each calendar month. Late payment may result in termination of stay.
               </p>
             </div>
 
@@ -110,7 +110,7 @@ export default function TermsPage() {
             <div className="bg-muted rounded-lg p-6">
               <h3 className="font-semibold text-lg mb-3">Exceptions</h3>
               <p className="text-muted-foreground">
-                Medical emergency or death in immediate family (documentary proof required): pro-rata refund minus one night admin fee, at management&apos;s discretion.
+                Medical emergency or death in immediate family (documentary proof required): pro-rata refund minus one night admin fee, at management’s discretion.
               </p>
             </div>
           </section>
@@ -137,9 +137,9 @@ export default function TermsPage() {
             </div>
           </section>
 
-          {/* What's Included */}
+          {/* What’s Included */}
           <section className="mb-10">
-            <h2 className="text-2xl font-bold text-foreground mb-4">What&apos;s Included</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-4">What’s Included</h2>
             <div className="bg-sage-50 border border-sage-200 rounded-lg p-6">
               <p className="text-muted-foreground mb-3">Every room rate includes:</p>
               <ul className="space-y-2 text-muted-foreground">
@@ -153,9 +153,9 @@ export default function TermsPage() {
             </div>
           </section>
 
-          {/* What's Not Included */}
+          {/* What’s Not Included */}
           <section className="mb-10">
-            <h2 className="text-2xl font-bold text-foreground mb-4">What&apos;s Not Included</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-4">What’s Not Included</h2>
             <div className="bg-muted rounded-lg p-6">
               <ul className="space-y-2 text-muted-foreground">
                 <li>• Daily cleaning (weekly service only)</li>
@@ -188,7 +188,7 @@ export default function TermsPage() {
 
               <div className="bg-muted rounded-lg p-6">
                 <h3 className="font-semibold mb-2">Parking</h3>
-                <p className="text-muted-foreground">One vehicle per room, parked at owner&apos;s risk. No unauthorised vehicles. Work vehicles and bakkies welcome in designated areas.</p>
+                <p className="text-muted-foreground">One vehicle per room, parked at owner’s risk. No unauthorised vehicles. Work vehicles and bakkies welcome in designated areas.</p>
               </div>
 
               <div className="bg-muted rounded-lg p-6">

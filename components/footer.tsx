@@ -129,6 +129,26 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/contractor-accommodation-rates" className="hover:text-white transition-colors text-sm">
+                  Rates Per Person
+                </Link>
+              </li>
+              <li>
+                <Link href="/construction-worker-accommodation-cape-town" className="hover:text-white transition-colors text-sm">
+                  Construction Crews (Monthly)
+                </Link>
+              </li>
+              <li>
+                <Link href="/accommodation-with-company-invoice-bellville" className="hover:text-white transition-colors text-sm">
+                  Company Invoices
+                </Link>
+              </li>
+              <li>
+                <Link href="/contractor-accommodation-faq" className="hover:text-white transition-colors text-sm">
+                  Contractor FAQ
+                </Link>
+              </li>
+              <li>
                 <Link href="/contractor-accommodation-n1-city-parow" className="hover:text-white transition-colors text-sm">
                   Near Parow
                 </Link>

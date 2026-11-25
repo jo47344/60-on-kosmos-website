@@ -20,7 +20,7 @@ const faqs = [
       "Standard Twin from R580/night, Deluxe Twin R650/night, Double R680/night, and Triple R840/night (R280 per person) — with discounted weekly and monthly rates available.",
   },
   {
-    question: "What's included in every room rate?",
+    question: "What’s included in every room rate?",
     answer:
       "Free WiFi, weekly cleaning with fresh linen, secure gated parking, and access to our communal self-catering kitchen. Deluxe Twin, Double, and Triple rooms also include a bar fridge.",
   },

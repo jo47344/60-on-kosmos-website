@@ -40,7 +40,7 @@ export const metadata: Metadata = {
 }
 
 const whatsappHref = `https://wa.me/${business.whatsappNumber}?text=${encodeURIComponent(
-  "Hi, I'd like to book all four rooms at 60 on Kosmos for a group.\nNumber of adults: \nCheck-in: \nCheck-out: ",
+  "Hi, I’d like to book all four rooms at 60 on Kosmos for a group.\nNumber of adults: \nCheck-in: \nCheck-out: ",
 )}`
 
 const whoItSuits = [
@@ -91,12 +91,12 @@ const faqs = [
   },
   {
     question: "How do we pay?",
-    answer: `A ${groupOffer.depositPercent}% deposit confirms a group booking. Direct bookings are paid by EFT; we don't take cash. Banking details are on your quotation. Check-in is from ${stayTerms.checkIn} and check-out is by ${stayTerms.checkOut}.`,
+    answer: `A ${groupOffer.depositPercent}% deposit confirms a group booking. Direct bookings are paid by EFT; we don’t take cash. Banking details are on your quotation. Check-in is from ${stayTerms.checkIn} and check-out is by ${stayTerms.checkOut}.`,
   },
   {
     question: "Can we book fewer than four rooms?",
     answer:
-      "Yes. Tell us how many adults are in your group and we'll confirm the best room combination, but other guests may then be staying in the remaining rooms.",
+      "Yes. Tell us how many adults are in your group and we’ll confirm the best room combination, but other guests may then be staying in the remaining rooms.",
   },
 ]
 
@@ -152,7 +152,7 @@ export default function GroupAccommodationPage() {
               <p className="font-medium text-gray-900 mb-1">Your own door and bathroom</p>
               <p className="text-sm text-gray-600">
                 Each room has a private ensuite and its own outside entrance, so nobody shares a bathroom or walks
-                through someone else&apos;s space.
+                through someone else’s space.
               </p>
             </div>
             <div className="bg-gray-50 rounded-lg p-5 border border-gray-200">
