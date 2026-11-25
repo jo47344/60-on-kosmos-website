@@ -53,8 +53,8 @@ export const facilities = [
 ] as const
 
 // Rates per room per night, in rand. price = 1–6 nights, weeklyPrice = 7–27
-// nights, monthlyPrice = 28+ nights (owner-confirmed 28+ night rates, Nov 2026:
-// Standard Twin R500, Deluxe Twin R520, Double R544, Triple R700). There is one
+// nights, monthlyPrice = 28+ nights (owner-confirmed final 28+ night rates, Nov 2026:
+// Standard Twin R520, Deluxe Twin R540, Double R550, Triple R750). There is one
 // room of each type. "monthlyPrice" is a nightly rate for stays of 28+ nights,
 // never a calendar-month price.
 export const rooms = [
@@ -62,7 +62,7 @@ export const rooms = [
     name: "Standard Twin",
     price: 580,
     weeklyPrice: 522,
-    monthlyPrice: 500,
+    monthlyPrice: 520,
     layout: "Two single beds",
     barFridge: false,
   },
@@ -70,7 +70,7 @@ export const rooms = [
     name: "Deluxe Twin",
     price: 650,
     weeklyPrice: 585,
-    monthlyPrice: 520,
+    monthlyPrice: 540,
     layout: "Two single beds",
     barFridge: true,
   },
@@ -78,7 +78,7 @@ export const rooms = [
     name: "Double Room",
     price: 680,
     weeklyPrice: 612,
-    monthlyPrice: 544,
+    monthlyPrice: 550,
     layout: "One double bed",
     barFridge: true,
   },
@@ -86,7 +86,7 @@ export const rooms = [
     name: "Triple Room",
     price: 840,
     weeklyPrice: 756,
-    monthlyPrice: 700,
+    monthlyPrice: 750,
     layout: "Three single beds",
     barFridge: true,
   },
@@ -105,7 +105,7 @@ export const groupOffer = {
 
 // Per room per night: cheapest 28+ night room rate to dearest 1–6 night rate.
 export const roomRateRange = {
-  low: Math.min(...rooms.map((r) => r.monthlyPrice)), // R500
+  low: Math.min(...rooms.map((r) => r.monthlyPrice)), // R520
   high: Math.max(...rooms.map((r) => r.price)), // R840
 } as const
 export const priceRangeLabel = `R${roomRateRange.low} - R${roomRateRange.high}`
@@ -121,7 +121,7 @@ export const reviewPlatforms = {
   google: "https://share.google/cQTqA5TBvE9XDki11",
 } as const
 
-// Rand formatting: whole numbers as "R1,234", fractions as "R233.33".
+// Rand formatting: whole numbers as "R1,234", fractions as "R292.50".
 export function formatRand(n: number): string {
   const rounded = Math.round(n * 100) / 100
   return Number.isInteger(rounded)
@@ -174,11 +174,11 @@ export const perPersonRates = rooms.map((r) => {
   return { name: r.name, sleeps: n, nightly: cents(r.price), weekly: cents(r.weeklyPrice), monthly: cents(r.monthlyPrice) }
 })
 
-// The lowest 28+ night per-person equivalent: approximately R233.33, only
-// when three adults share the Triple Room.
+// The lowest 28+ night per-person equivalent: R250, only when three adults
+// share the Triple Room.
 const triple = roomByName["Triple Room"]
 export const tripleShareMonthly = {
-  perPerson: Math.round((triple.monthlyPrice / 3) * 100) / 100, // 233.33
+  perPerson: Math.round((triple.monthlyPrice / 3) * 100) / 100, // 250
   qualifier: `only when three adults share the Triple Room for ${stayTerms.monthlyRateMinNights}+ nights, subject to availability`,
 } as const
 
@@ -189,5 +189,5 @@ export const wholeHouse = {
   nightly: quoteStay(allRooms, 1).perNight, // R2,750 (1 night, no group discount)
   groupNightly: quoteStay(allRooms, groupOffer.minNights).perNight, // R2,475 (2–6 nights, 10% off)
   weekly: quoteStay(allRooms, 7).perNight, // R2,475 (7–27 nights)
-  monthly: quoteStay(allRooms, stayTerms.monthlyRateMinNights).perNight, // R2,264 (28+ nights)
+  monthly: quoteStay(allRooms, stayTerms.monthlyRateMinNights).perNight, // R2,360 (28+ nights)
 } as const

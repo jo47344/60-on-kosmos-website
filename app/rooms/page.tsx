@@ -130,7 +130,7 @@ export default function RoomsPage() {
       price: `${formatRand(rate["Triple Room"].price)}/night`,
       weeklyPrice: `${formatRand(rate["Triple Room"].weeklyPrice)}/night`,
       monthlyPrice: `${formatRand(rate["Triple Room"].monthlyPrice)}/night`,
-      perPerson: `About ${formatRand(tripleShareMonthly.perPerson)}/person/night only when 3 adults share for 28+ nights, subject to availability`,
+      perPerson: `${formatRand(tripleShareMonthly.perPerson)}/person/night only when 3 adults share for 28+ nights, subject to availability`,
       image: "/images/triple-room-view.jpg",
       alt: "Triple room guesthouse Bellville South - spacious room with multiple beds, desk and tea station for contractor crews",
       bestFor: "Best value for 3-person contractor crews.",

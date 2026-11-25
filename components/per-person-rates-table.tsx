@@ -37,19 +37,19 @@ export function PerPersonRatesTable() {
                   <td className="p-3 font-semibold">
                     {formatRand(room.price)}
                     <span className="block text-xs font-normal text-gray-500">
-                      ≈{formatRand(pp.nightly)} pp {note}
+                      {formatRand(pp.nightly)} pp {note}
                     </span>
                   </td>
                   <td className="p-3 font-semibold">
                     {formatRand(room.weeklyPrice)}
                     <span className="block text-xs font-normal text-gray-500">
-                      ≈{formatRand(pp.weekly)} pp {note}
+                      {formatRand(pp.weekly)} pp {note}
                     </span>
                   </td>
                   <td className="p-3 font-semibold text-sage-700">
                     {formatRand(room.monthlyPrice)}
                     <span className="block text-xs font-normal text-gray-500">
-                      ≈{formatRand(pp.monthly)} pp {note}
+                      {formatRand(pp.monthly)} pp {note}
                     </span>
                   </td>
                 </tr>

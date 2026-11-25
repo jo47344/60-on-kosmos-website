@@ -65,7 +65,7 @@ export default function Page() {
           ],
           bullets: [
             `Crew of 4 in the Standard Twin and Deluxe Twin for ${N} nights: ${formatRand(ex.twinsN.perNight)} per night, ${formatRand(ex.twinsN.total)} for ${N} nights.`,
-            `Crew of 3 in the Triple Room for ${N} nights: ${formatRand(ex.tripleN.perNight)} per night, ${formatRand(ex.tripleN.total)} for ${N} nights. Shared by three adults, that’s approximately ${formatRand(tripleShareMonthly.perPerson)} per person per night, the lowest per-person equivalent we offer.`,
+            `Crew of 3 in the Triple Room for ${N} nights: ${formatRand(ex.tripleN.perNight)} per night, ${formatRand(ex.tripleN.total)} for ${N} nights. Shared by three adults, that’s ${formatRand(tripleShareMonthly.perPerson)} per person per night, the lowest per-person equivalent we offer.`,
             `One person in the Standard Twin for ${N} nights: ${formatRand(ex.stdN.perNight)} per night, ${formatRand(ex.stdN.total)} for ${N} nights.`,
             `All four rooms for ${N} nights: ${formatRand(ex.allN.perNight)} per night, ${formatRand(ex.allN.total)} for ${N} nights. Up to 9 adults, with two sharing the double bed.`,
             `All four rooms for 7 nights: ${formatRand(ex.all7.perNight)} per night, ${formatRand(ex.all7.total)} for 7 nights.`,
@@ -97,7 +97,7 @@ export default function Page() {
         },
         {
           question: "What is the lowest price per person?",
-          answer: `Approximately ${formatRand(tripleShareMonthly.perPerson)} per person per night, ${tripleShareMonthly.qualifier}. Other rooms and shorter stays cost more per person.`,
+          answer: `${formatRand(tripleShareMonthly.perPerson)} per person per night, ${tripleShareMonthly.qualifier}. Other rooms and shorter stays cost more per person.`,
         },
         {
           question: "Can a 9-person crew stay together?",

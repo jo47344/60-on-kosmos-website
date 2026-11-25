@@ -44,7 +44,7 @@ const faqs = [
   },
   {
     question: "Where can I find affordable self-catering rooms for a project team in Bellville South?",
-    answer: `60 on Kosmos in Bellville South has self-catering rooms for project teams, each with its own en-suite bathroom. The Standard Twin costs ${formatRand(std.price)} per room per night for 1–6 nights, ${formatRand(std.weeklyPrice)} for 7–27 nights and ${formatRand(std.monthlyPrice)} for ${N}+ nights. The lowest per-person equivalent is approximately ${formatRand(tripleShareMonthly.perPerson)} per person per night, ${tripleShareMonthly.qualifier}. There’s a shared kitchenette, WiFi and weekly cleaning.`,
+    answer: `60 on Kosmos in Bellville South has self-catering rooms for project teams, each with its own en-suite bathroom. The Standard Twin costs ${formatRand(std.price)} per room per night for 1–6 nights, ${formatRand(std.weeklyPrice)} for 7–27 nights and ${formatRand(std.monthlyPrice)} for ${N}+ nights. The lowest per-person equivalent is ${formatRand(tripleShareMonthly.perPerson)} per person per night, ${tripleShareMonthly.qualifier}. There’s a shared kitchenette, WiFi and weekly cleaning.`,
   },
   {
     question: "Where can construction workers stay long-term in Cape Town’s northern suburbs?",
@@ -68,7 +68,7 @@ const faqs = [
   },
   {
     question: "Are there budget long-stay contractor rooms in Cape Town with gated parking?",
-    answer: `60 on Kosmos in Bellville South has contractor rooms at R${roomLow}–R${monthlyHigh} per room per night for stays of ${N}+ nights, with gated parking, CCTV and ADT armed response. The lowest per-person equivalent is approximately ${formatRand(tripleShareMonthly.perPerson)} per person per night, ${tripleShareMonthly.qualifier}. Each room has its own en-suite bathroom.`,
+    answer: `60 on Kosmos in Bellville South has contractor rooms at R${roomLow}–R${monthlyHigh} per room per night for stays of ${N}+ nights, with gated parking, CCTV and ADT armed response. The lowest per-person equivalent is ${formatRand(tripleShareMonthly.perPerson)} per person per night, ${tripleShareMonthly.qualifier}. Each room has its own en-suite bathroom.`,
   },
   {
     question: "Do you give discounts for teams?",
