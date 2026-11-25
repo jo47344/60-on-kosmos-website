@@ -7,7 +7,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
 
 export const metadata: Metadata = {
-  title: "Contractor Accommodation Near N1 City & Parow | 60 on Kosmos",
+  title: "Contractor Accommodation Near N1 City & Parow",
   description:
     "Accommodation for project teams working near N1 City and Parow. 4 private ensuite rooms, up to 9 guests, weekly/monthly rates, company invoicing.",
   alternates: {

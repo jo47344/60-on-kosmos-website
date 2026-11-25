@@ -109,6 +109,7 @@ export function LocalBusinessSchema() {
     sameAs: [
       "https://www.facebook.com/60onkosmos",
       "https://www.instagram.com/60onkosmos",
+      "https://www.youtube.com/@60onKosmos",
       reviewPlatforms.airbnb,
       reviewPlatforms.booking,
       reviewPlatforms.google,
