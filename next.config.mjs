@@ -28,6 +28,8 @@ const nextConfig = {
       { source: '/:path*', has: [{ type: 'host', value: 'v0-vo-ai-website-prompt.vercel.app' }], destination: 'https://www.60onkosmos.co.za/:path*', permanent: true },
       { source: '/:path*', has: [{ type: 'host', value: '60-on-kosmos.vercel.app' }], destination: 'https://www.60onkosmos.co.za/:path*', permanent: true },
       { source: '/:path*', has: [{ type: 'host', value: '60-on-kosmos-website.vercel.app' }], destination: 'https://www.60onkosmos.co.za/:path*', permanent: true },
+      // The estimate calculator is a static page in public/stay-estimate/; send the bare folder address to it.
+      { source: '/stay-estimate', destination: '/stay-estimate/index.html', permanent: true },
       // Kuils River location page - fix broken URL
       { source: '/contractor-accommodation-kuilsriver', destination: 'https://www.60onkosmos.co.za/contractor-accommodation-kuils-river', permanent: true },
       // Consolidate narrower legacy location pages into broader new pages to avoid duplicate content
