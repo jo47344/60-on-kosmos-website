@@ -1,7 +1,7 @@
 import { EstimateLink } from "@/components/estimate-link"
 import { rooms as roomRates } from "@/lib/site-facts"
 import { RateTable } from "@/components/rate-table"
-import type { Metadata } from "next"
+import { createPageMetadata } from "@/lib/page-metadata"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -44,27 +44,11 @@ const faqs = [
   },
 ]
 
-export const metadata: Metadata = {
-  title: "Rooms & Rates | From R580/Night | Monthly Discounts",
-  description: "Rooms and rates at 60 on Kosmos. Standard Twin R580/night, Deluxe R650, Double R680, Triple R840. Monthly rates available.",
-  keywords:
-    "Self-catering rooms Bellville South, contractor accommodation Cape Town, rooms with ensuite Bellville, monthly accommodation Bellville, private bathroom accommodation Cape Town",
-  alternates: { canonical: "https://www.60onkosmos.co.za/rooms" },
-  openGraph: {
-    title: "Rooms & Rates | From R580/Night | Monthly Discounts",
-    description: "Rooms and rates at 60 on Kosmos. Standard Twin R580/night, Deluxe R650, Double R680, Triple R840. Monthly rates available.",
-    url: "https://www.60onkosmos.co.za/rooms",
-    type: "website",
-    images: [
-      {
-        url: "https://www.60onkosmos.co.za/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "60 on Kosmos Rooms",
-      },
-    ],
-  },
-}
+export const metadata = createPageMetadata({
+  path: "/rooms",
+  title: "Ensuite Rooms & Rates in Bellville South",
+  description: "Compare ensuite rooms at 60 on Kosmos in Bellville South, Cape Town. Twin, double and triple rooms with WiFi, gated parking, and weekly or monthly rates.",
+})
 
 export default function RoomsPage() {
   const rooms = [
@@ -152,7 +136,7 @@ export default function RoomsPage() {
       <BreadcrumbSchema items={breadcrumbItems} />
       <Breadcrumbs items={breadcrumbItems} />
       <FAQSchema faqs={faqs} />
-<EstimateLink />
+<EstimateLink heading="Calculate your room rate and full stay total" />
       <div className="min-h-screen py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Contact Banner */}
@@ -189,7 +173,7 @@ export default function RoomsPage() {
         </div>
 
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Self-Catering Rooms & Rates</h1>
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">Ensuite Rooms & Rates in Bellville South</h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             All rooms include a private ensuite bathroom and free WiFi. Every room, including Standard Twin, has a fridge. Clean linen, welcome refreshments, and weekly cleaning service are included.
           </p>

@@ -1,17 +1,16 @@
-import { business, stayTerms, priceRangeLabel, reviewPlatforms } from "@/lib/site-facts"
+import { business, capacity, stayTerms, priceRangeLabel, reviewPlatforms } from "@/lib/site-facts"
 
 export function LocalBusinessSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": ["LodgingBusiness", "LocalBusiness"],
     "@id": "https://www.60onkosmos.co.za/#lodgingbusiness",
-    name: "60 on Kosmos - Accommodation for Project Teams and Working Professionals",
+    name: business.name,
+    numberOfRooms: capacity.roomCount,
     alternateName: [
       "60 on Kosmos",
       "60 on Kosmos Bellville South",
       "60 on Kosmos Cape Town",
-      "Accommodation for Teams Bellville",
-      "Project Team Lodging Cape Town",
     ],
     description:
       "Furnished private-ensuite accommodation for contractors, project teams, and working professionals in Bellville South, Cape Town. Private rooms with free WiFi and secure parking. Monthly rates apply to stays of 28 nights or more.",
@@ -209,7 +208,7 @@ export function LocalBusinessSchema() {
     audience: {
       "@type": "PeopleAudience",
       suggestedMinAge: 18,
-      audienceType: "Young professionals, contractors, students",
+      audienceType: "Adults: contractors, project teams and working professionals",
     },
     slogan: "Contractor Accommodation in Bellville South - Your Home Away From Home",
     keywords: [

@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+import { createPageMetadata } from "@/lib/page-metadata"
 import Link from "next/link"
 import Image from "next/image"
 import { Wifi, Car, Users, Shield, CheckCircle2, Clock, MapPin, Phone, GraduationCap, Briefcase } from "lucide-react"
@@ -8,37 +8,11 @@ import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
 import { FAQSchema } from "@/components/faq-schema"
 import { capacity, facilities } from "@/lib/site-facts"
 
-export const metadata: Metadata = {
-  title: { absolute: "Accommodation Near CPUT Bellville Campus" },
-  description:
-    "Guest accommodation near the CPUT Bellville campus for exchange students, visiting researchers, short courses, graduations and family visiting students. Ensuite rooms, WiFi, secure parking.",
-  alternates: {
-    canonical: "https://www.60onkosmos.co.za/accommodation-near-cput",
-  },
-  keywords: [
-    "accommodation near cput bellville campus",
-    "guest accommodation cput bellville",
-    "cput visiting student accommodation",
-    "cput exchange student housing",
-    "accommodation for cput graduation",
-    "cput visiting lecturer accommodation",
-  ],
-  openGraph: {
-    title: "Accommodation Near CPUT Bellville Campus",
-    description:
-      "Guest accommodation near the CPUT Bellville campus for exchange students, visiting researchers, short courses, graduations and family visiting students.",
-    url: "https://www.60onkosmos.co.za/accommodation-near-cput",
-    type: "website",
-    images: [
-      {
-        url: "https://www.60onkosmos.co.za/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Guest Accommodation Near CPUT Bellville Campus",
-      },
-    ],
-  },
-}
+export const metadata = createPageMetadata({
+  path: "/accommodation-near-cput",
+  title: "Accommodation Near CPUT Bellville",
+  description: "Stay at 60 on Kosmos in Bellville South, Cape Town for CPUT visits, research, graduations or short programmes. Ensuite rooms, WiFi and gated parking.",
+})
 
 const faqs = [
   {

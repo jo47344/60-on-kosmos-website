@@ -1,6 +1,7 @@
+import { AccommodationServiceSchema } from "@/components/accommodation-service-schema"
 import { EstimateLink } from "@/components/estimate-link"
 import { rooms as roomRates } from "@/lib/site-facts"
-import type { Metadata } from "next"
+import { createPageMetadata } from "@/lib/page-metadata"
 import Link from "next/link"
 import Image from "next/image"
 import {
@@ -26,48 +27,11 @@ import { Breadcrumbs } from "@/components/breadcrumbs"
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
 import { CompanyEnquiryForm } from "@/components/company-enquiry-form"
 
-export const metadata: Metadata = {
-  // The root layout's title template ("%s | 60 on Kosmos Bellville South")
-  // applies to every nested page unless overridden with `absolute` — without
-  // this, the rendered <title> silently repeats the brand name a second time.
-  title: { absolute: "Contractor Accommodation Bellville, Cape Town | 60 on Kosmos" },
-  description: "Secure contractor and workers' accommodation in Bellville for small project teams. Ensuite rooms, Wi-Fi, parking, company invoices and monthly rates.",
-  alternates: {
-    canonical: "https://www.60onkosmos.co.za/contractor-accommodation",
-  },
-  keywords: [
-    "contractor accommodation bellville",
-    "contractors accommodation cape town",
-    "workers accommodation bellville",
-    "project team accommodation bellville",
-    "company staff accommodation bellville",
-    "technician and installer accommodation cape town",
-    "monthly contractor accommodation",
-    "long-stay contractor accommodation",
-    "guesthouse bellville south",
-    "guesthouse near northern suburbs",
-    "guesthouse near kuils river",
-    "corporate accommodation bellville",
-    "weekly contractor accommodation cape town",
-    "self catering contractor accommodation bellville",
-    "site supervisor accommodation bellville",
-    "consulting and engineering staff accommodation",
-  ],
-  openGraph: {
-    title: "Contractor Accommodation Bellville | Project Teams",
-    description: "Secure contractor and workers' accommodation in Bellville for small project teams. Ensuite rooms, Wi-Fi, parking, company invoices and monthly rates.",
-    url: "https://www.60onkosmos.co.za/contractor-accommodation",
-    type: "website",
-    images: [
-      {
-        url: "https://www.60onkosmos.co.za/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Contractor Accommodation Bellville",
-      },
-    ],
-  },
-}
+export const metadata = createPageMetadata({
+  path: "/contractor-accommodation",
+  title: "Contractor Accommodation Bellville, Cape Town",
+  description: "Contractor accommodation at 60 on Kosmos in Bellville South, Cape Town. Ensuite rooms, gated parking, WiFi, company invoices and weekly or monthly rates.",
+})
 
 export default function ContractorAccommodationPage() {
   const serviceAreas = [
@@ -197,6 +161,7 @@ export default function ContractorAccommodationPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      <AccommodationServiceSchema />
       <FAQSchema faqs={contractorFAQs} />
       <BreadcrumbSchema items={breadcrumbItems} />
       <Breadcrumbs items={breadcrumbItems} />
@@ -219,12 +184,14 @@ export default function ContractorAccommodationPage() {
               <span>For Project Teams & Professionals</span>
             </div>
             <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 text-balance">
-              Contractor & Project Team Accommodation in Bellville
+              Contractor & Project Team Accommodation in Bellville South
             </h1>
             <p className="text-lg sm:text-xl text-gray-300 mb-6 text-pretty max-w-3xl mx-auto">
               Practical accommodation for small contractor, worker, technician, installer and project teams in
-              Bellville and Cape Town&apos;s northern suburbs. Suitable for teams of up to 9 guests, with private
-              ensuite rooms, WiFi, secure parking, weekly and monthly stay options and company invoicing.
+              Bellville South and Cape Town&apos;s northern suburbs. Four private ensuite rooms offer seven single
+              beds and one double bed: up to eight adults in separate beds, or nine when two share the double.
+              WiFi, gated parking, weekly cleaning and company invoices are available. Adults only; stays
+              and parking are subject to availability.
             </p>
             <p className="text-white font-semibold mb-8 text-pretty max-w-2xl mx-auto">
               Send us your team size, dates and work location for a company quote.
@@ -252,7 +219,7 @@ export default function ContractorAccommodationPage() {
           </div>
         </div>
       </section>
-<EstimateLink />
+<EstimateLink heading="Estimate accommodation for your contractor team" />
 
       <section className="bg-sage-600 text-white py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

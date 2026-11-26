@@ -11,42 +11,52 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "Googlebot",
         allow: "/",
+        disallow: ["/api/"],
       },
       {
         userAgent: "CCBot",
         allow: "/",
+        disallow: ["/api/"],
       },
       {
         userAgent: "anthropic-ai",
         allow: "/",
+        disallow: ["/api/"],
       },
       {
         userAgent: "Claude-Web",
         allow: "/",
+        disallow: ["/api/"],
       },
       {
         userAgent: "GPTBot",
         allow: "/",
+        disallow: ["/api/"],
       },
       {
         userAgent: "ChatGPT-User",
         allow: "/",
+        disallow: ["/api/"],
       },
       {
-        userAgent: "OpenAI-SearchBot",
+        userAgent: "OAI-SearchBot",
         allow: "/",
+        disallow: ["/api/"],
       },
       {
         userAgent: "Perplexity",
         allow: "/",
+        disallow: ["/api/"],
       },
       {
         userAgent: "PerplexityBot",
         allow: "/",
+        disallow: ["/api/"],
       },
       {
         userAgent: "Diffbot",
         allow: "/",
+        disallow: ["/api/"],
       },
     ],
     sitemap: "https://www.60onkosmos.co.za/sitemap.xml",
