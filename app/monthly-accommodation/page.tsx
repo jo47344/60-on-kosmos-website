@@ -1,6 +1,6 @@
 import { EstimateLink } from "@/components/estimate-link"
 import { RateTable } from "@/components/rate-table"
-import type { Metadata } from "next"
+import { createPageMetadata } from "@/lib/page-metadata"
 import Link from "next/link"
 import { Calendar, DollarSign, Home, Wifi, Car, Utensils, Shield, Clock, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -9,28 +9,11 @@ import { Breadcrumbs } from "@/components/breadcrumbs"
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
 import { FAQSchema } from "@/components/faq-schema"
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
+  path: "/monthly-accommodation",
   title: "Monthly Accommodation in Bellville South",
-  description:
-    "Monthly accommodation in Bellville South for project teams. Furnished private-ensuite rooms with WiFi, secure gated parking, communal self-catering facilities and weekly housekeeping included. Invoices are provided on request.",
-  alternates: {
-    canonical: "https://www.60onkosmos.co.za/monthly-accommodation",
-  },
-  openGraph: {
-    title: "Monthly Accommodation in Bellville South | 60 on Kosmos",
-    description: "Monthly accommodation in Bellville South for project teams. Furnished private-ensuite rooms with WiFi, secure gated parking, communal self-catering facilities and weekly housekeeping included. Invoices are provided on request.",
-    url: "https://www.60onkosmos.co.za/monthly-accommodation",
-    type: "website",
-    images: [
-      {
-        url: "https://www.60onkosmos.co.za/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Monthly Accommodation Bellville",
-      },
-    ],
-  },
-}
+  description: "Furnished monthly rooms at 60 on Kosmos in Bellville South, Cape Town. Rates from 28 nights include WiFi, weekly cleaning and shared kitchenette access.",
+})
 
 const breadcrumbItems = [
   { name: "Home", url: "" },
@@ -92,7 +75,7 @@ export default function MonthlyAccommodationPage() {
           </div>
         </div>
       </section>
-<EstimateLink />
+<EstimateLink heading="Calculate your monthly accommodation total" />
 
       {/* Benefits */}
       <section className="py-12 bg-white border-b">

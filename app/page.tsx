@@ -19,29 +19,13 @@ import {
 } from "lucide-react"
 import { TrustBadges } from "@/components/trust-badges"
 import { reviewPlatforms } from "@/lib/site-facts"
-import type { Metadata } from "next"
+import { createPageMetadata } from "@/lib/page-metadata"
 
-export const metadata: Metadata = {
-  title: "Ensuite Accommodation in Bellville South, Cape Town",
-  description: "Private ensuite accommodation in Bellville South for contractors, project teams and working professionals. Secure parking, WiFi, weekly cleaning and company invoices. Request a quote.",
-  alternates: {
-    canonical: "https://www.60onkosmos.co.za/",
-  },
-  openGraph: {
-    title: "Ensuite Accommodation in Bellville South, Cape Town",
-    description: "Private ensuite accommodation in Bellville South for contractors, project teams and working professionals. Secure parking, WiFi, weekly cleaning and company invoices. Request a quote.",
-    url: "https://www.60onkosmos.co.za/",
-    type: "website",
-    images: [
-      {
-        url: "https://www.60onkosmos.co.za/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "60 on Kosmos Guesthouse Bellville",
-      },
-    ],
-  },
-}
+export const metadata = createPageMetadata({
+  path: "",
+  title: "Contractor Accommodation Bellville South",
+  description: "60 on Kosmos offers private ensuite rooms in Bellville South, Cape Town for contractors and project teams. WiFi, gated parking and company invoices.",
+})
 
 export default function HomePage() {
   const roomTypes = [
@@ -91,7 +75,7 @@ export default function HomePage() {
           />
           <div className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-2 sm:mb-4 leading-tight text-balance">
-              Accommodation for Small Project Teams in Bellville
+              Contractor & Project Team Accommodation in Bellville South
             </h1>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-6 sm:mb-8 px-2 text-pretty">
               Private ensuite rooms, secure parking, WiFi, weekly cleaning and flexible company rates for teams of
@@ -116,7 +100,7 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-<EstimateLink />
+<EstimateLink heading="Estimate your Bellville South accommodation cost" />
 
         {/* Trust Badges */}
         <TrustBadges />

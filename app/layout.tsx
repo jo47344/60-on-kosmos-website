@@ -32,7 +32,7 @@ export const viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.60onkosmos.co.za"),
   title: {
-    default: "60 on Kosmos - Affordable Contractor & Student Accommodation in Bellville South, Cape Town",
+    default: "60 on Kosmos | Contractor Accommodation in Bellville South",
     template: "%s | 60 on Kosmos",
   },
   description:
@@ -91,7 +91,7 @@ export const metadata: Metadata = {
     canonical: "https://www.60onkosmos.co.za/",
   },
   category: "Lodging",
-  classification: "Guesthouse, Bed and Breakfast, Budget Accommodation",
+  classification: "Self-catering guesthouse, contractor accommodation",
   other: {
     "geo.region": "ZA-WC",
     "geo.placename": "Bellville South, Cape Town",

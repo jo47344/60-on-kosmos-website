@@ -1,2 +1,11 @@
 import Link from "next/link"
-export function EstimateLink() { return <aside className="max-w-5xl mx-auto my-8 p-5 rounded-xl border border-sage-200 bg-sage-50 text-gray-900"><h2 className="text-xl font-semibold">See your full stay cost</h2><p className="my-2">Choose your dates, adults and room arrangement. Weekly pricing from 7 nights, monthly pricing from 28 nights. An estimate is subject to availability and written confirmation.</p><Link href="/book-now#stay-estimate" className="inline-block rounded-md bg-sage-700 text-white px-5 py-3 font-semibold">Estimate your stay</Link></aside> }
+
+export function EstimateLink({ heading = "Estimate your accommodation cost" }: { heading?: string }) {
+  return (
+    <aside className="max-w-5xl mx-auto my-8 p-5 rounded-xl border border-sage-200 bg-sage-50 text-gray-900">
+      <h2 className="text-xl font-semibold">{heading}</h2>
+      <p className="my-2">Choose your dates, adults and room arrangement. Weekly pricing from 7 nights, monthly pricing from 28 nights. An estimate is subject to availability and written confirmation.</p>
+      <Link href="/book-now#stay-estimate" className="inline-block rounded-md bg-sage-700 text-white px-5 py-3 font-semibold">Estimate your stay</Link>
+    </aside>
+  )
+}

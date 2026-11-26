@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+import { createPageMetadata } from "@/lib/page-metadata"
 import Link from "next/link"
 import { Utensils, DollarSign, Home, Wifi, Car, Shield, Coffee, Refrigerator, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -7,14 +7,11 @@ import { Breadcrumbs } from "@/components/breadcrumbs"
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
 import { FAQSchema } from "@/components/faq-schema"
 
-export const metadata: Metadata = {
-  title: "Self-Catering Rooms | Budget",
-  description:
-    "Affordable self-catering rooms in Bellville South. Communal self-catering kitchenette, free WiFi, secure parking. Perfect for budget travelers, students, and long-term stays. Book direct.",
-  alternates: {
-    canonical: "https://www.60onkosmos.co.za/self-catering-rooms",
-  },
-}
+export const metadata = createPageMetadata({
+  path: "/self-catering-rooms",
+  title: "Self-Catering Rooms in Bellville South",
+  description: "Self-catering ensuite rooms at 60 on Kosmos in Bellville South, Cape Town. Shared kitchenette, room fridges, WiFi and gated parking. Weekly rates available.",
+})
 
 const breadcrumbItems = [
   { name: "Home", url: "" },
@@ -61,7 +58,7 @@ export default function SelfCateringRoomsPage() {
               <Utensils className="w-4 h-4" />
               <span>Budget-Friendly Self-Catering</span>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Self-Catering Rooms in Bellville</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Self-Catering Rooms in Bellville South</h1>
             <p className="text-xl text-gray-600 mb-8">
               Affordable accommodation with a communal self-catering kitchenette. Save money by cooking your own meals while enjoying
               comfortable, private rooms.

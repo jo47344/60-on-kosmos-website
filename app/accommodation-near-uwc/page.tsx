@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+import { createPageMetadata } from "@/lib/page-metadata"
 import Link from "next/link"
 import Image from "next/image"
 import { Wifi, Car, Users, Shield, CheckCircle2, Clock, MapPin, Phone, GraduationCap, Briefcase } from "lucide-react"
@@ -8,37 +8,11 @@ import { BreadcrumbSchema } from "@/components/breadcrumb-schema"
 import { FAQSchema } from "@/components/faq-schema"
 import { capacity, facilities } from "@/lib/site-facts"
 
-export const metadata: Metadata = {
-  title: { absolute: "Accommodation Near UWC | Short & Medium Stays" },
-  description:
-    "Guest accommodation near the University of the Western Cape (UWC) in Bellville for exchange students, visiting researchers, short courses, graduations and family visiting students. Ensuite rooms, WiFi, secure parking.",
-  alternates: {
-    canonical: "https://www.60onkosmos.co.za/accommodation-near-uwc",
-  },
-  keywords: [
-    "accommodation near uwc",
-    "guest accommodation uwc bellville",
-    "uwc visiting student accommodation",
-    "uwc exchange student housing",
-    "accommodation for uwc graduation",
-    "uwc visiting lecturer accommodation",
-  ],
-  openGraph: {
-    title: "Accommodation Near UWC | Short & Medium Stays",
-    description:
-      "Guest accommodation near UWC in Bellville for exchange students, visiting researchers, short courses, graduations and family visiting students.",
-    url: "https://www.60onkosmos.co.za/accommodation-near-uwc",
-    type: "website",
-    images: [
-      {
-        url: "https://www.60onkosmos.co.za/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Guest Accommodation Near UWC",
-      },
-    ],
-  },
-}
+export const metadata = createPageMetadata({
+  path: "/accommodation-near-uwc",
+  title: "Accommodation Near UWC in Bellville",
+  description: "Stay at 60 on Kosmos in Bellville South, Cape Town for UWC visits, research, graduations or short programmes. Private ensuite rooms, WiFi and gated parking.",
+})
 
 const faqs = [
   {

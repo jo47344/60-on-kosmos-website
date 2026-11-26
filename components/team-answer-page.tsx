@@ -12,7 +12,7 @@ export function TeamAnswerPage({ title, answer, sections, faqs, rates = false }:
     <p className="text-sm mb-5"><Link href="/contractor-accommodation" className="underline">Contractor accommodation</Link> · Bellville South, Cape Town</p>
     <h1 className="text-3xl sm:text-4xl font-bold mb-5">{title}</h1>
     <p className="text-lg leading-relaxed">{answer}</p>
-    <EstimateLink />
+    <EstimateLink heading={`Estimate your stay: ${title}`} />
     {rates && <RateTable />}
     {sections.map(section => <section key={section.heading} className="my-8"><h2 className="text-2xl font-semibold mb-3">{section.heading}</h2><p className="leading-relaxed">{section.text}</p></section>)}
     <section className="my-8"><h2 className="text-2xl font-semibold mb-4">Questions before you book</h2>{faqs.map(faq => <div key={faq.question} className="border-b py-4"><h3 className="font-semibold mb-2">{faq.question}</h3><p>{faq.answer}</p></div>)}</section>
